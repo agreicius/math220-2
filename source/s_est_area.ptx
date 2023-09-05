@@ -1,0 +1,20 @@
+<section xml:id="s_est_area">
+    <title>Estimating area</title>
+    <p>
+        By way of motivation of what will be the definition of the integral, we consider the computational problem of computing the area of a region defined by the graph of a function. 
+    </p>
+    <project>
+        <title>Estimating area</title>
+        <p>
+            Let <m>\mathcal{R}</m> be the set of points lying between the graph of <m>f(x)=1-x^3</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m>: that is, 
+            <me>
+                \mathcal{R}=\{(x,y)\colon 0\leq x\leq 1, 0\leq y\leq f(x) \}
+            </me>.
+            We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the <m>y</m>-values of points on the graph of <m>f</m> through some means. The GeoGebra interactive below helps illustrate the technique.
+            <figure width="100%" xml:id="fig_est_area">
+                <interactive geogebra="kEnxUdUD" />
+                <caption>Estimating area with rectangular blocks</caption>
+            </figure>
+        </p>
+    </project>
+</section>

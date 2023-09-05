@@ -1,0 +1,334 @@
+<section xml:id="s_antiderivatives">
+    <title>Antiderivatives</title>
+        <p>
+            What is calculus? Below you find a decent, if terse answer.
+        </p>
+        <principle xml:id="mantra_calculus">
+            <title>Calculus is the science of functions</title>  
+            <statement>
+                <p>
+                    In more detail, calculus investigates and analyzes properties of functions using three fundamental tools: the <em>limit</em>, the <em>derivative</em>, and the <em>integral</em>. 
+               </p>
+            </statement>
+        </principle>
+        <p>
+            Presumably you are already on intimate terms with the limit and the derivative. In this course we take up the integral in earnest. We begin somewhat indirectly, introducing first the <em>antiderivative</em> and its accompanying <em>indefinite integral</em> notation. Both of these concepts have everything to do with the <em>derivative</em>, and nothing directly to do with the actual definition of the <em>integral</em>! However, as we will see with the <xref provisional="th_ftc" text="custom">fundamental theorem of calculus</xref>, these concepts will play an essential role in <em>computing</em> integrals. 
+        </p>
+    <definition xml:id="d_antiderivative">
+        <title>Antiderivative</title>
+        <statement>
+            <p>
+                Let <m>f</m> be a function defined on an interval <m>I</m>. An <term>antiderivative</term> of <m>f</m> on <m>I</m> is a function <m>F</m> satisfying <m>F'(x)=f(x)</m> for all <m>x\in I</m>.        
+            </p>
+        </statement>
+    </definition>
+    <example xml:id="eg_antiderivatives">
+        <title>Basic antiderivative computations</title>
+        <statement>
+            <p>
+                Find an antiderivative for the given function <m>f</m> on the given interval <m>I</m>.
+                <ol>
+                    <li>
+                        <p>
+                            <m>f(x)=x^7</m>, <m>I=\R</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>f(x)=\frac{1}{\sqrt{x}}</m>, <m>I=(0,\infty)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>f(x)=2\sin x-x^{2/3}</m>, <m>I=\R</m>
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+        <solution>
+            <p> We find antiderivatives for each example <q>by inspection</q>. To check that our answer is correct, we simply verify that for each candidate antiderivative <m>F</m> we have <m>F'(x)=f(x)</m> for all <m>x</m> in the given interval <m>I</m>. We leave this to you. 
+                <ol>
+                    <li>
+                        <p>
+                        <m>F(x)=\frac{1}{8}x^8</m> is an antiderivative of <m>f(x)=x^7</m> on <m>I=\R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>F(x)=2\sqrt{x}</m> is an antiderivative of <m>f(x)=\frac{1}{\sqrt{x}}</m> on <m>I=(0,\infty)</m>. 
+                        </p>
+                        <p>
+                            To verify that <m>F'(x)=f(x)</m> here it is essential to translate the given radical expressions to power expressions so that we can make use of the power rule. That is, we have <m>F(x)=2x^{1/2}</m> and <m>f(x)=\frac{1}{x^{1/2}}=x^{-1/2}</m>, whence <m>F'(x)=x^{-1/2}=f(x)</m> for all <m>x\in (0,\infty)</m>.  
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>F(x)=-2\cos x-\frac{3}{5}x^{5/3}</m> is an antiderivative of <m>f(x)=2\sin x-x^{2/3}</m> on <m>I=\R</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+   
+    <example xml:id="eg_antiderivative_interval">
+        <title>Antiderivatives depend on intervals</title>
+        <statement>
+            <p>
+                Let <m>f(x)=\abs{x}</m>. Show that <m>F(x)=\frac{1}{2}x^2</m> is an antiderivative of <m>f</m> on <m>I=[0,1]</m>, but not on <m>J=[-1,0]</m>. Find an antiderivative of <m>f</m> on <m>J</m>.  
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We have <m>F'(x)=x</m> for all <m>x\in \R</m>. Since by definition we have 
+                <me>
+                    f(x)=\abs{x}=\begin{cases} x \amp\text{if } x\geq 0 \\ -x \amp x \leq 0 \end{cases}
+                </me>, 
+                we see that <m>F'(x)=f(x)=x</m> for all <m>x\in [0,1]</m>. Thus <m>F</m> is an antiderivative of <m>f</m> on <m>I</m>. 
+            </p>
+            <p>
+                By the same token, since <m>F'(x)=x</m> and <m>f(x)=-x</m> on <m>J=[-1,0]</m>, we see that <m>F'(x)\ne f(x)</m> for all <m>x\in J</m>, and hence that <m>F</m> is not an antiderivative of <m>f</m> on <m>J</m>. 
+            </p>
+            <p>
+                Lastly, from our analysis above we now see that <m>G(x)=-\frac{1}{2}x^2</m> is an antiderivative of <m>f</m> on <m>J=[-1,0]</m>, since on this interval we have <m>G'(x)=f(x)=-x</m>. 
+            </p>
+        </solution>
+    </example>
+    <algorithm xml:id="proc_antiderivative_inspection">
+        <title>Computing antiderivatives by inspection</title>
+        <statement>
+            <p>
+                Given a function <m>f</m> and interval <m>I</m>, to compute (with justification) an antiderivative <m>F</m> of <m>f</m> <em>by inspection</em>, proceed as follows.
+                <ol>
+                    <li>
+                        <p>
+                            Provide a <em>candidate</em> antiderivative <m>F</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Verify that <m>F</m> is an antiderivative by showing that <m>F'(x)=f(x)</m> for all <m>x\in I</m>. 
+                        </p>
+                    </li>
+                </ol>
+                This is very much a <q>guess and check</q> procedure. Do not be shy in hazarding a guess for your candidate antiderivative <m>F</m>; even if your check proves the candidate to be incorrect, the very act of checking will often reveal what needs to be adjusted to produce an actual antiderivative. 
+            </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_antiderivatives_nonelementary">
+        <title>Less elementary antiderivative computations</title>
+        <statement>
+            <p>
+                Find an antiderivative for the given function <m>f</m> on the given interval <m>I</m>.
+                <ol>
+                    <li>
+                        <p>
+                            <m>f(x)=\sec^2 5x</m>, <m>I=(-\pi/2, \pi/2)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>f(x)=x\cos(x^2)</m>, <m>I=\R</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>f(x)=\cos(x^2)</m>, <m>I=\R</m>
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+        <solution>
+            <p>
+               Part of what makes these computations more difficult is that the <em>chain rule</em> inevitably arises when checking our candidate antiderivatives. Since the chain rule plays an important role here, make sure you indicate where it arises in your check. 
+               <ol>
+                <li>
+                    <p>
+                        <m>F(x)=\frac{1}{5}\tan 5x</m> is an antiderative of <m>f(x)=\sec^2 5x</m> on <m>I=(-\pi/2, \pi/2)</m> since 
+                        <md>
+                            <mrow>\frac{d}{dx} \frac{1}{5}\tan 5x \amp = \frac{1}{5}\left( \frac{d}{dx}\tan 5x \right) \amp \text{(scalar rule)} </mrow>
+                            <mrow> \amp = \frac{1}{5}\sec^2 5x \cdot (5x)' \amp \text{(chain rule)}</mrow>
+                            <mrow> \amp = \frac{1}{5}(5\sec^2 5x)</mrow>
+                            <mrow> \amp = \sec^2 5x</mrow>  
+                        </md>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>F(x)=\frac{1}{2}\sin(x^2)</m> is an antiderivative of <m>f(x)=x\cos(x^2)</m> since 
+                        <md>
+                            <mrow>F'(x) \amp = \frac{1}{2}\left( \sin(x^2)\right)' \amp \text{(scalar rule)}
+                            </mrow>
+                            <mrow> \amp = \frac{1}{2}\cos(x^2)\cdot (x^2)' \amp \text{(chain rule)}</mrow>
+                            <mrow> \amp = \frac{1}{2}(2x\cos(x^2))</mrow>
+                            <mrow> \amp = x\cos(x^2)</mrow>
+                        </md>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Hmmm. This is a curious one. Some typical educated guesses as to what <m>F</m> might be (<eg/>, <m>F(x)=\sin(x^2)</m> or <m>F(x)=\frac{1}{2x}\sin(x^2)</m>) all prove incorrect when carefully computing <m>F'(x)</m> using the chain and/or product rules. Two natural questions arise: (1) does <m>f(x)=\cos(x^2)</m> have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time! 
+                    </p>
+                </li>
+               </ol>   
+            </p>
+        </solution>
+    </example>
+    <theorem xml:id="th_gen_antiderivative">
+        <title>General antiderivative formula</title>
+        <statement>
+            <p>
+               Assume <m>F</m> is an antiderivative of <m>f</m> on the interval <m>I</m>. 
+               <ol>
+                <li>
+                    <p>
+                        Given any constant <m>C\in \R</m>, the function <m>G(x)=F(x)+C</m> is also an antiderivative of <m>f</m> on <m>I</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Conversely, if <m>G</m> is an antiderivative of <m>f</m> on <m>I</m>, then there is a constant <m>C\in\R</m> such that <m>G(x)=F(x)+C</m> for all <m>x\in I</m>.  
+                    </p>
+                </li>
+               </ol>
+            </p>
+        </statement>
+    </theorem>
+    <remark xml:id="rm_antiderivative">
+        <p>
+            The two statements of <xref ref="th_gen_antiderivative"/> taken together are equivalent to the following: if <m>F</m> is an antiderivative of <m>f</m> on the interval <m>I</m>, then the set of <em>all</em> antiderivatives of <m>f</m> on <m>I</m> is given by 
+            <me>
+                \{G(x)\colon G(x)=F(x)+C \text{ for some } C\in \R\}
+            </me>.            
+            In other words, once we find one antiderivative <m>F</m> of <m>f</m> on <m>I</m>, we obtain all other antiderivatives of <m>f</m> simply by adding an arbitrary constant <m>C</m> to <m>F</m>.
+        </p>
+        <p>
+            In particular, note that antiderivatives are not unique! There is no such thing as <em>the</em> antiderivative of a function; if <m>f</m> has an antiderivative <m>F</m>, then it has infinitely many antiderivatives <m>F(x)+C</m>, where <m>C</m> is any real constant.
+        </p>
+    </remark>
+    <example>
+        <title>Antiderivative with specified conditions</title>
+        <statement>
+            <p>
+                At time <m>t=0</m> minutes a 100 gallon tank of water begins leaking. After <m>t</m> minutes, the rate at which the gallon leaks is 
+                <me>
+                    r(t)=\frac{1}{\sqrt{2t+1}} \text{ gallons per minute}
+                </me>.
+                Find a formula for <m>f(t)</m>, the amount of water in the tank after <m>t</m> minutes.                 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example>
+        <title>Initial value problem</title>
+        <statement>
+            <p>
+                Consider the differential equation 
+                <men xml:id="eq_initial_value">
+                    f''(x)=-\frac{2}{3}\cos 2x+x
+                </men>.
+                <ol>
+                    <li>
+                        <p>
+                            Find the general formula for a function <m>f</m> satisfying <xref ref="eq_initial_value"/>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the unique function <m>f</m> satisfying <xref ref="eq_initial_value"/> and the <em>initial conditions</em> 
+                            <me>
+                                f(0)=0, f'(0)=-1
+                            </me>.
+                        </p>
+                    </li>
+                </ol>                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <definition xml:id="d_indefinite_integral">  
+        <title>Indefinite integral</title>
+        <notation>
+            <usage><m>\int f\, dx</m></usage>
+          <description>Indefinite integral of <m>f</m></description>
+        </notation>
+        <statement>
+            <p>
+                If <m>F</m> is an antiderivative of <m>f</m> on the interval <m>I</m>, then by <xref ref="th_gen_antiderivative"/> any other antiderivative is of the form <m>G(x)=F(x)+C</m> for some <m>C\in \R</m>. We say in this case that the expression  
+                <m>
+                   F(x)+C 
+                </m>
+                is the <term>general antiderivative</term> and denote this using the <term>indefinite integral</term> notation 
+                <men xml:id="eq_indefinite_integral">
+                    \int f\, dx=F(x)+C
+                </men>.
+                 The symbol <m>\int</m> is called the <term>integral symbol</term>, the function <m>f</m> is called the <term>integrand</term> of the integral, and <m>x</m> is called the <term>variable of integration</term>. 
+</p>
+        </statement>
+    </definition>
+<remark>
+    <p>
+        It should be noted that the indefinite integral notation is riddled with ambiguity. In particular, whereas the interval of definition <m>I</m> plays an important role in the definition of antiderivative (as we saw in <xref ref="eg_antiderivative_interval"/>), it does not appear in the notation <m>\int f\, dx</m>. So how are we to understand a statement like <xref ref="eq_indefinite_integral"/>? We will take it to mean that on <em>some interval</em> (either implied or given) the function <m>F</m> is an antiderivative of <m>f</m>, and hence that the general antiderivative formula for <m>f</m> on this interval is given by <m>G(x)=F(x)+C</m>.   
+    </p>
+</remark>
+<example xml:id="eg_indefinite_integral">
+    Some of our previous example computations can be summarized by the following indefinite integral formulas. 
+    <md>
+        <mrow>\int x^7\, dx \amp = \frac{1}{8}x^8+C</mrow>
+        <mrow>\int \frac{1}{\sqrt{x}}\, dx \amp = 2\sqrt{x}+C</mrow>
+        <mrow>\int 2\sin x-x^{2/3}\, dx \amp = -2\cos x-\frac{3}{5}x^{5/3}+C</mrow>
+        <mrow>\int \sec^2 5x\, dx \amp = \frac{1}{5}\tan 5x +C</mrow>
+        <mrow> \int x\cos(x^2)\, dx \amp = \frac{1}{2}\sin (x^2)+C</mrow>
+    </md>.
+</example>
+<theorem xml:id="th_antiderivative_formulas">
+    <title>Antiderivative formulas</title>
+    <statement>
+        <p>
+            The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The <m>k</m> appearing in the formulas below is understood to be any nonzero constant. 
+            <md>
+                <mrow> \int 0\, dx\amp =C \amp  \int x^r\, dx\amp =\frac{x^{r+1}}{r+1}+C, r\ne -1</mrow>
+                <mrow> \int \cos kx\, dx\amp =\frac{1}{k}\sin kx+C \amp  \int \sin kx\, dx \amp =-\frac{1}{k}\cos kx+C  </mrow>
+                <mrow> \int\sec^2kx\, dx\amp =\frac{1}{k}\tan kx+C \amp  \int \csc^2 kx \, dx\amp =-\frac{1}{k}\cot kx+C </mrow>
+                <mrow> \int \sec kx\tan kx\, dx\amp =\frac{1}{k}\sec kx+C \amp  \int \csc kx\cot kx\, dx\amp =-\frac{1}{k}\csc kx+C </mrow>
+            </md>.
+        </p>
+    </statement>
+</theorem>
+<theorem xml:id="th_antiderivative_rules">
+    <title>Antiderivative rules</title>
+    <statement>
+        <p>
+            If <m>F</m> and <m>G</m> are antiderivatives of the functions <m>f</m> and <m>g</m>, respectively, on the interval <m>I</m>, then (1) <m>cF</m> is an antiderivative of <m>cf</m> for any <m>c\in\R</m>, (2) <m>F+G</m> is an antiderivative of <m>f+g</m>, and hence <m>cF\pm dG</m> is an antiderivative of <m>cf\pm dg</m> for any <m>c,d\in\R</m>, 
+        </p>
+        <p>
+            A somewhat liberal usage of indefinite integral notation allows us to summarize these results as follows. 
+            <ol>
+                <li xml:id="eq_scalar"> 
+                    <title>Scalar rule</title>
+                    <m>\int cf\, dx = c\int f\, dx</m>
+                </li>
+                <li xml:id="eq_sum"> 
+                    <title>Sum rule</title>
+                    <m>\int f+g \, dx = \int f\, dx+\int g\, dx</m> 
+                </li>
+                <li xml:id="eq_general">
+                    <title>Linear combination rule</title>
+                     <m>\int cf\pm dg\, dx= c\int f\, dx \pm d\int g\, dx</m> </li>
+            </ol>.
+        </p>
+    </statement>
+</theorem>
+
+
+</section>
