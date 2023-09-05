@@ -341,8 +341,46 @@ window.MathJax = {
 \mathcal{R}=\{(x,y)\colon 0\leq x\leq 1, 0\leq y\leq f(x) \}\text{.}
 \end{equation*}
 </div>
-<div class="para">We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the <span class="process-math">\(y\)</span>-values of points on the graph of <span class="process-math">\(f\)</span> through some means. The GeoGebra interactive below helps illustrate the technique. <figure class="figure figure-like" id="fig_est_area"><iframe src="https://www.geogebra.org/material/iframe/id/kEnxUdUD/width/800/height/450/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" id="interactive-1" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span>Estimating area with rectangular blocks</figcaption></figure>
+<div class="para">We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the <span class="process-math">\(y\)</span>-values of points on the graph of <span class="process-math">\(f\)</span> through some means. The GeoGebra interactive below helps illustrate the technique. <figure class="figure figure-like" id="fig_est_area"><iframe src="https://www.geogebra.org/material/iframe/id/wcptduq3/width/800/height/450/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" id="interactive-1" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span>Estimating area with rectangular blocks</figcaption></figure>
 </div>
+</div></article><article class="algorithm theorem-like" id="proc_est_area"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating error.</span>
+</h3>
+<div class="para logical" id="p-47">
+<div class="para">Let <span class="process-math">\(f\)</span> be a nonnegative function defined on the interval <span class="process-math">\([a,b]\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span> To estimate the area between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis proceed as follows:</div>
+<ol class="decimal">
+<li id="li-22"><div class="para" id="p-48">Divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals, each of width <span class="process-math">\(\Delta x=(b-a)/n\text{.}\)</span>
+</div></li>
+<li id="li-23"><div class="para logical" id="p-49">
+<div class="para">For each subinterval pick a <dfn class="terminology">sample input</dfn> <span class="process-math">\(x^*\)</span> in that interval and build the rectangle whose base is the subinterval and whose <dfn class="terminology">sample height</dfn> is given by <span class="process-math">\(h=f(x^*)\text{.}\)</span> The area of this block is</div>
+<div class="displaymath process-math" id="eq_area">
+\begin{equation}
+A=\underset{\text{ height } }{\underbrace{f(x^*)}}\,\underset{\text{ width } }{\underbrace{\Delta x}}\text{.}\tag{1.2.1}
+\end{equation}
+</div>
+</div></li>
+<li id="li-24"><div class="para" id="p-50">Sum together the areas of the <span class="process-math">\(n\)</span> blocks constructed in Step 2.</div></li>
+</ol>
+</div> <div class="para logical" id="p-51">
+<div class="para">Depending on how the sample inputs <span class="process-math">\(x^*\)</span> are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.</div>
+<ul class="disc">
+<li id="li-25"><div class="para" id="p-52">If <span class="process-math">\(x^*\)</span> is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a <dfn class="terminology">left sum estimate</dfn> (resp. <dfn class="terminology">right sum estimate</dfn>).</div></li>
+<li id="li-26"><div class="para" id="p-53">If <span class="process-math">\(x^*\)</span> is chosen as the midpoint of each subinterval, the estimate is called a <dfn class="terminology">midpoint sum estimate</dfn>.</div></li>
+<li id="li-27"><div class="para" id="p-54">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called a <dfn class="terminology">lower sum estimate</dfn>.</div></li>
+<li id="li-28"><div class="para" id="p-55">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called an <dfn class="terminology">upper sum estimate</dfn>.</div></li>
+</ul>
+</div></article><article class="algorithm theorem-like" id="proc_est_net_change"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating net change.</span>
+</h3>
+<div class="para" id="p-56">Suppose physical quantity <span class="process-math">\(Q=g(x)\)</span> is a function of an input <span class="process-math">\(x\text{,}\)</span> and that <span class="process-math">\(f(x)\)</span> is the <em class="emphasis">instantaneous rate of change</em> of <span class="process-math">\(Q\)</span> with respect to <span class="process-math">\(x\text{.}\)</span>
+</div> <div class="para" id="p-57">Suppose we are only given the rate of change function <span class="process-math">\(f\)</span> and wish to use this to estimate the <dfn class="terminology">net change</dfn> of <span class="process-math">\(Q\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{:}\)</span> that is, we wish to estimate <span class="process-math">\(\Delta Q=g(b)-g(a)\text{.}\)</span> We can do so using the same method described in <a href="" class="xref" data-knowl="./knowl/proc_est_area.html" title="Procedure 1.2.2: Estimating error">Procedure 1.2.2</a>.</div> <div class="para logical" id="p-58">
+<div class="para">In this context we interpret a sample value <span class="process-math">\(r^*=f(x^*)\)</span> as a constant rate of change over the given subinterval, in which case an individual term</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x^*)\, \Delta x=r^* \Delta x
+\end{equation*}
+</div>
+<div class="para">in our sum is understood as an estimate of the net change of <span class="process-math">\(Q\)</span> over the given subinterval, under the simplifying assumption that <span class="process-math">\(Q\)</span> changes with <em class="emphasis">constant rate of change</em> <span class="process-math">\(r^*=f(x^*)\)</span> over the interval.</div>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_antiderivatives.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
