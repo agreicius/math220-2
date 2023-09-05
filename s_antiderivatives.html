@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Antiderivatives</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math 220-2">
+<meta property="book:author" content="Aaron Greicius">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="kursobjekt.html"><span class="title">Math 220-2:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="c_integral_calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="s_est_area.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+  \newcommand{\Q}{{\mathbb Q}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\T}{{\mathbb T}}
+  \newcommand{\F}{{\mathbb F}}
+  \newcommand{\PP}{{\mathbb P}}
+  \newcommand{\HH}{{\mathbb H}}
+  \newcommand{\compose}{\circ}
+  \newcommand{\bolda}{{\mathbf a}}
+  \newcommand{\boldb}{{\mathbf b}}
+  \newcommand{\boldc}{{\mathbf c}}
+  \newcommand{\boldd}{{\mathbf d}}
+  \newcommand{\bolde}{{\mathbf e}}
+  \newcommand{\boldi}{{\mathbf i}}
+  \newcommand{\boldj}{{\mathbf j}}
+  \newcommand{\boldk}{{\mathbf k}}
+  \newcommand{\boldn}{{\mathbf n}}
+  \newcommand{\boldp}{{\mathbf p}}
+  \newcommand{\boldq}{{\mathbf q}}
+  \newcommand{\boldr}{{\mathbf r}}
+  \newcommand{\bolds}{{\mathbf s}}
+  \newcommand{\boldt}{{\mathbf t}}
+  \newcommand{\boldu}{{\mathbf u}}
+  \newcommand{\boldv}{{\mathbf v}}
+  \newcommand{\boldw}{{\mathbf w}}
+  \newcommand{\boldx}{{\mathbf x}}
+  \newcommand{\boldy}{{\mathbf y}}
+  \newcommand{\boldz}{{\mathbf z}}
+  \newcommand{\boldzero}{{\mathbf 0}}
+  \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+  \newcommand{\boldT}{{\mathbf T}}
+  \newcommand{\boldN}{{\mathbf N}}
+  \newcommand{\boldB}{{\mathbf B}}
+  \newcommand{\boldF}{{\mathbf F}}
+  \newcommand{\boldS}{{\mathbf S}}
+  \newcommand{\boldE}{{\mathbf E}}
+  \newcommand{\boldG}{{\mathbf G}}
+  \newcommand{\boldK}{{\mathbf K}}
+  \newcommand{\boldL}{{\mathbf L}}
+  \DeclareMathOperator{\lns}{lns}
+  \DeclareMathOperator{\lcm}{lcm}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\tr}{tr}
+  \DeclareMathOperator{\NS}{null}
+  \DeclareMathOperator{\RS}{row}
+  \DeclareMathOperator{\CS}{col}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\range}{range}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\nullity}{nullity}
+  \DeclareMathOperator{\sign}{sign}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Aff}{Aff}
+  \DeclareMathOperator{\Frac}{Frac}
+  \DeclareMathOperator{\Ann}{Ann}
+  \DeclareMathOperator{\Tor}{Tor}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\mdeg}{mdeg}
+  \DeclareMathOperator{\Lt}{Lt}
+  \DeclareMathOperator{\Lc}{Lc}
+  \DeclareMathOperator{\disc}{disc}
+  \DeclareMathOperator{\Frob}{Frob}
+  \DeclareMathOperator{\adj}{adj}
+  \DeclareMathOperator{\curl}{curl}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\diver}{div}
+  \DeclareMathOperator{\flux}{flux}
+  \DeclareMathOperator{\Hom}{Hom}
+  \DeclareMathOperator{\ab}{ab}
+
+
+  \newcommand{\surjects}{\twoheadrightarrow}
+  \newcommand{\injects}{\hookrightarrow}
+  \newcommand{\bijects}{\leftrightarrow}
+  \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+  \newcommand{\floor}[1]{\lfloor#1\rfloor}
+  \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+  \newcommand{\mclass}[2][m]{[#2]_{#1}}
+  \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+  \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+  \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+  \newcommand{\normalin}{\trianglelefteq}
+  \newcommand{\angvec}[1]{\langle #1\rangle}
+  \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+  \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+  \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+  \newenvironment{linsys}[2][m]{
+  \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+  }{
+  \end{array}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li><div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="c_integral_calculus.html" class="internal"><span class="codenumber">1</span> <span class="title">Integral calculus</span></a></div>
+<ul class="structural">
+<li class="active"><div class="toc-item"><a href="s_antiderivatives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Antiderivatives</span></a></div></li>
+<li><div class="toc-item"><a href="s_est_area.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Estimating area</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-interactives.html" class="internal"><span class="codenumber">E</span> <span class="title">Interactives and computational cells</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_antiderivatives"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Antiderivatives</span>
+</h2>
+<div class="para" id="p-1">What is calculus? Below you find a decent, if terse answer.</div>
+<article class="principle theorem-like" id="mantra_calculus"><h3 class="heading">
+<span class="type">Dictum</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Calculus is the science of functions.</span>
+</h3>
+<div class="para" id="p-2">In more detail, calculus investigates and analyzes properties of functions using three fundamental tools: the <em class="emphasis">limit</em>, the <em class="emphasis">derivative</em>, and the <em class="emphasis">integral</em>.</div></article><div class="para" id="p-3">Presumably you are already on intimate terms with the limit and the derivative. In this course we take up the integral in earnest. We begin somewhat indirectly, introducing first the <em class="emphasis">antiderivative</em> and its accompanying <em class="emphasis">indefinite integral</em> notation. Both of these concepts have everything to do with the <em class="emphasis">derivative</em>, and nothing directly to do with the actual definition of the <em class="emphasis">integral</em>! However, as we will see with the <code class="code-inline tex2jax_ignore">[provisional cross-reference: th_ftc]</code>, these concepts will play an essential role in <em class="emphasis">computing</em> integrals.</div>
+<article class="definition definition-like" id="d_antiderivative"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Antiderivative.</span>
+</h3> <div class="para" id="p-4">Let <span class="process-math">\(f\)</span> be a function defined on an interval <span class="process-math">\(I\text{.}\)</span> An <dfn class="terminology">antiderivative</dfn> of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\)</span> is a function <span class="process-math">\(F\)</span> satisfying <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div></article><article class="example example-like" id="eg_antiderivatives"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Basic antiderivative computations.</span>
+</h3>
+<div class="para logical" id="p-5">
+<div class="para">Find an antiderivative for the given function <span class="process-math">\(f\)</span> on the given interval <span class="process-math">\(I\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-1"><div class="para" id="p-6">
+<span class="process-math">\(f(x)=x^7\text{,}\)</span> <span class="process-math">\(I=\R\)</span>
+</div></li>
+<li id="li-2"><div class="para" id="p-7">
+<span class="process-math">\(f(x)=\frac{1}{\sqrt{x}}\text{,}\)</span> <span class="process-math">\(I=(0,\infty)\)</span>
+</div></li>
+<li id="li-3"><div class="para" id="p-8">
+<span class="process-math">\(f(x)=2\sin x-x^{2/3}\text{,}\)</span> <span class="process-math">\(I=\R\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><div class="para logical" id="p-9">
+<div class="para">We find antiderivatives for each example “by inspection”. To check that our answer is correct, we simply verify that for each candidate antiderivative <span class="process-math">\(F\)</span> we have <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\)</span> in the given interval <span class="process-math">\(I\text{.}\)</span> We leave this to you.</div>
+<ol class="decimal">
+<li id="li-4"><div class="para" id="p-10">
+<span class="process-math">\(F(x)=\frac{1}{8}x^8\)</span> is an antiderivative of <span class="process-math">\(f(x)=x^7\)</span> on <span class="process-math">\(I=\R\text{.}\)</span>
+</div></li>
+<li id="li-5">
+<div class="para" id="p-11">
+<span class="process-math">\(F(x)=2\sqrt{x}\)</span> is an antiderivative of <span class="process-math">\(f(x)=\frac{1}{\sqrt{x}}\)</span> on <span class="process-math">\(I=(0,\infty)\text{.}\)</span>
+</div>
+<div class="para" id="p-12">To verify that <span class="process-math">\(F'(x)=f(x)\)</span> here it is essential to translate the given radical expressions to power expressions so that we can make use of the power rule. That is, we have <span class="process-math">\(F(x)=2x^{1/2}\)</span> and <span class="process-math">\(f(x)=\frac{1}{x^{1/2}}=x^{-1/2}\text{,}\)</span> whence <span class="process-math">\(F'(x)=x^{-1/2}=f(x)\)</span> for all <span class="process-math">\(x\in (0,\infty)\text{.}\)</span>
+</div>
+</li>
+<li id="li-6"><div class="para" id="p-13">
+<span class="process-math">\(F(x)=-2\cos x-\frac{3}{5}x^{5/3}\)</span> is an antiderivative of <span class="process-math">\(f(x)=2\sin x-x^{2/3}\)</span> on <span class="process-math">\(I=\R\)</span>
+</div></li>
+</ol>
+</div></div></div>
+</div></article><article class="example example-like" id="eg_antiderivative_interval"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Antiderivatives depend on intervals.</span>
+</h3>
+<div class="para" id="p-14">Let <span class="process-math">\(f(x)=\abs{x}\text{.}\)</span> Show that <span class="process-math">\(F(x)=\frac{1}{2}x^2\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I=[0,1]\text{,}\)</span> but not on <span class="process-math">\(J=[-1,0]\text{.}\)</span> Find an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(J\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<div class="para logical" id="p-15">
+<div class="para">We have <span class="process-math">\(F'(x)=x\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span> Since by definition we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\abs{x}=\begin{cases} x \amp\text{if } x\geq 0 \\ -x \amp x \leq 0 \end{cases}\text{,}
+\end{equation*}
+</div>
+<div class="para">we see that <span class="process-math">\(F'(x)=f(x)=x\)</span> for all <span class="process-math">\(x\in [0,1]\text{.}\)</span> Thus <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-16">By the same token, since <span class="process-math">\(F'(x)=x\)</span> and <span class="process-math">\(f(x)=-x\)</span> on <span class="process-math">\(J=[-1,0]\text{,}\)</span> we see that <span class="process-math">\(F'(x)\ne f(x)\)</span> for all <span class="process-math">\(x\in J\text{,}\)</span> and hence that <span class="process-math">\(F\)</span> is not an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(J\text{.}\)</span>
+</div> <div class="para" id="p-17">Lastly, from our analysis above we now see that <span class="process-math">\(G(x)=-\frac{1}{2}x^2\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(J=[-1,0]\text{,}\)</span> since on this interval we have <span class="process-math">\(G'(x)=f(x)=-x\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="algorithm theorem-like" id="proc_antiderivative_inspection"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Computing antiderivatives by inspection.</span>
+</h3>
+<div class="para logical" id="p-18">
+<div class="para">Given a function <span class="process-math">\(f\)</span> and interval <span class="process-math">\(I\text{,}\)</span> to compute (with justification) an antiderivative <span class="process-math">\(F\)</span> of <span class="process-math">\(f\)</span> <em class="emphasis">by inspection</em>, proceed as follows.</div>
+<ol class="decimal">
+<li id="li-7"><div class="para" id="p-19">Provide a <em class="emphasis">candidate</em> antiderivative <span class="process-math">\(F\text{.}\)</span>
+</div></li>
+<li id="li-8"><div class="para" id="p-20">Verify that <span class="process-math">\(F\)</span> is an antiderivative by showing that <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">This is very much a “guess and check” procedure. Do not be shy in hazarding a guess for your candidate antiderivative <span class="process-math">\(F\text{;}\)</span> even if your check proves the candidate to be incorrect, the very act of checking will often reveal what needs to be adjusted to produce an actual antiderivative.</div>
+</div></article><article class="example example-like" id="eg_antiderivatives_nonelementary"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Less elementary antiderivative computations.</span>
+</h3>
+<div class="para logical" id="p-21">
+<div class="para">Find an antiderivative for the given function <span class="process-math">\(f\)</span> on the given interval <span class="process-math">\(I\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-9"><div class="para" id="p-22">
+<span class="process-math">\(f(x)=\sec^2 5x\text{,}\)</span> <span class="process-math">\(I=(-\pi/2, \pi/2)\)</span>
+</div></li>
+<li id="li-10"><div class="para" id="p-23">
+<span class="process-math">\(f(x)=x\cos(x^2)\text{,}\)</span> <span class="process-math">\(I=\R\)</span>
+</div></li>
+<li id="li-11"><div class="para" id="p-24">
+<span class="process-math">\(f(x)=\cos(x^2)\text{,}\)</span> <span class="process-math">\(I=\R\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="para logical" id="p-25">
+<div class="para">Part of what makes these computations more difficult is that the <em class="emphasis">chain rule</em> inevitably arises when checking our candidate antiderivatives. Since the chain rule plays an important role here, make sure you indicate where it arises in your check.</div>
+<ol class="decimal">
+<li id="li-12"><div class="para logical" id="p-26">
+<div class="para">
+<span class="process-math">\(F(x)=\frac{1}{5}\tan 5x\)</span> is an antiderative of <span class="process-math">\(f(x)=\sec^2 5x\)</span> on <span class="process-math">\(I=(-\pi/2, \pi/2)\)</span> since</div>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+\frac{d}{dx} \frac{1}{5}\tan 5x \amp = \frac{1}{5}\left( \frac{d}{dx}\tan 5x \right) \amp \text{(scalar rule)} \\
+\amp = \frac{1}{5}\sec^2 5x \cdot (5x)' \amp \text{(chain rule)}\\
+\amp = \frac{1}{5}(5\sec^2 5x)\\
+\amp = \sec^2 5x\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-13"><div class="para logical" id="p-27">
+<div class="para">
+<span class="process-math">\(F(x)=\frac{1}{2}\sin(x^2)\)</span> is an antiderivative of <span class="process-math">\(f(x)=x\cos(x^2)\)</span> since</div>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+F'(x) \amp = \frac{1}{2}\left( \sin(x^2)\right)' \amp \text{(scalar rule)}\\
+\amp = \frac{1}{2}\cos(x^2)\cdot (x^2)' \amp \text{(chain rule)}\\
+\amp = \frac{1}{2}(2x\cos(x^2))\\
+\amp = x\cos(x^2)\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-14"><div class="para" id="p-28">Hmmm. This is a curious one. Some typical educated guesses as to what <span class="process-math">\(F\)</span> might be (e.g., <span class="process-math">\(F(x)=\sin(x^2)\)</span> or <span class="process-math">\(F(x)=\frac{1}{2x}\sin(x^2)\)</span>) all prove incorrect when carefully computing <span class="process-math">\(F'(x)\)</span> using the chain and/or product rules. Two natural questions arise: (1) does <span class="process-math">\(f(x)=\cos(x^2)\)</span> have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time!</div></li>
+</ol>
+</div></div></div>
+</div></article><article class="theorem theorem-like" id="th_gen_antiderivative"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">General antiderivative formula.</span>
+</h3>
+<div class="para logical" id="p-29">
+<div class="para">Assume <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-15"><div class="para" id="p-30">Given any constant <span class="process-math">\(C\in \R\text{,}\)</span> the function <span class="process-math">\(G(x)=F(x)+C\)</span> is also an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+<li id="li-16"><div class="para" id="p-31">Conversely, if <span class="process-math">\(G\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> then there is a constant <span class="process-math">\(C\in\R\)</span> such that <span class="process-math">\(G(x)=F(x)+C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="remark remark-like" id="rm_antiderivative"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-32">
+<div class="para">The two statements of <a href="" class="xref" data-knowl="./knowl/th_gen_antiderivative.html" title="Theorem 1.1.7: General antiderivative formula">Theorem 1.1.7</a> taken together are equivalent to the following: if <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\text{,}\)</span> then the set of <em class="emphasis">all</em> antiderivatives of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_gen_antiderivative.html">
+\begin{equation*}
+\{G(x)\colon G(x)=F(x)+C \text{ for some } C\in \R\}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, once we find one antiderivative <span class="process-math">\(F\)</span> of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> we obtain all other antiderivatives of <span class="process-math">\(f\)</span> simply by adding an arbitrary constant <span class="process-math">\(C\)</span> to <span class="process-math">\(F\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-33">In particular, note that antiderivatives are not unique! There is no such thing as <em class="emphasis">the</em> antiderivative of a function; if <span class="process-math">\(f\)</span> has an antiderivative <span class="process-math">\(F\text{,}\)</span> then it has infinitely many antiderivatives <span class="process-math">\(F(x)+C\text{,}\)</span> where <span class="process-math">\(C\)</span> is any real constant.</div></article><article class="example example-like" id="example-4"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Antiderivative with specified conditions.</span>
+</h3>
+<div class="para logical" id="p-34">
+<div class="para">At time <span class="process-math">\(t=0\)</span> minutes a 100 gallon tank of water begins leaking. After <span class="process-math">\(t\)</span> minutes, the rate at which the gallon leaks is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(t)=\frac{1}{\sqrt{2t+1}} \text{ gallons per minute}\text{.}
+\end{equation*}
+</div>
+<div class="para">Find a formula for <span class="process-math">\(f(t)\text{,}\)</span> the amount of water in the tank after <span class="process-math">\(t\)</span> minutes.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><div class="para" id="p-35"></div></div></div>
+</div></article><article class="example example-like" id="example-5"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Initial value problem.</span>
+</h3>
+<div class="para logical" id="p-36">
+<div class="para">Consider the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_initial_value.html ./knowl/eq_initial_value.html" id="eq_initial_value">
+\begin{equation}
+f''(x)=-\frac{2}{3}\cos 2x+x\text{.}\tag{1.1.1}
+\end{equation}
+</div>
+<ol class="decimal">
+<li id="li-17"><div class="para" id="p-37">Find the general formula for a function <span class="process-math">\(f\)</span> satisfying <a href="" class="xref" data-knowl="./knowl/eq_initial_value.html" title="Equation 1.1.1">(1.1.1)</a>.</div></li>
+<li id="li-18"><div class="para logical" id="p-38">
+<div class="para">Find the unique function <span class="process-math">\(f\)</span> satisfying <a href="" class="xref" data-knowl="./knowl/eq_initial_value.html" title="Equation 1.1.1">(1.1.1)</a> and the <em class="emphasis">initial conditions</em>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_initial_value.html">
+\begin{equation*}
+f(0)=0, f'(0)=-1\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-39"></div></div></div>
+</div></article><article class="definition definition-like" id="d_indefinite_integral"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Indefinite integral.</span>
+</h3>  <div class="para logical" id="p-40">
+<div class="para">If <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\text{,}\)</span> then by <a href="" class="xref" data-knowl="./knowl/th_gen_antiderivative.html" title="Theorem 1.1.7: General antiderivative formula">Theorem 1.1.7</a> any other antiderivative is of the form <span class="process-math">\(G(x)=F(x)+C\)</span> for some <span class="process-math">\(C\in \R\text{.}\)</span> We say in this case that the expression <span class="process-math">\(F(x)+C \)</span> is the <dfn class="terminology">general antiderivative</dfn> and denote this using the <dfn class="terminology">indefinite integral</dfn> notation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_gen_antiderivative.html" id="eq_indefinite_integral">
+\begin{equation}
+\int f\, dx=F(x)+C\text{.}\tag{1.1.2}
+\end{equation}
+</div>
+<div class="para">The symbol <span class="process-math">\(\int\)</span> is called the <dfn class="terminology">integral symbol</dfn>, the function <span class="process-math">\(f\)</span> is called the <dfn class="terminology">integrand</dfn> of the integral, and <span class="process-math">\(x\)</span> is called the <dfn class="terminology">variable of integration</dfn>.</div>
+</div></article><article class="remark remark-like" id="remark-2"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-41">It should be noted that the indefinite integral notation is riddled with ambiguity. In particular, whereas the interval of definition <span class="process-math">\(I\)</span> plays an important role in the definition of antiderivative (as we saw in <a href="" class="xref" data-knowl="./knowl/eg_antiderivative_interval.html" title="Example 1.1.4: Antiderivatives depend on intervals">Example 1.1.4</a>), it does not appear in the notation <span class="process-math">\(\int f\, dx\text{.}\)</span> So how are we to understand a statement like <a href="" class="xref" data-knowl="./knowl/eq_indefinite_integral.html" title="Equation 1.1.2">(1.1.2)</a>? We will take it to mean that on <em class="emphasis">some interval</em> (either implied or given) the function <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\text{,}\)</span> and hence that the general antiderivative formula for <span class="process-math">\(f\)</span> on this interval is given by <span class="process-math">\(G(x)=F(x)+C\text{.}\)</span>
+</div></article><article class="example example-like" id="eg_indefinite_integral"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span>
+</h3>Some of our previous example computations can be summarized by the following indefinite integral formulas.<div class="displaymath process-math" id="md-3">
+\begin{align*}
+\int x^7\, dx \amp = \frac{1}{8}x^8+C\\
+\int \frac{1}{\sqrt{x}}\, dx \amp = 2\sqrt{x}+C\\
+\int 2\sin x-x^{2/3}\, dx \amp = -2\cos x-\frac{3}{5}x^{5/3}+C\\
+\int \sec^2 5x\, dx \amp = \frac{1}{5}\tan 5x +C\\
+\int x\cos(x^2)\, dx \amp = \frac{1}{2}\sin (x^2)+C\text{.}
+\end{align*}
+</div></article><article class="theorem theorem-like" id="th_antiderivative_formulas"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Antiderivative formulas.</span>
+</h3>
+<div class="para logical" id="p-42">
+<div class="para">The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The <span class="process-math">\(k\)</span> appearing in the formulas below is understood to be any nonzero constant.</div>
+<div class="displaymath process-math" id="md-4">
+\begin{align*}
+\int 0\, dx\amp =C \amp  \int x^r\, dx\amp =\frac{x^{r+1}}{r+1}+C, r\ne -1\\
+\int \cos kx\, dx\amp =\frac{1}{k}\sin kx+C \amp  \int \sin kx\, dx \amp =-\frac{1}{k}\cos kx+C  \\
+\int\sec^2kx\, dx\amp =\frac{1}{k}\tan kx+C \amp  \int \csc^2 kx \, dx\amp =-\frac{1}{k}\cot kx+C \\
+\int \sec kx\tan kx\, dx\amp =\frac{1}{k}\sec kx+C \amp  \int \csc kx\cot kx\, dx\amp =-\frac{1}{k}\csc kx+C \text{.}
+\end{align*}
+</div>
+</div></article><article class="theorem theorem-like" id="th_antiderivative_rules"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Antiderivative rules.</span>
+</h3>
+<div class="para" id="p-43">If <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are antiderivatives of the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{,}\)</span> respectively, on the interval <span class="process-math">\(I\text{,}\)</span> then (1) <span class="process-math">\(cF\)</span> is an antiderivative of <span class="process-math">\(cf\)</span> for any <span class="process-math">\(c\in\R\text{,}\)</span> (2) <span class="process-math">\(F+G\)</span> is an antiderivative of <span class="process-math">\(f+g\text{,}\)</span> and hence <span class="process-math">\(cF\pm dG\)</span> is an antiderivative of <span class="process-math">\(cf\pm dg\)</span> for any <span class="process-math">\(c,d\in\R\text{,}\)</span>
+</div> <div class="para logical" id="p-44">
+<div class="para">A somewhat liberal usage of indefinite integral notation allows us to summarize these results as follows.</div>
+<ol class="decimal">
+<li id="eq_scalar">
+<span class="heading"><span class="title">Scalar rule.</span></span><div class="para" id="p-derived-eq_scalar"> <span class="process-math">\(\int cf\, dx = c\int f\, dx\)</span>
+</div>
+</li>
+<li id="eq_sum">
+<span class="heading"><span class="title">Sum rule.</span></span><div class="para" id="p-derived-eq_sum"> <span class="process-math">\(\int f+g \, dx = \int f\, dx+\int g\, dx\)</span>
+</div>
+</li>
+<li id="eq_general">
+<span class="heading"><span class="title">Linear combination rule.</span></span><div class="para" id="p-derived-eq_general"> <span class="process-math">\(\int cf\pm dg\, dx= c\int f\, dx \pm d\int g\, dx\)</span>
+</div>
+</li>
+</ol>
+<div class="para">.</div>
+</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="c_integral_calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="s_est_area.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
