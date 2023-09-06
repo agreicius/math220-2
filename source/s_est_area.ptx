@@ -13,7 +13,7 @@
             We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the <m>y</m>-values of points on the graph of <m>f</m> through some means. The GeoGebra interactive below helps illustrate the technique.
             <figure width="100%" xml:id="fig_est_area">
                 <interactive geogebra="wcptduq3" />
-                <caption>Estimating area with rectangular blocks</caption>
+                <caption><url href="https://www.geogebra.org/m/wcptduq3">GeoGebra: Estimating area with rectangular blocks</url></caption>
             </figure>
         </p>
     </project>
@@ -110,4 +110,20 @@
             </p>
           </statement>
     </algorithm>
+    <remark>
+        <p>
+            Recall that given a function <m>g</m>, its instantaneous rate of change with respect to <m>x</m> is precisely its derivative <m>g'</m>. This allows us to interpret <xref ref="proc_est_net_change"/> as a method of estimating the net change in a function <m>g</m> over an interval using information only about its derivative function <m>f=g'</m>. 
+        </p>
+    </remark>
+    <example>
+        <p>
+            Below you find the graph of the velocity <m>v(t)</m>
+            (in mph)
+            of a driver heading due east <m>t</m> minutes after setting off.
+            Compute an estimate of the area under the graph of <m>v(t)</m> between <m>t=0</m> and <m>t=20</m>,
+            and explain what this estimate means physically speaking.
+            Include units!
+              <image width="56%" source="images/EstDistance.pdf"/>
+          </p>
+    </example>
 </section>
