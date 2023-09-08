@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Estimating area",
-  "body": " Estimating area  By way of motivation of what will be the definition of the integral, we consider the computational problem of computing the area of a region defined by the graph of a function.   Estimating area  Let be the set of points lying between the graph of and the -axis from to : that is, . We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the -values of points on the graph of through some means. The GeoGebra interactive below helps illustrate the technique.   GeoGebra: Estimating area with rectangular blocks      Estimating error   Let be a nonnegative function defined on the interval , and let be the graph of from to . To estimate the area between and the -axis proceed as follows:   Divide into equal subintervals, each of width .    For each subinterval pick a sample input  in that interval and build the rectangle whose base is the subinterval and whose sample height is given by . The area of this block is .    Sum together the areas of the blocks constructed in Step 2.     Depending on how the sample inputs are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.   If is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a left sum estimate (resp. right sum estimate ).    If is chosen as the midpoint of each subinterval, the estimate is called a midpoint sum estimate .    If is chosen so that is the minimum value of on each subinterval, the estimate is called a lower sum estimate .    If is chosen so that is the maximum value of on each subinterval, the estimate is called an upper sum estimate .        Estimating net change   Suppose physical quantity is a function of an input , and that is the instantaneous rate of change of with respect to .  Suppose we are only given the rate of change function and wish to use this to estimate the net change of from to : that is, we wish to estimate . We can do so using the same method described in .  In this context we interpret a sample value as a constant rate of change over the given subinterval, in which case an individual term in our sum is understood as an estimate of the net change of over the given subinterval, under the simplifying assumption that changes with constant rate of change  over the interval.     Recall that given a function , its instantaneous rate of change with respect to is precisely its derivative . This allows us to interpret as a method of estimating the net change in a function over an interval using information only about its derivative function .    Below you find the graph of the velocity (in mph) of a driver heading due east minutes after setting off. Compute an estimate of the area under the graph of between and , and explain what this estimate means physically speaking. Include units!    "
+  "body": " Estimating area  By way of motivation of what will be the definition of the integral, we consider the computational problem of computing the area of a region defined by the graph of a function.   Estimating area  Let be the set of points lying between the graph of and the -axis from to : that is, . We will estimate the area of this region by approximating the region itself with a collection of blocks of equal width, whose heights are determined by the -values of points on the graph of through some means. The GeoGebra interactive below helps illustrate the technique.   GeoGebra: Estimating area with rectangular blocks      Estimating area   Let be a nonnegative function defined on the interval , and let be the graph of from to . To estimate the area between and the -axis proceed as follows:   Divide into equal subintervals, each of width .    For each subinterval pick a sample input  in that interval and build the rectangle whose base is the subinterval and whose sample height is given by . The area of this block is .    Sum together the areas of the blocks constructed in Step 2.     Depending on how the sample inputs are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.   If is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a left sum estimate (resp. right sum estimate ).    If is chosen as the midpoint of each subinterval, the estimate is called a midpoint sum estimate .    If is chosen so that is the minimum value of on each subinterval, the estimate is called a lower sum estimate .    If is chosen so that is the maximum value of on each subinterval, the estimate is called an upper sum estimate .        Estimating net change   Suppose physical quantity is a function of an input , and that is the instantaneous rate of change of with respect to .  Suppose we are only given the rate of change function and wish to use this to estimate the net change of from to : that is, we wish to estimate . We can do so using the same method described in .  In this context we interpret a sample value as a constant rate of change over the given subinterval, in which case an individual term in our sum is understood as an estimate of the net change of over the given subinterval, under the simplifying assumption that changes with constant rate of change  over the interval.     Recall that given a function , its instantaneous rate of change with respect to is precisely its derivative . This allows us to interpret as a method of estimating the net change in a function over an interval using information only about its derivative function .    Below you find the graph of the velocity (in mph) of a driver heading due east minutes after setting off. Compute an estimate of the area under the graph of between and , and explain what this estimate means physically speaking. Include units!      Let , and let be the graph of . Compute the upper and lower area estimates of the region between and the -axis from to by dividing the interval into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. Explain why the lower estimate is equal to the right estimate, and why the the upper estimate is equal to the left estimate.            Let , and let be the graph of . Compute the upper and lower area estimates of the region between and the -axis from to by dividing the interval into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. \\         "
 },
 {
   "id": "project-1",
@@ -177,8 +177,8 @@ var ptx_lunr_docs = [
   "url": "s_est_area.html#proc_est_area",
   "type": "Procedure",
   "number": "1.2.2",
-  "title": "Estimating error.",
-  "body": " Estimating error   Let be a nonnegative function defined on the interval , and let be the graph of from to . To estimate the area between and the -axis proceed as follows:   Divide into equal subintervals, each of width .    For each subinterval pick a sample input  in that interval and build the rectangle whose base is the subinterval and whose sample height is given by . The area of this block is .    Sum together the areas of the blocks constructed in Step 2.     Depending on how the sample inputs are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.   If is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a left sum estimate (resp. right sum estimate ).    If is chosen as the midpoint of each subinterval, the estimate is called a midpoint sum estimate .    If is chosen so that is the minimum value of on each subinterval, the estimate is called a lower sum estimate .    If is chosen so that is the maximum value of on each subinterval, the estimate is called an upper sum estimate .      "
+  "title": "Estimating area.",
+  "body": " Estimating area   Let be a nonnegative function defined on the interval , and let be the graph of from to . To estimate the area between and the -axis proceed as follows:   Divide into equal subintervals, each of width .    For each subinterval pick a sample input  in that interval and build the rectangle whose base is the subinterval and whose sample height is given by . The area of this block is .    Sum together the areas of the blocks constructed in Step 2.     Depending on how the sample inputs are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.   If is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a left sum estimate (resp. right sum estimate ).    If is chosen as the midpoint of each subinterval, the estimate is called a midpoint sum estimate .    If is chosen so that is the minimum value of on each subinterval, the estimate is called a lower sum estimate .    If is chosen so that is the maximum value of on each subinterval, the estimate is called an upper sum estimate .      "
 },
 {
   "id": "proc_est_net_change",
@@ -206,6 +206,114 @@ var ptx_lunr_docs = [
   "number": "1.2.5",
   "title": "",
   "body": " Below you find the graph of the velocity (in mph) of a driver heading due east minutes after setting off. Compute an estimate of the area under the graph of between and , and explain what this estimate means physically speaking. Include units!   "
+},
+{
+  "id": "example-8",
+  "level": "2",
+  "url": "s_est_area.html#example-8",
+  "type": "Example",
+  "number": "1.2.6",
+  "title": "",
+  "body": "  Let , and let be the graph of . Compute the upper and lower area estimates of the region between and the -axis from to by dividing the interval into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. Explain why the lower estimate is equal to the right estimate, and why the the upper estimate is equal to the left estimate.         "
+},
+{
+  "id": "example-9",
+  "level": "2",
+  "url": "s_est_area.html#example-9",
+  "type": "Example",
+  "number": "1.2.7",
+  "title": "",
+  "body": "  Let , and let be the graph of . Compute the upper and lower area estimates of the region between and the -axis from to by dividing the interval into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. \\        "
+},
+{
+  "id": "s_riemann_sums",
+  "level": "1",
+  "url": "s_riemann_sums.html",
+  "type": "Section",
+  "number": "1.3",
+  "title": "Riemann sums",
+  "body": " Riemann sums   Sigma notation   Given a sequence of real numbers the sigma notation  denotes the sum of the -th through -th terms of the sequence: that is, . The variable symbol in this notation is called the index of summation ; the letters , , and are customary choices for indices of summation.     Sequence of primes   Let , be the sequence of prime numbers in increasing order: i.e., , , , etc. Compute .         Sinusoidal series   Compute .         Summation formulas   Let be a positive integer.    for any .     .     .     .       Perhaps the most common method of showing that the above statements are true is a proof of induction . Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the proof technique section of my linear algebra textbook ; furthermore a proof of statement (2) of can be found in one of the examples of that section.     Closed form of summation   Compute using appropriate summation rules and formulas.         Summation rules   Given any sequences and , and any , the following equalities hold.              .    Index shift  For any integer we have .       As with the propositions of this theorem are typically proved using induction.  Informally, statements (1)-(3) follows from some elementary properties of real number arithmetic: namely, commutativity and associativity of addition, and the distributive property.  Statement (4) essentially says that relabeling the indices of the terms in a sum with a shift has no effect on the sum of the terms.     Riemann sums   Let be a function defined on the interval , and let be a positive integer. A partition of into subintervals is a choice of points satisfying . Given a partition and integer the -th subinterval  is the interval . We denote by the length of the subinterval . Thus we have . Given a choice of sample points (or sample inouts ) for each subinterval, the corresponding Riemann sum of on is . A partition along with a choice of sample points for each is called a pointed partition of . In general we get a different Riemann sum of for each pointed partition of the interval we choose.      Let be a function defined on the interval with a chosen partition . Particular rules for picking the sample points for each subinterval in our partition give rise to particular types of Riemann sums. Here are some common examples.   The left Riemann sum is obtained by choosing for all : , is chosen as the left endpoint of each subinterval . The Riemann sum in this case is .    The right Riemann sum is obtained by choosing for all : , is chosen as the right endpoint of each subinterval . The Riemann sum in this case is .    The midpoint Riemann sum is obtained by choosing for all : , is chosen as the midpoint of each subinterval . The Riemann sum in this case is .    The lower Riemann sum is obtained by choosing to be a point where is the minimum value of on for all .    The upper Riemann sum is obtained by choosing to be a point where is the maximum value of on for all .         Let be a positive integer and define to be the right Riemann sum of corresponding to the partition of into equal subintervals.   Derive a closed formula for . Your answer will be expressed in terms of .    Compute .    Now do the same thing with , the left Riemann sum of corresponding to the partion of into equal subintervals.   Hint . For the closed formula of use the index shift identity .           "
+},
+{
+  "id": "d_sigma_notation",
+  "level": "2",
+  "url": "s_riemann_sums.html#d_sigma_notation",
+  "type": "Definition",
+  "number": "1.3.1",
+  "title": "Sigma notation.",
+  "body": " Sigma notation   Given a sequence of real numbers the sigma notation  denotes the sum of the -th through -th terms of the sequence: that is, . The variable symbol in this notation is called the index of summation ; the letters , , and are customary choices for indices of summation.   "
+},
+{
+  "id": "eg_seq_primes",
+  "level": "2",
+  "url": "s_riemann_sums.html#eg_seq_primes",
+  "type": "Example",
+  "number": "1.3.2",
+  "title": "Sequence of primes.",
+  "body": " Sequence of primes   Let , be the sequence of prime numbers in increasing order: i.e., , , , etc. Compute .       "
+},
+{
+  "id": "eg_seq_trig",
+  "level": "2",
+  "url": "s_riemann_sums.html#eg_seq_trig",
+  "type": "Example",
+  "number": "1.3.3",
+  "title": "Sinusoidal series.",
+  "body": " Sinusoidal series   Compute .       "
+},
+{
+  "id": "th_summ_formulas",
+  "level": "2",
+  "url": "s_riemann_sums.html#th_summ_formulas",
+  "type": "Theorem",
+  "number": "1.3.4",
+  "title": "Summation formulas.",
+  "body": " Summation formulas   Let be a positive integer.    for any .     .     .     .       Perhaps the most common method of showing that the above statements are true is a proof of induction . Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the proof technique section of my linear algebra textbook ; furthermore a proof of statement (2) of can be found in one of the examples of that section.   "
+},
+{
+  "id": "example-12",
+  "level": "2",
+  "url": "s_riemann_sums.html#example-12",
+  "type": "Example",
+  "number": "1.3.5",
+  "title": "Closed form of summation.",
+  "body": " Closed form of summation   Compute using appropriate summation rules and formulas.       "
+},
+{
+  "id": "th_summ_rules",
+  "level": "2",
+  "url": "s_riemann_sums.html#th_summ_rules",
+  "type": "Theorem",
+  "number": "1.3.6",
+  "title": "Summation rules.",
+  "body": " Summation rules   Given any sequences and , and any , the following equalities hold.              .    Index shift  For any integer we have .       As with the propositions of this theorem are typically proved using induction.  Informally, statements (1)-(3) follows from some elementary properties of real number arithmetic: namely, commutativity and associativity of addition, and the distributive property.  Statement (4) essentially says that relabeling the indices of the terms in a sum with a shift has no effect on the sum of the terms.   "
+},
+{
+  "id": "d_riemann_sum",
+  "level": "2",
+  "url": "s_riemann_sums.html#d_riemann_sum",
+  "type": "Definition",
+  "number": "1.3.7",
+  "title": "Riemann sums.",
+  "body": " Riemann sums   Let be a function defined on the interval , and let be a positive integer. A partition of into subintervals is a choice of points satisfying . Given a partition and integer the -th subinterval  is the interval . We denote by the length of the subinterval . Thus we have . Given a choice of sample points (or sample inouts ) for each subinterval, the corresponding Riemann sum of on is . A partition along with a choice of sample points for each is called a pointed partition of . In general we get a different Riemann sum of for each pointed partition of the interval we choose.   "
+},
+{
+  "id": "d_riemann_sum_types",
+  "level": "2",
+  "url": "s_riemann_sums.html#d_riemann_sum_types",
+  "type": "Definition",
+  "number": "1.3.8",
+  "title": "",
+  "body": "  Let be a function defined on the interval with a chosen partition . Particular rules for picking the sample points for each subinterval in our partition give rise to particular types of Riemann sums. Here are some common examples.   The left Riemann sum is obtained by choosing for all : , is chosen as the left endpoint of each subinterval . The Riemann sum in this case is .    The right Riemann sum is obtained by choosing for all : , is chosen as the right endpoint of each subinterval . The Riemann sum in this case is .    The midpoint Riemann sum is obtained by choosing for all : , is chosen as the midpoint of each subinterval . The Riemann sum in this case is .    The lower Riemann sum is obtained by choosing to be a point where is the minimum value of on for all .    The upper Riemann sum is obtained by choosing to be a point where is the maximum value of on for all .      "
+},
+{
+  "id": "example-13",
+  "level": "2",
+  "url": "s_riemann_sums.html#example-13",
+  "type": "Example",
+  "number": "1.3.9",
+  "title": "",
+  "body": "  Let be a positive integer and define to be the right Riemann sum of corresponding to the partition of into equal subintervals.   Derive a closed formula for . Your answer will be expressed in terms of .    Compute .    Now do the same thing with , the left Riemann sum of corresponding to the partion of into equal subintervals.   Hint . For the closed formula of use the index shift identity .          "
 },
 {
   "id": "appendix-notation",
