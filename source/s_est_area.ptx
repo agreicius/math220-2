@@ -18,7 +18,7 @@
         </p>
     </project>
     <algorithm xml:id="proc_est_area">
-        <title>Estimating error</title>
+        <title>Estimating area</title>
         <statement>
         <p>
             Let <m>f</m> be a nonnegative function defined on the interval <m>[a,b]</m>,
@@ -123,7 +123,45 @@
             Compute an estimate of the area under the graph of <m>v(t)</m> between <m>t=0</m> and <m>t=20</m>,
             and explain what this estimate means physically speaking.
             Include units!
-              <image width="56%" source="images/EstDistance.pdf"/>
+              <image width="56%" source="images/EstDistance.png"/>
           </p>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x)=1-x^3</m>, and let
+          <m>\mathcal{C}</m> be the graph of <m>f</m>.
+          Compute the upper and lower area estimates of the region between
+          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m> by dividing the interval <m>[0,1]</m> into 4 equal subintervals.
+          Draw block pictures of your estimates on the provided graphs.
+          Explain why the lower estimate is equal to the right estimate,
+          and why the the upper estimate is equal to the left estimate.
+            <image width="37%" source="images/AreaEstSmallDomain.png"/>  <image width="37%" source="images/AreaEstSmallDomain.png"/>
+      
+        </p>
+      </statement>
+      <solution>
+        <p>
+          
+        </p>
+      </solution>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x)=1-\val{x}^3</m>,
+          and let <m>\mathcal{C}</m> be the graph of <m>f</m>.
+          Compute the upper and lower area estimates of the region between
+          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m> by dividing the interval
+          <m>[-1/2,1]</m> into 4 equal subintervals.
+          Draw block pictures of your estimates on the provided graphs.
+            <image width="56%" source="images/AreaEstLargeDomain.png"/> \  <image width="56%" source="images/AreaEstLargeDomain.png"/>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          
+        </p>
+      </solution>
     </example>
 </section>

@@ -1,0 +1,245 @@
+<section xml:id="s_riemann_sums">
+    <title>Riemann sums</title>
+<definition xml:id="d_sigma_notation">
+    <title>Sigma notation</title>
+    <statement>
+        <p>
+            Given a sequence of real numbers <m>a_m, a_{m+1},\dots, a_n</m> the <term>sigma notation</term> 
+            <m>
+              \sum\limits_{k=m}^{n}a_k
+            </m>
+            denotes the sum of the <m>m</m>-th through <m>n</m>-th terms of the sequence: that is, 
+            <men>
+              \sum_{k=m}^{n}a_k=a_m+a_{m+1}+\cdots +a_n
+            </men>.
+            The variable symbol <m>k</m> in this notation is called the <term>index of summation</term>; the letters <m>i</m>, <m>j</m>, and <m>k</m> are customary choices for indices of summation. 
+          </p>
+    </statement>
+</definition>  
+<example xml:id="eg_seq_primes">
+    <title>Sequence of primes</title>
+    <statement>
+        <p>
+            Let <m>p_1, p_2,p_3, \dots</m>,
+            be the sequence of prime numbers in increasing order:
+            i.e., <m>p_1=2</m>, <m>p_2=3</m>, <m>p_3=5</m>, etc.
+            Compute <m>\sum\limits_{k=3}^{6}p_k</m>.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="eg_seq_trig">
+    <title>Sinusoidal series</title>
+    <statement>
+        <p>
+            Compute <m>\sum\limits_{k=1}^{21}\sin(\pi k/2)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<theorem xml:id="th_summ_formulas">
+    <title>Summation formulas</title>
+    <statement>
+      <p>
+        Let <m>n</m> be a positive integer.
+        <ol>
+          <li>
+            <p>
+              <m>\sum\limits_{k=1}^n c=cn</m> for any <m>c\in \R</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum\limits_{k=1}^nk=\frac{n(n+1)}{2}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum\limits_{k=1}^nk^2=\frac{n(n+1)(2n+1)}{6}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum\limits_{k=1}^nk^3=\left(\frac{n(n+1)}{2}\right)^2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <proof>
+        <p>
+         Perhaps the most common method of showing that the above statements are true is a <em>proof of induction</em>. Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the <url href="https://agreicius.github.io/linear-algebra/s_proof_technique.html">proof technique section</url> of my <url href="https://agreicius.github.io/linear-algebra/">linear algebra textbook</url>; furthermore a proof of statement (2) of <xref ref="th_summ_formulas"/> can be found in one of the <url href="https://agreicius.github.io/linear-algebra/s_proof_technique.html#eg_weak_induction">examples</url> of that section.   
+        </p>
+    </proof>
+  </theorem>
+  <example>
+    <title>Closed form of summation</title>
+    <statement>
+        <p>
+            Compute <m>\sum\limits_{k=1}^{5}(5k^3-10k+2)</m> using appropriate summation rules and formulas.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <theorem xml:id="th_summ_rules">
+    <title>Summation rules</title>
+    <statement>
+      <p>
+        Given any sequences <m>a_m, a_{m+1}, \dots, a_n</m> and <m>b_m, b_{m+1}, \dots, b_n</m>, and 
+        any <m>c\in \R</m>, the following equalities hold.
+        <ol>
+          <li>
+            <p>
+              <m>\sum\limits_{k=m}^na_k+\sum_{k=m}^nb_k=\sum_{k=m}^n(a_k+b_k)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum\limits_{k=m}^na_k-\sum_{k=m}^nb_k=\sum_{k=m}^n(a_k-b_k)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum\limits_{k=m}^nca_k=c\sum\limits_{k=m}^na_k</m>.
+            </p>
+          </li>
+          <li>
+            <title>Index shift</title>
+            <p> For any integer <m>q</m> we have 
+                <men xml:id="eq_index_shift">\sum\limits_{k=m}^{n}a_k=\sum_{k=m-q}^{n-q}a_{k+q}
+                </men>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <proof>
+        <p>
+            As with <xref ref="th_summ_formulas"/> the propositions of this theorem are typically proved using induction.
+        </p>
+        <p> 
+            Informally, statements (1)-(3) follows from some elementary properties of real number arithmetic: namely, commutativity and associativity of addition, and the distributive property.  
+        </p>
+        <p>
+            Statement (4) essentially says that relabeling the indices of the terms in a sum with a shift has no effect on the sum of the terms. 
+        </p>
+    </proof>
+  </theorem>
+<definition xml:id="d_riemann_sum">
+    <title>Riemann sums</title>
+    <statement>
+        <p>
+            Let <m>f</m> be a function defined on the interval <m>[a,b]</m>,
+            and let <m>n</m> be a positive integer.
+            A <term>partition</term> of <m>[a,b]</m> into <m>n</m> subintervals is a choice of points <m>x_0, x_1,\dots,
+            x_n</m> satisfying
+            <men xml:id="eq_partition">
+              a=x_0\lt x_1\lt x_2\lt \cdots \lt x_n=b
+            </men>.
+            Given a partition <xref ref="eq_partition"/> and integer <m>1\leq k\leq n</m> the <term><m>k</m>-th subinterval</term> <m>I_k</m> is the interval <m>[x_{k-1},x_k]</m>. We denote by <m>\Delta x_k</m> the <term>length</term> of the subinterval <m>I_k</m>. Thus we have 
+            <men xml:id="eq_interval_length">
+              \Delta x_k=x_{k}-x_{k-1}
+            </men>.
+            Given a choice of <term>sample points</term> (or <term>sample inouts</term>) 
+            <m>c_k\in I_k</m> for each subinterval,
+            the corresponding <term>Riemann sum</term> of <m>f</m> on <m>[a,b]</m> is
+            <me>
+              \sum_{k=1}^n f(c_k)\Delta x_k=f(c_1)(x_1-x_0)+f(c_2)(x_2-x_1)+\cdots +f(c_n)(x_n-x_{n-1})
+            </me>.
+            A partition <xref ref="eq_partition"/> along with a choice of sample points <m>c_k\in I_k</m> for each <m>1\leq k\leq n</m> is called a <term>pointed partition</term> of <m>[a,b]</m>. In general we get a different Riemann sum of <m>f</m> for each pointed partition of the interval <m>[a,b]</m> we choose. 
+          </p>
+    </statement>
+</definition>
+<definition xml:id="d_riemann_sum_types">
+    <statement>
+        <p>
+           Let <m>f</m> be a function defined on the interval <m>[a,b]</m> with a chosen partition <xref ref="eq_partition"/>.  Particular rules for picking the sample points <m>c_k\in I_k</m> for each subinterval <m>I_k</m> in our partition give rise to particular types of Riemann sums. Here are some common examples. 
+           <ol>
+            <li>
+                <p>
+                    The <term>left Riemann sum</term> is obtained by choosing <m>c_k=a_{k-1}</m> for all <m>1\leq k\leq n</m>: <ie/>, <m>c_k</m> is chosen as the left endpoint of each subinterval <m>I_k</m>. The Riemann sum in this case is 
+                    <men xml:id="eq_left_Riemann">
+                        \sum_{k=1}^nf(x_{k-1})\Delta x_k
+                    </men>.                    
+                </p>
+            </li>
+            <li>
+                <p>
+                    The <term>right Riemann sum</term> is obtained by choosing <m>c_k=a_{k}</m> for all <m>1\leq k\leq n</m>: <ie/>, <m>c_k</m> is chosen as the right endpoint of each subinterval <m>I_k</m>. The Riemann sum in this case is 
+                    <men xml:id="eq_right_Riemann">
+                        \sum_{k=1}^nf(x_{k})\Delta x_k
+                    </men>.                    
+                </p>
+            </li>
+            <li>
+                <p>
+                    The <term>midpoint Riemann sum</term> is obtained by choosing <m>c_k=(a_{k-1}+a_k)/2</m> for all <m>1\leq k\leq n</m>: <ie/>, <m>c_k</m> is chosen as the midpoint of each subinterval <m>I_k</m>. The Riemann sum in this case is 
+                    <men xml:id="eq_midpoint_Riemann">
+                        \sum_{k=1}^nf(\frac{x_{k-1}+x_{k}}{2})\Delta x_{k}
+                    </men>.                    
+                </p>
+            </li>
+            <li>
+                <p>
+                    The <term>lower Riemann</term> sum is obtained by choosing <m>c_k\in I_k</m> to be a point where <m>f(c_k)</m> is the minimum value of <m>f</m> on <m>I_k</m> for all <m>1\leq k\leq n</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The <term>upper Riemann</term> sum is obtained by choosing <m>c_k\in I_k</m> to be a point where <m>f(c_k)</m> is the maximum value of <m>f</m> on <m>I_k</m> for all <m>1\leq k\leq n</m>. 
+                </p>
+            </li>
+           </ol>
+        </p>
+    </statement>
+</definition>
+<example>
+    <statement>
+        <p>
+            Let <m>n</m> be a positive integer and define <m>R_n</m> to be the right Riemann sum of
+          <m>f(x)=1-x^3</m> corresponding to the partition of <m>[0,1]</m> into <m>n</m> equal subintervals.
+          <ol marker="(a)">
+            <li>
+              <p>
+                Derive a closed formula for <m>R_n</m>.
+                Your answer will be expressed in terms of <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>\lim_{n\to \infty}R_n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now do the same thing with <m>L_n</m>,
+                the left Riemann sum of <m>f(x)</m> corresponding to the partion of <m>[0,1]</m> into <m>n</m> equal subintervals.
+              </p>
+              <p>
+                <em>Hint</em>.
+                For the closed formula of <m>L_n</m> use the index shift identity <xref ref="eq_index_shift"/>.
+              </p>
+            </li>
+          </ol>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+</section>
