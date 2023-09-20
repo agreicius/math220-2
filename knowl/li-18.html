@@ -11,17 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
-</h4>
+                    <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Find the unique function <span class="process-math">\(f\)</span> satisfying <a href="" class="xref" data-knowl="./knowl/eq_initial_value.html" title="Equation 1.1.1">(1.1.1)</a> and the <em class="emphasis">initial conditions</em>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_initial_value.html">
+<div class="para">Assume <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are antiderivatives of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\text{,}\)</span> and define <span class="process-math">\(H(x)=F(x)-G(x)\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-f(0)=0, f'(0)=-1\text{.}
+H'(x)=F'(x)-G'(x)=f(x)-f(x)=0
 \end{equation*}
 </div>
-</div></article><span class="incontext"><a href="s_antiderivatives.html#li-18" class="internal">in-context</a></span>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> It follows (as a consequence of the mean value theorem) that <span class="process-math">\(H\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> In other words, we have <span class="process-math">\(H(x)=C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> Since <span class="process-math">\(H(x)=F(x)-G(x)\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G(x)=F(x)+H(x)=F(x)+C
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{,}\)</span> as desired.</div>
+</div>
+                <span class="incontext"><a href="s_antiderivatives.html#li-18" class="internal">in-context</a></span>
 </body>
 </html>

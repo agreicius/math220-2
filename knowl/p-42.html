@@ -12,17 +12,43 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The <span class="process-math">\(k\)</span> appearing in the formulas below is understood to be any nonzero constant.</div>
-<div class="displaymath process-math">
-\begin{align*}
-\int 0\, dx\amp =C \amp  \int x^r\, dx\amp =\frac{x^{r+1}}{r+1}+C, r\ne -1\\
-\int \cos kx\, dx\amp =\frac{1}{k}\sin kx+C \amp  \int \sin kx\, dx \amp =-\frac{1}{k}\cos kx+C  \\
-\int\sec^2kx\, dx\amp =\frac{1}{k}\tan kx+C \amp  \int \csc^2 kx \, dx\amp =-\frac{1}{k}\cot kx+C \\
-\int \sec kx\tan kx\, dx\amp =\frac{1}{k}\sec kx+C \amp  \int \csc kx\cot kx\, dx\amp =-\frac{1}{k}\csc kx+C \text{.}
-\end{align*}
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">First, since <span class="process-math">\(f'(x)\)</span> is an antiderivative of <span class="process-math">\(f''(x)=-\frac{2}{3}\cos 2x+x\text{,}\)</span> using <a href="" class="xref" data-knowl="./knowl/proc_antiderivative_inspection.html" title="Procedure 1.1.5: Computing antiderivatives by inspection">Procedure 1.1.5</a> and <a href="" class="xref" data-knowl="./knowl/th_gen_antiderivative.html" title="Theorem 1.1.7: General antiderivative formula">Theorem 1.1.7</a>, we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_antiderivative_inspection.html ./knowl/th_gen_antiderivative.html ./knowl/eq_double_prime.html">
+\begin{equation}
+f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C\tag{1.1.3}
+\end{equation}
 </div>
+<div class="para">for some <span class="process-math">\(C\in \R\text{.}\)</span> Next, since <span class="process-math">\(f(x)\)</span> is an antiderivative of <span class="process-math">\(f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C\text{,}\)</span> reasoning as above we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_antiderivative_inspection.html ./knowl/th_gen_antiderivative.html ./knowl/eq_double_prime.html">
+\begin{equation}
+f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3+Cx+D\tag{1.1.4}
+\end{equation}
 </div>
+<div class="para">for some <span class="process-math">\(C,D\in \R\text{.}\)</span> The general formula for <span class="process-math">\(f''\)</span> is thus given by <a href="" class="xref" data-knowl="./knowl/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a>.</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">The given <em class="emphasis">initial conditions</em> <span class="process-math">\(f(0)=0\)</span> and <span class="process-math">\(f'(0)=-1\)</span> allows us to solve for the <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> in <a href="" class="xref" data-knowl="./knowl/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a> as follows. First, using <a href="" class="xref" data-knowl="./knowl/eq_prime.html" title="Equation 1.1.3">(1.1.3)</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_double_prime.html ./knowl/eq_prime.html ./knowl/eq_double_prime.html">
+\begin{equation*}
+-1=f'(0)=0+0+C\text{,}
+\end{equation*}
+</div>
+<div class="para">which implies <span class="process-math">\(C=-1\text{.}\)</span> Using this new fact and <span class="process-math">\(f(0)=0\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a> now implies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_double_prime.html ./knowl/eq_prime.html ./knowl/eq_double_prime.html">
+\begin{equation*}
+0=f(0)=\frac{1}{6}+0+0+D\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(D=-1/6\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_double_prime.html ./knowl/eq_prime.html ./knowl/eq_double_prime.html">
+\begin{equation*}
+f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3-x-\frac{1}{6}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="s_antiderivatives.html#p-42" class="internal">in-context</a></span>
 </body>
 </html>

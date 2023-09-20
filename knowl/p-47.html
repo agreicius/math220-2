@@ -13,21 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(f\)</span> be a nonnegative function defined on the interval <span class="process-math">\([a,b]\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span> To estimate the area between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis proceed as follows:</div>
-<ol class="decimal">
-<li><div class="para">Divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals, each of width <span class="process-math">\(\Delta x=(b-a)/n\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">For each subinterval pick a <dfn class="terminology">sample input</dfn> <span class="process-math">\(x^*\)</span> in that interval and build the rectangle whose base is the subinterval and whose <dfn class="terminology">sample height</dfn> is given by <span class="process-math">\(h=f(x^*)\text{.}\)</span> The area of this block is</div>
+<div class="para">The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The <span class="process-math">\(k\)</span> appearing in the formulas below is understood to be any nonzero constant.</div>
 <div class="displaymath process-math">
-\begin{equation}
-A=\underset{\text{ height } }{\underbrace{f(x^*)}}\,\underset{\text{ width } }{\underbrace{\Delta x}}\text{.}\tag{1.2.1}
-\end{equation}
+\begin{align*}
+\int 0\, dx\amp =C \amp  \int x^r\, dx\amp =\frac{x^{r+1}}{r+1}+C, r\ne -1\\
+\int \cos kx\, dx\amp =\frac{1}{k}\sin kx+C \amp  \int \sin kx\, dx \amp =-\frac{1}{k}\cos kx+C  \\
+\int\sec^2kx\, dx\amp =\frac{1}{k}\tan kx+C \amp  \int \csc^2 kx \, dx\amp =-\frac{1}{k}\cot kx+C \\
+\int \sec kx\tan kx\, dx\amp =\frac{1}{k}\sec kx+C \amp  \int \csc kx\cot kx\, dx\amp =-\frac{1}{k}\csc kx+C \text{.}
+\end{align*}
 </div>
-</div></li>
-<li><div class="para">Sum together the areas of the <span class="process-math">\(n\)</span> blocks constructed in Step 2.</div></li>
-</ol>
 </div>
-<span class="incontext"><a href="s_est_area.html#p-47" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_antiderivatives.html#p-47" class="internal">in-context</a></span>
 </body>
 </html>

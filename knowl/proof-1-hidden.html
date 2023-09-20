@@ -10,5 +10,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Perhaps the most common method of showing that the above statements are true is a <em class="emphasis">proof of induction</em>. Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html" target="_blank">proof technique section</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Footnote 1.3.1"><sup> 1 </sup></a> of my <a class="external" href="https://agreicius.github.io/linear-algebra/" target="_blank">linear algebra textbook</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Footnote 1.3.2"><sup> 2 </sup></a>; furthermore a proof of statement (2) of <a href="" class="xref" data-knowl="./knowl/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4</a> can be found in one of the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html#eg_weak_induction" target="_blank">examples</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Footnote 1.3.3"><sup> 3 </sup></a> of that section.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">
+                    <div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be an antiderivative of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\)</span> and let <span class="process-math">\(C\in \R\)</span> be any real constant. We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dx}\left(F(x)+C\right) \amp = \frac{d}{dx}F(x)+\frac{d}{dx}(C)\\
+\amp =F'(x)+0\\
+\amp = f(x)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> Thus <span class="process-math">\(G(x)=F(x)+C\)</span> is an antiderivative for any <span class="process-math">\(C\in \R\text{.}\)</span>
+</div>
+</div>
+                 
+                    <div class="para logical">
+<div class="para">Assume <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are antiderivatives of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I\text{,}\)</span> and define <span class="process-math">\(H(x)=F(x)-G(x)\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H'(x)=F'(x)-G'(x)=f(x)-f(x)=0
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> It follows (as a consequence of the mean value theorem) that <span class="process-math">\(H\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> In other words, we have <span class="process-math">\(H(x)=C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> Since <span class="process-math">\(H(x)=F(x)-G(x)\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G(x)=F(x)+H(x)=F(x)+C
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{,}\)</span> as desired.</div>
+</div>
+                </div></article></body>
 </html>
