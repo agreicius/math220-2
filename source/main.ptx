@@ -26,8 +26,8 @@
     <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="c_integral_calculus">
       <title>Integral calculus</title>
       <xi:include  href="s_antiderivatives.ptx"/>
-      <xi:include  href="s_est_area.ptx"/>
-      <xi:include  href="s_riemann_sums.ptx"/>
+      <!-- <xi:include  href="s_est_area.ptx"/>
+      <xi:include  href="s_riemann_sums.ptx"/> -->
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">

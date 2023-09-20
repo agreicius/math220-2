@@ -169,7 +169,7 @@
                 </li>
                 <li>
                     <p>
-                        Hmmm. This is a curious one. Some typical educated guesses as to what <m>F</m> might be (<eg/>, <m>F(x)=\sin(x^2)</m> or <m>F(x)=\frac{1}{2x}\sin(x^2)</m>) all prove incorrect when carefully computing <m>F'(x)</m> using the chain and/or product rules. Two natural questions arise: (1) does <m>f(x)=\cos(x^2)</m> have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time! 
+                        Hmmm. This is a curious one. Some typical educated guesses as to what <m>F</m> might be (<eg/>, <m>F(x)=\sin(x^2)</m> or <m>F(x)=\frac{\sin(x^2)}{x^2}</m>) all prove incorrect when carefully computing <m>F'(x)</m> using the chain and/or product rules. Two natural questions arise: (1) does <m>f(x)=\cos(x^2)</m> have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time! 
                     </p>
                 </li>
                </ol>   
@@ -195,6 +195,32 @@
                </ol>
             </p>
         </statement>
+        <proof>
+            <p>
+                <li>
+                    <p>
+                        Let <m>F</m> be an antiderivative of <m>f</m> on the interval <m>I</m> and let <m>C\in \R</m> be any real constant. We have 
+                        <md>
+                            <mrow>\frac{d}{dx}\left(F(x)+C\right) \amp = \frac{d}{dx}F(x)+\frac{d}{dx}(C)</mrow>
+                            <mrow> \amp =F'(x)+0</mrow>
+                            <mrow> \amp = f(x)</mrow>
+                        </md> 
+                        for all <m>x\in I</m>. Thus <m>G(x)=F(x)+C</m> is an antiderivative for any <m>C\in \R</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Assume <m>F</m> and <m>G</m> are antiderivatives of <m>f</m> on the interval <m>I</m>, and define <m>H(x)=F(x)-G(x)</m>. We have 
+                        <me>
+                            H'(x)=F'(x)-G'(x)=f(x)-f(x)=0
+                        </me>
+                        for all <m>x\in I</m>. It follows (as a consequence of the mean value theorem) that <m>H</m> is a constant function on <m>I</m>. In other words, we have <m>H(x)=C</m> for all <m>x\in I</m>. Since <m>H(x)=F(x)-G(x)</m>, we conclude that 
+                        <me>G(x)=F(x)+H(x)=F(x)+C</me>
+                        for all <m>x\in I</m>, as desired. 
+                    </p>
+                </li>
+            </p>
+        </proof>
     </theorem>
     <remark xml:id="rm_antiderivative">
         <p>
@@ -221,7 +247,19 @@
         </statement>
         <solution>
             <p>
-                
+                Recall that if <m>Q=f(t)</m>, then the function <m>f'(t)</m> outputs the instantaneous rate of change of <m>Q</m> with respect to <m>t</m> at the given time. Thus in our current setting <m>f'(t)</m> is the rate of change of the amount of water in the tank at time <m>t</m>. We are told that water <em>leaks out of</em> the tank at a rate given by <m>r(t)</m>. It  follows that 
+                <me>
+                    f'(x)=-r(t)=\frac{-1}{\sqrt{2t+1}}
+                </me>.
+                Put another way, <m>f</m> is an antiderivative of <m>-r(t)=-1/\sqrt{2t+1}</m>. An application of <xref ref="proc_antiderivative_inspection"/> yields <m>F(t)=-\sqrt{2t+1}</m> as <em>an</em> antiderivative of <m>-r(t)</m>. It follows from <xref ref="th_gen_antiderivative"/> that the general antiderivative is of the form <m>F(x)+C=-\sqrt{2t+1}+C</m>. Since <m>f</m> is also an antiderivative, we thus have 
+                <men xml:id="eq_initial">
+                    f(t)=-\sqrt{2t+1}+C
+                </men>.
+                To determine what the constant <m>C</m> is, we use the <em>initial condition</em> <m>f(0)=100</m>. Using <xref ref="eq_initial"/> this implies that 
+                <me>
+                    100=f(0)=-\sqrt{1}+C=-1+C
+                </me>.
+                We conclude that <m>C=101</m> and thus <m>f(t)=101-\sqrt{2t+1}</m>. 
             </p>
         </solution>
     </example>
@@ -252,7 +290,41 @@
         </statement>
         <solution>
             <p>
-                
+                <ol>
+                    <li>
+                        <p>
+                            First, since <m>f'(x)</m> is an antiderivative of <m>f''(x)=-\frac{2}{3}\cos 2x+x</m>, using <xref ref="proc_antiderivative_inspection"/> and <xref ref="th_gen_antiderivative"/>, we conclude that 
+                            <men xml:id="eq_prime">
+                                f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C
+                            </men>
+                            for some <m>C\in \R</m>. 
+                          Next, since <m>f(x)</m> is an antiderivative of <m>f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C</m>, reasoning as above we have 
+                          <men xml:id="eq_double_prime">
+                            f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3+Cx+D
+                          </men>
+                          for some <m>C,D\in \R</m>. The general formula for <m>f''</m> is thus given by <xref ref="eq_double_prime"/>.  
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The given <em>initial conditions</em> <m>f(0)=0</m> and <m>f'(0)=-1</m> allows us to solve for the <m>C</m> and <m>D</m> in <xref ref="eq_double_prime"/> as follows. First, using <xref ref="eq_prime"/> we have 
+                            <me>
+                                -1=f'(0)=0+0+C
+                            </me>,
+                            which implies <m>C=-1</m>. Using this new fact and <m>f(0)=0</m>, <xref ref="eq_double_prime"/> now implies 
+                            <me>
+                                0=f(0)=\frac{1}{6}+0+0+D
+                            </me>, 
+                            or <m>D=-1/6</m>. We conclude that 
+                            <me>
+                                f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3-x-\frac{1}{6}
+                            </me>.
+                            
+                            
+                            
+                        </p>
+                    </li>
+                </ol>
             </p>
         </solution>
     </example>
