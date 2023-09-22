@@ -3,7 +3,7 @@
     <p>
         By way of motivation of what will be the definition of the integral, we consider the computational problem of computing the area of a region defined by the graph of a function. 
     </p>
-    <project>
+    <project xml:id="proj_est_area">
         <title>Estimating area</title>
         <p>
             Let <m>\mathcal{R}</m> be the set of points lying between the graph of <m>f(x)=1-x^3</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m>: that is, 
@@ -85,6 +85,54 @@
           </p>
         </statement>
     </algorithm>
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x)=1-x^3</m>, and let
+          <m>\mathcal{C}</m> be the graph of <m>f</m>.
+          Compute the upper and lower area estimates of the region between
+          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m> by dividing the interval <m>[0,1]</m> into 4 equal subintervals.
+          Draw block pictures of your estimates on the provided graphs.
+          Explain why the lower estimate is equal to the right estimate,
+          and why the the upper estimate is equal to the left estimate.
+            <image width="37%" source="images/AreaEstSmallDomain.png"/>  <image width="37%" source="images/AreaEstSmallDomain.png"/>
+      
+        </p>
+      </statement>
+      <solution>
+        <p>
+          As it turns out, upper and lower estimates for this function end up being the same thing as left and right estimates, respectively. This is the case because <m>f</m> happens to be a <em>decreasing function</em> on the interval <m>I</m>. Thus we can use the GeoGebra interactive in <xref ref="proj_est_area"/> to produce these diagrams and compute the approximations, using the left and right sum options. (Try for yourself!) The upper estimate (which happens to be the left sum estimate) is <m>55/64</m>; the under estimate, which happens to be the right estimate, is <m>39/64</m>. Observe that the upper estimate is indeed larger than the under estimate, as we expect.  
+        </p>
+      </solution>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x)=1-\val{x}^3</m>,
+          and let <m>\mathcal{C}</m> be the graph of <m>f</m>.
+          Compute the upper and lower area estimates of the region between
+          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=-1/2</m> to <m>x=1</m> by dividing the interval
+          <m>[-1/2,1]</m> into 4 equal subintervals.
+          Draw block pictures of your estimates on the provided graphs.
+            <image width="56%" source="images/AreaEstLargeDomain.png"/> \  <image width="56%" source="images/AreaEstLargeDomain.png"/>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First we determine the width of the blocks: since the interval <m>[-1/2,1]</m> has length <m>3/2</m>, dividing this into four equal lengths yields blocks of width <m>(3/2)/4=3/8=0.375</m>. To pick the heights for each block, we look for the highest (resp., lowest) point in the curve over each base. Here is a diagram of the upper and lower estimates. 
+          <image width="100%" source="images/left-right_estimate.png"/>
+          The corresponding area estimates are computed as follows:
+          <md>
+            <mrow>\text{upper estimate} \amp =f(-1/8)(3/8)+f(0)(3/8)+f(1/4)(3/8)+f(5/8)(3/8) </mrow>
+            <mrow> \amp = \frac{3}{8}(511/512+1+63/64+387/512)\amp (f(x)=1-\abs{x}^3)</mrow>
+            <mrow> \amp = 5739/2048 \approx 1.401</mrow>
+            <mrow>\text{lower estimate} \amp =f(-1/2)(3/8)+f(1/4)(3/8)+f(5/8)(3/8)+f(1)(3/8) </mrow>
+            <mrow> \amp = \frac{3}{8}(7/8+63/64+387/512+0)\amp (f(x)=1-\abs{x}^3)</mrow>
+            <mrow> \amp = 4017/4096 \approx 0.981</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
 
     <algorithm xml:id="proc_est_net_change">
         <title>Estimating net change</title>
@@ -125,43 +173,31 @@
             Include units!
               <image width="56%" source="images/EstDistance.png"/>
           </p>
+          <solution>
+            <p>
+              First we compute an area of the region under the graph using a right sum estimate with four blocks. Here is a diagram corresponding to this estimate procedure. 
+              <image width="100%" source="images/displacement_estimate.png"/>    
+              Let <m>B_i</m> be the <m>i</m>-th block for each <m>1\leq i\leq 4</m>, and let <m>A_i=\operatorname{area} B_i</m>. We compute the areas <m>A_i</m>, and include the units of <m>v</m> (mph)  and <m>\Delta t</m> (min) in our computations:
+              <md>
+                <mrow>A_1 \amp =v(5)\cdot 5=(60 \text{ mph}) \cdot (5 \text{ min})=(60 \text{ mph}) \cdot (1/12 \text{ min})= 5 \text{ mi}</mrow>
+                <mrow>A_2 \amp =v(10)\cdot 5=(65 \text{ mph}) \cdot (5 \text{ min})=(65 \text{ mph}) \cdot (1/12 \text{ min}) = 65/12 \text{ mi}</mrow>
+                <mrow>A_3 \amp =v(15)\cdot 5=(55 \text{ mph}) \cdot (5 \text{ min})=(55 \text{ mph}) \cdot (1/12 \text{ min})  = 55/12 \text{ mi}</mrow>
+                <mrow>A_4 \amp =v(20)\cdot 5=(35 \text{ mph}) \cdot (5 \text{ min})=(35 \text{ mph}) \cdot (1/12 \text{ min})  = 35/12 \text{ mi}</mrow>
+              </md>
+              Physically speaking, the first area 
+              <me>
+                A_1=v(5)\cdot 5 (=\text{velocity}\cdot \text{time})
+              </me>,
+              computes the distance the driver travels eastward, had they driven at a constant speed of <m>v(5)=60</m> mph eastward for the full five minutes. As such, this is an <em>approximation</em> of the total distance the drive traveled during this segment of the drive. Similar interpretations apply to the other blocks: each area can be understood as an <em>approximation</em> of the distance traveled eastward during that segment of the drive. We conclude that the the driver travels approximately 
+              <me>
+                \frac{1}{12}(60+65+55+35)=215/12\approx 17.9 \text{ mi}
+              </me>
+              in the eastward direction. 
+            </p>
+            <p>
+              Observe that in this example, where velocity is always <em>positive</em> (equivalently, the driver always travels in same direction), distance traveled over any time interval is the same thing as change in position (or <em>displacement</em>) over that interval. And so total distance traveled is the same thing as total change of position. This is no longer the case if the velocity function can be positive and negative. We will pick this up again later. 
+            </p>
+          </solution>
     </example>
-    <example>
-      <statement>
-        <p>
-          Let <m>f(x)=1-x^3</m>, and let
-          <m>\mathcal{C}</m> be the graph of <m>f</m>.
-          Compute the upper and lower area estimates of the region between
-          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m> by dividing the interval <m>[0,1]</m> into 4 equal subintervals.
-          Draw block pictures of your estimates on the provided graphs.
-          Explain why the lower estimate is equal to the right estimate,
-          and why the the upper estimate is equal to the left estimate.
-            <image width="37%" source="images/AreaEstSmallDomain.png"/>  <image width="37%" source="images/AreaEstSmallDomain.png"/>
-      
-        </p>
-      </statement>
-      <solution>
-        <p>
-          
-        </p>
-      </solution>
-    </example>
-    <example>
-      <statement>
-        <p>
-          Let <m>f(x)=1-\val{x}^3</m>,
-          and let <m>\mathcal{C}</m> be the graph of <m>f</m>.
-          Compute the upper and lower area estimates of the region between
-          <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=1</m> by dividing the interval
-          <m>[-1/2,1]</m> into 4 equal subintervals.
-          Draw block pictures of your estimates on the provided graphs.
-            <image width="56%" source="images/AreaEstLargeDomain.png"/> \  <image width="56%" source="images/AreaEstLargeDomain.png"/>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          
-        </p>
-      </solution>
-    </example>
+   
 </section>
