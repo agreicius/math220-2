@@ -333,9 +333,9 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Estimating area</span>
 </h2>
 <div class="para" id="p-50">By way of motivation of what will be the definition of the integral, we consider the computational problem of computing the area of a region defined by the graph of a function.</div>
-<article class="project project-like" id="project-1"><a href="" data-knowl="" class="id-ref project-knowl original has-interactive" data-refid="hk-project-1"><h3 class="heading">
+<article class="project project-like" id="proj_est_area"><a href="" data-knowl="" class="id-ref project-knowl original has-interactive" data-refid="hk-proj_est_area"><h3 class="heading">
 <span class="type">Interactive example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating area.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-1"><article class="project project-like"> <div class="para logical" id="p-51">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proj_est_area"><article class="project project-like"> <div class="para logical" id="p-51">
 <div class="para">Let <span class="process-math">\(\mathcal{R}\)</span> be the set of points lying between the graph of <span class="process-math">\(f(x)=1-x^3\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=1\text{:}\)</span> that is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -371,11 +371,37 @@ A=\underset{\text{ height } }{\underbrace{f(x^*)}}\,\underset{\text{ width } }{\
 <li id="li-31"><div class="para" id="p-59">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called a <dfn class="terminology">lower sum estimate</dfn>.</div></li>
 <li id="li-32"><div class="para" id="p-60">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called an <dfn class="terminology">upper sum estimate</dfn>.</div></li>
 </ul>
-</div></article><article class="algorithm theorem-like" id="proc_est_net_change"><h3 class="heading">
-<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating net change.</span>
+</div></article><article class="example example-like" id="example-7"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-61">Suppose physical quantity <span class="process-math">\(Q=g(x)\)</span> is a function of an input <span class="process-math">\(x\text{,}\)</span> and that <span class="process-math">\(f(x)\)</span> is the <em class="emphasis">instantaneous rate of change</em> of <span class="process-math">\(Q\)</span> with respect to <span class="process-math">\(x\text{.}\)</span>
-</div> <div class="para" id="p-62">Suppose we are only given the rate of change function <span class="process-math">\(f\)</span> and wish to use this to estimate the <dfn class="terminology">net change</dfn> of <span class="process-math">\(Q\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{:}\)</span> that is, we wish to estimate <span class="process-math">\(\Delta Q=g(b)-g(a)\text{.}\)</span> We can do so using the same method described in <a href="" class="xref" data-knowl="./knowl/proc_est_area.html" title="Procedure 1.2.2: Estimating area">Procedure 1.2.2</a>.</div> <div class="para logical" id="p-63">
+<div class="para" id="p-61">Let <span class="process-math">\(f(x)=1-x^3\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{.}\)</span> Compute the upper and lower area estimates of the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=1\)</span> by dividing the interval <span class="process-math">\([0,1]\)</span> into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. Explain why the lower estimate is equal to the right estimate, and why the the upper estimate is equal to the left estimate. <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/AreaEstSmallDomain.png" class="contained"></div>  <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/AreaEstSmallDomain.png" class="contained"></div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="para" id="p-62">As it turns out, upper and lower estimates for this function end up being the same thing as left and right estimates, respectively. This is the case because <span class="process-math">\(f\)</span> happens to be a <em class="emphasis">decreasing function</em> on the interval <span class="process-math">\(I\text{.}\)</span> Thus we can use the GeoGebra interactive in <a href="" class="xref" data-knowl="./knowl/proj_est_area.html" title="Interactive example 1.2.1: Estimating area">Interactive example 1.2.1</a> to produce these diagrams and compute the approximations, using the left and right sum options. (Try for yourself!) The upper estimate (which happens to be the left sum estimate) is <span class="process-math">\(55/64\text{;}\)</span> the under estimate, which happens to be the right estimate, is <span class="process-math">\(39/64\text{.}\)</span> Observe that the upper estimate is indeed larger than the under estimate, as we expect.</div></div></div>
+</div></article><article class="example example-like" id="example-8"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-63">Let <span class="process-math">\(f(x)=1-\val{x}^3\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{.}\)</span> Compute the upper and lower area estimates of the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=-1/2\)</span> to <span class="process-math">\(x=1\)</span> by dividing the interval <span class="process-math">\([-1/2,1]\)</span> into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/AreaEstLargeDomain.png" class="contained"></div> \  <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/AreaEstLargeDomain.png" class="contained"></div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="para logical" id="p-64">
+<div class="para">First we determine the width of the blocks: since the interval <span class="process-math">\([-1/2,1]\)</span> has length <span class="process-math">\(3/2\text{,}\)</span> dividing this into four equal lengths yields blocks of width <span class="process-math">\((3/2)/4=3/8=0.375\text{.}\)</span> To pick the heights for each block, we look for the highest (resp., lowest) point in the curve over each base. Here is a diagram of the upper and lower estimates. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/left-right_estimate.png" class="contained"></div> The corresponding area estimates are computed as follows:</div>
+<div class="displaymath process-math" id="md-6">
+\begin{align*}
+\text{upper estimate} \amp =f(-1/8)(3/8)+f(0)(3/8)+f(1/4)(3/8)+f(5/8)(3/8) \\
+\amp = \frac{3}{8}(511/512+1+63/64+387/512)\amp (f(x)=1-\abs{x}^3)\\
+\amp = 5739/2048 \approx 1.401\\
+\text{lower estimate} \amp =f(-1/2)(3/8)+f(1/4)(3/8)+f(5/8)(3/8)+f(1)(3/8) \\
+\amp = \frac{3}{8}(7/8+63/64+387/512+0)\amp (f(x)=1-\abs{x}^3)\\
+\amp = 4017/4096 \approx 0.981
+\end{align*}
+</div>
+</div></div></div>
+</div></article><article class="algorithm theorem-like" id="proc_est_net_change"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating net change.</span>
+</h3>
+<div class="para" id="p-65">Suppose physical quantity <span class="process-math">\(Q=g(x)\)</span> is a function of an input <span class="process-math">\(x\text{,}\)</span> and that <span class="process-math">\(f(x)\)</span> is the <em class="emphasis">instantaneous rate of change</em> of <span class="process-math">\(Q\)</span> with respect to <span class="process-math">\(x\text{.}\)</span>
+</div> <div class="para" id="p-66">Suppose we are only given the rate of change function <span class="process-math">\(f\)</span> and wish to use this to estimate the <dfn class="terminology">net change</dfn> of <span class="process-math">\(Q\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{:}\)</span> that is, we wish to estimate <span class="process-math">\(\Delta Q=g(b)-g(a)\text{.}\)</span> We can do so using the same method described in <a href="" class="xref" data-knowl="./knowl/proc_est_area.html" title="Procedure 1.2.2: Estimating area">Procedure 1.2.2</a>.</div> <div class="para logical" id="p-67">
 <div class="para">In this context we interpret a sample value <span class="process-math">\(r^*=f(x^*)\)</span> as a constant rate of change over the given subinterval, in which case an individual term</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -384,28 +410,39 @@ f(x^*)\, \Delta x=r^* \Delta x
 </div>
 <div class="para">in our sum is understood as an estimate of the net change of <span class="process-math">\(Q\)</span> over the given subinterval, under the simplifying assumption that <span class="process-math">\(Q\)</span> changes with <em class="emphasis">constant rate of change</em> <span class="process-math">\(r^*=f(x^*)\)</span> over the interval.</div>
 </div></article><article class="remark remark-like" id="remark-3"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-64">Recall that given a function <span class="process-math">\(g\text{,}\)</span> its instantaneous rate of change with respect to <span class="process-math">\(x\)</span> is precisely its derivative <span class="process-math">\(g'\text{.}\)</span> This allows us to interpret <a href="" class="xref" data-knowl="./knowl/proc_est_net_change.html" title="Procedure 1.2.3: Estimating net change">Procedure 1.2.3</a> as a method of estimating the net change in a function <span class="process-math">\(g\)</span> over an interval using information only about its derivative function <span class="process-math">\(f=g'\text{.}\)</span>
-</div></article><article class="example example-like" id="example-7"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-65">Below you find the graph of the velocity <span class="process-math">\(v(t)\)</span> (in mph) of a driver heading due east <span class="process-math">\(t\)</span> minutes after setting off. Compute an estimate of the area under the graph of <span class="process-math">\(v(t)\)</span> between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=20\text{,}\)</span> and explain what this estimate means physically speaking. Include units! <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/EstDistance.png" class="contained"></div>
-</div></article><article class="example example-like" id="example-8"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-66">Let <span class="process-math">\(f(x)=1-x^3\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{.}\)</span> Compute the upper and lower area estimates of the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=1\)</span> by dividing the interval <span class="process-math">\([0,1]\)</span> into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. Explain why the lower estimate is equal to the right estimate, and why the the upper estimate is equal to the left estimate. <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/AreaEstSmallDomain.png" class="contained"></div>  <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/AreaEstSmallDomain.png" class="contained"></div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="para" id="p-67"></div></div></div>
+<div class="para" id="p-68">Recall that given a function <span class="process-math">\(g\text{,}\)</span> its instantaneous rate of change with respect to <span class="process-math">\(x\)</span> is precisely its derivative <span class="process-math">\(g'\text{.}\)</span> This allows us to interpret <a href="" class="xref" data-knowl="./knowl/proc_est_net_change.html" title="Procedure 1.2.5: Estimating net change">Procedure 1.2.5</a> as a method of estimating the net change in a function <span class="process-math">\(g\)</span> over an interval using information only about its derivative function <span class="process-math">\(f=g'\text{.}\)</span>
 </div></article><article class="example example-like" id="example-9"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-68">Let <span class="process-math">\(f(x)=1-\val{x}^3\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{.}\)</span> Compute the upper and lower area estimates of the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=1\)</span> by dividing the interval <span class="process-math">\([-1/2,1]\)</span> into 4 equal subintervals. Draw block pictures of your estimates on the provided graphs. <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/AreaEstLargeDomain.png" class="contained"></div> \  <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/AreaEstLargeDomain.png" class="contained"></div>
+<div class="para" id="p-69">Below you find the graph of the velocity <span class="process-math">\(v(t)\)</span> (in mph) of a driver heading due east <span class="process-math">\(t\)</span> minutes after setting off. Compute an estimate of the area under the graph of <span class="process-math">\(v(t)\)</span> between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=20\text{,}\)</span> and explain what this estimate means physically speaking. Include units! <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/EstDistance.png" class="contained"></div>
+</div> <a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<div class="para logical" id="p-70">
+<div class="para">First we compute an area of the region under the graph using a right sum estimate with four blocks. Here is a diagram corresponding to this estimate procedure. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/displacement_estimate.png" class="contained"></div> Let <span class="process-math">\(B_i\)</span> be the <span class="process-math">\(i\)</span>-th block for each <span class="process-math">\(1\leq i\leq 4\text{,}\)</span> and let <span class="process-math">\(A_i=\operatorname{area} B_i\text{.}\)</span> We compute the areas <span class="process-math">\(A_i\text{,}\)</span> and include the units of <span class="process-math">\(v\)</span> (mph)  and <span class="process-math">\(\Delta t\)</span> (min) in our computations:</div>
+<div class="displaymath process-math" id="md-7">
+\begin{align*}
+A_1 \amp =v(5)\cdot 5=(60 \text{ mph}) \cdot (5 \text{ min})=(60 \text{ mph}) \cdot (1/12 \text{ min})= 5 \text{ mi}\\
+A_2 \amp =v(10)\cdot 5=(65 \text{ mph}) \cdot (5 \text{ min})=(65 \text{ mph}) \cdot (1/12 \text{ min}) = 65/12 \text{ mi}\\
+A_3 \amp =v(15)\cdot 5=(55 \text{ mph}) \cdot (5 \text{ min})=(55 \text{ mph}) \cdot (1/12 \text{ min})  = 55/12 \text{ mi}\\
+A_4 \amp =v(20)\cdot 5=(35 \text{ mph}) \cdot (5 \text{ min})=(35 \text{ mph}) \cdot (1/12 \text{ min})  = 35/12 \text{ mi}
+\end{align*}
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="para" id="p-69"></div></div></div>
-</div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/wcptduq3</code></div></div>
+<div class="para">Physically speaking, the first area</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_1=v(5)\cdot 5 (=\text{velocity}\cdot \text{time})\text{,}
+\end{equation*}
+</div>
+<div class="para">computes the distance the driver travels eastward, had they driven at a constant speed of <span class="process-math">\(v(5)=60\)</span> mph eastward for the full five minutes. As such, this is an <em class="emphasis">approximation</em> of the total distance the drive traveled during this segment of the drive. Similar interpretations apply to the other blocks: each area can be understood as an <em class="emphasis">approximation</em> of the distance traveled eastward during that segment of the drive. We conclude that the the driver travels approximately</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{12}(60+65+55+35)=215/12\approx 17.9 \text{ mi}
+\end{equation*}
+</div>
+<div class="para">in the eastward direction.</div>
+</div> <div class="para" id="p-71">Observe that in this example, where velocity is always <em class="emphasis">positive</em> (equivalently, the driver always travels in same direction), distance traveled over any time interval is the same thing as change in position (or <em class="emphasis">displacement</em>) over that interval. And so total distance traveled is the same thing as total change of position. This is no longer the case if the velocity function can be positive and negative. We will pick this up again later.</div>
+</div></div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/wcptduq3</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_antiderivatives.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

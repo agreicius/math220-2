@@ -10,5 +10,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para"></div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">First we compute an area of the region under the graph using a right sum estimate with four blocks. Here is a diagram corresponding to this estimate procedure. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/displacement_estimate.png" class="contained"></div> Let <span class="process-math">\(B_i\)</span> be the <span class="process-math">\(i\)</span>-th block for each <span class="process-math">\(1\leq i\leq 4\text{,}\)</span> and let <span class="process-math">\(A_i=\operatorname{area} B_i\text{.}\)</span> We compute the areas <span class="process-math">\(A_i\text{,}\)</span> and include the units of <span class="process-math">\(v\)</span> (mph)  and <span class="process-math">\(\Delta t\)</span> (min) in our computations:</div>
+<div class="displaymath process-math">
+\begin{align*}
+A_1 \amp =v(5)\cdot 5=(60 \text{ mph}) \cdot (5 \text{ min})=(60 \text{ mph}) \cdot (1/12 \text{ min})= 5 \text{ mi}\\
+A_2 \amp =v(10)\cdot 5=(65 \text{ mph}) \cdot (5 \text{ min})=(65 \text{ mph}) \cdot (1/12 \text{ min}) = 65/12 \text{ mi}\\
+A_3 \amp =v(15)\cdot 5=(55 \text{ mph}) \cdot (5 \text{ min})=(55 \text{ mph}) \cdot (1/12 \text{ min})  = 55/12 \text{ mi}\\
+A_4 \amp =v(20)\cdot 5=(35 \text{ mph}) \cdot (5 \text{ min})=(35 \text{ mph}) \cdot (1/12 \text{ min})  = 35/12 \text{ mi}
+\end{align*}
+</div>
+<div class="para">Physically speaking, the first area</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_1=v(5)\cdot 5 (=\text{velocity}\cdot \text{time})\text{,}
+\end{equation*}
+</div>
+<div class="para">computes the distance the driver travels eastward, had they driven at a constant speed of <span class="process-math">\(v(5)=60\)</span> mph eastward for the full five minutes. As such, this is an <em class="emphasis">approximation</em> of the total distance the drive traveled during this segment of the drive. Similar interpretations apply to the other blocks: each area can be understood as an <em class="emphasis">approximation</em> of the distance traveled eastward during that segment of the drive. We conclude that the the driver travels approximately</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{12}(60+65+55+35)=215/12\approx 17.9 \text{ mi}
+\end{equation*}
+</div>
+<div class="para">in the eastward direction.</div>
+</div> <div class="para">Observe that in this example, where velocity is always <em class="emphasis">positive</em> (equivalently, the driver always travels in same direction), distance traveled over any time interval is the same thing as change in position (or <em class="emphasis">displacement</em>) over that interval. And so total distance traveled is the same thing as total change of position. This is no longer the case if the velocity function can be positive and negative. We will pick this up again later.</div>
+</div></body>
 </html>
