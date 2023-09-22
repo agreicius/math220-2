@@ -152,7 +152,11 @@
             <men xml:id="eq_interval_length">
               \Delta x_k=x_{k}-x_{k-1}
             </men>.
-            Given a choice of <term>sample points</term> (or <term>sample inouts</term>) 
+            The <term>norm</term> of a partition <m>P</m>, denoted <m>\norm{P}</m>, is the maximum length of a subinterval: <ie/>, 
+            <me>
+              \norm{P}=\max\{\Delta x_1, \Delta x_2, \dots, \Delta x_n\}
+            </me>.
+            Given a choice of <term>sample points</term> (or <term>sample inputs</term>) 
             <m>c_k\in I_k</m> for each subinterval,
             the corresponding <term>Riemann sum</term> of <m>f</m> on <m>[a,b]</m> is
             <me>
