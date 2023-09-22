@@ -13,13 +13,12 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Depending on how the sample inputs <span class="process-math">\(x^*\)</span> are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.</div>
-<ul class="disc">
-<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a <dfn class="terminology">left sum estimate</dfn> (resp. <dfn class="terminology">right sum estimate</dfn>).</div></li>
-<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen as the midpoint of each subinterval, the estimate is called a <dfn class="terminology">midpoint sum estimate</dfn>.</div></li>
-<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called a <dfn class="terminology">lower sum estimate</dfn>.</div></li>
-<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called an <dfn class="terminology">upper sum estimate</dfn>.</div></li>
-</ul>
+<div class="para">For each subinterval pick a <dfn class="terminology">sample input</dfn> <span class="process-math">\(x^*\)</span> in that interval and build the rectangle whose base is the subinterval and whose <dfn class="terminology">sample height</dfn> is given by <span class="process-math">\(h=f(x^*)\text{.}\)</span> The area of this block is</div>
+<div class="displaymath process-math">
+\begin{equation}
+A=\underset{\text{ height } }{\underbrace{f(x^*)}}\,\underset{\text{ width } }{\underbrace{\Delta x}}\text{.}\tag{1.2.1}
+\end{equation}
+</div>
 </div>
 <span class="incontext"><a href="s_est_area.html#p-54" class="internal">in-context</a></span>
 </body>
