@@ -89,18 +89,243 @@
                 <mrow> \amp = 2+\frac{4}{n^2}\cdot (n(n+1)/2)</mrow>
                 <mrow> \amp = 2+2\frac{n^2+n}{n^2}</mrow>
             </md>
-            
-            Using <xref ref="eq_Ln"/>, for any <m>n\geq 1</m> we have 
+            Finally, using <xref ref="eq_lim_Rn"/> we compute
+            <md>
+                <mrow>\int_1^3 f(x)\, dx \amp = \lim_{n\to \infty} R_n </mrow>
+                <mrow> \amp = \lim_{n\to \infty}2+2\frac{n^2+n}{n^2}</mrow>
+                <mrow> \amp = \lim_{n\to \infty}2+2\lim_{n\to \infty}\frac{n^2+n}{n^2} \amp \text{(sum rule)} </mrow>
+                <mrow> \amp = 2+2\cdot 1 \amp (\text{lim. rule for poly. quot.})</mrow>
+                <mrow> \amp = 4</mrow>
+            </md>.
+            The computation using left sums is similar. We include details only of the computation of <m>L_n</m> to illustrate the index shift rule for summations. Using <xref ref="eq_Ln"/>, for any <m>n\geq 1</m> we have 
             <md>
                 <mrow> L_n  \amp = \sum_{k=1}^nf(1+(k-1)\Delta x)\,\Delta x </mrow>
                 <mrow> \amp = \sum_{k=1}^n(1+2(k-1)/n)\cdot (2/n) </mrow>
                 <mrow> \amp =\sum_{k=0}^{n-1}(1+2k/n)\cdot (2/n) \amp \text{(index shift!)}</mrow>
-                <mrow> \amp = \sum_{k=0}^{n-1}\frac{2}{n}+\sum_{k=0}^{n-1}\frac{2k}{n^2}</mrow>
-                <mrow> \amp = 2+\frac{2}{n^2}\sum_{k=0}^{n-1}k</mrow>
-                <mrow> \amp = 2+\frac{2}{n^2}\cdot (n(n-1)/2)</mrow>
-                <mrow> \amp = 2+\frac{n^2-n}{n^2}</mrow>
-            </md>
-             
+                <mrow> \amp = \sum_{k=0}^{n-1}\frac{2}{n}+\sum_{k=0}^{n-1}\frac{4k}{n^2}</mrow>
+                <mrow> \amp = 2+\frac{4}{n^2}\sum_{k=0}^{n-1}k</mrow>
+                <mrow> \amp = 2+\frac{4}{n^2}\cdot (n(n-1)/2)</mrow>
+                <mrow> \amp = 2+2\frac{n^2-n}{n^2}</mrow>
+            </md>.
+            Using reasoning very similar to our previous computation, we then see that <m>\lim_{n\to \infty}L_n=4</m>. Note how the two approximation techniques (left and right sum) yield the same value in the limit. 
+        </p>
+    </solution>
+</example>
+<example xml:id="eg_int_cubic">
+    <title>Integral of cubic function</title>
+    <statement>
+        <p>
+            Let <m>f(x)=1-x^3</m> and let <m>b\geq 0</m> be a fixed nonnegative constant. Compute <m>\int_0^bf(x)\, dx</m> as a limit of right Riemann sums. 
+        </p>
+    </statement>
+</example>
+<p>
+    In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.  
+</p>
+<theorem xml:id="th_integrable_functions">
+    <title>Integrable functions</title>
+    <statement>
+        <p>
+            Let <m>f</m> be a function defined on the interval <m>I=[a,b]</m>.
+            <ol>
+                <li>
+                    <p>
+                        If <m>f</m> is continuous on <m>I</m>, then <m>f</m> is integrable on <m>I</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>f</m> is continuous everywhere on <m>I</m> except for a finite set of jump discontinuities, then <m>f</m> is integrable on <m>I</m>.  
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<theorem xml:id="th_int_props">
+    <title>Integral properties</title>
+    <statement>
+        <p>
+            Let <m>f</m> and <m>g</m> be integrable over <m>[a,b]</m>.
+            <ol>
+              <li>
+                <p>
+                  <m>\int_a^a f(x)\, dx=0</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\int_b^af(x)\, dx=-\int_a^b f(x)\, dx</m>. 
+                </p>
+              </li>
+              <li>
+                <title>Sum and difference</title>
+                <p>
+                
+                  <m>\int_a^b f(x)\pm g(x)\, dx=\int_a^bf(x)\, dx\pm \int_a^bg(x)\, dx</m>
+                </p>
+              </li>
+              <li>
+                <title>Scalar multiple</title>
+                <p>
+                  <m>\int_a^bcf(x)\, dx=c\int_a^bf(x)\, dx</m> for any <m>c\in \R</m>.
+                </p>
+              </li>
+              <li>
+                <title>Interval partition</title>
+                <p>
+                  For any <m>c\in \R</m> we have
+                  <me>
+                    \int_a^bf(x)\, dx=\int_a^cf(x)\, dx+\int_c^b f(x)\, dx
+                  </me>.
+                </p>
+              </li>
+              <li>
+                <title>Min-max inequality</title>
+                <p>
+                 
+                  If <m>f</m> satisfies <m>m\leq f(x)\leq M</m> for all <m>x\in [a,b]</m>, then
+                  <me>
+                    m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
+                  </me>
+                </p>
+              </li>
+              <li>
+                <title>Domination</title>
+                <p>
+                  If <m>f(x)\leq g(x)</m> for all <m>x\in [a,b]</m>, then
+                  <me>
+                    \int_a^bf(x)\, dx\leq \int_a^bg(x)\, dx
+                  </me>.
+                </p>
+              </li>
+            </ol>
+          </p>
+    </statement>
+</theorem>
+<example>
+    <statement>
+        <p>
+            Let <m>f(x)=1-x^3</m>.
+            Fix constants <m>a</m> and <m>b</m> with <m>0\lt a\lt b</m>.
+            Use your result in <xref ref="eg_int_cubic"/>  and integral properties
+            to derive a formula for <m>\int_a^bf(x)\, dx</m> in terms of <m>a</m> and <m>b</m>.    
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<definition xml:id="d_signed_area">
+    <title>Area and signed area of regions defined by functions</title>
+    <statement>
+      <p>
+        Let <m>f</m> be integrable over the interval <m>[a,b]</m>,
+        let <m>\mathcal{C}</m> be the graph of <m>f</m>,
+        and let <m>\mathcal{R}</m> be the region between
+        <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=a</m> to <m>x=b</m>.
+        <ul>
+          <li>
+            <p>
+              The <term>area</term>
+              of <m>\mathcal{R}</m>, denoted <m>\operatorname{area} \mathcal{R}</m>, is defined as 
+              <me>
+                \operatorname{area}\mathcal{R}=\int_a^b\lvert f(x)\rvert\, dx
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+             The <term>signed area</term> of  <m>\mathcal{R}</m>, denoted <m>\operatorname{sgn area}\mathcal{R}</m>, is defined as 
+              <me>
+                \operatorname{sgn area}\mathcal{R}=\int_a^b f(x)\, dx
+              </me>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+</definition>
+
+<remark xml:id="rm_signed_area">
+    <title>Signed area</title>
+    <p>
+        Let <m>f</m> be integrable over the interval <m>[a,b]</m>,
+        let <m>\mathcal{C}</m> be the graph of <m>f</m>,
+        and let <m>\mathcal{R}</m> be the region between
+        <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=a</m> to <m>x=b</m>.
+        <ul>
+            <li>
+                <p>
+                    The area of <m>\mathcal{R}</m> is always nonnegative since 
+                <md>
+                       <mrow> \operatorname{area}\mathcal{R}\amp =\int_a^b \abs{f}\, dx \amp \text{(definition)} </mrow>
+                       <mrow> \amp\geq 0(b-a) \amp (\text{min-max inequality})</mrow>
+                       <mrow> \amp\geq 0 </mrow> 
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>f(x)\geq 0</m> for all <m>x\in [a,b]</m>, then <m>\operatorname{area}\mathcal{R}=\int_a^b f(x)\, dx</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If the interval <m>[a,b]</m> can be paritioned into subintervals on which <m>f</m> is either always nonnegative (<m>f\geq 0</m>) or nonpositive (<m>f\leq 0</m>), then 
+                    <me>
+                        \int_a^b f(x)\, dx=\operatorname{sgn area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)
+                    </me>.
+                </p>
+            </li>
+        </ul>
+    </p>
+    
+</remark>
+<example>
+    <statement>
+        <p>
+            Let <m>f(x)=x</m>. Explain why the value of <m>\int_1^3f(x)\, dx</m>, computed earlier, is consistent with the area interpretation of the integral and known integral formulas. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example>
+    <statement>
+        <p>
+            Let <m>f(x)=1-x^3</m>.
+          Fix a constant <m>b</m> with <m>b\gt 1</m>, let <m>f(x)=1-x^3</m>,
+          and let <m>\mathcal{R}</m> be the region between the graph of <m>f</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=b</m>.
+          <ol>
+            <li>
+              <p>
+                Graph <m>f(x)</m> on <m>[0,b]</m>.
+                Your graph should reflect the assumption that <m>b\gt 1</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Describe precisely how the signed area of
+                <m>\mathcal{R}</m> is a difference of areas of two distinct regions.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute the area of <m>\mathcal{R}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+    </statement>
+    <solution>
+        <p>
             
         </p>
     </solution>
