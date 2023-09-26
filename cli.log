@@ -14,11 +14,11 @@ INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-
 INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/assets
 INFO    : Runestone Services (via PreTeXt repository): version 6.5.0
 INFO    : Runestone Services (using newer, via online CDN query): version 7.1.6
-INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpk_man3e1
+INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpwdpxsecn
 INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
 INFO    : comprehensive messages, warnings, and errors:
 INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
-INFO    : Removing temporary directory /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpk_man3e1
+INFO    : Removing temporary directory /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpwdpxsecn
 INFO    : 
 Success! Run `pretext view web` to see the results.
 

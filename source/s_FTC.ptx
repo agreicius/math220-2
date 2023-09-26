@@ -12,16 +12,16 @@
         <title>Fundamental theorem of calculus</title>
         <statement>
             <p>
-                Let <m>f</m> be a function defined on <m>I=[a,b]</m>. 
+                Let <m>f</m> be continuous on <m>I=[a,b]</m>. 
                 <ol>
                     <li xml:id="th_FTC_I">
                         <title>FTC I</title>
                         <p>
-                            Let <m>F</m> be the function defined on <m>I</m> as 
+                            The function <m>F</m> defined on <m>I</m> as 
                             <men xml:id="eq_intregal_function">
                                 F(x)=\int_a^x f(t)\, dt
-                            </men>.
-                        If <m>f</m> is continuous on <m>I</m>, then <m>F</m> is differentiable on <m>I</m> and satisfies 
+                            </men>
+                        is differentiable on <m>I</m> and satisfies 
                         <men xml:id="eq_FTC_I">
                             F'(x)=\frac{d}{dx}\int_a^x f(t)\, dt = f(x)
                         </men>
