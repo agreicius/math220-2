@@ -28,7 +28,7 @@
       <xi:include  href="s_antiderivatives.ptx"/>
       <xi:include  href="s_est_area.ptx"/>
       <xi:include  href="s_riemann_sums.ptx"/>
-      <xi:include  href="s_definite_integral.ptx"/>
+      <!-- <xi:include  href="s_definite_integral.ptx"/> -->
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
