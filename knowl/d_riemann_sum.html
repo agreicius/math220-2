@@ -27,7 +27,13 @@ a=x_0\lt x_1\lt x_2\lt \cdots \lt x_n=b\text{.}\tag{1.3.3}
 \Delta x_k=x_{k}-x_{k-1}\text{.}\tag{1.3.4}
 \end{equation}
 </div>
-<div class="para">Given a choice of <dfn class="terminology">sample points</dfn> (or <dfn class="terminology">sample inouts</dfn>) <span class="process-math">\(c_k\in I_k\)</span> for each subinterval, the corresponding <dfn class="terminology">Riemann sum</dfn> of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\)</span> is</div>
+<div class="para">The <dfn class="terminology">norm</dfn> of a partition <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\norm{P}\text{,}\)</span> is the maximum length of a subinterval: i.e.,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html">
+\begin{equation*}
+\norm{P}=\max\{\Delta x_1, \Delta x_2, \dots, \Delta x_n\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Given a choice of <dfn class="terminology">sample points</dfn> (or <dfn class="terminology">sample inputs</dfn>) <span class="process-math">\(c_k\in I_k\)</span> for each subinterval, the corresponding <dfn class="terminology">Riemann sum</dfn> of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\)</span> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html">
 \begin{equation*}
 \sum_{k=1}^n f(c_k)\Delta x_k=f(c_1)(x_1-x_0)+f(c_2)(x_2-x_1)+\cdots +f(c_n)(x_n-x_{n-1})\text{.}

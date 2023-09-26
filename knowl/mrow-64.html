@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_left_Riemann.html">
+\begin{align*}
+L_n \amp = \sum_{k=1}^nf(x_{k-1})\Delta x\\
+\amp = \sum_{k=1}^n(1-((k-1)/n)^3)\cdot (1/n) \\
+\amp = \sum_{\boxed{k=0}}^{\boxed{k=n-1}}(1-(\boxed{k}/n)^3)\cdot (1/n)
+\amp (\text{index shift!})\\
+\amp = \sum_{k=0}^{n-1}\frac{1}{n}-\frac{1}{n^4}\sum_{k=0}^{n-1}k^3\\
+\amp = \frac{1}{n}\cdot n -\frac{1}{n^4}\sum_{k=1}^{n-1}k^3 \\
+\amp = 1- \frac{1}{n^4}\left(\frac{(n-1)n}{2}\right)^2\\
+\amp = 1- \frac{(n-1)^2n^2}{4n^4}
+\end{align*}
+</div>
+<span class="incontext"><a href="s_riemann_sums.html#md-13" class="internal">in-context</a></span>
+</body>
+</html>
