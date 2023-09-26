@@ -354,6 +354,8 @@
     </p>
 </remark>
 <example xml:id="eg_indefinite_integral">
+    <title>Indefinite integral formulas</title>
+    
     Some of our previous example computations can be summarized by the following indefinite integral formulas. 
     <md>
         <mrow>\int x^7\, dx \amp = \frac{1}{8}x^8+C</mrow>

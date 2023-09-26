@@ -85,7 +85,10 @@
           </p>
         </statement>
     </algorithm>
-    <example>
+    <example xml:id="eg_area_f">
+      <title>Estimating area: <m>f(x)=1-x^3</m></title>
+      
+      
       <statement>
         <p>
           Let <m>f(x)=1-x^3</m>, and let
@@ -105,7 +108,8 @@
         </p>
       </solution>
     </example>
-    <example>
+    <example xml:id="eg_area_g">
+      <title>Estimating area: <m>f(x)=1-\abs{x}^3</m></title>
       <statement>
         <p>
           Let <m>f(x)=1-\val{x}^3</m>,
@@ -163,7 +167,10 @@
             Recall that given a function <m>g</m>, its instantaneous rate of change with respect to <m>x</m> is precisely its derivative <m>g'</m>. This allows us to interpret <xref ref="proc_est_net_change"/> as a method of estimating the net change in a function <m>g</m> over an interval using information only about its derivative function <m>f=g'</m>. 
         </p>
     </remark>
-    <example>
+    <example xml:id="eg_est_displacement">
+        <title>Estimating displacement</title>
+        
+        
         <p>
             Below you find the graph of the velocity <m>v(t)</m>
             (in mph)
