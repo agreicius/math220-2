@@ -234,8 +234,9 @@
             In particular, note that antiderivatives are not unique! There is no such thing as <em>the</em> antiderivative of a function; if <m>f</m> has an antiderivative <m>F</m>, then it has infinitely many antiderivatives <m>F(x)+C</m>, where <m>C</m> is any real constant.
         </p>
     </remark>
-    <example>
-        <title>Antiderivative with specified conditions</title>
+    <example xml:id="eg_water_tank">
+        <title>Leaking water tank</title>
+
         <statement>
             <p>
                 At time <m>t=0</m> minutes a 100 gallon tank of water begins leaking. After <m>t</m> minutes, the rate at which the gallon leaks is 

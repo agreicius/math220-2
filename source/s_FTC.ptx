@@ -1,0 +1,220 @@
+<section xml:id="s_FTC">
+    <title>Fundamental theorem of calculus</title>
+    <p>
+        We have now met the two main operations in calculus:
+        <md>
+            <mrow>\text{Derivative: } f \amp \mapsto f'</mrow>
+            <mrow>\text{Integral: } f \amp \mapsto \int_a^b f(x)\, dx </mrow>
+        </md>.
+        The <xref ref="th_FTC" text="custom">fundamental theorem of calculus (FTC)</xref> how these two operations (derivative and integral) interact. The theorem has two parts (<xref ref="th_FTC_I" text="title"/> and <xref ref="th_FTC_II" text="title"/>). We will focus on FTC II in this section, and FTC I in the next. 
+    </p>
+    <theorem xml:id="th_FTC">
+        <title>Fundamental theorem of calculus</title>
+        <statement>
+            <p>
+                Let <m>f</m> be a function defined on <m>I=[a,b]</m>. 
+                <ol>
+                    <li xml:id="th_FTC_I">
+                        <title>FTC I</title>
+                        <p>
+                            Let <m>F</m> be the function defined on <m>I</m> as 
+                            <men xml:id="eq_intregal_function">
+                                F(x)=\int_a^x f(t)\, dt
+                            </men>.
+                        If <m>f</m> is continuous on <m>I</m>, then <m>F</m> is differentiable on <m>I</m> and satisfies 
+                        <men xml:id="eq_FTC_I">
+                            F'(x)=\frac{d}{dx}\int_a^x f(t)\, dt = f(x)
+                        </men>
+                        for all <m>x\in I</m>.
+                        </p>
+                    </li>
+                    <li xml:id="th_FTC_II">
+                        <title>FTC II</title>
+                        <p>
+                            If <m>F</m> is an antiderivative of <m>f</m> on <m>I</m>, then 
+                            <men xml:id="eq_FTC_II">
+                                \int_a^b f(x)\, dx=F(b)-F(a)
+                            </men>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                
+            </p>
+        </proof>
+    </theorem>
+    <p>
+        As mentioned above, we will focus here on <xref ref="th_FTC_II" text="title"/>. It main computational import of this theorem is that it allows us to compute definite integrals <em>indirectly</em>, by first finding an antiderivative of the integrand, and then using <xref ref="eq_FTC_II"/>. 
+    </p>
+    <algorithm xml:id="proc_integral_antiderivative">
+        <title>Computing integrals with antiderivatives</title>
+        <statement>
+            <p>
+                Let <m>f</m> be an integrable function on <m>I=[a,b]</m>. To compute <m>\int_a^b f\, dx</m> using antiderivatives, proceed as follows:
+                <ol>
+                    <li>
+                        <p>
+                            Find an antiderivative <m>F</m> of <m>f</m> on I. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Use <xref ref="th_FTC_II" text="title"/> to conclude 
+                            <me>
+                                \int_a^bf(x)\, dx=F(b)-F(a)
+                            </me>. 
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+    </algorithm>
+    <p>
+        Henceforth our integral computations will involve many expressions of the form <m>F(b)-F(a)</m>, which we call a <em>difference evaluation</em>. It will be useful to have some compact notation for this. 
+    </p>
+    <definition xml:id="d_difference_evaluation">
+        <title>Difference evaluation notation</title>
+        <statement>
+            <p>
+                Let <m>g</m> be a function containing <m>a</m> and <m>b</m> in its domain. We define <m>g]_a^b</m> to be the <term>difference evaluation</term> expression 
+                <me>
+                    g(x)\Bigr\vert_a^b=g(b)-g(a)
+                </me>.                
+            </p>
+        </statement>
+    </definition>
+    <remark>
+        <title>Difference evaluation notation</title>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        It is easy to see that the following difference evaluation identities hold:
+                        <md>
+                            <mrow>(f(x)+g(x))\Bigr\vert_a^b \amp = f(x)\Bigr\vert_a^b+g(x)\Bigr\vert_a^b </mrow>
+                            <mrow>cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Observe that <xref ref="eq_FTC_II"/> can be expressed using our new notation as 
+                        <me>
+                            \int_a^b f(x)\, dx= F(x)\Bigr\vert_a^b
+                        </me>.                        
+                    </p>
+                </li>
+            </ol>
+        </p>
+        
+    </remark>
+    <example xml:id="eg_FTCII">
+        <title>Computing integrals with antiderivatives</title> 
+        <statement>
+            <p>
+                Use the <xref ref="th_FTC_II" text="title"/> to compute the following definite integrals.
+                <ol>
+                  <li>
+                    <p>
+                      <m>\displaystyle\int_a^b 1-x^3\, dx</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\int_0^{10} \frac{1}{\sqrt{2t+1}}\, dt</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\int_{3\pi/4}^{\pi}\sec^2 u\, du</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_FTCII_area">
+        <title>Signed area using FTC II</title>
+        <statement>
+            <p>
+                Let <m>f(x)=\sin(x/3)</m>,
+                and let <m>\mathcal{C}</m> be the graph of <m>f</m>.
+                For each region <m>\mathcal{R}</m> compute the area of
+                <m>\mathcal{R}</m> and the signed area of <m>\mathcal{R}</m>.
+                Include a diagram of <m>\mathcal{C}</m> and <m>\mathcal{R}</m>.
+                Make sure your answer is consistent with your graph.
+                If your answer happens to be 0, use the diagram to explain why.
+                <ol>
+                  <li>
+                    <p>
+                      <m>\mathcal{R}</m> is the region between
+                      <m>\mathcal{C}</m> and the <m>x</m>-axis,
+                      from <m>x=-\pi</m> to <m>x=\pi</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\mathcal{R}</m> is the region between
+                      <m>\mathcal{C}</m> and the <m>x</m>-axis,
+                      from <m>x=-\pi</m> to <m>x=\pi/2</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\mathcal{R}</m> is the region between
+                      <m>\mathcal{C}</m> and the <m>x</m>-axis,
+                      from <m>x=0</m> to <m>x=6\pi</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <theorem xml:id="th_FTC_II_rate">
+        <title>FTC II: rate of change version</title>
+        <statement>
+            <p>
+               Suppose <m>Q=g(x)</m> is a differentiable function on <m>[a,b]</m>. Since <m>g</m> is an antiderivative of <m>g'</m> on <m>I</m>, by <xref ref="th_FTC_II" text="title"/> we have  
+               <me>
+                \int_a^bg'(x)\, dx = g(b)-g(a)=\Delta Q
+               </me>.
+               Interpreting <m>g'</m> as a rate of change, we see that integrating the <em>rate of change</em> of a quantity <m>Q</m> from <m>x=a</m> to <m>x=b</m> yields the <em>net change</em> of <m>Q</m> as we vary <m>x</m> from <m>x=a</m> to <m>x=b</m>.
+            </p>
+        </statement>
+    </theorem>
+    <example>
+        <title>Leaking water tank revisited</title>
+        <p>
+            Recall the set up from <xref ref="eg_water_tank"/>, where we determined that at time <m>t</m>, the amount of water <m>A=f(t)</m> has rate of change <m>f'(t)=-1/\sqrt{2t+1}</m>.
+        </p>
+        <p> 
+            According to <xref ref="th_FTC_II_rate"/>, for any <m>t=b</m> the integral  
+            <me>
+                \int_0^b f'(t)\, dt=\int_0^b-1/\sqrt{2t+1}\, dt
+            </me>
+            computes the <em>net change</em> in the amount of water in the tank between time <m>t=0</m> and <m>t=b</m> minutes: <ie/>, it computes <m>\Delta A=f(b)-f(0)</m>. We can use <xref ref="th_FTC_II" text="title"/> to compute this integral. The function <m>F(x)=-\sqrt{2t+1}</m> is an antiderivative of <m>-1/\sqrt{2t+1}</m> and thus 
+            <me>
+                \int_0^b -1/\sqrt{2t+1}\, dt=F(b)-F(0)=1-\sqrt{2b+1}
+            </me>. 
+            This tells us that <m>\Delta A=1-\sqrt{2b+1}</m> at any time <m>b</m>. Since <m>\Delta A=f(b)-f(0)</m>, we conclude that <m>f(b)-f(0)=1-\sqrt{2b+1}</m>, or equivalently, <m>f(b)=f(0)+1-\sqrt{2b+1}=101-\sqrt{2t+1}</m> for all <m>b</m>.  (Here we use the fact that <m>f(0)=100</m>.) We have just given another derivation of the formula 
+            <me>
+                f(t)=101-\sqrt{2t+1}
+            </me>
+            for the function <m>A=f(t)</m>.   
+        </p>
+        
+    </example>
+</section>
