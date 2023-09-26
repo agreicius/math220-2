@@ -200,6 +200,7 @@
     </statement>
 </definition>
 <definition xml:id="d_riemann_sum_types">
+  <title>Riemann sum types</title>
     <statement>
         <p>
            Let <m>f</m> be a function defined on the interval <m>[a,b]</m> with a chosen partition <xref ref="eq_partition"/>.  Particular rules for picking the sample points <m>c_k\in I_k</m> for each subinterval <m>I_k</m> in our partition give rise to particular types of Riemann sums. Here are some common examples. 
