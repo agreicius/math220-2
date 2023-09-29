@@ -35,7 +35,6 @@
       <!-- WeBWork exercises are non-interactive by default -->
       <!-- We disable this behavior -->
       <!-- <stringparam key="webwork.divisional.static" value="no"/> -->
-
     </target>
   </targets>
   <executables>

@@ -1,6 +1,4 @@
 INFO    : PreTeXt project found in `/Users/aarongreicius/math220-2`.
-WARNING : Project's CLI version could not be detected from `requirements.txt`.
-WARNING : Try `pretext init --refresh` to produce a compatible file.
 INFO    : No change in assets requiring generating detected.  To force regeneration of assets, use `-g` flag.
 
 INFO    : Preparing to build into /Users/aarongreicius/math220-2/output/web.
@@ -12,13 +10,13 @@ INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-
 INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/generated-assets
 INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../assets
 INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/assets
-INFO    : Runestone Services (via PreTeXt repository): version 6.5.0
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
 INFO    : Runestone Services (using newer, via online CDN query): version 7.1.6
-INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpwdpxsecn
+INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpshomnlkx
 INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
 INFO    : comprehensive messages, warnings, and errors:
 INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
-INFO    : Removing temporary directory /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpwdpxsecn
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpshomnlkx
 INFO    : 
 Success! Run `pretext view web` to see the results.
 

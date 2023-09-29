@@ -1,0 +1,105 @@
+<section xml:id="s_FTC_cont">
+    <title>Fundamental theorem (continued)</title>
+    <p>
+        In this section we focus on <xref ref="th_FTC_I" text="title"/>. One peculiarity of this theorem is the function <m>F(x)</m> defined as 
+        <men xml:id="eq_integral_function">
+            F(x)=\int_a^x f(t)\, dt
+        </men>.
+        This is called an <em>integral function</em>, as the values <m>F(x)</m> are defined by the integral expression <m>\int_a^x f(t)\, dt</m>. 
+    </p>
+    <definition xml:id="d_integral_function">
+        <title>Integral function</title>
+        <statement>
+            <p>
+                Let <m>f</m> be integrable on the interval <m>[a,b]</m>. The function <m>F</m> defined on <m>I</m> as <m>F(x)=\int_a^xf(t)\, dt</m> is called an <term>integral function</term>. 
+            </p>
+        </statement>
+    </definition>
+        <p>
+        Examining the formula <xref ref="eq_integral_function"/>, we note that the input of <m>F</m> is an the upper limit of integration of the integral. As we vary <m>x</m>, the only thing that changes about the integral is the interval over which we are integrating; and this causes the values <m>F(x)</m> to vary with <m>x</m>. Using the signed area interpretation of the integral allows us to visualize the integral function <xref ref="eq_integral_function"/> . In keeping with the notation in <xref ref="eq_integral_function"/>, we will label the horizontal axis as the <m>t</m>-axis. For any <m>x\geq a</m>, define <m>\mathcal{R}_x</m> to be the region in the plane that lies between the graph of <m>f</m> and the <m>t</m>-axis, and between the vertical lines <m>t=a</m> and <m>t=x</m>; as we increase <m>x</m>, imagine sliding the vertical line <m>t=x</m> to the right, creating a growing region <m>\mathcal{R}_x</m>; the integral function <m>F(x)=\int_a^x f(t)\, dt</m> computes the <em>signed area</em> of this growing region!   
+    </p>
+    <project xml:id="proj_integral_function">
+        <title>Integral function</title>
+        <p>
+            <figure width="100%" xml:id="fig_integral_function">
+                <interactive geogebra="hd8s893y" />
+                <caption><url href="https://www.geogebra.org/m/hd8s893y">GeoGebra: understanding integral functions</url></caption>
+            </figure>
+        </p>
+        
+    </project>
+
+      <example>
+        <title>Integral functions</title>
+        
+        
+        <statement>
+            <p>
+                Let <m>F(x)=\displaystyle\int_1^x \frac{1}{t^2}\, dt</m>.
+                Make a table of values of <m>F(x)</m> for <m>x=1, 2, 3, 4, 5</m>.
+                Explain graphically what <m>F(b)</m> is for any <m>b\geq 1</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+      </example>
+      <p>
+        Now that we have a better grip on integral functions <m>F</m> of the form <xref ref="eq_integral_function"/>), let's look at what <xref ref="th_FTC_I" text="title"/> says about them: namely, that they are differentiable, and satisfy 
+        <me>
+            F'(x)=f(x)
+        </me>
+        for all <m>x\in [a,b]</m>. The corollary below follows immediately, answering a question we posed when discussing antiderivatives. 
+      </p>
+      <corollary xml:id="cor_FTC_I">
+        <title>Continuous functions have antiderivatives</title>
+        <statement>
+          <p>
+            If <m>f</m> is continuous on the interval <m>I=[a,b]</m>,
+            then <m>f</m> has an antiderivative on <m>I</m>.
+          </p>
+        </statement>
+        <proof>
+            <p>
+                Let <m>F</m> be the integral function defined as <m>F(x)=\int_a^x f(t)\, dt</m>. According to <xref ref="th_FTC_I" text="title"/>, we have <m>F'(x)=f(x)</m> for all <m>x\in I</m>. 
+            </p>
+        </proof>
+      </corollary>
+      <p>
+        We can make even more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <m>x</m>. When all the functions are <q>nice enough</q>, we can combine <xref ref="th_FTC_I" text="title"/> with the chain rule to compute the integral function's derivative. 
+      </p>
+      <example xml:id="eg_FTC_I_chain">
+        <title>FTC I+chain rule</title>
+        <statement>
+            <p>
+                For each <m>F(x)</m> defined below,
+          use <xref ref="th_FTC_I" text="title"/> along with integral properties and/or the chain rule 
+          to compute <m>\displaystyle F'(x)=\frac{d}{dx}F(x)</m>.
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle F(x)=\int_{x}^5 \sqrt{t+1}\, dt</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle F(x)=\int_{-2}^{\sin x}\cos(u^2) \, du</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle F(x)=\int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds</m>
+              </p>
+            </li>
+          </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+      </example>
+</section>

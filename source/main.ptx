@@ -30,7 +30,7 @@
       <xi:include  href="s_riemann_sums.ptx"/>
       <xi:include  href="s_definite_integral.ptx"/>
       <xi:include  href="s_FTC.ptx"/>
-      <!-- <xi:include  href="s_FTC_contd.ptx"/> -->
+      <xi:include  href="s_FTC_cont.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
