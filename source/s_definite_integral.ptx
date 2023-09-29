@@ -239,9 +239,9 @@
           </li>
           <li>
             <p>
-             The <term>signed area</term> of  <m>\mathcal{R}</m>, denoted <m>\operatorname{sgn area}\mathcal{R}</m>, is defined as 
+             The <term>signed area</term> of  <m>\mathcal{R}</m>, denoted <m>\operatorname{sgn\, area}\mathcal{R}</m>, is defined as 
               <me>
-                \operatorname{sgn area}\mathcal{R}=\int_a^b f(x)\, dx
+                \operatorname{sgn\, area}\mathcal{R}=\int_a^b f(x)\, dx
               </me>.
             </p>
           </li>
@@ -277,7 +277,7 @@
                 <p>
                     If the interval <m>[a,b]</m> can be paritioned into subintervals on which <m>f</m> is either always nonnegative (<m>f\geq 0</m>) or nonpositive (<m>f\leq 0</m>), then 
                     <me>
-                        \int_a^b f(x)\, dx=\operatorname{sgn area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)
+                        \int_a^b f(x)\, dx=\operatorname{sgn\, area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)
                     </me>.
                 </p>
             </li>

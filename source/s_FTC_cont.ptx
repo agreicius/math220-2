@@ -1,5 +1,5 @@
 <section xml:id="s_FTC_cont">
-    <title>Fundamental theorem (continued)</title>
+    <title>Fundamental theorem (cont.)</title>
     <p>
         In this section we focus on <xref ref="th_FTC_I" text="title"/>. One peculiarity of this theorem is the function <m>F(x)</m> defined as 
         <men xml:id="eq_integral_function">
@@ -81,14 +81,14 @@
                     <p>
                         For all <m>x\in I</m>, let <m>\mathcal{R}_x</m> be the region lying between the graph of <m>f</m> and the <m>t</m>-axis, and between the vertical lines <m>t=a</m> and <m>t=x</m>. We have 
                         <men xml:id="eq_FTC_I_sgn_area">
-                            F(x)=\operatorname{sgn\ area} \mathcal{R}_x
+                            F(x)=\operatorname{sgn\, area} \mathcal{R}_x
                         </men>
                         for all <m>x\in I</m>. 
                     </p>
                 </li>
                 <li>
                     <p>
-                        S
+                        At any <m>x\in I</m> the rate of change of <m>\operatorname{sgn \, area} \mathcal{R}_x</m> is given by <m>F'(x)=f(x)</m>. In other words, the rate of change of the signed area is equal to the (directed) height of the graph of <m>f</m> at <m>x</m>. 
                     </p>
                 </li>
             </ol>
