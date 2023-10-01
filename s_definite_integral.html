@@ -101,7 +101,7 @@ window.MathJax = {
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_riemann_sums.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_riemann_sums.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_FTC.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
 </div></div>
 <span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
@@ -318,6 +318,8 @@ window.MathJax = {
 <li><div class="toc-item"><a href="s_est_area.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Estimating area</span></a></div></li>
 <li><div class="toc-item"><a href="s_riemann_sums.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Riemann sums</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="s_definite_integral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Definite integral</span></a></div></li>
+<li><div class="toc-item"><a href="s_FTC.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Fundamental theorem of calculus</span></a></div></li>
+<li><div class="toc-item"><a href="s_FTC_cont.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Fundamental theorem (cont.)</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -400,7 +402,7 @@ R_n \amp = \sum_{k=1}^nf(a_{k})\Delta x= \sum_{k=1}^nf(a+k\Delta x)\, \Delta x\t
 </div>
 </li>
 </ol>
-</div></article><article class="example example-like" id="example-14"><h3 class="heading">
+</div></article><article class="example example-like" id="eg_int_linear"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of linear function.</span>
 </h3>
 <div class="para" id="p-115">Let <span class="process-math">\(f(x)=x\text{.}\)</span> Compute <span class="process-math">\(\int_1^3f(x)\, dx\)</span> first as a limit of right Riemann sums, and then as a limit of left Riemann sums.</div>
@@ -448,40 +450,73 @@ L_n  \amp = \sum_{k=1}^nf(1+(k-1)\Delta x)\,\Delta x \\
 <div class="para">Using reasoning very similar to our previous computation, we then see that <span class="process-math">\(\lim_{n\to \infty}L_n=4\text{.}\)</span> Note how the two approximation techniques (left and right sum) yield the same value in the limit.</div>
 </div></div></div>
 </div></article><article class="example example-like" id="eg_int_cubic"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of cubic function.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of cubic.</span>
 </h3>
-<div class="para" id="p-117">Let <span class="process-math">\(f(x)=1-x^3\)</span> and let <span class="process-math">\(b\geq 0\)</span> be a fixed nonnegative constant. Compute <span class="process-math">\(\int_0^bf(x)\, dx\)</span> as a limit of right Riemann sums.</div></article><div class="para" id="p-118">In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.</div>
+<div class="para" id="p-117">Let <span class="process-math">\(f(x)=1-x^3\)</span> and let <span class="process-math">\(b\geq 0\)</span> be a fixed nonnegative constant. Compute <span class="process-math">\(\int_0^bf(x)\, dx\)</span> as a limit of right Riemann sums.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="para logical" id="p-118">
+<div class="para">We follow the steps <a href="" class="xref" data-knowl="./knowl/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a>. As this example is quite similar to <a href="" class="xref" data-knowl="./knowl/eg_limit_Riemann.html" title="Example 1.3.9">Example 1.3.9</a>, we omit some details.</div>
+<ol class="decimal">
+<li id="li-55"><div class="para" id="p-119">Fix <span class="process-math">\(n\geq 1\text{.}\)</span> We divide the interval <span class="process-math">\([0,b]\)</span> into <span class="process-math">\(n\)</span> equal intervals of length <span class="process-math">\(\Delta x=\frac{b-0}{n}=\frac{b}{n}\text{.}\)</span> The intervening endpoints <span class="process-math">\(x_k\)</span> of our subintervals are given by <span class="process-math">\(x_k=\frac{bk}{n}\text{.}\)</span>
+</div></li>
+<li id="li-56"><div class="para logical" id="p-120">
+<div class="para">The <span class="process-math">\(n\)</span>-th right Riemann sum corresponding to this partition is given by</div>
+<div class="displaymath process-math" id="md-17">
+\begin{align*}
+R_n \amp =\sum_{k=1}^n f(x_k)\Delta x\\
+\amp = \sum_{k=1}^n\frac{b}{n}-\frac{b^4k^3}{n^4}\\
+\amp =b-\frac{b^4}{n^4}\left( \frac{n(n+1)}{2}\right)^2  \\
+\amp = b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-57"><div class="para logical" id="p-121">
+<div class="para">We now compute</div>
+<div class="displaymath process-math" id="md-18">
+\begin{align*}
+\int_0^b f(x)\, dx \amp = \lim_{n\to\infty}b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)\\
+\amp = b-\frac{b^4}{4}\lim_{n\to\infty}\frac{n^2(n+1)^2}{n^4}\\
+\amp = b-\frac{b^4}{4} \amp \text{(quot. of poly. limit rule)}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div></div></div>
+</div></article><div class="para" id="p-122">In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.</div>
 <article class="theorem theorem-like" id="th_integrable_functions"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Integrable functions.</span>
 </h3>
-<div class="para logical" id="p-119">
+<div class="para logical" id="p-123">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function defined on the interval <span class="process-math">\(I=[a,b]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-55"><div class="para" id="p-120">If <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(I\text{,}\)</span> then <span class="process-math">\(f\)</span> is integrable on <span class="process-math">\(I\text{.}\)</span>
+<li id="li-58"><div class="para" id="p-124">If <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(I\text{,}\)</span> then <span class="process-math">\(f\)</span> is integrable on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
-<li id="li-56"><div class="para" id="p-121">If <span class="process-math">\(f\)</span> is continuous everywhere on <span class="process-math">\(I\)</span> except for a finite set of jump discontinuities, then <span class="process-math">\(f\)</span> is integrable on <span class="process-math">\(I\text{.}\)</span>
+<li id="li-59"><div class="para" id="p-125">If <span class="process-math">\(f\)</span> is continuous everywhere on <span class="process-math">\(I\)</span> except for a finite set of jump discontinuities, then <span class="process-math">\(f\)</span> is integrable on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="theorem theorem-like" id="th_int_props"><h3 class="heading">
+</div></article><div class="para" id="p-126">As with the derivative, the integral satisfies many elementary properties that often ease our computations. Technically, the first statements in <a href="" class="xref" data-knowl="./knowl/th_int_props.html" title="Theorem 1.4.6: Integral properties">Theorem 1.4.6</a> are in fact definitions. (In our discussion of integrals <span class="process-math">\(\int_a^b f(x)\, dx\)</span> we tacitly always assumed <span class="process-math">\(a\lt b\text{;}\)</span> (1) and (2) define what this integral should be if <span class="process-math">\(a=b\)</span> or <span class="process-math">\(b\lt a\text{.}\)</span> ) The rest of the statements, as plausible as they may seem, do require proof. We omit them, but rest assured that the proofs boil down to straightforward statements about Riemann sums and their limits.</div>
+<article class="theorem theorem-like" id="th_int_props"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Integral properties.</span>
 </h3>
-<div class="para logical" id="p-122">
+<div class="para logical" id="p-127">
 <div class="para">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be integrable over <span class="process-math">\([a,b]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-57"><div class="para" id="p-123"><span class="process-math">\(\int_a^a f(x)\, dx=0\text{.}\)</span></div></li>
-<li id="li-58"><div class="para" id="p-124"><span class="process-math">\(\int_b^af(x)\, dx=-\int_a^b f(x)\, dx\text{.}\)</span></div></li>
-<li id="li-59">
-<span class="heading"><span class="title">Sum and difference.</span></span><div class="para" id="p-125"><span class="process-math">\(\displaystyle \int_a^b f(x)\pm g(x)\, dx=\int_a^bf(x)\, dx\pm \int_a^bg(x)\, dx\)</span></div>
+<li id="li-60"><div class="para" id="p-128"><span class="process-math">\(\int_a^a f(x)\, dx=0\text{.}\)</span></div></li>
+<li id="th_order_integration">
+<span class="heading"><span class="title">Order of integration.</span></span><div class="para" id="p-129"><span class="process-math">\(\int_b^af(x)\, dx=-\int_a^b f(x)\, dx\text{.}\)</span></div>
 </li>
-<li id="li-60">
-<span class="heading"><span class="title">Scalar multiple.</span></span><div class="para" id="p-126">
+<li id="li-62">
+<span class="heading"><span class="title">Sum and difference.</span></span><div class="para" id="p-130"><span class="process-math">\(\displaystyle \int_a^b f(x)\pm g(x)\, dx=\int_a^bf(x)\, dx\pm \int_a^bg(x)\, dx\)</span></div>
+</li>
+<li id="li-63">
+<span class="heading"><span class="title">Scalar multiple.</span></span><div class="para" id="p-131">
 <span class="process-math">\(\int_a^bcf(x)\, dx=c\int_a^bf(x)\, dx\)</span> for any <span class="process-math">\(c\in \R\text{.}\)</span>
 </div>
 </li>
-<li id="li-61">
-<span class="heading"><span class="title">Interval partition.</span></span><div class="para logical" id="p-127">
+<li id="th_interval_partition">
+<span class="heading"><span class="title">Interval partition.</span></span><div class="para logical" id="p-132">
 <div class="para">For any <span class="process-math">\(c\in \R\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -490,8 +525,8 @@ L_n  \amp = \sum_{k=1}^nf(1+(k-1)\Delta x)\,\Delta x \\
 </div>
 </div>
 </li>
-<li id="li-62">
-<span class="heading"><span class="title">Min-max inequality.</span></span><div class="para logical" id="p-128">
+<li id="th_min_max">
+<span class="heading"><span class="title">Min-max inequality.</span></span><div class="para logical" id="p-133">
 <div class="para">If <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(m\leq f(x)\leq M\)</span> for all <span class="process-math">\(x\in [a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -500,8 +535,8 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 </div>
 </div>
 </li>
-<li id="li-63">
-<span class="heading"><span class="title">Domination.</span></span><div class="para logical" id="p-129">
+<li id="li-66">
+<span class="heading"><span class="title">Domination.</span></span><div class="para logical" id="p-134">
 <div class="para">If <span class="process-math">\(f(x)\leq g(x)\)</span> for all <span class="process-math">\(x\in [a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -511,45 +546,59 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 </div>
 </li>
 </ol>
-</div></article><article class="example example-like" id="example-16"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
+</div></article><article class="example example-like" id="eg_int_cubic_cont"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of cubic (cont.).</span>
 </h3>
-<div class="para" id="p-130">Let <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> Fix constants <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(0\lt a\lt b\text{.}\)</span> Use your result in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic function">Example 1.4.4</a>  and integral properties to derive a formula for <span class="process-math">\(\int_a^bf(x)\, dx\)</span> in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+<div class="para" id="p-135">Let <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> Fix constants <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(0\lt a\lt b\text{.}\)</span> Use your result in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a>  and integral properties to derive a formula for <span class="process-math">\(\int_a^bf(x)\, dx\)</span> in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="para" id="p-131"></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-136">
+<div class="para">We saw in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a> that for any <span class="process-math">\(b\gt 0\)</span> we have <span class="process-math">\(\int_0^b f(x)\, dx=b-\frac{1}{4}b^4\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_int_cubic.html ./knowl/th_interval_partition.html ./knowl/th_order_integration.html ./knowl/eg_int_cubic.html" id="md-19">
+\begin{align*}
+\int_a^b f(x)\, dx \amp = \int_a^0 f(x)\, dx+\int_0^b f(x)\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = -\int_0^af(x)\, dx+\int_0^bf(x)\, dx \amp (\knowl{./knowl/th_order_integration.html}{\text{Order of integration}}) \\
+\amp = -(a-\frac{1}{4}a^4)+(b-\frac{1}{4}b^4) \amp (\knowl{./knowl/eg_int_cubic.html}{\text{1.4.4}}) \\
+\amp = (b-a)-\frac{1}{4}(b^4-a^4)\text{.}
+\end{align*}
+</div>
+</div></div></div>
 </div></article><article class="definition definition-like" id="d_signed_area"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Area and signed area of regions defined by functions.</span>
-</h3> <div class="para logical" id="p-132">
+</h3> <div class="para logical" id="p-137">
 <div class="para">Let <span class="process-math">\(f\)</span> be integrable over the interval <span class="process-math">\([a,b]\text{,}\)</span> let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{,}\)</span> and let <span class="process-math">\(\mathcal{R}\)</span> be the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
 </div>
 <ul class="disc">
-<li id="li-64"><div class="para logical" id="p-133">
+<li id="d_area">
+<span class="heading"><span class="title">Area.</span></span><div class="para logical" id="p-138">
 <div class="para">The <dfn class="terminology">area</dfn> of <span class="process-math">\(\mathcal{R}\text{,}\)</span> denoted <span class="process-math">\(\operatorname{area} \mathcal{R}\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{area}\mathcal{R}=\int_a^b\lvert f(x)\rvert\, dx\text{.}
 \end{equation*}
 </div>
-</div></li>
-<li id="li-65"><div class="para logical" id="p-134">
-<div class="para">The <dfn class="terminology">signed area</dfn> of  <span class="process-math">\(\mathcal{R}\text{,}\)</span> denoted <span class="process-math">\(\operatorname{sgn area}\mathcal{R}\text{,}\)</span> is defined as</div>
+</div>
+</li>
+<li id="d_signedarea">
+<span class="heading"><span class="title">Signed area.</span></span><div class="para logical" id="p-139">
+<div class="para">The <dfn class="terminology">signed area</dfn> of  <span class="process-math">\(\mathcal{R}\text{,}\)</span> denoted <span class="process-math">\(\operatorname{sgn\, area}\mathcal{R}\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\operatorname{sgn area}\mathcal{R}=\int_a^b f(x)\, dx\text{.}
+\operatorname{sgn\, area}\mathcal{R}=\int_a^b f(x)\, dx\text{.}
 \end{equation*}
 </div>
-</div></li>
+</div>
+</li>
 </ul>
 </div></article><article class="remark remark-like" id="rm_signed_area"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Signed area.</span>
-</h3> <div class="para logical" id="p-135">
+</h3> <div class="para logical" id="p-140">
 <div class="para">Let <span class="process-math">\(f\)</span> be integrable over the interval <span class="process-math">\([a,b]\text{,}\)</span> let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{,}\)</span> and let <span class="process-math">\(\mathcal{R}\)</span> be the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
 </div>
 <ul class="disc">
-<li id="li-66"><div class="para logical" id="p-136">
+<li id="li-69"><div class="para logical" id="p-141">
 <div class="para">The area of <span class="process-math">\(\mathcal{R}\)</span> is always nonnegative since</div>
-<div class="displaymath process-math" id="md-17">
+<div class="displaymath process-math" id="md-20">
 \begin{align*}
 \operatorname{area}\mathcal{R}\amp =\int_a^b \abs{f}\, dx \amp \text{(definition)} \\
 \amp\geq 0(b-a) \amp (\text{min-max inequality})\\
@@ -557,42 +606,78 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 \end{align*}
 </div>
 </div></li>
-<li id="li-67"><div class="para" id="p-137">If <span class="process-math">\(f(x)\geq 0\)</span> for all <span class="process-math">\(x\in [a,b]\text{,}\)</span> then <span class="process-math">\(\operatorname{area}\mathcal{R}=\int_a^b f(x)\, dx\text{.}\)</span>
+<li id="li-70"><div class="para" id="p-142">If <span class="process-math">\(f(x)\geq 0\)</span> for all <span class="process-math">\(x\in [a,b]\text{,}\)</span> then <span class="process-math">\(\operatorname{area}\mathcal{R}=\int_a^b f(x)\, dx\text{.}\)</span>
 </div></li>
-<li id="li-68"><div class="para logical" id="p-138">
+<li id="li-71"><div class="para logical" id="p-143">
 <div class="para">If the interval <span class="process-math">\([a,b]\)</span> can be paritioned into subintervals on which <span class="process-math">\(f\)</span> is either always nonnegative (<span class="process-math">\(f\geq 0\)</span>) or nonpositive (<span class="process-math">\(f\leq 0\)</span>), then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_a^b f(x)\, dx=\operatorname{sgn area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)\text{.}
+\int_a^b f(x)\, dx=\operatorname{sgn\, area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)\text{.}
 \end{equation*}
 </div>
+<div class="para">For example, in diagram below we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\, dx=\operatorname{area} \mathcal{R}_1-\operatorname{area} \mathcal{R}_2-\operatorname{area} \mathcal{R}_3+\operatorname{area} \mathcal{R}_4\text{.}
+\end{equation*}
+</div>
+<div class="para"><figure class="figure figure-like" id="fig_sgn_area"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area.png" class="contained" alt="Signed area of region defined by curve"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.10<span class="period">.</span></span><span class="space"> </span>Signed area of region defined by curve</figcaption></figure></div>
 </div></li>
 </ul>
-</div></article><article class="example example-like" id="example-17"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.10</span><span class="period">.</span>
+</div></article><article class="example example-like" id="eg_linear_cont"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of linear function (cont.).</span>
 </h3>
-<div class="para" id="p-139">Let <span class="process-math">\(f(x)=x\text{.}\)</span> Explain why the value of <span class="process-math">\(\int_1^3f(x)\, dx\text{,}\)</span> computed earlier, is consistent with the area interpretation of the integral and known integral formulas.</div>
+<div class="para" id="p-144">Let <span class="process-math">\(f(x)=x\text{.}\)</span> Explain why the value of <span class="process-math">\(\int_1^3f(x)\, dx\text{,}\)</span> computed earlier, is consistent with the area interpretation of the integral and known integral formulas.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para" id="p-140"></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="para logical" id="p-145">
+<div class="para">The region <span class="process-math">\(\mathcal{R}\)</span> between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=1\)</span> to <span class="process-math">\(x=3\)</span> is a trapezoid of width <span class="process-math">\(2\text{,}\)</span> and with two heights <span class="process-math">\(1\)</span> and <span class="process-math">\(3\text{.}\)</span> (Sketch it for yourself!) Since <span class="process-math">\(f\geq 0\)</span> the integral of <span class="process-math">\(f\)</span> computes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_int_linear.html">
+\begin{equation*}
+\operatorname{sgn\, area}\mathcal{R}=\operatorname{area}\mathcal{R}=\frac{1}{2}(1+3)(2)=4\text{.}
+\end{equation*}
+</div>
+<div class="para">(The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in <a href="" class="xref" data-knowl="./knowl/eg_int_linear.html" title="Example 1.4.3: Integral of linear function">Example 1.4.3</a>.</div>
+</div></div></div>
 </div></article><article class="example example-like" id="example-18"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.11</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.12</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-141">
+<div class="para logical" id="p-146">
 <div class="para">Let <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> Fix a constant <span class="process-math">\(b\)</span> with <span class="process-math">\(b\gt 1\text{,}\)</span> let <span class="process-math">\(f(x)=1-x^3\text{,}\)</span> and let <span class="process-math">\(\mathcal{R}\)</span> be the region between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-69"><div class="para" id="p-142">Graph <span class="process-math">\(f(x)\)</span> on <span class="process-math">\([0,b]\text{.}\)</span> Your graph should reflect the assumption that <span class="process-math">\(b\gt 1\text{.}\)</span>
+<li id="li-72"><div class="para" id="p-147">Graph <span class="process-math">\(f(x)\)</span> on <span class="process-math">\([0,b]\text{.}\)</span> Your graph should reflect the assumption that <span class="process-math">\(b\gt 1\text{.}\)</span>
 </div></li>
-<li id="li-70"><div class="para" id="p-143">Describe precisely how the signed area of <span class="process-math">\(\mathcal{R}\)</span> is a difference of areas of two distinct regions.</div></li>
-<li id="li-71"><div class="para" id="p-144">Compute the area of <span class="process-math">\(\mathcal{R}\text{.}\)</span>
+<li id="li-73"><div class="para" id="p-148">Describe precisely how the signed area of <span class="process-math">\(\mathcal{R}\)</span> is a difference of areas of two distinct regions.</div></li>
+<li id="li-74"><div class="para" id="p-149">Compute the area of <span class="process-math">\(\mathcal{R}\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="para" id="p-145"></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<div class="para logical" id="p-150">
+<div class="para">In the diagram below we have <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> Geometrically we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html" id="md-21">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\operatorname{area}\mathcal{R}_1-\operatorname{area}\mathcal{R}_2\\
+\operatorname{area}\mathcal{R} \amp = \operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2
+\end{align*}
+</div>
+<div class="para">To compute <span class="process-math">\(\operatorname{R}\)</span> we use the  <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">definition of area</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html" id="md-22">
+\begin{align*}
+\operatorname{area}\mathcal{R} \amp = \int_0^b\abs{f(x)}\, dx\\
+\amp =\int_0^1\abs{f(x)}\, dx+\int_1^b\abs{f(x)}\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp \int_0^1 f(x)\, dx -\int_1^b f(x)\, dx \amp (\text{def. of  } \abs{f})\\
+\amp \frac{3}{4}-((b-1)-(b^4-1) \amp (\knowl{./knowl/eg_int_cubic_cont.html}{\text{1.4.7}})\\
+\amp\frac{3}{4}-b+b^4 \text{.}
+\end{align*}
+</div>
+</div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_cubic.png" class="contained" alt="Region defined by cubic"></div>
+</div></div>
 </div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_riemann_sums.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_riemann_sums.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_FTC.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

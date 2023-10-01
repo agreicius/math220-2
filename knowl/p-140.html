@@ -12,7 +12,40 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para"></div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f\)</span> be integrable over the interval <span class="process-math">\([a,b]\text{,}\)</span> let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{,}\)</span> and let <span class="process-math">\(\mathcal{R}\)</span> be the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para logical">
+<div class="para">The area of <span class="process-math">\(\mathcal{R}\)</span> is always nonnegative since</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{area}\mathcal{R}\amp =\int_a^b \abs{f}\, dx \amp \text{(definition)} \\
+\amp\geq 0(b-a) \amp (\text{min-max inequality})\\
+\amp\geq 0 \text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para">If <span class="process-math">\(f(x)\geq 0\)</span> for all <span class="process-math">\(x\in [a,b]\text{,}\)</span> then <span class="process-math">\(\operatorname{area}\mathcal{R}=\int_a^b f(x)\, dx\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">If the interval <span class="process-math">\([a,b]\)</span> can be paritioned into subintervals on which <span class="process-math">\(f\)</span> is either always nonnegative (<span class="process-math">\(f\geq 0\)</span>) or nonpositive (<span class="process-math">\(f\leq 0\)</span>), then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\, dx=\operatorname{sgn\, area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)\text{.}
+\end{equation*}
+</div>
+<div class="para">For example, in diagram below we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\, dx=\operatorname{area} \mathcal{R}_1-\operatorname{area} \mathcal{R}_2-\operatorname{area} \mathcal{R}_3+\operatorname{area} \mathcal{R}_4\text{.}
+\end{equation*}
+</div>
+<div class="para"><figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area.png" class="contained" alt="Signed area of region defined by curve"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.10<span class="period">.</span></span><span class="space"> </span>Signed area of region defined by curve</figcaption></figure></div>
+</div></li>
+</ul>
+</div>
 <span class="incontext"><a href="s_definite_integral.html#p-140" class="internal">in-context</a></span>
 </body>
 </html>

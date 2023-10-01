@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Antiderivatives",
-  "body": " Antiderivatives  What is calculus? Below you find a decent, if terse answer.   Calculus is the science of functions   In more detail, calculus investigates and analyzes properties of functions using three fundamental tools: the limit , the derivative , and the integral .    Presumably you are already on intimate terms with the limit and the derivative. In this course we take up the integral in earnest. We begin somewhat indirectly, introducing first the antiderivative and its accompanying indefinite integral notation. Both of these concepts have everything to do with the derivative , and nothing directly to do with the actual definition of the integral ! However, as we will see with the fundamental theorem of calculus , these concepts will play an essential role in computing integrals.   Antiderivative   Let be a function defined on an interval . An antiderivative of on is a function satisfying for all .     Basic antiderivative computations   Find an antiderivative for the given function on the given interval .    ,      ,      ,        We find antiderivatives for each example by inspection . To check that our answer is correct, we simply verify that for each candidate antiderivative we have for all in the given interval . We leave this to you.    is an antiderivative of on .     is an antiderivative of on .  To verify that here it is essential to translate the given radical expressions to power expressions so that we can make use of the power rule. That is, we have and , whence for all .     is an antiderivative of on         Antiderivatives depend on intervals   Let . Show that is an antiderivative of on , but not on . Find an antiderivative of on .    We have for all . Since by definition we have , we see that for all . Thus is an antiderivative of on .  By the same token, since and on , we see that for all , and hence that is not an antiderivative of on .  Lastly, from our analysis above we now see that is an antiderivative of on , since on this interval we have .     Computing antiderivatives by inspection   Given a function and interval , to compute (with justification) an antiderivative of  by inspection , proceed as follows.   Provide a candidate antiderivative .    Verify that is an antiderivative by showing that for all .   This is very much a guess and check procedure. Do not be shy in hazarding a guess for your candidate antiderivative ; even if your check proves the candidate to be incorrect, the very act of checking will often reveal what needs to be adjusted to produce an actual antiderivative.     Less elementary antiderivative computations   Find an antiderivative for the given function on the given interval .    ,      ,      ,        Part of what makes these computations more difficult is that the chain rule inevitably arises when checking our candidate antiderivatives. Since the chain rule plays an important role here, make sure you indicate where it arises in your check.    is an antiderative of on since .     is an antiderivative of since .    Hmmm. This is a curious one. Some typical educated guesses as to what might be ( , or ) all prove incorrect when carefully computing using the chain and\/or product rules. Two natural questions arise: (1) does have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time!        General antiderivative formula   Assume is an antiderivative of on the interval .   Given any constant , the function is also an antiderivative of on .    Conversely, if is an antiderivative of on , then there is a constant such that for all .         Let be an antiderivative of on the interval and let be any real constant. We have for all . Thus is an antiderivative for any .    Assume and are antiderivatives of on the interval , and define . We have for all . It follows (as a consequence of the mean value theorem) that is a constant function on . In other words, we have for all . Since , we conclude that for all , as desired.       The two statements of taken together are equivalent to the following: if is an antiderivative of on the interval , then the set of all antiderivatives of on is given by . In other words, once we find one antiderivative of on , we obtain all other antiderivatives of simply by adding an arbitrary constant to .  In particular, note that antiderivatives are not unique! There is no such thing as the antiderivative of a function; if has an antiderivative , then it has infinitely many antiderivatives , where is any real constant.    Antiderivative with specified conditions   At time minutes a 100 gallon tank of water begins leaking. After minutes, the rate at which the gallon leaks is . Find a formula for , the amount of water in the tank after minutes.    Recall that if , then the function outputs the instantaneous rate of change of with respect to at the given time. Thus in our current setting is the rate of change of the amount of water in the tank at time . We are told that water leaks out of the tank at a rate given by . It follows that . Put another way, is an antiderivative of . An application of yields as an antiderivative of . It follows from that the general antiderivative is of the form . Since is also an antiderivative, we thus have . To determine what the constant is, we use the initial condition  . Using this implies that . We conclude that and thus .     Initial value problem   Consider the differential equation .   Find the general formula for a function satisfying .    Find the unique function satisfying and the initial conditions  .          First, since is an antiderivative of , using and , we conclude that for some . Next, since is an antiderivative of , reasoning as above we have for some . The general formula for is thus given by .    The given initial conditions  and allows us to solve for the and in as follows. First, using we have , which implies . Using this new fact and , now implies , or . We conclude that .        Indefinite integral    Indefinite integral of    If is an antiderivative of on the interval , then by any other antiderivative is of the form for some . We say in this case that the expression is the general antiderivative and denote this using the indefinite integral notation . The symbol is called the integral symbol , the function is called the integrand of the integral, and is called the variable of integration .     It should be noted that the indefinite integral notation is riddled with ambiguity. In particular, whereas the interval of definition plays an important role in the definition of antiderivative (as we saw in ), it does not appear in the notation . So how are we to understand a statement like ? We will take it to mean that on some interval (either implied or given) the function is an antiderivative of , and hence that the general antiderivative formula for on this interval is given by .    Indefinite integral formulas Some of our previous example computations can be summarized by the following indefinite integral formulas. .   Antiderivative formulas   The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The appearing in the formulas below is understood to be any nonzero constant. .     Antiderivative rules   If and are antiderivatives of the functions and , respectively, on the interval , then (1) is an antiderivative of for any , (2) is an antiderivative of , and hence is an antiderivative of for any ,  A somewhat liberal usage of indefinite integral notation allows us to summarize these results as follows.   Scalar rule     Sum rule     Linear combination rule    .    "
+  "body": " Antiderivatives  What is calculus? Below you find a decent, if terse answer.   Calculus is the science of functions   In more detail, calculus investigates and analyzes properties of functions using three fundamental tools: the limit , the derivative , and the integral .    Presumably you are already on intimate terms with the limit and the derivative. In this course we take up the integral in earnest. We begin somewhat indirectly, introducing first the antiderivative and its accompanying indefinite integral notation. Both of these concepts have everything to do with the derivative , and nothing directly to do with the actual definition of the integral ! However, as we will see with the fundamental theorem of calculus , these concepts will play an essential role in computing integrals.   Antiderivative   Let be a function defined on an interval . An antiderivative of on is a function satisfying for all .     Basic antiderivative computations   Find an antiderivative for the given function on the given interval .    ,      ,      ,        We find antiderivatives for each example by inspection . To check that our answer is correct, we simply verify that for each candidate antiderivative we have for all in the given interval . We leave this to you.    is an antiderivative of on .     is an antiderivative of on .  To verify that here it is essential to translate the given radical expressions to power expressions so that we can make use of the power rule. That is, we have and , whence for all .     is an antiderivative of on         Antiderivatives depend on intervals   Let . Show that is an antiderivative of on , but not on . Find an antiderivative of on .    We have for all . Since by definition we have , we see that for all . Thus is an antiderivative of on .  By the same token, since and on , we see that for all , and hence that is not an antiderivative of on .  Lastly, from our analysis above we now see that is an antiderivative of on , since on this interval we have .     Computing antiderivatives by inspection   Given a function and interval , to compute (with justification) an antiderivative of  by inspection , proceed as follows.   Provide a candidate antiderivative .    Verify that is an antiderivative by showing that for all .   This is very much a guess and check procedure. Do not be shy in hazarding a guess for your candidate antiderivative ; even if your check proves the candidate to be incorrect, the very act of checking will often reveal what needs to be adjusted to produce an actual antiderivative.     Less elementary antiderivative computations   Find an antiderivative for the given function on the given interval .    ,      ,      ,        Part of what makes these computations more difficult is that the chain rule inevitably arises when checking our candidate antiderivatives. Since the chain rule plays an important role here, make sure you indicate where it arises in your check.    is an antiderative of on since .     is an antiderivative of since .    Hmmm. This is a curious one. Some typical educated guesses as to what might be ( , or ) all prove incorrect when carefully computing using the chain and\/or product rules. Two natural questions arise: (1) does have an antiderivative?; (2) if it does, how do we write it down? All will be revealed in good time!        General antiderivative formula   Assume is an antiderivative of on the interval .   Given any constant , the function is also an antiderivative of on .    Conversely, if is an antiderivative of on , then there is a constant such that for all .         Let be an antiderivative of on the interval and let be any real constant. We have for all . Thus is an antiderivative for any .    Assume and are antiderivatives of on the interval , and define . We have for all . It follows (as a consequence of the mean value theorem) that is a constant function on . In other words, we have for all . Since , we conclude that for all , as desired.       The two statements of taken together are equivalent to the following: if is an antiderivative of on the interval , then the set of all antiderivatives of on is given by . In other words, once we find one antiderivative of on , we obtain all other antiderivatives of simply by adding an arbitrary constant to .  In particular, note that antiderivatives are not unique! There is no such thing as the antiderivative of a function; if has an antiderivative , then it has infinitely many antiderivatives , where is any real constant.    Leaking water tank   At time minutes a 100 gallon tank of water begins leaking. After minutes, the rate at which the gallon leaks is . Find a formula for , the amount of water in the tank after minutes.    Recall that if , then the function outputs the instantaneous rate of change of with respect to at the given time. Thus in our current setting is the rate of change of the amount of water in the tank at time . We are told that water leaks out of the tank at a rate given by . It follows that . Put another way, is an antiderivative of . An application of yields as an antiderivative of . It follows from that the general antiderivative is of the form . Since is also an antiderivative, we thus have . To determine what the constant is, we use the initial condition  . Using this implies that . We conclude that and thus .     Initial value problem   Consider the differential equation .   Find the general formula for a function satisfying .    Find the unique function satisfying and the initial conditions  .          First, since is an antiderivative of , using and , we conclude that for some . Next, since is an antiderivative of , reasoning as above we have for some . The general formula for is thus given by .    The given initial conditions  and allows us to solve for the and in as follows. First, using we have , which implies . Using this new fact and , now implies , or . We conclude that .        Indefinite integral    Indefinite integral of    If is an antiderivative of on the interval , then by any other antiderivative is of the form for some . We say in this case that the expression is the general antiderivative and denote this using the indefinite integral notation . The symbol is called the integral symbol , the function is called the integrand of the integral, and is called the variable of integration .     It should be noted that the indefinite integral notation is riddled with ambiguity. In particular, whereas the interval of definition plays an important role in the definition of antiderivative (as we saw in ), it does not appear in the notation . So how are we to understand a statement like ? We will take it to mean that on some interval (either implied or given) the function is an antiderivative of , and hence that the general antiderivative formula for on this interval is given by .    Indefinite integral formulas Some of our previous example computations can be summarized by the following indefinite integral formulas. .   Antiderivative formulas   The following antiderivative (or indefinite integral) formulas follow directly from a corresponding derivative formula. The appearing in the formulas below is understood to be any nonzero constant. .     Antiderivative rules   If and are antiderivatives of the functions and , respectively, on the interval , then (1) is an antiderivative of for any , (2) is an antiderivative of , and hence is an antiderivative of for any ,  A somewhat liberal usage of indefinite integral notation allows us to summarize these results as follows.   Scalar rule     Sum rule     Linear combination rule    .    "
 },
 {
   "id": "mantra_calculus",
@@ -91,13 +91,13 @@ var ptx_lunr_docs = [
   "body": " The two statements of taken together are equivalent to the following: if is an antiderivative of on the interval , then the set of all antiderivatives of on is given by . In other words, once we find one antiderivative of on , we obtain all other antiderivatives of simply by adding an arbitrary constant to .  In particular, note that antiderivatives are not unique! There is no such thing as the antiderivative of a function; if has an antiderivative , then it has infinitely many antiderivatives , where is any real constant.  "
 },
 {
-  "id": "example-4",
+  "id": "eg_water_tank",
   "level": "2",
-  "url": "s_antiderivatives.html#example-4",
+  "url": "s_antiderivatives.html#eg_water_tank",
   "type": "Example",
   "number": "1.1.9",
-  "title": "Antiderivative with specified conditions.",
-  "body": " Antiderivative with specified conditions   At time minutes a 100 gallon tank of water begins leaking. After minutes, the rate at which the gallon leaks is . Find a formula for , the amount of water in the tank after minutes.    Recall that if , then the function outputs the instantaneous rate of change of with respect to at the given time. Thus in our current setting is the rate of change of the amount of water in the tank at time . We are told that water leaks out of the tank at a rate given by . It follows that . Put another way, is an antiderivative of . An application of yields as an antiderivative of . It follows from that the general antiderivative is of the form . Since is also an antiderivative, we thus have . To determine what the constant is, we use the initial condition  . Using this implies that . We conclude that and thus .   "
+  "title": "Leaking water tank.",
+  "body": " Leaking water tank   At time minutes a 100 gallon tank of water begins leaking. After minutes, the rate at which the gallon leaks is . Find a formula for , the amount of water in the tank after minutes.    Recall that if , then the function outputs the instantaneous rate of change of with respect to at the given time. Thus in our current setting is the rate of change of the amount of water in the tank at time . We are told that water leaks out of the tank at a rate given by . It follows that . Put another way, is an antiderivative of . An application of yields as an antiderivative of . It follows from that the general antiderivative is of the form . Since is also an antiderivative, we thus have . To determine what the constant is, we use the initial condition  . Using this implies that . We conclude that and thus .   "
 },
 {
   "id": "example-5",
@@ -307,13 +307,265 @@ var ptx_lunr_docs = [
   "body": " Riemann sum types   Let be a function defined on the interval with a chosen partition . Particular rules for picking the sample points for each subinterval in our partition give rise to particular types of Riemann sums. Here are some common examples.   The left Riemann sum is obtained by choosing for all : , is chosen as the left endpoint of each subinterval . The Riemann sum in this case is .    The right Riemann sum is obtained by choosing for all : , is chosen as the right endpoint of each subinterval . The Riemann sum in this case is .    The midpoint Riemann sum is obtained by choosing for all : , is chosen as the midpoint of each subinterval . The Riemann sum in this case is .    The lower Riemann sum is obtained by choosing to be a point where is the minimum value of on for all .    The upper Riemann sum is obtained by choosing to be a point where is the maximum value of on for all .      "
 },
 {
-  "id": "example-13",
+  "id": "eg_limit_Riemann",
   "level": "2",
-  "url": "s_riemann_sums.html#example-13",
+  "url": "s_riemann_sums.html#eg_limit_Riemann",
   "type": "Example",
   "number": "1.3.9",
   "title": "",
   "body": "  Let be a positive integer and define to be the right Riemann sum of corresponding to the partition of into equal subintervals.   Derive a closed formula for . Your answer will be expressed in terms of .    Compute .    Now do the same thing with , the left Riemann sum of corresponding to the partion of into equal subintervals.   Hint . For the closed formula of use the index shift identity .          Fix a positive integer . We build the right Riemann sum corresponding to a partition of into subintervals of equal length. We have for all and thus for all . Using we then have . Note that since we have fixed the integer at the beginning of our argument, it is treated throughout as a constant . You can see this in action in the last few lines above.    We have . Hey, is the numeric value we saw our area estimates approaching when working the GeoGebra interactive in !    We include a computation of to illustrate the use of the index shift rule of summation. Most of the ingredients are the same as with the computation for except now we use . . A similar argument as above shows .      "
+},
+{
+  "id": "s_definite_integral",
+  "level": "1",
+  "url": "s_definite_integral.html",
+  "type": "Section",
+  "number": "1.4",
+  "title": "Definite integral",
+  "body": " Definite integral   Definite integral   Let be a function defined on the interval . The definite integral of over , if it exists, is a real number satisfying the following property: for any sequence of pointed partitions of whose norms satisfy , the associated Riemann sums satisfy . In plain English, the definite integral of over is equal to if any sequence of Riemann sums corresponding to a sequence of finer and finer pointed partitions of approaches in the limit.  When this is the case we say is integrable over , and denote the definite integral as .     Limit computation of integral   Assume is integrable on the interval . Since by definition can be computed using any sequence of Riemann sums, for simplicity we will often compute it either as a limit of left or right Riemann sums corresponding to partitions of into equal subintervals. To do so, follow the appropriate steps below for your choice of Riemann sum (left or right).   Partition description  For an equally subdivided partition , all subintervals have common length and we have for all .    Construct Riemann sums  Let and be the left and right Riemann sums, respectively, corresponding to the partition of into equal subintervals. It follows from it follows that     Compute limit  We may now compute the integral as either of the limits below: When computing these limits, it will be convenient to derive a closed form for the -th Riemann sum ( or , depending on your choice.)        Integral of linear function   Let . Compute first as a limit of right Riemann sums, and then as a limit of left Riemann sums.    Following the steps of xr we first assemble ingredients regarding the -th partition of . We have . Using , for any we have Finally, using we compute . The computation using left sums is similar. We include details only of the computation of to illustrate the index shift rule for summations. Using , for any we have . Using reasoning very similar to our previous computation, we then see that . Note how the two approximation techniques (left and right sum) yield the same value in the limit.     Integral of cubic   Let and let be a fixed nonnegative constant. Compute as a limit of right Riemann sums.    We follow the steps . As this example is quite similar to , we omit some details.   Fix . We divide the interval into equal intervals of length . The intervening endpoints of our subintervals are given by .    The -th right Riemann sum corresponding to this partition is given by .    We now compute .       In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.   Integrable functions   Let be a function defined on the interval .   If is continuous on , then is integrable on .    If is continuous everywhere on except for a finite set of jump discontinuities, then is integrable on .       As with the derivative, the integral satisfies many elementary properties that often ease our computations. Technically, the first statements in are in fact definitions. (In our discussion of integrals we tacitly always assumed ; (1) and (2) define what this integral should be if or . ) The rest of the statements, as plausible as they may seem, do require proof. We omit them, but rest assured that the proofs boil down to straightforward statements about Riemann sums and their limits.   Integral properties   Let and be integrable over .    .    Order of integration   .    Sum and difference       Scalar multiple   for any .    Interval partition  For any we have .    Min-max inequality  If satisfies for all , then     Domination  If for all , then .        Integral of cubic (cont.)   Let . Fix constants and with . Use your result in and integral properties to derive a formula for in terms of and .    We saw in that for any we have . It follows that .     Area and signed area of regions defined by functions   Let be integrable over the interval , let be the graph of , and let be the region between and the -axis from to .   Area  The area of , denoted , is defined as .    Signed area  The signed area of , denoted , is defined as .        Signed area  Let be integrable over the interval , let be the graph of , and let be the region between and the -axis from to .   The area of is always nonnegative since .    If for all , then .    If the interval can be paritioned into subintervals on which is either always nonnegative ( ) or nonpositive ( ), then . For example, in diagram below we have .   Signed area of region defined by curve   Signed area of region defined by curve         Integral of linear function (cont.)   Let . Explain why the value of , computed earlier, is consistent with the area interpretation of the integral and known integral formulas.    The region between the graph of and the -axis, from to is a trapezoid of width , and with two heights and . (Sketch it for yourself!) Since the integral of computes . (The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in .      Let . Fix a constant with , let , and let be the region between the graph of and the -axis from to .   Graph on . Your graph should reflect the assumption that .    Describe precisely how the signed area of is a difference of areas of two distinct regions.    Compute the area of .       In the diagram below we have . Geometrically we have To compute we use the definition of area : .   Region defined by cubic     "
+},
+{
+  "id": "d_definite_integral",
+  "level": "2",
+  "url": "s_definite_integral.html#d_definite_integral",
+  "type": "Definition",
+  "number": "1.4.1",
+  "title": "Definite integral.",
+  "body": " Definite integral   Let be a function defined on the interval . The definite integral of over , if it exists, is a real number satisfying the following property: for any sequence of pointed partitions of whose norms satisfy , the associated Riemann sums satisfy . In plain English, the definite integral of over is equal to if any sequence of Riemann sums corresponding to a sequence of finer and finer pointed partitions of approaches in the limit.  When this is the case we say is integrable over , and denote the definite integral as .   "
+},
+{
+  "id": "proc_limit_integral",
+  "level": "2",
+  "url": "s_definite_integral.html#proc_limit_integral",
+  "type": "Procedure",
+  "number": "1.4.2",
+  "title": "Limit computation of integral.",
+  "body": " Limit computation of integral   Assume is integrable on the interval . Since by definition can be computed using any sequence of Riemann sums, for simplicity we will often compute it either as a limit of left or right Riemann sums corresponding to partitions of into equal subintervals. To do so, follow the appropriate steps below for your choice of Riemann sum (left or right).   Partition description  For an equally subdivided partition , all subintervals have common length and we have for all .    Construct Riemann sums  Let and be the left and right Riemann sums, respectively, corresponding to the partition of into equal subintervals. It follows from it follows that     Compute limit  We may now compute the integral as either of the limits below: When computing these limits, it will be convenient to derive a closed form for the -th Riemann sum ( or , depending on your choice.)      "
+},
+{
+  "id": "eg_int_linear",
+  "level": "2",
+  "url": "s_definite_integral.html#eg_int_linear",
+  "type": "Example",
+  "number": "1.4.3",
+  "title": "Integral of linear function.",
+  "body": " Integral of linear function   Let . Compute first as a limit of right Riemann sums, and then as a limit of left Riemann sums.    Following the steps of xr we first assemble ingredients regarding the -th partition of . We have . Using , for any we have Finally, using we compute . The computation using left sums is similar. We include details only of the computation of to illustrate the index shift rule for summations. Using , for any we have . Using reasoning very similar to our previous computation, we then see that . Note how the two approximation techniques (left and right sum) yield the same value in the limit.   "
+},
+{
+  "id": "eg_int_cubic",
+  "level": "2",
+  "url": "s_definite_integral.html#eg_int_cubic",
+  "type": "Example",
+  "number": "1.4.4",
+  "title": "Integral of cubic.",
+  "body": " Integral of cubic   Let and let be a fixed nonnegative constant. Compute as a limit of right Riemann sums.    We follow the steps . As this example is quite similar to , we omit some details.   Fix . We divide the interval into equal intervals of length . The intervening endpoints of our subintervals are given by .    The -th right Riemann sum corresponding to this partition is given by .    We now compute .      "
+},
+{
+  "id": "th_integrable_functions",
+  "level": "2",
+  "url": "s_definite_integral.html#th_integrable_functions",
+  "type": "Theorem",
+  "number": "1.4.5",
+  "title": "Integrable functions.",
+  "body": " Integrable functions   Let be a function defined on the interval .   If is continuous on , then is integrable on .    If is continuous everywhere on except for a finite set of jump discontinuities, then is integrable on .      "
+},
+{
+  "id": "th_int_props",
+  "level": "2",
+  "url": "s_definite_integral.html#th_int_props",
+  "type": "Theorem",
+  "number": "1.4.6",
+  "title": "Integral properties.",
+  "body": " Integral properties   Let and be integrable over .    .    Order of integration   .    Sum and difference       Scalar multiple   for any .    Interval partition  For any we have .    Min-max inequality  If satisfies for all , then     Domination  If for all , then .      "
+},
+{
+  "id": "eg_int_cubic_cont",
+  "level": "2",
+  "url": "s_definite_integral.html#eg_int_cubic_cont",
+  "type": "Example",
+  "number": "1.4.7",
+  "title": "Integral of cubic (cont.).",
+  "body": " Integral of cubic (cont.)   Let . Fix constants and with . Use your result in and integral properties to derive a formula for in terms of and .    We saw in that for any we have . It follows that .   "
+},
+{
+  "id": "d_signed_area",
+  "level": "2",
+  "url": "s_definite_integral.html#d_signed_area",
+  "type": "Definition",
+  "number": "1.4.8",
+  "title": "Area and signed area of regions defined by functions.",
+  "body": " Area and signed area of regions defined by functions   Let be integrable over the interval , let be the graph of , and let be the region between and the -axis from to .   Area  The area of , denoted , is defined as .    Signed area  The signed area of , denoted , is defined as .      "
+},
+{
+  "id": "rm_signed_area",
+  "level": "2",
+  "url": "s_definite_integral.html#rm_signed_area",
+  "type": "Remark",
+  "number": "1.4.9",
+  "title": "Signed area.",
+  "body": " Signed area  Let be integrable over the interval , let be the graph of , and let be the region between and the -axis from to .   The area of is always nonnegative since .    If for all , then .    If the interval can be paritioned into subintervals on which is either always nonnegative ( ) or nonpositive ( ), then . For example, in diagram below we have .   Signed area of region defined by curve   Signed area of region defined by curve       "
+},
+{
+  "id": "eg_linear_cont",
+  "level": "2",
+  "url": "s_definite_integral.html#eg_linear_cont",
+  "type": "Example",
+  "number": "1.4.11",
+  "title": "Integral of linear function (cont.).",
+  "body": " Integral of linear function (cont.)   Let . Explain why the value of , computed earlier, is consistent with the area interpretation of the integral and known integral formulas.    The region between the graph of and the -axis, from to is a trapezoid of width , and with two heights and . (Sketch it for yourself!) Since the integral of computes . (The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in .   "
+},
+{
+  "id": "example-18",
+  "level": "2",
+  "url": "s_definite_integral.html#example-18",
+  "type": "Example",
+  "number": "1.4.12",
+  "title": "",
+  "body": "  Let . Fix a constant with , let , and let be the region between the graph of and the -axis from to .   Graph on . Your graph should reflect the assumption that .    Describe precisely how the signed area of is a difference of areas of two distinct regions.    Compute the area of .       In the diagram below we have . Geometrically we have To compute we use the definition of area : .   Region defined by cubic    "
+},
+{
+  "id": "s_FTC",
+  "level": "1",
+  "url": "s_FTC.html",
+  "type": "Section",
+  "number": "1.5",
+  "title": "Fundamental theorem of calculus",
+  "body": " Fundamental theorem of calculus  We have now met the two main operations in calculus: . The fundamental theorem of calculus (FTC) how these two operations (derivative and integral) interact. The theorem has two parts ( and ). We will focus on FTC II in this section, and FTC I in the next.   Fundamental theorem of calculus   Let be continuous on .   FTC I  The function defined on as is differentiable on and satisfies for all .    FTC II  If is an antiderivative of on , then .       Proof of  Since is continuous on it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions satisfying . The strategy of the proof that follows is to pick these pointed partitions in a very particular way that ensures the value of of the integral we seek.  Let be an antiderivative of on . Since is continuous on , we see that is differentiable on and its derivative is continuous. The mean value theorem thus applies to : given any interval on which is defined and continuous, there is an element such that . We use this fact to produce a sequence of pointed partitions of a very particular sort. Namely for each , we divide into equal subintervals of length , and for each subinterval we choose our sample input to be a point where we have . As discussed above, such a is guaranteed to exist by the mean value theorem. Since by assumption, these sample points satisfy . Note that we have , and thus . It follows that if is the Riemann sum corresponding to the pointed partition , then . We now compute for any fixed : . We've shown that for all . It follows that , as desired.    As mentioned above, we will focus here on . It main computational import of this theorem is that it allows us to compute definite integrals indirectly , by first finding an antiderivative of the integrand, and then using .   Computing integrals with antiderivatives   Let be an integrable function on . To compute using antiderivatives, proceed as follows:   Find an antiderivative of on I.    Use to conclude .       Henceforth our integral computations will involve many expressions of the form , which we call a difference evaluation . It will be useful to have some compact notation for this.   Difference evaluation notation   Let be a function containing and in its domain. We define to be the difference evaluation expression .     Difference evaluation notation     It is easy to see that the following difference evaluation identities hold:     Observe that can be expressed using our new notation as .       Computing integrals with antiderivatives   Use the to compute the following definite integrals.              .       Following , for each integral we provide an antiderivative of the integrand and then compute the integral as a difference evaluation using . The integrands in question are familiar and\/or simple enough that we do not justify the fact that is indeed an antiderivative.   The function is an antiderivative of . It follows from that .    The function is an antiderivative of . It follows from that .    The function is an antiderivative of . It follows from that .        Signed area using FTC II   Let , and let be the graph of . For each region compute the area of and the signed area of . Include a diagram of and . Make sure your answer is consistent with your graph. If your answer happens to be 0, use the diagram to explain why.    is the region between and the -axis, from to .     is the region between and the -axis, from to .     is the region between and the -axis, from to .       In each of the cases below we use our definitions of the area and signed area of the region associated to : . Throughout we will use the fact that is an antiderivative of .   We have . Below you find a diagram of described as a union . By the symmetry in the diagram it should come as no surprise that .   Part (a) region     The reasoning and computations here are very similar. We get .    Again, the reasoning and computations are similar. We get . Both the fact that signed area here is zero and the symmetry appearing in the two terms of the area computation arises from the fact that is a union of two symmetric regions.   Signed area over entire period         FTC II: rate of change version   Suppose is a differentiable function on . Since is an antiderivative of on , by we have . Interpreting as a rate of change, we see that integrating the rate of change of a quantity from to yields the net change of as we vary from to .     Leaking water tank revisited  Recall the set up from , where we determined that at time , the amount of water has rate of change .  According to , for any the integral computes the net change in the amount of water in the tank between time and minutes: , it computes . We can use to compute this integral. The function is an antiderivative of and thus . This tells us that at any time . Since , we conclude that , or equivalently, for all . (Here we use the fact that .) We have just given another derivation of the formula for the function .   "
+},
+{
+  "id": "th_FTC",
+  "level": "2",
+  "url": "s_FTC.html#th_FTC",
+  "type": "Theorem",
+  "number": "1.5.1",
+  "title": "Fundamental theorem of calculus.",
+  "body": " Fundamental theorem of calculus   Let be continuous on .   FTC I  The function defined on as is differentiable on and satisfies for all .    FTC II  If is an antiderivative of on , then .       Proof of  Since is continuous on it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions satisfying . The strategy of the proof that follows is to pick these pointed partitions in a very particular way that ensures the value of of the integral we seek.  Let be an antiderivative of on . Since is continuous on , we see that is differentiable on and its derivative is continuous. The mean value theorem thus applies to : given any interval on which is defined and continuous, there is an element such that . We use this fact to produce a sequence of pointed partitions of a very particular sort. Namely for each , we divide into equal subintervals of length , and for each subinterval we choose our sample input to be a point where we have . As discussed above, such a is guaranteed to exist by the mean value theorem. Since by assumption, these sample points satisfy . Note that we have , and thus . It follows that if is the Riemann sum corresponding to the pointed partition , then . We now compute for any fixed : . We've shown that for all . It follows that , as desired.   "
+},
+{
+  "id": "proc_integral_antiderivative",
+  "level": "2",
+  "url": "s_FTC.html#proc_integral_antiderivative",
+  "type": "Procedure",
+  "number": "1.5.2",
+  "title": "Computing integrals with antiderivatives.",
+  "body": " Computing integrals with antiderivatives   Let be an integrable function on . To compute using antiderivatives, proceed as follows:   Find an antiderivative of on I.    Use to conclude .      "
+},
+{
+  "id": "d_difference_evaluation",
+  "level": "2",
+  "url": "s_FTC.html#d_difference_evaluation",
+  "type": "Definition",
+  "number": "1.5.3",
+  "title": "Difference evaluation notation.",
+  "body": " Difference evaluation notation   Let be a function containing and in its domain. We define to be the difference evaluation expression .   "
+},
+{
+  "id": "remark-5",
+  "level": "2",
+  "url": "s_FTC.html#remark-5",
+  "type": "Remark",
+  "number": "1.5.4",
+  "title": "Difference evaluation notation.",
+  "body": " Difference evaluation notation     It is easy to see that the following difference evaluation identities hold:     Observe that can be expressed using our new notation as .     "
+},
+{
+  "id": "eg_FTCII",
+  "level": "2",
+  "url": "s_FTC.html#eg_FTCII",
+  "type": "Example",
+  "number": "1.5.5",
+  "title": "Computing integrals with antiderivatives.",
+  "body": " Computing integrals with antiderivatives   Use the to compute the following definite integrals.              .       Following , for each integral we provide an antiderivative of the integrand and then compute the integral as a difference evaluation using . The integrands in question are familiar and\/or simple enough that we do not justify the fact that is indeed an antiderivative.   The function is an antiderivative of . It follows from that .    The function is an antiderivative of . It follows from that .    The function is an antiderivative of . It follows from that .      "
+},
+{
+  "id": "eg_FTCII_area",
+  "level": "2",
+  "url": "s_FTC.html#eg_FTCII_area",
+  "type": "Example",
+  "number": "1.5.6",
+  "title": "Signed area using FTC II.",
+  "body": " Signed area using FTC II   Let , and let be the graph of . For each region compute the area of and the signed area of . Include a diagram of and . Make sure your answer is consistent with your graph. If your answer happens to be 0, use the diagram to explain why.    is the region between and the -axis, from to .     is the region between and the -axis, from to .     is the region between and the -axis, from to .       In each of the cases below we use our definitions of the area and signed area of the region associated to : . Throughout we will use the fact that is an antiderivative of .   We have . Below you find a diagram of described as a union . By the symmetry in the diagram it should come as no surprise that .   Part (a) region     The reasoning and computations here are very similar. We get .    Again, the reasoning and computations are similar. We get . Both the fact that signed area here is zero and the symmetry appearing in the two terms of the area computation arises from the fact that is a union of two symmetric regions.   Signed area over entire period       "
+},
+{
+  "id": "th_FTC_II_rate",
+  "level": "2",
+  "url": "s_FTC.html#th_FTC_II_rate",
+  "type": "Theorem",
+  "number": "1.5.7",
+  "title": "FTC II: rate of change version.",
+  "body": " FTC II: rate of change version   Suppose is a differentiable function on . Since is an antiderivative of on , by we have . Interpreting as a rate of change, we see that integrating the rate of change of a quantity from to yields the net change of as we vary from to .   "
+},
+{
+  "id": "example-21",
+  "level": "2",
+  "url": "s_FTC.html#example-21",
+  "type": "Example",
+  "number": "1.5.8",
+  "title": "Leaking water tank revisited.",
+  "body": " Leaking water tank revisited  Recall the set up from , where we determined that at time , the amount of water has rate of change .  According to , for any the integral computes the net change in the amount of water in the tank between time and minutes: , it computes . We can use to compute this integral. The function is an antiderivative of and thus . This tells us that at any time . Since , we conclude that , or equivalently, for all . (Here we use the fact that .) We have just given another derivation of the formula for the function .  "
+},
+{
+  "id": "s_FTC_cont",
+  "level": "1",
+  "url": "s_FTC_cont.html",
+  "type": "Section",
+  "number": "1.6",
+  "title": "Fundamental theorem (cont.)",
+  "body": " Fundamental theorem (cont.)  In this section we focus on . One peculiarity of this theorem is the function defined as . This is called an integral function , as the values are defined by the integral expression .   Integral function   Let be integrable on the interval . The function defined on as is called an integral function .    Examining the formula , we note that the input of is an the upper limit of integration of the integral. As we vary , the only thing that changes about the integral is the interval over which we are integrating; and this causes the values to vary with . Using the signed area interpretation of the integral allows us to visualize the integral function . In keeping with the notation in , we will label the horizontal axis as the -axis. For any , define to be the region in the plane that lies between the graph of and the -axis, and between the vertical lines and ; as we increase , imagine sliding the vertical line to the right, creating a growing region ; the integral function computes the signed area of this growing region!   Integral function     GeoGebra: understanding integral functions      Integral functions   Let . Make a table of values of for . Explain graphically what is for any .        Now that we have a better grip on integral functions of the form ), let's look at what says about them: namely, that they are differentiable, and satisfy for all . The corollary below follows immediately, answering a question we posed when discussing antiderivatives.   Continuous functions have antiderivatives   If is continuous on the interval , then has an antiderivative on .    Let be the integral function defined as . According to , we have for all .    Let's incorporate the result of into the geometric interpretation of discussed above. Since computes the signed area of the variable region , its derivative computes the rate of change of this signed area with respect to . By , we have . Thus the rate of change of the signed area of at a give point is just , the height of the graph of at .   FTC I: geometric   Let be continuous on the interval and define . In what follows we label the horizontal axis in the plane as the -axis.    For all , let be the region lying between the graph of and the -axis, and between the vertical lines and . We have for all .    At any the rate of change of is given by . In other words, the rate of change of the signed area is equal to the (directed) height of the graph of at .      We can make even more interesting integral functions by choosing the upper and\/or lower limit of integration to be a function of . When all the functions are nice enough , we can combine with the chain rule to compute the integral function's derivative.   FTC I+chain rule   For each defined below, use along with integral properties and\/or the chain rule to compute .                         "
+},
+{
+  "id": "d_integral_function",
+  "level": "2",
+  "url": "s_FTC_cont.html#d_integral_function",
+  "type": "Definition",
+  "number": "1.6.1",
+  "title": "Integral function.",
+  "body": " Integral function   Let be integrable on the interval . The function defined on as is called an integral function .   "
+},
+{
+  "id": "proj_integral_function",
+  "level": "2",
+  "url": "s_FTC_cont.html#proj_integral_function",
+  "type": "Interactive example",
+  "number": "1.6.1",
+  "title": "Integral function.",
+  "body": " Integral function     GeoGebra: understanding integral functions    "
+},
+{
+  "id": "example-22",
+  "level": "2",
+  "url": "s_FTC_cont.html#example-22",
+  "type": "Example",
+  "number": "1.6.3",
+  "title": "Integral functions.",
+  "body": " Integral functions   Let . Make a table of values of for . Explain graphically what is for any .       "
+},
+{
+  "id": "cor_FTC_I",
+  "level": "2",
+  "url": "s_FTC_cont.html#cor_FTC_I",
+  "type": "Corollary",
+  "number": "1.6.4",
+  "title": "Continuous functions have antiderivatives.",
+  "body": " Continuous functions have antiderivatives   If is continuous on the interval , then has an antiderivative on .    Let be the integral function defined as . According to , we have for all .   "
+},
+{
+  "id": "th_FTC_I_geometric",
+  "level": "2",
+  "url": "s_FTC_cont.html#th_FTC_I_geometric",
+  "type": "Theorem",
+  "number": "1.6.5",
+  "title": "FTC I: geometric.",
+  "body": " FTC I: geometric   Let be continuous on the interval and define . In what follows we label the horizontal axis in the plane as the -axis.    For all , let be the region lying between the graph of and the -axis, and between the vertical lines and . We have for all .    At any the rate of change of is given by . In other words, the rate of change of the signed area is equal to the (directed) height of the graph of at .     "
+},
+{
+  "id": "eg_FTC_I_chain",
+  "level": "2",
+  "url": "s_FTC_cont.html#eg_FTC_I_chain",
+  "type": "Example",
+  "number": "1.6.6",
+  "title": "FTC I+chain rule.",
+  "body": " FTC I+chain rule   For each defined below, use along with integral properties and\/or the chain rule to compute .                        "
 },
 {
   "id": "appendix-notation",

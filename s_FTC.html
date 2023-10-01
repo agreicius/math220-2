@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fundamental theorem of calculus</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math 220-2">
+<meta property="book:author" content="Aaron Greicius">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="kursobjekt.html"><span class="title">Math 220-2:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_definite_integral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_FTC_cont.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+  \newcommand{\Q}{{\mathbb Q}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\T}{{\mathbb T}}
+  \newcommand{\F}{{\mathbb F}}
+  \newcommand{\PP}{{\mathbb P}}
+  \newcommand{\HH}{{\mathbb H}}
+  \newcommand{\compose}{\circ}
+  \newcommand{\bolda}{{\mathbf a}}
+  \newcommand{\boldb}{{\mathbf b}}
+  \newcommand{\boldc}{{\mathbf c}}
+  \newcommand{\boldd}{{\mathbf d}}
+  \newcommand{\bolde}{{\mathbf e}}
+  \newcommand{\boldi}{{\mathbf i}}
+  \newcommand{\boldj}{{\mathbf j}}
+  \newcommand{\boldk}{{\mathbf k}}
+  \newcommand{\boldn}{{\mathbf n}}
+  \newcommand{\boldp}{{\mathbf p}}
+  \newcommand{\boldq}{{\mathbf q}}
+  \newcommand{\boldr}{{\mathbf r}}
+  \newcommand{\bolds}{{\mathbf s}}
+  \newcommand{\boldt}{{\mathbf t}}
+  \newcommand{\boldu}{{\mathbf u}}
+  \newcommand{\boldv}{{\mathbf v}}
+  \newcommand{\boldw}{{\mathbf w}}
+  \newcommand{\boldx}{{\mathbf x}}
+  \newcommand{\boldy}{{\mathbf y}}
+  \newcommand{\boldz}{{\mathbf z}}
+  \newcommand{\boldzero}{{\mathbf 0}}
+  \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+  \newcommand{\boldT}{{\mathbf T}}
+  \newcommand{\boldN}{{\mathbf N}}
+  \newcommand{\boldB}{{\mathbf B}}
+  \newcommand{\boldF}{{\mathbf F}}
+  \newcommand{\boldS}{{\mathbf S}}
+  \newcommand{\boldE}{{\mathbf E}}
+  \newcommand{\boldG}{{\mathbf G}}
+  \newcommand{\boldK}{{\mathbf K}}
+  \newcommand{\boldL}{{\mathbf L}}
+  \DeclareMathOperator{\lns}{lns}
+  \DeclareMathOperator{\lcm}{lcm}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\tr}{tr}
+  \DeclareMathOperator{\NS}{null}
+  \DeclareMathOperator{\RS}{row}
+  \DeclareMathOperator{\CS}{col}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\range}{range}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\nullity}{nullity}
+  \DeclareMathOperator{\sign}{sign}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Aff}{Aff}
+  \DeclareMathOperator{\Frac}{Frac}
+  \DeclareMathOperator{\Ann}{Ann}
+  \DeclareMathOperator{\Tor}{Tor}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\mdeg}{mdeg}
+  \DeclareMathOperator{\Lt}{Lt}
+  \DeclareMathOperator{\Lc}{Lc}
+  \DeclareMathOperator{\disc}{disc}
+  \DeclareMathOperator{\Frob}{Frob}
+  \DeclareMathOperator{\adj}{adj}
+  \DeclareMathOperator{\curl}{curl}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\diver}{div}
+  \DeclareMathOperator{\flux}{flux}
+  \DeclareMathOperator{\Hom}{Hom}
+  \DeclareMathOperator{\ab}{ab}
+
+
+  \newcommand{\surjects}{\twoheadrightarrow}
+  \newcommand{\injects}{\hookrightarrow}
+  \newcommand{\bijects}{\leftrightarrow}
+  \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+  \newcommand{\floor}[1]{\lfloor#1\rfloor}
+  \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+  \newcommand{\mclass}[2][m]{[#2]_{#1}}
+  \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+  \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+  \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+  \newcommand{\normalin}{\trianglelefteq}
+  \newcommand{\angvec}[1]{\langle #1\rangle}
+  \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+  \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+  \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+  \newenvironment{linsys}[2][m]{
+  \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+  }{
+  \end{array}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li><div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="c_integral_calculus.html" class="internal"><span class="codenumber">1</span> <span class="title">Integral calculus</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_antiderivatives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Antiderivatives</span></a></div></li>
+<li><div class="toc-item"><a href="s_est_area.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Estimating area</span></a></div></li>
+<li><div class="toc-item"><a href="s_riemann_sums.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Riemann sums</span></a></div></li>
+<li><div class="toc-item"><a href="s_definite_integral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Definite integral</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="s_FTC.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Fundamental theorem of calculus</span></a></div></li>
+<li><div class="toc-item"><a href="s_FTC_cont.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Fundamental theorem (cont.)</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-interactives.html" class="internal"><span class="codenumber">E</span> <span class="title">Interactives and computational cells</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_FTC"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Fundamental theorem of calculus</span>
+</h2>
+<div class="para logical" id="p-151">
+<div class="para">We have now met the two main operations in calculus:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC.html ./knowl/th_FTC_I.html ./knowl/th_FTC_II.html" id="md-23">
+\begin{align*}
+\text{Derivative: } f \amp \mapsto f'\\
+\text{Integral: } f \amp \mapsto \int_a^b f(x)\, dx \text{.}
+\end{align*}
+</div>
+<div class="para">The <a href="" class="xref" data-knowl="./knowl/th_FTC.html" title="Theorem 1.5.1: Fundamental theorem of calculus">fundamental theorem of calculus (FTC)</a> how these two operations (derivative and integral) interact. The theorem has two parts (<a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> and <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>). We will focus on FTC II in this section, and FTC I in the next.</div>
+</div>
+<article class="theorem theorem-like" id="th_FTC"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus.</span>
+</h3>
+<div class="para logical" id="p-152">
+<div class="para">Let <span class="process-math">\(f\)</span> be continuous on <span class="process-math">\(I=[a,b]\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="th_FTC_I">
+<span class="heading"><span class="title">FTC I.</span></span><div class="para logical" id="p-153">
+<div class="para">The function <span class="process-math">\(F\)</span> defined on <span class="process-math">\(I\)</span> as</div>
+<div class="displaymath process-math" id="eq_intregal_function">
+\begin{equation}
+F(x)=\int_a^x f(t)\, dt\tag{1.5.1}
+\end{equation}
+</div>
+<div class="para">is differentiable on <span class="process-math">\(I\)</span> and satisfies</div>
+<div class="displaymath process-math" id="eq_FTC_I">
+\begin{equation}
+F'(x)=\frac{d}{dx}\int_a^x f(t)\, dt = f(x)\tag{1.5.2}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div>
+</div>
+</li>
+<li id="th_FTC_II">
+<span class="heading"><span class="title">FTC II.</span></span><div class="para logical" id="p-154">
+<div class="para">If <span class="process-math">\(F\)</span> is an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="eq_FTC_II">
+\begin{equation}
+\int_a^b f(x)\, dx=F(b)-F(a)\text{.}\tag{1.5.3}
+\end{equation}
+</div>
+</div>
+</li>
+</ol>
+</div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="title">Proof of FTC II.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"> <div class="para" id="p-155">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions <span class="process-math">\(P_n\)</span> satisfying <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> The strategy of the proof that follows is to pick these pointed partitions in a <em class="emphasis">very particular way</em> that ensures the value of of the integral we seek.</div> <div class="para logical" id="p-156">
+<div class="para">Let <span class="process-math">\(F\)</span> be an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I=[a,b]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(I\text{,}\)</span> we see that <span class="process-math">\(F\)</span> is differentiable on <span class="process-math">\(I\)</span> and its derivative <span class="process-math">\(F'=f\)</span> is continuous. The <em class="emphasis">mean value theorem</em> thus applies to <span class="process-math">\(F\text{:}\)</span> given any interval <span class="process-math">\([c,d]\)</span> on which <span class="process-math">\(F'\)</span> is defined and continuous, there is an element <span class="process-math">\(x^*\in[c,d]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+F'(x^*)=\frac{F(d)-F(c)}{d-c}\text{.}
+\end{equation*}
+</div>
+<div class="para">We use this fact to produce a sequence of pointed partitions  <span class="process-math">\(P_n\)</span> of a very particular sort. Namely for each <span class="process-math">\(n\text{,}\)</span> we divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals of length <span class="process-math">\(\Delta x=(b-a)/n\text{,}\)</span> and for each subinterval <span class="process-math">\(I_k=[x_{k_1},x_k]\)</span> we choose our sample input <span class="process-math">\(c_k\)</span> to be a point where we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+F'(c_k)=\frac{F(x_k)-F(x_{k-1})}{x_k-x_{k-1}}=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}
+\end{equation*}
+</div>
+<div class="para">As discussed above, such a <span class="process-math">\(c_k\)</span> is guaranteed to exist by the mean value theorem. Since <span class="process-math">\(F'=f\)</span> by assumption, these sample points satisfy</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html" id="eq_FTC_II_proof">
+\begin{equation}
+f(c_k)=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}\tag{1.5.4}
+\end{equation}
+</div>
+<div class="para">Note that we have <span class="process-math">\(\lVert P_n\rVert=\Delta x=(b-a)/n\text{,}\)</span> and thus <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> It follows that if <span class="process-math">\(S_n\)</span> is the Riemann sum corresponding to the pointed partition <span class="process-math">\(P_n\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+\int_a^b f(x)\, dx=\lim_{n\to\infty}S_n\text{.}
+\end{equation*}
+</div>
+<div class="para">We now compute <span class="process-math">\(S_n\)</span> for any fixed <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html" id="md-24">
+\begin{align*}
+S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
+\amp = \sum_{k=1}\left( \frac{F(x_k)-F(x_{k-1})}{\Delta x}\right)\Delta x \amp \knowl{./knowl/eq_FTC_II_proof.html}{\text{(1.5.4)}}\\
+\amp =\sum_{k=1}^n F(x_k)-F(x_{k-1}) \\
+\amp =(\cancel{F(x_1)}-F(x_0))+(\cancel{F(x_2)}-\cancel{F(x_1)}+\cdots (F(x_n)-\cancel{F(x_{n-1}})\\
+\amp =F(x_n)-F(x_0)\\
+\amp =F(b)-F(a)\text{.}
+\end{align*}
+</div>
+<div class="para">We’ve shown that <span class="process-math">\(S_n=F(b)-F(a)\)</span> for all <span class="process-math">\(n\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+\int_a^b f(x)\, dx=\lim_{n\to\infty}S_n=\lim_{n\to\infty}F(b)-F(a)=F(b)-F(a)\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article></div>
+<div class="para" id="p-157">As mentioned above, we will focus here on <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. It main computational import of this theorem is that it allows us to compute definite integrals <em class="emphasis">indirectly</em>, by first finding an antiderivative of the integrand, and then using <a href="" class="xref" data-knowl="./knowl/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a>.</div>
+<article class="algorithm theorem-like" id="proc_integral_antiderivative"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Computing integrals with antiderivatives.</span>
+</h3>
+<div class="para logical" id="p-158">
+<div class="para">Let <span class="process-math">\(f\)</span> be an integrable function on <span class="process-math">\(I=[a,b]\text{.}\)</span> To compute <span class="process-math">\(\int_a^b f\, dx\)</span> using antiderivatives, proceed as follows:</div>
+<ol class="decimal">
+<li id="li-77"><div class="para" id="p-159">Find an antiderivative <span class="process-math">\(F\)</span> of <span class="process-math">\(f\)</span> on I.</div></li>
+<li id="li-78"><div class="para logical" id="p-160">
+<div class="para">Use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\int_a^bf(x)\, dx=F(b)-F(a)\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div></article><div class="para" id="p-161">Henceforth our integral computations will involve many expressions of the form <span class="process-math">\(F(b)-F(a)\text{,}\)</span> which we call a <em class="emphasis">difference evaluation</em>. It will be useful to have some compact notation for this.</div>
+<article class="definition definition-like" id="d_difference_evaluation"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Difference evaluation notation.</span>
+</h3> <div class="para logical" id="p-162">
+<div class="para">Let <span class="process-math">\(g\)</span> be a function containing <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in its domain. We define <span class="process-math">\(g]_a^b\)</span> to be the <dfn class="terminology">difference evaluation</dfn> expression</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)\Bigr\vert_a^b=g(b)-g(a)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="remark remark-like" id="remark-5"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Difference evaluation notation.</span>
+</h3> <div class="para logical" id="p-163"><ol class="decimal">
+<li id="li-79"><div class="para logical" id="p-164">
+<div class="para">It is easy to see that the following difference evaluation identities hold:</div>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+(f(x)+g(x))\Bigr\vert_a^b \amp = f(x)\Bigr\vert_a^b+g(x)\Bigr\vert_a^b \\
+cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
+\end{align*}
+</div>
+</div></li>
+<li id="li-80"><div class="para logical" id="p-165">
+<div class="para">Observe that <a href="" class="xref" data-knowl="./knowl/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a> can be expressed using our new notation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II.html">
+\begin{equation*}
+\int_a^b f(x)\, dx= F(x)\Bigr\vert_a^b\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><article class="example example-like" id="eg_FTCII"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Computing integrals with antiderivatives.</span>
+</h3>
+<div class="para logical" id="p-166">
+<div class="para">Use the <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute the following definite integrals.</div>
+<ol class="decimal">
+<li id="li-81"><div class="para" id="p-167"><span class="process-math">\(\displaystyle \displaystyle\int_a^b 1-x^3\, dx\)</span></div></li>
+<li id="li-82"><div class="para" id="p-168"><span class="process-math">\(\displaystyle \displaystyle\int_0^{10} \frac{1}{\sqrt{2t+1}}\, dt\)</span></div></li>
+<li id="li-83"><div class="para" id="p-169"><span class="process-math">\(\displaystyle\int_{3\pi/4}^{\pi}\sec^2 u\, du\text{.}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="para logical" id="p-170">
+<div class="para">Following <a href="" class="xref" data-knowl="./knowl/proc_integral_antiderivative.html" title="Procedure 1.5.2: Computing integrals with antiderivatives">Procedure 1.5.2</a>, for each integral we provide an antiderivative <span class="process-math">\(F\)</span> of the integrand <span class="process-math">\(f\)</span> and then compute the integral as a difference evaluation using <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. The integrands in question are familiar and/or simple enough that we do not justify the fact that <span class="process-math">\(F\)</span> is indeed an antiderivative.</div>
+<ol class="decimal">
+<li id="li-84"><div class="para logical" id="p-171">
+<div class="para">The function <span class="process-math">\(F(x)=x-\frac{1}{4}x^4\)</span> is an antiderivative of <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-26">
+\begin{align*}
+\int_a^b 1-x^3\, dx\amp = F(b)-F(a)\\
+\amp = b-\frac{1}{4}b^4-(a-\frac{1}{4}a^4\\
+\amp =(b-a)-\frac{1}{4}(b^4-a^4)\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-85"><div class="para logical" id="p-172">
+<div class="para">The function <span class="process-math">\(F(x)=\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(f(t)=1/\sqrt{2t+1}\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-27">
+\begin{align*}
+\int_0^10\frac{1}{\sqrt{2t+1}}\, dt \amp = F(10)-F(0)\\
+\amp = \sqrt{21}-\sqrt{1} \\
+\amp =\sqrt{21}-1\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-86"><div class="para logical" id="p-173">
+<div class="para">The function <span class="process-math">\(F(x)=\tan u\)</span> is an antiderivative of <span class="process-math">\(f(u)=\sec^2 u\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-28">
+\begin{align*}
+\int_{3\pi/4}^\pi \sec^2 u\, du  \amp = F(\pi)-F(3\pi/4)\\
+\amp =\tan \pi -\tan(3\pi/4)\\
+\amp =0-(-1)\\
+\amp = 1\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div></div></div>
+</div></article><article class="example example-like" id="eg_FTCII_area"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Signed area using FTC II.</span>
+</h3>
+<div class="para logical" id="p-174">
+<div class="para">Let <span class="process-math">\(f(x)=\sin(x/3)\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\text{.}\)</span> For each region <span class="process-math">\(\mathcal{R}\)</span> compute the area of <span class="process-math">\(\mathcal{R}\)</span> and the signed area of <span class="process-math">\(\mathcal{R}\text{.}\)</span> Include a diagram of <span class="process-math">\(\mathcal{C}\)</span> and <span class="process-math">\(\mathcal{R}\text{.}\)</span> Make sure your answer is consistent with your graph. If your answer happens to be 0, use the diagram to explain why.</div>
+<ol class="decimal">
+<li id="li-87"><div class="para" id="p-175">
+<span class="process-math">\(\mathcal{R}\)</span> is the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=-\pi\)</span> to <span class="process-math">\(x=\pi\text{.}\)</span>
+</div></li>
+<li id="li-88"><div class="para" id="p-176">
+<span class="process-math">\(\mathcal{R}\)</span> is the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=-\pi\)</span> to <span class="process-math">\(x=\pi/2\text{.}\)</span>
+</div></li>
+<li id="li-89"><div class="para" id="p-177">
+<span class="process-math">\(\mathcal{R}\)</span> is the region between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=6\pi\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para logical" id="p-178">
+<div class="para">In each of the cases below we use our definitions of the <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">area</a> and <a href="" class="xref" data-knowl="./knowl/d_signedarea.html" title="Item: Signed area">signed area</a> of the region <span class="process-math">\(\mathcal{R}\)</span> associated to <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/d_signedarea.html ./knowl/th_interval_partition.html" id="md-29">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp = \int_a^b f(x)\, dx\\
+\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\text{.}
+\end{align*}
+</div>
+<div class="para">Throughout we will use the fact that <span class="process-math">\(F(x)=-3\cos(x/3)\)</span> is an antiderivative of <span class="process-math">\(f(x)=\sin(x/3)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-90">
+<div class="para logical" id="p-179">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html" id="md-30">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp = \int_{-\pi}^{\pi}f(x)\, dx\\
+\amp =F(\pi)-F(-\pi)\\
+\amp =-3(\cos(\pi/3)-\cos(-\pi/3))=0\\
+\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\\
+\amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = \int_{-\pi}^0-f(x)\, dx+\int_0^\pi f(x)\, dx \amp (\text{def. of } \abs{f})\\
+\amp = -\int_{-\pi}^0f(x)\, dx+\int_0^\pi f(x)\, dx\\
+\amp =-(F(0)-F(-\pi))+(F(\pi)-F(0))\\
+\amp = -(-3\cos 0-(-3)\cos(-\pi/3))+(-3\cos(\pi/3)-(-3)\cos 0)\\
+\amp = 6-3=3\text{.}
+\end{align*}
+</div>
+<div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\)</span> described as a union <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> By the symmetry in the diagram it should come as no surprise that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+\begin{equation*}
+\operatorname{sgn\, area}\mathcal{R}=-\operatorname{area}\mathcal{R}_1+\mathcal{R}_2=0\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_a.png" class="contained" alt="Part (a) region"></div>
+</li>
+<li id="li-91"><div class="para logical" id="p-180">
+<div class="para">The reasoning and computations here are very similar. We get</div>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\int_{-\pi}^{\pi/2}f(x)\, dx    \\
+\amp = \frac{3}{2}-\frac{3\sqrt{3}}{2}\\
+\operatorname{area}\mathcal{R} \amp \int_{-\pi}^{\pi/2}\abs{f}\, dx \\
+\amp = \frac{9}{2}-\frac{3\sqrt{3}}{2}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-92">
+<div class="para logical" id="p-181">
+<div class="para">Again, the reasoning and computations are similar. We get</div>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\int_{0}^{6\pi}f(x)\, dx    \\
+\amp =0 \\
+\operatorname{area}\mathcal{R} \amp \int_{0}^{6\pi}\abs{f}\, dx \\
+\amp = \int_0^{3\pi}f(x)\, dx-\int_{3\pi}^{6\pi}f(x)\, dx\\
+\amp = 6+6=12\text{.}
+\end{align*}
+</div>
+<div class="para">Both the fact that signed area here is zero and the symmetry appearing in the two terms  of the area computation arises from the fact that <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\)</span> is a union of two symmetric regions.</div>
+</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_c.png" class="contained" alt="Signed area over entire period"></div>
+</li>
+</ol>
+</div></div></div>
+</div></article><article class="theorem theorem-like" id="th_FTC_II_rate"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">FTC II: rate of change version.</span>
+</h3>
+<div class="para logical" id="p-182">
+<div class="para">Suppose <span class="process-math">\(Q=g(x)\)</span> is a differentiable function on <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(g\)</span> is an antiderivative of <span class="process-math">\(g'\)</span> on <span class="process-math">\(I\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\int_a^bg'(x)\, dx = g(b)-g(a)=\Delta Q\text{.}
+\end{equation*}
+</div>
+<div class="para">Interpreting <span class="process-math">\(g'\)</span> as a rate of change, we see that integrating the <em class="emphasis">rate of change</em> of a quantity <span class="process-math">\(Q\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\)</span> yields the <em class="emphasis">net change</em> of <span class="process-math">\(Q\)</span> as we vary <span class="process-math">\(x\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="example-21"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Leaking water tank revisited.</span>
+</h3> <div class="para" id="p-183">Recall the set up from <a href="" class="xref" data-knowl="./knowl/eg_water_tank.html" title="Example 1.1.9: Leaking water tank">Example 1.1.9</a>, where we determined that at time <span class="process-math">\(t\text{,}\)</span> the amount of water <span class="process-math">\(A=f(t)\)</span> has rate of change <span class="process-math">\(f'(t)=-1/\sqrt{2t+1}\text{.}\)</span>
+</div> <div class="para logical" id="p-184">
+<div class="para">According to <a href="" class="xref" data-knowl="./knowl/th_FTC_II_rate.html" title="Theorem 1.5.7: FTC II: rate of change version">Theorem 1.5.7</a>, for any <span class="process-math">\(t=b\)</span> the integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+\begin{equation*}
+\int_0^b f'(t)\, dt=\int_0^b-1/\sqrt{2t+1}\, dt
+\end{equation*}
+</div>
+<div class="para">computes the <em class="emphasis">net change</em> in the amount of water in the tank between time <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=b\)</span> minutes: i.e., it computes <span class="process-math">\(\Delta A=f(b)-f(0)\text{.}\)</span> We can use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute this integral. The function <span class="process-math">\(F(x)=-\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(-1/\sqrt{2t+1}\)</span> and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+\begin{equation*}
+\int_0^b -1/\sqrt{2t+1}\, dt=F(b)-F(0)=1-\sqrt{2b+1}\text{.}
+\end{equation*}
+</div>
+<div class="para">This tells us that <span class="process-math">\(\Delta A=1-\sqrt{2b+1}\)</span> at any time <span class="process-math">\(b\text{.}\)</span> Since <span class="process-math">\(\Delta A=f(b)-f(0)\text{,}\)</span> we conclude that <span class="process-math">\(f(b)-f(0)=1-\sqrt{2b+1}\text{,}\)</span> or equivalently, <span class="process-math">\(f(b)=f(0)+1-\sqrt{2b+1}=101-\sqrt{2t+1}\)</span> for all <span class="process-math">\(b\text{.}\)</span>  (Here we use the fact that <span class="process-math">\(f(0)=100\text{.}\)</span>) We have just given another derivation of the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+\begin{equation*}
+f(t)=101-\sqrt{2t+1}
+\end{equation*}
+</div>
+<div class="para">for the function <span class="process-math">\(A=f(t)\text{.}\)</span>
+</div>
+</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="s_definite_integral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_FTC_cont.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

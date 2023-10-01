@@ -13,9 +13,19 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.4.10.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.4.7.1</span><span class="period">.</span>
 </h3>
-<div class="para"></div>
+<div class="para logical">
+<div class="para">We saw in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a> that for any <span class="process-math">\(b\gt 0\)</span> we have <span class="process-math">\(\int_0^b f(x)\, dx=b-\frac{1}{4}b^4\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_int_cubic.html ./knowl/th_interval_partition.html ./knowl/th_order_integration.html ./knowl/eg_int_cubic.html">
+\begin{align*}
+\int_a^b f(x)\, dx \amp = \int_a^0 f(x)\, dx+\int_0^b f(x)\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = -\int_0^af(x)\, dx+\int_0^bf(x)\, dx \amp (\knowl{./knowl/th_order_integration.html}{\text{Order of integration}}) \\
+\amp = -(a-\frac{1}{4}a^4)+(b-\frac{1}{4}b^4) \amp (\knowl{./knowl/eg_int_cubic.html}{\text{1.4.4}}) \\
+\amp = (b-a)-\frac{1}{4}(b^4-a^4)\text{.}
+\end{align*}
+</div>
+</div>
 </div>
 <span class="incontext"><a href="s_definite_integral.html#solution-15" class="internal">in-context</a></span>
 </body>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">In each of the cases below we use our definitions of the <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">area</a> and <a href="" class="xref" data-knowl="./knowl/d_signedarea.html" title="Item: Signed area">signed area</a> of the region <span class="process-math">\(\mathcal{R}\)</span> associated to <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/d_signedarea.html ./knowl/th_interval_partition.html">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp = \int_a^b f(x)\, dx\\
+\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\text{.}
+\end{align*}
+</div>
+<div class="para">Throughout we will use the fact that <span class="process-math">\(F(x)=-3\cos(x/3)\)</span> is an antiderivative of <span class="process-math">\(f(x)=\sin(x/3)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp = \int_{-\pi}^{\pi}f(x)\, dx\\
+\amp =F(\pi)-F(-\pi)\\
+\amp =-3(\cos(\pi/3)-\cos(-\pi/3))=0\\
+\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\\
+\amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = \int_{-\pi}^0-f(x)\, dx+\int_0^\pi f(x)\, dx \amp (\text{def. of } \abs{f})\\
+\amp = -\int_{-\pi}^0f(x)\, dx+\int_0^\pi f(x)\, dx\\
+\amp =-(F(0)-F(-\pi))+(F(\pi)-F(0))\\
+\amp = -(-3\cos 0-(-3)\cos(-\pi/3))+(-3\cos(\pi/3)-(-3)\cos 0)\\
+\amp = 6-3=3\text{.}
+\end{align*}
+</div>
+<div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\)</span> described as a union <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> By the symmetry in the diagram it should come as no surprise that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+\begin{equation*}
+\operatorname{sgn\, area}\mathcal{R}=-\operatorname{area}\mathcal{R}_1+\mathcal{R}_2=0\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_a.png" class="contained" alt="Part (a) region"></div>
+</li>
+<li><div class="para logical">
+<div class="para">The reasoning and computations here are very similar. We get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\int_{-\pi}^{\pi/2}f(x)\, dx    \\
+\amp = \frac{3}{2}-\frac{3\sqrt{3}}{2}\\
+\operatorname{area}\mathcal{R} \amp \int_{-\pi}^{\pi/2}\abs{f}\, dx \\
+\amp = \frac{9}{2}-\frac{3\sqrt{3}}{2}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li>
+<div class="para logical">
+<div class="para">Again, the reasoning and computations are similar. We get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\int_{0}^{6\pi}f(x)\, dx    \\
+\amp =0 \\
+\operatorname{area}\mathcal{R} \amp \int_{0}^{6\pi}\abs{f}\, dx \\
+\amp = \int_0^{3\pi}f(x)\, dx-\int_{3\pi}^{6\pi}f(x)\, dx\\
+\amp = 6+6=12\text{.}
+\end{align*}
+</div>
+<div class="para">Both the fact that signed area here is zero and the symmetry appearing in the two terms  of the area computation arises from the fact that <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\)</span> is a union of two symmetric regions.</div>
+</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_c.png" class="contained" alt="Signed area over entire period"></div>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="s_FTC.html#p-178" class="internal">in-context</a></span>
+</body>
+</html>

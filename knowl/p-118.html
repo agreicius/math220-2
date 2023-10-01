@@ -11,8 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We follow the steps <a href="" class="xref" data-knowl="./knowl/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a>. As this example is quite similar to <a href="" class="xref" data-knowl="./knowl/eg_limit_Riemann.html" title="Example 1.3.9">Example 1.3.9</a>, we omit some details.</div>
+<ol class="decimal">
+<li><div class="para">Fix <span class="process-math">\(n\geq 1\text{.}\)</span> We divide the interval <span class="process-math">\([0,b]\)</span> into <span class="process-math">\(n\)</span> equal intervals of length <span class="process-math">\(\Delta x=\frac{b-0}{n}=\frac{b}{n}\text{.}\)</span> The intervening endpoints <span class="process-math">\(x_k\)</span> of our subintervals are given by <span class="process-math">\(x_k=\frac{bk}{n}\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">The <span class="process-math">\(n\)</span>-th right Riemann sum corresponding to this partition is given by</div>
+<div class="displaymath process-math">
+\begin{align*}
+R_n \amp =\sum_{k=1}^n f(x_k)\Delta x\\
+\amp = \sum_{k=1}^n\frac{b}{n}-\frac{b^4k^3}{n^4}\\
+\amp =b-\frac{b^4}{n^4}\left( \frac{n(n+1)}{2}\right)^2  \\
+\amp = b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)\text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">We now compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_0^b f(x)\, dx \amp = \lim_{n\to\infty}b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)\\
+\amp = b-\frac{b^4}{4}\lim_{n\to\infty}\frac{n^2(n+1)^2}{n^4}\\
+\amp = b-\frac{b^4}{4} \amp \text{(quot. of poly. limit rule)}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div>
 <span class="incontext"><a href="s_definite_integral.html#p-118" class="internal">in-context</a></span>
 </body>
 </html>

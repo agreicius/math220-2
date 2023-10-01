@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp = \int_{-\pi}^{\pi}f(x)\, dx\\
+\amp =F(\pi)-F(-\pi)\\
+\amp =-3(\cos(\pi/3)-\cos(-\pi/3))=0\\
+\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\\
+\amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = \int_{-\pi}^0-f(x)\, dx+\int_0^\pi f(x)\, dx \amp (\text{def. of } \abs{f})\\
+\amp = -\int_{-\pi}^0f(x)\, dx+\int_0^\pi f(x)\, dx\\
+\amp =-(F(0)-F(-\pi))+(F(\pi)-F(0))\\
+\amp = -(-3\cos 0-(-3)\cos(-\pi/3))+(-3\cos(\pi/3)-(-3)\cos 0)\\
+\amp = 6-3=3\text{.}
+\end{align*}
+</div>
+<div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\)</span> described as a union <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> By the symmetry in the diagram it should come as no surprise that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+\begin{equation*}
+\operatorname{sgn\, area}\mathcal{R}=-\operatorname{area}\mathcal{R}_1+\mathcal{R}_2=0\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_a.png" class="contained" alt="Part (a) region"></div></article><span class="incontext"><a href="s_FTC.html#li-90" class="internal">in-context</a></span>
+</body>
+</html>
