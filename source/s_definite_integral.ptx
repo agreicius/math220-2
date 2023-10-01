@@ -67,7 +67,7 @@
           </p>
     </statement>
 </algorithm>
-<example>
+<example xml:id="eg_int_linear">
     <title>Integral of linear function</title>
     <statement>
         <p>
@@ -112,12 +112,45 @@
     </solution>
 </example>
 <example xml:id="eg_int_cubic">
-    <title>Integral of cubic function</title>
+    <title>Integral of cubic</title>
     <statement>
         <p>
             Let <m>f(x)=1-x^3</m> and let <m>b\geq 0</m> be a fixed nonnegative constant. Compute <m>\int_0^bf(x)\, dx</m> as a limit of right Riemann sums. 
         </p>
     </statement>
+    <solution>
+      <p>
+        We follow the steps <xref ref="proc_limit_integral"/>. As this example is quite similar to <xref ref="eg_limit_Riemann"/>, we omit some details. 
+        <ol>
+          <li>
+            <p>
+              Fix <m>n\geq 1</m>. We divide the interval <m>[0,b]</m> into <m>n</m> equal intervals of length <m>\Delta x=\frac{b-0}{n}=\frac{b}{n}</m>. The intervening endpoints <m>x_k</m> of our subintervals are given by <m>x_k=\frac{bk}{n}</m>.  
+            </p>
+          </li>
+          <li>
+            <p>
+              The <m>n</m>-th right Riemann sum corresponding to this partition is given by 
+              <md>
+                <mrow>R_n \amp =\sum_{k=1}^n f(x_k)\Delta x</mrow>
+                <mrow> \amp = \sum_{k=1}^n\frac{b}{n}-\frac{b^4k^3}{n^4}</mrow>
+                <mrow> \amp =b-\frac{b^4}{n^4}\left( \frac{n(n+1)}{2}\right)^2  </mrow>
+                <mrow> \amp = b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)</mrow>
+              </md>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We now compute
+              <md>
+                <mrow>\int_0^b f(x)\, dx \amp = \lim_{n\to\infty}b-\frac{b^4}{4}\left(\frac{n^2(n+1)^2}{n^4}\right)</mrow>
+                <mrow> \amp = b-\frac{b^4}{4}\lim_{n\to\infty}\frac{n^2(n+1)^2}{n^4}</mrow>
+                <mrow> \amp = b-\frac{b^4}{4} \amp \text{(quot. of poly. limit rule)}</mrow>
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
 </example>
 <p>
     In the previous examples we tacitly assume that the integral in question exists: our solutions did not rule out the possibility that another choice of pointed partitions might yield a sequence of Riemann sums whose limit does not exist, or differs from the limit we computed. In general it can be quite difficulty to decide whether a given function is integrable on a given interval. The next theorem comes to our rescue in this regard.  
@@ -142,6 +175,9 @@
         </p>
     </statement>
 </theorem>
+<p>
+  As with the derivative, the integral satisfies many elementary properties that often ease our computations. Technically, the first statements in <xref ref="th_int_props"/> are in fact definitions. (In our discussion of integrals <m>\int_a^b f(x)\, dx</m> we tacitly always assumed <m>a\lt b</m>; (1) and (2) define what this integral should be if <m>a=b</m> or <m>b\lt a</m>. ) The rest of the statements, as plausible as they may seem, do require proof. We omit them, but rest assured that the proofs boil down to straightforward statements about Riemann sums and their limits.  
+</p>
 <theorem xml:id="th_int_props">
     <title>Integral properties</title>
     <statement>
@@ -153,7 +189,10 @@
                   <m>\int_a^a f(x)\, dx=0</m>.
                 </p>
               </li>
-              <li>
+              <li xml:id="th_order_integration">
+                <title>Order of integration</title>
+                
+                
                 <p>
                   <m>\int_b^af(x)\, dx=-\int_a^b f(x)\, dx</m>. 
                 </p>
@@ -171,7 +210,7 @@
                   <m>\int_a^bcf(x)\, dx=c\int_a^bf(x)\, dx</m> for any <m>c\in \R</m>.
                 </p>
               </li>
-              <li>
+              <li xml:id="th_interval_partition">
                 <title>Interval partition</title>
                 <p>
                   For any <m>c\in \R</m> we have
@@ -180,7 +219,7 @@
                   </me>.
                 </p>
               </li>
-              <li>
+              <li xml:id="th_min_max">
                 <title>Min-max inequality</title>
                 <p>
                  
@@ -203,7 +242,9 @@
           </p>
     </statement>
 </theorem>
-<example>
+<example xml:id="eg_int_cubic_cont">
+    <title>Integral of cubic (cont.)</title>
+    
     <statement>
         <p>
             Let <m>f(x)=1-x^3</m>.
@@ -214,7 +255,13 @@
     </statement>
     <solution>
         <p>
-            
+            We saw in <xref ref="eg_int_cubic"/> that for any <m>b\gt 0</m> we have <m>\int_0^b f(x)\, dx=b-\frac{1}{4}b^4</m>. It follows that 
+            <md>
+              <mrow>\int_a^b f(x)\, dx \amp = \int_a^0 f(x)\, dx+\int_0^b f(x)\, dx \amp (<xref ref="th_interval_partition" text="title"/>)</mrow>
+              <mrow> \amp = -\int_0^af(x)\, dx+\int_0^bf(x)\, dx \amp (<xref ref="th_order_integration" text="title"/>) </mrow>
+              <mrow> \amp = -(a-\frac{1}{4}a^4)+(b-\frac{1}{4}b^4) \amp (<xref ref="eg_int_cubic" text="global"/>) </mrow>
+              <mrow> \amp = (b-a)-\frac{1}{4}(b^4-a^4)</mrow>
+            </md>.
         </p>
     </solution>
 </example>
@@ -228,7 +275,8 @@
         and let <m>\mathcal{R}</m> be the region between
         <m>\mathcal{C}</m> and the <m>x</m>-axis from <m>x=a</m> to <m>x=b</m>.
         <ul>
-          <li>
+          <li xml:id="d_area">
+            <title>Area</title>
             <p>
               The <term>area</term>
               of <m>\mathcal{R}</m>, denoted <m>\operatorname{area} \mathcal{R}</m>, is defined as 
@@ -237,7 +285,8 @@
               </me>.
             </p>
           </li>
-          <li>
+          <li xml:id="d_signedarea">
+            <title>Signed area</title>
             <p>
              The <term>signed area</term> of  <m>\mathcal{R}</m>, denoted <m>\operatorname{sgn\, area}\mathcal{R}</m>, is defined as 
               <me>
@@ -279,13 +328,25 @@
                     <me>
                         \int_a^b f(x)\, dx=\operatorname{sgn\, area}\mathcal{R}=(\text{area of regions where } f\geq 0)-(\text{area of regions where } f\leq 0)
                     </me>.
+                    For example, in diagram below we have 
+                    <me>
+                      \int_a^b f(x)\, dx=\operatorname{area} \mathcal{R}_1-\operatorname{area} \mathcal{R}_2-\operatorname{area} \mathcal{R}_3+\operatorname{area} \mathcal{R}_4
+                    </me>. 
+                    <figure xml:id="fig_sgn_area">
+                      <image source="images/sgn_area.png" width="75%">
+                        <description>Signed area of region defined by curve</description>
+                      </image>
+                      <caption>Signed area of region defined by curve</caption>
+                    </figure>
+                    
                 </p>
             </li>
         </ul>
     </p>
     
 </remark>
-<example>
+<example xml:id="eg_linear_cont">
+    <title>Integral of linear function (cont.)</title>
     <statement>
         <p>
             Let <m>f(x)=x</m>. Explain why the value of <m>\int_1^3f(x)\, dx</m>, computed earlier, is consistent with the area interpretation of the integral and known integral formulas. 
@@ -293,7 +354,11 @@
     </statement>
     <solution>
         <p>
-            
+            The region <m>\mathcal{R}</m> between the graph of <m>f</m> and the <m>x</m>-axis, from <m>x=1</m> to <m>x=3</m> is a trapezoid of width <m>2</m>, and with two heights <m>1</m> and <m>3</m>. (Sketch it for yourself!) Since <m>f\geq 0</m> the integral of <m>f</m> computes 
+            <me>
+              \operatorname{sgn\, area}\mathcal{R}=\operatorname{area}\mathcal{R}=\frac{1}{2}(1+3)(2)=4
+            </me>.
+            (The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in <xref ref="eg_int_linear"/>.
         </p>
     </solution>
 </example>
@@ -326,8 +391,23 @@
     </statement>
     <solution>
         <p>
-            
+            In the diagram below we have <m>\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2</m>. Geometrically we have 
+            <md>
+              <mrow>\operatorname{sgn\, area}\mathcal{R} \amp =\operatorname{area}\mathcal{R}_1-\operatorname{area}\mathcal{R}_2</mrow>
+              <mrow>\operatorname{area}\mathcal{R} \amp = \operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2</mrow>
+            </md>
+        To compute <m>\operatorname{R}</m> we use the  <xref ref="d_area" text="custom">definition of area</xref>:
+        <md>
+          <mrow>\operatorname{area}\mathcal{R} \amp = \int_0^b\abs{f(x)}\, dx</mrow>
+          <mrow> \amp =\int_0^1\abs{f(x)}\, dx+\int_1^b\abs{f(x)}\, dx \amp (<xref ref="th_interval_partition" text="title"/>)</mrow>
+          <mrow> \amp \int_0^1 f(x)\, dx -\int_1^b f(x)\, dx \amp (\text{def. of  } \abs{f})</mrow>
+          <mrow> \amp \frac{3}{4}-((b-1)-(b^4-1) \amp (<xref ref="eg_int_cubic_cont" text="global"/>)</mrow>
+          <mrow> \amp\frac{3}{4}-b+b^4 </mrow>
+        </md>.
         </p>
+        <image source="images/sgn_area_cubic.png" width="75%">
+          <description>Region defined by cubic</description>
+        </image> 
     </solution>
 </example>
 </section>

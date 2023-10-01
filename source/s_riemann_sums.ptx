@@ -243,7 +243,7 @@
         </p>
     </statement>
 </definition>
-<example>
+<example xml:id="eg_limit_Riemann">
     <statement>
         <p>
             Let <m>n</m> be a positive integer and define <m>R_n</m> to be the right Riemann sum of

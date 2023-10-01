@@ -41,8 +41,40 @@
             </p>
         </statement>
         <proof>
+            <title>Proof of <xref ref="th_FTC_II" text="title"/></title>
             <p>
-                
+                Since <m>f</m> is continuous on <m>[a,b]</m> it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions <m>P_n</m> satisfying <m>\lVert P_n\rVert\to\infty</m>. The strategy of the proof that follows is to pick these pointed partitions in a <em>very particular way</em> that ensures the value of of the integral we seek.  
+            </p>
+            <p>
+                Let <m>F</m> be an antiderivative of <m>f</m> on <m>I=[a,b]</m>. Since <m>f</m> is continuous on <m>I</m>, we see that <m>F</m> is differentiable on <m>I</m> and its derivative <m>F'=f</m> is continuous. The <em>mean value theorem</em> thus applies to <m>F</m>: given any interval <m>[c,d]</m> on which <m>F'</m> is defined and continuous, there is an element <m>x^*\in[c,d]</m> such that 
+                <me>F'(x^*)=\frac{F(d)-F(c)}{d-c}</me>. 
+                We use this fact to produce a sequence of pointed partitions  <m>P_n</m> of a very particular sort. Namely for each <m>n</m>, we divide <m>[a,b]</m> into <m>n</m> equal subintervals of length <m>\Delta x=(b-a)/n</m>, and for each subinterval <m>I_k=[x_{k_1},x_k]</m> we choose our sample input <m>c_k</m> to be a point where we have 
+                <me>
+                    F'(c_k)=\frac{F(x_k)-F(x_{k-1})}{x_k-x_{k-1}}=\frac{F(x_k)-F(x_{k-1})}{\Delta x}
+                </me>.
+                As discussed above, such a <m>c_k</m> is guaranteed to exist by the mean value theorem.
+                Since <m>F'=f</m> by assumption, these sample points satisfy 
+                <men xml:id="eq_FTC_II_proof">
+                    f(c_k)=\frac{F(x_k)-F(x_{k-1})}{\Delta x}
+                </men>.   
+                 Note that we have <m>\lVert P_n\rVert=\Delta x=(b-a)/n</m>, and thus <m>\lVert P_n\rVert\to\infty</m>. It follows that if <m>S_n</m> is the Riemann sum corresponding to the pointed partition <m>P_n</m>, then 
+                 <me>
+                    \int_a^b f(x)\, dx=\lim_{n\to\infty}S_n
+                 </me>.
+                 We now compute <m>S_n</m> for any fixed <m>n</m>:
+                 <md>
+                    <mrow>S_n \amp =\sum_{k=1}^nf(c_k)\Delta x</mrow>
+                    <mrow> \amp = \sum_{k=1}\left( \frac{F(x_k)-F(x_{k-1})}{\Delta x}\right)\Delta x \amp <xref ref="eq_FTC_II_proof"/></mrow>
+                    <mrow> \amp =\sum_{k=1}^n F(x_k)-F(x_{k-1}) </mrow>
+                    <mrow> \amp =(\cancel{F(x_1)}-F(x_0))+(\cancel{F(x_2)}-\cancel{F(x_1)}+\cdots (F(x_n)-\cancel{F(x_{n-1}})</mrow>
+                    <mrow> \amp =F(x_n)-F(x_0)</mrow>
+                    <mrow> \amp =F(b)-F(a)</mrow>
+                 </md>.
+                 We've shown that <m>S_n=F(b)-F(a)</m> for all <m>n</m>. It follows that 
+                 <me>
+                    \int_a^b f(x)\, dx=\lim_{n\to\infty}S_n=\lim_{n\to\infty}F(b)-F(a)=F(b)-F(a)
+                 </me>,
+                 as desired. 
             </p>
         </proof>
     </theorem>
@@ -137,7 +169,40 @@
         </statement>
         <solution>
             <p>
-                
+                Following <xref ref="proc_integral_antiderivative"/>, for each integral we provide an antiderivative <m>F</m> of the integrand <m>f</m> and then compute the integral as a difference evaluation using <xref ref="th_FTC_II" text="title"/>. The integrands in question are familiar and/or simple enough that we do not justify the fact that <m>F</m> is indeed an antiderivative. 
+            <ol>
+                <li>
+                    <p>
+                        The function <m>F(x)=x-\frac{1}{4}x^4</m> is an antiderivative of <m>f(x)=1-x^3</m>. It follows from <xref ref="th_FTC_II" text="title"/> that 
+                        <md>
+                            <mrow>\int_a^b 1-x^3\, dx\amp = F(b)-F(a)</mrow>
+                            <mrow> \amp = b-\frac{1}{4}b^4-(a-\frac{1}{4}a^4</mrow>
+                            <mrow> \amp =(b-a)-\frac{1}{4}(b^4-a^4)</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The function <m>F(x)=\sqrt{2t+1}</m> is an antiderivative of <m>f(t)=1/\sqrt{2t+1}</m>. It follows from <xref ref="th_FTC_II" text="title"/> that 
+                        <md>
+                            <mrow>\int_0^10\frac{1}{\sqrt{2t+1}}\, dt \amp = F(10)-F(0)</mrow>
+                            <mrow>\amp = \sqrt{21}-\sqrt{1} </mrow>
+                            <mrow> \amp =\sqrt{21}-1</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The function <m>F(x)=\tan u</m> is an antiderivative of <m>f(u)=\sec^2 u</m>. It follows from <xref ref="th_FTC_II" text="title"/> that 
+                        <md>
+                            <mrow>\int_{3\pi/4}^\pi \sec^2 u\, du  \amp = F(\pi)-F(3\pi/4)</mrow>
+                            <mrow> \amp =\tan \pi -\tan(3\pi/4)</mrow>
+                            <mrow> \amp =0-(-1)</mrow>
+                            <mrow> \amp = 1</mrow>
+                        </md>.
+                    </p>
+                </li>
+            </ol>
             </p>
         </solution>
     </example>
@@ -179,7 +244,65 @@
         </statement>
         <solution>
             <p>
-                
+                In each of the cases below we use our definitions of the <xref ref="d_area" text="custom">area</xref> and <xref ref="d_signedarea" text="custom">signed area</xref> of the region <m>\mathcal{R}</m> associated to <m>f</m>:
+                <md>
+                    <mrow>\operatorname{sgn\, area}\mathcal{R} \amp = \int_a^b f(x)\, dx</mrow>
+                    <mrow>\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx</mrow>
+                </md>.
+            Throughout we will use the fact that <m>F(x)=-3\cos(x/3)</m> is an antiderivative of <m>f(x)=\sin(x/3)</m>. 
+            <ol>
+                <li>
+                    <p>
+                        We have
+                        <md>
+                            <mrow>\operatorname{sgn\, area}\mathcal{R} \amp = \int_{-\pi}^{\pi}f(x)\, dx</mrow>
+                            <mrow> \amp =F(\pi)-F(-\pi)</mrow>
+                            <mrow> \amp =-3(\cos(\pi/3)-\cos(-\pi/3))=0</mrow>
+                            <mrow>\operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx</mrow>
+                            <mrow> \amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (<xref ref="th_interval_partition" text="title"/>)</mrow>
+                            <mrow> \amp = \int_{-\pi}^0-f(x)\, dx+\int_0^\pi f(x)\, dx \amp (\text{def. of } \abs{f})</mrow>
+                            <mrow> \amp = -\int_{-\pi}^0f(x)\, dx+\int_0^\pi f(x)\, dx</mrow>
+                            <mrow> \amp =-(F(0)-F(-\pi))+(F(\pi)-F(0))</mrow>
+                            <mrow> \amp = -(-3\cos 0-(-3)\cos(-\pi/3))+(-3\cos(\pi/3)-(-3)\cos 0)</mrow>
+                            <mrow> \amp = 6-3=3</mrow>
+                        </md>. 
+                        Below you find a diagram of <m>\mathcal{R}</m> described as a union <m>\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2</m>. By the symmetry in the diagram it should come as no surprise that 
+                        <me>
+                            \operatorname{sgn\, area}\mathcal{R}=-\operatorname{area}\mathcal{R}_1+\mathcal{R}_2=0
+                        </me>.
+                    </p>
+                    <image source="images/sgn_area_a.png" width="75%">
+                        <description>Part (a) region</description>
+                    </image>
+                </li>
+                <li>
+                    <p>
+                        The reasoning and computations here are very similar. We get 
+                        <md>
+                            <mrow>\operatorname{sgn\, area}\mathcal{R} \amp =\int_{-\pi}^{\pi/2}f(x)\, dx    </mrow>
+                            <mrow> \amp = \frac{3}{2}-\frac{3\sqrt{3}}{2}</mrow>
+                            <mrow>\operatorname{area}\mathcal{R} \amp \int_{-\pi}^{\pi/2}\abs{f}\, dx </mrow>
+                            <mrow> \amp = \frac{9}{2}-\frac{3\sqrt{3}}{2}</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Again, the reasoning and computations are similar. We get 
+                        <md>
+                            <mrow>\operatorname{sgn\, area}\mathcal{R} \amp =\int_{0}^{6\pi}f(x)\, dx    </mrow>
+                            <mrow> \amp =0 </mrow>
+                            <mrow>\operatorname{area}\mathcal{R} \amp \int_{0}^{6\pi}\abs{f}\, dx </mrow>
+                            <mrow> \amp = \int_0^{3\pi}f(x)\, dx-\int_{3\pi}^{6\pi}f(x)\, dx</mrow>
+                            <mrow> \amp = 6+6=12</mrow>
+                        </md>.
+                        Both the fact that signed area here is zero and the symmetry appearing in the two terms  of the area computation arises from the fact that <m>\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2</m> is a union of two symmetric regions.
+                    </p>
+                    <image source="images/sgn_area_c.png" width="75%">
+                        <description>Signed area over entire period</description>
+                    </image>
+                </li>
+            </ol>
             </p>
         </solution>
     </example>
