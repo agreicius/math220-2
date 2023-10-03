@@ -42,9 +42,13 @@
           <title>Definitions</title>
           <list-of elements="definition convention" divisions="section" />
         </appendix>
+        <appendix xml:id="appendix-procs">
+          <title>Procedures</title>
+          <list-of elements="algorithm" divisions="section" />
+        </appendix>
         <appendix xml:id="appendix-thms">
           <title>Theory</title>
-          <list-of elements="theorem corollary algorithm lemma" divisions="section" />
+          <list-of elements="theorem corollary lemma" divisions="section" />
         </appendix>
         <appendix xml:id="appendix-egs">
           <title>Examples</title>
