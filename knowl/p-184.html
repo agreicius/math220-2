@@ -13,25 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">According to <a href="" class="xref" data-knowl="./knowl/th_FTC_II_rate.html" title="Theorem 1.5.7: FTC II: rate of change version">Theorem 1.5.7</a>, for any <span class="process-math">\(t=b\)</span> the integral</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+<div class="para">Suppose <span class="process-math">\(Q=g(x)\)</span> is a differentiable function on <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(g\)</span> is an antiderivative of <span class="process-math">\(g'\)</span> on <span class="process-math">\(I\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
 \begin{equation*}
-\int_0^b f'(t)\, dt=\int_0^b-1/\sqrt{2t+1}\, dt
+\int_a^bg'(x)\, dx = g(b)-g(a)=\Delta Q\text{.}
 \end{equation*}
 </div>
-<div class="para">computes the <em class="emphasis">net change</em> in the amount of water in the tank between time <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=b\)</span> minutes: i.e., it computes <span class="process-math">\(\Delta A=f(b)-f(0)\text{.}\)</span> We can use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute this integral. The function <span class="process-math">\(F(x)=-\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(-1/\sqrt{2t+1}\)</span> and thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
-\begin{equation*}
-\int_0^b -1/\sqrt{2t+1}\, dt=F(b)-F(0)=1-\sqrt{2b+1}\text{.}
-\end{equation*}
-</div>
-<div class="para">This tells us that <span class="process-math">\(\Delta A=1-\sqrt{2b+1}\)</span> at any time <span class="process-math">\(b\text{.}\)</span> Since <span class="process-math">\(\Delta A=f(b)-f(0)\text{,}\)</span> we conclude that <span class="process-math">\(f(b)-f(0)=1-\sqrt{2b+1}\text{,}\)</span> or equivalently, <span class="process-math">\(f(b)=f(0)+1-\sqrt{2b+1}=101-\sqrt{2t+1}\)</span> for all <span class="process-math">\(b\text{.}\)</span>  (Here we use the fact that <span class="process-math">\(f(0)=100\text{.}\)</span>) We have just given another derivation of the formula</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
-\begin{equation*}
-f(t)=101-\sqrt{2t+1}
-\end{equation*}
-</div>
-<div class="para">for the function <span class="process-math">\(A=f(t)\text{.}\)</span>
+<div class="para">Interpreting <span class="process-math">\(g'\)</span> as a rate of change, we see that integrating the <em class="emphasis">rate of change</em> of a quantity <span class="process-math">\(Q\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\)</span> yields the <em class="emphasis">net change</em> of <span class="process-math">\(Q\)</span> as we vary <span class="process-math">\(x\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="s_FTC.html#p-184" class="internal">in-context</a></span>

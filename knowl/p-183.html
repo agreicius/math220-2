@@ -12,7 +12,18 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Recall the set up from <a href="" class="xref" data-knowl="./knowl/eg_water_tank.html" title="Example 1.1.9: Leaking water tank">Example 1.1.9</a>, where we determined that at time <span class="process-math">\(t\text{,}\)</span> the amount of water <span class="process-math">\(A=f(t)\)</span> has rate of change <span class="process-math">\(f'(t)=-1/\sqrt{2t+1}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Again, the reasoning and computations are similar. We get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\int_{0}^{6\pi}f(x)\, dx    \\
+\amp =0 \\
+\operatorname{area}\mathcal{R} \amp \int_{0}^{6\pi}\abs{f}\, dx \\
+\amp = \int_0^{3\pi}f(x)\, dx-\int_{3\pi}^{6\pi}f(x)\, dx\\
+\amp = 6+6=12\text{.}
+\end{align*}
+</div>
+<div class="para">Both the fact that signed area here is zero and the symmetry appearing in the two terms  of the area computation arises from the fact that <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\)</span> is a union of two symmetric regions.</div>
 </div>
 <span class="incontext"><a href="s_FTC.html#p-183" class="internal">in-context</a></span>
 </body>
