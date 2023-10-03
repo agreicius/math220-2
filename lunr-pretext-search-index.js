@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.7",
   "title": "Substitution",
-  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule exressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                         The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using the substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                     is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .       "
+  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule expressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                         The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                     is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .        Definite integral substitution: 2-step technique   Use substitution to compute .        "
 },
 {
   "id": "th_subst",
@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Procedure",
   "number": "1.7.3",
   "title": "Substitution.",
-  "body": " Substitution   To compute an indefinite integral using the substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .      "
+  "body": " Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .      "
 },
 {
   "id": "remark-6",
@@ -638,6 +638,15 @@ var ptx_lunr_docs = [
   "number": "1.7.6",
   "title": "Definite integral substitution: 2-step.",
   "body": " Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .      "
+},
+{
+  "id": "example-26",
+  "level": "2",
+  "url": "s_substitution.html#example-26",
+  "type": "Example",
+  "number": "1.7.7",
+  "title": "Definite integral substitution: 2-step technique.",
+  "body": " Definite integral substitution: 2-step technique   Use substitution to compute .       "
 },
 {
   "id": "appendix-notation",
