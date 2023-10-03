@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_substitution" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Substitution</title>
+<p>
+    In the spirit of the De Morgan quote in <xref ref="mantra_integration_differentiation"/>, running various derivative rules in reverse yields different integration techniques. The <xref ref="th_subst" text="custom">substitution theorem</xref> is nothing more than the chain rule exressed in terms of antiderivatives. 
+</p>
+<theorem xml:id="th_subst">
+    <title>Substitution</title>
+    <statement>
+      <p>
+        Let <m>u=g(x)</m> be a differentiable function on its domain,
+        and suppose <m>f</m> is continuous on the range of <m>g</m>.
+        If <m>F(x)</m> is an antiderivative of <m>f(x)</m>, 
+        then <m>F(g(x))</m> is an antiderivative of <m>f(g(x))g'(x)</m>: <ie/>, 
+        <men xml:id="eq_substitution">
+          \int f(g(x))g'(x)\, dx=F(g(x))+C
+        </men>.
+      </p>
+    </statement>
+    <proof>
+        <p>
+            Assume <m>F</m> is an antiderivative of <m>f</m>, so that <m>F'(x)=f(x)</m> for all <m>x</m> in the domain of <m>f</m>. It follows that 
+            <md>
+                <mrow>\frac{d}{dx}F(g(x)) \amp =F'(g(x))g'(x)\amp \text{(chain rule)}</mrow>
+                <mrow> \amp = f(g(x))g'(x) \amp (F'=f) </mrow>
+            </md>.
+        </p>
+    </proof>
+  </theorem>
+  <example xml:id="eg_subst_easy">
+    <title>Substitution:straightforward</title>
+    <statement>
+        <p>
+            Use the substitution technique to compute the following indefinite integrals.
+            <ol>
+                <li>
+                    <p>
+                      <m>\displaystyle\int -\sin t\, \sqrt{\cos t}\, dt</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\int \frac{\sin(\sqrt{s})}{2\sqrt{u}}\, ds</m>
+                    </p>
+                  </li>
+                  <li>
+                <p>
+                  <m>\displaystyle\int x^2\sqrt{x^3+1}\, dx</m>
+                </p>
+              </li>
+            </ol>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <p>
+    The usefulness of <xref ref="th_subst"/> depends on your ability to express the given integrand in the very particular form <m>f(g(x))g'(x)</m>. This is not always as easy to do as it was in <xref ref="eg_subst_easy"/>. The <xref ref="proc_subst" text="custom">substitution procedure</xref> facilitates this process, giving it a more algebraic flavor. 
+  </p>
+  <algorithm xml:id="proc_subst">
+    <title>Substitution</title>
+    <statement>
+        <p>
+           To compute an indefinite integral <m>\int f(x)\, dx</m> using the substitution, proceed as follows. 
+           <ol>
+            <li>
+                <title>Choose substitution function</title>
+                <p>
+                    Choose a differentiable function <m>u=g(x)</m> and write down the two substitution equations 
+                    <mdn>
+                        <mrow xml:id="eq_u">u \amp =g(x)</mrow>
+                        <mrow xml:id="eq_du">du \amp = g'(x)dx</mrow>
+                    </mdn>.
+                </p>
+            </li>
+            <li>
+                <title>Transform</title>
+                <p>
+                    Use <xref first="eq_u" last="eq_du"/> and algebra to transform the indefinite integral <m>\int f(x)\, dx</m> into a new indefinite integral <m>\int h(u)\, du</m> expressed entirely in terms of <m>u</m>.  
+                </p>
+            </li>
+            <li>
+                <title>Compute and substitute</title>
+                <p>
+                    Compute <m>\int h(u)\, du=F(u)+C</m>, if possible. Substitute <m>u=g(x)</m> for <m>u</m> to conclude that 
+                    <md>
+                        <mrow>\int f(x)\, dx \amp =\int h(u)\, du</mrow>
+                        <mrow> \amp = F(u)+C</mrow>
+                        <mrow> \amp = F(g(x))+C</mrow>
+                    </md>.
+                </p>
+            </li>
+           </ol>  
+        </p>
+    </statement>
+  </algorithm>
+  <remark>
+    <title>Substitution procedure</title>
+    <p>
+        <xref ref="proc_subst"/> is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step 
+        <me>
+            \int f(x)\, dx=\int h(u)\, du
+        </me>. 
+        Using the substitution equations <xref first="eq_u" last="eq_du"/>, we see that this equality is really just an algebraic short hand for the equality 
+        <me>
+            \int f(x)\, dx= \int h(g(x))g'(x)\,dx
+        </me>.
+        Now the <xref ref="th_subst" text="custom">substitution theorem</xref> tells us that if <m>F</m> is an antiderivative of <m>h</m>, then <m>F(g(x))</m> is an antiderivative of <m>h(g(x))g'(x)</m>. This is why our conclusion 
+        <me>
+            \int f(x)\, dx=F(g(x))+C
+        </me>
+        is valid. 
+    </p>
+  </remark>
+  <example>
+    <title>Substitution: less straightforward</title>
+    <statement>
+        <p>
+            Use the substitution technique to compute the following indefinite integrals.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle\int\frac{x}{\sqrt{x+1}}\, dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle\int (1+\sqrt{t})^{100}\, dt</m>
+                </p>
+              </li>
+            </ol>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <p>
+    <xref ref="proc_subst"/> is a technique for computing antiderivatives. Of course, we can combine this with <xref ref="th_FTC_II" text="title"/> to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution. 
+  </p>
+  <algorithm xml:id="proc_subst_2step">
+    <title>Definite integral substitution: 2-step</title>
+    <statement>
+        <p>
+            To compute a definite integral <m>\int_a^b f(x)\, dx</m> using substitution, proceed as follows. 
+            <ol>
+                <li>
+                    <p>
+                        Find an antiderivative <m>F</m> of <m>f</m> using a substitution <m>u=g(x)</m> and <xref ref="proc_subst"/>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use <xref ref="th_FTC_II" text="title"/> to conclude that 
+                        <me>
+                            \int_a^b f(x)\, dx=F(b)-F(a)
+                        </me>.                        
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+  </algorithm>
+
+</section>

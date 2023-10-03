@@ -105,6 +105,18 @@
         </statement>
     </algorithm>
     <p>
+        <xref ref="th_FTC_II" text="title"/> allows us to reduce a definite integral computation essentially to finding an antiderivative of the integrand: <ie/>, we integrate basically by <q>computing derivatives in reverse</q>. The Augustus De Morgan quote below captures this quite poetically.
+    </p>
+    <principle xml:id="mantra_integration_differentiation">
+        <title>Integration is differentiation in reverse</title>
+        
+        <statement>
+            <p>
+                <q>Common integration is only the memory of differentiation</q>--Augustus De Morgan. 
+            </p>
+        </statement>
+    </principle>
+    <p>
         Henceforth our integral computations will involve many expressions of the form <m>F(b)-F(a)</m>, which we call a <em>difference evaluation</em>. It will be useful to have some compact notation for this. 
     </p>
     <definition xml:id="d_difference_evaluation">

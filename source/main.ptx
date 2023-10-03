@@ -31,6 +31,7 @@
       <xi:include  href="s_definite_integral.ptx"/>
       <xi:include  href="s_FTC.ptx"/>
       <xi:include  href="s_FTC_cont.ptx"/>
+      <xi:include  href="s_substitution.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
