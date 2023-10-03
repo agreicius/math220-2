@@ -42,7 +42,26 @@
         </statement>
         <solution>
             <p>
-                
+                For any <m>b\geq 1</m> the value <m>F(b)=\int_1^b f(t)\, dt</m> is equal to the signed area of the region between the graph of <m>f</m> and the horizontal axis from <m>x=1</m> to <m>x=b</m>. In this case, since <m>f(x)=1/x^2</m>, the signed area is equal to the area.   
+            </p>
+            <p>
+              Using <xref ref="th_FTC_II" text="title"/>, and the antiderivative <m>-1/t</m> of <m>f(t)=1/t^2</m>, we see that 
+              <me>
+                F(b)=\int_1^b \frac{1}{t^2}\, dt=-\frac{1}{b}-(-1)=\frac{b-1}{b}
+              </me>.
+              We thus have the following table of values
+              <me>
+              \begin{array}{c|c|c|c|c|c}
+              x\amp 1\amp 2\amp 3\amp 4\amp 5 \\
+              \hline
+              F(x) \amp 0\amp 1/2 \amp 2/3\amp 3/4 \amp 4/5
+              \end{array}
+              </me>.
+              Note that <m>F(b)\to\infty</m> as <m>b\to\infty</m>. This suggests that the region 
+              <me>
+                \mathcal{R}=\{(x,y)\colon x\geq 1, 0\leq y\leq f(x)\}
+              </me>
+              of all points lying between the graph of <m>f</m> and the <m>x</m>-axis and to the right of the line <m>x=1</m> has area 1. We'll return to this when we discuss <em>improper integrals</em>.  
             </p>
         </solution>
       </example>
@@ -96,7 +115,7 @@
       </theorem>
       
       <p>
-        We can make even more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <m>x</m>. When all the functions are <q>nice enough</q>, we can combine <xref ref="th_FTC_I" text="title"/> with the chain rule to compute the integral function's derivative. 
+        We can make more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <m>x</m>. When all the functions are <q>nice enough</q>, we can combine <xref ref="th_FTC_I" text="title"/> with the chain rule and integral properties to compute the integral function's derivative. 
       </p>
       <example xml:id="eg_FTC_I_chain">
         <title>FTC I+chain rule</title>
@@ -126,7 +145,57 @@
         </statement>
         <solution>
             <p>
-                
+              The idea for all of these examples is to express the given <q>complicated</q> integral function in terms of <q>simpler</q> integral function <m>G(x)</m> to which we can directly apply <xref ref="th_FTC_I" text="title"/>. 
+              <ol>
+                <li>
+                  <p>
+                    Letting <m>\displaystyle G(x)=\int_5^x \sqrt{t+1}\, dt</m>, we have
+                    <md>
+                      <mrow>F(x) \amp=\int_{x}^5 \sqrt{t+1}\, dt </mrow>
+                      <mrow> \amp = -\int_5^x\sqrt{t+1}\, dt</mrow>
+                      <mrow> \amp = -G(x)</mrow>
+                    </md> 
+                    and hence 
+                    <md>
+                      <mrow>F'(x) \amp= -G'(x)   </mrow>
+                      <mrow> \amp= -\sqrt{x+1} \amp (<xref ref="th_FTC_I" text="title"/>: G'(x)=\sqrt{x+1})</mrow>
+                    </md>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Letting <m>\displaystyle G(x)=\int_{-2}^x \cos(u^2)\, du</m>, we have 
+                    <md>
+                      <mrow>F(x) \amp = \int_{-2}^{\sin x} \cos(u^2)\, du</mrow>
+                      <mrow> \amp = G(\sin x)</mrow>
+                    </md>
+                    and thus 
+                    <md>
+                      <mrow>F'(x) \amp =\frac{d}{dx} G(\sin x)</mrow>
+                      <mrow> \amp = G'(\sin x)\cdot (\sin x)' \amp \text{(chain rule)}</mrow>
+                      <mrow> \amp = \cos(\sin^2 x)\cdot \cos x \amp (<xref ref="th_FTC_I" text="title"/>: G'(x)=\cos(x^2))</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Letting <m>\displaystyle G(x)=\int_0^x \sin(s^2)\, ds</m>, we have 
+                    <md>
+                      <mrow>F(x) \amp = \int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds</mrow>
+                      <mrow> \amp = \int_{4x}^{0}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds</mrow>
+                      <mrow> \amp =-\int_{0}^{4x}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds</mrow>
+                      <mrow> \amp =-G(4x)+G(\sqrt{x^2+1})</mrow>
+                    </md>.
+                    It follows that 
+                    <md>
+                      <mrow>F'(x) \amp = -\frac{d}{dx}G(4x)+\frac{d}{dx}G(\sqrt{x^2+1})</mrow>
+                      <mrow> \amp = -G'(4x)\cdot 4+G'(\sqrt{x^2+1})(\sqrt{x^2+1})' \amp \text{(chain rule)}</mrow>
+                      <mrow> \amp = -4G'(4x)+\frac{x\cdot G'(\sqrt{x^2+1})}{\sqrt{x^2+1}}</mrow>
+                      <mrow> \amp =-4\sin(16x^2)+\frac{x\sin(x^2+1)}{\sqrt{x^2+1}} \amp (<xref ref="th_FTC_I" text="title"/>: G'(x)=\sin(x^2))</mrow>
+                    </md>
+                  </p>
+                </li>
+              </ol>
             </p>
         </solution>
       </example>

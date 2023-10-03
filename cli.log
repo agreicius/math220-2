@@ -1,8 +1,22 @@
 INFO    : PreTeXt project found in `/Users/aarongreicius/math220-2`.
-INFO    : Using latest build located in `/Users/aarongreicius/math220-2/output/web`.
+INFO    : No change in assets requiring generating detected.  To force regeneration of assets, use `-g` flag.
+
+INFO    : Preparing to build into /Users/aarongreicius/math220-2/output/web.
 INFO    : 
-INFO    : Preparing to deploy from active `main` git branch.
+Now building HTML into /Users/aarongreicius/math220-2/output/web
+
+INFO    : discovering source file's directory name: /Users/aarongreicius/math220-2/source
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/generated-assets
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.1.7
+INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmp7z_tdfnl
+INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmp7z_tdfnl
 INFO    : 
-INFO    : Changes to project source since last commit detected.
-INFO    : Add/committing these changes to local Git repository.
-INFO    : 
+Success! Run `pretext view web` to see the results.
+
