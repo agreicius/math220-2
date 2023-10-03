@@ -505,6 +505,69 @@ var ptx_lunr_docs = [
   "body": " Leaking water tank revisited  Recall the set up from , where we determined that at time , the amount of water has rate of change .  According to , for any the integral computes the net change in the amount of water in the tank between time and minutes: , it computes . We can use to compute this integral. The function is an antiderivative of and thus . This tells us that at any time . Since , we conclude that , or equivalently, for all . (Here we use the fact that .) We have just given another derivation of the formula for the function .  "
 },
 {
+  "id": "s_FTC_cont",
+  "level": "1",
+  "url": "s_FTC_cont.html",
+  "type": "Section",
+  "number": "1.6",
+  "title": "Fundamental theorem (cont.)",
+  "body": " Fundamental theorem (cont.)  In this section we focus on . One peculiarity of this theorem is the function defined as . This is called an integral function , as the values are defined by the integral expression .   Integral function   Let be integrable on the interval . The function defined on as is called an integral function .    Examining the formula , we note that the input of is an the upper limit of integration of the integral. As we vary , the only thing that changes about the integral is the interval over which we are integrating; and this causes the values to vary with . Using the signed area interpretation of the integral allows us to visualize the integral function . In keeping with the notation in , we will label the horizontal axis as the -axis. For any , define to be the region in the plane that lies between the graph of and the -axis, and between the vertical lines and ; as we increase , imagine sliding the vertical line to the right, creating a growing region ; the integral function computes the signed area of this growing region!   Integral function     GeoGebra: understanding integral functions      Integral functions   Let . Make a table of values of for . Explain graphically what is for any .    For any the value is equal to the signed area of the region between the graph of and the horizontal axis from to . In this case, since , the signed area is equal to the area.  Using , and the antiderivative of , we see that . We thus have the following table of values . Note that as . This suggests that the region of all points lying between the graph of and the -axis and to the right of the line has area 1. We'll return to this when we discuss improper integrals .    Now that we have a better grip on integral functions of the form ), let's look at what says about them: namely, that they are differentiable, and satisfy for all . The corollary below follows immediately, answering a question we posed when discussing antiderivatives.   Continuous functions have antiderivatives   If is continuous on the interval , then has an antiderivative on .    Let be the integral function defined as . According to , we have for all .    Let's incorporate the result of into the geometric interpretation of discussed above. Since computes the signed area of the variable region , its derivative computes the rate of change of this signed area with respect to . By , we have . Thus the rate of change of the signed area of at a give point is just , the height of the graph of at .   FTC I: geometric   Let be continuous on the interval and define . In what follows we label the horizontal axis in the plane as the -axis.    For all , let be the region lying between the graph of and the -axis, and between the vertical lines and . We have for all .    At any the rate of change of is given by . In other words, the rate of change of the signed area is equal to the (directed) height of the graph of at .      We can make more interesting integral functions by choosing the upper and\/or lower limit of integration to be a function of . When all the functions are nice enough , we can combine with the chain rule and integral properties to compute the integral function's derivative.   FTC I+chain rule   For each defined below, use along with integral properties and\/or the chain rule to compute .                     The idea for all of these examples is to express the given complicated integral function in terms of simpler integral function to which we can directly apply .   Letting , we have and hence .    Letting , we have and thus     Letting , we have . It follows that        "
+},
+{
+  "id": "d_integral_function",
+  "level": "2",
+  "url": "s_FTC_cont.html#d_integral_function",
+  "type": "Definition",
+  "number": "1.6.1",
+  "title": "Integral function.",
+  "body": " Integral function   Let be integrable on the interval . The function defined on as is called an integral function .   "
+},
+{
+  "id": "proj_integral_function",
+  "level": "2",
+  "url": "s_FTC_cont.html#proj_integral_function",
+  "type": "Interactive example",
+  "number": "1.6.1",
+  "title": "Integral function.",
+  "body": " Integral function     GeoGebra: understanding integral functions    "
+},
+{
+  "id": "example-22",
+  "level": "2",
+  "url": "s_FTC_cont.html#example-22",
+  "type": "Example",
+  "number": "1.6.3",
+  "title": "Integral functions.",
+  "body": " Integral functions   Let . Make a table of values of for . Explain graphically what is for any .    For any the value is equal to the signed area of the region between the graph of and the horizontal axis from to . In this case, since , the signed area is equal to the area.  Using , and the antiderivative of , we see that . We thus have the following table of values . Note that as . This suggests that the region of all points lying between the graph of and the -axis and to the right of the line has area 1. We'll return to this when we discuss improper integrals .   "
+},
+{
+  "id": "cor_FTC_I",
+  "level": "2",
+  "url": "s_FTC_cont.html#cor_FTC_I",
+  "type": "Corollary",
+  "number": "1.6.4",
+  "title": "Continuous functions have antiderivatives.",
+  "body": " Continuous functions have antiderivatives   If is continuous on the interval , then has an antiderivative on .    Let be the integral function defined as . According to , we have for all .   "
+},
+{
+  "id": "th_FTC_I_geometric",
+  "level": "2",
+  "url": "s_FTC_cont.html#th_FTC_I_geometric",
+  "type": "Theorem",
+  "number": "1.6.5",
+  "title": "FTC I: geometric.",
+  "body": " FTC I: geometric   Let be continuous on the interval and define . In what follows we label the horizontal axis in the plane as the -axis.    For all , let be the region lying between the graph of and the -axis, and between the vertical lines and . We have for all .    At any the rate of change of is given by . In other words, the rate of change of the signed area is equal to the (directed) height of the graph of at .     "
+},
+{
+  "id": "eg_FTC_I_chain",
+  "level": "2",
+  "url": "s_FTC_cont.html#eg_FTC_I_chain",
+  "type": "Example",
+  "number": "1.6.6",
+  "title": "FTC I+chain rule.",
+  "body": " FTC I+chain rule   For each defined below, use along with integral properties and\/or the chain rule to compute .                     The idea for all of these examples is to express the given complicated integral function in terms of simpler integral function to which we can directly apply .   Letting , we have and hence .    Letting , we have and thus     Letting , we have . It follows that       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

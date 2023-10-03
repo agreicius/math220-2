@@ -10,5 +10,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para"></div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">For any <span class="process-math">\(b\geq 1\)</span> the value <span class="process-math">\(F(b)=\int_1^b f(t)\, dt\)</span> is equal to the signed area of the region between the graph of <span class="process-math">\(f\)</span> and the horizontal axis from <span class="process-math">\(x=1\)</span> to <span class="process-math">\(x=b\text{.}\)</span> In this case, since <span class="process-math">\(f(x)=1/x^2\text{,}\)</span> the signed area is equal to the area.</div> <div class="para logical">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>, and the antiderivative <span class="process-math">\(-1/t\)</span> of <span class="process-math">\(f(t)=1/t^2\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+F(b)=\int_1^b \frac{1}{t^2}\, dt=-\frac{1}{b}-(-1)=\frac{b-1}{b}\text{.}
+\end{equation*}
+</div>
+<div class="para">We thus have the following table of values</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+x\amp 1\amp 2\amp 3\amp 4\amp 5 \\
+\hline
+F(x) \amp 0\amp 1/2 \amp 2/3\amp 3/4 \amp 4/5
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(F(b)\to\infty\)</span> as <span class="process-math">\(b\to\infty\text{.}\)</span> This suggests that the region</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\mathcal{R}=\{(x,y)\colon x\geq 1, 0\leq y\leq f(x)\}
+\end{equation*}
+</div>
+<div class="para">of all points lying between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis and to the right of the line <span class="process-math">\(x=1\)</span> has area 1. We’ll return to this when we discuss <em class="emphasis">improper integrals</em>.</div>
+</div>
+</div></body>
 </html>

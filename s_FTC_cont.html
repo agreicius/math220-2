@@ -360,8 +360,34 @@ F(x)=\int_a^x f(t)\, dt\text{.}\tag{1.6.1}
 <div class="para" id="p-189">Let <span class="process-math">\(F(x)=\displaystyle\int_1^x \frac{1}{t^2}\, dt\text{.}\)</span> Make a table of values of <span class="process-math">\(F(x)\)</span> for <span class="process-math">\(x=1, 2, 3, 4, 5\text{.}\)</span> Explain graphically what <span class="process-math">\(F(b)\)</span> is for any <span class="process-math">\(b\geq 1\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para" id="p-190"></div></div></div>
-</div></article><div class="para logical" id="p-191">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<div class="para" id="p-190">For any <span class="process-math">\(b\geq 1\)</span> the value <span class="process-math">\(F(b)=\int_1^b f(t)\, dt\)</span> is equal to the signed area of the region between the graph of <span class="process-math">\(f\)</span> and the horizontal axis from <span class="process-math">\(x=1\)</span> to <span class="process-math">\(x=b\text{.}\)</span> In this case, since <span class="process-math">\(f(x)=1/x^2\text{,}\)</span> the signed area is equal to the area.</div> <div class="para logical" id="p-191">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>, and the antiderivative <span class="process-math">\(-1/t\)</span> of <span class="process-math">\(f(t)=1/t^2\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+F(b)=\int_1^b \frac{1}{t^2}\, dt=-\frac{1}{b}-(-1)=\frac{b-1}{b}\text{.}
+\end{equation*}
+</div>
+<div class="para">We thus have the following table of values</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c}
+x\amp 1\amp 2\amp 3\amp 4\amp 5 \\
+\hline
+F(x) \amp 0\amp 1/2 \amp 2/3\amp 3/4 \amp 4/5
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(F(b)\to\infty\)</span> as <span class="process-math">\(b\to\infty\text{.}\)</span> This suggests that the region</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+\begin{equation*}
+\mathcal{R}=\{(x,y)\colon x\geq 1, 0\leq y\leq f(x)\}
+\end{equation*}
+</div>
+<div class="para">of all points lying between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis and to the right of the line <span class="process-math">\(x=1\)</span> has area 1. We’ll return to this when we discuss <em class="emphasis">improper integrals</em>.</div>
+</div>
+</div></div>
+</div></article><div class="para logical" id="p-192">
 <div class="para">Now that we have a better grip on integral functions <span class="process-math">\(F\)</span> of the form <a href="" class="xref" data-knowl="./knowl/eq_integral_function.html" title="Equation 1.6.1">(1.6.1)</a>), let’s look at what <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> says about them: namely, that they are differentiable, and satisfy</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_integral_function.html ./knowl/th_FTC_I.html">
 \begin{equation*}
@@ -373,16 +399,16 @@ F'(x)=f(x)
 <article class="corollary theorem-like" id="cor_FTC_I"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions have antiderivatives.</span>
 </h3>
-<div class="para" id="p-192">If <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(I=[a,b]\text{,}\)</span> then <span class="process-math">\(f\)</span> has an antiderivative on <span class="process-math">\(I\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-193">Let <span class="process-math">\(F\)</span> be the integral function defined as <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
+<div class="para" id="p-193">If <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(I=[a,b]\text{,}\)</span> then <span class="process-math">\(f\)</span> has an antiderivative on <span class="process-math">\(I\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-194">Let <span class="process-math">\(F\)</span> be the integral function defined as <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-194">Let’s incorporate the result of <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> into the geometric interpretation of <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\)</span> discussed above. Since <span class="process-math">\(F(x)\)</span> computes the signed area of the variable region <span class="process-math">\(\mathcal{R}_x\text{,}\)</span> its derivative <span class="process-math">\(F'(x)\)</span> computes the rate of change of this signed area with respect to <span class="process-math">\(x\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> Thus the rate of change of the signed area of <span class="process-math">\(\mathcal{R}_x\)</span> at a give point <span class="process-math">\(x\)</span> is just <span class="process-math">\(f(x)\text{,}\)</span> the height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
+<div class="para" id="p-195">Let’s incorporate the result of <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> into the geometric interpretation of <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\)</span> discussed above. Since <span class="process-math">\(F(x)\)</span> computes the signed area of the variable region <span class="process-math">\(\mathcal{R}_x\text{,}\)</span> its derivative <span class="process-math">\(F'(x)\)</span> computes the rate of change of this signed area with respect to <span class="process-math">\(x\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> Thus the rate of change of the signed area of <span class="process-math">\(\mathcal{R}_x\)</span> at a give point <span class="process-math">\(x\)</span> is just <span class="process-math">\(f(x)\text{,}\)</span> the height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
 </div>
 <article class="theorem theorem-like" id="th_FTC_I_geometric"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">FTC I: geometric.</span>
 </h3>
-<div class="para" id="p-195">Let <span class="process-math">\(f\)</span> be continuous on the interval <span class="process-math">\(I=[a,b]\)</span> and define <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> In what follows we label the horizontal axis in the plane as the <span class="process-math">\(t\)</span>-axis.</div> <ol class="decimal">
-<li id="li-93"><div class="para logical" id="p-196">
+<div class="para" id="p-196">Let <span class="process-math">\(f\)</span> be continuous on the interval <span class="process-math">\(I=[a,b]\)</span> and define <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> In what follows we label the horizontal axis in the plane as the <span class="process-math">\(t\)</span>-axis.</div> <ol class="decimal">
+<li id="li-93"><div class="para logical" id="p-197">
 <div class="para">For all <span class="process-math">\(x\in I\text{,}\)</span> let <span class="process-math">\(\mathcal{R}_x\)</span> be the region lying between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(t\)</span>-axis, and between the vertical lines <span class="process-math">\(t=a\)</span> and <span class="process-math">\(t=x\text{.}\)</span> We have</div>
 <div class="displaymath process-math" id="eq_FTC_I_sgn_area">
 \begin{equation}
@@ -392,23 +418,81 @@ F(x)=\operatorname{sgn\, area} \mathcal{R}_x\tag{1.6.2}
 <div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
 </div>
 </div></li>
-<li id="li-94"><div class="para" id="p-197">At any <span class="process-math">\(x\in I\)</span> the rate of change of <span class="process-math">\(\operatorname{sgn \, area} \mathcal{R}_x\)</span> is given by <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> In other words, the rate of change of the signed area is equal to the (directed) height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
+<li id="li-94"><div class="para" id="p-198">At any <span class="process-math">\(x\in I\)</span> the rate of change of <span class="process-math">\(\operatorname{sgn \, area} \mathcal{R}_x\)</span> is given by <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> In other words, the rate of change of the signed area is equal to the (directed) height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
 </div></li>
-</ol></article><div class="para" id="p-198">We can make even more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <span class="process-math">\(x\text{.}\)</span> When all the functions are “nice enough”, we can combine <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> with the chain rule to compute the integral function’s derivative.</div>
+</ol></article><div class="para" id="p-199">We can make more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <span class="process-math">\(x\text{.}\)</span> When all the functions are “nice enough”, we can combine <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> with the chain rule and integral properties to compute the integral function’s derivative.</div>
 <article class="example example-like" id="eg_FTC_I_chain"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.6</span><span class="period">.</span><span class="space"> </span><span class="title">FTC I+chain rule.</span>
 </h3>
-<div class="para logical" id="p-199">
+<div class="para logical" id="p-200">
 <div class="para">For each <span class="process-math">\(F(x)\)</span> defined below, use <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> along with integral properties and/or the chain rule to compute <span class="process-math">\(\displaystyle F'(x)=\frac{d}{dx}F(x)\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-95"><div class="para" id="p-200"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{x}^5 \sqrt{t+1}\, dt\)</span></div></li>
-<li id="li-96"><div class="para" id="p-201"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{-2}^{\sin x}\cos(u^2) \, du\)</span></div></li>
-<li id="li-97"><div class="para" id="p-202"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds\)</span></div></li>
+<li id="li-95"><div class="para" id="p-201"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{x}^5 \sqrt{t+1}\, dt\)</span></div></li>
+<li id="li-96"><div class="para" id="p-202"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{-2}^{\sin x}\cos(u^2) \, du\)</span></div></li>
+<li id="li-97"><div class="para" id="p-203"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="para" id="p-203"></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="para logical" id="p-204">
+<div class="para">The idea for all of these examples is to express the given “complicated” integral function in terms of “simpler” integral function <span class="process-math">\(G(x)\)</span> to which we can directly apply <a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>.</div>
+<ol class="decimal">
+<li id="li-98"><div class="para logical" id="p-205">
+<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_5^x \sqrt{t+1}\, dt\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-33">
+\begin{align*}
+F(x) \amp=\int_{x}^5 \sqrt{t+1}\, dt \\
+\amp = -\int_5^x\sqrt{t+1}\, dt\\
+\amp = -G(x)
+\end{align*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-34">
+\begin{align*}
+F'(x) \amp= -G'(x)   \\
+\amp= -\sqrt{x+1} \amp (\knowl{./knowl/th_FTC_I.html}{\text{FTC I}}: G'(x)=\sqrt{x+1})\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-99"><div class="para logical" id="p-206">
+<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_{-2}^x \cos(u^2)\, du\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-35">
+\begin{align*}
+F(x) \amp = \int_{-2}^{\sin x} \cos(u^2)\, du\\
+\amp = G(\sin x)
+\end{align*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-36">
+\begin{align*}
+F'(x) \amp =\frac{d}{dx} G(\sin x)\\
+\amp = G'(\sin x)\cdot (\sin x)' \amp \text{(chain rule)}\\
+\amp = \cos(\sin^2 x)\cdot \cos x \amp (\knowl{./knowl/th_FTC_I.html}{\text{FTC I}}: G'(x)=\cos(x^2))
+\end{align*}
+</div>
+</div></li>
+<li id="li-100"><div class="para logical" id="p-207">
+<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_0^x \sin(s^2)\, ds\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-37">
+\begin{align*}
+F(x) \amp = \int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
+\amp = \int_{4x}^{0}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
+\amp =-\int_{0}^{4x}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
+\amp =-G(4x)+G(\sqrt{x^2+1})\text{.}
+\end{align*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_I.html" id="md-38">
+\begin{align*}
+F'(x) \amp = -\frac{d}{dx}G(4x)+\frac{d}{dx}G(\sqrt{x^2+1})\\
+\amp = -G'(4x)\cdot 4+G'(\sqrt{x^2+1})(\sqrt{x^2+1})' \amp \text{(chain rule)}\\
+\amp = -4G'(4x)+\frac{x\cdot G'(\sqrt{x^2+1})}{\sqrt{x^2+1}}\\
+\amp =-4\sin(16x^2)+\frac{x\sin(x^2+1)}{\sqrt{x^2+1}} \amp (\knowl{./knowl/th_FTC_I.html}{\text{FTC I}}: G'(x)=\sin(x^2))
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div></div></div>
 </div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/hd8s893y</code></div></div>
 </div>
 <div class="ptx-content-footer">
