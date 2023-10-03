@@ -667,11 +667,20 @@ var ptx_lunr_docs = [
   "body": " Definitions   "
 },
 {
+  "id": "appendix-procs",
+  "level": "1",
+  "url": "appendix-procs.html",
+  "type": "Appendix",
+  "number": "C",
+  "title": "Procedures",
+  "body": " Procedures   "
+},
+{
   "id": "appendix-thms",
   "level": "1",
   "url": "appendix-thms.html",
   "type": "Appendix",
-  "number": "C",
+  "number": "D",
   "title": "Theory",
   "body": " Theory   "
 },
@@ -680,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "appendix-egs.html",
   "type": "Appendix",
-  "number": "D",
+  "number": "E",
   "title": "Examples",
   "body": " Examples   "
 },
@@ -689,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "appendix-interactives.html",
   "type": "Appendix",
-  "number": "E",
+  "number": "F",
   "title": "Interactives and computational cells",
   "body": " Interactives and computational cells   "
 },
@@ -698,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "appendix-dicta.html",
   "type": "Appendix",
-  "number": "F",
+  "number": "G",
   "title": "Dicta, fiats, etc.",
   "body": " Dicta, fiats,   "
 }
