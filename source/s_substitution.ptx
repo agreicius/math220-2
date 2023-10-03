@@ -3,7 +3,7 @@
 <section xml:id="s_substitution" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Substitution</title>
 <p>
-    In the spirit of the De Morgan quote in <xref ref="mantra_integration_differentiation"/>, running various derivative rules in reverse yields different integration techniques. The <xref ref="th_subst" text="custom">substitution theorem</xref> is nothing more than the chain rule exressed in terms of antiderivatives. 
+    In the spirit of the De Morgan quote in <xref ref="mantra_integration_differentiation"/>, running various derivative rules in reverse yields different integration techniques. The <xref ref="th_subst" text="custom">substitution theorem</xref> is nothing more than the chain rule expressed in terms of antiderivatives. 
 </p>
 <theorem xml:id="th_subst">
     <title>Substitution</title>
@@ -65,7 +65,7 @@
     <title>Substitution</title>
     <statement>
         <p>
-           To compute an indefinite integral <m>\int f(x)\, dx</m> using the substitution, proceed as follows. 
+           To compute an indefinite integral <m>\int f(x)\, dx</m> using substitution, proceed as follows. 
            <ol>
             <li>
                 <title>Choose substitution function</title>
@@ -167,5 +167,18 @@
         </p>
     </statement>
   </algorithm>
+  <example>
+    <title>Definite integral substitution: 2-step technique</title>
+    <statement>
+        <p>
+            Use substitution to compute <m>\displaystyle\int_1^2\frac{x}{\sqrt{x+1}}\, dx</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
 
 </section>
