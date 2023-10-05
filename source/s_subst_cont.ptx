@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_subst_cont" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Substitution (contd) and area between curves</title>
+    <p>
+        Before discussing the area of a region lying between two curves, we add an alternative method for definite integral substition.
+    </p>
+    <algorithm xml:id="proc_subst_streamlined">
+        <title>Definite integral substitution: streamlined</title>
+        <statement>
+            <p>
+                To compute the definite integral <m>\int_a^b f(x)\, dx</m> using the streamlined substitution method, proceed as follows. 
+                <ol>
+                    <li>
+                        <p>
+                            Choose a substitution 
+                            <mdn>
+                                <mrow xml:id="eq_sub_u">u \amp =g(x)</mrow>
+                                <mrow xml:id="eq_sub_du">du= \amp g'(x) dx</mrow>
+                            </mdn>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </algorithm>
+    
+
+</section>
