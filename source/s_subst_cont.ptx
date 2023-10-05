@@ -3,7 +3,7 @@
 <section xml:id="s_subst_cont" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Substitution (contd) and area between curves</title>
     <p>
-        Before discussing the area of a region lying between two curves, we add an alternative method for definite integral substition.
+        Before discussing the area of a region lying between two curves, we add an alternative method for definite integral substitution.
     </p>
     <algorithm xml:id="proc_subst_streamlined">
         <title>Definite integral substitution: streamlined</title>
@@ -17,18 +17,125 @@
                             <mdn>
                                 <mrow xml:id="eq_sub_u">u \amp =g(x)</mrow>
                                 <mrow xml:id="eq_sub_du">du= \amp g'(x) dx</mrow>
-                            </mdn>.
+                            </mdn>.                            
                         </p>
                     </li>
                     <li>
                         <p>
-                            
+                            Use <xref first="eq_sub_u" last="eq_sub_du"/> and algebra to transform the original definite integral into a new one with new limits of integration expressed in terms of <m>u</m>
+                            <men xml:id="eq_sub_streamlined">
+                                \int_{x=a}^{x=b}f(x)\, dx=\int_{\boxed{u=g(a)}}^{\boxed{u=g(b)}}h(u)\, du   
+                            </men>.
+                            Compute this new integral. 
                         </p>
                     </li>
                 </ol>
             </p>
         </statement>
     </algorithm>
-    
+    <example>
+        <title>Definite integral substitution: streamlined technique</title>
+        <statement>
+            <p>
+                <p>
+                    Use streamlined substitution technique to compute the following integrals. 
+                    <ol>
+                      <li>
+                        <p>
+                          <m>\displaystyle\int_{\pi}^{2\pi}\cos^2(x)\sin x\, dx</m>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <m>\displaystyle\int_{1}^{2} \sqrt{s^8+s^6}\, ds</m>
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
 
+    <definition xml:id="d_area_between_curves">
+        <title>Area of region between curves</title>
+        <statement>
+            <p>
+                Suppose <m>f(x)\geq g(x)</m> for all <m>x\in [a,b]</m>.
+                Let <m>\mathcal{C}_1</m> be the graph of <m>f</m>,
+                let <m>\mathcal{C}_2</m> be the graph of <m>g</m>,
+                and let <m>\mathcal{R}</m> be the region between <m>\mathcal{C}_1</m> and
+                <m>\mathcal{C}_2</m>, and between the vertical lines <m>x=a</m> and <m>x=b</m>: <ie/>, 
+                <me>
+                    \mathcal{R}=\{(x,y)\colon a\leq x\leq b, g(x)\leq y\leq f(x)\}
+                </me>.                
+                We define the area of <m>\mathcal{R}</m> to be the integral of <m>f-g</m> over <m>[a,b]</m>: <ie/>, 
+                <me>
+                  \text{ area } (\mathcal{R})=\int_a^b f(x)-g(x)\, dx
+                </me>.
+              </p>
+              <p>
+                Similarly, suppose <m>x=p(y)</m> and <m>x=p(q)</m> are two functions of <m>y</m> satisfying
+                <m>p(y)\geq q(y)</m> for all <m>y\in [c,d]</m>.
+                Let <m>\mathcal{C}_1</m> be the graph of <m>p</m>,
+                let <m>\mathcal{C}_2</m> be the graph of <m>q</m>,
+                and let <m>\mathcal{R}</m> be the region between <m>\mathcal{C}_1</m> and
+                <m>\mathcal{C}_2</m>, and between the horizontal lines <m>y=c</m> and <m>y=d</m>: <ie/>, 
+                <me>
+                    \mathcal{R}=\{(x,y)\colon c\leq y\leq d, p(y)\leq x\leq q(y)\}
+                </me>.                
+                We define the area of <m>\mathcal{R}</m> to be the integral of <m>p-q</m> over <m>[c,d]</m>: i.e.,
+                <me>
+                  \text{ area } (\mathcal{R})=\int_c^d p(y)-q(y)\, dy
+                </me>.
+              </p>
+        </statement>
+    </definition>
+    <example>
+        <statement>
+            <p>
+                Let <m>\mathcal{R}</m> be the region between the parabola <m>x+y^2=4</m> and the line <m>2x+y=2</m> lying in the first quadrant.
+                Compute the are of <m>\mathcal{R}</m>.
+                You may do this either by thinking of the curves as graphs of functions of <m>x</m>,
+                or graphs of functions of <m>y</m>.
+                Which approach is easier?
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <algorithm xml:id="proc_area_curves">
+        <title>Area of region between intertwined curves</title>
+        <statement>
+            <p>
+                Suppose <m>f</m> and <m>g</m> are continuous on the interval <m>[a,b]</m> and intersect one another finitely many times.
+                Let <m>\mathcal{R}</m> be the region between the graphs of <m>f</m> and <m>g</m> lying over the interval <m>[a,b]</m>.
+                To compute the area of <m>\mathcal{R}</m>, proceed as follows:
+                <ol>
+                  <li>
+                    <p>
+                      Parition <m>[a,b]</m> into subintervals over which one of the functions is always greater than or equal to the other.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      On each such subinterval compute the area of the corresponding region by integrating the appropriate difference.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Sum up the areas you compute in (2).
+                    </p>
+                  </li>
+                </ol>
+              </p>
+        </statement>
+    </algorithm>
 </section>
