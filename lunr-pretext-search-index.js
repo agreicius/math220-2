@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.7",
   "title": "Substitution",
-  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule expressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                         The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                     is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .        Definite integral substitution: 2-step technique   Use substitution to compute .        "
+  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule expressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                         The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                     is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .        Definite integral substitution: 2-step technique   Use substitution to compute .        "
 },
 {
   "id": "th_subst",
@@ -604,13 +604,13 @@ var ptx_lunr_docs = [
   "body": " Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                        "
 },
 {
-  "id": "proc_subst",
+  "id": "proc_sub",
   "level": "2",
-  "url": "s_substitution.html#proc_subst",
+  "url": "s_substitution.html#proc_sub",
   "type": "Procedure",
   "number": "1.7.3",
   "title": "Substitution.",
-  "body": " Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution function  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .      "
+  "body": " Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .      "
 },
 {
   "id": "remark-6",
@@ -631,9 +631,9 @@ var ptx_lunr_docs = [
   "body": " Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                   "
 },
 {
-  "id": "proc_subst_2step",
+  "id": "proc_sub_2step",
   "level": "2",
-  "url": "s_substitution.html#proc_subst_2step",
+  "url": "s_substitution.html#proc_sub_2step",
   "type": "Procedure",
   "number": "1.7.6",
   "title": "Definite integral substitution: 2-step.",
@@ -647,6 +647,159 @@ var ptx_lunr_docs = [
   "number": "1.7.7",
   "title": "Definite integral substitution: 2-step technique.",
   "body": " Definite integral substitution: 2-step technique   Use substitution to compute .       "
+},
+{
+  "id": "s_subst_cont",
+  "level": "1",
+  "url": "s_subst_cont.html",
+  "type": "Section",
+  "number": "1.8",
+  "title": "More substitution; area between curves",
+  "body": " More substitution; area between curves  Before discussing the area of a region lying between two curves, we provide an alternative method to for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other.   Definite integral substitution: streamlined   To compute the definite integral using the streamlined substitution method, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the integral of over into an integral of a function over the interval : , .    Compute  Compute .        Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                      Area between curves: functions of   Suppose for all . Let be the region between the graph of and the graph of , and between the vertical lines and : , . We define the area of to be the integral of over : , .     Area between curves: functions of   Suppose and are two functions of satisfying for all . Let be the region between the graph of and the graph of , and between the horizontal lines and : , . We define the area of to be the integral of over : i.e., .     Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval . Intuitively, this difference of areas should indeed be the area between the two curves.    To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!       Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?         Area of region between intertwined curves   Suppose and are continuous on the interval and intersect one another finitely many times. Let be the region between the graphs of and , and between the vertical lines and . To compute the area of , proceed as follows:   Partition into subintervals over which one of the functions is always greater than or equal to the other.    On each such subinterval compute the area of the corresponding region by applying . Make sure to integrate the appropriate difference of functions.    Sum up the areas you compute in Step 2.        Area between paraboloas   Compute the area of the region between the parabolas and lying within the lines and .        "
+},
+{
+  "id": "proc_sub_streamlined",
+  "level": "2",
+  "url": "s_subst_cont.html#proc_sub_streamlined",
+  "type": "Procedure",
+  "number": "1.8.1",
+  "title": "Definite integral substitution: streamlined.",
+  "body": " Definite integral substitution: streamlined   To compute the definite integral using the streamlined substitution method, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the integral of over into an integral of a function over the interval : , .    Compute  Compute .      "
+},
+{
+  "id": "example-27",
+  "level": "2",
+  "url": "s_subst_cont.html#example-27",
+  "type": "Example",
+  "number": "1.8.2",
+  "title": "Definite integral substitution: streamlined.",
+  "body": " Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                    "
+},
+{
+  "id": "d_area_between_curves_x",
+  "level": "2",
+  "url": "s_subst_cont.html#d_area_between_curves_x",
+  "type": "Definition",
+  "number": "1.8.3",
+  "title": "Area between curves: functions of <span class=\"process-math\">\\(x\\)<\/span>.",
+  "body": " Area between curves: functions of   Suppose for all . Let be the region between the graph of and the graph of , and between the vertical lines and : , . We define the area of to be the integral of over : , .   "
+},
+{
+  "id": "d_area_between_curves_y",
+  "level": "2",
+  "url": "s_subst_cont.html#d_area_between_curves_y",
+  "type": "Definition",
+  "number": "1.8.4",
+  "title": "Area between curves: functions of <span class=\"process-math\">\\(y\\)<\/span>.",
+  "body": " Area between curves: functions of   Suppose and are two functions of satisfying for all . Let be the region between the graph of and the graph of , and between the horizontal lines and : , . We define the area of to be the integral of over : i.e., .   "
+},
+{
+  "id": "remark-7",
+  "level": "2",
+  "url": "s_subst_cont.html#remark-7",
+  "type": "Remark",
+  "number": "1.8.5",
+  "title": "Area between curves: why <span class=\"process-math\">\\(f-g\\text{?}\\)<\/span>",
+  "body": " Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval . Intuitively, this difference of areas should indeed be the area between the two curves.    To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!     "
+},
+{
+  "id": "example-28",
+  "level": "2",
+  "url": "s_subst_cont.html#example-28",
+  "type": "Example",
+  "number": "1.8.6",
+  "title": "Area between parabola and line.",
+  "body": " Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?       "
+},
+{
+  "id": "proc_area_curves",
+  "level": "2",
+  "url": "s_subst_cont.html#proc_area_curves",
+  "type": "Procedure",
+  "number": "1.8.7",
+  "title": "Area of region between intertwined curves.",
+  "body": " Area of region between intertwined curves   Suppose and are continuous on the interval and intersect one another finitely many times. Let be the region between the graphs of and , and between the vertical lines and . To compute the area of , proceed as follows:   Partition into subintervals over which one of the functions is always greater than or equal to the other.    On each such subinterval compute the area of the corresponding region by applying . Make sure to integrate the appropriate difference of functions.    Sum up the areas you compute in Step 2.      "
+},
+{
+  "id": "example-29",
+  "level": "2",
+  "url": "s_subst_cont.html#example-29",
+  "type": "Example",
+  "number": "1.8.8",
+  "title": "Area between paraboloas.",
+  "body": " Area between paraboloas   Compute the area of the region between the parabolas and lying within the lines and .       "
+},
+{
+  "id": "s_volume",
+  "level": "1",
+  "url": "s_volume.html",
+  "type": "Section",
+  "number": "1.9",
+  "title": "Volume via cross sections",
+  "body": " Volume via cross sections  In our discussion of area of regions in , we started with basic area formulas (rectangles) and investigated how we could use these basic formulas to estimate the area of more general regions via Riemann sums. This in turn motivated our definition of our area via the integral, which we understood as the limit of these estimates as they get more and more accurate. In the end we used the integral to produce a more general notion of area that could be applied to more interesting regions.  We will now take a similar approach to defining the volume of a solid region in three-space. The rough outline of our approach is meant to bring out the similarities between the two approaches.   Begin with a set of basic volume formulas assumed to be true. We will start with the volume formula for a solid cylinder of general base of area , and height .    Estimate the volume of a general region by approximating it as a union of such general cylinders and summing up their volumes.    Define the volume of the region to be the limit of these estimates and identify this limit as the integral of a certain function.   In more detail, imagine our solid lying in and choose a coordinate system with the -axis running through . Imagine slicing up with many vertical planes oriented perpendicularly to the -axis. Assume the solid lies entirely between the planes and .   For any fixed , the vertical plane intersected with yields a cross section  of that we call the -cross section.   A cross section of the solid     We approximate the portion of located between two planes planes and as a general cylinder with base and height . Let . The volume of this cylinder is given by , and we consider this an approximation of the volume of this portion of .   Volume of general cylinder     Recall that lies entirely between the planes and . To estimate the volume of we partition into equal subintervals and approximate the volume of the portion of between and as , as above. The sum of these approximations yields an approximation of the volume of : . We recognize this expression as the -th left Riemann summ of the cross section area function on the interval .    Taking the limit of these approximations as should yield the exact volume of . Thus we define .      Volume via cross sections   Let be a solid region in -space lying between the planes and . For each let be the corresponding -cross section of and let be the area of .  Assume is integrable on the interval . We define the volume  of as . The volume of can be defined with respect to any linear axis ( , the - or -axis) using an analogous formula to .     Volume of sphere   Let be the solid sphere centered at the origin of radius . Compute using cross sections.         Volume of cone   Let be the solid cone with base the disc in the -plane with equation and vertex lying directly above the origin at a height of . Compute using cross sections.         is quite general: it can be applied to any solid region with an integrable cross sectional area function . For the remainder of the section, we continue a very special type of solid: namely a solid of rotation .   Solid of revolution   A solid of revolution is a solid region obtained by rotating a planar region around a central linear axis .    Solids of revolution are a very particular sort of solid regions, and enjoy many symmetry properties. When computing their volumes with respect to their axis of symmetry, cross sections are often disks or washers , and thus the area cross section function takes a particular form. The following procedure considers two typical cases; it can be applied mutatis mutandi to solids or revolution with axis of rotation parallel to the - or -axis.   Volume of solid of revolution   In each case below, let be the solid of revolution obtained by rotating the given region around the given line .   Disks  Let be the line , and let be an integrable function on the interval satisfying for all . Define to be the region in the -plane lying between the graph of and , and between the lines and .   For all the cross section is a disk of radius .    The cross sectional area function of is thus given by .    The volume of is thus .       Washers  Let be the line , and let and be integrable functions on the interval satisfying for all . Define to be the region in the -plane lying between the graphs of and , and between the lines and .   For all the cross section of is a washer of inner radius and outer radius .    The cross sectional area function of is thus given by .    The volume of is .           Disc example   Let , let be the region in the first quadrant lying below the graph of and above the line with equation , and let be the solid obtained by rotating about .    Compute .    Sketch the solid . How else could we have computed the volume in (a)?           Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .        "
+},
+{
+  "id": "d_volume",
+  "level": "2",
+  "url": "s_volume.html#d_volume",
+  "type": "Definition",
+  "number": "1.9.1",
+  "title": "Volume via cross sections.",
+  "body": " Volume via cross sections   Let be a solid region in -space lying between the planes and . For each let be the corresponding -cross section of and let be the area of .  Assume is integrable on the interval . We define the volume  of as . The volume of can be defined with respect to any linear axis ( , the - or -axis) using an analogous formula to .   "
+},
+{
+  "id": "eg_sphere",
+  "level": "2",
+  "url": "s_volume.html#eg_sphere",
+  "type": "Example",
+  "number": "1.9.2",
+  "title": "Volume of sphere.",
+  "body": " Volume of sphere   Let be the solid sphere centered at the origin of radius . Compute using cross sections.       "
+},
+{
+  "id": "eg_cone",
+  "level": "2",
+  "url": "s_volume.html#eg_cone",
+  "type": "Example",
+  "number": "1.9.3",
+  "title": "Volume of cone.",
+  "body": " Volume of cone   Let be the solid cone with base the disc in the -plane with equation and vertex lying directly above the origin at a height of . Compute using cross sections.       "
+},
+{
+  "id": "d_solid_of_rotation",
+  "level": "2",
+  "url": "s_volume.html#d_solid_of_rotation",
+  "type": "Definition",
+  "number": "1.9.4",
+  "title": "Solid of revolution.",
+  "body": " Solid of revolution   A solid of revolution is a solid region obtained by rotating a planar region around a central linear axis .   "
+},
+{
+  "id": "proc_solid_revolution",
+  "level": "2",
+  "url": "s_volume.html#proc_solid_revolution",
+  "type": "Procedure",
+  "number": "1.9.5",
+  "title": "Volume of solid of revolution.",
+  "body": " Volume of solid of revolution   In each case below, let be the solid of revolution obtained by rotating the given region around the given line .   Disks  Let be the line , and let be an integrable function on the interval satisfying for all . Define to be the region in the -plane lying between the graph of and , and between the lines and .   For all the cross section is a disk of radius .    The cross sectional area function of is thus given by .    The volume of is thus .       Washers  Let be the line , and let and be integrable functions on the interval satisfying for all . Define to be the region in the -plane lying between the graphs of and , and between the lines and .   For all the cross section of is a washer of inner radius and outer radius .    The cross sectional area function of is thus given by .    The volume of is .         "
+},
+{
+  "id": "eg_disc",
+  "level": "2",
+  "url": "s_volume.html#eg_disc",
+  "type": "Example",
+  "number": "1.9.6",
+  "title": "Disc example.",
+  "body": " Disc example   Let , let be the region in the first quadrant lying below the graph of and above the line with equation , and let be the solid obtained by rotating about .    Compute .    Sketch the solid . How else could we have computed the volume in (a)?         "
+},
+{
+  "id": "eg_washer",
+  "level": "2",
+  "url": "s_volume.html#eg_washer",
+  "type": "Example",
+  "number": "1.9.7",
+  "title": "Washer example.",
+  "body": " Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .       "
 },
 {
   "id": "appendix-notation",
