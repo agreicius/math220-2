@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.9",
   "title": "Volume via cross sections",
-  "body": " Volume via cross sections  In our discussion of area of regions in , we started with basic area formulas (rectangles) and investigated how we could use these basic formulas to estimate the area of more general regions via Riemann sums. This in turn motivated our definition of our area via the integral, which we understood as the limit of these estimates as they get more and more accurate. In the end we used the integral to produce a more general notion of area that could be applied to more interesting regions.  We will now take a similar approach to defining the volume of a solid region in three-space. The rough outline of our approach is meant to bring out the similarities between the two approaches.   Begin with a set of basic volume formulas assumed to be true. We will start with the volume formula for a solid cylinder of general base of area , and height .    Estimate the volume of a general region by approximating it as a union of such general cylinders and summing up their volumes.    Define the volume of the region to be the limit of these estimates and identify this limit as the integral of a certain function.   In more detail, imagine our solid lying in and choose a coordinate system with the -axis running through . Imagine slicing up with many vertical planes oriented perpendicularly to the -axis. Assume the solid lies entirely between the planes and .   For any fixed , the vertical plane intersected with yields a cross section  of that we call the -cross section.   A cross section of the solid     We approximate the portion of located between two planes planes and as a general cylinder with base and height . Let . The volume of this cylinder is given by , and we consider this an approximation of the volume of this portion of .   Volume of general cylinder     Recall that lies entirely between the planes and . To estimate the volume of we partition into equal subintervals and approximate the volume of the portion of between and as , as above. The sum of these approximations yields an approximation of the volume of : . We recognize this expression as the -th left Riemann summ of the cross section area function on the interval .    Taking the limit of these approximations as should yield the exact volume of . Thus we define .      Volume via cross sections   Let be a solid region in -space lying between the planes and . For each let be the corresponding -cross section of and let be the area of .  Assume is integrable on the interval . We define the volume  of as . The volume of can be defined with respect to any linear axis ( , the - or -axis) using an analogous formula to .     Volume of sphere   Let be the solid sphere centered at the origin of radius . Compute using cross sections.         Volume of cone   Let be the solid cone with base the disc in the -plane with equation and vertex lying directly above the origin at a height of . Compute using cross sections.         is quite general: it can be applied to any solid region with an integrable cross sectional area function . For the remainder of the section, we continue a very special type of solid: namely a solid of rotation .   Solid of revolution   A solid of revolution is a solid region obtained by rotating a planar region around a central linear axis .    Solids of revolution are a very particular sort of solid regions, and enjoy many symmetry properties. When computing their volumes with respect to their axis of symmetry, cross sections are often disks or washers , and thus the area cross section function takes a particular form. The following procedure considers two typical cases; it can be applied mutatis mutandi to solids or revolution with axis of rotation parallel to the - or -axis.   Volume of solid of revolution   In each case below, let be the solid of revolution obtained by rotating the given region around the given line .   Disks  Let be the line , and let be an integrable function on the interval satisfying for all . Define to be the region in the -plane lying between the graph of and , and between the lines and .   For all the cross section is a disk of radius .    The cross sectional area function of is thus given by .    The volume of is thus .       Washers  Let be the line , and let and be integrable functions on the interval satisfying for all . Define to be the region in the -plane lying between the graphs of and , and between the lines and .   For all the cross section of is a washer of inner radius and outer radius .    The cross sectional area function of is thus given by .    The volume of is .           Disc example   Let , let be the region in the first quadrant lying below the graph of and above the line with equation , and let be the solid obtained by rotating about .    Compute .    Sketch the solid . How else could we have computed the volume in (a)?           Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .        "
+  "body": " Volume via cross sections  In our discussion of area of regions in , we started with basic area formulas (rectangles) and investigated how we could use these basic formulas to estimate the area of more general regions via Riemann sums. This in turn motivated our definition of our area via the integral, which we understood as the limit of these estimates as they get more and more accurate. In the end we used the integral to produce a more general notion of area that could be applied to more interesting regions.  We will now take a similar approach to defining the volume of a solid region in three-space. The rough outline of our approach is meant to bring out the similarities between the two approaches.   Begin with a set of basic volume formulas assumed to be true. We will start with the volume formula for a solid cylinder of general base of area , and height .    Estimate the volume of a general region by approximating it as a union of such general cylinders and summing up their volumes.    Define the volume of the region to be the limit of these estimates and identify this limit as the integral of a certain function.   In more detail, imagine our solid lying in and choose a coordinate system with the -axis running through . Imagine slicing up with many vertical planes oriented perpendicularly to the -axis. Assume the solid lies entirely between the planes and .   For any fixed , the vertical plane intersected with yields a cross section  of that we call the -cross section.   A cross section of the solid     We approximate the portion of located between two planes planes and as a general cylinder with base and height . Let . The volume of this cylinder is given by , and we consider this an approximation of the volume of this portion of .   Volume of general cylinder     Recall that lies entirely between the planes and . To estimate the volume of we partition into equal subintervals and approximate the volume of the portion of between and as , as above. The sum of these approximations yields an approximation of the volume of : . We recognize this expression as the -th left Riemann summ of the cross section area function on the interval .    Taking the limit of these approximations as should yield the exact volume of . Thus we define .      Volume via cross sections   Let be a solid region in -space lying between the planes and . For each let be the corresponding -cross section of and let be the area of .  Assume is integrable on the interval . We define the volume  of as . The volume of can be defined with respect to any linear axis ( , the - or -axis) using an analogous formula to .     Volume via cross sections   To compute the volume of a solid region via -cross sections, proceed as follows:   Sketch along with a typical cross section .    Derive a formula for in terms of .    Determine the appropriate limits of integration: and .    Compute .        Volume of sphere   Let be the solid sphere centered at the origin of radius . Compute using cross sections.         Volume of cone   Let be the solid cone with base the disc in the -plane with equation and vertex lying directly above the origin at a height of . Compute using cross sections.         is quite general: it can be applied to any solid region with an integrable cross sectional area function . For the remainder of the section, we continue a very special type of solid: namely a solid of rotation .   Solid of revolution   A solid of revolution is a solid region obtained by rotating a planar region around a central linear axis .    Solids of revolution are a very particular sort of solid regions, and enjoy many symmetry properties. When computing their volumes with respect to their axis of symmetry, cross sections are often disks or washers , and thus the area cross section function takes a particular form. The following procedure considers two typical cases; it can be applied mutatis mutandi to solids or revolution with axis of rotation parallel to the - or -axis.   Volume of solid of revolution   In each case below, let be the solid of revolution obtained by rotating the given region around the given line .   Disks  Let be the line , and let be an integrable function on the interval satisfying for all . Define to be the region in the -plane lying between the graph of and , and between the lines and .   For all the cross section is a disk of radius .    The cross sectional area function of is thus given by .    The volume of is thus .       Washers  Let be the line , and let and be integrable functions on the interval satisfying for all . Define to be the region in the -plane lying between the graphs of and , and between the lines and .   For all the cross section of is a washer of inner radius and outer radius .    The cross sectional area function of is thus given by .    The volume of is .           Disc example   Let , let be the region in the first quadrant lying below the graph of and above the line with equation , and let be the solid obtained by rotating about .    Compute .    Sketch the solid . How else could we have computed the volume in (a)?           Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .        "
 },
 {
   "id": "d_volume",
@@ -748,11 +748,20 @@ var ptx_lunr_docs = [
   "body": " Volume via cross sections   Let be a solid region in -space lying between the planes and . For each let be the corresponding -cross section of and let be the area of .  Assume is integrable on the interval . We define the volume  of as . The volume of can be defined with respect to any linear axis ( , the - or -axis) using an analogous formula to .   "
 },
 {
+  "id": "proc_volume",
+  "level": "2",
+  "url": "s_volume.html#proc_volume",
+  "type": "Procedure",
+  "number": "1.9.2",
+  "title": "Volume via cross sections.",
+  "body": " Volume via cross sections   To compute the volume of a solid region via -cross sections, proceed as follows:   Sketch along with a typical cross section .    Derive a formula for in terms of .    Determine the appropriate limits of integration: and .    Compute .      "
+},
+{
   "id": "eg_sphere",
   "level": "2",
   "url": "s_volume.html#eg_sphere",
   "type": "Example",
-  "number": "1.9.2",
+  "number": "1.9.3",
   "title": "Volume of sphere.",
   "body": " Volume of sphere   Let be the solid sphere centered at the origin of radius . Compute using cross sections.       "
 },
@@ -761,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_volume.html#eg_cone",
   "type": "Example",
-  "number": "1.9.3",
+  "number": "1.9.4",
   "title": "Volume of cone.",
   "body": " Volume of cone   Let be the solid cone with base the disc in the -plane with equation and vertex lying directly above the origin at a height of . Compute using cross sections.       "
 },
@@ -770,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_volume.html#d_solid_of_rotation",
   "type": "Definition",
-  "number": "1.9.4",
+  "number": "1.9.5",
   "title": "Solid of revolution.",
   "body": " Solid of revolution   A solid of revolution is a solid region obtained by rotating a planar region around a central linear axis .   "
 },
@@ -779,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_volume.html#proc_solid_revolution",
   "type": "Procedure",
-  "number": "1.9.5",
+  "number": "1.9.6",
   "title": "Volume of solid of revolution.",
   "body": " Volume of solid of revolution   In each case below, let be the solid of revolution obtained by rotating the given region around the given line .   Disks  Let be the line , and let be an integrable function on the interval satisfying for all . Define to be the region in the -plane lying between the graph of and , and between the lines and .   For all the cross section is a disk of radius .    The cross sectional area function of is thus given by .    The volume of is thus .       Washers  Let be the line , and let and be integrable functions on the interval satisfying for all . Define to be the region in the -plane lying between the graphs of and , and between the lines and .   For all the cross section of is a washer of inner radius and outer radius .    The cross sectional area function of is thus given by .    The volume of is .         "
 },
@@ -788,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_volume.html#eg_disc",
   "type": "Example",
-  "number": "1.9.6",
+  "number": "1.9.7",
   "title": "Disc example.",
   "body": " Disc example   Let , let be the region in the first quadrant lying below the graph of and above the line with equation , and let be the solid obtained by rotating about .    Compute .    Sketch the solid . How else could we have computed the volume in (a)?         "
 },
@@ -797,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_volume.html#eg_washer",
   "type": "Example",
-  "number": "1.9.7",
+  "number": "1.9.8",
   "title": "Washer example.",
   "body": " Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .       "
 },
