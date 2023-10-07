@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_volume" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Volume via cross-sections</title>
+    <title>Volume via cross sections</title>
     <p>
         In our discussion of area of regions in <m>\R^2</m>, we started with basic area formulas (rectangles) and investigated how we could use these basic formulas to <em>estimate</em> the area of more general regions via Riemann sums. This in turn motivated our definition of our area via the integral, which we understood as the limit of these estimates as they get more and more accurate. In the end we used the integral to produce a <em>more general</em> notion of area that could be applied to more interesting regions. 
     </p>
@@ -15,7 +15,7 @@
             </li>
             <li>
                 <p>
-                    Estimate the volume of a general region by approximating it as a union of general cylinders and summing up their volumes. 
+                    Estimate the volume of a general region by approximating it as a union of such general cylinders and summing up their volumes. 
                 </p>
             </li>
             <li>
@@ -24,7 +24,225 @@
                 </p>
             </li>
         </ol>
+    In more detail, imagine our solid <m>\mathcal{S}</m> lying in <m>\R^3</m> and choose a coordinate system with the <m>x</m>-axis running through <m>\mathcal{S}</m>. Imagine slicing <m>\mathcal{S}</m> up with many vertical planes oriented perpendicularly to the <m>x</m>-axis. Assume the solid <m>\mathcal{S}</m> lies entirely between the planes <m>x=a</m> and <m>x=b</m>. 
+    <ul>
+        <li>
+            <p>
+                For any fixed <m>x=x_0</m>, the vertical plane <m>x=x_0</m> intersected with <m>\mathcal{S}</m> yields a <em>cross section</em> <m>S_{x_0}</m> of <m>\mathcal{S}</m> that we call the <m>x=x_0</m>-cross section. 
+            </p>
+            <image source="images/cross_sections.png" width="100%">
+                <description>A cross section of the solid <m>\mathcal{S}</m></description>
+            </image>
+        </li>
+        <li>
+            <p>
+                We <em>approximate</em> the portion of <m>\mathcal{S}</m> located between two planes planes <m>x=x_0</m> and <m>x=x_0+\Delta x</m> as a general cylinder with base <m>\mathcal{S}_{x_0}</m> and height <m>\Delta x</m>. Let <m>A(x_0)=\operatorname{area} S_{x_0}</m>. The volume of this cylinder is given by 
+                <me>
+                    V=A(x_0)\cdot \Delta x
+                </me>,
+                and we consider this an <em>approximation</em> of the volume of this portion of <m>\mathcal{S}</m>.
+            </p>
+            <image source="images/cylinder.png" width="50%">
+                <description>Volume of general cylinder<m>\mathcal{S}</m></description>
+            </image>
+        </li>
+        <li>
+            <p>
+               Recall that <m>\mathcal{S}</m> lies entirely between the planes <m>x=a</m> and <m>x=b</m>. To estimate the volume of <m>\mathcal{S}</m> we partition <m>[a,b]</m> into <m>n</m> equal subintervals 
+               <me>
+                a=x_0\lt x_1\lt \dots \lt x_n=b
+               </me>
+               and approximate the volume of the portion of <m>\mathcal{S}</m> between <m>x_k</m> and <m>x_{k+1}</m> as <m>A(x_k)\Delta x</m>, as above. The sum of these approximations yields an approximation of the volume of <m>\mathcal{S}</m>: 
+               <md>
+                <mrow>\operatorname{vol} S\amp \approx A(x_0)\Delta x+A(x_1)\Delta x+\cdots A(x_{k-1})\Delta X </mrow>
+                <mrow> \amp = \sum_{k=1}^n A(x_{k-1})\Delta x</mrow>
+               </md>.
+                We recognize this expression as the <m>n</m>-th left Riemann summ of the cross section area function <m>A(x)</m> on the interval <m>[a,b]</m>.              
+            </p>
+        </li>
+        <li>
+            <p>
+                Taking the limit of these approximations as <m>n\to \infty</m> should yield the exact volume of <m>\mathcal{S}</m>. Thus we define
+                <md>
+                    <mrow>\operatorname{vol} S \amp =\lim_{n\to\infty}\sum_{k=1}^n A(x_{k-1})\Delta x </mrow>
+                    <mrow> \amp = \int_a^b A(x)\, dx</mrow>
+                </md>. 
+            </p>
+        </li>
+    </ul> 
     </p>
-    
-
+    <definition xml:id="d_volume">
+        <title>Volume via cross sections</title>
+        <statement>
+            <p>
+              Let <m>\mathcal{S}\subseteq \R^3</m> be a solid region in <m>3</m>-space lying between the planes <m>x=a</m> and <m>x=b</m>.
+              For each <m>x\in [a,b]</m> let
+              <m>\mathcal{S}_{x}</m> be the corresponding <m>x</m>-cross section of 
+              <m>\mathcal{S}</m> and let <m>A(x)</m> be the area of <m>S_{x}</m>.
+            </p>
+            <p>
+              Assume <m>A(x)</m> is integrable on the interval <m>[a,b]</m>.
+              We define the <term>volume</term> <m>\operatorname{vol}\mathcal{S}</m> of
+              <m>\mathcal{S}</m> as 
+              <men xml:id="eq_vol_cross">
+                \operatorname{vol}\mathcal{S}=\int_a^b A(x)\, dx
+              </men>.
+              The volume of <m>\mathcal{S}</m> can be defined with respect to any linear axis (<eg/>, the <m>y</m>- or <m>z</m>-axis) using an analogous formula to <xref ref="eq_vol_cross"/>. 
+            </p>
+          </statement>
+    </definition>
+    <example xml:id="eg_sphere">
+        <title>Volume of sphere</title>
+        
+        
+        <statement>
+            <p>
+                Let <m>\mathcal{S}</m> be the solid sphere centered at the origin of radius <m>r</m>. Compute <m>\operatorname{vol}\mathcal{S}</m> using cross sections. 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_cone">
+        <title>Volume of cone</title>
+        
+        
+        <statement>
+            <p>
+                Let <m>\mathcal{S}</m> be the solid cone with base the disc <m>D</m> in the <m>xy</m>-plane with equation <m>x^2+y^2=r^2</m> and vertex <m>P</m> lying directly above the origin at a height of <m>h</m>. Compute <m>\operatorname{vol} \mathcal{S}</m> using cross sections.  
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <p>
+        <xref ref="d_volume"/> is quite general: it can be applied to any solid region with an integrable cross sectional area function <m>A(x)</m>. For the remainder of the section, we continue a very special type of solid: namely a <em>solid of rotation</em>. 
+    </p>
+    <definition xml:id="d_solid_of_rotation">
+        <title>Solid of revolution</title>
+        <statement>
+            <p>
+                A <term>solid of revolution</term> is a solid region <m>\mathcal{S}\subseteq \R^3</m> obtained by rotating a planar region <m>\mathcal{R}</m> around a central linear axis <m>L</m>. 
+            </p>
+        </statement>
+    </definition>
+    <p>
+        Solids of revolution are a very particular sort of solid regions, and enjoy many symmetry properties. When computing their volumes with respect to their axis of symmetry, cross sections are often <em>disks</em> or <em>washers</em>, and thus the area cross section function <m>A</m> takes a particular form. The following procedure considers two typical cases; it can be applied <foreign>mutatis mutandi</foreign> to solids or revolution with axis of rotation parallel to the <m>y</m>- or <m>z</m>-axis. 
+    </p>
+    <algorithm xml:id="proc_solid_revolution">
+        <title>Volume of solid of revolution</title>
+        <statement>
+            <p>
+                In each case below, let <m>\mathcal{S}</m> be the solid of revolution obtained by rotating the given region <m>\mathcal{R}</m> around the given line <m>L</m>. 
+            <ol>
+                <li>
+                    <title>Disks</title>
+                    <p>
+                        Let <m>L</m> be the line <m>y=c</m>, and let <m>f</m> be an integrable function on the interval <m>[a,b]</m> satisfying <m>f(x)\geq c</m> for all <m>x\in [a,b]</m>. Define <m>\mathcal{R}</m> to be the region in the <m>xy</m>-plane lying between the graph of <m>f</m> and <m>L</m>, and between the lines <m>x=a</m> and <m>x=b</m>. 
+                        <ul>
+                            <li>
+                                <p>
+                                    For all <m>x\in [a,b]</m> the cross section <m>\mathcal{S}_x</m> is a disk of radius <m>r_x=f(x)-c</m>. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The cross sectional area function of <m>\mathcal{S}</m> is thus given by 
+                                    <men xml:id="eq_disc_A">
+                                        A(x)=\pi(f(x)-c)^2
+                                    </men>.                                    
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The volume of <m>\mathcal{S}</m> is thus 
+                                    <men xml:id="eq_vol_disc">
+                                        \operatorname{vol}\mathcal{S}=\int_a^b\pi (f(x)-c)^2\, dx
+                                    </men>.                                    
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <title>Washers</title>
+                    <p>
+                        Let <m>L</m> be the line <m>y=c</m>, and let <m>f</m> and <m>g</m> be integrable functions on the interval <m>[a,b]</m> satisfying <m>f(x)\geq g(x)\geq c</m> for all <m>x\in [a,b]</m>. Define <m>\mathcal{R}</m> to be the region in the <m>xy</m>-plane lying between the graphs of <m>f</m> and <m>g</m>, and between the lines <m>x=a</m> and <m>x=b</m>. 
+                        <ul>
+                            <li>
+                                <p>
+                                    For all <m>x\in [a,b]</m> the cross section <m>\mathcal{S}_x</m> of <m>\mathcal{S}</m> is a washer of inner radius <m>r_x=g(x)-c</m> and outer radius <m>R_x=f(x)-c</m>. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The cross sectional area function of <m>\mathcal{S}</m> is thus given by 
+                                    <men xml:id="eq_washer_A">
+                                        A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)
+                                    </men>.                                    
+                                </p>
+                                
+                            </li>
+                            <li>
+                                <p>
+                                    The volume of <m>\mathcal{S}</m> is 
+                                    <men xml:id="eq_vol_washer">
+                                        \operatorname{vol}\mathcal{S}=\int_a^b\pi((f(x)-c)^2-(g(x)-c)^2)\, dx
+                                    </men>.                                    
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_disc">
+        <title>Disc example</title>
+        <statement>
+            <p>
+                Let <m>f(x)=5-\frac{3}{7}x</m>, let <m>\mathcal{R}</m> be the region in the first quadrant lying below the graph of <m>f</m> and above the line <m>L</m> with equation <m>y=2</m>, and let <m>\mathcal{S}</m> be the solid obtained by rotating <m>\mathcal{R}</m> about <m>L</m>.  
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Compute <m>\operatorname{vol} \mathcal{S}</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Sketch the solid <m>\mathcal{S}</m>. How else could we have computed the volume in (a)? 
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_washer">
+        <title>Washer example</title>
+        <statement>
+            <p>
+                Let <m>\mathcal{R}</m> be the region enclosed by the line <m>y+2x=2</m> and the parabola <m>y^2+x=4</m>,
+                and let <m>\mathcal{S}</m> be the solid obtained revolving
+                <m>\mathcal{R}</m> about the <m>y</m>-axis.
+                Sketch <m>\mathcal{R}</m> and compute the volume of <m>\mathcal{S}</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
 </section>
