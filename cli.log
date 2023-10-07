@@ -1,14 +1,8 @@
 INFO    : PreTeXt project found in `/Users/aarongreicius/math220-2`.
-INFO    : No change in assets requiring generating detected.  To force regeneration of assets, use `-g` flag.
-
-INFO    : Preparing to build into /Users/aarongreicius/math220-2/output/print-latex.
+INFO    : Using latest build located in `/Users/aarongreicius/math220-2/output/web`.
 INFO    : 
-Now building LaTeX into /Users/aarongreicius/math220-2/output/print-latex
-
-INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to LaTeX as /Users/aarongreicius/math220-2/output/print-latex/main.tex
-INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-latex.xsl
-INFO    : comprehensive messages, warnings, and errors:
-INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-latex.xsl
+INFO    : Preparing to deploy from active `main` git branch.
 INFO    : 
-Success! Run `pretext view print-latex` to see the results.
-
+INFO    : Changes to project source since last commit detected.
+INFO    : Add/committing these changes to local Git repository.
+INFO    : 
