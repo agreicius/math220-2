@@ -59,16 +59,16 @@
     </solution>
   </example>
   <p>
-    The usefulness of <xref ref="th_subst"/> depends on your ability to express the given integrand in the very particular form <m>f(g(x))g'(x)</m>. This is not always as easy to do as it was in <xref ref="eg_subst_easy"/>. The <xref ref="proc_subst" text="custom">substitution procedure</xref> facilitates this process, giving it a more algebraic flavor. 
+    The usefulness of <xref ref="th_subst"/> depends on your ability to express the given integrand in the very particular form <m>f(g(x))g'(x)</m>. This is not always as easy to do as it was in <xref ref="eg_subst_easy"/>. The <xref ref="proc_sub" text="custom">substitution procedure</xref> facilitates this process, giving it a more algebraic flavor. 
   </p>
-  <algorithm xml:id="proc_subst">
+  <algorithm xml:id="proc_sub">
     <title>Substitution</title>
     <statement>
         <p>
            To compute an indefinite integral <m>\int f(x)\, dx</m> using substitution, proceed as follows. 
            <ol>
             <li>
-                <title>Choose substitution function</title>
+                <title>Choose substitution</title>
                 <p>
                     Choose a differentiable function <m>u=g(x)</m> and write down the two substitution equations 
                     <mdn>
@@ -101,7 +101,7 @@
   <remark>
     <title>Substitution procedure</title>
     <p>
-        <xref ref="proc_subst"/> is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step 
+        <xref ref="proc_sub"/> is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step 
         <me>
             \int f(x)\, dx=\int h(u)\, du
         </me>. 
@@ -142,9 +142,9 @@
     </solution>
   </example>
   <p>
-    <xref ref="proc_subst"/> is a technique for computing antiderivatives. Of course, we can combine this with <xref ref="th_FTC_II" text="title"/> to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution. 
+    <xref ref="proc_sub"/> is a technique for computing antiderivatives. Of course, we can combine this with <xref ref="th_FTC_II" text="title"/> to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution. 
   </p>
-  <algorithm xml:id="proc_subst_2step">
+  <algorithm xml:id="proc_sub_2step">
     <title>Definite integral substitution: 2-step</title>
     <statement>
         <p>
@@ -152,7 +152,7 @@
             <ol>
                 <li>
                     <p>
-                        Find an antiderivative <m>F</m> of <m>f</m> using a substitution <m>u=g(x)</m> and <xref ref="proc_subst"/>. 
+                        Find an antiderivative <m>F</m> of <m>f</m> using a substitution <m>u=g(x)</m> and <xref ref="proc_sub"/>. 
                     </p>
                 </li>
                 <li>

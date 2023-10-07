@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_volume" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Volume via cross-sections</title>
+    <p>
+        In our discussion of area of regions in <m>\R^2</m>, we started with basic area formulas (rectangles) and investigated how we could use these basic formulas to <em>estimate</em> the area of more general regions via Riemann sums. This in turn motivated our definition of our area via the integral, which we understood as the limit of these estimates as they get more and more accurate. In the end we used the integral to produce a <em>more general</em> notion of area that could be applied to more interesting regions. 
+    </p>
+    <p>
+        We  will now take a similar approach to defining the volume of a solid region <m>\mathcal{S}\subseteq \R^3</m> in three-space. The rough outline of our approach is meant to bring out the similarities between the two approaches. 
+        <ol>
+            <li>
+                <p>
+                    Begin with a set of basic volume formulas assumed to be true. We will start with the volume formula <m>V=A\cdot h</m> for a solid cylinder of general base of area <m>A</m>, and height <m>h</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Estimate the volume of a general region by approximating it as a union of general cylinders and summing up their volumes. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Define the volume of the region to be the limit of these estimates and identify  this limit as the integral of a certain function. 
+                </p>
+            </li>
+        </ol>
+    </p>
+    
+
+</section>

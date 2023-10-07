@@ -1,28 +1,22 @@
 INFO    : PreTeXt project found in `/Users/aarongreicius/math220-2`.
-WARNING : Using CLI version 1.7.0 but project's `requirements.txt`
-WARNING : is configured to use 1.8.2. Consider either installing
-WARNING : CLI version 1.8.2 or changing `requirements.txt` to match 1.7.0.
-INFO    : Using latest build located in `/Users/aarongreicius/math220-2/output/web`.
+INFO    : No change in assets requiring generating detected.  To force regeneration of assets, use `-g` flag.
+
+INFO    : Preparing to build into /Users/aarongreicius/math220-2/output/web.
 INFO    : 
-INFO    : Preparing to deploy from active `main` git branch.
+Now building HTML into /Users/aarongreicius/math220-2/output/web
+
+INFO    : discovering source file's directory name: /Users/aarongreicius/math220-2/source
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/generated-assets
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.1.7
+INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpunx33x98
+INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpunx33x98
 INFO    : 
-INFO    : Changes to project source since last commit detected.
-INFO    : Add/committing these changes to local Git repository.
-INFO    : 
-INFO    : Committing your latest build to the `gh-pages` branch.
-INFO    : 
-INFO    : Attempting to connect to remote repository at `https://github.com/agreicius/math220-2.git`...
-INFO    : 
-INFO    : 
-INFO    : Latest build successfully pushed to GitHub!
-INFO    : 
-INFO    : To enable GitHub Pages, visit
-INFO    :     https://github.com/agreicius/math220-2/settings/pages
-INFO    : selecting the `gh-pages` branch with the `/ (root)` folder.
-INFO    : 
-INFO    : Visit
-INFO    :     https://github.com/agreicius/math220-2/actions/
-INFO    : to check on the status of your GitHub Pages deployment.
-INFO    : 
-INFO    : Your built project will soon be available to the public at:
-INFO    :     https://agreicius.github.io/math220-2/
+Success! Run `pretext view web` to see the results.
+

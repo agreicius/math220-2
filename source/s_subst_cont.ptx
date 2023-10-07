@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_subst_cont" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Substitution (contd) and area between curves</title>
+    <title>More substitution; area between curves</title>
     <p>
-        Before discussing the area of a region lying between two curves, we add an alternative method for definite integral substitution.
+        Before discussing the area of a region lying between two curves, we provide an alternative method to <xref ref="proc_sub_2step"/>for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other. 
     </p>
-    <algorithm xml:id="proc_subst_streamlined">
+    <algorithm xml:id="proc_sub_streamlined">
         <title>Definite integral substitution: streamlined</title>
         <statement>
             <p>
                 To compute the definite integral <m>\int_a^b f(x)\, dx</m> using the streamlined substitution method, proceed as follows. 
                 <ol>
                     <li>
+                        <title>Choose substitution</title>
                         <p>
-                            Choose a substitution 
+                            Choose a differentiable function <m>u=g(x)</m> and write down the two substitution equations
                             <mdn>
                                 <mrow xml:id="eq_sub_u">u \amp =g(x)</mrow>
                                 <mrow xml:id="eq_sub_du">du= \amp g'(x) dx</mrow>
@@ -21,12 +22,18 @@
                         </p>
                     </li>
                     <li>
+                        <title>Transform</title>
                         <p>
-                            Use <xref first="eq_sub_u" last="eq_sub_du"/> and algebra to transform the original definite integral into a new one with new limits of integration expressed in terms of <m>u</m>
+                            Use <xref first="eq_sub_u" last="eq_sub_du"/> and algebra to transform the integral of <m>f(x)</m> over <m>[a,b]</m> into an integral of a function <m>h(u)</m> over the interval <m>[g(a),g(b)]</m>: <ie/>, 
                             <men xml:id="eq_sub_streamlined">
-                                \int_{x=a}^{x=b}f(x)\, dx=\int_{\boxed{u=g(a)}}^{\boxed{u=g(b)}}h(u)\, du   
+                                \int_{x=a}^{x=b}f(x)\, dx=\int_{u=g(a)}^{u=g(b)}h(u)\, du   
                             </men>.
-                            Compute this new integral. 
+                        </p>
+                    </li>
+                    <li>
+                        <title>Compute</title>
+                        <p>
+                            Compute <m>\displaystyle \int_{g(a)}^{g(b)}h(u)\, du</m>. 
                         </p>
                     </li>
                 </ol>
@@ -34,7 +41,7 @@
         </statement>
     </algorithm>
     <example>
-        <title>Definite integral substitution: streamlined technique</title>
+        <title>Definite integral substitution: streamlined</title>
         <statement>
             <p>
                 <p>
@@ -61,15 +68,12 @@
         </solution>
     </example>
 
-    <definition xml:id="d_area_between_curves">
-        <title>Area of region between curves</title>
+    <definition xml:id="d_area_between_curves_x">
+        <title>Area between curves: functions of <m>x</m></title>
         <statement>
             <p>
                 Suppose <m>f(x)\geq g(x)</m> for all <m>x\in [a,b]</m>.
-                Let <m>\mathcal{C}_1</m> be the graph of <m>f</m>,
-                let <m>\mathcal{C}_2</m> be the graph of <m>g</m>,
-                and let <m>\mathcal{R}</m> be the region between <m>\mathcal{C}_1</m> and
-                <m>\mathcal{C}_2</m>, and between the vertical lines <m>x=a</m> and <m>x=b</m>: <ie/>, 
+                Let <m>\mathcal{R}</m> be the region between the graph of <m>f</m> and the graph of <m>g</m>, and between the vertical lines <m>x=a</m> and <m>x=b</m>: <ie/>, 
                 <me>
                     \mathcal{R}=\{(x,y)\colon a\leq x\leq b, g(x)\leq y\leq f(x)\}
                 </me>.                
@@ -78,13 +82,15 @@
                   \text{ area } (\mathcal{R})=\int_a^b f(x)-g(x)\, dx
                 </me>.
               </p>
-              <p>
-                Similarly, suppose <m>x=p(y)</m> and <m>x=p(q)</m> are two functions of <m>y</m> satisfying
+        </statement>
+    </definition>
+    <definition xml:id="d_area_between_curves_y">
+        <title>Area between curves: functions of <m>y</m></title>
+        <statement>
+            <p>
+                Suppose <m>x=p(y)</m> and <m>x=q(y)</m> are two functions of <m>y</m> satisfying
                 <m>p(y)\geq q(y)</m> for all <m>y\in [c,d]</m>.
-                Let <m>\mathcal{C}_1</m> be the graph of <m>p</m>,
-                let <m>\mathcal{C}_2</m> be the graph of <m>q</m>,
-                and let <m>\mathcal{R}</m> be the region between <m>\mathcal{C}_1</m> and
-                <m>\mathcal{C}_2</m>, and between the horizontal lines <m>y=c</m> and <m>y=d</m>: <ie/>, 
+                Let <m>\mathcal{R}</m> be the region between the graph of <m>p</m> and the graph of <m>q</m>, and between the horizontal lines <m>y=c</m> and <m>y=d</m>: <ie/>, 
                 <me>
                     \mathcal{R}=\{(x,y)\colon c\leq y\leq d, p(y)\leq x\leq q(y)\}
                 </me>.                
@@ -95,7 +101,48 @@
               </p>
         </statement>
     </definition>
+    <remark>
+        <title>Area between curves: why <m>f-g</m>?</title>
+        <p>
+          Suppose <m>f(x)\geq g(x)</m> for all <m>x\in [a,b]</m>.
+          Let <m>\mathcal{C}_1</m> be the graph of <m>f</m>,
+          let <m>\mathcal{C}_2</m> be the graph of <m>g</m>,
+          and <m>\mathcal{R}</m> be the region between <m>\mathcal{C}_1</m> and
+          <m>\mathcal{C}_2</m> over the interval <m>[a,b]</m> on the <m>x</m>-axis.
+          <ol>
+            <li>
+              <p>
+                Suppose we also have <m>f(x)\geq g(x)\geq 0</m> for all <m>x\in [a,b]</m>.
+                Then we have
+                <md>
+                  <mrow>\text{ area } (\mathcal{R})\amp =\int_a^b f(x)-g(x)\, dx</mrow>
+                  <mrow>\amp =\int_a^b f(x)\, dx -\int_a^bg(x)\, dx</mrow>
+                  <mrow>\amp =\text{ area } (\mathcal{R}_1)-\text{ area } (\mathcal{R}_2)</mrow>
+                </md>,
+                where <m>\mathcal{R}_i</m> is the region lying between
+                <m>\mathcal{C}_i</m> and the <m>x</m>-axis over the interval <m>[a,b]</m>.
+                Intuitively,
+                this difference of areas should indeed be the area between the two curves.
+              </p>
+            </li>
+            <li>
+              <p>
+                To reduce the general case <m>f(x)\geq g(x)</m> to the case above,
+                simply shift both functions
+                (and hence also <m>\mathcal{R}</m>)
+                up by a large enough constant <m>C</m> so that <m>f(x)\geq g(x)\geq 0</m>.
+                This operation does not affect the area of <m>\mathcal{R}</m>,
+                and the <m>C</m> gets canceled in the integral computation thanks to the difference operator!
+              </p>
+            </li>
+          </ol>
+        </p>
+        
+    </remark>
     <example>
+        <title>Area between parabola and line</title>
+        
+        
         <statement>
             <p>
                 Let <m>\mathcal{R}</m> be the region between the parabola <m>x+y^2=4</m> and the line <m>2x+y=2</m> lying in the first quadrant.
@@ -116,26 +163,40 @@
         <statement>
             <p>
                 Suppose <m>f</m> and <m>g</m> are continuous on the interval <m>[a,b]</m> and intersect one another finitely many times.
-                Let <m>\mathcal{R}</m> be the region between the graphs of <m>f</m> and <m>g</m> lying over the interval <m>[a,b]</m>.
+                Let <m>\mathcal{R}</m> be the region between the graphs of <m>f</m> and <m>g</m>, and between the vertical lines <m>x=a</m> and <m>x=b</m>.
                 To compute the area of <m>\mathcal{R}</m>, proceed as follows:
                 <ol>
                   <li>
                     <p>
-                      Parition <m>[a,b]</m> into subintervals over which one of the functions is always greater than or equal to the other.
+                      Partition <m>[a,b]</m> into subintervals over which one of the functions is always greater than or equal to the other.
                     </p>
                   </li>
                   <li>
                     <p>
-                      On each such subinterval compute the area of the corresponding region by integrating the appropriate difference.
+                      On each such subinterval compute the area of the corresponding region by applying <xref ref="d_area_between_curves_x"/>. Make sure to integrate the appropriate difference of functions. 
                     </p>
                   </li>
                   <li>
                     <p>
-                      Sum up the areas you compute in (2).
+                      Sum up the areas you compute in Step 2.
                     </p>
                   </li>
                 </ol>
               </p>
         </statement>
     </algorithm>
+    <example>
+        <title>Area between paraboloas</title>
+        <statement>
+            <p>
+                Compute the area of the region between the parabolas
+                <m>y=-x^2-2x</m> and <m>y=x^2-4</m> lying within the lines <m>x=-3</m> and <m>x=2</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
 </section>

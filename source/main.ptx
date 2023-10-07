@@ -32,6 +32,9 @@
       <xi:include  href="s_FTC.ptx"/>
       <xi:include  href="s_FTC_cont.ptx"/>
       <xi:include  href="s_substitution.ptx"/>
+      <xi:include  href="s_subst_cont.ptx"/>
+      <xi:include  href="s_volume.ptx"/>
+      
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
