@@ -91,6 +91,38 @@
             </p>
           </statement>
     </definition>
+    <algorithm xml:id="proc_volume">
+        <title>Volume via cross sections</title>
+        <statement>
+            <p>
+              To compute the volume of a solid region
+              <m>\mathcal{S}</m> via <m>x</m>-cross sections, proceed as follows:
+              <ol>
+                <li>
+                  <p>
+                    Sketch <m>\mathcal{S}</m> along with a typical cross section <m>\mathcal{S}_x</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Derive a formula for <m>A(x)</m> in terms of <m>x</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Determine the appropriate limits of integration:
+                    <m>x=a</m> and <m>x=b</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Compute <m>\displaystyle \int_a^b A(x)\, dx</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+    </algorithm>
     <example xml:id="eg_sphere">
         <title>Volume of sphere</title>
         
