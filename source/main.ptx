@@ -34,6 +34,7 @@
       <xi:include  href="s_substitution.ptx"/>
       <xi:include  href="s_subst_cont.ptx"/>
       <xi:include  href="s_volume.ptx"/>
+      <xi:include  href="s_inverse.ptx"/>
       
     </chapter>
     <backmatter>
