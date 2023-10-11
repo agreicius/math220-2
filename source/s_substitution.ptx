@@ -41,7 +41,7 @@
                   </li>
                   <li>
                     <p>
-                      <m>\displaystyle\int \frac{\sin(\sqrt{s})}{2\sqrt{u}}\, ds</m>
+                      <m>\displaystyle\int \frac{\sin(\sqrt{s})}{2\sqrt{s}}\, ds</m>
                     </p>
                   </li>
                   <li>
@@ -54,7 +54,34 @@
     </statement>
     <solution>
         <p>
-            
+            <ol>
+              <li>
+                <p>
+                  We have  <m> -\sin t\, \sqrt{\cos t}=f(g(t))g'(t)</m> where <m>f(t)=\sqrt{t}</m> and <m>g(t)=\cos t</m>. Since <m>F(t)=\frac{2}{3}\sqrt{x}</m> is an antiderivative of <m>f</m>, <xref ref="th_subst"/> tells us that <m>F(g(t))=\frac{2}{3}(\cos t)^{3/2}</m> is an antiderivative of <m>f(g(x))g'(x)= -\sin t\, \sqrt{\cos t}</m>. We conclude 
+                  <me>
+                    \int  -\sin t\, \sqrt{\cos t}\, dt =\frac{2}{3}(\cos t)^{3/2}+C
+                  </me>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We have  <m> \frac{\sin(\sqrt{s})}{2\sqrt{s}}=f(g(s))g'(s)</m> where <m>f(s)=\sqrt{s}</m> and <m>g(s)=\sqrt{s}</m>. Since <m>F(s)=-\cos t</m> is an antiderivative of <m>f</m>, <xref ref="th_subst"/> tells us that <m>F(g(s))=-\cos(\sqrt{s})</m> is an antiderivative of <m>f(g(x))g'(x)= \frac{\sin(\sqrt{s})}{2\sqrt{s}}</m>. We conclude 
+                  <me>
+                    \int  \frac{\sin(\sqrt{s})}{2\sqrt{s}}\, ds =-\cos(\sqrt{s})+C
+                  </me>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A similar approach as above can be applied, though here we have <m>x^2\sqrt{x^3+1}=\frac{1}{3}f(g(x))g'(x)</m>, where <m>f(x)=\sqrt{x}</m> and <m>g(x)=x^3+1</m>. It follows that 
+                  <me>
+                    \int x^2\sqrt{x^3+1}\, dx=\frac{1}{3}\int f(g(x))g'(x)\, dx=\frac{2}{9}(x^3+1)^{3/2}+C
+                  </me>,
+                  since <m>F(x)=\frac{2}{3}x^{3/2}</m> is an antiderivative of <m>f(x)=\sqrt{x}</m>. 
+                  
+                </p>
+              </li>
+            </ol>
         </p>
     </solution>
   </example>
@@ -137,7 +164,40 @@
     </statement>
     <solution>
         <p>
-            
+            <ol>
+              <li>
+                <p>
+                  We choose the substitution 
+                  <mdn >
+                    <mrow xml:id="eq_subst1_u"> u \amp= x+1 </mrow>
+                    <mrow xml:id="eq_subst1_du">du \amp = dx </mrow>
+                  </mdn>
+                  Equation <xref ref="eq_subst1_u"/> implies <m>x=u-1</m>. Transforming the integral, we get 
+                  <md>
+                    <mrow> \int\frac{x}{\sqrt{x+1}}\, dx\amp = \int \frac{u-1}{\sqrt{u}}\, du </mrow>
+                    <mrow> \amp = \int u^{1/2}-u^{-1/2}\, du</mrow>
+                    <mrow> \amp = \frac{2}{3}u^{3/2}-2u^{1/2}+C</mrow>
+                    <mrow> \amp = \frac{2}{3}(x+1)^{3/2}-2(x+1)^{1/2}+C</mrow>
+                  </md>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  We choose the substitution 
+                  <mdn >
+                    <mrow xml:id="eq_subst2_u"> u \amp= 1+\sqrt{t} </mrow>
+                    <mrow xml:id="eq_subst2_du">du \amp = \frac{1}{2\sqrt{t}} dt </mrow>
+                  </mdn>
+                  Equation <xref ref="eq_subst2_du"/> implies <m>dt=2\sqrt{t}du</m>. By <xref ref="eq_subst2_du"/>, we have <m>\sqrt{t}=u-1</m>. Thus  <m>dt=2\sqrt{t}du=2(u-1)</m>. Transforming the integral, we get 
+                  <md>
+                    <mrow> \int(1+\sqrt{t})^{100}\, dt \amp = \int u^{100}2(u-1)\, du </mrow>
+                    <mrow> \amp = 2\int u^{101}-u^{100} du</mrow>
+                    <mrow> \amp = \frac{2}{102}u^{102}-\frac{2}{101}u^{101}+C</mrow>
+                    <mrow> \amp = \frac{2}{102}(1+\sqrt{t})^{102}-\frac{2}{101}(1+\sqrt{t})^{101}+C</mrow>
+                  </md>. 
+                </p>
+              </li>
+            </ol>
         </p>
     </solution>
   </example>
