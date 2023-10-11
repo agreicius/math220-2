@@ -811,6 +811,105 @@ var ptx_lunr_docs = [
   "body": " Washer example   Let be the region enclosed by the line and the parabola , and let be the solid obtained revolving about the -axis. Sketch and compute the volume of .       "
 },
 {
+  "id": "s_inverse",
+  "level": "1",
+  "url": "s_inverse.html",
+  "type": "Section",
+  "number": "1.10",
+  "title": "Inverse functions",
+  "body": " Inverse functions   One-to-one function   A function is one-to-one on its domain if for all with . We express this with logical notation as , or equivalently, using the contrapositive, .     Inverse function   Suppose is one-to-one on its domain , and let be the range of . The inverse function of is the function with domain defined by the following rule: for any , we define to be the unique such that . In other words, is the unique function with domain satisfying for all elements in .     Horizontal line test   Let be a function with domain , and let be the graph of . The function is one-to-one on if and only if for all the horizontal line intersects in at most one point.     Monotonic   Let be a a real-valued function with domain .   The function is increasing on if for all with . Using logical notation: .    The function is decreasing on if for all with . Using logical notation: .    The function is monotonic on if is increasing on or is decreasing on .        Monotonic functions are one-to-one   If is monotonic on its domain , then is one-to-one on and hence has an inverse function.     Computing inverse   Let .   Show that is not one-to-one on .    Show that is one-to-one on and compute an inverse of with respect to this domain.            Inverse function compendium   Let be one-to-one on its domain , let be the range of , and let be the inverse of .    for all .    The domain of is , the range of ; the range of is , the domain of .    We have .    The point is on the graph of if and only if the point is on the graph of .    The graph of is the reflection of the graph of through the line .        Derivative formula for inverses   Assume is one-to-one and differentiable on the interval , and that for all . Let be the range of .   The inverse function is differentiable on .    We have for all .        Computing   Let be one-to-one on its domain , let be the range of , and let be the inverse function of . Given , to compute , proceed as follows.   Compute . This is often done by inspection: , by finding the unique such that .    Compute .    Use to conclude .        Derivative of inverse   Let be defined as on the domain of all real numbers.   Show that has an inverse function.    Plot three points on the graph of .    Compute and .           "
+},
+{
+  "id": "d_one-to-one",
+  "level": "2",
+  "url": "s_inverse.html#d_one-to-one",
+  "type": "Definition",
+  "number": "1.10.1",
+  "title": "One-to-one function.",
+  "body": " One-to-one function   A function is one-to-one on its domain if for all with . We express this with logical notation as , or equivalently, using the contrapositive, .   "
+},
+{
+  "id": "d_invertible",
+  "level": "2",
+  "url": "s_inverse.html#d_invertible",
+  "type": "Definition",
+  "number": "1.10.2",
+  "title": "Inverse function.",
+  "body": " Inverse function   Suppose is one-to-one on its domain , and let be the range of . The inverse function of is the function with domain defined by the following rule: for any , we define to be the unique such that . In other words, is the unique function with domain satisfying for all elements in .   "
+},
+{
+  "id": "th_horizontal_line",
+  "level": "2",
+  "url": "s_inverse.html#th_horizontal_line",
+  "type": "Theorem",
+  "number": "1.10.3",
+  "title": "Horizontal line test.",
+  "body": " Horizontal line test   Let be a function with domain , and let be the graph of . The function is one-to-one on if and only if for all the horizontal line intersects in at most one point.   "
+},
+{
+  "id": "d_monotonic",
+  "level": "2",
+  "url": "s_inverse.html#d_monotonic",
+  "type": "Definition",
+  "number": "1.10.4",
+  "title": "Monotonic.",
+  "body": " Monotonic   Let be a a real-valued function with domain .   The function is increasing on if for all with . Using logical notation: .    The function is decreasing on if for all with . Using logical notation: .    The function is monotonic on if is increasing on or is decreasing on .      "
+},
+{
+  "id": "th_monotonic",
+  "level": "2",
+  "url": "s_inverse.html#th_monotonic",
+  "type": "Theorem",
+  "number": "1.10.5",
+  "title": "Monotonic functions are one-to-one.",
+  "body": " Monotonic functions are one-to-one   If is monotonic on its domain , then is one-to-one on and hence has an inverse function.   "
+},
+{
+  "id": "eg_inverse",
+  "level": "2",
+  "url": "s_inverse.html#eg_inverse",
+  "type": "Example",
+  "number": "1.10.6",
+  "title": "Computing inverse.",
+  "body": " Computing inverse   Let .   Show that is not one-to-one on .    Show that is one-to-one on and compute an inverse of with respect to this domain.          "
+},
+{
+  "id": "th_inverse_function",
+  "level": "2",
+  "url": "s_inverse.html#th_inverse_function",
+  "type": "Theorem",
+  "number": "1.10.7",
+  "title": "Inverse function compendium.",
+  "body": " Inverse function compendium   Let be one-to-one on its domain , let be the range of , and let be the inverse of .    for all .    The domain of is , the range of ; the range of is , the domain of .    We have .    The point is on the graph of if and only if the point is on the graph of .    The graph of is the reflection of the graph of through the line .      "
+},
+{
+  "id": "th_IFT",
+  "level": "2",
+  "url": "s_inverse.html#th_IFT",
+  "type": "Theorem",
+  "number": "1.10.8",
+  "title": "Derivative formula for inverses.",
+  "body": " Derivative formula for inverses   Assume is one-to-one and differentiable on the interval , and that for all . Let be the range of .   The inverse function is differentiable on .    We have for all .      "
+},
+{
+  "id": "proc_IFT",
+  "level": "2",
+  "url": "s_inverse.html#proc_IFT",
+  "type": "Procedure",
+  "number": "1.10.9",
+  "title": "Computing <span class=\"process-math\">\\((f^{-1})'(b)\\)<\/span>.",
+  "body": " Computing   Let be one-to-one on its domain , let be the range of , and let be the inverse function of . Given , to compute , proceed as follows.   Compute . This is often done by inspection: , by finding the unique such that .    Compute .    Use to conclude .      "
+},
+{
+  "id": "eg_inverse_derivative",
+  "level": "2",
+  "url": "s_inverse.html#eg_inverse_derivative",
+  "type": "Example",
+  "number": "1.10.10",
+  "title": "Derivative of inverse.",
+  "body": " Derivative of inverse   Let be defined as on the domain of all real numbers.   Show that has an inverse function.    Plot three points on the graph of .    Compute and .          "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
