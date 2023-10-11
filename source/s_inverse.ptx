@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_inverse" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Inverse functions</title>
+<definition xml:id="d_one-to-one">
+    <title>One-to-one function</title>
+    <statement>
+        <p>
+          A function <m>f</m> is <term>one-to-one</term> on the set <m>X</m> if <m>f(x_1)\ne f(x_2)</m> for all
+          <m>x_1, x_2\in X</m> with <m>x_1\ne x_2</m>.
+          We express this with logical notation as
+          <me>
+            x_1\ne x_2\implies f(x_1)\ne f(x_2)
+          </me>,
+          or equivalently, using the contrapositive,
+          <me>
+            f(x_1)=f(x_2)\implies x_1=x_2
+          </me>.
+        </p>
+      </statement>
+</definition>
+
+<definition xml:id="d_monotonic">
+    <title>Monotonic</title>
+    <statement>
+        <p>
+          Let <m>f</m> be a a real-valued function defined on the set <m>X</m>.
+          <ul>
+            <li>
+              <p>
+                The function <m>f</m> is <term>increasing on <m>X</m></term>
+                if <m>f(x_1)\lt f(x_2)</m> for all
+                <m>x_1, x_2\in X</m> with <m>x_1\lt x_2</m>.
+                Using logical notation:
+                <me>
+                  x_1\lt x_2\implies f(x_1)\lt f(x_2)
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is <term>decreasing on <m>X</m></term>
+                if <m>f(x_1)>f(x_2)</m> for all
+                <m>x_1, x_2\in X</m> with <m>x_1\lt x_2</m>.
+                Using logical notation:
+                <me>
+                  x_1\lt x_2\implies f(x_1)>f(x_2)
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is <term>monotonic on <m>X</m></term>
+                if <m>f</m> is increasing on <m>X</m> or <m>f</m> is decreasing on <m>X</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+</definition>
+
+<definition xml:id="d_invertible">
+    <statement>
+        <p>
+          Suppose <m>f</m> is one-to-one on the set <m>X</m>,
+          and let <m>Y</m> be the range of <m>f</m>.
+          The <term>inverse function of <m>f</m></term>
+          is the function <m>f^{-1}</m> with domain <m>Y</m> defined by the following rule:
+          <ul>
+            <li>
+              <p>
+                Given <m>b\in Y</m> there is a unique element <m>a\in X</m> such that <m>f(a)=b</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We define <m>f^{-1}(b)=a</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+</definition>
+</section>
