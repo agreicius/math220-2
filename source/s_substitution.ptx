@@ -143,7 +143,7 @@
         is valid. 
     </p>
   </remark>
-  <example>
+  <example xml:id="eg_subst_hard">
     <title>Substitution: less straightforward</title>
     <statement>
         <p>
@@ -236,7 +236,12 @@
     </statement>
     <solution>
         <p>
-            
+            We saw in <xref ref="eg_subst_hard"/> that an antiderivative of the given integrand is <me>F(x)=\frac{2}{3}(x+1)^{3/2}-2(x+1)^{1/2}=2(x+1)^{1/2}\left(\frac{1}{3}x-\frac{2}{3}\right)</me>. We conclude using <xref ref="th_FTC_II" text="title"/> that 
+            <md>
+              <mrow>\int_1^2\frac{x}{\sqrt{x+1}}\, dx \amp =F(2)-F(1)</mrow>
+              <mrow> \amp = 2(3)^{1/2}\left(\frac{2}{3}-\frac{2}{3}\right)-2(2)^{1/2}\left(\frac{1}{3}-\frac{2}{3}\right)</mrow>
+              <mrow> \amp = \frac{2\sqrt{2}}{3}</mrow>
+            </md>.
         </p>
     </solution>
   </example>

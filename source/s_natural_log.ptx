@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_natural_log" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>The natural logarithm</title>
+<definition xml:id="d_natural_log">
+    <title>Natural logarithm</title>
+      <statement>
+        <p>
+          The <term>natural logarithm function</term> is the function <m>\ln</m> with domain <m>D=(0,\infty)</m> defined as
+          <me>
+            \ln x=\int_1^x\frac{1}{t}\, dt
+          </me>.
+        </p>
+      </statement>
+</definition>
+
+<theorem xml:id="th_log_props">
+    <title>Properties of the natural logarithm</title>
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>
+              The natural logarithm is differentiable
+              (hence also continuous)
+              on <m>(0,\infty)</m> and satisfies
+              <me>
+                \frac{d}{dx}\ln x=\frac{1}{x}
+              </me>.
+              for all <m>x</m> in <m>(0,\infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The natural logarithm is increasing on
+              <m>(0,\infty)</m> and hence one-to-one.
+              The graph of <m>\ln</m> is always concave down.
+            </p>
+          </li>
+          <li>
+            <p>
+              We have
+              <mdn>
+                <mrow xml:id="eq_log_infty">\lim_{x\to\infty}\ln x\amp =\infty</mrow>
+                <mrow xml:id="eq_log_asymptote">\lim_{x\to 0^+}\ln x\amp =-\infty</mrow>
+              </mdn>
+            </p>
+          </li>
+          <li>
+            <p> 
+              The range of <m>\ln</m> is <m>(-\infty, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ln 1=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We have
+              <mdn>
+                <mrow xml:id="eq_log_mult"> \ln(ab)\amp =\ln a+\ln b,  \text{ for all \(a,b\in (0,\infty)\). }</mrow>
+                <mrow xml:id="eq_log_quot"> \ln(a/b)\amp =\ln a-\ln b,  \text{ for all \(a,b\in (0,\infty)\), \(b\ne 0\). }</mrow>
+                <mrow xml:id="eq_log_power">\ln a^r\amp =r\ln a,  \text{ for all \(a\in (0,\infty)\) and \(r\in \R\). }</mrow> 
+              </mdn>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+</theorem>
+<remark>
+    <p>
+        Technically the expression <m>a^r</m> in <xref ref="eq_log_power"/> only has meaning for us when <m>r</m> is a <em>rational</em> number. This will be corrected in the next section. We state the property in full generality here nonetheless so that we don't have to repeat it later. 
+    </p>
+</remark>
+
+<corollary xml:id="cor_log_props">
+    <title>Antiderivative of <m>f(x)=1/x</m></title>
+    
+    
+    <statement>
+        <p>
+          The function <m>F(x)=\ln\lvert x\rvert</m> is an antiderivative of the function <m>f(x)=1/x</m> on <m>D=(-\infty, 0)\cup (0,\infty)</m>:
+          i.e., we have
+          <me>
+            \int\frac{1}{x}\, dx=\ln \vert x\rvert\, dx+C
+          </me>.
+        </p>
+      </statement>
+</corollary>
+
+<definition xml:id="d_Eulers_num">
+    <title>Euler's number</title>
+    <statement>
+      <p>
+        <term>Euler's number</term>,
+        denoted <m>e</m>, is the unique number in <m>D=(0,\infty)</m> satisfying <m>\ln e=1</m>.
+        In other words, <m>e</m> is the number satisfying
+        <me>
+          1=\int_1^e\frac{1}{t}\, dt
+        </me>.
+      </p>
+    </statement>
+</definition>
+
+<theorem xml:id="th_trig_antiderivative">
+    <title>Trigonometric antiderivatives</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle\int \tan x\, dx=-\ln\lvert \cos x\rvert+C=\ln\lvert\sec x\rvert+C</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle\int \cot x\, dx=\ln\vert \sin x\vert+C</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle\int \sec x\, dx=\ln\vert \sec x+\tan x\vert+C</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle\int \csc x\, dx=-\ln\vert \csc x+\cot x\vert+C</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+</theorem>
+
+
+</section>

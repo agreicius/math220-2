@@ -63,7 +63,51 @@
         </statement>
         <solution>
             <p>
-                
+                <ol>
+                    <li>
+                        <p>
+                            Using the substitution 
+                            <md>
+                                <mrow>u \amp =\cos x</mrow>
+                                <mrow>du \amp = -\sin x</mrow>
+                            </md>,
+                            the streamlined technique yields 
+                            <md>
+                                <mrow>\int_\pi^{2\pi}\cos^2x\sin x\, dx \amp = 
+                                    \int_{u=\cos \pi}^{u=\cos 2\pi}-u^2\, du
+                                </mrow>
+                                <mrow> \amp = -\frac{1}{3}u^3\Bigr\vert_{-1}^{1}</mrow>
+                                <mrow> \amp = -\frac{2}{3}</mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Before substituting, we do a bit of algebra:
+                            <me>
+                                \sqrt{s^8+s^6}=\sqrt{s^6(s^2+1)}=s^3\sqrt{s^2+1}
+                            </me>.
+                            This suggests the substitution
+                            <md>
+                                <mrow> u \amp = s^2+1</mrow>
+                                <mrow>du \amp =2s\, ds </mrow>
+                            </md>.
+                            To transform the given integral in terms of <m>u</m>, we further observe that 
+                            <me>
+                                s^3\, ds= s^2\cdot s\, ds=\frac{1}{2}(u-1)du
+                            </me>.
+                            Now using the streamlined method, we have 
+                            <md>
+                                <mrow>\int_{1}^{2} \sqrt{s^8+s^6}\, ds \amp =\int_{1}^{2} s^3\sqrt{s^2+1}\, ds </mrow>
+                                <mrow> \amp = \int_{u=1^2+1}^{u=2^2+1}\frac{1}{2}(u-1)\sqrt{u}\, du</mrow>
+                                <mrow> \amp = \frac{1}{2}\int_2^5 u^{3/2}-u^{1/2} </mrow>
+                                <mrow> \amp = \frac{1}{2}\left( \frac{2}{5}u^{5/2}-\frac{2}{3}u^{3/2}\right)\Bigr\vert_1^5</mrow>
+                                <mrow> \amp = \frac{10}{3}\sqrt{5}-\frac{2}{15}\sqrt{2}</mrow> 
+                            </md>.
+                            
+                        </p>
+                    </li>
+                </ol>
             </p>
         </solution>
     </example>
@@ -121,9 +165,10 @@
                 </md>,
                 where <m>\mathcal{R}_i</m> is the region lying between
                 <m>\mathcal{C}_i</m> and the <m>x</m>-axis over the interval <m>[a,b]</m>.
-                Intuitively,
-                this difference of areas should indeed be the area between the two curves.
               </p>
+              <image source="images/area_diff_2.png" width="100%">
+                <description>Area as difference of two areas</description>
+              </image>
             </li>
             <li>
               <p>
@@ -134,6 +179,9 @@
                 This operation does not affect the area of <m>\mathcal{R}</m>,
                 and the <m>C</m> gets canceled in the integral computation thanks to the difference operator!
               </p>
+              <image source="images/area_diff_1.png" width="100%">
+                <description>Shifting the region up</description>
+              </image>
             </li>
           </ol>
         </p>
@@ -153,9 +201,35 @@
               </p>
         </statement>
         <solution>
+            
             <p>
-                
-            </p>
+            Below you find a diagram of <m>\mathcal{R}</m>. The setup lends itself to a treatment in terms of <m>y</m> in part because for both equations defining the curves we can solve for <m>x</m> easily in terms of <m>y</m>. The region is naturally described as the points lying between the curves 
+            <md>
+                <mrow>x=p(y) \amp = 4-y^2</mrow>
+                <mrow>x=q(y) \amp= 1-y/2 </mrow>
+            </md>
+            and between the lines <m>y=0</m> and <m>y=2</m>. Since <m>p(y)\geq q(y)</m> for all <m>y\in [0,2]</m> we may use the area formula to compute
+            <md>
+                <mrow>\operatorname{area}\mathcal{R} \amp = \int_0^2 p(y)-q(y)\, dy</mrow>
+                <mrow> \amp = \int_0^2 3-y^2+y/2\, dy</mrow>
+                <mrow> \amp = 13/3</mrow>
+            </md>.
+        </p>
+        <image xml:id="im_area_parab_line">
+            <description>Region between parabola and line</description>
+            <sageplot>
+        x,y=var('x y')
+        g1(t)=(4-t^2,t)
+        g2(t)=(1-t/2,t)
+        p1=parametric_plot(g1,(t,-2,2),color='blue')
+        p2=parametric_plot(g2,(t,-2,2),color='red')
+        p3=region_plot([x&gt;=1-y/2,x&lt;=4-y^2,y&gt;=0],(0,4),(-2,2),incol="green", alpha=.7)
+        t1=text(r'$x+2y=1$',(2.5,-1.75),fontsize=12,color='black')
+        t2=text(r'$x+4y^2=1$',(2,1.8),fontsize=12,color='black')
+        t3=text(r'$\mathcal{R}$',(2,.5),fontsize=12,color='black')
+        p3+p1+p2+t1+t2+t3
+        </sageplot>
+        </image>
         </solution>
     </example>
     <algorithm xml:id="proc_area_curves">
@@ -186,7 +260,7 @@
         </statement>
     </algorithm>
     <example>
-        <title>Area between paraboloas</title>
+        <title>Area between parabolas</title>
         <statement>
             <p>
                 Compute the area of the region between the parabolas
@@ -194,6 +268,34 @@
             </p>
         </statement>
         <solution>
+        <p>
+            In the diagram below the region <m>\mathcal{R}</m> is described as a union of three regions <m>\mathcal{R}_i</m>, each of whose area can be computed with the area formula. We conclude 
+            <md>
+                <mrow>\operatorname{area}\mathcal{R} \amp=\operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2+\operatorname{area}\mathcal{R}_3 </mrow>
+                <mrow> \amp = \int_{-3}^{-2}(x^2-4)-(-x^2-2x)\, dx + 
+                    \int_{-2}^{1}(-x^2-2x)-(x^2-4)\, dx +
+                    \int_{1}^{2}(x^2-4)-(-x^2-2x)\, dx
+                </mrow>
+                <mrow> \amp =\frac{11}{3}+9+\frac{11}{3}</mrow>
+                <mrow> \amp = \frac{49}{3}</mrow>
+            </md> .
+        </p>
+            <image xml:id="im_two_parabolas" width="50%">
+                <description>Region between two parabolas</description>
+                <sageplot>
+x,y=var('x y')
+g1(t)=-t^2-2*t
+g2(t)=t^2-4
+p1=plot(g1,(t,-3,2),color='blue', ticks=[[-3,-2,1,2],[-8,-6,-4,-2,2,4]],aspect_ratio=.6)
+p2=plot(g2,(t,-3,2),color='red',aspect_ratio=.6)
+p3=region_plot([x&gt;=-3,x&lt;=2,g1(x)&lt;=y, y&lt;=g2(x)],(-3,2),(-8,5),incol="green", alpha=.4, aspect_ratio=.6)
+p4=region_plot([x&gt;=-3,x&lt;=2,g2(x)&lt;=y, y&lt;=g1(x)],(-3,2),(-8,5),incol="green", alpha=.4,aspect_ratio=.6)
+t1=text(r'$\mathcal{R}_1$',(-2.5,.5),fontsize=12,color='black')
+t2=text(r'$\mathcal{R}_2$',(-.75,-.75),fontsize=12,color='black')
+t3=text(r'$\mathcal{R}_3$',(1.5,-3),fontsize=12,color='black')
+p4+p3+p1+p2+t1+t2+t3
+                </sageplot>
+            </image>
             <p>
                 
             </p>

@@ -1,22 +1,24 @@
 INFO    : PreTeXt project found in `/Users/aarongreicius/math220-2`.
-INFO    : No change in assets requiring generating detected.  To force regeneration of assets, use `-g` flag.
+INFO    : Note: No webwork elements found.
+INFO    : Now generating sageplot images
 
-INFO    : Preparing to build into /Users/aarongreicius/math220-2/output/web.
-INFO    : 
-Now building HTML into /Users/aarongreicius/math220-2/output/web
 
-INFO    : discovering source file's directory name: /Users/aarongreicius/math220-2/source
-INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../generated-assets
-INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/generated-assets
-INFO    : verifying and expanding input directory: /Users/aarongreicius/math220-2/source/../assets
-INFO    : input directory expanded to absolute path: /Users/aarongreicius/math220-2/assets
-INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
-INFO    : Runestone Services (using newer, via online CDN query): version 7.1.8
-INFO    : converting /Users/aarongreicius/math220-2/source/main.ptx to HTML in /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpoa6h5e3n
-INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : converting Sage diagrams from /Users/aarongreicius/math220-2/source/main.ptx to HTML graphics for placement in /Users/aarongreicius/math220-2/generated-assets/sageplot
+INFO    : extracting Sage diagrams from /Users/aarongreicius/math220-2/source/main.ptx
+INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/extract-sageplot.xsl
 INFO    : comprehensive messages, warnings, and errors:
-INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
-INFO    : Removing temporary directory /var/folders/5v/2kxgrvl93v33176f_w7z_w0h0000gp/T/tmpoa6h5e3n
-INFO    : 
-Success! Run `pretext view web` to see the results.
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/extract-sageplot.xsl
+INFO    : converting Sage diagrams from /Users/aarongreicius/math220-2/source/main.ptx to SVG graphics for placement in /Users/aarongreicius/math220-2/generated-assets/sageplot
+INFO    : extracting Sage diagrams from /Users/aarongreicius/math220-2/source/main.ptx
+INFO    : XSL conversion of /Users/aarongreicius/math220-2/source/main.ptx by /Users/aarongreicius/.ptx/xsl/extract-sageplot.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/extract-sageplot.xsl
+INFO    : converting .sage to .sage.svg
+ERROR   : [Errno 2] No such file or directory: '.sage.svg'
+INFO    : ##################
+ERROR   : Failed to generate some sageplot elements.  Check your source and partial output to diagnose the issue.
+WARNING : Continuing...
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmp5v9o9b0w
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpcr0b4ooq
+INFO    : While running pretext, the following errors occurred:
 

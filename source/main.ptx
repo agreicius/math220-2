@@ -35,6 +35,7 @@
       <xi:include  href="s_subst_cont.ptx"/>
       <xi:include  href="s_volume.ptx"/>
       <xi:include  href="s_inverse.ptx"/>
+      <xi:include  href="s_natural_log.ptx"/>
       
     </chapter>
     <backmatter>
