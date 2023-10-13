@@ -225,7 +225,7 @@
         p2=parametric_plot(g2,(t,-2,2),color='red')
         p3=region_plot([x&gt;=1-y/2,x&lt;=4-y^2,y&gt;=0],(0,4),(-2,2),incol="green", alpha=.7)
         t1=text(r'$x+2y=1$',(2.5,-1.75),fontsize=12,color='black')
-        t2=text(r'$x+4y^2=1$',(2,1.8),fontsize=12,color='black')
+        t2=text(r'$x+y^2=4$',(2,1.8),fontsize=12,color='black')
         t3=text(r'$\mathcal{R}$',(2,.5),fontsize=12,color='black')
         p3+p1+p2+t1+t2+t3
         </sageplot>
