@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Disc example.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Disk example.</span>
 </h3>
 <div class="para">Let <span class="process-math">\(f(x)=5-\frac{3}{7}x\text{,}\)</span> let <span class="process-math">\(\mathcal{R}\)</span> be the region in the first quadrant lying below the graph of <span class="process-math">\(f\)</span> and above the line <span class="process-math">\(L\)</span> with equation <span class="process-math">\(y=2\text{,}\)</span> and let <span class="process-math">\(\mathcal{S}\)</span> be the solid obtained by rotating <span class="process-math">\(\mathcal{R}\)</span> about <span class="process-math">\(L\text{.}\)</span>
 </div> <ol class="decimal">
@@ -21,7 +21,19 @@
 <li><div class="para">Sketch the solid <span class="process-math">\(\mathcal{S}\text{.}\)</span> How else could we have computed the volume in (a)?</div></li>
 </ol>
 <div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para"></div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/disk.png" class="contained" alt="Disk diagram"></div>
+<div class="para logical">
+<div class="para">As the diagram below indicates, when rotating the given region about the line <span class="process-math">\(y=2\text{,}\)</span> we get cross sections <span class="process-math">\(\mathcal{S}_x\)</span> that are discs of radius <span class="process-math">\(r_x=f(x)-2\text{.}\)</span> Using the disc formula, we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_cone.html">
+\begin{align*}
+\operatorname{vol}\mathcal{S} \amp =\int_0^7\pi(f(x)-2)^2\, dx\\
+\amp =\int_0^7\pi(3-\frac{3}{7}x)^2\, dx\\
+\amp = \pi \int_3^0-\frac{7}{3}u^2\, du \amp (u=3-\frac{3}{7}x, du=-\frac{3}{7}dx\\
+\amp = 21 \pi\text{.}
+\end{align*}
+</div>
+<div class="para">Alternatively, we observe that the solid of revolution in this case is just a cone of radius <span class="process-math">\(3\)</span> and height 7. From <a href="" class="xref" data-knowl="./knowl/eg_cone.html" title="Example 1.9.4: Volume of cone">Example 1.9.4</a> we conclude that <span class="process-math">\(\operatorname{vol}\mathcal{S}=\frac{1}{3}\pi\cdot 3^3\cdot 7=21\pi\text{.}\)</span>
+</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/disk.png" class="contained" alt="Disk diagram"></div>
 </div></details></div></article><span class="incontext"><a class="internal" href="s_volume.html#eg_disc">in-context</a></span>
 </body>
 </html>

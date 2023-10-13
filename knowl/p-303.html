@@ -13,19 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">A function <span class="process-math">\(f\)</span> is <dfn class="terminology">one-to-one</dfn> on its domain <span class="process-math">\(D\)</span> if <span class="process-math">\(f(x_1)\ne f(x_2)\)</span> for all <span class="process-math">\(x_1, x_2\in D\)</span> with <span class="process-math">\(x_1\ne x_2\text{.}\)</span> We express this with logical notation as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\ne x_2\implies f(x_1)\ne f(x_2)\text{,}
-\end{equation*}
+<div class="para">As indicated in the diagram below, the general <span class="process-math">\(y\)</span>-cross section of this solid will be a washer of outer radius <span class="process-math">\(R_y=p(y)-0=p(y)\)</span> and inner radius <span class="process-math">\(r_y=q(y)-0=q(y)\text{.}\)</span> (The <span class="process-math">\(c\)</span> in <a href="" class="xref" data-knowl="./knowl/eq_vol_washer.html" title="Equation 1.9.5">(1.9.5)</a> is equal to 0 in this example.) We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_vol_washer.html">
+\begin{align*}
+\operatorname{vol}\mathcal{S} \amp =\int_{-3/2}^2\pi(p(y)^2-q(y)^2)\, dy\\
+\amp = \pi\int_{-3/2}^2(4-y^2)^2-(1-y/2)^2\, dy\\
+\amp = \frac{2401\pi}{80}\text{,}
+\end{align*}
 </div>
-<div class="para">or equivalently, using the contrapositive,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x_1)=f(x_2)\implies x_1=x_2\text{.}
-\end{equation*}
+<div class="para">after some elementary, if tedious integration.</div>
 </div>
-</div>
-<span class="incontext"><a class="internal" href="s_inverse.html#p-303">in-context</a></span>
+<span class="incontext"><a class="internal" href="s_volume.html#p-303">in-context</a></span>
 </body>
 </html>

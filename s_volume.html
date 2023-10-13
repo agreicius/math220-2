@@ -449,7 +449,7 @@ A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
 </li>
 </ol>
 </div></article><article class="example example-like" id="eg_disc"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Disc example.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Disk example.</span>
 </h3>
 <div class="para" id="p-297">Let <span class="process-math">\(f(x)=5-\frac{3}{7}x\text{,}\)</span> let <span class="process-math">\(\mathcal{R}\)</span> be the region in the first quadrant lying below the graph of <span class="process-math">\(f\)</span> and above the line <span class="process-math">\(L\)</span> with equation <span class="process-math">\(y=2\text{,}\)</span> and let <span class="process-math">\(\mathcal{S}\)</span> be the solid obtained by rotating <span class="process-math">\(\mathcal{R}\)</span> about <span class="process-math">\(L\text{.}\)</span>
 </div> <ol class="decimal">
@@ -458,14 +458,37 @@ A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
 <li id="li-148"><div class="para" id="p-299">Sketch the solid <span class="process-math">\(\mathcal{S}\text{.}\)</span> How else could we have computed the volume in (a)?</div></li>
 </ol>
 <div class="solutions"><details id="solution-30" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para" id="p-300"></div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/disk.png" class="contained" alt="Disk diagram"></div>
+<div class="para logical" id="p-300">
+<div class="para">As the diagram below indicates, when rotating the given region about the line <span class="process-math">\(y=2\text{,}\)</span> we get cross sections <span class="process-math">\(\mathcal{S}_x\)</span> that are discs of radius <span class="process-math">\(r_x=f(x)-2\text{.}\)</span> Using the disc formula, we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_cone.html" id="md-56">
+\begin{align*}
+\operatorname{vol}\mathcal{S} \amp =\int_0^7\pi(f(x)-2)^2\, dx\\
+\amp =\int_0^7\pi(3-\frac{3}{7}x)^2\, dx\\
+\amp = \pi \int_3^0-\frac{7}{3}u^2\, du \amp (u=3-\frac{3}{7}x, du=-\frac{3}{7}dx\\
+\amp = 21 \pi\text{.}
+\end{align*}
+</div>
+<div class="para">Alternatively, we observe that the solid of revolution in this case is just a cone of radius <span class="process-math">\(3\)</span> and height 7. From <a href="" class="xref" data-knowl="./knowl/eg_cone.html" title="Example 1.9.4: Volume of cone">Example 1.9.4</a> we conclude that <span class="process-math">\(\operatorname{vol}\mathcal{S}=\frac{1}{3}\pi\cdot 3^3\cdot 7=21\pi\text{.}\)</span>
+</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/disk.png" class="contained" alt="Disk diagram"></div>
 </div></details></div></article><article class="example example-like" id="eg_washer"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.8</span><span class="period">.</span><span class="space"> </span><span class="title">Washer example.</span>
 </h3>
 <div class="para" id="p-301">Let <span class="process-math">\(\mathcal{R}\)</span> be the region enclosed by the line <span class="process-math">\(y+2x=2\)</span> and the parabola <span class="process-math">\(y^2+x=4\text{,}\)</span> and let <span class="process-math">\(\mathcal{S}\)</span> be the solid obtained revolving <span class="process-math">\(\mathcal{R}\)</span> about the <span class="process-math">\(y\)</span>-axis. Sketch <span class="process-math">\(\mathcal{R}\)</span> and compute the volume of <span class="process-math">\(\mathcal{S}\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-31" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para" id="p-302"></div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/washer.png" class="contained" alt="Washer diagram"></div>
+<div class="para" id="p-302">The two curves have equations <span class="process-math">\(x=p(y)=4-y^2\)</span> and <span class="process-math">\(x=q(y)=1-y/2\text{.}\)</span> We find the points of intersection of these two curves by solving the corresponding system of two equations for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Setting <span class="process-math">\(x=4-y^2=1-y/2\text{,}\)</span> we see that <span class="process-math">\(2y^2-y-6=0\text{.}\)</span> Solving this quadratic yields <span class="process-math">\(y=2\)</span> or <span class="process-math">\(y=-3/2\text{.}\)</span> The two points of intersection are thus <span class="process-math">\((0,2)\)</span> and <span class="process-math">\((7/4,-3/2)\text{.}\)</span> It follows that the region <span class="process-math">\(\mathcal{R}\)</span> is the set of points lying between the curves <span class="process-math">\(x=p(y)\)</span> and <span class="process-math">\(x=q(y)\text{,}\)</span> and the horizontal lines <span class="process-math">\(y=-3/2\)</span> and <span class="process-math">\(y=2\text{.}\)</span>
+</div> <div class="para logical" id="p-303">
+<div class="para">As indicated in the diagram below, the general <span class="process-math">\(y\)</span>-cross section of this solid will be a washer of outer radius <span class="process-math">\(R_y=p(y)-0=p(y)\)</span> and inner radius <span class="process-math">\(r_y=q(y)-0=q(y)\text{.}\)</span> (The <span class="process-math">\(c\)</span> in <a href="" class="xref" data-knowl="./knowl/eq_vol_washer.html" title="Equation 1.9.5">(1.9.5)</a> is equal to 0 in this example.) We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_vol_washer.html" id="md-57">
+\begin{align*}
+\operatorname{vol}\mathcal{S} \amp =\int_{-3/2}^2\pi(p(y)^2-q(y)^2)\, dy\\
+\amp = \pi\int_{-3/2}^2(4-y^2)^2-(1-y/2)^2\, dy\\
+\amp = \frac{2401\pi}{80}\text{,}
+\end{align*}
+</div>
+<div class="para">after some elementary, if tedious integration.</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/washer.png" class="contained" alt="Washer diagram"></div>
 </div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_subst_cont.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_inverse.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
