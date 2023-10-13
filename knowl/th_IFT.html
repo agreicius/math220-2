@@ -31,6 +31,22 @@
 </div>
 </div></li>
 </ol>
-</div></article><span class="incontext"><a class="internal" href="s_inverse.html#th_IFT">in-context</a></span>
+</div></article><details class="hiddenproof"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">We will not prove (1), which is the more difficult part of this theorem. Assuming <span class="process-math">\((1)\)</span> is true, we prove (2) using the chain rule as follows. By (2) of <a href="" class="xref" data-knowl="./knowl/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>, we have <span class="process-math">\(f^{-1}(f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> Taking derivatives of both sides of this equation, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html">
+\begin{align*}
+\frac{d}{dx} (f^{-1}(f(x)))=\frac{d}{dx} x\amp \implies (f^{-1})'(f(x))f'(x)=1 \amp \text{(chain rule)}\\
+\amp \implies f^{-1}(f(x))=\frac{1}{f'(x)} \amp (f'(x)\ne 0)\text{.}
+\end{align*}
+</div>
+<div class="para">Equivalently, since for any <span class="process-math">\(b\in J\)</span> we have <span class="process-math">\(f^{-1}(b)=a\)</span> for some unique <span class="process-math">\(a\in I\)</span> satisfying <span class="process-math">\(f(a)=b\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html">
+\begin{align*}
+(f^{-1})'(b) \amp = (f^{-1})'(f(a)) \\
+\amp = \frac{1}{f'(a)} \amp \text{(by above)}\\
+\amp = \frac{1}{f'(f^{-1}(b))} \amp (a=f^{-1}(b))\text{.}
+\end{align*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_inverse.html#th_IFT">in-context</a></span>
 </body>
 </html>

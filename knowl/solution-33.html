@@ -15,7 +15,48 @@
 <h3 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.10.10.1</span><span class="period">.</span>
 </h3>
-<div class="para"></div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Since <span class="process-math">\(f'(x)=5x^4+3x^2+3\)</span> is clearly positive for all <span class="process-math">\(x\in \R\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is increasing on its domain, and hence is one-to-one. Thus <span class="process-math">\(f\)</span> has an inverse function.</div></li>
+<li><div class="para logical">
+<div class="para">Short of actually plotting points, we can at least produce a table of values for <span class="process-math">\(f^{-1}\)</span> using a table of values of <span class="process-math">\(f\text{,}\)</span> using (4) of <a href="" class="xref" data-knowl="./knowl/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html">
+\begin{align*}
+\begin{array}{c|c}
+x\amp f(x) \\
+\hline 
+-1\amp -10\\
+0 \amp -5 \\
+1 \amp -2
+\end{array}
+\amp\implies  
+\begin{array}{c|c}
+x\amp f^{-1}(x) \\
+\hline 
+-10\amp -1\\
+-5 \amp 0 \\
+-2\amp 1
+\end{array}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">For general <span class="process-math">\(b\)</span> in the domain of <span class="process-math">\(f^{-1}\)</span> (or equivalently, range of <span class="process-math">\(f\)</span>), we have by <a href="" class="xref" data-knowl="./knowl/th_IFT.html" title="Theorem 1.10.8: Derivative formula for inverses">Theorem 1.10.8</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_IFT.html">
+\begin{align*}
+f^{-1}(b) \amp = \frac{1}{f'(f^{-1}(b))}\\
+\amp = \frac{1}{5(f^{-1}(b))^4+3(f^{-1}(b))^2+3} \amp (f'(x)=5x^4+3x^2+3)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus to compute <span class="process-math">\((f^{-1})'(-5)\)</span> and <span class="process-math">\((f^{-1})'(-10)\text{,}\)</span> it remains only to compute <span class="process-math">\(f^{-1}(-5)\)</span> and <span class="process-math">\(f^{-1}(-10)\)</span> and plug these into the last expression above. We see using our table of values in (b) that <span class="process-math">\(f^{-1}(-5)=0\)</span> and <span class="process-math">\(f^{-1}(-10)=-1\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_IFT.html">
+\begin{align*}
+(f^{-1})'(-5) \amp = \frac{1}{(5\cdot 0+3\cdot 0+3)}=\frac{1}{3} \\
+(f^{-1})'(-10) \amp = \frac{1}{(5\cdot (-1)^4+3\cdot (-1)^2+3)}=\frac{1}{7} \text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div>
 </div>
 <span class="incontext"><a class="internal" href="s_inverse.html#solution-33">in-context</a></span>
 </body>
