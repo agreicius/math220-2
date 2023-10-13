@@ -267,7 +267,7 @@
         </statement>
     </algorithm>
     <example xml:id="eg_disc">
-        <title>Disc example</title>
+        <title>Disk example</title>
         <statement>
             <p>
                 Let <m>f(x)=5-\frac{3}{7}x</m>, let <m>\mathcal{R}</m> be the region in the first quadrant lying below the graph of <m>f</m> and above the line <m>L</m> with equation <m>y=2</m>, and let <m>\mathcal{S}</m> be the solid obtained by rotating <m>\mathcal{R}</m> about <m>L</m>.  
@@ -287,7 +287,14 @@
         </statement>
         <solution>
             <p>
-                
+               As the diagram below indicates, when rotating the given region about the line <m>y=2</m>, we get cross sections <m>\mathcal{S}_x</m> that are discs of radius <m>r_x=f(x)-2</m>. Using the disc formula, we conclude that 
+               <md>
+                <mrow>\operatorname{vol}\mathcal{S} \amp =\int_0^7\pi(f(x)-2)^2\, dx</mrow>
+                <mrow> \amp =\int_0^7\pi(3-\frac{3}{7}x)^2\, dx</mrow>
+                <mrow> \amp = \pi \int_3^0-\frac{7}{3}u^2\, du \amp (u=3-\frac{3}{7}x, du=-\frac{3}{7}dx</mrow>
+                <mrow> \amp = 21 \pi</mrow>
+               </md>.
+               Alternatively, we observe that the solid of revolution in this case is just a cone of radius <m>3</m> and height 7. From <xref ref="eg_cone"/> we conclude that <m>\operatorname{vol}\mathcal{S}=\frac{1}{3}\pi\cdot 3^3\cdot 7=21\pi</m>. 
             </p>
             <image source="images/disk.png" width="100%">
                 <description>Disk diagram</description>
@@ -306,7 +313,16 @@
         </statement>
         <solution>
             <p>
-                
+                The two curves have equations <m>x=p(y)=4-y^2</m> and <m>x=q(y)=1-y/2</m>. We find the points of intersection of these two curves by solving the corresponding system of two equations for <m>x</m> and <m>y</m>. Setting <m>x=4-y^2=1-y/2</m>, we see that <m>2y^2-y-6=0</m>. Solving this quadratic yields <m>y=2</m> or <m>y=-3/2</m>. The two points of intersection are thus <m>(0,2)</m> and <m>(7/4,-3/2)</m>. It follows that the region <m>\mathcal{R}</m> is the set of points lying between the curves <m>x=p(y)</m> and <m>x=q(y)</m>, and the horizontal lines <m>y=-3/2</m> and <m>y=2</m>.
+            </p>
+                <p>
+                    As indicated in the diagram below, the general <m>y</m>-cross section of this solid will be a washer of outer radius <m>R_y=p(y)-0=p(y)</m> and inner radius <m>r_y=q(y)-0=q(y)</m>. (The <m>c</m> in <xref ref="eq_vol_washer"/> is equal to 0 in this example.) We conclude that 
+                <md>
+                    <mrow>\operatorname{vol}\mathcal{S} \amp =\int_{-3/2}^2\pi(p(y)^2-q(y)^2)\, dy</mrow>
+                    <mrow> \amp = \pi\int_{-3/2}^2(4-y^2)^2-(1-y/2)^2\, dy</mrow>
+                    <mrow> \amp = \frac{2401\pi}{80}</mrow>
+                </md>,
+                after some elementary, if tedious integration. 
             </p>
             <image source="images/washer.png" width="100%">
                 <description>Washer diagram</description>
