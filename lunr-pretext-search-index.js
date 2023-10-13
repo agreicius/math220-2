@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.7",
   "title": "Substitution",
-  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule expressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                         The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                     is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .        Definite integral substitution: 2-step technique   Use substitution to compute .        "
+  "body": " Substitution  In the spirit of the De Morgan quote in , running various derivative rules in reverse yields different integration techniques. The substitution theorem is nothing more than the chain rule expressed in terms of antiderivatives.   Substitution   Let be a differentiable function on its domain, and suppose is continuous on the range of . If is an antiderivative of , then is an antiderivative of : , .    Assume is an antiderivative of , so that for all in the domain of . It follows that .     Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                        We have where and . Since is an antiderivative of , tells us that is an antiderivative of . We conclude .    We have where and . Since is an antiderivative of , tells us that is an antiderivative of . We conclude .    A similar approach as above can be applied, though here we have , where and . It follows that , since is an antiderivative of .       The usefulness of depends on your ability to express the given integrand in the very particular form . This is not always as easy to do as it was in . The substitution procedure facilitates this process, giving it a more algebraic flavor.   Substitution   To compute an indefinite integral using substitution, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the indefinite integral into a new indefinite integral expressed entirely in terms of .    Compute and substitute  Compute , if possible. Substitute for to conclude that .        Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.    Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                   We choose the substitution Equation implies . Transforming the integral, we get .    We choose the substitution Equation implies . By , we have . Thus . Transforming the integral, we get .        is a technique for computing antiderivatives. Of course, we can combine this with to obtain a substitution method for definite integrals. In the next section we will provide an alternative, more streamlined approach to computing definite integrals using substitution.   Definite integral substitution: 2-step   To compute a definite integral using substitution, proceed as follows.   Find an antiderivative of using a substitution and .    Use to conclude that .        Definite integral substitution: 2-step technique   Use substitution to compute .    We saw in that an antiderivative of the given integrand is . We conclude using that .    "
 },
 {
   "id": "th_subst",
@@ -601,7 +601,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.7.2",
   "title": "Substitution:straightforward.",
-  "body": " Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                        "
+  "body": " Substitution:straightforward   Use the substitution technique to compute the following indefinite integrals.                        We have where and . Since is an antiderivative of , tells us that is an antiderivative of . We conclude .    We have where and . Since is an antiderivative of , tells us that is an antiderivative of . We conclude .    A similar approach as above can be applied, though here we have , where and . It follows that , since is an antiderivative of .      "
 },
 {
   "id": "proc_sub",
@@ -622,13 +622,13 @@ var ptx_lunr_docs = [
   "body": " Substitution procedure   is so algebraic in flavor that we sometimes forget that the chain rule is in play here! It is baked into the transformation step . Using the substitution equations , we see that this equality is really just an algebraic short hand for the equality . Now the substitution theorem tells us that if is an antiderivative of , then is an antiderivative of . This is why our conclusion is valid.  "
 },
 {
-  "id": "example-25",
+  "id": "eg_subst_hard",
   "level": "2",
-  "url": "s_substitution.html#example-25",
+  "url": "s_substitution.html#eg_subst_hard",
   "type": "Example",
   "number": "1.7.5",
   "title": "Substitution: less straightforward.",
-  "body": " Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                   "
+  "body": " Substitution: less straightforward   Use the substitution technique to compute the following indefinite integrals.                   We choose the substitution Equation implies . Transforming the integral, we get .    We choose the substitution Equation implies . By , we have . Thus . Transforming the integral, we get .      "
 },
 {
   "id": "proc_sub_2step",
@@ -646,7 +646,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.7.7",
   "title": "Definite integral substitution: 2-step technique.",
-  "body": " Definite integral substitution: 2-step technique   Use substitution to compute .       "
+  "body": " Definite integral substitution: 2-step technique   Use substitution to compute .    We saw in that an antiderivative of the given integrand is . We conclude using that .   "
 },
 {
   "id": "s_subst_cont",
@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.8",
   "title": "More substitution; area between curves",
-  "body": " More substitution; area between curves  Before discussing the area of a region lying between two curves, we provide an alternative method to for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other.   Definite integral substitution: streamlined   To compute the definite integral using the streamlined substitution method, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the integral of over into an integral of a function over the interval : , .    Compute  Compute .        Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                      Area between curves: functions of   Suppose for all . Let be the region between the graph of and the graph of , and between the vertical lines and : , . We define the area of to be the integral of over : , .     Area between curves: functions of   Suppose and are two functions of satisfying for all . Let be the region between the graph of and the graph of , and between the horizontal lines and : , . We define the area of to be the integral of over : i.e., .     Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval . Intuitively, this difference of areas should indeed be the area between the two curves.    To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!       Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?         Area of region between intertwined curves   Suppose and are continuous on the interval and intersect one another finitely many times. Let be the region between the graphs of and , and between the vertical lines and . To compute the area of , proceed as follows:   Partition into subintervals over which one of the functions is always greater than or equal to the other.    On each such subinterval compute the area of the corresponding region by applying . Make sure to integrate the appropriate difference of functions.    Sum up the areas you compute in Step 2.        Area between paraboloas   Compute the area of the region between the parabolas and lying within the lines and .        "
+  "body": " More substitution; area between curves  Before discussing the area of a region lying between two curves, we provide an alternative method to for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other.   Definite integral substitution: streamlined   To compute the definite integral using the streamlined substitution method, proceed as follows.   Choose substitution  Choose a differentiable function and write down the two substitution equations .    Transform  Use and algebra to transform the integral of over into an integral of a function over the interval : , .    Compute  Compute .        Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                    Using the substitution , the streamlined technique yields .    Before substituting, we do a bit of algebra: . This suggests the substitution . To transform the given integral in terms of , we further observe that . Now using the streamlined method, we have .        Area between curves: functions of   Suppose for all . Let be the region between the graph of and the graph of , and between the vertical lines and : , . We define the area of to be the integral of over : , .     Area between curves: functions of   Suppose and are two functions of satisfying for all . Let be the region between the graph of and the graph of , and between the horizontal lines and : , . We define the area of to be the integral of over : i.e., .     Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval .   Area as difference of two areas     To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!   Shifting the region up        Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?    Below you find a diagram of . The setup lends itself to a treatment in terms of in part because for both equations defining the curves we can solve for easily in terms of . The region is naturally described as the points lying between the curves and between the lines and . Since for all we may use the area formula to compute .   Region between parabola and line       Area of region between intertwined curves   Suppose and are continuous on the interval and intersect one another finitely many times. Let be the region between the graphs of and , and between the vertical lines and . To compute the area of , proceed as follows:   Partition into subintervals over which one of the functions is always greater than or equal to the other.    On each such subinterval compute the area of the corresponding region by applying . Make sure to integrate the appropriate difference of functions.    Sum up the areas you compute in Step 2.        Area between parabolas   Compute the area of the region between the parabolas and lying within the lines and .    In the diagram below the region is described as a union of three regions , each of whose area can be computed with the area formula. We conclude .   Region between two parabolas        "
 },
 {
   "id": "proc_sub_streamlined",
@@ -673,7 +673,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.8.2",
   "title": "Definite integral substitution: streamlined.",
-  "body": " Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                    "
+  "body": " Definite integral substitution: streamlined    Use streamlined substitution technique to compute the following integrals.                    Using the substitution , the streamlined technique yields .    Before substituting, we do a bit of algebra: . This suggests the substitution . To transform the given integral in terms of , we further observe that . Now using the streamlined method, we have .      "
 },
 {
   "id": "d_area_between_curves_x",
@@ -700,7 +700,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.8.5",
   "title": "Area between curves: why <span class=\"process-math\">\\(f-g\\text{?}\\)<\/span>",
-  "body": " Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval . Intuitively, this difference of areas should indeed be the area between the two curves.    To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!     "
+  "body": " Area between curves: why ?  Suppose for all . Let be the graph of , let be the graph of , and be the region between and over the interval on the -axis.   Suppose we also have for all . Then we have , where is the region lying between and the -axis over the interval .   Area as difference of two areas     To reduce the general case to the case above, simply shift both functions (and hence also ) up by a large enough constant so that . This operation does not affect the area of , and the gets canceled in the integral computation thanks to the difference operator!   Shifting the region up      "
 },
 {
   "id": "example-28",
@@ -709,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.8.6",
   "title": "Area between parabola and line.",
-  "body": " Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?       "
+  "body": " Area between parabola and line   Let be the region between the parabola and the line lying in the first quadrant. Compute the are of . You may do this either by thinking of the curves as graphs of functions of , or graphs of functions of . Which approach is easier?    Below you find a diagram of . The setup lends itself to a treatment in terms of in part because for both equations defining the curves we can solve for easily in terms of . The region is naturally described as the points lying between the curves and between the lines and . Since for all we may use the area formula to compute .   Region between parabola and line     "
 },
 {
   "id": "proc_area_curves",
@@ -726,8 +726,8 @@ var ptx_lunr_docs = [
   "url": "s_subst_cont.html#example-29",
   "type": "Example",
   "number": "1.8.8",
-  "title": "Area between paraboloas.",
-  "body": " Area between paraboloas   Compute the area of the region between the parabolas and lying within the lines and .       "
+  "title": "Area between parabolas.",
+  "body": " Area between parabolas   Compute the area of the region between the parabolas and lying within the lines and .    In the diagram below the region is described as a union of three regions , each of whose area can be computed with the area formula. We conclude .   Region between two parabolas       "
 },
 {
   "id": "s_volume",
@@ -910,6 +910,69 @@ var ptx_lunr_docs = [
   "body": " Derivative of inverse   Let be defined as on the domain of all real numbers.   Show that has an inverse function.    Plot three points on the graph of .    Compute and .          "
 },
 {
+  "id": "s_natural_log",
+  "level": "1",
+  "url": "s_natural_log.html",
+  "type": "Section",
+  "number": "1.11",
+  "title": "The natural logarithm",
+  "body": " The natural logarithm   Natural logarithm   The natural logarithm function is the function with domain defined as .     Properties of the natural logarithm      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have         Technically the expression in only has meaning for us when is a rational number. This will be corrected in the next section. We state the property in full generality here nonetheless so that we don't have to repeat it later.    Antiderivative of   The function is an antiderivative of the function on : i.e., we have .     Euler's number    Euler's number , denoted , is the unique number in satisfying . In other words, is the number satisfying .     Trigonometric antiderivatives                             "
+},
+{
+  "id": "d_natural_log",
+  "level": "2",
+  "url": "s_natural_log.html#d_natural_log",
+  "type": "Definition",
+  "number": "1.11.1",
+  "title": "Natural logarithm.",
+  "body": " Natural logarithm   The natural logarithm function is the function with domain defined as .   "
+},
+{
+  "id": "th_log_props",
+  "level": "2",
+  "url": "s_natural_log.html#th_log_props",
+  "type": "Theorem",
+  "number": "1.11.2",
+  "title": "Properties of the natural logarithm.",
+  "body": " Properties of the natural logarithm      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have       "
+},
+{
+  "id": "remark-8",
+  "level": "2",
+  "url": "s_natural_log.html#remark-8",
+  "type": "Remark",
+  "number": "1.11.3",
+  "title": "",
+  "body": " Technically the expression in only has meaning for us when is a rational number. This will be corrected in the next section. We state the property in full generality here nonetheless so that we don't have to repeat it later.  "
+},
+{
+  "id": "cor_log_props",
+  "level": "2",
+  "url": "s_natural_log.html#cor_log_props",
+  "type": "Corollary",
+  "number": "1.11.4",
+  "title": "Antiderivative of <span class=\"process-math\">\\(f(x)=1\/x\\)<\/span>.",
+  "body": " Antiderivative of   The function is an antiderivative of the function on : i.e., we have .   "
+},
+{
+  "id": "d_Eulers_num",
+  "level": "2",
+  "url": "s_natural_log.html#d_Eulers_num",
+  "type": "Definition",
+  "number": "1.11.5",
+  "title": "Euler’s number.",
+  "body": " Euler's number    Euler's number , denoted , is the unique number in satisfying . In other words, is the number satisfying .   "
+},
+{
+  "id": "th_trig_antiderivative",
+  "level": "2",
+  "url": "s_natural_log.html#th_trig_antiderivative",
+  "type": "Theorem",
+  "number": "1.11.6",
+  "title": "Trigonometric antiderivatives.",
+  "body": " Trigonometric antiderivatives                            "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
@@ -978,6 +1041,7 @@ var ptx_lunr_idx = lunr(function () {
   this.ref('id')
   this.field('title')
   this.field('body')
+  this.metadataWhitelist = ['position']
 
   ptx_lunr_docs.forEach(function (doc) {
     this.add(doc)

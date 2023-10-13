@@ -12,7 +12,57 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">To reduce the general case <span class="process-math">\(f(x)\geq g(x)\)</span> to the case above, simply shift both functions (and hence also <span class="process-math">\(\mathcal{R}\)</span>) up by a large enough constant <span class="process-math">\(C\)</span> so that <span class="process-math">\(f(x)\geq g(x)\geq 0\text{.}\)</span> This operation does not affect the area of <span class="process-math">\(\mathcal{R}\text{,}\)</span> and the <span class="process-math">\(C\)</span> gets canceled in the integral computation thanks to the difference operator!</div>
-<span class="incontext"><a href="s_subst_cont.html#p-248" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">Using the substitution</div>
+<div class="displaymath process-math">
+\begin{align*}
+u \amp =\cos x\\
+du \amp = -\sin x\text{,}
+\end{align*}
+</div>
+<div class="para">the streamlined technique yields</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_\pi^{2\pi}\cos^2x\sin x\, dx \amp = 
+\int_{u=\cos \pi}^{u=\cos 2\pi}-u^2\, du\\
+\amp = -\frac{1}{3}u^3\Bigr\vert_{-1}^{1}\\
+\amp = -\frac{2}{3}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Before substituting, we do a bit of algebra:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{s^8+s^6}=\sqrt{s^6(s^2+1)}=s^3\sqrt{s^2+1}\text{.}
+\end{equation*}
+</div>
+<div class="para">This suggests the substitution</div>
+<div class="displaymath process-math">
+\begin{align*}
+u \amp = s^2+1\\
+du \amp =2s\, ds \text{.}
+\end{align*}
+</div>
+<div class="para">To transform the given integral in terms of <span class="process-math">\(u\text{,}\)</span> we further observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s^3\, ds= s^2\cdot s\, ds=\frac{1}{2}(u-1)du\text{.}
+\end{equation*}
+</div>
+<div class="para">Now using the streamlined method, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{1}^{2} \sqrt{s^8+s^6}\, ds \amp =\int_{1}^{2} s^3\sqrt{s^2+1}\, ds \\
+\amp = \int_{u=1^2+1}^{u=2^2+1}\frac{1}{2}(u-1)\sqrt{u}\, du\\
+\amp = \frac{1}{2}\int_2^5 u^{3/2}-u^{1/2} \\
+\amp = \frac{1}{2}\left( \frac{2}{5}u^{5/2}-\frac{2}{3}u^{3/2}\right)\Bigr\vert_1^5\\
+\amp = \frac{10}{3}\sqrt{5}-\frac{2}{15}\sqrt{2}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div>
+<span class="incontext"><a class="internal" href="s_subst_cont.html#p-248">in-context</a></span>
 </body>
 </html>

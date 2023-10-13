@@ -11,9 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(\mathcal{R}\)</span> be the region enclosed by the line <span class="process-math">\(y+2x=2\)</span> and the parabola <span class="process-math">\(y^2+x=4\text{,}\)</span> and let <span class="process-math">\(\mathcal{S}\)</span> be the solid obtained revolving <span class="process-math">\(\mathcal{R}\)</span> about the <span class="process-math">\(y\)</span>-axis. Sketch <span class="process-math">\(\mathcal{R}\)</span> and compute the volume of <span class="process-math">\(\mathcal{S}\text{.}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(L\)</span> be the line <span class="process-math">\(y=c\text{,}\)</span> and let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be integrable functions on the interval <span class="process-math">\([a,b]\)</span> satisfying <span class="process-math">\(f(x)\geq g(x)\geq c\)</span> for all <span class="process-math">\(x\in [a,b]\text{.}\)</span> Define <span class="process-math">\(\mathcal{R}\)</span> to be the region in the <span class="process-math">\(xy\)</span>-plane lying between the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{,}\)</span> and between the lines <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\text{.}\)</span>
 </div>
-<span class="incontext"><a href="s_volume.html#p-293" class="internal">in-context</a></span>
+<ul class="disc">
+<li><div class="para">For all <span class="process-math">\(x\in [a,b]\)</span> the cross section <span class="process-math">\(\mathcal{S}_x\)</span> of <span class="process-math">\(\mathcal{S}\)</span> is a washer of inner radius <span class="process-math">\(r_x=g(x)-c\)</span> and outer radius <span class="process-math">\(R_x=f(x)-c\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">The cross sectional area function of <span class="process-math">\(\mathcal{S}\)</span> is thus given by</div>
+<div class="displaymath process-math">
+\begin{equation}
+A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
+\end{equation}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">The volume of <span class="process-math">\(\mathcal{S}\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation}
+\operatorname{vol}\mathcal{S}=\int_a^b\pi((f(x)-c)^2-(g(x)-c)^2)\, dx\text{.}\tag{1.9.5}
+\end{equation}
+</div>
+</div></li>
+</ul>
+</div>
+<span class="incontext"><a class="internal" href="s_volume.html#p-293">in-context</a></span>
 </body>
 </html>

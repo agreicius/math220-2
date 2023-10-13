@@ -15,8 +15,24 @@
 <h3 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.8.6.1</span><span class="period">.</span>
 </h3>
-<div class="para"></div>
+<div class="para logical">
+<div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\text{.}\)</span> The setup lends itself to a treatment in terms of <span class="process-math">\(y\)</span> in part because for both equations defining the curves we can solve for <span class="process-math">\(x\)</span> easily in terms of <span class="process-math">\(y\text{.}\)</span> The region is naturally described as the points lying between the curves</div>
+<div class="displaymath process-math">
+\begin{align*}
+x=p(y) \amp = 4-y^2\\
+x=q(y) \amp= 1-y/2 
+\end{align*}
 </div>
-<span class="incontext"><a href="s_subst_cont.html#solution-26" class="internal">in-context</a></span>
+<div class="para">and between the lines <span class="process-math">\(y=0\)</span> and <span class="process-math">\(y=2\text{.}\)</span> Since <span class="process-math">\(p(y)\geq q(y)\)</span> for all <span class="process-math">\(y\in [0,2]\)</span> we may use the area formula to compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{area}\mathcal{R} \amp = \int_0^2 p(y)-q(y)\, dy\\
+\amp = \int_0^2 3-y^2+y/2\, dy\\
+\amp = 13/3\text{.}
+\end{align*}
+</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_area_parab_line.svg" role="img" class="contained" alt="Region between parabola and line"></div>
+</div>
+<span class="incontext"><a class="internal" href="s_subst_cont.html#solution-26">in-context</a></span>
 </body>
 </html>

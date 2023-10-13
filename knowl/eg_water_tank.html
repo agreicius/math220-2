@@ -23,6 +23,27 @@ r(t)=\frac{1}{\sqrt{2t+1}} \text{ gallons per minute}\text{.}
 </div>
 <div class="para">Find a formula for <span class="process-math">\(f(t)\text{,}\)</span> the amount of water in the tank after <span class="process-math">\(t\)</span> minutes.</div>
 </div>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-4-hidden.html" title="Solution 1.1.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_antiderivatives.html#eg_water_tank" class="internal">in-context</a></span>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Recall that if <span class="process-math">\(Q=f(t)\text{,}\)</span> then the function <span class="process-math">\(f'(t)\)</span> outputs the instantaneous rate of change of <span class="process-math">\(Q\)</span> with respect to <span class="process-math">\(t\)</span> at the given time. Thus in our current setting <span class="process-math">\(f'(t)\)</span> is the rate of change of the amount of water in the tank at time <span class="process-math">\(t\text{.}\)</span> We are told that water <em class="emphasis">leaks out of</em> the tank at a rate given by <span class="process-math">\(r(t)\text{.}\)</span> It  follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_antiderivative_inspection.html ./knowl/th_gen_antiderivative.html ./knowl/eq_initial.html">
+\begin{equation*}
+f'(x)=-r(t)=\frac{-1}{\sqrt{2t+1}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Put another way, <span class="process-math">\(f\)</span> is an antiderivative of <span class="process-math">\(-r(t)=-1/\sqrt{2t+1}\text{.}\)</span> An application of <a href="" class="xref" data-knowl="./knowl/proc_antiderivative_inspection.html" title="Procedure 1.1.5: Computing antiderivatives by inspection">Procedure 1.1.5</a> yields <span class="process-math">\(F(t)=-\sqrt{2t+1}\)</span> as <em class="emphasis">an</em> antiderivative of <span class="process-math">\(-r(t)\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_gen_antiderivative.html" title="Theorem 1.1.7: General antiderivative formula">Theorem 1.1.7</a> that the general antiderivative is of the form <span class="process-math">\(F(x)+C=-\sqrt{2t+1}+C\text{.}\)</span> Since <span class="process-math">\(f\)</span> is also an antiderivative, we thus have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_antiderivative_inspection.html ./knowl/th_gen_antiderivative.html ./knowl/eq_initial.html">
+\begin{equation}
+f(t)=-\sqrt{2t+1}+C\text{.}\tag{1.1.1}
+\end{equation}
+</div>
+<div class="para">To determine what the constant <span class="process-math">\(C\)</span> is, we use the <em class="emphasis">initial condition</em> <span class="process-math">\(f(0)=100\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/eq_initial.html" title="Equation 1.1.1">(1.1.1)</a> this implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_antiderivative_inspection.html ./knowl/th_gen_antiderivative.html ./knowl/eq_initial.html">
+\begin{equation*}
+100=f(0)=-\sqrt{1}+C=-1+C\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(C=101\)</span> and thus <span class="process-math">\(f(t)=101-\sqrt{2t+1}\text{.}\)</span>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_antiderivatives.html#eg_water_tank">in-context</a></span>
 </body>
 </html>

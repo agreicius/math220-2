@@ -11,17 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We <em class="emphasis">approximate</em> the portion of <span class="process-math">\(\mathcal{S}\)</span> located between two planes planes <span class="process-math">\(x=x_0\)</span> and <span class="process-math">\(x=x_0+\Delta x\)</span> as a general cylinder with base <span class="process-math">\(\mathcal{S}_{x_0}\)</span> and height <span class="process-math">\(\Delta x\text{.}\)</span> Let <span class="process-math">\(A(x_0)=\operatorname{area} S_{x_0}\text{.}\)</span> The volume of this cylinder is given by</div>
+<div class="para">In the diagram below the region <span class="process-math">\(\mathcal{R}\)</span> is described as a union of three regions <span class="process-math">\(\mathcal{R}_i\text{,}\)</span> each of whose area can be computed with the area formula. We conclude</div>
 <div class="displaymath process-math">
-\begin{equation*}
-V=A(x_0)\cdot \Delta x\text{,}
-\end{equation*}
+\begin{align*}
+\operatorname{area}\mathcal{R} \amp=\operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2+\operatorname{area}\mathcal{R}_3 \\
+\amp = \int_{-3}^{-2}(x^2-4)-(-x^2-2x)\, dx + 
+\int_{-2}^{1}(-x^2-2x)-(x^2-4)\, dx +
+\int_{1}^{2}(x^2-4)-(-x^2-2x)\, dx\\
+\amp =\frac{11}{3}+9+\frac{11}{3}\\
+\amp = \frac{49}{3}
+\end{align*}
 </div>
-<div class="para">and we consider this an <em class="emphasis">approximation</em> of the volume of this portion of <span class="process-math">\(\mathcal{S}\text{.}\)</span>
+<div class="para">.</div>
 </div>
-</div>
-<span class="incontext"><a href="s_volume.html#p-263" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="s_subst_cont.html#p-263">in-context</a></span>
 </body>
 </html>

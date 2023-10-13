@@ -13,13 +13,23 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to conclude that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
-\begin{equation*}
-\int_a^b f(x)\, dx=F(b)-F(a)\text{.}
-\end{equation*}
+<div class="para">We choose the substitution</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst1_u.html">
+\begin{align}
+u \amp= x+1 \tag{1.7.4}\\
+du \amp = dx \tag{1.7.5}
+\end{align}
+</div>
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/eq_subst1_u.html" title="Equation 1.7.4">(1.7.4)</a> implies <span class="process-math">\(x=u-1\text{.}\)</span> Transforming the integral, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst1_u.html">
+\begin{align*}
+\int\frac{x}{\sqrt{x+1}}\, dx\amp = \int \frac{u-1}{\sqrt{u}}\, du \\
+\amp = \int u^{1/2}-u^{-1/2}\, du\\
+\amp = \frac{2}{3}u^{3/2}-2u^{1/2}+C\\
+\amp = \frac{2}{3}(x+1)^{3/2}-2(x+1)^{1/2}+C\text{.}
+\end{align*}
 </div>
 </div>
-<span class="incontext"><a href="s_substitution.html#p-231" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="s_substitution.html#p-231">in-context</a></span>
 </body>
 </html>

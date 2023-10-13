@@ -10,5 +10,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para"></div></div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">We choose the substitution</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst1_u.html">
+\begin{align}
+u \amp= x+1 \tag{1.7.4}\\
+du \amp = dx \tag{1.7.5}
+\end{align}
+</div>
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/eq_subst1_u.html" title="Equation 1.7.4">(1.7.4)</a> implies <span class="process-math">\(x=u-1\text{.}\)</span> Transforming the integral, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst1_u.html">
+\begin{align*}
+\int\frac{x}{\sqrt{x+1}}\, dx\amp = \int \frac{u-1}{\sqrt{u}}\, du \\
+\amp = \int u^{1/2}-u^{-1/2}\, du\\
+\amp = \frac{2}{3}u^{3/2}-2u^{1/2}+C\\
+\amp = \frac{2}{3}(x+1)^{3/2}-2(x+1)^{1/2}+C\text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">We choose the substitution</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst2_du.html ./knowl/eq_subst2_du.html">
+\begin{align}
+u \amp= 1+\sqrt{t} \tag{1.7.6}\\
+du \amp = \frac{1}{2\sqrt{t}} dt \tag{1.7.7}
+\end{align}
+</div>
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/eq_subst2_du.html" title="Equation 1.7.7">(1.7.7)</a> implies <span class="process-math">\(dt=2\sqrt{t}du\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/eq_subst2_du.html" title="Equation 1.7.7">(1.7.7)</a>, we have <span class="process-math">\(\sqrt{t}=u-1\text{.}\)</span> Thus  <span class="process-math">\(dt=2\sqrt{t}du=2(u-1)\text{.}\)</span> Transforming the integral, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_subst2_du.html ./knowl/eq_subst2_du.html">
+\begin{align*}
+\int(1+\sqrt{t})^{100}\, dt \amp = \int u^{100}2(u-1)\, du \\
+\amp = 2\int u^{101}-u^{100} du\\
+\amp = \frac{2}{102}u^{102}-\frac{2}{101}u^{101}+C\\
+\amp = \frac{2}{102}(1+\sqrt{t})^{102}-\frac{2}{101}(1+\sqrt{t})^{101}+C\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></div></body>
 </html>

@@ -13,37 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To compute an indefinite integral <span class="process-math">\(\int f(x)\, dx\)</span> using substitution, proceed as follows.</div>
-<ol class="decimal">
-<li>
-<span class="heading"><span class="title">Choose substitution.</span></span><div class="para logical">
-<div class="para">Choose a differentiable function <span class="process-math">\(u=g(x)\)</span> and write down the two substitution equations</div>
-<div class="displaymath process-math">
-\begin{align}
-u \amp =g(x)\tag{1.7.2}\\
-du \amp = g'(x)dx\text{.}\tag{1.7.3}
-\end{align}
+<div class="para">We have  <span class="process-math">\(\frac{\sin(\sqrt{s})}{2\sqrt{s}}=f(g(s))g'(s)\)</span> where <span class="process-math">\(f(s)=\sqrt{s}\)</span> and <span class="process-math">\(g(s)=\sqrt{s}\text{.}\)</span> Since <span class="process-math">\(F(s)=-\cos t\)</span> is an antiderivative of <span class="process-math">\(f\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/th_subst.html" title="Theorem 1.7.1: Substitution">Theorem 1.7.1</a> tells us that <span class="process-math">\(F(g(s))=-\cos(\sqrt{s})\)</span> is an antiderivative of <span class="process-math">\(f(g(x))g'(x)= \frac{\sin(\sqrt{s})}{2\sqrt{s}}\text{.}\)</span> We conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_subst.html">
+\begin{equation*}
+\int  \frac{\sin(\sqrt{s})}{2\sqrt{s}}\, ds =-\cos(\sqrt{s})+C\text{.}
+\end{equation*}
 </div>
 </div>
-</li>
-<li>
-<span class="heading"><span class="title">Transform.</span></span><div class="para">Use <a href="" class="xref" data-knowl="./knowl/eq_u.html" title="Equation 1.7.2">(1.7.2)–(1.7.3)</a> and algebra to transform the indefinite integral <span class="process-math">\(\int f(x)\, dx\)</span> into a new indefinite integral <span class="process-math">\(\int h(u)\, du\)</span> expressed entirely in terms of <span class="process-math">\(u\text{.}\)</span>
-</div>
-</li>
-<li>
-<span class="heading"><span class="title">Compute and substitute.</span></span><div class="para logical">
-<div class="para">Compute <span class="process-math">\(\int h(u)\, du=F(u)+C\text{,}\)</span> if possible. Substitute <span class="process-math">\(u=g(x)\)</span> for <span class="process-math">\(u\)</span> to conclude that</div>
-<div class="displaymath process-math">
-\begin{align*}
-\int f(x)\, dx \amp =\int h(u)\, du\\
-\amp = F(u)+C\\
-\amp = F(g(x))+C\text{.}
-\end{align*}
-</div>
-</div>
-</li>
-</ol>
-</div>
-<span class="incontext"><a href="s_substitution.html#p-219" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="s_substitution.html#p-219">in-context</a></span>
 </body>
 </html>

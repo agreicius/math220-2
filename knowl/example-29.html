@@ -12,10 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8.8</span><span class="period">.</span><span class="space"> </span><span class="title">Area between paraboloas.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8.8</span><span class="period">.</span><span class="space"> </span><span class="title">Area between parabolas.</span>
 </h3>
 <div class="para">Compute the area of the region between the parabolas <span class="process-math">\(y=-x^2-2x\)</span> and <span class="process-math">\(y=x^2-4\)</span> lying within the lines <span class="process-math">\(x=-3\)</span> and <span class="process-math">\(x=2\text{.}\)</span>
 </div>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-27-hidden.html" title="Solution 1.8.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_subst_cont.html#example-29" class="internal">in-context</a></span>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">In the diagram below the region <span class="process-math">\(\mathcal{R}\)</span> is described as a union of three regions <span class="process-math">\(\mathcal{R}_i\text{,}\)</span> each of whose area can be computed with the area formula. We conclude</div>
+<div class="displaymath process-math">
+\begin{align*}
+\operatorname{area}\mathcal{R} \amp=\operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2+\operatorname{area}\mathcal{R}_3 \\
+\amp = \int_{-3}^{-2}(x^2-4)-(-x^2-2x)\, dx + 
+\int_{-2}^{1}(-x^2-2x)-(x^2-4)\, dx +
+\int_{1}^{2}(x^2-4)-(-x^2-2x)\, dx\\
+\amp =\frac{11}{3}+9+\frac{11}{3}\\
+\amp = \frac{49}{3}
+\end{align*}
+</div>
+<div class="para">.</div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_two_parabolas.svg" role="img" class="contained" alt="Region between two parabolas"></div> <div class="para"></div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_subst_cont.html#example-29">in-context</a></span>
 </body>
 </html>

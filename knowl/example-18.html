@@ -25,6 +25,26 @@
 </div></li>
 </ol>
 </div>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-17-hidden.html" title="Solution 1.4.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_definite_integral.html#example-18" class="internal">in-context</a></span>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">In the diagram below we have <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> Geometrically we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html">
+\begin{align*}
+\operatorname{sgn\, area}\mathcal{R} \amp =\operatorname{area}\mathcal{R}_1-\operatorname{area}\mathcal{R}_2\\
+\operatorname{area}\mathcal{R} \amp = \operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2
+\end{align*}
+</div>
+<div class="para">To compute <span class="process-math">\(\operatorname{R}\)</span> we use the  <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">definition of area</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html">
+\begin{align*}
+\operatorname{area}\mathcal{R} \amp = \int_0^b\abs{f(x)}\, dx\\
+\amp =\int_0^1\abs{f(x)}\, dx+\int_1^b\abs{f(x)}\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp \int_0^1 f(x)\, dx -\int_1^b f(x)\, dx \amp (\text{def. of  } \abs{f})\\
+\amp \frac{3}{4}-((b-1)-(b^4-1) \amp (\knowl{./knowl/eg_int_cubic_cont.html}{\text{1.4.7}})\\
+\amp\frac{3}{4}-b+b^4 \text{.}
+\end{align*}
+</div>
+</div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/sgn_area_cubic.png" class="contained" alt="Region defined by cubic"></div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_definite_integral.html#example-18">in-context</a></span>
 </body>
 </html>

@@ -11,9 +11,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h3 class="heading">
+<article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
-</h3>
-<div class="para">Estimate the volume of a general region by approximating it as a union of such general cylinders and summing up their volumes.</div></article><span class="incontext"><a href="s_volume.html#li-122" class="internal">in-context</a></span>
+</h4>
+<div class="para logical">
+<div class="para">Before substituting, we do a bit of algebra:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{s^8+s^6}=\sqrt{s^6(s^2+1)}=s^3\sqrt{s^2+1}\text{.}
+\end{equation*}
+</div>
+<div class="para">This suggests the substitution</div>
+<div class="displaymath process-math">
+\begin{align*}
+u \amp = s^2+1\\
+du \amp =2s\, ds \text{.}
+\end{align*}
+</div>
+<div class="para">To transform the given integral in terms of <span class="process-math">\(u\text{,}\)</span> we further observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s^3\, ds= s^2\cdot s\, ds=\frac{1}{2}(u-1)du\text{.}
+\end{equation*}
+</div>
+<div class="para">Now using the streamlined method, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{1}^{2} \sqrt{s^8+s^6}\, ds \amp =\int_{1}^{2} s^3\sqrt{s^2+1}\, ds \\
+\amp = \int_{u=1^2+1}^{u=2^2+1}\frac{1}{2}(u-1)\sqrt{u}\, du\\
+\amp = \frac{1}{2}\int_2^5 u^{3/2}-u^{1/2} \\
+\amp = \frac{1}{2}\left( \frac{2}{5}u^{5/2}-\frac{2}{3}u^{3/2}\right)\Bigr\vert_1^5\\
+\amp = \frac{10}{3}\sqrt{5}-\frac{2}{15}\sqrt{2}\text{.}
+\end{align*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="s_subst_cont.html#li-122">in-context</a></span>
 </body>
 </html>
