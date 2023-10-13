@@ -120,7 +120,20 @@
   </statement>
   <solution>
     <p>
-      
+            Using simple properties of quadratic functions, we know that <m>f</m> is decreasing on <m>(-\infty, 0]</m> and increasing on <m>[0,\infty)</m>. It follows that <m>f</m> is one-to-one on either of those smaller subintervals. Since <m>f(-2)=f(2)=5</m>, and more generally <m>f(-x)=f(x)</m> for all <m>x\in \R
+            </m>, we see that <m>f</m> is not one-to-one on <m>\R=(-\infty,\infty)</m>. 
+    </p>
+    <p>
+      Now restrict to the domain <m>D=(-\infty, 0]</m>. By definition, the domain of <m>f^{-1}</m> is the range of <m>y</m>, which is easily seen to be <m>R=[1,\infty)</m>. Given <m>y\in [1,\infty)</m>, to compute <m>f^{-1}(y)</m> we must find the unique <m>x\in D=(-\infty,0]</m> satisfying <m>f(x)=y</m>. Solving this equation for <m>x</m>, we see that  
+      <md>
+        <mrow>f(x)=y \amp \iff x^2+1=y</mrow>
+        <mrow> \amp \iff x^2=y-1 </mrow>
+        <mrow> \amp \iff x=\pm \sqrt{y-1}</mrow>
+      </md>. 
+      Since <m>\sqrt{y-1}</m> is always nonnegative, and since we seek <m>x</m> lying in <m>D=(-\infty,0]</m>, we see that we must have <m>x=-\sqrt{y-1}</m>, and thus  
+      <me>
+        f^{-1}(y)=-\sqrt{y-1}
+      </me>.
     </p>
   </solution>
 </example>
@@ -193,6 +206,21 @@
       </ol>
     </p>
   </statement>
+  <proof>
+    <p>
+      We will not prove (1), which is the more difficult part of this theorem. Assuming <m>(1)</m> is true, we prove (2) using the chain rule as follows. By (2) of <xref ref="th_inverse_function"/>, we have <m>f^{-1}(f(x))=x</m> for all <m>x</m> in the domain of <m>f</m>. Taking derivatives of both sides of this equation, we see that
+      <md>
+        <mrow> \frac{d}{dx} (f^{-1}(f(x)))=\frac{d}{dx} x\amp \implies (f^{-1})'(f(x))f'(x)=1 \amp \text{(chain rule)}</mrow>
+        <mrow> \amp \implies f^{-1}(f(x))=\frac{1}{f'(x)} \amp (f'(x)\ne 0)</mrow> 
+      </md>. 
+      Equivalently, since for any <m>b\in J</m> we have <m>f^{-1}(b)=a</m> for some unique <m>a\in I</m> satisfying <m>f(a)=b</m>, we see that 
+      <md>
+        <mrow>(f^{-1})'(b) \amp = (f^{-1})'(f(a)) </mrow>
+        <mrow> \amp = \frac{1}{f'(a)} \amp \text{(by above)}</mrow>
+        <mrow> \amp = \frac{1}{f'(f^{-1}(b))} \amp (a=f^{-1}(b))</mrow>
+      </md>.
+    </p>
+  </proof>
 </theorem>
 <algorithm xml:id="proc_IFT">
   <title>Computing <m>(f^{-1})'(b)</m></title>
@@ -237,7 +265,7 @@
         </li>
         <li>
           <p>
-            Compute <m>(f^{-1})'(-5)</m> and <m>(f^{-1})'(-8)</m>.
+            Compute <m>(f^{-1})'(-5)</m> and <m>(f^{-1})'(-10)</m>.
           </p>
         </li>
       </ol>
@@ -245,7 +273,53 @@
   </statement>
   <solution>
     <p>
-      
+      <ol>
+        <li>
+          <p>
+            Since <m>f'(x)=5x^4+3x^2+3</m> is clearly positive for all <m>x\in \R</m>, we see that <m>f</m> is increasing on its domain, and hence is one-to-one. Thus <m>f</m> has an inverse function. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Short of actually plotting points, we can at least produce a table of values for <m>f^{-1}</m> using a table of values of <m>f</m>, using (4) of <xref ref="th_inverse_function"/>.
+            <md>
+              <mrow>  
+                \begin{array}{c|c}
+                x\amp f(x) \\
+                \hline 
+                -1\amp -10\\
+                0 \amp -5 \\
+                1 \amp -2
+                \end{array}
+                
+                \amp\implies  
+              
+                \begin{array}{c|c}
+                x\amp f^{-1}(x) \\
+                \hline 
+                -10\amp -1\\
+                -5 \amp 0 \\
+                 -2\amp 1
+                \end{array}
+              </mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            For general <m>b</m> in the domain of <m>f^{-1}</m> (or equivalently, range of <m>f</m>), we have by <xref ref="th_IFT"/> 
+            <md>
+              <mrow>f^{-1}(b) \amp = \frac{1}{f'(f^{-1}(b))}</mrow>
+              <mrow> \amp = \frac{1}{5(f^{-1}(b))^4+3(f^{-1}(b))^2+3} \amp (f'(x)=5x^4+3x^2+3)</mrow>
+            </md>.
+            Thus to compute <m>(f^{-1})'(-5)</m> and <m>(f^{-1})'(-10)</m>, it remains only to compute <m>f^{-1}(-5)</m> and <m>f^{-1}(-10)</m> and plug these into the last expression above. We see using our table of values in (b) that <m>f^{-1}(-5)=0</m> and <m>f^{-1}(-10)=-1</m>. Thus
+            <md>
+              <mrow>(f^{-1})'(-5) \amp = \frac{1}{(5\cdot 0+3\cdot 0+3)}=\frac{1}{3} </mrow>
+              <mrow>(f^{-1})'(-10) \amp = \frac{1}{(5\cdot (-1)^4+3\cdot (-1)^2+3)}=\frac{1}{7} </mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
     </p>
   </solution>
 </example>
