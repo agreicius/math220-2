@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_exponential" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Exponential functions</title>
+    <definition xml:id="d_exp">
+    <title>Exponential function</title>
+      <statement>
+        <p>
+          The <term>exponential function</term>, denoted <m>\exp</m>,
+          is defined as the inverse of the natural logarithm function. Using inverse function properties, this means that we have 
+          <men xml:id="eq_exp_log">
+            \exp(x)=y \iff x=\ln y \hspace{5pt} \text{ for all } x\in \R, y\in (0,\infty)
+          </men>.     
+          We also write <m>e^x</m> for <m>\exp(x)</m>.
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="th_exp_props">
+        <title>Exponential function properties</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The exponential function is differentiable
+                (hence also continuous)
+                on all of <m>\mathbb{R}</m> and satisfies
+                <me>
+                  \frac{d}{dx}e^x=e^x
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The exponential function is increasing on <m>\R</m> and hence one-to-one.
+                The graph of <m>\exp</m> is concave up everywhere. 
+              </p>
+            </li>
+            <li>
+              <p>
+                We have
+                <mdn>
+                  <mrow xml:id="eq_exp_limit_right">\lim_{x\to\infty}e^x\amp =\infty</mrow>
+                  <mrow xml:id="eq_exp_limit_left">\lim_{x\to -\infty}e^x\amp =0</mrow>
+                </mdn>
+              </p>
+            </li>
+            <li>
+              <p>
+                The domain of <m>\exp</m> is <m>\mathbb{R}=(-\infty, \infty)</m>;
+                the range of <m>\exp</m> is <m>(0,\infty)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>e^0=1</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have
+                <mdn>
+                  <mrow> e^{x+y}\amp =e^xe^y </mrow>
+                  <mrow> e^{x-y}\amp =e^x/e^y  </mrow>
+                  <mrow> e^{xy}\amp =(e^x)^y </mrow>
+                </mdn>
+                for all <m>x,y\in\mathbb{R}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have
+                <mdn>
+                  <mrow>\ln(e^x)\amp =x, \text{ for all } x\in \R </mrow>
+                  <mrow>e^{\ln x}\amp =x, \text{ for all } x\in (0,\infty)</mrow>
+                </mdn>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+<definition xml:id="d_exp_base_a">
+    <title>Base-<m>a</m> exponential function</title>
+      <statement>
+        <p>
+          Let <m>a</m> be a fixed positive number. Given any <m>x\in \R</m>, we define the power expression <m>a^x</m> as 
+          <men xml:id="eq_exp_base_a">
+            a^x=e^{x\ln a}
+          </men>.     
+          The <term>exponential function</term> with <term>base</term> <m>a</m>, is the function <m>f</m> with domain <m>\R</m> defined as 
+          <men xml:id="eq_exp_base_a_func">
+            f(x)=a^x=a^{x\ln a}
+          </men>.          
+        </p>
+      </statement>
+</definition>
+
+<definition xml:id="d_log_base_a">
+    <title>Base-<m>a</m> logarithm</title>
+      <statement>
+        <p>
+          Let <m>a</m> be a fixed positive number.
+          The <term>logarathmic function</term> with <term>base</term> <m>a</m>,
+          denoted <m>\log_a</m> is defined as the inverse function of the base-<m>a</m> exponential function <m>f(x)=a^x</m>. 
+        </p>
+      </statement>
+</definition>
+<theorem xml:id="th_exp_log">
+    <title>Logarithmic and exponential compendium</title>
+    <statement>
+      <p>
+        The table below summarizes important properties of the functions <m>f(x)=\log_a x</m> and <m>g(x)=a^x</m> for positive base <m>a&lt; 0</m>. 
+        <table>
+            <title>Base-<m>a</m> functions, <m>a&gt; 0</m></title>
+            <tabular>
+                <row header="yes" bottom="major">
+                <cell> </cell><cell><m>f(x)=\log_a x</m> </cell> <cell><m>g(x)=a^x</m></cell>
+                </row>
+                <row>
+                    <cell>Domain</cell> <cell><m>(0,\infty)</m></cell> <cell><m>\R</m></cell>
+                </row>
+                <row>
+                    <cell>Range</cell> <cell><m>\R</m></cell> <cell><m>(0,\infty)</m></cell>
+                </row>
+                <row>
+                    <cell>Monotonicity</cell> <cell>Increasing</cell> <cell>Increasing</cell>
+                </row>
+                <row>
+                    <cell>Limit as <m>x\to\infty</m></cell> <cell><m>\infty</m></cell> <cell><m>\infty</m></cell>
+                </row>
+                <row>
+                    <cell>Limit as <m>x\to 0^+</m></cell> <cell><m>-\infty</m></cell> <cell>1</cell>
+                </row>
+                <row>
+                    <cell>Limit as <m>x\to -\infty</m></cell> <cell>NA</cell> <cell>0</cell>
+                </row>
+                <row>
+                    <cell>Relation to <m>e</m></cell> <cell><m>\log_a x=\frac{\ln x}{\ln a}</m></cell> <cell><m>a^x=e^{x\ln a}</m></cell>
+                </row>
+            </tabular>
+        </table>
+       
+      </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="th_antiderivative_compendium_log">
+    <title>Derivative/antiderivative compendium</title>
+    <statement>
+      <p>
+        We collect here the new derivative formulas obtained via logarithms and exponential functions,
+        along with their equivalent antiderivative formulas.
+        <md>
+          <mrow>\frac{d}{dx}\ln\vert x\vert=\frac{1}{x} \amp  \iff \int\frac{1}{x} \, dx=\ln\vert x\vert+C</mrow>
+          <mrow>\frac{d}{dx}\ln\vert \cos x \vert=-\tan x \amp  \iff \int\tan x \, dx=-\ln\vert \cos x \vert+C=\ln\vert\sec x\vert+C</mrow>
+          <mrow>\frac{d}{dx}\ln\vert \sin x\vert=\cot x \amp  \iff \int\cot x \, dx=\ln\vert \sin x\vert+C</mrow>
+          <mrow>\frac{d}{dx}\ln\vert \sec x+\tan x\vert=\sec x \amp  \iff \int\sec x \, dx=\ln\vert \sec x+\tan x\vert+C</mrow>
+          <mrow>\frac{d}{dx}\ln\vert \csc x+\cot x\vert=-\csc x \amp  \iff \int\csc x \, dx=-\ln\vert \csc x+\cot x\vert+C</mrow>
+          <mrow>\frac{d}{dx}e^x=e^x \amp  \iff \int e^x \, dx=e^x+C</mrow>
+          <mrow>\frac{d}{dx}a^x=(\ln a)a^x \amp  \iff \int a^x \, dx=\frac{1}{\ln a}a^x+C</mrow>
+          <mrow>\frac{d}{dx}\log_a \vert x\vert =\frac{1}{(\ln a)\, x} \amp  \iff \int \frac{1}{(\ln a)\, x} \, dx=\log_a\vert x\vert+C</mrow>
+        </md>
+      </p>
+    </statement>
+  </theorem>
+  <example xml:id="eg_log_solve">
+    <title>Solving exponential equations</title>
+    <statement>
+        <p>
+            Find all <m>t</m> satisfying <m>\displaystyle 2^{-t^2}=\frac{1}{16}</m>.
+            Simplify your answer as much as possible.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <example xml:id="eg_exp_log_deriv">
+    <title>Exponential and logarithmic derivatives</title>
+    <statement>
+        <p>
+            Compute <m>f'(x)</m> for each of the following functions.
+            <ol>
+              <li>
+                <p>
+                  <m>f(x)=\ln(\sin x)e^{\cos x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=\log_3(2^x+3^{x^2})</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <example xml:id="eg_exp_log_int">
+    <title>Exponential and logarithmic integrals</title>
+    <statement>
+        <p>
+            Compute the following definite and indefinite integrals.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle\int (e^t)^2\sin(e^{2t})\, dt</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle\int_0^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+</section>
