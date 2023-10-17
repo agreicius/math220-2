@@ -90,8 +90,9 @@
           </men>.     
           The <term>exponential function</term> with <term>base</term> <m>a</m>, is the function <m>f</m> with domain <m>\R</m> defined as 
           <men xml:id="eq_exp_base_a_func">
-            f(x)=a^x=a^{x\ln a}
-          </men>.          
+            f(x)=a^x=e^{x\ln a}
+          </men>
+          for all <m>x\in \R</m>.    
         </p>
       </statement>
 </definition>
@@ -100,8 +101,8 @@
     <title>Base-<m>a</m> logarithm</title>
       <statement>
         <p>
-          Let <m>a</m> be a fixed positive number.
-          The <term>logarathmic function</term> with <term>base</term> <m>a</m>,
+          Let <m>a</m> be a fixed positive number, <m>a\ne 1</m>.
+          The <term>logarithmic function</term> with <term>base</term> <m>a</m>,
           denoted <m>\log_a</m> is defined as the inverse function of the base-<m>a</m> exponential function <m>f(x)=a^x</m>. 
         </p>
       </statement>
@@ -110,7 +111,7 @@
     <title>Logarithmic and exponential compendium</title>
     <statement>
       <p>
-        The table below summarizes important properties of the functions <m>f(x)=\log_a x</m> and <m>g(x)=a^x</m> for positive base <m>a&lt; 0</m>. 
+        The table below summarizes important properties of the functions <m>f(x)=\log_a x</m> and <m>g(x)=a^x</m> for a base <m>a</m> satisfying <m>a&gt; 1</m>. 
         <table>
             <title>Base-<m>a</m> functions, <m>a&gt; 0</m></title>
             <tabular>
@@ -135,15 +136,44 @@
                 <row>
                     <cell>Limit as <m>x\to -\infty</m></cell> <cell>NA</cell> <cell>0</cell>
                 </row>
+                
                 <row>
-                    <cell>Relation to <m>e</m></cell> <cell><m>\log_a x=\frac{\ln x}{\ln a}</m></cell> <cell><m>a^x=e^{x\ln a}</m></cell>
+                  <cell>Properties</cell> 
+                  <cell>
+                    <line><m>\log_a(xy)=\log_a x+\log_a y</m></line>
+                    <line><m>\log_a(x^y)=y\log_a</m></line>
+                    <line><m>\log_a(a^x)=x</m></line>
+                  </cell> 
+                  <cell>
+                    <line><m>a^{x+y}=a^xa^y</m></line>
+                    <line><m>a^{xy}=(a^x)^y</m></line>
+                    <line><m>a^{\log_a x}=x</m></line>
+                  </cell> 
                 </row>
+                <row>
+                  <cell>Relation to <m>e</m></cell> <cell><m>\log_a x=\frac{\ln x}{\ln a}</m></cell> <cell><m>a^x=e^{x\ln a}</m></cell>
+              </row>
             </tabular>
         </table>
        
       </p>
     </statement>
   </theorem>
+  <theorem xml:id="th_log_change_base">
+    <title>Logarithmic change of base</title>
+    
+    <statement>
+      <p>
+        Let <m>a</m> and <m>b</m> be positive numbers. We have 
+        <men xml:id="eq_log_change_base">
+          \log_a x=\frac{\log_b x}{\log_b a}
+        </men>
+        for all <m>x\in (0,\infty)</m>. 
+        
+      </p>
+    </statement>
+  </theorem>
+  
   <theorem xml:id="th_antiderivative_compendium_log">
     <title>Derivative/antiderivative compendium</title>
     <statement>
