@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<section xml:id="separable_diffeq" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Separable differential equations</title>
+    
+    <definition xml:id="d_exp_grow_decay">
+      <title>Exponential growth and decay</title>
+      <statement>
+        <p>
+          Suppose the function <m>f(x)</m> satisfies the differential equation
+          <men xml:id="eq_exp_change">
+            f'(x)=k\, f(x)
+          </men>,
+          where <m>k</m> is a fixed constant.
+        </p>
+        <p>
+          If <m>k&gt; 0</m> then <m>f(x)</m> is said to undergo
+          <term>exponential growth</term>.
+        </p>
+        <p>
+          If <m>k&lt; 0</m> then <m>f(x)</m> is said to undergo
+          <term>exponential decay</term>.
+        </p>
+      </statement>
+    </definition>
+    
+    
+    <definition xml:id="d_diffeq">
+        <title>First-order differential equation</title>
+        <statement>
+          <p>
+            A <term>first-order differential equation</term> for the function <m>f</m>
+            is an equation that can be written in the form
+            <men xml:id="eq_diffeq">
+              f'(x)=F(x,f(x)) 
+            </men>
+            where <m>F(x,f(x))</m> denotes an arbitrary expression involving <m>x</m> and <m>f(x)</m>.
+          </p>
+          <p>
+            A <term>solution</term> to a differential equation is any function <m>f</m> that satisfies equation <xref ref="eq_diffeq"/>; as such it is useful to think of the function <m>f</m> in this context as an unknown that we are trying to solve for. 
+            The <term>general solution</term> to a differential equation is a formula,
+            possibly containing undetermined constants,
+            describing all solutions to the differential equation.
+          </p>
+        </statement>
+      </definition>
+      <definition xml:id="d_sep_diffeq">
+        <title>Separable first-order differential equation</title>
+        <statement>
+          <p>
+            A <term>separable differential equation</term> for the function <m>f</m>
+            is a differential equation that can be written in the form
+            <men xml:id="eq_sep_diffeq_prime">
+              f'(x)=g(x)h(f(x))
+            </men>,
+            or equivalently, letting <m>y=f(x)</m>, 
+            <men xml:id="eq_sep_diffeq_alg">
+              \frac{dy}{dx}=g(x)h(y)
+            </men>.
+          </p>
+        </statement>
+      </definition>
+
+      <algorithm xml:id="proc_sep_vars">
+        <title>Separation of variables (algebraic form)</title>
+        <statement>
+          <p>
+            To solve a separable differential equation of the form
+            <men xml:id="eq_sep_vars">
+              \frac{dy}{dx}=g(x)h(y)
+            </men>
+            for the function <m>y=f(x)</m>, proceed as follows. 
+            <ol>
+              <li>
+                <title>Separation</title>
+                <p>
+                  Write the equation as
+                  <me>
+                    \frac{1}{h(y)}\, dy=g(x)\, dx
+                  </me>
+                  and take take the indefinite integral of both sides.
+                  <me>
+                    \int \frac{1}{h(y)}\, dy=\int g(x)\, dx
+                  </me>.
+                </p>
+              </li>
+              <li>
+                <title>Integration</title>
+                <p>
+                  Attempt to find an antiderivative <m>F(y)</m> of <m>1/h(y)</m> and an antiderivative <m>G(x)</m> for <m>g(x)</m>.
+                </p>
+              </li>
+              <li>
+                <title>Algebra</title>
+                <p>
+                  The resulting general equation 
+                  <men xml:id="eq_sep_vars_implicit">
+                    F(y)=G(x)+C
+                  </men>
+                  is said to be an <term>implicit solution</term> of the differential equation <xref ref="eq_sep_vars"/>. An <term>explicit solution</term> is obtained from <xref ref="eq_sep_vars_implicit"/> by solving for <m>y</m> in terms of <m>x</m> and <m>C</m>, if possible.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </algorithm>
+
+
+      
+    
+      <example>
+        <title>Separation of variables</title>
+        <statement>
+          <p>
+            Solve the following differential equations using separation of variables.
+            If an initial condition is given,
+            provide the corresponding particular solution.
+            Otherwise, give the general solution.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle f'(x)=xf(x)+x</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle\frac{dy}{dx}=\frac{x^3}{y^2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\cot x \cdot f'(x)+f(x)=2</m>, <m>f(0)=0</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            
+          </p>
+        </solution>
+      </example>
+      <example xml:id="eg_Newton_cooling">
+        <title>Newton's law of cooling</title>
+        <statement>
+          <p>
+            Suppose a hot object cools in a room kept at constant temperature of <m>T_0</m>
+            (in celcius).
+            Newton's law of cooling states that the rate at which the object cools
+            (with respect to time)
+            is proportional to the <em>difference</em>
+            between its current temperature and the room temperature <m>T_0</m>.
+            <ol>
+              <li>
+                <p>
+                  Write a differential equation that describes Newton's law of cooling in this setting.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the general solution to this differential equation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find a the particular solution to the situation where <m>T_0=15
+                    ^\circ</m>C, the object's initial temperature is <m>100
+                  ^\circ</m>C, and after <m>5</m> minutes the object's temperature is <m>80</m><m>^\circ</m>C.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            
+          </p>
+        </solution>
+      </example>
+      
+</section>
