@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_lHop_B" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>More on l'H&#xf4;pital's rule</title>
+    <definition xml:id="d_indeterminate_further">
+        <title>More indeterminate forms</title>
+        <statement>
+            <p>
+              Assume <m>a</m> is either a finite number or <m>\pm\infty</m>.
+            </p>
+            <p>
+              If <m>\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=\infty</m>,
+              then <m>\displaystyle\lim_{x\to a}f(x)-g(x)</m> is an
+              <term>indeterminate form of type <m>\infty-\infty</m></term>.
+            </p>
+            <p>
+              If <m>\displaystyle\lim_{x\to a}f(x)=0</m> and <m>\lim_{x\to a}g(x)=\pm\infty</m>,
+              then <m>\displaystyle\lim_{x\to a}f(x)g(x)</m> is an <term>indeterminate</term>
+              form of type <m>0\cdot\infty</m>.
+            </p>
+            <p>
+              If <m>\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0</m>,
+              then <m>\displaystyle\lim_{x\to a}f(x)^{g(x)}</m> is an
+              <term>indeterminate form of type <m>0^0</m></term>.
+            </p>
+            <p>
+              If <m>\displaystyle\lim_{x\to a}f(x)=\infty</m> and <m>\lim_{x\to a}g(x)=0</m>,
+              then <m>\displaystyle\lim_{x\to a}f(x)^{g(x)}</m> is an
+              <term>indeterminate form of type <m>\infty^0</m></term>.
+            </p>
+            <p>
+              If <m>\displaystyle\lim_{x\to a}f(x)=1</m> and <m>\lim_{x\to a}g(x)=\infty</m>,
+              then <m>\displaystyle\lim_{x\to a}f(x)^{g(x)}</m> is an
+              <term>indeterminate form of type <m>1^\infty</m></term>.
+            </p>
+          </statement>
+    </definition>
+    <example>
+        <title>More l'H&#xf4;pital's rule</title>
+        <statement>
+            <p>
+                Compute the following limits.
+                <ol>
+                  <li>
+                    <p>
+                      <m>\displaystyle\lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\lim_{x\to \infty}2x-\sqrt{4x^2-13x}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\lim_{x\to -\infty}x^22^{x}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\lim_{x\to 0^+}(1+x)^{1/x}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\lim_{x\to \infty}(1+x^2)^{2/x}</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+</section>
