@@ -38,6 +38,7 @@
       <xi:include  href="s_natural_log.ptx"/>
       <xi:include  href="s_exponential.ptx"/>
       <xi:include  href="s_sep_diffeq.ptx"/>
+      <xi:include  href="s_lHop_A.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
