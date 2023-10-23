@@ -287,7 +287,28 @@
     </statement>
     <solution>
         <p>
-            
+            <ol>
+              <li>
+                <p>
+                  We have 
+                  <md>
+                    <mrow> \int (e^t)^2\sin(e^{2t})\, dt \amp \int u \sin (u^2)\, du \amp (u=e^t, du=e^t\, dt</mrow>
+                    <mrow> \amp = -\frac{1}{2}\cos u^2 +C</mrow>
+                    <mrow> \amp = -\frac{1}{2}\cos (e^{2t})+C</mrow>
+                  </md>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Consider the somewhat tricky substitution: <m>u=2^{\cos 2^x}</m>, <m>du=-(\ln 2)^2\sin 2^x\cdot 2^x\cdot 2^{\cos 2^x} dx</m>. We then have 
+                  <md>
+                    <mrow>\int_{0}^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx \amp = -\frac{1}{(\ln 2)^2}\int_{2^{\cos 1}}^{2^{\cos 2^\pi}} du </mrow>
+                    <mrow> \amp = -\frac{1}{(\ln 2)^2}u\Bigr\vert_{2^{\cos 1}}^{2^{\cos 2^\pi}}</mrow>
+                    <mrow> \amp = \frac{1}{(\ln 2)^2}(2^{\cos 1}-2^{\cos 2^\pi})</mrow>
+                  </md>.
+                </p>
+              </li>
+            </ol>
         </p>
     </solution>
   </example>
