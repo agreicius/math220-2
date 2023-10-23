@@ -258,7 +258,7 @@
                   We have 
                   <md>
                     <mrow>f'(x) \amp = \frac{(2^x+3^{x^2})'}{\ln 3(2^x+3^{x^2})}</mrow>
-                    <mrow> \amp = \frac{\ln 2\cdot 2^x+2\ln 3 \cdot x 3^{x^2}}{\ln 3(2^x+3^{x^2})}</mrow>
+                    <mrow> \amp = \frac{\ln 2\cdot 2^x+2\ln 3 \cdot x \cdot 3^{x^2}}{\ln 3(2^x+3^{x^2})}</mrow>
                   </md>.
                 </p>
               </li>
