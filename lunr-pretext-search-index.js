@@ -979,7 +979,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.12",
   "title": "Exponential functions",
-  "body": " Exponential functions   Exponential function   The exponential function , denoted , is defined as the inverse of the natural logarithm function. Using inverse function properties, this means that we have . We also write for .     Exponential function properties      The exponential function is differentiable (hence also continuous) on all of and satisfies .    The exponential function is increasing on and hence one-to-one. The graph of is concave up everywhere.    We have     The domain of is ; the range of is .     .    We have for all .    We have .        Base- exponential function   Let be a fixed positive number. Given any , we define the power expression as . The exponential function with base  , is the function with domain defined as for all .     Base- logarithm   Let be a fixed positive number, . The logarithmic function with base  , denoted is defined as the inverse function of the base- exponential function .     Logarithmic and exponential compendium   The table below summarizes important properties of the functions and for a base satisfying .  Base- functions,          Domain      Range      Monotonicity  Increasing  Increasing    Limit as      Limit as   1    Limit as  NA  0    Properties              Relation to           Logarithmic change of base   Let and be positive numbers. We have for all .     Derivative\/antiderivative compendium   We collect here the new derivative formulas obtained via logarithms and exponential functions, along with their equivalent antiderivative formulas.      Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.         Exponential and logarithmic derivatives   Compute for each of the following functions.                     Exponential and logarithmic integrals   Compute the following definite and indefinite integrals.                    "
+  "body": " Exponential functions   Exponential function   The exponential function , denoted , is defined as the inverse of the natural logarithm function. Using inverse function properties, this means that we have . We also write for .     Exponential function properties      The exponential function is differentiable (hence also continuous) on all of and satisfies .    The exponential function is increasing on and hence one-to-one. The graph of is concave up everywhere.    We have     The domain of is ; the range of is .     .    We have for all .    We have .        Base- exponential function   Let be a fixed positive number. Given any , we define the power expression as . The exponential function with base  , is the function with domain defined as for all .     Base- logarithm   Let be a fixed positive number, . The logarithmic function with base  , denoted is defined as the inverse function of the base- exponential function .     Logarithmic and exponential compendium   The table below summarizes important properties of the functions and for a base satisfying .  Base- functions,          Domain      Range      Monotonicity  Increasing  Increasing    Limit as      Limit as   1    Limit as  NA  0    Properties              Relation to           Logarithmic change of base   Let and be positive numbers. We have for all .     Derivative\/antiderivative compendium   We collect here the new derivative formulas obtained via logarithms and exponential functions, along with their equivalent antiderivative formulas.      Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.    We have . Alternatively, using the fact that the function is one-to-one and , we see that .     Exponential and logarithmic derivatives   Compute for each of the following functions.                   We have .    We have .        Exponential and logarithmic integrals   Compute the following definite and indefinite integrals.                    "
 },
 {
   "id": "d_exp",
@@ -1051,7 +1051,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.12.9",
   "title": "Solving exponential equations.",
-  "body": " Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.       "
+  "body": " Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.    We have . Alternatively, using the fact that the function is one-to-one and , we see that .   "
 },
 {
   "id": "eg_exp_log_deriv",
@@ -1060,7 +1060,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.12.10",
   "title": "Exponential and logarithmic derivatives.",
-  "body": " Exponential and logarithmic derivatives   Compute for each of the following functions.                   "
+  "body": " Exponential and logarithmic derivatives   Compute for each of the following functions.                   We have .    We have .      "
 },
 {
   "id": "eg_exp_log_int",
@@ -1221,8 +1221,8 @@ var ptx_lunr_docs = [
   "url": "s_lHop_B.html",
   "type": "Section",
   "number": "1.15",
-  "title": "More on l’Hôpital’s rule",
-  "body": " More on l'Hôpital's rule   More indeterminate forms   Assume is either a finite number or .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If and , then is an indeterminate form of type .     Indeterminate forms   Below you find a variety of potentially useful techniques for dealing with limit expressions of indeterminate form.   Types  If is of type or , we can apply l'Hôpital's rule.    Type  If is of type , we can attempt to rewrite the expression as , where is either of type or , and then apply l'Hôpital's rule.    Type  If is of type , we can write and then apply l'Hôpital's rule.    Exponential expressions  For any limit expression of the form we can write , compute the limit , and conclude that .        More indeterminate forms   Compute the following limits.                                   "
+  "title": "More on indeterminate forms",
+  "body": " More on indeterminate forms  There are other types of indeterminate form limit expression to which l'Hôpital's rule cannot be directly applied. However, after some algebraic manipulation we can often get the expression into a more tractable form.   More indeterminate forms   Assume is either a finite number or .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If and , then is an indeterminate form of type .     Indeterminate forms   Below you find a variety of potentially useful techniques for dealing with limit expressions of indeterminate form.   Types  If is of type or , we can apply l'Hôpital's rule.    Type  If is of type , we can attempt to rewrite the expression as , where is either of type or , and then apply l'Hôpital's rule.    Type  If is of type , we can write and then apply l'Hôpital's rule.    Exponential expressions  For any limit expression of the form we can write , compute the limit , and conclude that .        More indeterminate forms   Compute the following limits.                                   "
 },
 {
   "id": "d_indeterminate_further",

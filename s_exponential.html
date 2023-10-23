@@ -228,7 +228,7 @@ window.MathJax = {
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_exponential.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Exponential functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on l’Hôpital’s rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -415,7 +415,27 @@ f(x)=a^x=e^{x\ln a}\tag{1.12.10}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Solving exponential equations.</span>
 </h3>
 <div class="para" id="p-369">Find all <span class="process-math">\(t\)</span> satisfying <span class="process-math">\(\displaystyle 2^{-t^2}=\frac{1}{16}\text{.}\)</span> Simplify your answer as much as possible.</div>
-<div class="solutions"><details id="solution-34" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-370"></div></div></details></div></article><article class="example example-like" id="eg_exp_log_deriv"><h3 class="heading">
+<div class="solutions"><details id="solution-34" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-370">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-65">
+\begin{align*}
+2^{-t^2}=\frac{1}{16}\amp \iff \ln\left(2^{-t^2} \right)= \ln(1/16) \\
+\amp \iff -t^2\ln 2=-\ln 16\\
+\amp\iff t^2=\frac{\ln 16}{\ln 2} \\
+\amp \iff t^2=\log_2 16 \amp (\log_2 16=\ln 16/\ln 2)\\
+\amp \iff t^2=4  \amp  (2^4=16\iff \log_2 16=4)\\
+\amp \iff t=\pm 2\text{.}
+\end{align*}
+</div>
+<div class="para">Alternatively, using the fact that the function <span class="process-math">\(f(x)=2^x\)</span> is one-to-one and <span class="process-math">\(1/16=2^{-4}\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" id="md-66">
+\begin{align*}
+2^{-t^2}=\frac{1}{16}\amp \iff 2^{-t^2}=2^{-1/4}   \\
+\amp \iff -t^2=-4\\
+\amp \iff t=\pm 2\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_exp_log_deriv"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential and logarithmic derivatives.</span>
 </h3>
 <div class="para logical" id="p-371">
@@ -425,17 +445,37 @@ f(x)=a^x=e^{x\ln a}\tag{1.12.10}
 <li id="li-188"><div class="para" id="p-373"><span class="process-math">\(\displaystyle f(x)=\log_3(2^x+3^{x^2})\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-35" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-374"></div></div></details></div></article><article class="example example-like" id="eg_exp_log_int"><h3 class="heading">
+<div class="solutions"><details id="solution-35" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-374"><ol class="decimal">
+<li id="li-189"><div class="para logical" id="p-375">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-67">
+\begin{align*}
+f'(x) \amp = (\ln \sin x)'e^{\cos x}+\ln\sin x(e^{\cos x})'\\
+\amp = \frac{\cos x}{\sin x}e^{\cos x}+\ln\sin x \cdot e^{\cos x}(-\sin x)\\
+\amp = e^{\cos x}(\cot x-\sin x\ln \sin x)\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-190"><div class="para logical" id="p-376">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-68">
+\begin{align*}
+f'(x) \amp = \frac{(2^x+3^{x^2})'}{\ln 3(2^x+3^{x^2})}\\
+\amp = \frac{\ln 2\cdot 2^x+2\ln 3 \cdot x 3^{x^2}}{\ln 3(2^x+3^{x^2})}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="example example-like" id="eg_exp_log_int"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential and logarithmic integrals.</span>
 </h3>
-<div class="para logical" id="p-375">
+<div class="para logical" id="p-377">
 <div class="para">Compute the following definite and indefinite integrals.</div>
 <ol class="decimal">
-<li id="li-189"><div class="para" id="p-376"><span class="process-math">\(\displaystyle \displaystyle\int (e^t)^2\sin(e^{2t})\, dt\)</span></div></li>
-<li id="li-190"><div class="para" id="p-377"><span class="process-math">\(\displaystyle \displaystyle\int_0^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx\)</span></div></li>
+<li id="li-191"><div class="para" id="p-378"><span class="process-math">\(\displaystyle \displaystyle\int (e^t)^2\sin(e^{2t})\, dt\)</span></div></li>
+<li id="li-192"><div class="para" id="p-379"><span class="process-math">\(\displaystyle \displaystyle\int_0^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-36" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-378"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-36" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-380"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_natural_log.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="separable_diffeq.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
