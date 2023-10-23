@@ -39,6 +39,7 @@
       <xi:include  href="s_exponential.ptx"/>
       <xi:include  href="s_sep_diffeq.ptx"/>
       <xi:include  href="s_lHop_A.ptx"/>
+      <xi:include  href="s_lHop_B.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
