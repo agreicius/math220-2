@@ -13,15 +13,10 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Although this is a situation where l’Hôpital’s rule applies, upon applying it once we see that we get essentially the same limit expression back. Instead, we make use of our intuition. Since <span class="process-math">\(2&lt; e &lt; 3\text{,}\)</span> it would stand to reason that the <span class="process-math">\(3^x\)</span> term “dominates” the other exponential terms as <span class="process-math">\(x\to\infty\text{.}\)</span> We make this intuition rigorous by “forcibly” factoring out the dominating term <span class="process-math">\(3^x\text{:}\)</span>
-</div>
+<div class="para">Even if l’Hôpital’s rule applies, it may not be useful! In the following examples, applying l’Hôpital’s rule either gets us nowhere, or is too cumbersome.</div>
 <div class="displaymath process-math">
 \begin{align*}
-\lim_{x\to\infty}\frac{e^x}{2^x+3^x} \amp =\lim_{x\to\infty}\frac{e^x}{3^x(2^x/3^x+1)}\\
-\amp = \lim_{x\to\infty}\frac{e^x}{3^x}\cdot \lim_{x\to\infty}\frac{1}{(2/3)^x+1}\\
-\amp = \lim_{x\to\infty}(e/3)^x\cdot \frac{1}{0+1} \amp ((2/3)^x\to 0)\\
-\amp = 0\cdot 1 \amp ((e/3)^x\to 0) \\
-\amp = 0\text{.}
+\lim_{x\to\infty}\frac{e^x+e^{-x}}{e^{x}-e^{-x}} \amp \amp \lim_{x\to\infty}\frac{x^{24}-2x^{22}+2x^2+7}{3x^{24}+x^{20}-x^2+x+1} \text{.}
 \end{align*}
 </div>
 </div>

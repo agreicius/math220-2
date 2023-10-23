@@ -249,7 +249,7 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="d_indeterminate"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.14.1</span><span class="period">.</span><span class="space"> </span><span class="title">Indeterminate forms.</span>
-</h3> <div class="para logical" id="p-401">
+</h3> <div class="para logical" id="p-403">
 <div class="para">Consider a limit expression of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -258,14 +258,14 @@ window.MathJax = {
 </div>
 <div class="para">where <span class="process-math">\(a\)</span> is either a finite number or <span class="process-math">\(\pm\infty\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-402">
+</div> <div class="para logical" id="p-404">
 <div class="para">The expression is an <em class="emphasis">indeterminate form of type <span class="process-math">\(0/0\)</span></em> if</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-403">
+</div> <div class="para logical" id="p-405">
 <div class="para">The expression is an <em class="emphasis">indeterminate form of type <span class="process-math">\(\infty/\infty\)</span></em> if</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -275,22 +275,22 @@ window.MathJax = {
 </div></article><article class="example example-like" id="eg_indeterminate"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.14.2</span><span class="period">.</span><span class="space"> </span><span class="title">Indeterminate forms.</span>
 </h3>
-<div class="para logical" id="p-404">
+<div class="para logical" id="p-406">
 <div class="para">Decide whether the following limit expressions have determinate or indeterminate forms. If determinate, compute the limit.</div>
 <ol class="decimal">
-<li id="li-202"><div class="para" id="p-405"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{\sin x}{x}\)</span></div></li>
-<li id="li-203"><div class="para" id="p-406"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0+}\frac{\sin x}{\ln x}\)</span></div></li>
-<li id="li-204"><div class="para" id="p-407"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{x}{e^{-x}}\)</span></div></li>
-<li id="li-205"><div class="para" id="p-408"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to (\pi/2)^-}\frac{\tan x}{\cos x}\)</span></div></li>
-<li id="li-206"><div class="para" id="p-409"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{e^x}{2^x+3^x}\)</span></div></li>
+<li id="li-204"><div class="para" id="p-407"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{\sin x}{x}\)</span></div></li>
+<li id="li-205"><div class="para" id="p-408"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0+}\frac{\sin x}{\ln x}\)</span></div></li>
+<li id="li-206"><div class="para" id="p-409"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{x}{e^{-x}}\)</span></div></li>
+<li id="li-207"><div class="para" id="p-410"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to (\pi/2)^-}\frac{\tan x}{\cos x}\)</span></div></li>
+<li id="li-208"><div class="para" id="p-411"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{e^x}{2^x+3^x}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-39" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-410"></div></div></details></div></article><article class="remark remark-like" id="remark-9"><h3 class="heading">
+<div class="solutions"><details id="solution-39" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-412"></div></div></details></div></article><article class="remark remark-like" id="remark-9"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.14.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-411">
+<div class="para logical" id="p-413">
 <div class="para">A limit expression having an indeterminate form does <em class="emphasis">not</em> mean that the limit does not exist. You should interpret this conclusion as simply saying that our current analysis is not detailed enough to determine whether the limit exists. In this spirit we will be careful not to write expressions like</div>
-<div class="displaymath process-math" id="md-69">
+<div class="displaymath process-math" id="md-71">
 \begin{align*}
 \lim_{x\to\infty}\frac{f(x)}{g(x)}\amp=\frac{0}{0} \amp \lim_{x\to a}\frac{f(x)}{g(x)}\amp =\frac{\infty}{\infty} 
 \end{align*}
@@ -299,7 +299,7 @@ window.MathJax = {
 </div></article><article class="theorem theorem-like" id="th_lHop"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.14.4</span><span class="period">.</span><span class="space"> </span><span class="title">L’Hôpital’s rule.</span>
 </h3>
-<div class="para" id="p-412">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be differentiable on an open interval <span class="process-math">\(I\)</span> containing <span class="process-math">\(a\text{,}\)</span> where <span class="process-math">\(a\)</span> is either a finite number or <span class="process-math">\(\pm\infty\text{,}\)</span> and suppose <span class="process-math">\(g'(x)\ne 0\)</span> for all <span class="process-math">\(x\ne a\)</span> in the interval.</div> <div class="para logical" id="p-413">
+<div class="para" id="p-414">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be differentiable on an open interval <span class="process-math">\(I\)</span> containing <span class="process-math">\(a\text{,}\)</span> where <span class="process-math">\(a\)</span> is either a finite number or <span class="process-math">\(\pm\infty\text{,}\)</span> and suppose <span class="process-math">\(g'(x)\ne 0\)</span> for all <span class="process-math">\(x\ne a\)</span> in the interval.</div> <div class="para logical" id="p-415">
 <div class="para">If <span class="process-math">\(\displaystyle\lim_{x\to a}\frac{f(x)}{g(x)}\)</span> is an indeterminate form of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -308,17 +308,17 @@ window.MathJax = {
 </div>
 <div class="para">provided the limit on the right exists or is equal to <span class="process-math">\(\pm\infty\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-414">The same result holds if we replace the limit with a one-sided limit.</div></article><article class="warning remark-like" id="warning-1"><h3 class="heading">
+</div> <div class="para" id="p-416">The same result holds if we replace the limit with a one-sided limit.</div></article><article class="warning remark-like" id="warning-1"><h3 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">1.14.5</span><span class="period">.</span><span class="space"> </span><span class="title">Common mistake.</span>
-</h3> <div class="para logical" id="p-415">
+</h3> <div class="para logical" id="p-417">
 <div class="para">In a situation where l’Hôpital’s rule applies, do <em class="emphasis">not</em> make the mistake of computing the derivative of the quotient <span class="process-math">\(\left(f/g\right)'\text{.}\)</span> That is, in general</div>
-<div class="displaymath process-math" id="md-70">
+<div class="displaymath process-math" id="md-72">
 \begin{align*}
 \lim_{x\to a}\frac{f(x)}{g(x)} \ne \lim_{x\to a}\left(\frac{f(x)}{g(x)}\right)' \amp \text{.}
 \end{align*}
 </div>
 <div class="para">Not only will this mistake usually result in an incorrect computation, it is also very time consuming to compute</div>
-<div class="displaymath process-math" id="md-71">
+<div class="displaymath process-math" id="md-73">
 \begin{align*}
 \left(\frac{f}{g}\right)'\amp=\frac{f'g-fg'}{g^2} \text{.}
 \end{align*}
@@ -326,26 +326,26 @@ window.MathJax = {
 </div></article><article class="example example-like" id="eg_lHop"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.14.6</span><span class="period">.</span><span class="space"> </span><span class="title">L’Hôpital’s rule.</span>
 </h3>
-<div class="para logical" id="p-416">
+<div class="para logical" id="p-418">
 <div class="para">Compute the following limits.</div>
 <ol class="decimal">
-<li id="li-207"><div class="para" id="p-417"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{\ln x}{x^{1/100}}\)</span></div></li>
-<li id="li-208"><div class="para" id="p-418"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{2^x-3^{-x}}{4^x-5^{-x}}\)</span></div></li>
-<li id="li-209"><div class="para" id="p-419"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 1}\frac{\cos(\pi x/2)}{\log_2(x)}\)</span></div></li>
-<li id="li-210"><div class="para" id="p-420"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{x-\sin x}{x\sin x}\)</span></div></li>
+<li id="li-209"><div class="para" id="p-419"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{\ln x}{x^{1/100}}\)</span></div></li>
+<li id="li-210"><div class="para" id="p-420"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{2^x-3^{-x}}{4^x-5^{-x}}\)</span></div></li>
+<li id="li-211"><div class="para" id="p-421"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 1}\frac{\cos(\pi x/2)}{\log_2(x)}\)</span></div></li>
+<li id="li-212"><div class="para" id="p-422"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0}\frac{x-\sin x}{x\sin x}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-40" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-421"></div></div></details></div></article><article class="remark remark-like" id="remark-10"><h3 class="heading">
+<div class="solutions"><details id="solution-40" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-423"></div></div></details></div></article><article class="remark remark-like" id="remark-10"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.14.7</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-422">
+<div class="para logical" id="p-424">
 <div class="para">Students tend to fall madly in love with l’Hôpital’s rule upon first encountering it. Here are some comments to temper your passion.</div>
 <ol class="decimal">
-<li id="li-211"><div class="para" id="p-423">Make sure the relevant conditions apply: i.e., (a) <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> must be differentiable on an open interval containing <span class="process-math">\(a\text{,}\)</span> and (b) we must have an indeterminate form of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\text{.}\)</span>
+<li id="li-213"><div class="para" id="p-425">Make sure the relevant conditions apply: i.e., (a) <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> must be differentiable on an open interval containing <span class="process-math">\(a\text{,}\)</span> and (b) we must have an indeterminate form of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\text{.}\)</span>
 </div></li>
-<li id="li-212"><div class="para logical" id="p-424">
+<li id="li-214"><div class="para logical" id="p-426">
 <div class="para">Even if l’Hôpital’s rule applies, it may not be useful! In the following examples, applying l’Hôpital’s rule either gets us nowhere, or is too cumbersome.</div>
-<div class="displaymath process-math" id="md-72">
+<div class="displaymath process-math" id="md-74">
 \begin{align*}
 \lim_{x\to\infty}\frac{e^x+e^{-x}}{e^{x}-e^{-x}} \amp \amp \lim_{x\to\infty}\frac{x^{24}-2x^{22}+2x^2+7}{3x^{24}+x^{20}-x^2+x+1} \text{.}
 \end{align*}
@@ -355,12 +355,12 @@ window.MathJax = {
 </div></article><article class="example example-like" id="example-43"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.14.8</span><span class="period">.</span><span class="space"> </span><span class="title">Indeterminate form limit.</span>
 </h3>
-<div class="para" id="p-425">Evaluate <span class="process-math">\(\displaystyle\lim_{x\to\infty}\frac{e^x}{2^x+3^x}\text{.}\)</span>
+<div class="para" id="p-427">Evaluate <span class="process-math">\(\displaystyle\lim_{x\to\infty}\frac{e^x}{2^x+3^x}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-41" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-426">
+<div class="solutions"><details id="solution-41" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-428">
 <div class="para">Although this is a situation where l’Hôpital’s rule applies, upon applying it once we see that we get essentially the same limit expression back. Instead, we make use of our intuition. Since <span class="process-math">\(2&lt; e &lt; 3\text{,}\)</span> it would stand to reason that the <span class="process-math">\(3^x\)</span> term “dominates” the other exponential terms as <span class="process-math">\(x\to\infty\text{.}\)</span> We make this intuition rigorous by “forcibly” factoring out the dominating term <span class="process-math">\(3^x\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="md-73">
+<div class="displaymath process-math" id="md-75">
 \begin{align*}
 \lim_{x\to\infty}\frac{e^x}{2^x+3^x} \amp =\lim_{x\to\infty}\frac{e^x}{3^x(2^x/3^x+1)}\\
 \amp = \lim_{x\to\infty}\frac{e^x}{3^x}\cdot \lim_{x\to\infty}\frac{1}{(2/3)^x+1}\\

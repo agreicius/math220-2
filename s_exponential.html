@@ -475,7 +475,28 @@ f'(x) \amp = \frac{(2^x+3^{x^2})'}{\ln 3(2^x+3^{x^2})}\\
 <li id="li-192"><div class="para" id="p-379"><span class="process-math">\(\displaystyle \displaystyle\int_0^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-36" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-380"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-36" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-380"><ol class="decimal">
+<li id="li-193"><div class="para logical" id="p-381">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-69">
+\begin{align*}
+\int (e^t)^2\sin(e^{2t})\, dt \amp \int u \sin (u^2)\, du \amp (u=e^t, du=e^t\, dt\\
+\amp = -\frac{1}{2}\cos u^2 +C\\
+\amp = -\frac{1}{2}\cos (e^{2t})+C\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="li-194"><div class="para logical" id="p-382">
+<div class="para">Consider the somewhat tricky substitution: <span class="process-math">\(u=2^{\cos 2^x}\text{,}\)</span> <span class="process-math">\(du=-(\ln 2)^2\sin 2^x\cdot 2^x\cdot 2^{\cos 2^x} dx\text{.}\)</span> We then have</div>
+<div class="displaymath process-math" id="md-70">
+\begin{align*}
+\int_{0}^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx \amp = -\frac{1}{(\ln 2)^2}\int_{2^{\cos 1}}^{2^{\cos 2^\pi}} du \\
+\amp = -\frac{1}{(\ln 2)^2}u\Bigr\vert_{2^{\cos 1}}^{2^{\cos 2^\pi}}\\
+\amp = \frac{1}{(\ln 2)^2}(2^{\cos 1}-2^{\cos 2^\pi})
+\end{align*}
+</div>
+</div></li>
+</ol></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_natural_log.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="separable_diffeq.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

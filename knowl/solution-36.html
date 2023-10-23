@@ -15,7 +15,28 @@
 <h3 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.12.11.1</span><span class="period">.</span>
 </h3>
-<div class="para"></div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int (e^t)^2\sin(e^{2t})\, dt \amp \int u \sin (u^2)\, du \amp (u=e^t, du=e^t\, dt\\
+\amp = -\frac{1}{2}\cos u^2 +C\\
+\amp = -\frac{1}{2}\cos (e^{2t})+C\text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Consider the somewhat tricky substitution: <span class="process-math">\(u=2^{\cos 2^x}\text{,}\)</span> <span class="process-math">\(du=-(\ln 2)^2\sin 2^x\cdot 2^x\cdot 2^{\cos 2^x} dx\text{.}\)</span> We then have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{0}^\pi \sin(2^x)2^{\cos(2^x)+x}\, dx \amp = -\frac{1}{(\ln 2)^2}\int_{2^{\cos 1}}^{2^{\cos 2^\pi}} du \\
+\amp = -\frac{1}{(\ln 2)^2}u\Bigr\vert_{2^{\cos 1}}^{2^{\cos 2^\pi}}\\
+\amp = \frac{1}{(\ln 2)^2}(2^{\cos 1}-2^{\cos 2^\pi})
+\end{align*}
+</div>
+</div></li>
+</ol></div>
 </div>
 <span class="incontext"><a class="internal" href="s_exponential.html#solution-36">in-context</a></span>
 </body>
