@@ -203,7 +203,21 @@
     </statement>
     <solution>
         <p>
-            
+            We have 
+            <md>
+              <mrow> 2^{-t^2}=\frac{1}{16}\amp \iff \ln\left(2^{-t^2} \right)= \ln(1/16) </mrow>
+              <mrow> \amp \iff -t^2\ln 2=-\ln 16</mrow>
+              <mrow> \amp\iff t^2=\frac{\ln 16}{\ln 2} </mrow>
+              <mrow> \amp \iff t^2=\log_2 16 \amp (\log_2 16=\ln 16/\ln 2)</mrow>
+              <mrow> \amp \iff t^2=4  \amp  (2^4=16\iff \log_2 16=4)</mrow>
+              <mrow> \amp \iff t=\pm 2</mrow>
+            </md>.
+            Alternatively, using the fact that the function <m>f(x)=2^x</m> is one-to-one and <m>1/16=2^{-4}</m>, we see that 
+            <md>
+              <mrow>2^{-t^2}=\frac{1}{16}\amp \iff 2^{-t^2}=2^{-1/4}   </mrow>
+              <mrow> \amp \iff -t^2=-4</mrow>
+              <mrow> \amp \iff t=\pm 2</mrow>
+            </md>.
         </p>
     </solution>
   </example>
@@ -228,7 +242,27 @@
     </statement>
     <solution>
         <p>
-            
+            <ol>
+              <li>
+                <p>
+                  We have 
+                  <md>
+                    <mrow>f'(x) \amp = (\ln \sin x)'e^{\cos x}+\ln\sin x(e^{\cos x})'</mrow>
+                    <mrow> \amp = \frac{\cos x}{\sin x}e^{\cos x}+\ln\sin x \cdot e^{\cos x}(-\sin x)</mrow>
+                    <mrow> \amp = e^{\cos x}(\cot x-\sin x\ln \sin x)</mrow> 
+                  </md>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We have 
+                  <md>
+                    <mrow>f'(x) \amp = \frac{(2^x+3^{x^2})'}{\ln 3(2^x+3^{x^2})}</mrow>
+                    <mrow> \amp = \frac{\ln 2\cdot 2^x+2\ln 3 \cdot x 3^{x^2}}{\ln 3(2^x+3^{x^2})}</mrow>
+                  </md>.
+                </p>
+              </li>
+            </ol>
         </p>
     </solution>
   </example>
