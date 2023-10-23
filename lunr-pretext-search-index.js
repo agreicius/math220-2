@@ -916,7 +916,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.11",
   "title": "The natural logarithm",
-  "body": " The natural logarithm   Natural logarithm   The natural logarithm function is the function with domain defined as .     Properties of the natural logarithm      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have         Technically the expression in only has meaning for us when is a rational number. This will be corrected in the next section. We state the property in full generality here nonetheless so that we don't have to repeat it later.    Antiderivative of   The function is an antiderivative of the function on : i.e., we have .     Euler's number    Euler's number , denoted , is the unique number in satisfying . In other words, is the number satisfying .     Trigonometric antiderivatives                             "
+  "body": " The natural logarithm   Natural logarithm   The natural logarithm function is the function with domain defined as .     Natural logarithm properties      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have         Technically the expression in only has meaning for us when is a rational number. This will be corrected in the next section. We state the property in full generality here nonetheless so that we don't have to repeat it later.    Antiderivative of   The function is an antiderivative of the function on : i.e., we have .     Euler's number    Euler's number , denoted , is the unique number in satisfying . In other words, is the number satisfying .     Trigonometric antiderivatives                             "
 },
 {
   "id": "d_natural_log",
@@ -933,8 +933,8 @@ var ptx_lunr_docs = [
   "url": "s_natural_log.html#th_log_props",
   "type": "Theorem",
   "number": "1.11.2",
-  "title": "Properties of the natural logarithm.",
-  "body": " Properties of the natural logarithm      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have       "
+  "title": "Natural logarithm properties.",
+  "body": " Natural logarithm properties      The natural logarithm is differentiable (hence also continuous) on and satisfies . for all in .    The natural logarithm is increasing on and hence one-to-one. The graph of is always concave down.    We have     The range of is .     .    We have       "
 },
 {
   "id": "remark-8",
@@ -971,6 +971,285 @@ var ptx_lunr_docs = [
   "number": "1.11.6",
   "title": "Trigonometric antiderivatives.",
   "body": " Trigonometric antiderivatives                            "
+},
+{
+  "id": "s_exponential",
+  "level": "1",
+  "url": "s_exponential.html",
+  "type": "Section",
+  "number": "1.12",
+  "title": "Exponential functions",
+  "body": " Exponential functions   Exponential function   The exponential function , denoted , is defined as the inverse of the natural logarithm function. Using inverse function properties, this means that we have . We also write for .     Exponential function properties      The exponential function is differentiable (hence also continuous) on all of and satisfies .    The exponential function is increasing on and hence one-to-one. The graph of is concave up everywhere.    We have     The domain of is ; the range of is .     .    We have for all .    We have .        Base- exponential function   Let be a fixed positive number. Given any , we define the power expression as . The exponential function with base  , is the function with domain defined as for all .     Base- logarithm   Let be a fixed positive number, . The logarithmic function with base  , denoted is defined as the inverse function of the base- exponential function .     Logarithmic and exponential compendium   The table below summarizes important properties of the functions and for a base satisfying .  Base- functions,          Domain      Range      Monotonicity  Increasing  Increasing    Limit as      Limit as   1    Limit as  NA  0    Properties              Relation to           Logarithmic change of base   Let and be positive numbers. We have for all .     Derivative\/antiderivative compendium   We collect here the new derivative formulas obtained via logarithms and exponential functions, along with their equivalent antiderivative formulas.      Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.         Exponential and logarithmic derivatives   Compute for each of the following functions.                     Exponential and logarithmic integrals   Compute the following definite and indefinite integrals.                    "
+},
+{
+  "id": "d_exp",
+  "level": "2",
+  "url": "s_exponential.html#d_exp",
+  "type": "Definition",
+  "number": "1.12.1",
+  "title": "Exponential function.",
+  "body": " Exponential function   The exponential function , denoted , is defined as the inverse of the natural logarithm function. Using inverse function properties, this means that we have . We also write for .   "
+},
+{
+  "id": "th_exp_props",
+  "level": "2",
+  "url": "s_exponential.html#th_exp_props",
+  "type": "Theorem",
+  "number": "1.12.2",
+  "title": "Exponential function properties.",
+  "body": " Exponential function properties      The exponential function is differentiable (hence also continuous) on all of and satisfies .    The exponential function is increasing on and hence one-to-one. The graph of is concave up everywhere.    We have     The domain of is ; the range of is .     .    We have for all .    We have .      "
+},
+{
+  "id": "d_exp_base_a",
+  "level": "2",
+  "url": "s_exponential.html#d_exp_base_a",
+  "type": "Definition",
+  "number": "1.12.3",
+  "title": "Base-<span class=\"process-math\">\\(a\\)<\/span> exponential function.",
+  "body": " Base- exponential function   Let be a fixed positive number. Given any , we define the power expression as . The exponential function with base  , is the function with domain defined as for all .   "
+},
+{
+  "id": "d_log_base_a",
+  "level": "2",
+  "url": "s_exponential.html#d_log_base_a",
+  "type": "Definition",
+  "number": "1.12.4",
+  "title": "Base-<span class=\"process-math\">\\(a\\)<\/span> logarithm.",
+  "body": " Base- logarithm   Let be a fixed positive number, . The logarithmic function with base  , denoted is defined as the inverse function of the base- exponential function .   "
+},
+{
+  "id": "th_exp_log",
+  "level": "2",
+  "url": "s_exponential.html#th_exp_log",
+  "type": "Theorem",
+  "number": "1.12.5",
+  "title": "Logarithmic and exponential compendium.",
+  "body": " Logarithmic and exponential compendium   The table below summarizes important properties of the functions and for a base satisfying .  Base- functions,          Domain      Range      Monotonicity  Increasing  Increasing    Limit as      Limit as   1    Limit as  NA  0    Properties              Relation to         "
+},
+{
+  "id": "th_log_change_base",
+  "level": "2",
+  "url": "s_exponential.html#th_log_change_base",
+  "type": "Theorem",
+  "number": "1.12.7",
+  "title": "Logarithmic change of base.",
+  "body": " Logarithmic change of base   Let and be positive numbers. We have for all .   "
+},
+{
+  "id": "th_antiderivative_compendium_log",
+  "level": "2",
+  "url": "s_exponential.html#th_antiderivative_compendium_log",
+  "type": "Theorem",
+  "number": "1.12.8",
+  "title": "Derivative\/antiderivative compendium.",
+  "body": " Derivative\/antiderivative compendium   We collect here the new derivative formulas obtained via logarithms and exponential functions, along with their equivalent antiderivative formulas.    "
+},
+{
+  "id": "eg_log_solve",
+  "level": "2",
+  "url": "s_exponential.html#eg_log_solve",
+  "type": "Example",
+  "number": "1.12.9",
+  "title": "Solving exponential equations.",
+  "body": " Solving exponential equations   Find all satisfying . Simplify your answer as much as possible.       "
+},
+{
+  "id": "eg_exp_log_deriv",
+  "level": "2",
+  "url": "s_exponential.html#eg_exp_log_deriv",
+  "type": "Example",
+  "number": "1.12.10",
+  "title": "Exponential and logarithmic derivatives.",
+  "body": " Exponential and logarithmic derivatives   Compute for each of the following functions.                   "
+},
+{
+  "id": "eg_exp_log_int",
+  "level": "2",
+  "url": "s_exponential.html#eg_exp_log_int",
+  "type": "Example",
+  "number": "1.12.11",
+  "title": "Exponential and logarithmic integrals.",
+  "body": " Exponential and logarithmic integrals   Compute the following definite and indefinite integrals.                   "
+},
+{
+  "id": "separable_diffeq",
+  "level": "1",
+  "url": "separable_diffeq.html",
+  "type": "Section",
+  "number": "1.13",
+  "title": "Separable differential equations",
+  "body": " Separable differential equations   Exponential growth and decay   Suppose the function satisfies the differential equation , where is a fixed constant.  If then is said to undergo exponential growth .  If then is said to undergo exponential decay .     First-order differential equation   A first-order differential equation for the function is an equation that can be written in the form where denotes an arbitrary expression involving and .  A solution to a differential equation is any function that satisfies equation ; as such it is useful to think of the function in this context as an unknown that we are trying to solve for. The general solution to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.     Separable first-order differential equation   A separable differential equation for the function is a differential equation that can be written in the form , or equivalently, letting , .     Separation of variables (algebraic form)   To solve a separable differential equation of the form for the function , proceed as follows.   Separation  Write the equation as and take take the indefinite integral of both sides. .    Integration  Attempt to find an antiderivative of and an antiderivative for .    Algebra  The resulting general equation is said to be an implicit solution of the differential equation . An explicit solution is obtained from by solving for in terms of and , if possible.        Separation of variables   Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.              , .            Newton's law of cooling   Suppose a hot object cools in a room kept at constant temperature of (in celcius). Newton's law of cooling states that the rate at which the object cools (with respect to time) is proportional to the difference between its current temperature and the room temperature .   Write a differential equation that describes Newton's law of cooling in this setting.    Find the general solution to this differential equation.    Find a the particular solution to the situation where C, the object's initial temperature is C, and after minutes the object's temperature is C.           "
+},
+{
+  "id": "d_exp_grow_decay",
+  "level": "2",
+  "url": "separable_diffeq.html#d_exp_grow_decay",
+  "type": "Definition",
+  "number": "1.13.1",
+  "title": "Exponential growth and decay.",
+  "body": " Exponential growth and decay   Suppose the function satisfies the differential equation , where is a fixed constant.  If then is said to undergo exponential growth .  If then is said to undergo exponential decay .   "
+},
+{
+  "id": "d_diffeq",
+  "level": "2",
+  "url": "separable_diffeq.html#d_diffeq",
+  "type": "Definition",
+  "number": "1.13.2",
+  "title": "First-order differential equation.",
+  "body": " First-order differential equation   A first-order differential equation for the function is an equation that can be written in the form where denotes an arbitrary expression involving and .  A solution to a differential equation is any function that satisfies equation ; as such it is useful to think of the function in this context as an unknown that we are trying to solve for. The general solution to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.   "
+},
+{
+  "id": "d_sep_diffeq",
+  "level": "2",
+  "url": "separable_diffeq.html#d_sep_diffeq",
+  "type": "Definition",
+  "number": "1.13.3",
+  "title": "Separable first-order differential equation.",
+  "body": " Separable first-order differential equation   A separable differential equation for the function is a differential equation that can be written in the form , or equivalently, letting , .   "
+},
+{
+  "id": "proc_sep_vars",
+  "level": "2",
+  "url": "separable_diffeq.html#proc_sep_vars",
+  "type": "Procedure",
+  "number": "1.13.4",
+  "title": "Separation of variables (algebraic form).",
+  "body": " Separation of variables (algebraic form)   To solve a separable differential equation of the form for the function , proceed as follows.   Separation  Write the equation as and take take the indefinite integral of both sides. .    Integration  Attempt to find an antiderivative of and an antiderivative for .    Algebra  The resulting general equation is said to be an implicit solution of the differential equation . An explicit solution is obtained from by solving for in terms of and , if possible.      "
+},
+{
+  "id": "example-39",
+  "level": "2",
+  "url": "separable_diffeq.html#example-39",
+  "type": "Example",
+  "number": "1.13.5",
+  "title": "Separation of variables.",
+  "body": " Separation of variables   Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.              , .          "
+},
+{
+  "id": "eg_Newton_cooling",
+  "level": "2",
+  "url": "separable_diffeq.html#eg_Newton_cooling",
+  "type": "Example",
+  "number": "1.13.6",
+  "title": "Newton’s law of cooling.",
+  "body": " Newton's law of cooling   Suppose a hot object cools in a room kept at constant temperature of (in celcius). Newton's law of cooling states that the rate at which the object cools (with respect to time) is proportional to the difference between its current temperature and the room temperature .   Write a differential equation that describes Newton's law of cooling in this setting.    Find the general solution to this differential equation.    Find a the particular solution to the situation where C, the object's initial temperature is C, and after minutes the object's temperature is C.          "
+},
+{
+  "id": "s_lHop_A",
+  "level": "1",
+  "url": "s_lHop_A.html",
+  "type": "Section",
+  "number": "1.14",
+  "title": "L’Hôpital’s rule",
+  "body": " L'Hôpital's rule   Indeterminate forms   Consider a limit expression of the form , where is either a finite number or .  The expression is an indeterminate form of type if .  The expression is an indeterminate form of type if .     Indeterminate forms   Decide whether the following limit expressions have determinate or indeterminate forms. If determinate, compute the limit.                                    A limit expression having an indeterminate form does not mean that the limit does not exist. You should interpret this conclusion as simply saying that our current analysis is not detailed enough to determine whether the limit exists. In this spirit we will be careful not to write expressions like as these suggest we are asserting something more definitive about the limit expression.    L'Hôpital's rule   Let and be differentiable on an open interval containing , where is either a finite number or , and suppose for all in the interval.  If is an indeterminate form of type or , then , provided the limit on the right exists or is equal to .  The same result holds if we replace the limit with a one-sided limit.     Common mistake  In a situation where l'Hôpital's rule applies, do not make the mistake of computing the derivative of the quotient . That is, in general . Not only will this mistake usually result in an incorrect computation, it is also very time consuming to compute .    L'Hôpital's rule   Compute the following limits.                               Students tend to fall madly in love with l'Hôpital's rule upon first encountering it. Here are some comments to temper your passion.   Make sure the relevant conditions apply: , (a) and must be differentiable on an open interval containing , and (b) we must have an indeterminate form of type or .    Even if l'Hôpital's rule applies, it may not be useful! In the following examples, applying l'Hôpital's rule either gets us nowhere, or is too cumbersome. .       Indeterminate form limit   Evaluate .    Although this is a situation where l'Hôpital's rule applies, upon applying it once we see that we get essentially the same limit expression back. Instead, we make use of our intuition. Since , it would stand to reason that the term dominates the other exponential terms as . We make this intuition rigorous by forcibly factoring out the dominating term : .    "
+},
+{
+  "id": "d_indeterminate",
+  "level": "2",
+  "url": "s_lHop_A.html#d_indeterminate",
+  "type": "Definition",
+  "number": "1.14.1",
+  "title": "Indeterminate forms.",
+  "body": " Indeterminate forms   Consider a limit expression of the form , where is either a finite number or .  The expression is an indeterminate form of type if .  The expression is an indeterminate form of type if .   "
+},
+{
+  "id": "eg_indeterminate",
+  "level": "2",
+  "url": "s_lHop_A.html#eg_indeterminate",
+  "type": "Example",
+  "number": "1.14.2",
+  "title": "Indeterminate forms.",
+  "body": " Indeterminate forms   Decide whether the following limit expressions have determinate or indeterminate forms. If determinate, compute the limit.                                  "
+},
+{
+  "id": "remark-9",
+  "level": "2",
+  "url": "s_lHop_A.html#remark-9",
+  "type": "Remark",
+  "number": "1.14.3",
+  "title": "",
+  "body": " A limit expression having an indeterminate form does not mean that the limit does not exist. You should interpret this conclusion as simply saying that our current analysis is not detailed enough to determine whether the limit exists. In this spirit we will be careful not to write expressions like as these suggest we are asserting something more definitive about the limit expression.  "
+},
+{
+  "id": "th_lHop",
+  "level": "2",
+  "url": "s_lHop_A.html#th_lHop",
+  "type": "Theorem",
+  "number": "1.14.4",
+  "title": "L’Hôpital’s rule.",
+  "body": " L'Hôpital's rule   Let and be differentiable on an open interval containing , where is either a finite number or , and suppose for all in the interval.  If is an indeterminate form of type or , then , provided the limit on the right exists or is equal to .  The same result holds if we replace the limit with a one-sided limit.   "
+},
+{
+  "id": "warning-1",
+  "level": "2",
+  "url": "s_lHop_A.html#warning-1",
+  "type": "Warning",
+  "number": "1.14.5",
+  "title": "Common mistake.",
+  "body": " Common mistake  In a situation where l'Hôpital's rule applies, do not make the mistake of computing the derivative of the quotient . That is, in general . Not only will this mistake usually result in an incorrect computation, it is also very time consuming to compute .  "
+},
+{
+  "id": "eg_lHop",
+  "level": "2",
+  "url": "s_lHop_A.html#eg_lHop",
+  "type": "Example",
+  "number": "1.14.6",
+  "title": "L’Hôpital’s rule.",
+  "body": " L'Hôpital's rule   Compute the following limits.                             "
+},
+{
+  "id": "remark-10",
+  "level": "2",
+  "url": "s_lHop_A.html#remark-10",
+  "type": "Remark",
+  "number": "1.14.7",
+  "title": "",
+  "body": " Students tend to fall madly in love with l'Hôpital's rule upon first encountering it. Here are some comments to temper your passion.   Make sure the relevant conditions apply: , (a) and must be differentiable on an open interval containing , and (b) we must have an indeterminate form of type or .    Even if l'Hôpital's rule applies, it may not be useful! In the following examples, applying l'Hôpital's rule either gets us nowhere, or is too cumbersome. .     "
+},
+{
+  "id": "example-43",
+  "level": "2",
+  "url": "s_lHop_A.html#example-43",
+  "type": "Example",
+  "number": "1.14.8",
+  "title": "Indeterminate form limit.",
+  "body": " Indeterminate form limit   Evaluate .    Although this is a situation where l'Hôpital's rule applies, upon applying it once we see that we get essentially the same limit expression back. Instead, we make use of our intuition. Since , it would stand to reason that the term dominates the other exponential terms as . We make this intuition rigorous by forcibly factoring out the dominating term : .   "
+},
+{
+  "id": "s_lHop_B",
+  "level": "1",
+  "url": "s_lHop_B.html",
+  "type": "Section",
+  "number": "1.15",
+  "title": "More on l’Hôpital’s rule",
+  "body": " More on l'Hôpital's rule   More indeterminate forms   Assume is either a finite number or .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If and , then is an indeterminate form of type .     Indeterminate forms   Below you find a variety of potentially useful techniques for dealing with limit expressions of indeterminate form.   Types  If is of type or , we can apply l'Hôpital's rule.    Type  If is of type , we can attempt to rewrite the expression as , where is either of type or , and then apply l'Hôpital's rule.    Type  If is of type , we can write and then apply l'Hôpital's rule.    Exponential expressions  For any limit expression of the form we can write , compute the limit , and conclude that .        More indeterminate forms   Compute the following limits.                                   "
+},
+{
+  "id": "d_indeterminate_further",
+  "level": "2",
+  "url": "s_lHop_B.html#d_indeterminate_further",
+  "type": "Definition",
+  "number": "1.15.1",
+  "title": "More indeterminate forms.",
+  "body": " More indeterminate forms   Assume is either a finite number or .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If , then is an indeterminate form of type .  If and , then is an indeterminate form of type .  If and , then is an indeterminate form of type .   "
+},
+{
+  "id": "proc_expanded_lHop",
+  "level": "2",
+  "url": "s_lHop_B.html#proc_expanded_lHop",
+  "type": "Procedure",
+  "number": "1.15.2",
+  "title": "Indeterminate forms.",
+  "body": " Indeterminate forms   Below you find a variety of potentially useful techniques for dealing with limit expressions of indeterminate form.   Types  If is of type or , we can apply l'Hôpital's rule.    Type  If is of type , we can attempt to rewrite the expression as , where is either of type or , and then apply l'Hôpital's rule.    Type  If is of type , we can write and then apply l'Hôpital's rule.    Exponential expressions  For any limit expression of the form we can write , compute the limit , and conclude that .      "
+},
+{
+  "id": "eg_indeterminate_further",
+  "level": "2",
+  "url": "s_lHop_B.html#eg_indeterminate_further",
+  "type": "Example",
+  "number": "1.15.3",
+  "title": "More indeterminate forms.",
+  "body": " More indeterminate forms   Compute the following limits.                                  "
 },
 {
   "id": "appendix-notation",
