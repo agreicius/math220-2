@@ -258,15 +258,17 @@
                     <mrow> \amp\implies 5k=\ln(13/17) </mrow>
                     <mrow>k \amp =\frac{1}{5}\ln (13/17)</mrow>
                   </md>.
-                  We conclude that <m>f(t)=85e^{kt}+15</m>, where <m>k=\frac{1}{5}\ln (13/17)</m>. Below you find a graph of <m>f</m> along with its horizontal asymptote <m>y=15</m>. 
+                  We conclude that <m>f(t)=85e^{kt}+15</m>, where <m>k=\frac{1}{5}\ln (13/17)</m>. Below you find a graph of <m>f</m> along with its horizontal asymptote corresponding to the steady room temperature <m>T_0=15</m>. 
                 </p>
-                <image xml:id="im_Netwons_law" width="50%">
+                <image xml:id="im_Netwons_law" width="100%">
                   <description>Graph of solution to Newton's law</description>
                   <sageplot>
                     x,t=var('x t')
-P=plot(85*e^(t*log(13/17)/5)+15, 0,50, color="blue", thickness=2, ticks=[list(range(0,60,10)),list(range(0,110,10))])
-Q=plot(15,x,0,50, color="green", thickness=2)
-P+Q
+                    P=plot(85*e^(t*log(13/17)/5)+15, t,0,50, color="blue", ymin=0, ymax=100,thickness=2, ticks=[list(range(0,60,10)),list(range(0,110,10))])
+                    Q=plot(15,x,0,50, color="green", thickness=2)
+                    t1=text(r"$T=f(t)$", (20,60), fontsize=16, color="black")
+                    t2=text(r"$T_0=15$", (20,20), fontsize=16, color="black")
+                    P+Q+t1+t2
                   </sageplot> 
                 </image>
               </li>
