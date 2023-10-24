@@ -12,7 +12,29 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Find the general solution to this differential equation.</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(y=f(x)\text{.}\)</span> Following <a href="" class="xref" data-knowl="./knowl/proc_sep_vars.html" title="Procedure 1.13.4: Separation of variables (algebraic form)">Procedure 1.13.4</a> we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_sep_vars.html">
+\begin{align*}
+\cot x\cdot \frac{dy}{dx}\amp =2-y  \\
+\frac{dy}{2-y} \amp= \tan x\, dx \\
+\int \frac{1}{2-y}\, dy \amp = \int \tan x\, dx\\
+-\ln\vert 2-y\vert \amp = -\ln\vert \cos x\vert+C \\
+\ln\vert 2-y\vert \amp = \ln\vert \cos x\vert-C \\
+\vert 2-f(x)\vert \amp = e^{\ln\vert \cos x\vert}\, e^{-C}=\vert \cos x\vert e^{-C} \\
+f(x) \amp = 2-D\cos x \text{.}
+\end{align*}
+</div>
+<div class="para">Lastly, using the initial condition, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_sep_vars.html">
+\begin{align*}
+f(0)=0 \amp \implies 2-D=0\\
+\amp \implies D=2
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(f(x)=2-2\cos x\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a class="internal" href="separable_diffeq.html#p-400">in-context</a></span>
 </body>
 </html>

@@ -11,15 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_sep_vars.html">
 \begin{align*}
-\lim_{x\to\infty}\frac{e^x}{2^x+3^x} \amp =\lim_{x\to\infty}\frac{e^x}{3^x(2^x/3^x+1)}\\
-\amp = \lim_{x\to\infty}\frac{e^x}{3^x}\cdot \lim_{x\to\infty}\frac{1}{(2/3)^x+1}\\
-\amp = \lim_{x\to\infty}(e/3)^x\cdot \frac{1}{0+1} \amp ((2/3)^x\to 0)\\
-\amp = 0\cdot 1 \amp ((e/3)^x\to 0) \\
-\amp = 0
+\frac{dy}{dx} \amp = x(y+1)\\
+\frac{dy}{y+1} \amp = x\, dx\\
+\int \frac{1}{y+1}\, dy \amp = \int x\, dx\\
+\ln\vert y+1\vert \amp =\frac{1}{2}x^2+C\\
+\vert y+1\vert \amp = e^{x^2/2+C}\\
+y+1\amp =\pm e^{x^2/2}e^C   \\
+y \amp = (\pm e^C)e^{x^2/2}-1
 \end{align*}
 </div>
-<span class="incontext"><a class="internal" href="s_lHop_A.html#md-75">in-context</a></span>
+<span class="incontext"><a class="internal" href="separable_diffeq.html#md-71">in-context</a></span>
 </body>
 </html>

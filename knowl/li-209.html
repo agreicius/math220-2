@@ -12,8 +12,22 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
 </h4>
-<div class="para"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to\infty}\frac{\ln x}{x^{1/100}}\)</span></div></article><span class="incontext"><a class="internal" href="s_lHop_A.html#li-209">in-context</a></span>
+<div class="para logical">
+<div class="para">Assuming <span class="process-math">\(T_0=15\text{,}\)</span> we have <span class="process-math">\(f(t)=De^{kt}+15\text{.}\)</span> We use the two additional pieces of information to determine the undetermined constants <span class="process-math">\(D\)</span> and <span class="process-math">\(k\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+f(0)=100 \amp \implies De^0+15=100\implies D=85\\
+f(5)=80 \amp \implies 85e^{k5}+15=80\\
+\amp \implies e^{k5}=\frac{65}{85}=\frac{13}{17}\\
+\amp\implies 5k=\ln(13/17) \\
+k \amp =\frac{1}{5}\ln (13/17)\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f(t)=85e^{kt}+15\text{,}\)</span> where <span class="process-math">\(k=\frac{1}{5}\ln (13/17)\text{.}\)</span> Below you find a graph of <span class="process-math">\(f\)</span> along with its horizontal asymptote corresponding to the steady room temperature <span class="process-math">\(T_0=15\text{.}\)</span>
+</div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_Netwons_law.svg" role="img" class="contained" alt="Graph of solution to Newton’s law"></div></article><span class="incontext"><a class="internal" href="separable_diffeq.html#li-209">in-context</a></span>
 </body>
 </html>
