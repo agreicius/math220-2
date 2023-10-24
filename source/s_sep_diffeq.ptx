@@ -110,7 +110,7 @@
 
       
     
-      <example>
+      <example xml:id="eg_sep_vars">
         <title>Separation of variables</title>
         <statement>
           <p>
@@ -139,7 +139,60 @@
         </statement>
         <solution>
           <p>
-            
+            <ol>
+              <li>
+                <p>
+                  Let <m>y=f(x)</m>. Following <xref ref="proc_sep_vars"/> we compute 
+                  <md>
+                    <mrow>\frac{dy}{dx} \amp = x(y+1)</mrow>
+                    <mrow>\frac{dy}{y+1} \amp = x\, dx</mrow>
+                    <mrow>\int \frac{1}{y+1}\, dy \amp = \int x\, dx</mrow>
+                    <mrow> \ln\vert y+1\vert \amp =\frac{1}{2}x^2+C</mrow>
+                    <mrow>\vert y+1\vert \amp = e^{x^2/2+C}</mrow>
+                    <mrow>y+1\amp =\pm e^{x^2/2}e^C   </mrow>
+                    <mrow>y \amp = (\pm e^C)e^{x^2/2}-1</mrow>
+                  </md>. 
+                  We conclude that 
+                  <me>
+                    f(x)=De^{x^2/2}-1
+                  </me>
+                  is the general solution, where <m>D=(\pm e^C)</m>. 
+                  How arbitrary is <m>D</m>? Since <m>C</m> was arbitrary, the expression <m>\pm e^C</m> can assume any value except 0. Setting <m>D=0</m> in our formula yields the function <m>f(x)=-1</m>, which by inspection also satisfies the differential equation. We conclude that the general solution is <m>f(x)=De^{x^2/2}-1</m> where <m>D</m> is any real number. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Following <xref ref="proc_sep_vars"/> we compute 
+                  <md>
+                    <mrow> \int y^2\, dy\amp = \int x^3\, dx </mrow>
+                    <mrow>\frac{1}{3}y^3 \amp = \frac{1}{4}x^4+C</mrow>
+                    <mrow>y^3 \amp = \frac{3}{4}x^4+3C</mrow>
+                    <mrow>y \amp = \sqrt[3]{\frac{3}{4}x^4+D}</mrow>
+                  </md>
+                  where <m>D</m> is any real number. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>y=f(x)</m>. Following <xref ref="proc_sep_vars"/> we compute
+                  <md>
+                    <mrow>\cot x\cdot \frac{dy}{dx}\amp =2-y  </mrow>
+                    <mrow>\frac{dy}{2-y} \amp= \tan x\, dx </mrow>
+                    <mrow>\int \frac{1}{2-y}\, dy \amp = \int \tan x\, dx</mrow>
+                    <mrow>-\ln\vert 2-y\vert \amp = -\ln\vert \cos x\vert+C </mrow>
+                    <mrow>\ln\vert 2-y\vert \amp = \ln\vert \cos x\vert-C </mrow>
+                    <mrow>\vert 2-f(x)\vert \amp = e^{\ln\vert \cos x\vert}\, e^{-C}=\vert \cos x\vert e^{-C} </mrow>
+                    <mrow>f(x) \amp = 2-D\cos x </mrow>
+                  </md>. 
+                  Lastly, using the initial condition, we see that 
+                  <md>
+                    <mrow>f(0)=0 \amp \implies 2-D=0</mrow>
+                    <mrow> \amp \implies D=2</mrow>.
+                  </md>
+                  Thus <m>f(x)=2-2\cos x</m>.
+                </p>
+              </li>
+            </ol>
           </p>
         </solution>
       </example>
@@ -176,7 +229,48 @@
         </statement>
         <solution>
           <p>
-            
+            <ol>
+              <li>
+                <p>
+                  Let temperature <m>T</m> be given by the function <m>T=f(t)</m>. The rate of change of <m>T</m> with respect to <m>t</m> is then <m>f'(t)</m>. Newton's law says this rate of change is proportional to the difference <m>f(t)-T_0</m> of the current temperature of the object and the room temperature.  Mathematically, we write this  proportionality relation as 
+                  <men xml:id="eq_Newtons_law">
+                    f'(t)=k(f(t)-T_0)
+                   </men>,
+                  where <m>k</m> is some fixed constant, called the <em>constant of proportionality</em>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Equation <xref ref="eq_Newtons_law"/> can be solved using <xref ref="proc_sep_vars"/> in much the same manner as <xref ref="eg_sep_vars"/>, yielding a general solution of the form 
+                  <me>
+                    f(t)=De^{kt}+T_0
+                  </me>,
+                  where <m>D</m> is any real number. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Assuming <m>T_0=15</m>, we have <m>f(t)=De^{kt}+15</m>. We use the two additional pieces of information to determine the undetermined constants <m>D</m> and <m>k</m>. We have 
+                  <md>
+                    <mrow>f(0)=100 \amp \implies De^0+15=100\implies D=85</mrow>
+                    <mrow>f(5)=80 \amp \implies 85e^{k5}+15=80</mrow>
+                    <mrow> \amp \implies e^{k5}=\frac{65}{85}=\frac{13}{17}</mrow>
+                    <mrow> \amp\implies 5k=\ln(13/17) </mrow>
+                    <mrow>k \amp =\frac{1}{5}\ln (13/17)</mrow>
+                  </md>.
+                  We conclude that <m>f(t)=85e^{kt}+15</m>, where <m>k=\frac{1}{5}\ln (13/17)</m>. Below you find a graph of <m>f</m> along with its horizontal asymptote <m>y=15</m>. 
+                </p>
+                <image xml:id="im_Netwons_law" width="50%">
+                  <description>Graph of solution to Newton's law</description>
+                  <sageplot>
+                    x,t=var('x t')
+P=plot(85*e^(t*log(13/17)/5)+15, 0,50, color="blue", thickness=2, ticks=[list(range(0,60,10)),list(range(0,110,10))])
+Q=plot(15,x,0,50, color="green", thickness=2)
+P+Q
+                  </sageplot> 
+                </image>
+              </li>
+            </ol>
           </p>
         </solution>
       </example>
