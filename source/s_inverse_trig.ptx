@@ -41,6 +41,15 @@
         </p>
       </statement>
     </definition>
+    <remark>
+      <p>
+        Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, 
+        <md>
+          <mrow>\arcsin x \amp = sin^{-1}x \amp \arccos x\amp =\cos^{-1} x \amp \arctan x\amp=\tan^{-1} x</mrow>    
+        </md>.
+        We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are <em>reciprocals</em> of the corresponding trigonometric functions. They are not! 
+      </p>
+    </remark>
     <example xml:id="eg_inverse_trig_compute">
         <title>Computing with inverse trig functions</title>
         <statement>
@@ -119,6 +128,42 @@
           </ul>
         </statement>
     </theorem>
+    <example xml:id="eg_inverse_trig_compute">
+      <title>Computing with inverse trig functions</title>
+      <statement>
+              <p>
+                Compute the following values of trigonometric functions by hand.
+                <ol>
+                  <li>
+                    <p>
+                      <m>\displaystyle\arcsin(-1)</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\arccos(-\sqrt{2}/2)</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\arctan(-1/\sqrt{3})</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\displaystyle\arcsin\left(\sin\left(\frac{10\pi}{11}\right)\right)</m> <em>Hint</em>.
+                      The answer is not <m>10\pi/11</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+      </statement>
+      <solution>
+          <p>
+              
+          </p>
+      </solution>
+  </example>
     <example xml:id="eg_inverse_trig_solve">
         <title>Solving trig equations</title>
         <statement>
