@@ -40,6 +40,7 @@
       <xi:include  href="s_sep_diffeq.ptx"/>
       <xi:include  href="s_lHop_A.ptx"/>
       <xi:include  href="s_lHop_B.ptx"/>
+      <xi:include  href="s_inverse_trig.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">
