@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_trig_int" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Trigonometric integrals</title>
+    <theorem xml:id="th_trig_identities">
+        <title>Trigonometric identities</title>
+      <statement>
+        <p>
+          In the following identities <m>\theta</m> and <m>\phi</m> range over all real numbers. 
+          <ol>
+            <li>
+                <title>Pythagorean identities</title>
+                <p>
+                    <md>
+                        <mrow>\sin^2\theta+\cos^2\theta \amp = 1 \amp \tan^2\theta+1\amp = \sec^2\theta </mrow>
+                    </md>
+                </p>
+            </li>
+            <li>
+                <title>Sum-to-product and double-angle formulas</title>
+                <p>
+                    <md>
+                        <mrow>\sin(\theta+\phi) \amp =\sin\theta\cos\phi+\cos\theta\sin\phi 
+                            \amp \sin(\theta-\phi) \amp =\sin\theta\cos\phi-\cos\theta\sin\phi </mrow>
+                        <mrow> \cos(\theta+\phi)\amp =\cos\theta\cos\phi-\sin\theta\sin\phi 
+                            \amp \cos(\theta-\phi)\amp =\cos\theta\cos\phi+\sin\theta\sin\phi 
+                        </mrow>
+                        <mrow> \sin(2\theta)\amp =2\sin\theta\cos\theta </mrow>
+                        <mrow> \cos(2\theta)  \amp = \cos^2\theta-\sin^2\theta </mrow>
+                    </md>.
+                </p>
+            </li>
+           <li>
+            <title>Product-to-sum and square formulas</title>
+              <p>
+                <md>
+                    <mrow>\sin\theta\sin\phi \amp = \frac{1}{2}(\cos(\theta-\phi)-\cos(\theta+\phi)) </mrow>
+                    <mrow>\cos\theta\cos\phi \amp =\frac{1}{2}(\cos(\theta-\phi)+\cos(\theta+\phi)) </mrow>
+                    <mrow> \sin\theta\cos\phi \amp = \frac{1}{2}(\sin(\theta-\phi)+\sin(\theta+\phi))</mrow>
+                    <mrow> \sin^2\theta \amp = \frac{1}{2}(1-\cos 2\theta) </mrow>
+                    <mrow> \cos^2\theta\amp = \frac{1}{2}(1+\cos 2\theta)</mrow>
+                </md>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    
+    <algorithm xml:id="proc_int_sincos">
+        <title>Integrating <m>\sin^m x\cos^n x</m></title>
+        <statement>
+          <p>
+            Let <m>m</m> and <m>n</m> be nonnegative integers.
+            When computing
+            <me>
+              \int \sin^m x\cos^n x\, dx
+            </me>
+            use the following strategies.
+            <ol>
+              <li>
+                <title>Odd sine power</title>
+                <p>
+                  If <m>m=2k+1</m> is odd, write
+                  <me>
+                    \int \sin^m x\cos^n x\, dx=\int (1-\cos^2x)^k\cos^n x\sin x\, dx
+                  </me>
+                  and use the substitution <m>u=\sin x, du=\cos x\, dx</m>.
+                </p>
+              </li>
+              <li>
+                <title>Odd cosine power</title>
+                <p>
+                  If <m>n=2k+1</m> is odd, write
+                  <me>
+                    \int \sin^m x\cos^n x\, dx=\int \sin^m x(1-\sin^2x)^k\cos x \, dx
+                  </me>
+                  and use the substitution <m>u=\cos x, du=-\sin x\, dx</m>.
+                </p>
+              </li>
+              <li>
+                <title>Even powers</title>
+                <p>
+                  If <m>m</m> and <m>n</m> are both even use <m>\displaystyle\sin^2 x=\frac{1-\cos 2x}{2}</m> and
+                  <m>\displaystyle\cos^2 x=\frac{1+\cos 2x}{2}</m> to reduce to a lower power of <m>\cos 2x</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </algorithm>
+
+    <algorithm xml:id="proc_int_tansec">
+        <title>Integrating <m>\tan^m x\sec^n x</m></title>
+        <statement>
+          <p>
+            Let <m>m</m> and <m>n</m> be nonnegative integers.
+            When computing
+            <me>
+              \int \tan^m x\sec^n x \, dx
+            </me>
+            use the following strategies. 
+            <ol>
+              <li>
+                <title>Odd tangent power</title>
+                <p>
+                  If <m>m=2k+1</m> is odd and <m>n</m> is positive, write
+                  <me>
+                    \int \tan^m x\sec^n x \, dx=\int (\sec^2 x-1)^k\sec^{n-1} x\sec x\tan x \, dx
+                  </me>
+                  and use the substitution <m>u=\sec x, du=\sec x\tan x\, dx</m>.
+                </p>
+              </li>
+              <li>
+                <title>Even secant power</title>
+                <p>
+                  If <m>n=2k</m> is even and positive, write
+                  <me>
+                    \int \tan^m x\sec^n x \, dx=\int (\tan^2 x+1)^{k-1}\tan^m x\sec^2 x\, dx
+                  </me>
+                  and use the substitution <m>u=\tan x, du=\sec^2 x\, dx</m>.
+                </p>
+              </li>
+              <li>
+                <title>Even tangent power, odd secant power</title>
+                <p>
+                  If <m>m</m> is even and <m>n</m> is odd,
+                  express everything in terms of <m>\sec x</m> and possibly use integration by parts.
+                </p>
+              </li>
+              <li>
+                <title>Tangent power</title>
+                
+                
+                <p>
+                    If <m>n=0</m>, use the identity <m>\tan^2 x=\sec^2 x-1</m> and strategies from the previous cases. 
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </algorithm>
+
+    <example xml:id="eg_odd_sin_power">
+        <title>Odd sine power</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle \int \sin^3x \cos^2 x\, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_even_powers">
+        <title>Even powers</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle \int \sin^2 x\cos^4 x\, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_even_sec_power">
+        <title>Even secant power</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle \int \sec^4 x\, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    
+    <example xml:id="eg_odd_tan_power">
+        <title>Odd tangent power</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle \int \tan^5 x\sec^7 x\, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="eg_even_tan_odd_sec">
+        <title>Even tangent power, odd secant power</title>
+        <statement>
+            <p>
+                Compute  <m>\displaystyle \int \sec^3 x\, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_tan_power">
+        <title>Tangent power</title>
+        <statement>
+            <p>
+                Compute  <m>\displaystyle \int \tan^5 x \, dx</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+
+</section>
