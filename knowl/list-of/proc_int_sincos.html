@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.19.2</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating <span class="process-math">\(\sin^m x\cos^n x\)</span>.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be nonnegative integers. When computing</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sin^m x\cos^n x\, dx
+\end{equation*}
+</div>
+<div class="para">use the following strategies.</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Odd sine power.</span></span><div class="para logical">
+<div class="para">If <span class="process-math">\(m=2k+1\)</span> is odd, write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sin^m x\cos^n x\, dx=\int (1-\cos^2x)^k\cos^n x\sin x\, dx
+\end{equation*}
+</div>
+<div class="para">and use the substitution <span class="process-math">\(u=\sin x, du=\cos x\, dx\text{.}\)</span>
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Odd cosine power.</span></span><div class="para logical">
+<div class="para">If <span class="process-math">\(n=2k+1\)</span> is odd, write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sin^m x\cos^n x\, dx=\int \sin^m x(1-\sin^2x)^k\cos x \, dx
+\end{equation*}
+</div>
+<div class="para">and use the substitution <span class="process-math">\(u=\cos x, du=-\sin x\, dx\text{.}\)</span>
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Even powers.</span></span><div class="para">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both even use <span class="process-math">\(\displaystyle\sin^2 x=\frac{1-\cos 2x}{2}\)</span> and <span class="process-math">\(\displaystyle\cos^2 x=\frac{1+\cos 2x}{2}\)</span> to reduce to a lower power of <span class="process-math">\(\cos 2x\text{.}\)</span>
+</div>
+</li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="s_trig_int.html#proc_int_sincos">in-context</a></span>
+</body>
+</html>

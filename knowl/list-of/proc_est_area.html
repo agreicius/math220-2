@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating area.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f\)</span> be a nonnegative function defined on the interval <span class="process-math">\([a,b]\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the graph of <span class="process-math">\(f\)</span> from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span> To estimate the area between <span class="process-math">\(\mathcal{C}\)</span> and the <span class="process-math">\(x\)</span>-axis proceed as follows:</div>
+<ol class="decimal">
+<li><div class="para">Divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals, each of width <span class="process-math">\(\Delta x=(b-a)/n\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">For each subinterval pick a <dfn class="terminology">sample input</dfn> <span class="process-math">\(x^*\)</span> in that interval and build the rectangle whose base is the subinterval and whose <dfn class="terminology">sample height</dfn> is given by <span class="process-math">\(h=f(x^*)\text{.}\)</span> The area of this block is</div>
+<div class="displaymath process-math">
+\begin{equation}
+A=\underset{\text{ height } }{\underbrace{f(x^*)}}\,\underset{\text{ width } }{\underbrace{\Delta x}}\text{.}\tag{1.2.1}
+\end{equation}
+</div>
+</div></li>
+<li><div class="para">Sum together the areas of the <span class="process-math">\(n\)</span> blocks constructed in Step 2.</div></li>
+</ol>
+</div> <div class="para logical">
+<div class="para">Depending on how the sample inputs <span class="process-math">\(x^*\)</span> are chosen in each subinterval, we get a different estimate. Below you find a number of common methods.</div>
+<ul class="disc">
+<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen as the left (resp. right) endpoint of each subinterval, the estimate is called a <dfn class="terminology">left sum estimate</dfn> (resp. <dfn class="terminology">right sum estimate</dfn>).</div></li>
+<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen as the midpoint of each subinterval, the estimate is called a <dfn class="terminology">midpoint sum estimate</dfn>.</div></li>
+<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called a <dfn class="terminology">lower sum estimate</dfn>.</div></li>
+<li><div class="para">If <span class="process-math">\(x^*\)</span> is chosen so that <span class="process-math">\(f(x^*)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on each subinterval, the estimate is called an <dfn class="terminology">upper sum estimate</dfn>.</div></li>
+</ul>
+</div></article><span class="incontext"><a class="internal" href="s_est_area.html#proc_est_area">in-context</a></span>
+</body>
+</html>

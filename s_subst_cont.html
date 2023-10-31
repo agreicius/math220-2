@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -247,7 +251,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_subst_cont"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.8</span><span class="space"> </span><span class="title">More substitution; area between curves</span>
 </h2>
-<div class="para" id="p-239">Before discussing the area of a region lying between two curves, we provide an alternative method to <a href="" class="xref" data-knowl="./knowl/proc_sub_2step.html" title="Procedure 1.7.6: Definite integral substitution: 2-step">Procedure 1.7.6</a>for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other.</div>
+<div class="para" id="p-239">Before discussing the area of a region lying between two curves, we provide an alternative method to <a href="" class="xref" data-knowl="./knowl/xref/proc_sub_2step.html" title="Procedure 1.7.6: Definite integral substitution: 2-step">Procedure 1.7.6</a>for definite integral substitution. We encourage you to try your hand at both methods; you may find that different circumstances will make one method more convenient than the other.</div>
 <article class="algorithm theorem-like" id="proc_sub_streamlined"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Definite integral substitution: streamlined.</span>
 </h3>
@@ -267,7 +271,7 @@ du= \amp g'(x) dx\text{.}\tag{1.8.2}
 </li>
 <li id="li-117">
 <span class="heading"><span class="title">Transform.</span></span><div class="para logical" id="p-242">
-<div class="para">Use <a href="" class="xref" data-knowl="./knowl/eq_sub_u.html" title="Equation 1.8.1">(1.8.1)–(1.8.2)</a> and algebra to transform the integral of <span class="process-math">\(f(x)\)</span> over <span class="process-math">\([a,b]\)</span> into an integral of a function <span class="process-math">\(h(u)\)</span> over the interval <span class="process-math">\([g(a),g(b)]\text{:}\)</span> i.e.,</div>
+<div class="para">Use <a href="" class="xref" data-knowl="./knowl/xref/eq_sub_u.html" title="Equation 1.8.1">(1.8.1)–(1.8.2)</a> and algebra to transform the integral of <span class="process-math">\(f(x)\)</span> over <span class="process-math">\([a,b]\)</span> into an integral of a function <span class="process-math">\(h(u)\)</span> over the interval <span class="process-math">\([g(a),g(b)]\text{:}\)</span> i.e.,</div>
 <div class="displaymath process-math" data-contains-math-knowls="" id="eq_sub_streamlined">
 \begin{equation}
 \int_{x=a}^{x=b}f(x)\, dx=\int_{u=g(a)}^{u=g(b)}h(u)\, du   \text{.}\tag{1.8.3}
@@ -290,7 +294,7 @@ du= \amp g'(x) dx\text{.}\tag{1.8.2}
 <li id="li-120"><div class="para" id="p-247"><span class="process-math">\(\displaystyle \displaystyle\int_{1}^{2} \sqrt{s^8+s^6}\, ds\)</span></div></li>
 </ol>
 </div></div>
-<div class="solutions"><details id="solution-25" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-248"><ol class="decimal">
+<div class="solutions"><details id="solution-25" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-248"><ol class="decimal">
 <li id="li-121"><div class="para logical" id="p-249">
 <div class="para">Using the substitution</div>
 <div class="displaymath process-math" id="md-44">
@@ -399,7 +403,7 @@ s^3\, ds= s^2\cdot s\, ds=\frac{1}{2}(u-1)du\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8.6</span><span class="period">.</span><span class="space"> </span><span class="title">Area between parabola and line.</span>
 </h3>
 <div class="para" id="p-256">Let <span class="process-math">\(\mathcal{R}\)</span> be the region between the parabola <span class="process-math">\(x+y^2=4\)</span> and the line <span class="process-math">\(2x+y=2\)</span> lying in the first quadrant. Compute the are of <span class="process-math">\(\mathcal{R}\text{.}\)</span> You may do this either by thinking of the curves as graphs of functions of <span class="process-math">\(x\text{,}\)</span> or graphs of functions of <span class="process-math">\(y\text{.}\)</span> Which approach is easier?</div>
-<div class="solutions"><details id="solution-26" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-26" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-257">
 <div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\text{.}\)</span> The setup lends itself to a treatment in terms of <span class="process-math">\(y\)</span> in part because for both equations defining the curves we can solve for <span class="process-math">\(x\)</span> easily in terms of <span class="process-math">\(y\text{.}\)</span> The region is naturally described as the points lying between the curves</div>
 <div class="displaymath process-math" id="md-49">
@@ -424,7 +428,7 @@ x=q(y) \amp= 1-y/2
 <div class="para">Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous on the interval <span class="process-math">\([a,b]\)</span> and intersect one another finitely many times. Let <span class="process-math">\(\mathcal{R}\)</span> be the region between the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{,}\)</span> and between the vertical lines <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\text{.}\)</span> To compute the area of <span class="process-math">\(\mathcal{R}\text{,}\)</span> proceed as follows:</div>
 <ol class="decimal">
 <li id="li-125"><div class="para" id="p-259">Partition <span class="process-math">\([a,b]\)</span> into subintervals over which one of the functions is always greater than or equal to the other.</div></li>
-<li id="li-126"><div class="para" id="p-260">On each such subinterval compute the area of the corresponding region by applying <a href="" class="xref" data-knowl="./knowl/d_area_between_curves_x.html" title="Definition 1.8.3: Area between curves: functions of x">Definition 1.8.3</a>. Make sure to integrate the appropriate difference of functions.</div></li>
+<li id="li-126"><div class="para" id="p-260">On each such subinterval compute the area of the corresponding region by applying <a href="" class="xref" data-knowl="./knowl/xref/d_area_between_curves_x.html" title="Definition 1.8.3: Area between curves: functions of x">Definition 1.8.3</a>. Make sure to integrate the appropriate difference of functions.</div></li>
 <li id="li-127"><div class="para" id="p-261">Sum up the areas you compute in Step 2.</div></li>
 </ol>
 </div></article><article class="example example-like" id="example-29"><h3 class="heading">
@@ -432,7 +436,7 @@ x=q(y) \amp= 1-y/2
 </h3>
 <div class="para" id="p-262">Compute the area of the region between the parabolas <span class="process-math">\(y=-x^2-2x\)</span> and <span class="process-math">\(y=x^2-4\)</span> lying within the lines <span class="process-math">\(x=-3\)</span> and <span class="process-math">\(x=2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-27" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-27" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-263">
 <div class="para">In the diagram below the region <span class="process-math">\(\mathcal{R}\)</span> is described as a union of three regions <span class="process-math">\(\mathcal{R}_i\text{,}\)</span> each of whose area can be computed with the area formula. We conclude</div>
 <div class="displaymath process-math" id="md-51">

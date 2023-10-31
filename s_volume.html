@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -316,12 +320,12 @@ a=x_0\lt x_1\lt \dots \lt x_n=b
 </h3> <div class="para" id="p-274">Let <span class="process-math">\(\mathcal{S}\subseteq \R^3\)</span> be a solid region in <span class="process-math">\(3\)</span>-space lying between the planes <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\text{.}\)</span> For each <span class="process-math">\(x\in [a,b]\)</span> let <span class="process-math">\(\mathcal{S}_{x}\)</span> be the corresponding <span class="process-math">\(x\)</span>-cross section of <span class="process-math">\(\mathcal{S}\)</span> and let <span class="process-math">\(A(x)\)</span> be the area of <span class="process-math">\(S_{x}\text{.}\)</span>
 </div> <div class="para logical" id="p-275">
 <div class="para">Assume <span class="process-math">\(A(x)\)</span> is integrable on the interval <span class="process-math">\([a,b]\text{.}\)</span> We define the <dfn class="terminology">volume</dfn> <span class="process-math">\(\operatorname{vol}\mathcal{S}\)</span> of <span class="process-math">\(\mathcal{S}\)</span> as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_vol_cross.html" id="eq_vol_cross">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_vol_cross.html" id="eq_vol_cross">
 \begin{equation}
 \operatorname{vol}\mathcal{S}=\int_a^b A(x)\, dx\text{.}\tag{1.9.1}
 \end{equation}
 </div>
-<div class="para">The volume of <span class="process-math">\(\mathcal{S}\)</span> can be defined with respect to any linear axis (e.g., the <span class="process-math">\(y\)</span>- or <span class="process-math">\(z\)</span>-axis) using an analogous formula to <a href="" class="xref" data-knowl="./knowl/eq_vol_cross.html" title="Equation 1.9.1">(1.9.1)</a>.</div>
+<div class="para">The volume of <span class="process-math">\(\mathcal{S}\)</span> can be defined with respect to any linear axis (e.g., the <span class="process-math">\(y\)</span>- or <span class="process-math">\(z\)</span>-axis) using an analogous formula to <a href="" class="xref" data-knowl="./knowl/xref/eq_vol_cross.html" title="Equation 1.9.1">(1.9.1)</a>.</div>
 </div></article><article class="algorithm theorem-like" id="proc_volume"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Volume via cross sections.</span>
 </h3>
@@ -341,7 +345,7 @@ a=x_0\lt x_1\lt \dots \lt x_n=b
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">Volume of sphere.</span>
 </h3>
 <div class="para" id="p-281">Let <span class="process-math">\(\mathcal{S}\)</span> be the solid sphere centered at the origin of radius <span class="process-math">\(r\text{.}\)</span> Compute <span class="process-math">\(\operatorname{vol}\mathcal{S}\)</span> using cross sections.</div>
-<div class="solutions"><details id="solution-28" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-28" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-282">
 <div class="para">As the diagram below illustrates, each <span class="process-math">\(x\)</span>-cross section <span class="process-math">\(S_x\)</span> of the sphere <span class="process-math">\(\mathcal{S}\)</span> is a circle of radius <span class="process-math">\(r_x=\sqrt{r^2-x^2}\text{.}\)</span> Thus</div>
 <div class="displaymath process-math">
@@ -365,7 +369,7 @@ A(x)=\pi r_x^2=\pi(r^2-x^2)
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Volume of cone.</span>
 </h3>
 <div class="para" id="p-283">Let <span class="process-math">\(\mathcal{S}\)</span> be the solid cone with base the disc <span class="process-math">\(D\)</span> in the <span class="process-math">\(xy\)</span>-plane with equation <span class="process-math">\(x^2+y^2=r^2\)</span> and vertex <span class="process-math">\(P\)</span> lying directly above the origin at a height of <span class="process-math">\(h\text{.}\)</span> Compute <span class="process-math">\(\operatorname{vol} \mathcal{S}\)</span> using cross sections.</div>
-<div class="solutions"><details id="solution-29" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-29" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-284">
 <div class="para">Picking out two similar right triangles in the diagram below, we see that each <span class="process-math">\(z\)</span>-cross section <span class="process-math">\(S_z\)</span> of the cone <span class="process-math">\(\mathcal{S}\)</span> is a circle of radius <span class="process-math">\(r_z\)</span> satisfying <span class="process-math">\(\frac{r_z}{r}=\frac{h-z}{h}\text{,}\)</span> or <span class="process-math">\(r_z=r-\frac{r}{h}z\text{.}\)</span> Thus</div>
 <div class="displaymath process-math">
@@ -387,7 +391,7 @@ A(z)=\pi r_z^2=\pi(r-\frac{r}{h}z)^2
 </div>
 </div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/cone_vol.png" class="contained" alt="Volume of cone"></div>
 </div></details></div></article><div class="para" id="p-285">
-<a href="" class="xref" data-knowl="./knowl/d_volume.html" title="Definition 1.9.1: Volume via cross sections">Definition 1.9.1</a> is quite general: it can be applied to any solid region with an integrable cross sectional area function <span class="process-math">\(A(x)\text{.}\)</span> For the remainder of the section, we consider a very special type of solid: namely a <em class="emphasis">solid of rotation</em>.</div>
+<a href="" class="xref" data-knowl="./knowl/xref/d_volume.html" title="Definition 1.9.1: Volume via cross sections">Definition 1.9.1</a> is quite general: it can be applied to any solid region with an integrable cross sectional area function <span class="process-math">\(A(x)\text{.}\)</span> For the remainder of the section, we consider a very special type of solid: namely a <em class="emphasis">solid of rotation</em>.</div>
 <article class="definition definition-like" id="d_solid_of_rotation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Solid of revolution.</span>
 </h3> <div class="para" id="p-286">A <dfn class="terminology">solid of revolution</dfn> is a solid region <span class="process-math">\(\mathcal{S}\subseteq \R^3\)</span> obtained by rotating a planar region <span class="process-math">\(\mathcal{R}\)</span> around a central linear axis <span class="process-math">\(L\text{.}\)</span>
@@ -461,10 +465,10 @@ A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
 </div></li>
 <li id="li-148"><div class="para" id="p-299">Sketch the solid <span class="process-math">\(\mathcal{S}\text{.}\)</span> How else could we have computed the volume in (a)?</div></li>
 </ol>
-<div class="solutions"><details id="solution-30" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-30" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-300">
 <div class="para">As the diagram below indicates, when rotating the given region about the line <span class="process-math">\(y=2\text{,}\)</span> we get cross sections <span class="process-math">\(\mathcal{S}_x\)</span> that are discs of radius <span class="process-math">\(r_x=f(x)-2\text{.}\)</span> Using the disc formula, we conclude that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_cone.html" id="md-56">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_cone.html" id="md-56">
 \begin{align*}
 \operatorname{vol}\mathcal{S} \amp =\int_0^7\pi(f(x)-2)^2\, dx\\
 \amp =\int_0^7\pi(3-\frac{3}{7}x)^2\, dx\\
@@ -472,7 +476,7 @@ A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
 \amp = 21 \pi\text{.}
 \end{align*}
 </div>
-<div class="para">Alternatively, we observe that the solid of revolution in this case is just a cone of radius <span class="process-math">\(3\)</span> and height 7. From <a href="" class="xref" data-knowl="./knowl/eg_cone.html" title="Example 1.9.4: Volume of cone">Example 1.9.4</a> we conclude that <span class="process-math">\(\operatorname{vol}\mathcal{S}=\frac{1}{3}\pi\cdot 3^3\cdot 7=21\pi\text{.}\)</span>
+<div class="para">Alternatively, we observe that the solid of revolution in this case is just a cone of radius <span class="process-math">\(3\)</span> and height 7. From <a href="" class="xref" data-knowl="./knowl/xref/eg_cone.html" title="Example 1.9.4: Volume of cone">Example 1.9.4</a> we conclude that <span class="process-math">\(\operatorname{vol}\mathcal{S}=\frac{1}{3}\pi\cdot 3^3\cdot 7=21\pi\text{.}\)</span>
 </div>
 </div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_disk.svg" role="img" class="contained" alt="Disk diagram"></div>
 </div></details></div></article><article class="example example-like" id="eg_washer"><h3 class="heading">
@@ -480,11 +484,11 @@ A(x)=\pi((f(x)-c)^2-(g(x)-c)^2)\text{.}\tag{1.9.4}
 </h3>
 <div class="para" id="p-301">Let <span class="process-math">\(\mathcal{R}\)</span> be the region enclosed by the line <span class="process-math">\(y+2x=2\)</span> and the parabola <span class="process-math">\(y^2+x=4\text{,}\)</span> and let <span class="process-math">\(\mathcal{S}\)</span> be the solid obtained revolving <span class="process-math">\(\mathcal{R}\)</span> about the <span class="process-math">\(y\)</span>-axis. Sketch <span class="process-math">\(\mathcal{R}\)</span> and compute the volume of <span class="process-math">\(\mathcal{S}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-31" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-31" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para" id="p-302">The two curves have equations <span class="process-math">\(x=p(y)=4-y^2\)</span> and <span class="process-math">\(x=q(y)=1-y/2\text{.}\)</span> We find the points of intersection of these two curves by solving the corresponding system of two equations for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Setting <span class="process-math">\(x=4-y^2=1-y/2\text{,}\)</span> we see that <span class="process-math">\(2y^2-y-6=0\text{.}\)</span> Solving this quadratic yields <span class="process-math">\(y=2\)</span> or <span class="process-math">\(y=-3/2\text{.}\)</span> The two points of intersection are thus <span class="process-math">\((0,2)\)</span> and <span class="process-math">\((7/4,-3/2)\text{.}\)</span> It follows that the region <span class="process-math">\(\mathcal{R}\)</span> is the set of points lying between the curves <span class="process-math">\(x=p(y)\)</span> and <span class="process-math">\(x=q(y)\text{,}\)</span> and the horizontal lines <span class="process-math">\(y=-3/2\)</span> and <span class="process-math">\(y=2\text{.}\)</span>
 </div> <div class="para logical" id="p-303">
-<div class="para">As indicated in the diagram below, the general <span class="process-math">\(y\)</span>-cross section of this solid will be a washer of outer radius <span class="process-math">\(R_y=p(y)-0=p(y)\)</span> and inner radius <span class="process-math">\(r_y=q(y)-0=q(y)\text{.}\)</span> (The <span class="process-math">\(c\)</span> in <a href="" class="xref" data-knowl="./knowl/eq_vol_washer.html" title="Equation 1.9.5">(1.9.5)</a> is equal to 0 in this example.) We conclude that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_vol_washer.html" id="md-57">
+<div class="para">As indicated in the diagram below, the general <span class="process-math">\(y\)</span>-cross section of this solid will be a washer of outer radius <span class="process-math">\(R_y=p(y)-0=p(y)\)</span> and inner radius <span class="process-math">\(r_y=q(y)-0=q(y)\text{.}\)</span> (The <span class="process-math">\(c\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/eq_vol_washer.html" title="Equation 1.9.5">(1.9.5)</a> is equal to 0 in this example.) We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_vol_washer.html" id="md-57">
 \begin{align*}
 \operatorname{vol}\mathcal{S} \amp =\int_{-3/2}^2\pi(p(y)^2-q(y)^2)\, dy\\
 \amp = \pi\int_{-3/2}^2(4-y^2)^2-(1-y/2)^2\, dy\\

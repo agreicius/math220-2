@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -316,7 +320,7 @@ x_1\lt x_2\implies f(x_1)&gt;f(x_2)\text{.}
 <li id="li-153"><div class="para" id="p-314">Show that <span class="process-math">\(f\)</span> is one-to-one on <span class="process-math">\(D=(-\infty, 0]\)</span> and compute an inverse of <span class="process-math">\(f\)</span> with respect to this domain.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-32" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-32" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para" id="p-315">Using simple properties of quadratic functions, we know that <span class="process-math">\(f\)</span> is decreasing on <span class="process-math">\((-\infty, 0]\)</span> and increasing on <span class="process-math">\([0,\infty)\text{.}\)</span> It follows that <span class="process-math">\(f\)</span> is one-to-one on either of those smaller subintervals. Since <span class="process-math">\(f(-2)=f(2)=5\text{,}\)</span> and more generally <span class="process-math">\(f(-x)=f(x)\)</span> for all <span class="process-math">\(x\in \R
 \text{,}\)</span> we see that <span class="process-math">\(f\)</span> is not one-to-one on <span class="process-math">\(\R=(-\infty,\infty)\text{.}\)</span>
 </div> <div class="para logical" id="p-316">
@@ -381,16 +385,16 @@ f(f^{-1}(b))\amp =b \text{ for all }  b\in Y\text{.}\tag{1.10.3}
 </div>
 </div></li>
 </ol>
-</div></article><details id="proof-7" class="hiddenproof"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-326">
-<div class="para">We will not prove (1), which is the more difficult part of this theorem. Assuming <span class="process-math">\((1)\)</span> is true, we prove (2) using the chain rule as follows. By (2) of <a href="" class="xref" data-knowl="./knowl/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>, we have <span class="process-math">\(f^{-1}(f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> Taking derivatives of both sides of this equation, we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html" id="md-59">
+</div></article><details id="proof-7" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-326">
+<div class="para">We will not prove (1), which is the more difficult part of this theorem. Assuming <span class="process-math">\((1)\)</span> is true, we prove (2) using the chain rule as follows. By (2) of <a href="" class="xref" data-knowl="./knowl/xref/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>, we have <span class="process-math">\(f^{-1}(f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> Taking derivatives of both sides of this equation, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_inverse_function.html" id="md-59">
 \begin{align*}
 \frac{d}{dx} (f^{-1}(f(x)))=\frac{d}{dx} x\amp \implies (f^{-1})'(f(x))f'(x)=1 \amp \text{(chain rule)}\\
 \amp \implies f^{-1}(f(x))=\frac{1}{f'(x)} \amp (f'(x)\ne 0)\text{.}
 \end{align*}
 </div>
 <div class="para">Equivalently, since for any <span class="process-math">\(b\in J\)</span> we have <span class="process-math">\(f^{-1}(b)=a\)</span> for some unique <span class="process-math">\(a\in I\)</span> satisfying <span class="process-math">\(f(a)=b\text{,}\)</span> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html" id="md-60">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_inverse_function.html" id="md-60">
 \begin{align*}
 (f^{-1})'(b) \amp = (f^{-1})'(f(a)) \\
 \amp = \frac{1}{f'(a)} \amp \text{(by above)}\\
@@ -407,7 +411,7 @@ f(f^{-1}(b))\amp =b \text{ for all }  b\in Y\text{.}\tag{1.10.3}
 </div></li>
 <li id="li-162"><div class="para" id="p-329">Compute <span class="process-math">\(f'(x)\text{.}\)</span>
 </div></li>
-<li id="li-163"><div class="para" id="p-330">Use <a href="" class="xref" data-knowl="./knowl/eq_IFT.html" title="Equation 1.10.4">(1.10.4)</a> to conclude <span class="process-math">\((f^{-1})'(b)=1/f'(f^{-1}(b))=1/f'(a)\text{.}\)</span>
+<li id="li-163"><div class="para" id="p-330">Use <a href="" class="xref" data-knowl="./knowl/xref/eq_IFT.html" title="Equation 1.10.4">(1.10.4)</a> to conclude <span class="process-math">\((f^{-1})'(b)=1/f'(f^{-1}(b))=1/f'(a)\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="example example-like" id="eg_inverse_derivative"><h3 class="heading">
@@ -423,11 +427,11 @@ f(f^{-1}(b))\amp =b \text{ for all }  b\in Y\text{.}\tag{1.10.3}
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-33" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-335"><ol class="decimal">
+<div class="solutions"><details id="solution-33" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-335"><ol class="decimal">
 <li id="li-167"><div class="para" id="p-336">Since <span class="process-math">\(f'(x)=5x^4+3x^2+3\)</span> is clearly positive for all <span class="process-math">\(x\in \R\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is increasing on its domain, and hence is one-to-one. Thus <span class="process-math">\(f\)</span> has an inverse function.</div></li>
 <li id="li-168"><div class="para logical" id="p-337">
-<div class="para">Short of actually plotting points, we can at least produce a table of values for <span class="process-math">\(f^{-1}\)</span> using a table of values of <span class="process-math">\(f\text{,}\)</span> using (4) of <a href="" class="xref" data-knowl="./knowl/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_inverse_function.html" id="md-61">
+<div class="para">Short of actually plotting points, we can at least produce a table of values for <span class="process-math">\(f^{-1}\)</span> using a table of values of <span class="process-math">\(f\text{,}\)</span> using (4) of <a href="" class="xref" data-knowl="./knowl/xref/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_inverse_function.html" id="md-61">
 \begin{align*}
 \begin{array}{c|c}
 x\amp f(x) \\
@@ -448,16 +452,16 @@ x\amp f^{-1}(x) \\
 </div>
 </div></li>
 <li id="li-169"><div class="para logical" id="p-338">
-<div class="para">For general <span class="process-math">\(b\)</span> in the domain of <span class="process-math">\(f^{-1}\)</span> (or equivalently, range of <span class="process-math">\(f\)</span>), we have by <a href="" class="xref" data-knowl="./knowl/th_IFT.html" title="Theorem 1.10.8: Derivative formula for inverses">Theorem 1.10.8</a>
+<div class="para">For general <span class="process-math">\(b\)</span> in the domain of <span class="process-math">\(f^{-1}\)</span> (or equivalently, range of <span class="process-math">\(f\)</span>), we have by <a href="" class="xref" data-knowl="./knowl/xref/th_IFT.html" title="Theorem 1.10.8: Derivative formula for inverses">Theorem 1.10.8</a>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_IFT.html" id="md-62">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_IFT.html" id="md-62">
 \begin{align*}
 f^{-1}(b) \amp = \frac{1}{f'(f^{-1}(b))}\\
 \amp = \frac{1}{5(f^{-1}(b))^4+3(f^{-1}(b))^2+3} \amp (f'(x)=5x^4+3x^2+3)\text{.}
 \end{align*}
 </div>
 <div class="para">Thus to compute <span class="process-math">\((f^{-1})'(-5)\)</span> and <span class="process-math">\((f^{-1})'(-10)\text{,}\)</span> it remains only to compute <span class="process-math">\(f^{-1}(-5)\)</span> and <span class="process-math">\(f^{-1}(-10)\)</span> and plug these into the last expression above. We see using our table of values in (b) that <span class="process-math">\(f^{-1}(-5)=0\)</span> and <span class="process-math">\(f^{-1}(-10)=-1\text{.}\)</span> Thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_IFT.html" id="md-63">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_IFT.html" id="md-63">
 \begin{align*}
 (f^{-1})'(-5) \amp = \frac{1}{(5\cdot 0+3\cdot 0+3)}=\frac{1}{3} \\
 (f^{-1})'(-10) \amp = \frac{1}{(5\cdot (-1)^4+3\cdot (-1)^2+3)}=\frac{1}{11} \text{.}

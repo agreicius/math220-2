@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Leaking water tank revisited.</span>
+</h3> <div class="para">Recall the set up from <a href="" class="xref" data-knowl="./knowl/xref/eg_water_tank.html" title="Example 1.1.9: Leaking water tank">Example 1.1.9</a>, where we determined that at time <span class="process-math">\(t\text{,}\)</span> the amount of water <span class="process-math">\(A=f(t)\)</span> has rate of change <span class="process-math">\(f'(t)=-1/\sqrt{2t+1}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">According to <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II_rate.html" title="Theorem 1.5.8: FTC II: rate of change version">Theorem 1.5.8</a>, for any <span class="process-math">\(t=b\)</span> the integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
+\begin{equation*}
+\int_0^b f'(t)\, dt=\int_0^b-1/\sqrt{2t+1}\, dt
+\end{equation*}
+</div>
+<div class="para">computes the <em class="emphasis">net change</em> in the amount of water in the tank between time <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=b\)</span> minutes: i.e., it computes <span class="process-math">\(\Delta A=f(b)-f(0)\text{.}\)</span> We can use <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute this integral. The function <span class="process-math">\(F(x)=-\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(-1/\sqrt{2t+1}\)</span> and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
+\begin{equation*}
+\int_0^b -1/\sqrt{2t+1}\, dt=F(b)-F(0)=1-\sqrt{2b+1}\text{.}
+\end{equation*}
+</div>
+<div class="para">This tells us that <span class="process-math">\(\Delta A=1-\sqrt{2b+1}\)</span> at any time <span class="process-math">\(b\text{.}\)</span> Since <span class="process-math">\(\Delta A=f(b)-f(0)\text{,}\)</span> we conclude that <span class="process-math">\(f(b)-f(0)=1-\sqrt{2b+1}\text{,}\)</span> or equivalently, <span class="process-math">\(f(b)=f(0)+1-\sqrt{2b+1}=101-\sqrt{2t+1}\)</span> for all <span class="process-math">\(b\text{.}\)</span>  (Here we use the fact that <span class="process-math">\(f(0)=100\text{.}\)</span>) We have just given another derivation of the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
+\begin{equation*}
+f(t)=101-\sqrt{2t+1}
+\end{equation*}
+</div>
+<div class="para">for the function <span class="process-math">\(A=f(t)\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="s_FTC.html#example-21">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.14.8</span><span class="period">.</span><span class="space"> </span><span class="title">Indeterminate form limit.</span>
+</h3>
+<div class="para">Evaluate <span class="process-math">\(\displaystyle\lim_{x\to\infty}\frac{e^x}{2^x+3^x}\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Although this is a situation where l’Hôpital’s rule applies, upon applying it once we see that we get essentially the same limit expression back. Instead, we make use of our intuition. Since <span class="process-math">\(2&lt; e &lt; 3\text{,}\)</span> it would stand to reason that the <span class="process-math">\(3^x\)</span> term “dominates” the other exponential terms as <span class="process-math">\(x\to\infty\text{.}\)</span> We make this intuition rigorous by “forcibly” factoring out the dominating term <span class="process-math">\(3^x\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to\infty}\frac{e^x}{2^x+3^x} \amp =\lim_{x\to\infty}\frac{e^x}{3^x(2^x/3^x+1)}\\
+\amp = \lim_{x\to\infty}\frac{e^x}{3^x}\cdot \lim_{x\to\infty}\frac{1}{(2/3)^x+1}\\
+\amp = \lim_{x\to\infty}(e/3)^x\cdot \frac{1}{0+1} \amp ((2/3)^x\to 0)\\
+\amp = 0\cdot 1 \amp ((e/3)^x\to 0) \\
+\amp = 0\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_lHop_A.html#example-43">in-context</a></span>
+</body>
+</html>

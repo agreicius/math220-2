@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -262,7 +266,7 @@ window.MathJax = {
 </h3>
 <div class="para" id="p-73">Let <span class="process-math">\(p_1, p_2,p_3, \dots\text{,}\)</span> be the sequence of prime numbers in increasing order: i.e., <span class="process-math">\(p_1=2\text{,}\)</span> <span class="process-math">\(p_2=3\text{,}\)</span> <span class="process-math">\(p_3=5\text{,}\)</span> etc. Compute <span class="process-math">\(\sum\limits_{k=3}^{6}p_k\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-9" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-74">
+<div class="solutions"><details id="solution-9" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-74">
 <div class="para">A prime number is a positive integer that has <em class="emphasis">exactly</em> two factors. Here the first six primes:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -282,7 +286,7 @@ p_1=2, p_2=3, p_3=5, p_4=7, p_5=11, p_6=13\text{.}
 </h3>
 <div class="para" id="p-75">Compute <span class="process-math">\(\sum\limits_{k=1}^{21}\sin(\pi k/2)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-10" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-76">
+<div class="solutions"><details id="solution-10" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-76">
 <div class="para">Some general advice: if you ever get stumped by a summation problem, expand out the sigma notation as a long sum and see what is revealed.</div>
 <div class="displaymath process-math" id="md-9">
 \begin{align*}
@@ -312,7 +316,7 @@ p_1=2, p_2=3, p_3=5, p_4=7, p_5=11, p_6=13\text{.}
 <li id="li-35"><div class="para" id="p-80"><span class="process-math">\(\sum\limits_{k=1}^nk^2=\frac{n(n+1)(2n+1)}{6}\text{.}\)</span></div></li>
 <li id="li-36"><div class="para" id="p-81"><span class="process-math">\(\sum\limits_{k=1}^nk^3=\left(\frac{n(n+1)}{2}\right)^2\text{.}\)</span></div></li>
 </ol>
-</div></article><details id="proof-2" class="hiddenproof"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-82">Perhaps the most common method of showing that the above statements are true is a <em class="emphasis">proof of induction</em>. Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html" target="_blank">proof technique section</a><a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Footnote 1.3.1"><sup> 1 </sup></a> of my <a class="external" href="https://agreicius.github.io/linear-algebra/" target="_blank">linear algebra textbook</a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn-3.html" title="Footnote 1.3.2"><sup> 2 </sup></a>; furthermore a proof of statement (2) of <a href="" class="xref" data-knowl="./knowl/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4</a> can be found in one of the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html#eg_weak_induction" target="_blank">examples</a><a class="xref" id="fn-4" href="" data-knowl="./knowl/fn-4.html" title="Footnote 1.3.3"><sup> 3 </sup></a> of that section.</div></article></details><article class="theorem theorem-like" id="th_summ_rules"><h3 class="heading">
+</div></article><details id="proof-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-82">Perhaps the most common method of showing that the above statements are true is a <em class="emphasis">proof of induction</em>. Unfortunately, we do not have time in this course to cover this proof technique. A detailed description of induction can be found in the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html" target="_blank">proof technique section</a><a class="xref" id="fn-2" href="" data-knowl="./knowl/fn/fn-2.html" title="Footnote 1.3.1"><sup> 1 </sup></a> of my <a class="external" href="https://agreicius.github.io/linear-algebra/" target="_blank">linear algebra textbook</a><a class="xref" id="fn-3" href="" data-knowl="./knowl/fn/fn-3.html" title="Footnote 1.3.2"><sup> 2 </sup></a>; furthermore a proof of statement (2) of <a href="" class="xref" data-knowl="./knowl/xref/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4</a> can be found in one of the <a class="external" href="https://agreicius.github.io/linear-algebra/s_proof_technique.html#eg_weak_induction" target="_blank">examples</a><a class="xref" id="fn-4" href="" data-knowl="./knowl/fn/fn-4.html" title="Footnote 1.3.3"><sup> 3 </sup></a> of that section.</div></article></details><article class="theorem theorem-like" id="th_summ_rules"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Summation rules.</span>
 </h3>
 <div class="para logical" id="p-83">
@@ -332,17 +336,17 @@ p_1=2, p_2=3, p_3=5, p_4=7, p_5=11, p_6=13\text{.}
 </div>
 </li>
 </ol>
-</div></article><details id="proof-3" class="hiddenproof"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-88">As with <a href="" class="xref" data-knowl="./knowl/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4</a> the propositions of this theorem are typically proved using induction.</div> <div class="para" id="p-89">Informally, statements (1)-(3) follows from some elementary properties of real number arithmetic: namely, commutativity and associativity of addition, and the distributive property.</div> <div class="para" id="p-90">Statement (4) essentially says that relabeling the indices of the terms in a sum with a shift has no effect on the sum of the terms.</div></article></details><article class="example example-like" id="eg_summ_formula"><h3 class="heading">
+</div></article><details id="proof-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-88">As with <a href="" class="xref" data-knowl="./knowl/xref/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4</a> the propositions of this theorem are typically proved using induction.</div> <div class="para" id="p-89">Informally, statements (1)-(3) follows from some elementary properties of real number arithmetic: namely, commutativity and associativity of addition, and the distributive property.</div> <div class="para" id="p-90">Statement (4) essentially says that relabeling the indices of the terms in a sum with a shift has no effect on the sum of the terms.</div></article></details><article class="example example-like" id="eg_summ_formula"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Closed form of summation.</span>
 </h3>
 <div class="para" id="p-91">Compute <span class="process-math">\(\sum\limits_{k=1}^{5}(5k^3-10k+2)\)</span> using appropriate summation rules and formulas.</div>
-<div class="solutions"><details id="solution-11" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-92">
-<div class="para">We can make short work of this using <a href="" class="xref" data-knowl="./knowl/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4–1.3.5</a>.</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/th_summ_rules.html ./knowl/th_summ_formulas.html" id="md-10">
+<div class="solutions"><details id="solution-11" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-92">
+<div class="para">We can make short work of this using <a href="" class="xref" data-knowl="./knowl/xref/th_summ_formulas.html" title="Theorem 1.3.4: Summation formulas">Theorem 1.3.4–1.3.5</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/th_summ_rules.html ./knowl/xref/th_summ_formulas.html" id="md-10">
 \begin{align*}
-\sum\limits_{k=1}^{5}(5k^3-10k+2)\amp =5\sum\limits_{k=1}^{5}k^3-10\sum\limits_{k=1}^{5}k+\sum\limits_{k=1}^{5}2 \amp (\knowl{./knowl/th_summ_rules.html}{\text{Theorem 1.3.5}})\\
+\sum\limits_{k=1}^{5}(5k^3-10k+2)\amp =5\sum\limits_{k=1}^{5}k^3-10\sum\limits_{k=1}^{5}k+\sum\limits_{k=1}^{5}2 \amp (\knowl{./knowl/xref/th_summ_rules.html}{\text{Theorem 1.3.5}})\\
 \amp = 5\left( \frac{5\cdot 6}{2}\right)^2-10\left( \frac{5\cdot 6}{2}\right)+2\cdot 10 
-\amp (\knowl{./knowl/th_summ_formulas.html}{\text{Theorem 1.3.4}})\\
+\amp (\knowl{./knowl/xref/th_summ_formulas.html}{\text{Theorem 1.3.4}})\\
 \amp =5\cdot 225-10\cdot 15+20 \\
 \amp = 985\text{.}
 \end{align*}
@@ -352,34 +356,34 @@ p_1=2, p_2=3, p_3=5, p_4=7, p_5=11, p_6=13\text{.}
 </h3> <div class="para logical" id="p-93">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function defined on the interval <span class="process-math">\([a,b]\text{,}\)</span> and let <span class="process-math">\(n\)</span> be a positive integer. A <dfn class="terminology">partition</dfn> of <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> subintervals is a choice of points <span class="process-math">\(x_0, x_1,\dots,
 x_n\)</span> satisfying</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html" id="eq_partition">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_partition.html ./knowl/xref/eq_partition.html" id="eq_partition">
 \begin{equation}
 a=x_0\lt x_1\lt x_2\lt \cdots \lt x_n=b\text{.}\tag{1.3.3}
 \end{equation}
 </div>
-<div class="para">Given a partition <a href="" class="xref" data-knowl="./knowl/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a> and integer <span class="process-math">\(1\leq k\leq n\)</span> the <dfn class="terminology"><span class="process-math">\(k\)</span>-th subinterval</dfn> <span class="process-math">\(I_k\)</span> is the interval <span class="process-math">\([x_{k-1},x_k]\text{.}\)</span> We denote by <span class="process-math">\(\Delta x_k\)</span> the <dfn class="terminology">length</dfn> of the subinterval <span class="process-math">\(I_k\text{.}\)</span> Thus we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html" id="eq_interval_length">
+<div class="para">Given a partition <a href="" class="xref" data-knowl="./knowl/xref/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a> and integer <span class="process-math">\(1\leq k\leq n\)</span> the <dfn class="terminology"><span class="process-math">\(k\)</span>-th subinterval</dfn> <span class="process-math">\(I_k\)</span> is the interval <span class="process-math">\([x_{k-1},x_k]\text{.}\)</span> We denote by <span class="process-math">\(\Delta x_k\)</span> the <dfn class="terminology">length</dfn> of the subinterval <span class="process-math">\(I_k\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_partition.html ./knowl/xref/eq_partition.html" id="eq_interval_length">
 \begin{equation}
 \Delta x_k=x_{k}-x_{k-1}\text{.}\tag{1.3.4}
 \end{equation}
 </div>
 <div class="para">The <dfn class="terminology">norm</dfn> of a partition <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\norm{P}\text{,}\)</span> is the maximum length of a subinterval: i.e.,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_partition.html ./knowl/xref/eq_partition.html">
 \begin{equation*}
 \norm{P}=\max\{\Delta x_1, \Delta x_2, \dots, \Delta x_n\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Given a choice of <dfn class="terminology">sample points</dfn> (or <dfn class="terminology">sample inputs</dfn>) <span class="process-math">\(c_k\in I_k\)</span> for each subinterval, the corresponding <dfn class="terminology">Riemann sum</dfn> of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\)</span> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_partition.html ./knowl/eq_partition.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_partition.html ./knowl/xref/eq_partition.html">
 \begin{equation*}
 \sum_{k=1}^n f(c_k)\Delta x_k=f(c_1)(x_1-x_0)+f(c_2)(x_2-x_1)+\cdots +f(c_n)(x_n-x_{n-1})\text{.}
 \end{equation*}
 </div>
-<div class="para">A partition <a href="" class="xref" data-knowl="./knowl/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a> along with a choice of sample points <span class="process-math">\(c_k\in I_k\)</span> for each <span class="process-math">\(1\leq k\leq n\)</span> is called a <dfn class="terminology">pointed partition</dfn> of <span class="process-math">\([a,b]\text{.}\)</span> In general we get a different Riemann sum of <span class="process-math">\(f\)</span> for each pointed partition of the interval <span class="process-math">\([a,b]\)</span> we choose.</div>
+<div class="para">A partition <a href="" class="xref" data-knowl="./knowl/xref/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a> along with a choice of sample points <span class="process-math">\(c_k\in I_k\)</span> for each <span class="process-math">\(1\leq k\leq n\)</span> is called a <dfn class="terminology">pointed partition</dfn> of <span class="process-math">\([a,b]\text{.}\)</span> In general we get a different Riemann sum of <span class="process-math">\(f\)</span> for each pointed partition of the interval <span class="process-math">\([a,b]\)</span> we choose.</div>
 </div></article><article class="definition definition-like" id="d_riemann_sum_types"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sum types.</span>
 </h3> <div class="para logical" id="p-94">
-<div class="para">Let <span class="process-math">\(f\)</span> be a function defined on the interval <span class="process-math">\([a,b]\)</span> with a chosen partition <a href="" class="xref" data-knowl="./knowl/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a>.  Particular rules for picking the sample points <span class="process-math">\(c_k\in I_k\)</span> for each subinterval <span class="process-math">\(I_k\)</span> in our partition give rise to particular types of Riemann sums. Here are some common examples.</div>
+<div class="para">Let <span class="process-math">\(f\)</span> be a function defined on the interval <span class="process-math">\([a,b]\)</span> with a chosen partition <a href="" class="xref" data-knowl="./knowl/xref/eq_partition.html" title="Equation 1.3.3">(1.3.3)</a>.  Particular rules for picking the sample points <span class="process-math">\(c_k\in I_k\)</span> for each subinterval <span class="process-math">\(I_k\)</span> in our partition give rise to particular types of Riemann sums. Here are some common examples.</div>
 <ol class="decimal">
 <li id="li-41"><div class="para logical" id="p-95">
 <div class="para">The <dfn class="terminology">left Riemann sum</dfn> is obtained by choosing <span class="process-math">\(c_k=a_{k-1}\)</span> for all <span class="process-math">\(1\leq k\leq n\text{:}\)</span> i.e., <span class="process-math">\(c_k\)</span> is chosen as the left endpoint of each subinterval <span class="process-math">\(I_k\text{.}\)</span> The Riemann sum in this case is</div>
@@ -423,21 +427,21 @@ a=x_0\lt x_1\lt x_2\lt \cdots \lt x_n=b\text{.}\tag{1.3.3}
 <li id="li-48">
 <div class="para" id="p-103">Now do the same thing with <span class="process-math">\(L_n\text{,}\)</span> the left Riemann sum of <span class="process-math">\(f(x)\)</span> corresponding to the partion of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> equal subintervals.</div>
 <div class="para" id="p-104">
-<em class="emphasis">Hint</em>. For the closed formula of <span class="process-math">\(L_n\)</span> use the index shift identity <a href="" class="xref" data-knowl="./knowl/eq_index_shift.html" title="Equation 1.3.2">(1.3.2)</a>.</div>
+<em class="emphasis">Hint</em>. For the closed formula of <span class="process-math">\(L_n\)</span> use the index shift identity <a href="" class="xref" data-knowl="./knowl/xref/eq_index_shift.html" title="Equation 1.3.2">(1.3.2)</a>.</div>
 </li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-12" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-105"><ol class="decimal">
+<div class="solutions"><details id="solution-12" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-105"><ol class="decimal">
 <li id="li-49"><div class="para logical" id="p-106">
-<div class="para">Fix a positive integer <span class="process-math">\(n\text{.}\)</span> We build the right Riemann sum <span class="process-math">\(R_n\)</span> corresponding to a partition of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length. We have <span class="process-math">\(\Delta x_k=\Delta x=1/n\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and thus <span class="process-math">\(x_k=0+k\Delta x=k/n\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/eq_right_Riemann.html" title="Equation 1.3.6">(1.3.6)</a> we then have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_right_Riemann.html ./knowl/th_summ_rules.html ./knowl/th_summ_formulas.html" id="md-11">
+<div class="para">Fix a positive integer <span class="process-math">\(n\text{.}\)</span> We build the right Riemann sum <span class="process-math">\(R_n\)</span> corresponding to a partition of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length. We have <span class="process-math">\(\Delta x_k=\Delta x=1/n\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and thus <span class="process-math">\(x_k=0+k\Delta x=k/n\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/eq_right_Riemann.html" title="Equation 1.3.6">(1.3.6)</a> we then have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_right_Riemann.html ./knowl/xref/th_summ_rules.html ./knowl/xref/th_summ_formulas.html" id="md-11">
 \begin{align*}
 R_n \amp = \sum_{k=1}^nf(x_k)\Delta x\\
 \amp = \sum_{k=1}^nf(k/n)\cdot (1/n)\\
 \amp = \sum_{k=1}^n(1-(k/n)^3)\cdot (1/n)\\
 \amp = \sum_{k=1}^n\frac{1}{n}-\frac{k^3}{n^4} \amp (\text{algebra})\\
-\amp = \sum_{k=1}^n\frac{1}{n}-\frac{1}{n^4}\sum_{k=1}^nk^3 \amp (\knowl{./knowl/th_summ_rules.html}{\text{Theorem 1.3.5}})\\
-\amp =\frac{1}{n}\cdot n - \frac{1}{n^4}\cdot\left(\frac{n(n+1)}{2}\right)^2 \amp (\knowl{./knowl/th_summ_formulas.html}{\text{Theorem 1.3.4}})\\
+\amp = \sum_{k=1}^n\frac{1}{n}-\frac{1}{n^4}\sum_{k=1}^nk^3 \amp (\knowl{./knowl/xref/th_summ_rules.html}{\text{Theorem 1.3.5}})\\
+\amp =\frac{1}{n}\cdot n - \frac{1}{n^4}\cdot\left(\frac{n(n+1)}{2}\right)^2 \amp (\knowl{./knowl/xref/th_summ_formulas.html}{\text{Theorem 1.3.4}})\\
 \amp= 1-\frac{n^2(n+1)^2}{4n^4} \text{.}
 \end{align*}
 </div>
@@ -445,7 +449,7 @@ R_n \amp = \sum_{k=1}^nf(x_k)\Delta x\\
 </div></li>
 <li id="li-50"><div class="para logical" id="p-107">
 <div class="para">We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proj_est_area.html" id="md-12">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proj_est_area.html" id="md-12">
 \begin{align*}
 \lim_{n \to \infty} R_n \amp = \lim_{n \to \infty} 1-\frac{n^2(n+1)^2}{4n^4} \\
 \amp =
@@ -454,11 +458,11 @@ R_n \amp = \sum_{k=1}^nf(x_k)\Delta x\\
 \amp = \frac{3}{4}\text{.}
 \end{align*}
 </div>
-<div class="para">Hey, <span class="process-math">\(3/4=0.75\)</span> is the numeric value we saw our area estimates approaching when working the GeoGebra interactive in <a href="" class="xref" data-knowl="./knowl/proj_est_area.html" title="Interactive example 1.2.1: Estimating area">Interactive example 1.2.1</a>!</div>
+<div class="para">Hey, <span class="process-math">\(3/4=0.75\)</span> is the numeric value we saw our area estimates approaching when working the GeoGebra interactive in <a href="" class="xref" data-knowl="./knowl/xref/proj_est_area.html" title="Interactive example 1.2.1: Estimating area">Interactive example 1.2.1</a>!</div>
 </div></li>
 <li id="li-51"><div class="para logical" id="p-108">
-<div class="para">We include a computation of <span class="process-math">\(L_n\)</span> to illustrate the use of the index shift rule of summation. Most of the ingredients are the same as with the computation for <span class="process-math">\(R_n\)</span> except now we use <a href="" class="xref" data-knowl="./knowl/eq_left_Riemann.html" title="Equation 1.3.5">(1.3.5)</a>.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_left_Riemann.html" id="md-13">
+<div class="para">We include a computation of <span class="process-math">\(L_n\)</span> to illustrate the use of the index shift rule of summation. Most of the ingredients are the same as with the computation for <span class="process-math">\(R_n\)</span> except now we use <a href="" class="xref" data-knowl="./knowl/xref/eq_left_Riemann.html" title="Equation 1.3.5">(1.3.5)</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_left_Riemann.html" id="md-13">
 \begin{align*}
 L_n \amp = \sum_{k=1}^nf(x_{k-1})\Delta x\\
 \amp = \sum_{k=1}^n(1-((k-1)/n)^3)\cdot (1/n) \\

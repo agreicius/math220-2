@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -290,8 +294,8 @@ a_k=a+k\Delta x\tag{1.4.3}
 </li>
 <li id="li-53">
 <span class="heading"><span class="title">Construct Riemann sums.</span></span><div class="para logical" id="p-113">
-<div class="para">Let <span class="process-math">\(L_n\)</span> and <span class="process-math">\(R_n\)</span> be the left and right Riemann sums, respectively, corresponding to the partition of <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals. It follows from <a href="" class="xref" data-knowl="./knowl/eq_ak.html" title="Equation 1.4.3">(1.4.3)</a> it follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_ak.html" id="mdn-1">
+<div class="para">Let <span class="process-math">\(L_n\)</span> and <span class="process-math">\(R_n\)</span> be the left and right Riemann sums, respectively, corresponding to the partition of <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals. It follows from <a href="" class="xref" data-knowl="./knowl/xref/eq_ak.html" title="Equation 1.4.3">(1.4.3)</a> it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ak.html" id="mdn-1">
 \begin{align}
 L_n \amp = \sum_{k=1}^nf(a_{k-1})\Delta x= \sum_{k=1}^nf(a+(k-1)\Delta x)\, \Delta x\tag{1.4.4}\\
 R_n \amp = \sum_{k=1}^nf(a_{k})\Delta x= \sum_{k=1}^nf(a+k\Delta x)\, \Delta x\tag{1.4.5}
@@ -316,15 +320,15 @@ R_n \amp = \sum_{k=1}^nf(a_{k})\Delta x= \sum_{k=1}^nf(a+k\Delta x)\, \Delta x\t
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of linear function.</span>
 </h3>
 <div class="para" id="p-115">Let <span class="process-math">\(f(x)=x\text{.}\)</span> Compute <span class="process-math">\(\int_1^3f(x)\, dx\)</span> first as a limit of right Riemann sums, and then as a limit of left Riemann sums.</div>
-<div class="solutions"><details id="solution-13" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-116">
-<div class="para">Following the steps of xr<a href="" class="xref" data-knowl="./knowl/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a> we first assemble ingredients regarding the <span class="process-math">\(n\)</span>-th partition of <span class="process-math">\([1,3]\text{.}\)</span> We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_limit_integral.html ./knowl/eq_Rn.html ./knowl/eq_lim_Rn.html ./knowl/eq_Ln.html">
+<div class="solutions"><details id="solution-13" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-116">
+<div class="para">Following the steps of xr<a href="" class="xref" data-knowl="./knowl/xref/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a> we first assemble ingredients regarding the <span class="process-math">\(n\)</span>-th partition of <span class="process-math">\([1,3]\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_limit_integral.html ./knowl/xref/eq_Rn.html ./knowl/xref/eq_lim_Rn.html ./knowl/xref/eq_Ln.html">
 \begin{equation*}
 \Delta x=(3-1)/n=2/n, a_k=1+k\Delta k=1+2k/n\text{.}
 \end{equation*}
 </div>
-<div class="para">Using <a href="" class="xref" data-knowl="./knowl/eq_Rn.html" title="Equation 1.4.5">(1.4.5)</a>, for any <span class="process-math">\(n\geq 1\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_limit_integral.html ./knowl/eq_Rn.html ./knowl/eq_lim_Rn.html ./knowl/eq_Ln.html" id="md-14">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/eq_Rn.html" title="Equation 1.4.5">(1.4.5)</a>, for any <span class="process-math">\(n\geq 1\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_limit_integral.html ./knowl/xref/eq_Rn.html ./knowl/xref/eq_lim_Rn.html ./knowl/xref/eq_Ln.html" id="md-14">
 \begin{align*}
 R_n  \amp = \sum_{k=1}^nf(1+k\Delta x)\,\Delta x \\
 \amp = \sum_{k=1}^n(1+2k/n)\cdot (2/n) \\
@@ -334,8 +338,8 @@ R_n  \amp = \sum_{k=1}^nf(1+k\Delta x)\,\Delta x \\
 \amp = 2+2\frac{n^2+n}{n^2}
 \end{align*}
 </div>
-<div class="para">Finally, using <a href="" class="xref" data-knowl="./knowl/eq_lim_Rn.html" title="Equation 1.4.7">(1.4.7)</a> we compute</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_limit_integral.html ./knowl/eq_Rn.html ./knowl/eq_lim_Rn.html ./knowl/eq_Ln.html" id="md-15">
+<div class="para">Finally, using <a href="" class="xref" data-knowl="./knowl/xref/eq_lim_Rn.html" title="Equation 1.4.7">(1.4.7)</a> we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_limit_integral.html ./knowl/xref/eq_Rn.html ./knowl/xref/eq_lim_Rn.html ./knowl/xref/eq_Ln.html" id="md-15">
 \begin{align*}
 \int_1^3 f(x)\, dx \amp = \lim_{n\to \infty} R_n \\
 \amp = \lim_{n\to \infty}2+2\frac{n^2+n}{n^2}\\
@@ -344,8 +348,8 @@ R_n  \amp = \sum_{k=1}^nf(1+k\Delta x)\,\Delta x \\
 \amp = 4\text{.}
 \end{align*}
 </div>
-<div class="para">The computation using left sums is similar. We include details only of the computation of <span class="process-math">\(L_n\)</span> to illustrate the index shift rule for summations. Using <a href="" class="xref" data-knowl="./knowl/eq_Ln.html" title="Equation 1.4.4">(1.4.4)</a>, for any <span class="process-math">\(n\geq 1\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_limit_integral.html ./knowl/eq_Rn.html ./knowl/eq_lim_Rn.html ./knowl/eq_Ln.html" id="md-16">
+<div class="para">The computation using left sums is similar. We include details only of the computation of <span class="process-math">\(L_n\)</span> to illustrate the index shift rule for summations. Using <a href="" class="xref" data-knowl="./knowl/xref/eq_Ln.html" title="Equation 1.4.4">(1.4.4)</a>, for any <span class="process-math">\(n\geq 1\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_limit_integral.html ./knowl/xref/eq_Rn.html ./knowl/xref/eq_lim_Rn.html ./knowl/xref/eq_Ln.html" id="md-16">
 \begin{align*}
 L_n  \amp = \sum_{k=1}^nf(1+(k-1)\Delta x)\,\Delta x \\
 \amp = \sum_{k=1}^n(1+2(k-1)/n)\cdot (2/n) \\
@@ -361,8 +365,8 @@ L_n  \amp = \sum_{k=1}^nf(1+(k-1)\Delta x)\,\Delta x \\
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of cubic.</span>
 </h3>
 <div class="para" id="p-117">Let <span class="process-math">\(f(x)=1-x^3\)</span> and let <span class="process-math">\(b\geq 0\)</span> be a fixed nonnegative constant. Compute <span class="process-math">\(\int_0^bf(x)\, dx\)</span> as a limit of right Riemann sums.</div>
-<div class="solutions"><details id="solution-14" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-118">
-<div class="para">We follow the steps <a href="" class="xref" data-knowl="./knowl/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a>. As this example is quite similar to <a href="" class="xref" data-knowl="./knowl/eg_limit_Riemann.html" title="Example 1.3.9">Example 1.3.9</a>, we omit some details.</div>
+<div class="solutions"><details id="solution-14" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-118">
+<div class="para">We follow the steps <a href="" class="xref" data-knowl="./knowl/xref/proc_limit_integral.html" title="Procedure 1.4.2: Limit computation of integral">Procedure 1.4.2</a>. As this example is quite similar to <a href="" class="xref" data-knowl="./knowl/xref/eg_limit_Riemann.html" title="Example 1.3.9">Example 1.3.9</a>, we omit some details.</div>
 <ol class="decimal">
 <li id="li-55"><div class="para" id="p-119">Fix <span class="process-math">\(n\geq 1\text{.}\)</span> We divide the interval <span class="process-math">\([0,b]\)</span> into <span class="process-math">\(n\)</span> equal intervals of length <span class="process-math">\(\Delta x=\frac{b-0}{n}=\frac{b}{n}\text{.}\)</span> The intervening endpoints <span class="process-math">\(x_k\)</span> of our subintervals are given by <span class="process-math">\(x_k=\frac{bk}{n}\text{.}\)</span>
 </div></li>
@@ -401,7 +405,7 @@ R_n \amp =\sum_{k=1}^n f(x_k)\Delta x\\
 <li id="li-59"><div class="para" id="p-125">If <span class="process-math">\(f\)</span> is continuous everywhere on <span class="process-math">\(I\)</span> except for a finite set of jump discontinuities, then <span class="process-math">\(f\)</span> is integrable on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><div class="para" id="p-126">As with the derivative, the integral satisfies many elementary properties that often ease our computations. Technically, the first statements in <a href="" class="xref" data-knowl="./knowl/th_int_props.html" title="Theorem 1.4.6: Integral properties">Theorem 1.4.6</a> are in fact definitions. (In our discussion of integrals <span class="process-math">\(\int_a^b f(x)\, dx\)</span> we tacitly always assumed <span class="process-math">\(a\lt b\text{;}\)</span> (1) and (2) define what this integral should be if <span class="process-math">\(a=b\)</span> or <span class="process-math">\(b\lt a\text{.}\)</span> ) The rest of the statements, as plausible as they may seem, do require proof. We omit them, but rest assured that the proofs boil down to straightforward statements about Riemann sums and their limits.</div>
+</div></article><div class="para" id="p-126">As with the derivative, the integral satisfies many elementary properties that often ease our computations. Technically, the first statements in <a href="" class="xref" data-knowl="./knowl/xref/th_int_props.html" title="Theorem 1.4.6: Integral properties">Theorem 1.4.6</a> are in fact definitions. (In our discussion of integrals <span class="process-math">\(\int_a^b f(x)\, dx\)</span> we tacitly always assumed <span class="process-math">\(a\lt b\text{;}\)</span> (1) and (2) define what this integral should be if <span class="process-math">\(a=b\)</span> or <span class="process-math">\(b\lt a\text{.}\)</span> ) The rest of the statements, as plausible as they may seem, do require proof. We omit them, but rest assured that the proofs boil down to straightforward statements about Riemann sums and their limits.</div>
 <article class="theorem theorem-like" id="th_int_props"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Integral properties.</span>
 </h3>
@@ -455,15 +459,15 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 </div></article><article class="example example-like" id="eg_int_cubic_cont"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of cubic (cont.).</span>
 </h3>
-<div class="para" id="p-135">Let <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> Fix constants <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(0\lt a\lt b\text{.}\)</span> Use your result in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a>  and integral properties to derive a formula for <span class="process-math">\(\int_a^bf(x)\, dx\)</span> in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+<div class="para" id="p-135">Let <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> Fix constants <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(0\lt a\lt b\text{.}\)</span> Use your result in <a href="" class="xref" data-knowl="./knowl/xref/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a>  and integral properties to derive a formula for <span class="process-math">\(\int_a^bf(x)\, dx\)</span> in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-15" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-136">
-<div class="para">We saw in <a href="" class="xref" data-knowl="./knowl/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a> that for any <span class="process-math">\(b\gt 0\)</span> we have <span class="process-math">\(\int_0^b f(x)\, dx=b-\frac{1}{4}b^4\text{.}\)</span> It follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_int_cubic.html ./knowl/th_interval_partition.html ./knowl/th_order_integration.html ./knowl/eg_int_cubic.html" id="md-19">
+<div class="solutions"><details id="solution-15" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-136">
+<div class="para">We saw in <a href="" class="xref" data-knowl="./knowl/xref/eg_int_cubic.html" title="Example 1.4.4: Integral of cubic">Example 1.4.4</a> that for any <span class="process-math">\(b\gt 0\)</span> we have <span class="process-math">\(\int_0^b f(x)\, dx=b-\frac{1}{4}b^4\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_int_cubic.html ./knowl/xref/th_interval_partition.html ./knowl/xref/th_order_integration.html ./knowl/xref/eg_int_cubic.html" id="md-19">
 \begin{align*}
-\int_a^b f(x)\, dx \amp = \int_a^0 f(x)\, dx+\int_0^b f(x)\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
-\amp = -\int_0^af(x)\, dx+\int_0^bf(x)\, dx \amp (\knowl{./knowl/th_order_integration.html}{\text{Order of integration}}) \\
-\amp = -(a-\frac{1}{4}a^4)+(b-\frac{1}{4}b^4) \amp (\knowl{./knowl/eg_int_cubic.html}{\text{1.4.4}}) \\
+\int_a^b f(x)\, dx \amp = \int_a^0 f(x)\, dx+\int_0^b f(x)\, dx \amp (\knowl{./knowl/xref/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = -\int_0^af(x)\, dx+\int_0^bf(x)\, dx \amp (\knowl{./knowl/xref/th_order_integration.html}{\text{Order of integration}}) \\
+\amp = -(a-\frac{1}{4}a^4)+(b-\frac{1}{4}b^4) \amp (\knowl{./knowl/xref/eg_int_cubic.html}{\text{1.4.4}}) \\
 \amp = (b-a)-\frac{1}{4}(b^4-a^4)\text{.}
 \end{align*}
 </div>
@@ -532,14 +536,14 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of linear function (cont.).</span>
 </h3>
 <div class="para" id="p-144">Let <span class="process-math">\(f(x)=x\text{.}\)</span> Explain why the value of <span class="process-math">\(\int_1^3f(x)\, dx\text{,}\)</span> computed earlier, is consistent with the area interpretation of the integral and known integral formulas.</div>
-<div class="solutions"><details id="solution-16" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-145">
+<div class="solutions"><details id="solution-16" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-145">
 <div class="para">The region <span class="process-math">\(\mathcal{R}\)</span> between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x=1\)</span> to <span class="process-math">\(x=3\)</span> is a trapezoid of width <span class="process-math">\(2\text{,}\)</span> and with two heights <span class="process-math">\(1\)</span> and <span class="process-math">\(3\text{.}\)</span> (Sketch it for yourself!) Since <span class="process-math">\(f\geq 0\)</span> the integral of <span class="process-math">\(f\)</span> computes</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_int_linear.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_int_linear.html">
 \begin{equation*}
 \operatorname{sgn\, area}\mathcal{R}=\operatorname{area}\mathcal{R}=\frac{1}{2}(1+3)(2)=4\text{.}
 \end{equation*}
 </div>
-<div class="para">(The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in <a href="" class="xref" data-knowl="./knowl/eg_int_linear.html" title="Example 1.4.3: Integral of linear function">Example 1.4.3</a>.</div>
+<div class="para">(The last equality uses the area of a trapezoid formula.) This is precisely the value of the integral we computed in <a href="" class="xref" data-knowl="./knowl/xref/eg_int_linear.html" title="Example 1.4.3: Integral of linear function">Example 1.4.3</a>.</div>
 </div></div></details></div></article><article class="example example-like" id="example-18"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.12</span><span class="period">.</span>
 </h3>
@@ -554,22 +558,22 @@ m(b-a)\leq \int_a^b f(x)\, dx\leq M(b-a)
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-17" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="solutions"><details id="solution-17" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para logical" id="p-150">
 <div class="para">In the diagram below we have <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> Geometrically we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html" id="md-21">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_area.html ./knowl/xref/th_interval_partition.html ./knowl/xref/eg_int_cubic_cont.html" id="md-21">
 \begin{align*}
 \operatorname{sgn\, area}\mathcal{R} \amp =\operatorname{area}\mathcal{R}_1-\operatorname{area}\mathcal{R}_2\\
 \operatorname{area}\mathcal{R} \amp = \operatorname{area}\mathcal{R}_1+\operatorname{area}\mathcal{R}_2
 \end{align*}
 </div>
-<div class="para">To compute <span class="process-math">\(\operatorname{R}\)</span> we use the  <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">definition of area</a>:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/th_interval_partition.html ./knowl/eg_int_cubic_cont.html" id="md-22">
+<div class="para">To compute <span class="process-math">\(\operatorname{R}\)</span> we use the  <a href="" class="xref" data-knowl="./knowl/xref/d_area.html" title="Item: Area">definition of area</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_area.html ./knowl/xref/th_interval_partition.html ./knowl/xref/eg_int_cubic_cont.html" id="md-22">
 \begin{align*}
 \operatorname{area}\mathcal{R} \amp = \int_0^b\abs{f(x)}\, dx\\
-\amp =\int_0^1\abs{f(x)}\, dx+\int_1^b\abs{f(x)}\, dx \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp =\int_0^1\abs{f(x)}\, dx+\int_1^b\abs{f(x)}\, dx \amp (\knowl{./knowl/xref/th_interval_partition.html}{\text{Interval partition}})\\
 \amp \int_0^1 f(x)\, dx -\int_1^b f(x)\, dx \amp (\text{def. of  } \abs{f})\\
-\amp \frac{3}{4}-((b-1)-(b^4-1) \amp (\knowl{./knowl/eg_int_cubic_cont.html}{\text{1.4.7}})\\
+\amp \frac{3}{4}-((b-1)-(b^4-1) \amp (\knowl{./knowl/xref/eg_int_cubic_cont.html}{\text{1.4.7}})\\
 \amp\frac{3}{4}-b+b^4 \text{.}
 \end{align*}
 </div>

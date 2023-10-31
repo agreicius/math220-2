@@ -1252,6 +1252,330 @@ var ptx_lunr_docs = [
   "body": " More indeterminate forms   Compute the following limits.                                  "
 },
 {
+  "id": "s_inverse_trig",
+  "level": "1",
+  "url": "s_inverse_trig.html",
+  "type": "Section",
+  "number": "1.16",
+  "title": "Inverse trigonometric functions",
+  "body": " Inverse trigonometric functions   Inverse trigonometric functions   The following are examples of what are called inverse trigonometric functions .   On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arcsine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arccosine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arctangent function , denoted .        Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, . We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are reciprocals of the corresponding trigonometric functions. They are not!    Properties of inverse trigonometric functions     The function is an increasing function with domain and range . It satisfies the following properties: .    The function is a decreasing function with domain and range . It satisfies the following properties: .    The function is an increasing function with domain and range . It satisfies the following properties:        Computing with inverse trig functions   Compute the following values of trigonometric functions by hand.                    Hint . The answer is not .            Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                     Derivatives of inverse trig functions   The following derivative\/antiderivative formulas hold: .     Derivatives of inverse trig functions   Find the equation of the tangent line to at .         Integrating with inverse trig functions   Compute the following integrals.                    "
+},
+{
+  "id": "d_inverse_trig",
+  "level": "2",
+  "url": "s_inverse_trig.html#d_inverse_trig",
+  "type": "Definition",
+  "number": "1.16.1",
+  "title": "Inverse trigonometric functions.",
+  "body": " Inverse trigonometric functions   The following are examples of what are called inverse trigonometric functions .   On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arcsine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arccosine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arctangent function , denoted .      "
+},
+{
+  "id": "remark-11",
+  "level": "2",
+  "url": "s_inverse_trig.html#remark-11",
+  "type": "Remark",
+  "number": "1.16.2",
+  "title": "",
+  "body": " Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, . We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are reciprocals of the corresponding trigonometric functions. They are not!  "
+},
+{
+  "id": "th_inverse_trig_props",
+  "level": "2",
+  "url": "s_inverse_trig.html#th_inverse_trig_props",
+  "type": "Theorem",
+  "number": "1.16.3",
+  "title": "Properties of inverse trigonometric functions.",
+  "body": " Properties of inverse trigonometric functions     The function is an increasing function with domain and range . It satisfies the following properties: .    The function is a decreasing function with domain and range . It satisfies the following properties: .    The function is an increasing function with domain and range . It satisfies the following properties:      "
+},
+{
+  "id": "eg_inverse_trig_compute",
+  "level": "2",
+  "url": "s_inverse_trig.html#eg_inverse_trig_compute",
+  "type": "Example",
+  "number": "1.16.4",
+  "title": "Computing with inverse trig functions.",
+  "body": " Computing with inverse trig functions   Compute the following values of trigonometric functions by hand.                    Hint . The answer is not .          "
+},
+{
+  "id": "eg_inverse_trig_solve",
+  "level": "2",
+  "url": "s_inverse_trig.html#eg_inverse_trig_solve",
+  "type": "Example",
+  "number": "1.16.5",
+  "title": "Solving trig equations.",
+  "body": " Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                   "
+},
+{
+  "id": "th_inverse_trig_derivative",
+  "level": "2",
+  "url": "s_inverse_trig.html#th_inverse_trig_derivative",
+  "type": "Theorem",
+  "number": "1.16.6",
+  "title": "Derivatives of inverse trig functions.",
+  "body": " Derivatives of inverse trig functions   The following derivative\/antiderivative formulas hold: .   "
+},
+{
+  "id": "eg_inverse_trig_derivative",
+  "level": "2",
+  "url": "s_inverse_trig.html#eg_inverse_trig_derivative",
+  "type": "Example",
+  "number": "1.16.7",
+  "title": "Derivatives of inverse trig functions.",
+  "body": " Derivatives of inverse trig functions   Find the equation of the tangent line to at .       "
+},
+{
+  "id": "eg_inverse_trig_integral",
+  "level": "2",
+  "url": "s_inverse_trig.html#eg_inverse_trig_integral",
+  "type": "Example",
+  "number": "1.16.8",
+  "title": "Integrating with inverse trig functions.",
+  "body": " Integrating with inverse trig functions   Compute the following integrals.                   "
+},
+{
+  "id": "section-17",
+  "level": "1",
+  "url": "section-17.html",
+  "type": "Section",
+  "number": "1.17",
+  "title": "Integration strategies",
+  "body": " Integration strategies   Having introduced a wealth of new derivative\/integral formulas and rules, we now take a moment to give an overview of our integration techniques, and apply them in combination with some algebraic methods to solving integrals in the wild.    Idefinite integral compendium   We collect here our various derivative\/antiderivative formulas. .    Each of the integral computations below will combine various integral formulas, substitution, and an algebraic method.   Vertex form   Compute .         Polynomial division   Compute .    Use polynomial division with remainder.         Exponential substitution   Compute .         Exponential substitution (again)   Compute .         Trig identity   Compute .    Make use of some of the following product-to-sum identities.         "
+},
+{
+  "id": "th_integral_formulas",
+  "level": "2",
+  "url": "section-17.html#th_integral_formulas",
+  "type": "Theorem",
+  "number": "1.17.1",
+  "title": "Idefinite integral compendium.",
+  "body": " Idefinite integral compendium   We collect here our various derivative\/antiderivative formulas. .   "
+},
+{
+  "id": "eg_int_vertex",
+  "level": "2",
+  "url": "section-17.html#eg_int_vertex",
+  "type": "Example",
+  "number": "1.17.2",
+  "title": "Vertex form.",
+  "body": " Vertex form   Compute .       "
+},
+{
+  "id": "eg_poly_div",
+  "level": "2",
+  "url": "section-17.html#eg_poly_div",
+  "type": "Example",
+  "number": "1.17.3",
+  "title": "Polynomial division.",
+  "body": " Polynomial division   Compute .    Use polynomial division with remainder.       "
+},
+{
+  "id": "eg_exp_subst",
+  "level": "2",
+  "url": "section-17.html#eg_exp_subst",
+  "type": "Example",
+  "number": "1.17.4",
+  "title": "Exponential substitution.",
+  "body": " Exponential substitution   Compute .       "
+},
+{
+  "id": "eg_exp_subst_2",
+  "level": "2",
+  "url": "section-17.html#eg_exp_subst_2",
+  "type": "Example",
+  "number": "1.17.5",
+  "title": "Exponential substitution (again).",
+  "body": " Exponential substitution (again)   Compute .       "
+},
+{
+  "id": "eg_trig_ident",
+  "level": "2",
+  "url": "section-17.html#eg_trig_ident",
+  "type": "Example",
+  "number": "1.17.6",
+  "title": "Trig identity.",
+  "body": " Trig identity   Compute .    Make use of some of the following product-to-sum identities.        "
+},
+{
+  "id": "section-18",
+  "level": "1",
+  "url": "section-18.html",
+  "type": "Section",
+  "number": "1.18",
+  "title": "Integration by parts",
+  "body": " Integration by parts   The integration by parts technique is yet another instance of our . In this case we take the familiar product rule of differentiation , reexpress it algebraically as , and then integrate both sides to conclude . We have just given a proof of what is called the integration by parts rule.    Integration by parts   Let and be continuously differentiable functions on an interval containing the interval .   Indefinite integral form  We have .    Definite integral form  We have .        The art of by parts   To use the integration by parts technique on an integral of the form proceed as follows:   Who is , and who ?  Declare one of and to be and the other to be . The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial\/radical, (E)xponent, (T)rig) often leads to a useful choice of .    Assemble ingredients  Suppose without loss of generality that we have chosen and . Then compute the derivative of and compute an antiderivative  of :  Integration by parts diagram       Apply by parts rule  Using the ingredients assembled in Step 2, we have .        Classic by parts   Compute          Integration workflow   For many integral computations it will be clear whether to use a formula, substitution, or integration by parts. When it is not clear how to proceed, the following workflow might be helpful.   Algebra and formulas  If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).    Substitution  Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).    By parts  Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is , and who \". If not promising, move to (3).    Creative algebra  Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).       The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique.   Iterated by parts             Surprising by parts   Compute          Rational function   Compute          Inverse trig   Compute          By parts and algebra   Compute         "
+},
+{
+  "id": "th_int_by_parts",
+  "level": "2",
+  "url": "section-18.html#th_int_by_parts",
+  "type": "Theorem",
+  "number": "1.18.1",
+  "title": "Integration by parts.",
+  "body": " Integration by parts   Let and be continuously differentiable functions on an interval containing the interval .   Indefinite integral form  We have .    Definite integral form  We have .      "
+},
+{
+  "id": "proc_int_by_parts",
+  "level": "2",
+  "url": "section-18.html#proc_int_by_parts",
+  "type": "Procedure",
+  "number": "1.18.2",
+  "title": "The art of by parts.",
+  "body": " The art of by parts   To use the integration by parts technique on an integral of the form proceed as follows:   Who is , and who ?  Declare one of and to be and the other to be . The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial\/radical, (E)xponent, (T)rig) often leads to a useful choice of .    Assemble ingredients  Suppose without loss of generality that we have chosen and . Then compute the derivative of and compute an antiderivative  of :  Integration by parts diagram       Apply by parts rule  Using the ingredients assembled in Step 2, we have .      "
+},
+{
+  "id": "eg_by_parts_1",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_1",
+  "type": "Example",
+  "number": "1.18.3",
+  "title": "Classic by parts.",
+  "body": " Classic by parts   Compute        "
+},
+{
+  "id": "proc_int_workflow",
+  "level": "2",
+  "url": "section-18.html#proc_int_workflow",
+  "type": "Procedure",
+  "number": "1.18.4",
+  "title": "Integration workflow.",
+  "body": " Integration workflow   For many integral computations it will be clear whether to use a formula, substitution, or integration by parts. When it is not clear how to proceed, the following workflow might be helpful.   Algebra and formulas  If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).    Substitution  Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).    By parts  Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is , and who \". If not promising, move to (3).    Creative algebra  Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).      "
+},
+{
+  "id": "eg_by_parts_2",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_2",
+  "type": "Example",
+  "number": "1.18.5",
+  "title": "Iterated by parts.",
+  "body": " Iterated by parts           "
+},
+{
+  "id": "eg_by_parts_4",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_4",
+  "type": "Example",
+  "number": "1.18.6",
+  "title": "Surprising by parts.",
+  "body": " Surprising by parts   Compute        "
+},
+{
+  "id": "eg_by_parts_5",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_5",
+  "type": "Example",
+  "number": "1.18.7",
+  "title": "Rational function.",
+  "body": " Rational function   Compute        "
+},
+{
+  "id": "eg_by_parts_6",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_6",
+  "type": "Example",
+  "number": "1.18.8",
+  "title": "Inverse trig.",
+  "body": " Inverse trig   Compute        "
+},
+{
+  "id": "eg_by_parts_7",
+  "level": "2",
+  "url": "section-18.html#eg_by_parts_7",
+  "type": "Example",
+  "number": "1.18.9",
+  "title": "By parts and algebra.",
+  "body": " By parts and algebra   Compute        "
+},
+{
+  "id": "s_trig_int",
+  "level": "1",
+  "url": "s_trig_int.html",
+  "type": "Section",
+  "number": "1.19",
+  "title": "Trigonometric integrals",
+  "body": " Trigonometric integrals   Trigonometric identities   In the following identities and range over all real numbers.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.        Odd sine power   Compute .         Even powers   Compute .         Even secant power   Compute .         Odd tangent power   Compute .         Even tangent power, odd secant power   Compute .         Tangent power   Compute .        "
+},
+{
+  "id": "th_trig_identities",
+  "level": "2",
+  "url": "s_trig_int.html#th_trig_identities",
+  "type": "Theorem",
+  "number": "1.19.1",
+  "title": "Trigonometric identities.",
+  "body": " Trigonometric identities   In the following identities and range over all real numbers.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .      "
+},
+{
+  "id": "proc_int_sincos",
+  "level": "2",
+  "url": "s_trig_int.html#proc_int_sincos",
+  "type": "Procedure",
+  "number": "1.19.2",
+  "title": "Integrating <span class=\"process-math\">\\(\\sin^m x\\cos^n x\\)<\/span>.",
+  "body": " Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .      "
+},
+{
+  "id": "proc_int_tansec",
+  "level": "2",
+  "url": "s_trig_int.html#proc_int_tansec",
+  "type": "Procedure",
+  "number": "1.19.3",
+  "title": "Integrating <span class=\"process-math\">\\(\\tan^m x\\sec^n x\\)<\/span>.",
+  "body": " Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.      "
+},
+{
+  "id": "eg_odd_sin_power",
+  "level": "2",
+  "url": "s_trig_int.html#eg_odd_sin_power",
+  "type": "Example",
+  "number": "1.19.4",
+  "title": "Odd sine power.",
+  "body": " Odd sine power   Compute .       "
+},
+{
+  "id": "eg_even_powers",
+  "level": "2",
+  "url": "s_trig_int.html#eg_even_powers",
+  "type": "Example",
+  "number": "1.19.5",
+  "title": "Even powers.",
+  "body": " Even powers   Compute .       "
+},
+{
+  "id": "eg_even_sec_power",
+  "level": "2",
+  "url": "s_trig_int.html#eg_even_sec_power",
+  "type": "Example",
+  "number": "1.19.6",
+  "title": "Even secant power.",
+  "body": " Even secant power   Compute .       "
+},
+{
+  "id": "eg_odd_tan_power",
+  "level": "2",
+  "url": "s_trig_int.html#eg_odd_tan_power",
+  "type": "Example",
+  "number": "1.19.7",
+  "title": "Odd tangent power.",
+  "body": " Odd tangent power   Compute .       "
+},
+{
+  "id": "eg_even_tan_odd_sec",
+  "level": "2",
+  "url": "s_trig_int.html#eg_even_tan_odd_sec",
+  "type": "Example",
+  "number": "1.19.8",
+  "title": "Even tangent power, odd secant power.",
+  "body": " Even tangent power, odd secant power   Compute .       "
+},
+{
+  "id": "eg_tan_power",
+  "level": "2",
+  "url": "s_trig_int.html#eg_tan_power",
+  "type": "Example",
+  "number": "1.19.9",
+  "title": "Tangent power.",
+  "body": " Tangent power   Compute .       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

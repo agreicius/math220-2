@@ -229,6 +229,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="separable_diffeq.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Separable differential equations</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">1.14</span> <span class="title">L’Hôpital’s rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lHop_B.html" class="internal"><span class="codenumber">1.15</span> <span class="title">More on indeterminate forms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Integration strategies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Integration by parts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_int.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Trigonometric integrals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -249,13 +253,13 @@ window.MathJax = {
 </h2>
 <div class="para logical" id="p-151">
 <div class="para">We have now met the two main operations in calculus:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC.html ./knowl/th_FTC_I.html ./knowl/th_FTC_II.html" id="md-23">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC.html ./knowl/xref/th_FTC_I.html ./knowl/xref/th_FTC_II.html" id="md-23">
 \begin{align*}
 \text{Derivative: } f \amp \mapsto f'\\
 \text{Integral: } f \amp \mapsto \int_a^b f(x)\, dx \text{.}
 \end{align*}
 </div>
-<div class="para">The <a href="" class="xref" data-knowl="./knowl/th_FTC.html" title="Theorem 1.5.1: Fundamental theorem of calculus">fundamental theorem of calculus (FTC)</a> how these two operations (derivative and integral) interact. The theorem has two parts (<a href="" class="xref" data-knowl="./knowl/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> and <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>). We will focus on FTC II in this section, and FTC I in the next.</div>
+<div class="para">The <a href="" class="xref" data-knowl="./knowl/xref/th_FTC.html" title="Theorem 1.5.1: Fundamental theorem of calculus">fundamental theorem of calculus (FTC)</a> how these two operations (derivative and integral) interact. The theorem has two parts (<a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> and <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>). We will focus on FTC II in this section, and FTC I in the next.</div>
 </div>
 <article class="theorem theorem-like" id="th_FTC"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus.</span>
@@ -293,37 +297,37 @@ F'(x)=\frac{d}{dx}\int_a^x f(t)\, dt = f(x)\tag{1.5.2}
 </div>
 </li>
 </ol>
-</div></article><details id="proof-4" class="hiddenproof"><summary><h3 class="heading"><span class="title">Proof of FTC II.</span></h3></summary><article class="hiddenproof"> <div class="para" id="p-155">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions <span class="process-math">\(P_n\)</span> satisfying <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> The strategy of the proof that follows is to pick these pointed partitions in a <em class="emphasis">very particular way</em> that ensures the value of of the integral we seek.</div> <div class="para logical" id="p-156">
+</div></article><details id="proof-4" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="title">Proof of FTC II.</span></h3></summary><article class="hiddenproof"> <div class="para" id="p-155">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions <span class="process-math">\(P_n\)</span> satisfying <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> The strategy of the proof that follows is to pick these pointed partitions in a <em class="emphasis">very particular way</em> that ensures the value of of the integral we seek.</div> <div class="para logical" id="p-156">
 <div class="para">Let <span class="process-math">\(F\)</span> be an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I=[a,b]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(I\text{,}\)</span> we see that <span class="process-math">\(F\)</span> is differentiable on <span class="process-math">\(I\)</span> and its derivative <span class="process-math">\(F'=f\)</span> is continuous. The <em class="emphasis">mean value theorem</em> thus applies to <span class="process-math">\(F\text{:}\)</span> given any interval <span class="process-math">\([c,d]\)</span> on which <span class="process-math">\(F'\)</span> is defined and continuous, there is an element <span class="process-math">\(x^*\in[c,d]\)</span> such that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html">
 \begin{equation*}
 F'(x^*)=\frac{F(d)-F(c)}{d-c}\text{.}
 \end{equation*}
 </div>
 <div class="para">We use this fact to produce a sequence of pointed partitions  <span class="process-math">\(P_n\)</span> of a very particular sort. Namely for each <span class="process-math">\(n\text{,}\)</span> we divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals of length <span class="process-math">\(\Delta x=(b-a)/n\text{,}\)</span> and for each subinterval <span class="process-math">\(I_k=[x_{k_1},x_k]\)</span> we choose our sample input <span class="process-math">\(c_k\)</span> to be a point where we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html">
 \begin{equation*}
 F'(c_k)=\frac{F(x_k)-F(x_{k-1})}{x_k-x_{k-1}}=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}
 \end{equation*}
 </div>
 <div class="para">As discussed above, such a <span class="process-math">\(c_k\)</span> is guaranteed to exist by the mean value theorem. Since <span class="process-math">\(F'=f\)</span> by assumption, these sample points satisfy</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html" id="eq_FTC_II_proof">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html" id="eq_FTC_II_proof">
 \begin{equation}
 f(c_k)=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}\tag{1.5.4}
 \end{equation}
 </div>
 <div class="para">Note that we have <span class="process-math">\(\lVert P_n\rVert=\Delta x=(b-a)/n\text{,}\)</span> and thus <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> It follows that if <span class="process-math">\(S_n\)</span> is the Riemann sum corresponding to the pointed partition <span class="process-math">\(P_n\text{,}\)</span> then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html">
 \begin{equation*}
 \int_a^b f(x)\, dx=\lim_{n\to\infty}S_n\text{.}
 \end{equation*}
 </div>
 <div class="para">We now compute <span class="process-math">\(S_n\)</span> for any fixed <span class="process-math">\(n\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html" id="md-24">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html" id="md-24">
 \begin{align*}
 S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
-\amp = \sum_{k=1}\left( \frac{F(x_k)-F(x_{k-1})}{\Delta x}\right)\Delta x \amp \knowl{./knowl/eq_FTC_II_proof.html}{\text{(1.5.4)}}\\
+\amp = \sum_{k=1}\left( \frac{F(x_k)-F(x_{k-1})}{\Delta x}\right)\Delta x \amp \knowl{./knowl/xref/eq_FTC_II_proof.html}{\text{(1.5.4)}}\\
 \amp =\sum_{k=1}^n F(x_k)-F(x_{k-1}) \\
 \amp =(\cancel{F(x_1)}-F(x_0))+(\cancel{F(x_2)}-\cancel{F(x_1)}+\cdots (F(x_n)-\cancel{F(x_{n-1}})\\
 \amp =F(x_n)-F(x_0)\\
@@ -331,13 +335,13 @@ S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
 \end{align*}
 </div>
 <div class="para">We’ve shown that <span class="process-math">\(S_n=F(b)-F(a)\)</span> for all <span class="process-math">\(n\text{.}\)</span> It follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II_proof.html">
 \begin{equation*}
 \int_a^b f(x)\, dx=\lim_{n\to\infty}S_n=\lim_{n\to\infty}F(b)-F(a)=F(b)-F(a)\text{,}
 \end{equation*}
 </div>
 <div class="para">as desired.</div>
-</div></article></details><div class="para" id="p-157">As mentioned above, we will focus here on <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. It main computational import of this theorem is that it allows us to compute definite integrals <em class="emphasis">indirectly</em>, by first finding an antiderivative of the integrand, and then using <a href="" class="xref" data-knowl="./knowl/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a>.</div>
+</div></article></details><div class="para" id="p-157">As mentioned above, we will focus here on <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. It main computational import of this theorem is that it allows us to compute definite integrals <em class="emphasis">indirectly</em>, by first finding an antiderivative of the integrand, and then using <a href="" class="xref" data-knowl="./knowl/xref/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a>.</div>
 <article class="algorithm theorem-like" id="proc_integral_antiderivative"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Computing integrals with antiderivatives.</span>
 </h3>
@@ -346,8 +350,8 @@ S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
 <ol class="decimal">
 <li id="li-77"><div class="para" id="p-159">Find an antiderivative <span class="process-math">\(F\)</span> of <span class="process-math">\(f\)</span> on I.</div></li>
 <li id="li-78"><div class="para logical" id="p-160">
-<div class="para">Use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to conclude</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+<div class="para">Use <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html">
 \begin{equation*}
 \int_a^bf(x)\, dx=F(b)-F(a)\text{.}
 \end{equation*}
@@ -355,7 +359,7 @@ S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
 </div></li>
 </ol>
 </div></article><div class="para" id="p-161">
-<a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> allows us to reduce a definite integral computation essentially to finding an antiderivative of the integrand: i.e., we integrate basically by “computing derivatives in reverse”. The Augustus De Morgan quote below captures this quite poetically.</div>
+<a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> allows us to reduce a definite integral computation essentially to finding an antiderivative of the integrand: i.e., we integrate basically by “computing derivatives in reverse”. The Augustus De Morgan quote below captures this quite poetically.</div>
 <article class="principle theorem-like" id="mantra_integration_differentiation"><h3 class="heading">
 <span class="type">Dictum</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integration is differentiation in reverse.</span>
 </h3>
@@ -382,8 +386,8 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 </div>
 </div></li>
 <li id="li-80"><div class="para logical" id="p-167">
-<div class="para">Observe that <a href="" class="xref" data-knowl="./knowl/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a> can be expressed using our new notation as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II.html">
+<div class="para">Observe that <a href="" class="xref" data-knowl="./knowl/xref/eq_FTC_II.html" title="Equation 1.5.3">(1.5.3)</a> can be expressed using our new notation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_FTC_II.html">
 \begin{equation*}
 \int_a^b f(x)\, dx= F(x)\Bigr\vert_a^b\text{.}
 \end{equation*}
@@ -393,19 +397,19 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Computing integrals with antiderivatives.</span>
 </h3>
 <div class="para logical" id="p-168">
-<div class="para">Use the <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute the following definite integrals.</div>
+<div class="para">Use the <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute the following definite integrals.</div>
 <ol class="decimal">
 <li id="li-81"><div class="para" id="p-169"><span class="process-math">\(\displaystyle \displaystyle\int_a^b 1-x^3\, dx\)</span></div></li>
 <li id="li-82"><div class="para" id="p-170"><span class="process-math">\(\displaystyle \displaystyle\int_0^{10} \frac{1}{\sqrt{2t+1}}\, dt\)</span></div></li>
 <li id="li-83"><div class="para" id="p-171"><span class="process-math">\(\displaystyle\int_{3\pi/4}^{\pi}\sec^2 u\, du\text{.}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-18" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-172">
-<div class="para">Following <a href="" class="xref" data-knowl="./knowl/proc_integral_antiderivative.html" title="Procedure 1.5.2: Computing integrals with antiderivatives">Procedure 1.5.2</a>, for each integral we provide an antiderivative <span class="process-math">\(F\)</span> of the integrand <span class="process-math">\(f\)</span> and then compute the integral as a difference evaluation using <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. The integrands in question are familiar and/or simple enough that we do not justify the fact that <span class="process-math">\(F\)</span> is indeed an antiderivative.</div>
+<div class="solutions"><details id="solution-18" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-172">
+<div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_integral_antiderivative.html" title="Procedure 1.5.2: Computing integrals with antiderivatives">Procedure 1.5.2</a>, for each integral we provide an antiderivative <span class="process-math">\(F\)</span> of the integrand <span class="process-math">\(f\)</span> and then compute the integral as a difference evaluation using <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>. The integrands in question are familiar and/or simple enough that we do not justify the fact that <span class="process-math">\(F\)</span> is indeed an antiderivative.</div>
 <ol class="decimal">
 <li id="li-84"><div class="para logical" id="p-173">
-<div class="para">The function <span class="process-math">\(F(x)=x-\frac{1}{4}x^4\)</span> is an antiderivative of <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-26">
+<div class="para">The function <span class="process-math">\(F(x)=x-\frac{1}{4}x^4\)</span> is an antiderivative of <span class="process-math">\(f(x)=1-x^3\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html" id="md-26">
 \begin{align*}
 \int_a^b 1-x^3\, dx\amp = F(b)-F(a)\\
 \amp = b-\frac{1}{4}b^4-(a-\frac{1}{4}a^4\\
@@ -414,8 +418,8 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 </div>
 </div></li>
 <li id="li-85"><div class="para logical" id="p-174">
-<div class="para">The function <span class="process-math">\(F(x)=\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(f(t)=1/\sqrt{2t+1}\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-27">
+<div class="para">The function <span class="process-math">\(F(x)=\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(f(t)=1/\sqrt{2t+1}\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html" id="md-27">
 \begin{align*}
 \int_0^10\frac{1}{\sqrt{2t+1}}\, dt \amp = F(10)-F(0)\\
 \amp = \sqrt{21}-\sqrt{1} \\
@@ -424,8 +428,8 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 </div>
 </div></li>
 <li id="li-86"><div class="para logical" id="p-175">
-<div class="para">The function <span class="process-math">\(F(x)=\tan u\)</span> is an antiderivative of <span class="process-math">\(f(u)=\sec^2 u\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html" id="md-28">
+<div class="para">The function <span class="process-math">\(F(x)=\tan u\)</span> is an antiderivative of <span class="process-math">\(f(u)=\sec^2 u\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html" id="md-28">
 \begin{align*}
 \int_{3\pi/4}^\pi \sec^2 u\, du  \amp = F(\pi)-F(3\pi/4)\\
 \amp =\tan \pi -\tan(3\pi/4)\\
@@ -452,10 +456,10 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-19" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-180">
-<div class="para">In each of the cases below we use our definitions of the <a href="" class="xref" data-knowl="./knowl/d_area.html" title="Item: Area">area</a> and <a href="" class="xref" data-knowl="./knowl/d_signedarea.html" title="Item: Signed area">signed area</a> of the region <span class="process-math">\(\mathcal{R}\)</span> associated to <span class="process-math">\(f\text{:}\)</span>
+<div class="solutions"><details id="solution-19" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-180">
+<div class="para">In each of the cases below we use our definitions of the <a href="" class="xref" data-knowl="./knowl/xref/d_area.html" title="Item: Area">area</a> and <a href="" class="xref" data-knowl="./knowl/xref/d_signedarea.html" title="Item: Signed area">signed area</a> of the region <span class="process-math">\(\mathcal{R}\)</span> associated to <span class="process-math">\(f\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_area.html ./knowl/d_signedarea.html ./knowl/th_interval_partition.html" id="md-29">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_area.html ./knowl/xref/d_signedarea.html ./knowl/xref/th_interval_partition.html" id="md-29">
 \begin{align*}
 \operatorname{sgn\, area}\mathcal{R} \amp = \int_a^b f(x)\, dx\\
 \operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\text{.}
@@ -467,13 +471,13 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 <li id="li-90">
 <div class="para logical" id="p-181">
 <div class="para">We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html" id="md-30">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_interval_partition.html" id="md-30">
 \begin{align*}
 \operatorname{sgn\, area}\mathcal{R} \amp = \int_{-\pi}^{\pi}f(x)\, dx\\
 \amp =F(\pi)-F(-\pi)\\
 \amp =-3(\cos(\pi/3)-\cos(-\pi/3))=0\\
 \operatorname{area}\mathcal{R} \amp = \int_a^b\abs{f(x)}\, dx\\
-\amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (\knowl{./knowl/th_interval_partition.html}{\text{Interval partition}})\\
+\amp = \int_{-\pi}^0\abs{f}\, dx+\int_0^{\pi}\abs{f} \amp (\knowl{./knowl/xref/th_interval_partition.html}{\text{Interval partition}})\\
 \amp = \int_{-\pi}^0-f(x)\, dx+\int_0^\pi f(x)\, dx \amp (\text{def. of } \abs{f})\\
 \amp = -\int_{-\pi}^0f(x)\, dx+\int_0^\pi f(x)\, dx\\
 \amp =-(F(0)-F(-\pi))+(F(\pi)-F(0))\\
@@ -482,7 +486,7 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 \end{align*}
 </div>
 <div class="para">Below you find a diagram of <span class="process-math">\(\mathcal{R}\)</span> described as a union <span class="process-math">\(\mathcal{R}=\mathcal{R}_1\cup \mathcal{R}_2\text{.}\)</span> By the symmetry in the diagram it should come as no surprise that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_interval_partition.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_interval_partition.html">
 \begin{equation*}
 \operatorname{sgn\, area}\mathcal{R}=-\operatorname{area}\mathcal{R}_1+\mathcal{R}_2=0\text{.}
 \end{equation*}
@@ -522,8 +526,8 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">FTC II: rate of change version.</span>
 </h3>
 <div class="para logical" id="p-184">
-<div class="para">Suppose <span class="process-math">\(Q=g(x)\)</span> is a differentiable function on <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(g\)</span> is an antiderivative of <span class="process-math">\(g'\)</span> on <span class="process-math">\(I\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II.html">
+<div class="para">Suppose <span class="process-math">\(Q=g(x)\)</span> is a differentiable function on <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(g\)</span> is an antiderivative of <span class="process-math">\(g'\)</span> on <span class="process-math">\(I\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html">
 \begin{equation*}
 \int_a^bg'(x)\, dx = g(b)-g(a)=\Delta Q\text{.}
 \end{equation*}
@@ -532,22 +536,22 @@ cf(x)\Bigr\vert_a^b \amp = c\left(f(x)\Bigr\vert_a^b\right)
 </div>
 </div></article><article class="example example-like" id="example-21"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Leaking water tank revisited.</span>
-</h3> <div class="para" id="p-185">Recall the set up from <a href="" class="xref" data-knowl="./knowl/eg_water_tank.html" title="Example 1.1.9: Leaking water tank">Example 1.1.9</a>, where we determined that at time <span class="process-math">\(t\text{,}\)</span> the amount of water <span class="process-math">\(A=f(t)\)</span> has rate of change <span class="process-math">\(f'(t)=-1/\sqrt{2t+1}\text{.}\)</span>
+</h3> <div class="para" id="p-185">Recall the set up from <a href="" class="xref" data-knowl="./knowl/xref/eg_water_tank.html" title="Example 1.1.9: Leaking water tank">Example 1.1.9</a>, where we determined that at time <span class="process-math">\(t\text{,}\)</span> the amount of water <span class="process-math">\(A=f(t)\)</span> has rate of change <span class="process-math">\(f'(t)=-1/\sqrt{2t+1}\text{.}\)</span>
 </div> <div class="para logical" id="p-186">
-<div class="para">According to <a href="" class="xref" data-knowl="./knowl/th_FTC_II_rate.html" title="Theorem 1.5.8: FTC II: rate of change version">Theorem 1.5.8</a>, for any <span class="process-math">\(t=b\)</span> the integral</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+<div class="para">According to <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II_rate.html" title="Theorem 1.5.8: FTC II: rate of change version">Theorem 1.5.8</a>, for any <span class="process-math">\(t=b\)</span> the integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
 \begin{equation*}
 \int_0^b f'(t)\, dt=\int_0^b-1/\sqrt{2t+1}\, dt
 \end{equation*}
 </div>
-<div class="para">computes the <em class="emphasis">net change</em> in the amount of water in the tank between time <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=b\)</span> minutes: i.e., it computes <span class="process-math">\(\Delta A=f(b)-f(0)\text{.}\)</span> We can use <a href="" class="xref" data-knowl="./knowl/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute this integral. The function <span class="process-math">\(F(x)=-\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(-1/\sqrt{2t+1}\)</span> and thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+<div class="para">computes the <em class="emphasis">net change</em> in the amount of water in the tank between time <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=b\)</span> minutes: i.e., it computes <span class="process-math">\(\Delta A=f(b)-f(0)\text{.}\)</span> We can use <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a> to compute this integral. The function <span class="process-math">\(F(x)=-\sqrt{2t+1}\)</span> is an antiderivative of <span class="process-math">\(-1/\sqrt{2t+1}\)</span> and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
 \begin{equation*}
 \int_0^b -1/\sqrt{2t+1}\, dt=F(b)-F(0)=1-\sqrt{2b+1}\text{.}
 \end{equation*}
 </div>
 <div class="para">This tells us that <span class="process-math">\(\Delta A=1-\sqrt{2b+1}\)</span> at any time <span class="process-math">\(b\text{.}\)</span> Since <span class="process-math">\(\Delta A=f(b)-f(0)\text{,}\)</span> we conclude that <span class="process-math">\(f(b)-f(0)=1-\sqrt{2b+1}\text{,}\)</span> or equivalently, <span class="process-math">\(f(b)=f(0)+1-\sqrt{2b+1}=101-\sqrt{2t+1}\)</span> for all <span class="process-math">\(b\text{.}\)</span>  (Here we use the fact that <span class="process-math">\(f(0)=100\text{.}\)</span>) We have just given another derivation of the formula</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_FTC_II_rate.html ./knowl/th_FTC_II.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II_rate.html ./knowl/xref/th_FTC_II.html">
 \begin{equation*}
 f(t)=101-\sqrt{2t+1}
 \end{equation*}
