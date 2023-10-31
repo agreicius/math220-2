@@ -50,42 +50,7 @@
         We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are <em>reciprocals</em> of the corresponding trigonometric functions. They are not! 
       </p>
     </remark>
-    <example xml:id="eg_inverse_trig_compute">
-        <title>Computing with inverse trig functions</title>
-        <statement>
-                <p>
-                  Compute the following values of trigonometric functions by hand.
-                  <ol>
-                    <li>
-                      <p>
-                        <m>\displaystyle\arcsin(-1)</m>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <m>\displaystyle\arccos(-\sqrt{2}/2)</m>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <m>\displaystyle\arctan(-1/\sqrt{3})</m>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <m>\displaystyle\arcsin\left(\sin\left(\frac{10\pi}{11}\right)\right)</m> <em>Hint</em>.
-                        The answer is not <m>10\pi/11</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-        </statement>
-        <solution>
-            <p>
-                
-            </p>
-        </solution>
-    </example>
+    
     <theorem xml:id="th_inverse_trig_props">
         <title>Properties of inverse trigonometric functions</title>
         <statement>

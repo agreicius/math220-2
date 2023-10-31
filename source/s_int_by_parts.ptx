@@ -1,0 +1,218 @@
+<section>
+    <title>Integration by parts</title>
+    <introduction>
+        <p>
+            The integration by parts technique is yet another instance of our <xref ref="mantra_integration_differentiation"/>. In this case we take the familiar product rule of differentiation 
+            <men xml:id="eq_prod_rule">
+                (fg)' =f'g+fg'
+            </men>,
+        reexpress it algebraically as 
+        <mdn>
+            <mrow>f'g \amp = (fg)'-fg'</mrow>
+        </mdn>,
+        and then integrate both sides to conclude 
+        <mdn>
+            <mrow>\int f(x)g'(x)\, dx \amp = \int (f(x)g(x))'\, dx- \int f'(x)g(x)\, dx</mrow>
+            <mrow> \amp = f(x)g(x)-\int f(x)g'(x)\, dx</mrow>
+        </mdn>.
+        We have just given a proof of what is called the <xref ref="th_int_by_parts" text="custom">integration by parts</xref> rule.  
+        </p>
+    </introduction>
+      <theorem xml:id="th_int_by_parts">
+        <title>Integration by parts</title>
+        <statement>
+          <p>
+            Let <m>u</m> and <m>v</m> be continuously differentiable functions on an interval <m>I</m> containing the interval <m>[a,b]</m>.
+            <ol>
+              <li>
+                <title>Indefinite integral form</title>
+                <p>
+                  We have
+                  <men xml:id="eq_int_by_parts_ind">
+                    \int u(x)v'(x)\, dx= u(x)v(x)-\int u'(x)v(x)\, dx
+                  </men>.
+                </p>
+              </li>
+              <li>
+                <title>Definite integral form</title>
+                <p>
+                  We have
+                  <men xml:id="eq_int_by_parts_def">
+                    \int_a^b u(x)v'(x)\, dx= u(x)v(x)\Bigr\vert_a^b-\int_a^b u'(x)v(x)\, dx
+                  </men>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+    
+      <algorithm xml:id="proc_int_by_parts">
+        <title>The art of by parts</title>
+        <statement>
+          <p>
+            To use the integration by parts technique on an integral of the form <m>\displaystyle\int f(x)g(x)\, dx</m> proceed as follows:
+            <ol>
+              <li>
+                <title>Who is <m>u</m>, and who <m>v'</m>?</title>
+                <p>
+                  Declare one of <m>f</m> and <m>g</m> to be <m>u</m> and the other to be <m>v'</m>.
+                  The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial/radical, (E)xponent, (T)rig) often leads to a useful choice of <m>u</m>.
+                </p>
+              </li>
+              <li>
+                <title>Assemble ingredients</title>
+                <p>
+                  Suppose without loss of generality that we have chosen <m>u=f</m> and <m>v'=g</m>.
+                  Then compute the derivative <m>f'</m> of <m>f</m> and compute an
+                  <em>antiderivative</em> <m>G</m> of <m>g</m>:
+                  <image xml:id="im_int_by_parts" width="100%">
+                    <description>Integration by parts diagram</description>
+                    <latex-image>
+                        \begin{tikzcd}
+                        u(x)=f(x) \ar[d,bend right=80,"\text{ compute derivative } "'] \amp  v'(x)=g(x) \ar[d,bend left=80,"\text{ compute antiderivative } "]\\ u'(x)=f'(x) \amp  v(x)=G(x)
+                        \end{tikzcd}
+                      </latex-image>
+                  </image>
+                </p>
+              </li>
+              <li>
+                <title>Apply by parts rule</title>
+                <p>
+                Using the ingredients assembled in Step 2, we have 
+                  <md>
+                    <mrow>\int \underset{u}{f(x)}\underset{v'}{g(x)}\, dx\amp = \underset{u}{f(x)}\underset{v}{G(x)}-\int \underset{u'}{f'(x)}\underset{v}{G(x)}\, dx</mrow>
+                  </md>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_by_parts_1">
+        <title>Classic by parts</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle\int_0^1 xe^{-x}\, dx</m> 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+      <algorithm xml:id="proc_int_workflow">
+        <title>Integration workflow</title>
+        <statement>
+          <p>
+            For many integral computations it will be clear whether to use a formula,
+            substitution, or integration by parts.
+            When it is not clear how to proceed,
+            the following  workflow might be helpful.
+            <ol marker="itemsep0pttopsep0pt">
+              <li>
+                <title>Algebra and formulas</title>
+                <p>
+                  If possible, use an integration formula,
+                  perhaps after some simple algebraic preparation.
+                  Otherwise, move to (1).
+                </p>
+              </li>
+              <li>
+                <title>Substitution</title>
+                <p>
+                  Evaluate whether a substitution could transform the integral into one where (0) applies.
+                  If not promising, move to (2).
+                </p>
+              </li>
+              <li>
+                <title>By parts</title>
+                 <p>
+                  Evaluate whether the integral is amenable to a by parts approach.
+                  You may want to mentally run through a couple of choices of ``who is <m>u</m>,
+                  and who <m>v'</m>". If not promising, move to (3).
+                </p>
+              </li>
+              <li>
+                <title>Creative algebra</title>
+                <p>
+                  Consider more creative algebraic techniques,
+                  including trigonometric identities.
+                  If applicable, return to (0).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </algorithm>
+    <p>
+        The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique. 
+    </p>
+     <example xml:id="eg_by_parts_2">
+        <title>Iterated by parts</title>
+        <statement>
+            <p>
+                <m>\displaystyle \int x^2 e^x\, dx</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+     </example>
+    
+    <example xml:id="eg_by_parts_4">
+        <title>Surprising by parts</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle\int \ln \vert x\vert\, dx</m>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>  
+    <example xml:id="eg_by_parts_5">
+        <title>Rational function</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle\int \frac{x^3}{x^2+1}\, dx</m>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>  
+    <example xml:id="eg_by_parts_6">
+        <title>Inverse trig</title>
+        <statement>
+            <p>
+                Compute <m>\displaystyle\int \arctan x\, dx</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+               
+              </p>
+        </solution>
+    </example>
+    <example xml:id="eg_by_parts_7">
+        <title>By parts and algebra</title>
+        <statement>
+            <p>
+                Compute <m>\int e^x\cos x\, dx</m>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+  </section>
