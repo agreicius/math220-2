@@ -24,6 +24,56 @@
 <li><div class="para"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to \infty}(1+x^2)^{2/x}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_lHop_B.html#eg_indeterminate_further">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_lHop.html">
+\begin{align*}
+\lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x} \amp = \lim_{x\to 0^+}\frac{x-\sin x}{x\sin x} \amp (\text{alg. tech.: common denom.})\\
+\amp =0\text{.}
+\end{align*}
+</div>
+<div class="para">The last equality was shown in <a href="" class="xref" data-knowl="./knowl/xref/eg_lHop.html" title="Example 1.14.6: L’Hôpital’s rule">Example 1.14.6</a> with the help of l’Hôpital’s rule.</div>
+</div></li>
+<li><div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to \infty}2x-\sqrt{4x^2-13x}\amp= \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\cdot \frac{2x-\sqrt{4x^2+13x}}{2x+\sqrt{4x^2-13x}} \amp (\text{alg. tech.: conjugate})\\
+\amp = \lim_{x\to \infty}\frac{4x^2-(4x^2-13x)}{2x+\sqrt{4x^2-13x}}   \\
+\amp = \lim_{x\to \infty}\frac{13x}{2x+\sqrt{4x^2-13x}}\\
+\amp = \lim_{x\to \infty}\frac{\cancel{x}}{\cancel{x}}\frac{13}{2+\sqrt{4-13/x}}\\
+\amp = \frac{13}{2+\sqrt{4-0}}\\
+\amp = \frac{13}{4}
+\end{align*}
+</div>
+<div class="para">Note: the step where <span class="process-math">\(x\)</span> is factored out of the numerator and denominator was motivated by the intuition that as <span class="process-math">\(x\to \infty\text{,}\)</span> the <span class="process-math">\(x^2\)</span> term in the radical dominates the <span class="process-math">\(x\)</span> term.</div>
+</div></li>
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to -\infty}x^22^{x} \amp = \lim_{x\to -\infty}\frac{x^2}{2^{-x}}\\
+\amp = \lim_{x\to -\infty}\frac{2x}{-\ln 2 \cdot 2^{-x}} \amp (\text{l'Hop }, \infty/\infty)\\
+\amp = \lim_{x\to -\infty}\frac{2}{(\ln 2)^2\cdot 2^{-x}}\\
+\amp = \frac{2}{\infty} \amp (2^{-x}\to \infty \text{ as } x\to -\infty)\\
+\amp = 0\text{.}
+\end{align*}
+</div></div></li>
+<li><div class="para logical"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html">
+\begin{align*}
+\lim_{x\to 0^+}(1+x)^{1/x} \amp = \lim_{x\to 0^+}e^{\frac{1}{x}\ln (1+x)} \amp (\text{def. of } a^b)\\
+\amp = e^{\lim_{x\to 0^+}\frac{\ln (1+x)}{x}} \amp \knowl{./knowl/xref/eq_exp_limit.html}{\text{(1.15.1)}} \\
+\amp = e^{\lim_{x\to 0^+}\frac{1/(1+x)}{1}} \amp (\text{l'Hop }, 0/0)\\
+\amp = e^{1}\\
+\amp = e\text{.}
+\end{align*}
+</div></div></li>
+<li><div class="para logical"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html">
+\begin{align*}
+\lim_{x\to \infty}(1+x^2)^{2/x} \amp = \lim_{x\to \infty}e^{\frac{2}{x}\ln(1+x^2)} \amp (\text{def. of } a^b)\\
+\amp = e^{\lim_{x\to \infty}\frac{2\ln(1+x^2)}{x}} \amp \knowl{./knowl/xref/eq_exp_limit.html}{\text{(1.15.1)}}\\
+\amp = e^{\lim_{x\to \infty}\frac{4x/(1+x^2)}{1}} \amp (\text{l'Hop }, \infty/\infty) \\
+\amp = e^0 \amp (4x/1+x^2\to 0 \text{ as } x\to \infty)\\
+\amp = 1\text{.}
+\end{align*}
+</div></div></li>
+</ol></div></div></details></div></article><span class="incontext"><a class="internal" href="s_lHop_B.html#eg_indeterminate_further">in-context</a></span>
 </body>
 </html>
