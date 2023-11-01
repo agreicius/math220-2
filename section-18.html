@@ -251,7 +251,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-18"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.18</span><span class="space"> </span><span class="title">Integration by parts</span>
 </h2>
-<section class="introduction" id="introduction-2"><div class="para logical" id="p-508">
+<section class="introduction" id="introduction-2"><div class="para logical" id="p-515">
 <div class="para">The integration by parts technique is yet another instance of our <a href="" class="xref" data-knowl="./knowl/xref/mantra_integration_differentiation.html" title="Dictum 1.5.3: Integration is differentiation in reverse">Dictum 1.5.3</a>. In this case we take the familiar product rule of differentiation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mantra_integration_differentiation.html ./knowl/xref/th_int_by_parts.html" id="eq_prod_rule">
 \begin{equation}
@@ -259,13 +259,13 @@ window.MathJax = {
 \end{equation}
 </div>
 <div class="para">reexpress it algebraically as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mantra_integration_differentiation.html ./knowl/xref/th_int_by_parts.html" id="mdn-13">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mantra_integration_differentiation.html ./knowl/xref/th_int_by_parts.html" id="mdn-17">
 \begin{align}
 f'g \amp = (fg)'-fg'\text{,}\tag{1.18.2}
 \end{align}
 </div>
 <div class="para">and then integrate both sides to conclude</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mantra_integration_differentiation.html ./knowl/xref/th_int_by_parts.html" id="mdn-14">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mantra_integration_differentiation.html ./knowl/xref/th_int_by_parts.html" id="mdn-18">
 \begin{align}
 \int f(x)g'(x)\, dx \amp = \int (f(x)g(x))'\, dx- \int f'(x)g(x)\, dx\tag{1.18.3}\\
 \amp = f(x)g(x)-\int f(x)g'(x)\, dx\text{.}\tag{1.18.4}
@@ -275,12 +275,12 @@ f'g \amp = (fg)'-fg'\text{,}\tag{1.18.2}
 </div></section><article class="theorem theorem-like" id="th_int_by_parts"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.18.1</span><span class="period">.</span><span class="space"> </span><span class="title">Integration by parts.</span>
 </h3>
-<div class="para logical" id="p-509">
+<div class="para logical" id="p-516">
 <div class="para">Let <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> be continuously differentiable functions on an interval <span class="process-math">\(I\)</span> containing the interval <span class="process-math">\([a,b]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-258">
-<span class="heading"><span class="title">Indefinite integral form.</span></span><div class="para logical" id="p-510">
+<li id="li-262">
+<span class="heading"><span class="title">Indefinite integral form.</span></span><div class="para logical" id="p-517">
 <div class="para">We have</div>
 <div class="displaymath process-math" id="eq_int_by_parts_ind">
 \begin{equation}
@@ -289,8 +289,8 @@ f'g \amp = (fg)'-fg'\text{,}\tag{1.18.2}
 </div>
 </div>
 </li>
-<li id="li-259">
-<span class="heading"><span class="title">Definite integral form.</span></span><div class="para logical" id="p-511">
+<li id="li-263">
+<span class="heading"><span class="title">Definite integral form.</span></span><div class="para logical" id="p-518">
 <div class="para">We have</div>
 <div class="displaymath process-math" id="eq_int_by_parts_def">
 \begin{equation}
@@ -303,21 +303,21 @@ f'g \amp = (fg)'-fg'\text{,}\tag{1.18.2}
 </div></article><article class="algorithm theorem-like" id="proc_int_by_parts"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.18.2</span><span class="period">.</span><span class="space"> </span><span class="title">The art of by parts.</span>
 </h3>
-<div class="para logical" id="p-512">
+<div class="para logical" id="p-519">
 <div class="para">To use the integration by parts technique on an integral of the form <span class="process-math">\(\displaystyle\int f(x)g(x)\, dx\)</span> proceed as follows:</div>
 <ol class="decimal">
-<li id="li-260">
-<span class="heading"><span class="title">Who is <span class="process-math">\(u\text{,}\)</span> and who <span class="process-math">\(v'\text{?}\)</span></span></span><div class="para" id="p-513">Declare one of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> to be <span class="process-math">\(u\)</span> and the other to be <span class="process-math">\(v'\text{.}\)</span> The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial/radical, (E)xponent, (T)rig) often leads to a useful choice of <span class="process-math">\(u\text{.}\)</span>
+<li id="li-264">
+<span class="heading"><span class="title">Who is <span class="process-math">\(u\text{,}\)</span> and who <span class="process-math">\(v'\text{?}\)</span></span></span><div class="para" id="p-520">Declare one of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> to be <span class="process-math">\(u\)</span> and the other to be <span class="process-math">\(v'\text{.}\)</span> The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial/radical, (E)xponent, (T)rig) often leads to a useful choice of <span class="process-math">\(u\text{.}\)</span>
 </div>
 </li>
-<li id="li-261">
-<span class="heading"><span class="title">Assemble ingredients.</span></span><div class="para" id="p-514">Suppose without loss of generality that we have chosen <span class="process-math">\(u=f\)</span> and <span class="process-math">\(v'=g\text{.}\)</span> Then compute the derivative <span class="process-math">\(f'\)</span> of <span class="process-math">\(f\)</span> and compute an <em class="emphasis">antiderivative</em> <span class="process-math">\(G\)</span> of <span class="process-math">\(g\text{:}\)</span> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_int_by_parts.svg" role="img" class="contained" alt="Integration by parts diagram"></div>
+<li id="li-265">
+<span class="heading"><span class="title">Assemble ingredients.</span></span><div class="para" id="p-521">Suppose without loss of generality that we have chosen <span class="process-math">\(u=f\)</span> and <span class="process-math">\(v'=g\text{.}\)</span> Then compute the derivative <span class="process-math">\(f'\)</span> of <span class="process-math">\(f\)</span> and compute an <em class="emphasis">antiderivative</em> <span class="process-math">\(G\)</span> of <span class="process-math">\(g\text{:}\)</span> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_int_by_parts.svg" role="img" class="contained" alt="Integration by parts diagram"></div>
 </div>
 </li>
-<li id="li-262">
-<span class="heading"><span class="title">Apply by parts rule.</span></span><div class="para logical" id="p-515">
+<li id="li-266">
+<span class="heading"><span class="title">Apply by parts rule.</span></span><div class="para logical" id="p-522">
 <div class="para">Using the ingredients assembled in Step 2, we have</div>
-<div class="displaymath process-math" id="md-98">
+<div class="displaymath process-math" id="md-97">
 \begin{align*}
 \int \underset{u}{f(x)}\underset{v'}{g(x)}\, dx\amp = \underset{u}{f(x)}\underset{v}{G(x)}-\int \underset{u'}{f'(x)}\underset{v}{G(x)}\, dx\text{.}
 \end{align*}
@@ -328,53 +328,53 @@ f'g \amp = (fg)'-fg'\text{,}\tag{1.18.2}
 </div></article><article class="example example-like" id="eg_by_parts_1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.3</span><span class="period">.</span><span class="space"> </span><span class="title">Classic by parts.</span>
 </h3>
-<div class="para" id="p-516">Compute <span class="process-math">\(\displaystyle\int_0^1 xe^{-x}\, dx\)</span>
+<div class="para" id="p-523">Compute <span class="process-math">\(\displaystyle\int_0^1 xe^{-x}\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-52" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-517"></div></div></details></div></article><article class="algorithm theorem-like" id="proc_int_workflow"><h3 class="heading">
+<div class="solutions"><details id="solution-52" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-524"></div></div></details></div></article><article class="algorithm theorem-like" id="proc_int_workflow"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.18.4</span><span class="period">.</span><span class="space"> </span><span class="title">Integration workflow.</span>
 </h3>
-<div class="para logical" id="p-518">
+<div class="para logical" id="p-525">
 <div class="para">For many integral computations it will be clear whether to use a formula, substitution, or integration by parts. When it is not clear how to proceed, the following  workflow might be helpful.</div>
 <ol start="0" class="decimal">
-<li id="li-263">
-<span class="heading"><span class="title">Algebra and formulas.</span></span><div class="para" id="p-519">If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).</div>
+<li id="li-267">
+<span class="heading"><span class="title">Algebra and formulas.</span></span><div class="para" id="p-526">If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).</div>
 </li>
-<li id="li-264">
-<span class="heading"><span class="title">Substitution.</span></span><div class="para" id="p-520">Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).</div>
+<li id="li-268">
+<span class="heading"><span class="title">Substitution.</span></span><div class="para" id="p-527">Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).</div>
 </li>
-<li id="li-265">
-<span class="heading"><span class="title">By parts.</span></span><div class="para" id="p-521">Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is <span class="process-math">\(u\text{,}\)</span> and who <span class="process-math">\(v'\)</span>". If not promising, move to (3).</div>
+<li id="li-269">
+<span class="heading"><span class="title">By parts.</span></span><div class="para" id="p-528">Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is <span class="process-math">\(u\text{,}\)</span> and who <span class="process-math">\(v'\)</span>". If not promising, move to (3).</div>
 </li>
-<li id="li-266">
-<span class="heading"><span class="title">Creative algebra.</span></span><div class="para" id="p-522">Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).</div>
+<li id="li-270">
+<span class="heading"><span class="title">Creative algebra.</span></span><div class="para" id="p-529">Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).</div>
 </li>
 </ol>
-</div></article><div class="para" id="p-523">The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique.</div>
+</div></article><div class="para" id="p-530">The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique.</div>
 <article class="example example-like" id="eg_by_parts_2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.5</span><span class="period">.</span><span class="space"> </span><span class="title">Iterated by parts.</span>
 </h3>
-<div class="para" id="p-524"><span class="process-math">\(\displaystyle \int x^2 e^x\, dx\)</span></div>
-<div class="solutions"><details id="solution-53" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-525"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_4"><h3 class="heading">
+<div class="para" id="p-531"><span class="process-math">\(\displaystyle \int x^2 e^x\, dx\)</span></div>
+<div class="solutions"><details id="solution-53" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-532"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_4"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.6</span><span class="period">.</span><span class="space"> </span><span class="title">Surprising by parts.</span>
 </h3>
-<div class="para" id="p-526">Compute <span class="process-math">\(\displaystyle\int \ln \vert x\vert\, dx\)</span>
+<div class="para" id="p-533">Compute <span class="process-math">\(\displaystyle\int \ln \vert x\vert\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-54" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-527"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_5"><h3 class="heading">
+<div class="solutions"><details id="solution-54" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-534"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_5"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.7</span><span class="period">.</span><span class="space"> </span><span class="title">Rational function.</span>
 </h3>
-<div class="para" id="p-528">Compute <span class="process-math">\(\displaystyle\int \frac{x^3}{x^2+1}\, dx\)</span>
+<div class="para" id="p-535">Compute <span class="process-math">\(\displaystyle\int \frac{x^3}{x^2+1}\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-55" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-529"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_6"><h3 class="heading">
+<div class="solutions"><details id="solution-55" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-536"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_6"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.8</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse trig.</span>
 </h3>
-<div class="para" id="p-530">Compute <span class="process-math">\(\displaystyle\int \arctan x\, dx\)</span>
+<div class="para" id="p-537">Compute <span class="process-math">\(\displaystyle\int \arctan x\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-56" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-531"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_7"><h3 class="heading">
+<div class="solutions"><details id="solution-56" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-538"></div></div></details></div></article><article class="example example-like" id="eg_by_parts_7"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.9</span><span class="period">.</span><span class="space"> </span><span class="title">By parts and algebra.</span>
 </h3>
-<div class="para" id="p-532">Compute <span class="process-math">\(\int e^x\cos x\, dx\)</span>
+<div class="para" id="p-539">Compute <span class="process-math">\(\int e^x\cos x\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-57" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-533"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-57" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-540"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-17.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_trig_int.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
