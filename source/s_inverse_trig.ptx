@@ -59,22 +59,22 @@
               <p>
                 The function <m>\arcsin</m> is an increasing function with domain <m>[-1,1]</m> and range <m>[0,\pi]</m>.
                 It satisfies the following properties:
-                <md>
-                  <mrow>\arcsin(x)=\theta \amp \iff \sin\theta=x \text{ and }  -\pi/2\leq \theta\leq \pi/2</mrow>
-                  <mrow>\arcsin(\sin \theta)\amp =\theta \text{ for all }  -\pi/2\leq \theta\leq \pi/2</mrow>
-                  <mrow>\sin(\arcsin x)\amp =x \text{ for all }  -1\leq x\leq 1</mrow>
-                </md>.
+                <mdn>
+                  <mrow xml:id="eq_arcsin">\arcsin(x)=\theta \amp \iff \sin\theta=x \text{ and }  -\pi/2\leq \theta\leq \pi/2</mrow>
+                  <mrow xml:id="eq_arcsin_sin">\arcsin(\sin \theta)\amp =\theta \text{ for all }  -\pi/2\leq \theta\leq \pi/2</mrow>
+                  <mrow xml:id="eq_sin_arcsin">\sin(\arcsin x)\amp =x \text{ for all }  -1\leq x\leq 1</mrow>
+                </mdn>.
               </p>
             </li>
             <li>
               <p>
                 The function <m>\arccos</m> is a decreasing function with domain <m>[-1,1]</m> and range <m>[0,\pi]</m>.
                 It satisfies the following properties:
-                <md>
-                  <mrow>\arccos(x)=\theta \amp \iff \cos\theta=x \text{ and }  0\leq \theta\leq \pi</mrow>
+                <mdn>
+                  <mrow xml:id="eq_arccos">\arccos(x)=\theta \amp \iff \cos\theta=x \text{ and }  0\leq \theta\leq \pi</mrow>
                   <mrow>\arccos(\cos \theta)\amp =\theta \text{ for all }  0\leq \theta\leq \pi</mrow>
                   <mrow>\cos(\arccos x)\amp =x \text{ for all }  -1\leq x\leq 1</mrow>
-                </md>.
+                </mdn>.
               </p>
             </li>
             <li>
@@ -82,12 +82,12 @@
                 The function <m>\arctan</m> is an increasing function with domain
                 <m>(-\infty, \infty)</m> and range <m>(-\pi/2, \pi/2)</m>.
                 It satisfies the following properties:
-                <md>
-                  <mrow>\arctan(x)=\theta \amp \iff \tan\theta=x \text{ and }  -\pi/2\lt  \theta\lt  \pi/2</mrow>
+                <mdn>
+                  <mrow xml:id="eq_arctan">\arctan(x)=\theta \amp \iff \tan\theta=x \text{ and }  -\pi/2\lt  \theta\lt  \pi/2</mrow>
                   <mrow>\arctan(\tan \theta)\amp =\theta \text{ for all }  -\pi/2\lt  \theta\lt  \pi/2</mrow>
                   <mrow>\tan(\arctan x)\amp =x \text{ for all }  x</mrow>
                   <mrow>\lim_{x\to\infty}\arctan x\amp =\pi/2,\hspace{5pt} \lim_{x\to-\infty}\arctan x=-\pi/2</mrow>
-                </md>
+                </mdn>
               </p>
             </li>
           </ul>
@@ -125,7 +125,34 @@
       </statement>
       <solution>
           <p>
-              
+             <ol>
+              <li>
+                <p>
+                  Common mistake: <m>\arcsin(-1)\ne 3\pi/2</m>. Why? By definition, the outputs of <m>\arcsin</m> lie in the interval <m>[-\pi/2, \pi/2]</m>. Instead, 
+                  using <xref ref="eq_arcsin"/>, we have <m>\arcsin(-1)=\theta</m> if and only if <m>\sin \theta=-1</m> and <m>-\pi/2\leq \theta\leq \pi/2</m>. The unique <m>\theta</m> satisfying these two conditions is <m>\theta=-\pi/2</m>. We conclude that <m>\arcsin(-1)=-\pi/2</m>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Using <xref ref="eq_arcsin"/>, we have <m>\arccos(-\sqrt{2}/2)=\theta</m> if and only if <m>\cos \theta=-\sqrt{2}/2</m> and <m>0/\leq \theta\leq \pi</m>. The unique <m>\theta</m> satisfying these two conditions is <m>\theta=3\pi/4</m>. We conclude that <m>\arccos(-\sqrt{2}/2)=3\pi/4</m>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Using <xref ref="eq_arctan"/>, we have <m>\arctan(-1/\sqrt{3})=\theta</m> if and only if <m>\tan \theta=-1/\sqrt{3}</m> and <m>-\pi/2 &lt; \theta &lt; \pi/2</m>. Since <m>\theta=-\pi/6</m> is the unique angle satifying these two conditions, we conclude that that <m>\arctan(-1/\sqrt{3})=-\pi/6</m>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Recall that <m>\sin(\theta)=\sin (\pi-\theta)</m> for any <m>\theta\in \R</m>. (You can convince yourself of this either by drawing a unit circle picture, or by using the difference identity for <m>\sin</m>.) It follows that 
+                  <md>
+                    <mrow>\arcsin(\sin(10\pi/11)) \amp =\arcsin(\sin(\pi-10\pi/11))</mrow>
+                    <mrow> \amp = \arcsin(\sin (\pi /11))</mrow>
+                    <mrow> \amp = \frac{\pi}{11} \amp (<xref ref="eq_arcsin_sin"/>, -\frac{\pi}{2}\leq \frac{\pi}{11}\leq\frac{\pi}{2})</mrow>
+                  </md>.
+                </p>
+              </li>
+             </ol> 
           </p>
       </solution>
   </example>
@@ -160,13 +187,45 @@
       <statement>
         <p>
           The following derivative/antiderivative formulas hold:
-          <md>
-            <mrow>\frac{d}{dx} \arcsin x=\frac{1}{\sqrt{1-x^2}}\amp \iff \int \frac{1}{\sqrt{1-x^2}}\, dx=\arcsin x+C \amp \text{ (for all \(x\) in \((-1,1)\)) }</mrow>
-            <mrow>\frac{d}{dx} \arccos x=-\frac{1}{\sqrt{1-x^2}}\amp \iff \int \frac{1}{\sqrt{1-x^2}}\, dx=-\arccos x+C \amp \text{ (for all \(x\) in \((-1,1)\)) }</mrow>
-            <mrow>\frac{d}{dx} \arctan x=\frac{1}{1+x^2}\amp \iff \int \frac{1}{1+x^2}\, dx=\arctan x+C \amp \text{ (for all \(x\)) } </mrow>
-          </md>.
+          <mdn>
+            <mrow xml:id="eq_arcsin_der">\frac{d}{dx} \arcsin x=\frac{1}{\sqrt{1-x^2}}\amp \iff \int \frac{1}{\sqrt{1-x^2}}\, dx=\arcsin x+C \amp \text{ (for all \(x\) in \((-1,1)\)) }</mrow>
+            <mrow xml:id="eq_arccos_der">\frac{d}{dx} \arccos x=-\frac{1}{\sqrt{1-x^2}}\amp \iff \int \frac{1}{\sqrt{1-x^2}}\, dx=-\arccos x+C \amp \text{ (for all \(x\) in \((-1,1)\)) }</mrow>
+            <mrow xml:id="eq_arctan_der">\frac{d}{dx} \arctan x=\frac{1}{1+x^2}\amp \iff \int \frac{1}{1+x^2}\, dx=\arctan x+C \amp \text{ (for all \(x\)) } </mrow>
+          </mdn>.
         </p>
       </statement>
+      <proof>
+        <p>
+          We prove <xref ref="eq_arcsin_der"/> and <xref ref="eq_arctan"/>; the proof of <xref ref="eq_arccos_der"/> proceeds along similar lines. 
+        </p>
+        <proof>
+          <title>Proof of <xref ref="eq_arcsin_der"/>  </title>
+          <p>
+            Let <m>f(x)=\sin x</m> restricted to the domain <m>D=[-\pi/2, \pi/2]</m>, and let <m>f^{-1}(x)=\arcsin x</m>. Using <xref ref="th_IFT"/>, we have 
+            <md>
+              <mrow>\frac{d}{dx} \arcsin x \amp = \frac{1}{f'(\arcsin x)}</mrow>
+              <mrow> \amp = \frac{1}{\cos(\arcsin x)}</mrow>
+              <mrow> \amp = \frac{1}{\sqrt{1-x^2}</mrow>
+            </md>.
+            The last step here is perhaps the most interesting, and follows from the fact that <m>\cos(\arcsin x)=\sqrt{1-x^2}</m> for any <m>x\in [-1,1]</m>. Why is this true? Set <m>\arcsin x=\theta</m>, an angle lying in <m>[-\pi/2,\pi/2]</m>. Using the fact that <m>\sin \theta=x</m>, we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length <m>\abs{x}</m>, the horizontal leg has length <m>\sqrt{1-\abs{x}^2}=\sqrt{1-x^2}</m>. Since this length is equal to the <m>x</m>-coordinate of the point <m>P</m> below, we have <m>\cos \theta=\sqrt{1-x^2}</m> and thus <m>\cos(\arcsin x)=\sqrt{1-x^2}</m>, as claimed.   
+            <image source="images/arcsin_der.png" width="75%">
+              <description>Unit circle picture for arcsin derivative proof</description>
+            </image>
+          </p>
+        </proof>
+        <proof>
+          <title>Proof of <xref ref="eq_arctan_der"/>  </title>
+          <p>
+            Let <m>f(x)=\tan x</m> restricted to the domain <m>D=(-\pi/2, \pi/2)</m>, and let <m>f^{-1}(x)=\arctan x</m>. Using <xref ref="th_IFT"/>, we have 
+            <md>
+              <mrow>\frac{d}{dx}\arctan x \amp = \frac{1}{f'(\arctan x)}</mrow>
+              <mrow> \amp = \frac{1}{\sec^2 (\arctan x)}</mrow>
+              <mrow> \amp = \frac{1}{(\tan(\arctan x))^2+1} \amp (\tan^2 x+1=\sec^2x)</mrow>
+              <mrow> \amp = \frac{1}{x^2+1} \amp (\tan(\arctan x)=x)</mrow>
+            </md>.
+          </p>
+        </proof>
+      </proof>
     </theorem>
     <example xml:id="eg_inverse_trig_derivative">
         <title>Derivatives of inverse trig functions</title>
