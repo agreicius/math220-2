@@ -45,7 +45,7 @@
       <p>
         Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, 
         <md>
-          <mrow>\arcsin x \amp = sin^{-1}x \amp \arccos x\amp =\cos^{-1} x \amp \arctan x\amp=\tan^{-1} x</mrow>    
+          <mrow>\arcsin x \amp = \sin^{-1}x \amp \arccos x\amp =\cos^{-1} x \amp \arctan x\amp=\tan^{-1} x</mrow>    
         </md>.
         We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are <em>reciprocals</em> of the corresponding trigonometric functions. They are not! 
       </p>
@@ -156,6 +156,48 @@
           </p>
       </solution>
   </example>
+  <p>
+    The inverse trigonometric functions are often used to provide a single solution to an elementary trigonometric equation that we cannot solve <q>by hand</q>: <ie/>, equations whose solutions <m>\theta</m> do not correspond to one of the <q>familiar</q> angles of the unit circle. For example, <m>\theta_0=\arcsin(1/3)</m> is a particular solution to the equation <m>\sin \theta=\frac{1}{3}</m>. But what if we are asked to find <em>all</em> solutions to such an equation? In this case we make use of the following procedure which, given a particular solution <m>\theta_0</m> to a given trigonometric equation, describes what the <em>general solution</em> is. 
+  </p>
+  <algorithm xml:id="proc_trig_eqns">
+    <title>General solution to trig equations</title>
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <title>Sine equations</title>
+            <p>
+              Fix a constant <m>a</m>. If <m>\theta=\theta_0</m> is a solution to the elementary sine equation <m>\sin \theta=a</m>, then the general solution is given by 
+              <me>
+                \theta=\theta_0+2\pi n \text{ or } \theta=(\pi-\theta_0)+2\pi n
+              </me>, 
+              where <m>n</m> is any integer.  
+            </p>
+          </li>
+          <li>
+            <title>Cosine equations</title>
+            <p>
+              Fix a constant <m>a</m>. If <m>\theta=\theta_0</m> is a particular solution to the elementary cosine equation <m>\cos \theta=a</m>, then the general solution is given by 
+              <me>
+                \theta=\theta_0+2\pi n \text{ or } \theta=-\theta_0+2\pi n
+              </me>, 
+              where <m>n</m> is any integer. 
+            </p>
+          </li>
+          <li>
+            <title>Tangent equations</title>
+            <p>
+              Fix a constant <m>a</m>. If <m>\theta=\theta_0</m> is a particular solution to the elementary tangent equation <m>\tan \theta=a</m>, then the general solution is given by 
+              <me>
+                \theta=\theta_0+\pi n
+              </me>,
+              where <m>n</m> is any integer. 
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </algorithm>
     <example xml:id="eg_inverse_trig_solve">
         <title>Solving trig equations</title>
         <statement>
@@ -178,7 +220,34 @@
         </statement>
         <solution>
             <p>
-                
+                <ol>
+                  <li>
+                    <p>
+                      After some algebra we rewrite the equation as 
+                      <me>
+                        \sin 2\theta=\frac{2}{3}
+                      </me>
+                      or 
+                      <men xml:id="eq_arcsin_u">
+                        \sin u=\frac{2}{3}
+                      </men>, 
+                      where <m>u=2\theta</m>. Since <m>u_0=\arcsin(2/3)</m> is a solution to <xref ref="eq_arsin_u"/>, according to <xref ref="proc_trig_eqns"/> the general solution is 
+                      <me>
+                        u=\arcsin(2/3)+2\pi n \text{ or } u=(\pi-\arcsin(2/3))+2\pi n
+                      </me>.
+                      Since <m>u=2\theta</m>, we conclude that the general solution to the original equation is 
+                      <me>
+                        \theta=\frac{1}{2}\arcsin(2/3)+\pi n \text{ or } \theta=\frac{1}{2}(\pi-\arcsin(2/3))+\pi n
+                      </me>.
+                      Which of these infinitely-many solutions lies in the prescribed interval <m>[0,2\pi]</m>? 
+                      
+                       
+                      
+                      Let <m>u=2</m>Since <m></m>
+                      
+                    </p>
+                  </li>
+                </ol>
             </p>
         </solution>
     </example>

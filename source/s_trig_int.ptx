@@ -2,11 +2,26 @@
 
 <section xml:id="s_trig_int" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Trigonometric integrals</title>
+    <p>
+      We now develop an integration technique for two <em>very particular</em> types of integrals: 
+      <md>
+        <mrow>\int \sin^m x\cos^n x\, dx \amp \amp \int \tan^m x\sec^n x\, dx </mrow>
+      </md>.
+      Why these particular pairings of products of functions? In a nutshell, because one of the following four choices of substitution will often come in handy: 
+      <md>
+        <mrow>u\amp =\sin x \amp u\amp =\tan x </mrow>
+        <mrow>du\amp =\cos x\, dx \amp du\amp =\sec^2 x</mrow>
+        <mrow> \amp </mrow>
+        <mrow>u\amp =\cos x \amp u\amp =\sec x </mrow>
+        <mrow>du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x</mrow>
+      </md>.
+      <xref ref="proc_int_sincos"/> and <xref ref="proc_int_tansec"/> articulate in greater detail when and where such substitutions will be useful. The basic principle is that a given substitution as above will help, when after <q>peeling off</q> part of the integrand to account for the <m>du</m>, the remaining part of the integrand can be expressed completely in terms of <m>u</m>.  
+    </p>
     <theorem xml:id="th_trig_identities">
         <title>Trigonometric identities</title>
       <statement>
         <p>
-          In the following identities <m>\theta</m> and <m>\phi</m> range over all real numbers. 
+          The following identities hold for all real numbers <m>\theta</m> and <m>\phi</m> for which the given expression is defined.
           <ol>
             <li>
                 <title>Pythagorean identities</title>
