@@ -82,9 +82,9 @@
                   \lim_{x\to a}f(x)^{g(x)}=\lim_{x\to a}e^{g(x)\ln f(x)}
                 </me>, 
                 compute the limit <m>L=\lim_{x\to a}g(x)\ln f(x)</m>, and conclude that 
-                <me>
+                <men xml:id="eq_exp_limit">
                   \lim_{x\to a}f(x)^{g(x)}=e^{\lim_{x\to a} g(x)\ln f(x)}=e^L
-                </me>.
+                </men>.
               </p>
             </li>
           </ol>
@@ -127,7 +127,64 @@
       </statement>
       <solution>
           <p>
-              
+              <ol>
+                <li>
+                  <p>
+                    <md>
+                      <mrow>\lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x} \amp = \lim_{x\to 0^+}\frac{x-\sin x}{x\sin x} \amp (\text{alg. tech.: common denom.})</mrow>
+                      <mrow> \amp =0</mrow>
+                    </md>.
+                    The last equality was shown in <xref ref="eg_lHop"/> with the help of l'H&#xf4;pital's rule. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <md>
+                      <mrow> \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\amp= \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\cdot \frac{2x-\sqrt{4x^2+13x}}{2x+\sqrt{4x^2-13x}} \amp (\text{alg. tech.: conjugate})</mrow>
+                      <mrow> \amp = \lim_{x\to \infty}\frac{4x^2-(4x^2-13x)}{2x+\sqrt{4x^2-13x}}   </mrow>
+                      <mrow> \amp = \lim_{x\to \infty}\frac{13x}{2x+\sqrt{4x^2-13x}}</mrow>
+                      <mrow> \amp = \lim_{x\to \infty}\frac{\cancel{x}}{\cancel{x}}\frac{13}{2+\sqrt{4-13/x}}
+                      </mrow>
+                      <mrow> \amp = \frac{13}{2+\sqrt{4-0}}</mrow>
+                      <mrow> \amp = \frac{13}{4}</mrow>. 
+                    </md>
+                    Note: the step where <m>x</m> is factored out of the numerator and denominator was motivated by the intuition that as <m>x\to \infty</m>, the <m>x^2</m> term in the radical dominates the <m>x</m> term. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <md>
+                      <mrow>\lim_{x\to -\infty}x^22^{x} \amp = \lim_{x\to -\infty}\frac{x^2}{2^{-x}}</mrow>
+                      <mrow> \amp = \lim_{x\to -\infty}\frac{2x}{-\ln 2 \cdot 2^{-x}} \amp (\text{l'Hop }, \infty/\infty)</mrow>
+                      <mrow> \amp = \lim_{x\to -\infty}\frac{2}{(\ln 2)^2\cdot 2^{-x}}</mrow>
+                      <mrow> \amp = \frac{2}{\infty} \amp (2^{-x}\to \infty \text{ as } x\to -\infty)</mrow>
+                      <mrow> \amp = 0</mrow>
+                    </md>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <md>
+                      <mrow>\lim_{x\to 0^+}(1+x)^{1/x} \amp = \lim_{x\to 0^+}e^{\frac{1}{x}\ln (1+x)} \amp (\text{def. of } a^b)</mrow>
+                      <mrow> \amp = e^{\lim_{x\to 0^+}\frac{\ln (1+x)}{x}} \amp <xref ref="eq_exp_limit"/> </mrow>
+                      <mrow> \amp = e^{\lim_{x\to 0^+}\frac{1/(1+x)}{1}} \amp (\text{l'Hop }, 0/0)</mrow>
+                      <mrow> \amp = e^{1}</mrow>
+                      <mrow> \amp = e</mrow>
+                    </md>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <md>
+                      <mrow>\lim_{x\to \infty}(1+x^2)^{2/x} \amp = \lim_{x\to \infty}e^{\frac{2}{x}\ln(1+x^2)} \amp (\text{def. of } a^b)</mrow>
+                      <mrow> \amp = e^{\lim_{x\to \infty}\frac{2\ln(1+x^2)}{x}} \amp <xref ref="eq_exp_limit"/></mrow>
+                      <mrow> \amp = e^{\lim_{x\to \infty}\frac{4x/(1+x^2)}{1}} \amp (\text{l'Hop }, \infty/\infty) </mrow>
+                      <mrow> \amp = e^0 \amp (4x/1+x^2\to 0 \text{ as } x\to \infty)</mrow>
+                      <mrow> \amp = 1</mrow>
+                    </md>.
+                  </p>
+                </li>
+              </ol>
           </p>
       </solution>
   </example>
