@@ -66,7 +66,33 @@
         </statement>
         <solution>
             <p>
-                
+                <ol>
+                  <li>
+                    <p>
+                      As <m>x\to 0</m> we have <m>\sin x\to 0</m> and <m>x\to 0</m>. Thus the limit expression is indetermine, of form <m>0/0</m>. 
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      As <m>x\to 0^+</m> we have <m>\sin x\to 0</m> and <m>\ln x\to -\infty</m> (using known properties of <m>\ln</m>). The form of this limit expression is thus <m>0/\infty</m>, which is <em>not</em> indeterminate: since the numerator gets arbitrarily small and the denominator gets arbitrarily large, we see the limit is equal to 0. (Note that the denominator being negative is of no consequence here; what is important is that it is large in absolute value.)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      As <m>x\to \infty</m>, we have <m>x\to \infty</m> and <m>e^{-x}\to 0</m>. The limit expression is thus of form <m>\infty/0</m>. Again this is a determinate form. We conclude that the limit is equal to <m>\infty</m>, since the numerator gets arbitrarily large (positive), and the denominator gets arbitrarily small (and positive). (Notice that here sign (positive/negative) does play a role.)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      As <m>x\to \frac{\pi}{2}^-</m> we have <m>\tan x\to \infty</m> and <m>\cos x\to 0</m> (from the positive side). As in the previous case, we conclude that the form is determinate and the limit is equal to <m>\infty</m>.  
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      As <m>x\to \infty</m> we have <m>e^x\to \infty</m> and <m>2^x+3^x\to \infty</m>. The limit expression is thus indeterminate, of form <m>\infty/\infty</m>. 
+                    </p>
+                  </li>
+                </ol>
             </p>
         </solution>
     </example>
@@ -143,7 +169,18 @@
         </statement>
         <solution>
             <p>
-                
+                <ol>
+                  <li>
+                    <p>
+                      <md>
+                        <mrow>\lim_{x\to\infty}\frac{\ln x}{x^{1/100}} \amp = \lim_{x\to\infty}\frac{(\ln x)'}{(x^{1/100})'} \amp (\text{L'Hop }, \infty/\infty)   </mrow>
+                        <mrow> \amp = \lim_{x\to\infty}\frac{1/x}{\frac{1}{100}x^{-99/100}}</mrow>
+                        <mrow> \amp = \lim_{x\to\infty}100\cdot  \frac{1}{x^{1/100}}</mrow>
+                        <mrow> \amp = 0 \amp (1/\infty)</mrow>
+                      </md>
+                    </p>
+                  </li>
+                </ol>
             </p>
         </solution>
       </example>
