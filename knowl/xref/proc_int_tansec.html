@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.19.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating <span class="process-math">\(\tan^m x\sec^n x\)</span>.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be nonnegative integers. When computing</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \tan^m x\sec^n x \, dx
+\end{equation*}
+</div>
+<div class="para">use the following strategies.</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Odd tangent power.</span></span><div class="para logical">
+<div class="para">If <span class="process-math">\(m=2k+1\)</span> is odd and <span class="process-math">\(n\)</span> is positive, write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \tan^m x\sec^n x \, dx=\int (\sec^2 x-1)^k\sec^{n-1} x\sec x\tan x \, dx
+\end{equation*}
+</div>
+<div class="para">and use the substitution <span class="process-math">\(u=\sec x, du=\sec x\tan x\, dx\text{.}\)</span>
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Even secant power.</span></span><div class="para logical">
+<div class="para">If <span class="process-math">\(n=2k\)</span> is even and positive, write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \tan^m x\sec^n x \, dx=\int (\tan^2 x+1)^{k-1}\tan^m x\sec^2 x\, dx
+\end{equation*}
+</div>
+<div class="para">and use the substitution <span class="process-math">\(u=\tan x, du=\sec^2 x\, dx\text{.}\)</span>
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Even tangent power, odd secant power.</span></span><div class="para">If <span class="process-math">\(m\)</span> is even and <span class="process-math">\(n\)</span> is odd, express everything in terms of <span class="process-math">\(\sec x\)</span> and possibly use integration by parts.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Tangent power.</span></span><div class="para">If <span class="process-math">\(n=0\text{,}\)</span> use the identity <span class="process-math">\(\tan^2 x=\sec^2 x-1\)</span> and strategies from the previous cases.</div>
+</li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="s_trig_int.html#proc_int_tansec">in-context</a></span>
+</body>
+</html>

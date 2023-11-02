@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.16.5</span><span class="period">.</span><span class="space"> </span><span class="title">Solving trig equations.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.16.6</span><span class="period">.</span><span class="space"> </span><span class="title">Solving trig equations.</span>
 </h3>
 <div class="para logical">
 <div class="para">Find all solutions to the following trigonometric equations lying within the interval <span class="process-math">\([0,2\pi]\text{.}\)</span> You may express your answer in terms of values of inverse trigonometric functions.</div>
@@ -21,6 +21,49 @@
 <li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \tan (\theta+\pi)=-10\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_inverse_trig.html#eg_inverse_trig_solve">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">After some algebra we rewrite the equation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_arcsin_u.html ./knowl/xref/proc_trig_eqns.html">
+\begin{equation*}
+\sin 2\theta=\frac{2}{3}
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_arcsin_u.html ./knowl/xref/proc_trig_eqns.html">
+\begin{equation}
+\sin u=\frac{2}{3}\text{,}\tag{1.16.11}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(u=2\theta\text{.}\)</span> Since <span class="process-math">\(u_0=\arcsin(2/3)\)</span> is a solution to <a href="" class="xref" data-knowl="./knowl/xref/eq_arcsin_u.html" title="Equation 1.16.11">(1.16.11)</a>, according to <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_eqns.html" title="Procedure 1.16.5: General solution to trig equations">Procedure 1.16.5</a> the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_arcsin_u.html ./knowl/xref/proc_trig_eqns.html">
+\begin{equation*}
+u=\arcsin(2/3)+2\pi n \text{ or } u=(\pi-\arcsin(2/3))+2\pi n\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(u=2\theta\text{,}\)</span> we conclude that the general solution to the original equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_arcsin_u.html ./knowl/xref/proc_trig_eqns.html">
+\begin{equation*}
+\theta=\frac{1}{2}\arcsin(2/3)+\pi n \text{ or } \theta=\frac{1}{2}(\pi-\arcsin(2/3))+\pi n\text{.}
+\end{equation*}
+</div>
+<div class="para">Which of these infinitely-many solutions lies in the prescribed interval <span class="process-math">\([0,2\pi]\text{?}\)</span> Since <span class="process-math">\(\arcsin(2/3)\in [0,\pi/2]\text{,}\)</span> we have  <span class="process-math">\(\frac{1}{2}\arcsin(2/3)\in [0,\pi/4]\)</span> and <span class="process-math">\(\frac{1}{2}(\pi-\arcsin(2/3)\in [\pi/4, \pi/2]\text{.}\)</span> It follows that the solutions lying in <span class="process-math">\([0,2\pi]\)</span> are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_arcsin_u.html ./knowl/xref/proc_trig_eqns.html">
+\begin{equation*}
+\theta=\frac{1}{2}\arcsin(2/3), \frac{1}{2}\arcsin(2/3)+\pi, \frac{1}{2}(\pi-\arcsin(2/3)), \frac{1}{2}(\pi-\arcsin(2/3))+\pi\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Since <span class="process-math">\(\theta_0=\arctan(-10)-\pi\)</span> is one solution to the given equation, the general solution is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta=\arctan(-10)-\pi +\pi n= \arctan(-10)+(n-1)\pi \text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(n\)</span> is any integer. Which of these lie in the interval <span class="process-math">\([0,2\pi]\text{?}\)</span> Since <span class="process-math">\(\arctan(-10)\in (-\pi/2, 0]\text{,}\)</span> we have <span class="process-math">\(\arctan(-10)+\pi\in (\pi/2, \pi]\)</span> and <span class="process-math">\(\arctan(-10)+2\pi \in (3\pi/2, 2\pi]\text{.}\)</span> Thus the solutions <span class="process-math">\(\theta\)</span> lying in <span class="process-math">\([0,2\pi]\)</span> are <span class="process-math">\(\theta=\arctan(-10)+\pi\)</span> and <span class="process-math">\(\theta=\arctan(-10)+2\pi\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></div></details></div></article><span class="incontext"><a class="internal" href="s_inverse_trig.html#eg_inverse_trig_solve">in-context</a></span>
 </body>
 </html>

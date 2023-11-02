@@ -1258,7 +1258,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.16",
   "title": "Inverse trigonometric functions",
-  "body": " Inverse trigonometric functions   Inverse trigonometric functions   The following are examples of what are called inverse trigonometric functions .   On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arcsine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arccosine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arctangent function , denoted .        Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, . We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are reciprocals of the corresponding trigonometric functions. They are not!    Properties of inverse trigonometric functions     The function is an increasing function with domain and range . It satisfies the following properties: .    The function is a decreasing function with domain and range . It satisfies the following properties: .    The function is an increasing function with domain and range . It satisfies the following properties:        Computing with inverse trig functions   Compute the following values of trigonometric functions by hand.                    Hint . The answer is not .          Common mistake: . Why? By definition, the outputs of lie in the interval . Instead, using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . Since is the unique angle satifying these two conditions, we conclude that that .    Recall that for any . (You can convince yourself of this either by drawing a unit circle picture, or by using the difference identity for .) It follows that .        Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                     Derivatives of inverse trig functions   The following derivative\/antiderivative formulas hold: .    We prove and ; the proof of proceeds along similar lines.   Proof of   Let restricted to the domain , and let . Using , we have . The last step here is perhaps the most interesting, and follows from the fact that for any . Why is this true? Set , an angle lying in . Using the fact that , we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length , the horizontal leg has length . Since this length is equal to the -coordinate of the point below, we have and thus , as claimed.  Unit circle picture for arcsin derivative proof      Proof of   Let restricted to the domain , and let . Using , we have .      Derivatives of inverse trig functions   Find the equation of the tangent line to at .         Integrating with inverse trig functions   Compute the following integrals.                    "
+  "body": " Inverse trigonometric functions   Inverse trigonometric functions   The following are examples of what are called inverse trigonometric functions .   On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arcsine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arccosine function , denoted .    On the restricted domain the function is one-to-one, with range . The inverse function of restricted to this domain is called the arctangent function , denoted .        Occasionally an alternative notation is used to denote inverse trigonometric functions: namely, . We will avoid this notation as it misleadingly suggests that the inverse trigonometric functions are reciprocals of the corresponding trigonometric functions. They are not!    Properties of inverse trigonometric functions     The function is an increasing function with domain and range . It satisfies the following properties: .    The function is a decreasing function with domain and range . It satisfies the following properties: .    The function is an increasing function with domain and range . It satisfies the following properties:        Computing with inverse trig functions   Compute the following values of trigonometric functions by hand.                    Hint . The answer is not .          Common mistake: . Why? By definition, the outputs of lie in the interval . Instead, using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . Since is the unique angle satifying these two conditions, we conclude that that .    Recall that for any . (You can convince yourself of this either by drawing a unit circle picture, or by using the difference identity for .) It follows that .       The inverse trigonometric functions are often used to provide a single solution to an elementary trigonometric equation that we cannot solve by hand : , equations whose solutions do not correspond to one of the familiar angles of the unit circle. For example, is a particular solution to the equation . But what if we are asked to find all solutions to such an equation? In this case we make use of the following procedure which, given a particular solution to a given trigonometric equation, describes what the general solution is.   General solution to trig equations      Sine equations  Fix a constant . If is a solution to the elementary sine equation , then the general solution is given by , where is any integer.    Cosine equations  Fix a constant . If is a particular solution to the elementary cosine equation , then the general solution is given by , where is any integer.    Tangent equations  Fix a constant . If is a particular solution to the elementary tangent equation , then the general solution is given by , where is any integer.        Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                   After some algebra we rewrite the equation as or , where . Since is a solution to , according to the general solution is . Since , we conclude that the general solution to the original equation is . Which of these infinitely-many solutions lies in the prescribed interval ? Since , we have and . It follows that the solutions lying in are .    Since is one solution to the given equation, the general solution is given by , where is any integer. Which of these lie in the interval ? Since , we have and . Thus the solutions lying in are and .        Derivatives of inverse trig functions   The following derivative\/antiderivative formulas hold: .    We prove and ; the proof of proceeds along similar lines.   Proof of   Let restricted to the domain , and let . Using , we have . The last step here is perhaps the most interesting, and follows from the fact that for any . Why is this true? Set , an angle lying in . Using the fact that , we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length , the horizontal leg has length . Since this length is equal to the -coordinate of the point below, we have and thus , as claimed.  Unit circle picture for arcsin derivative proof      Proof of   Let restricted to the domain , and let . Using , we have .      Derivatives of inverse trig functions   Find the equation of the tangent line to at .    The tangent line passes through the point and has slope . Using point-slope form, we see that the line has equation .     Limit computation   Compute .    Since , we have .     Inverse trig functions as antiderivatives   Compute .    We have .     Inverse trig functions as antiderivatives   Compute .    We have .    "
 },
 {
   "id": "d_inverse_trig",
@@ -1297,20 +1297,29 @@ var ptx_lunr_docs = [
   "body": " Computing with inverse trig functions   Compute the following values of trigonometric functions by hand.                    Hint . The answer is not .          Common mistake: . Why? By definition, the outputs of lie in the interval . Instead, using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . The unique satisfying these two conditions is . We conclude that .    Using , we have if and only if and . Since is the unique angle satifying these two conditions, we conclude that that .    Recall that for any . (You can convince yourself of this either by drawing a unit circle picture, or by using the difference identity for .) It follows that .      "
 },
 {
+  "id": "proc_trig_eqns",
+  "level": "2",
+  "url": "s_inverse_trig.html#proc_trig_eqns",
+  "type": "Procedure",
+  "number": "1.16.5",
+  "title": "General solution to trig equations.",
+  "body": " General solution to trig equations      Sine equations  Fix a constant . If is a solution to the elementary sine equation , then the general solution is given by , where is any integer.    Cosine equations  Fix a constant . If is a particular solution to the elementary cosine equation , then the general solution is given by , where is any integer.    Tangent equations  Fix a constant . If is a particular solution to the elementary tangent equation , then the general solution is given by , where is any integer.      "
+},
+{
   "id": "eg_inverse_trig_solve",
   "level": "2",
   "url": "s_inverse_trig.html#eg_inverse_trig_solve",
   "type": "Example",
-  "number": "1.16.5",
+  "number": "1.16.6",
   "title": "Solving trig equations.",
-  "body": " Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                   "
+  "body": " Solving trig equations   Find all solutions to the following trigonometric equations lying within the interval . You may express your answer in terms of values of inverse trigonometric functions.                   After some algebra we rewrite the equation as or , where . Since is a solution to , according to the general solution is . Since , we conclude that the general solution to the original equation is . Which of these infinitely-many solutions lies in the prescribed interval ? Since , we have and . It follows that the solutions lying in are .    Since is one solution to the given equation, the general solution is given by , where is any integer. Which of these lie in the interval ? Since , we have and . Thus the solutions lying in are and .      "
 },
 {
   "id": "th_inverse_trig_derivative",
   "level": "2",
   "url": "s_inverse_trig.html#th_inverse_trig_derivative",
   "type": "Theorem",
-  "number": "1.16.6",
+  "number": "1.16.7",
   "title": "Derivatives of inverse trig functions.",
   "body": " Derivatives of inverse trig functions   The following derivative\/antiderivative formulas hold: .    We prove and ; the proof of proceeds along similar lines.   Proof of   Let restricted to the domain , and let . Using , we have . The last step here is perhaps the most interesting, and follows from the fact that for any . Why is this true? Set , an angle lying in . Using the fact that , we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length , the horizontal leg has length . Since this length is equal to the -coordinate of the point below, we have and thus , as claimed.  Unit circle picture for arcsin derivative proof      Proof of   Let restricted to the domain , and let . Using , we have .    "
 },
@@ -1319,18 +1328,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_inverse_trig.html#eg_inverse_trig_derivative",
   "type": "Example",
-  "number": "1.16.7",
+  "number": "1.16.8",
   "title": "Derivatives of inverse trig functions.",
-  "body": " Derivatives of inverse trig functions   Find the equation of the tangent line to at .       "
+  "body": " Derivatives of inverse trig functions   Find the equation of the tangent line to at .    The tangent line passes through the point and has slope . Using point-slope form, we see that the line has equation .   "
+},
+{
+  "id": "example-48",
+  "level": "2",
+  "url": "s_inverse_trig.html#example-48",
+  "type": "Example",
+  "number": "1.16.9",
+  "title": "Limit computation.",
+  "body": " Limit computation   Compute .    Since , we have .   "
 },
 {
   "id": "eg_inverse_trig_integral",
   "level": "2",
   "url": "s_inverse_trig.html#eg_inverse_trig_integral",
   "type": "Example",
-  "number": "1.16.8",
-  "title": "Integrating with inverse trig functions.",
-  "body": " Integrating with inverse trig functions   Compute the following integrals.                   "
+  "number": "1.16.10",
+  "title": "Inverse trig functions as antiderivatives.",
+  "body": " Inverse trig functions as antiderivatives   Compute .    We have .   "
+},
+{
+  "id": "eg_inv_trig_int_2",
+  "level": "2",
+  "url": "s_inverse_trig.html#eg_inv_trig_int_2",
+  "type": "Example",
+  "number": "1.16.11",
+  "title": "Inverse trig functions as antiderivatives.",
+  "body": " Inverse trig functions as antiderivatives   Compute .    We have .   "
 },
 {
   "id": "section-17",
@@ -1492,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.19",
   "title": "Trigonometric integrals",
-  "body": " Trigonometric integrals   Trigonometric identities   In the following identities and range over all real numbers.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.        Odd sine power   Compute .         Even powers   Compute .         Even secant power   Compute .         Odd tangent power   Compute .         Even tangent power, odd secant power   Compute .         Tangent power   Compute .        "
+  "body": " Trigonometric integrals  We now develop an integration technique for two very particular types of integrals: . Why these particular pairings of products of functions? In a nutshell, because one of the following four choices of substitution will often come in handy: . and articulate in greater detail when and where such substitutions will be useful. The basic principle is that a given substitution as above will help, when after peeling off part of the integrand to account for the , the remaining part of the integrand can be expressed completely in terms of .   Trigonometric identities   The following identities hold for all real numbers and for which the given expression is defined.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.        Odd sine power   Compute .         Even powers   Compute .         Even secant power   Compute .         Odd tangent power   Compute .         Even tangent power, odd secant power   Compute .         Tangent power   Compute .        "
 },
 {
   "id": "th_trig_identities",
@@ -1501,7 +1528,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.19.1",
   "title": "Trigonometric identities.",
-  "body": " Trigonometric identities   In the following identities and range over all real numbers.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .      "
+  "body": " Trigonometric identities   The following identities hold for all real numbers and for which the given expression is defined.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .      "
 },
 {
   "id": "proc_int_sincos",
