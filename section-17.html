@@ -284,24 +284,68 @@ window.MathJax = {
 </h3>
 <div class="para" id="p-512">Compute <span class="process-math">\(\displaystyle \int \frac{1}{x^2-6x+18}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-49" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-513"></div></div></details></div></article><article class="example example-like" id="eg_poly_div"><h3 class="heading">
+<div class="solutions"><details id="solution-49" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-513">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-99">
+\begin{align*}
+\int \frac{1}{x^2-6x+18}\, dx \amp = \int \frac{1}{(x-3)^2+9}\, dx \\
+\amp = \frac{1}{9}\int\frac{1}{((x-3)/3)^2+1}\\
+\amp =\frac{1}{3}\int \frac{1}{u^2+1} \amp (u=(x-3)/3, du=\frac{1}{3}dx)\\
+\amp = \arctan((x-3)/3)+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_poly_div"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17.3</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial division.</span>
 </h3>
 <div class="para" id="p-514">Compute <span class="process-math">\(\displaystyle \int \frac{4x^3+3x+1}{4x^2+1}\, dx\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="hint-1" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-515">Use polynomial division with remainder.</div></div></details><details id="solution-50" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-516"></div></div></details>
+<details id="hint-1" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-515">Use polynomial division with remainder.</div></div></details><details id="solution-50" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-516">
+<div class="para">Using polynomial division with remainder, we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{4x^3+3x+1}{4x^2+1}=x+\frac{2x+1}{4x^2+1}\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" id="md-100">
+\begin{align*}
+\int \frac{4x^3+3x+1}{4x^2+1}\, dx  \amp = \int x+\frac{2x+1}{4x^2+1}\, dx \\
+\amp = \int x+\frac{2x}{4x^2+1}+\frac{1}{4x^2+1}\, dx\\
+\amp = \frac{1}{2}x^2+\frac{1}{4}\ln\abs{4x^2+1}+\frac{1}{2}\arctan(2x)+C\text{.}
+\end{align*}
+</div>
+</div></div></details>
 </div></article><article class="example example-like" id="eg_exp_subst"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17.4</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential substitution.</span>
 </h3>
 <div class="para" id="p-517">Compute <span class="process-math">\(\displaystyle\int \frac{1}{e^x+e^{-x}}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-51" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-518"></div></div></details></div></article><article class="example example-like" id="eg_exp_subst_2"><h3 class="heading">
+<div class="solutions"><details id="solution-51" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-518">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-101">
+\begin{align*}
+\int \frac{1}{e^x+e^{-x}}\, dx \amp = \int \frac{1}{u+1/u}\cdot \frac{1}{u}\, du \amp (u=e^x, du=e^x dx\implies dx=\frac{1}{u}du) \\
+\amp = \int \frac{1}{u^2+1}\, du\\
+\amp = \arctan(e^x)+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_exp_subst_2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17.5</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential substitution (again).</span>
 </h3>
-<div class="para" id="p-519">Compute <span class="process-math">\(\displaystyle \frac{3}{\sqrt{e^{2x}-2}}\, dx\text{.}\)</span>
+<div class="para" id="p-519">Compute <span class="process-math">\(\displaystyle \int \frac{3}{\sqrt{e^{2x}-2}}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-52" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-520"></div></div></details></div></article><article class="example example-like" id="eg_trig_ident"><h3 class="heading">
+<div class="solutions"><details id="solution-52" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-520">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-102">
+\begin{align*}
+\int \frac{3}{\sqrt{e^{2x}-2}}\, dx \amp = \int \frac{3}{e^x\sqrt{1-2e^{-2x}}} \amp
+(e^{2x}=(e^x)^2, 1/e^{2x}=e^{-2x})\\
+\amp = -\frac{3}{\sqrt{2}}\int \frac{1}{\sqrt{1-u^2}}\, du \amp (u=\sqrt{2}e^{-x}, du=-\sqrt{2}e^{-x}dx\implies dx=-\frac{1}{\sqrt{2}u}du)\\
+\amp  = -\frac{3}{\sqrt{2}}\arcsin(\sqrt{2}e^{-x})+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_trig_ident"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17.6</span><span class="period">.</span><span class="space"> </span><span class="title">Trig identity.</span>
 </h3>
 <div class="para" id="p-521">Compute <span class="process-math">\(\displaystyle \int_0^{\pi/3}\sin^2(2x)\cos(3x) \, dx\text{.}\)</span>
@@ -309,7 +353,7 @@ window.MathJax = {
 <div class="solutions">
 <details id="hint-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="p-522">
 <div class="para">Make use of some of the following product-to-sum identities.</div>
-<div class="displaymath process-math" id="md-99">
+<div class="displaymath process-math" id="md-103">
 \begin{align*}
 \cos\theta\cos\phi\amp =\frac{\cos(\theta-\phi)+\cos(\theta+\phi)}{2}\\
 \sin\theta\sin\phi\amp =\frac{\cos(\theta-\phi)-\cos(\theta+\phi)}{2}\\
@@ -318,7 +362,19 @@ window.MathJax = {
 \sin^2\theta\amp =\frac{1-\cos2\theta}{2}
 \end{align*}
 </div>
-</div></div></details><details id="solution-53" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-523"></div></div></details>
+</div></div></details><details id="solution-53" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-523">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-104">
+\begin{align*}
+\int_0^{\pi/3}\sin^2(2x)\cos(3x) \, dx \amp = \int_0^{\pi/3}\frac{1}{2}(1-\cos(4x))\cos(3x) \, dx \\
+\amp = \frac{1}{2}\int_0^{\pi/3}\cos(3x)-\cos(4x)\cos(3x)\, dx\\
+\amp =\frac{1}{6}\sin(3x)\vert_0^{\pi/3}-\frac{1}{2}\int\frac{1}{2}(\cos x+\cos(7x))\, dx \\
+\amp = 0-\left( \frac{1}{4}\sin x+\frac{1}{28}\sin 7x\right)\Bigr\vert_0^{\pi/3}\\
+\amp = -\left( \frac{\sqrt{3}}{8}+\frac{\sqrt{3}}{56}\right)\\
+\amp = -\frac{\sqrt{3}}{7}\text{.}
+\end{align*}
+</div>
+</div></div></details>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_inverse_trig.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-18.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

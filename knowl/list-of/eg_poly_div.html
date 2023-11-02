@@ -17,7 +17,22 @@
 <div class="para">Compute <span class="process-math">\(\displaystyle \int \frac{4x^3+3x+1}{4x^2+1}\, dx\text{.}\)</span>
 </div>
 <div class="solutions">
-<details class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para">Use polynomial division with remainder.</div></div></details><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details>
+<details class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para">Use polynomial division with remainder.</div></div></details><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Using polynomial division with remainder, we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{4x^3+3x+1}{4x^2+1}=x+\frac{2x+1}{4x^2+1}\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int \frac{4x^3+3x+1}{4x^2+1}\, dx  \amp = \int x+\frac{2x+1}{4x^2+1}\, dx \\
+\amp = \int x+\frac{2x}{4x^2+1}+\frac{1}{4x^2+1}\, dx\\
+\amp = \frac{1}{2}x^2+\frac{1}{4}\ln\abs{4x^2+1}+\frac{1}{2}\arctan(2x)+C\text{.}
+\end{align*}
+</div>
+</div></div></details>
 </div></article><span class="incontext"><a class="internal" href="section-17.html#eg_poly_div">in-context</a></span>
 </body>
 </html>

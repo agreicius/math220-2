@@ -1366,7 +1366,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.17",
   "title": "Integration strategies",
-  "body": " Integration strategies   Having introduced a wealth of new derivative\/integral formulas and rules, we now take a moment to give an overview of our integration techniques, and apply them in combination with some algebraic methods to solving integrals in the wild.    Idefinite integral compendium   We collect here our various derivative\/antiderivative formulas. .    Each of the integral computations below will combine various integral formulas, substitution, and an algebraic method.   Vertex form   Compute .         Polynomial division   Compute .    Use polynomial division with remainder.         Exponential substitution   Compute .         Exponential substitution (again)   Compute .         Trig identity   Compute .    Make use of some of the following product-to-sum identities.         "
+  "body": " Integration strategies   Having introduced a wealth of new derivative\/integral formulas and rules, we now take a moment to give an overview of our integration techniques, and apply them in combination with some algebraic methods to solving integrals in the wild.    Idefinite integral compendium   We collect here our various derivative\/antiderivative formulas. .    Each of the integral computations below will combine various integral formulas, substitution, and an algebraic method.   Vertex form   Compute .    We have .     Polynomial division   Compute .    Use polynomial division with remainder.    Using polynomial division with remainder, we find that , and thus .     Exponential substitution   Compute .    We have .     Exponential substitution (again)   Compute .    We have .     Trig identity   Compute .    Make use of some of the following product-to-sum identities.     We have .    "
 },
 {
   "id": "th_integral_formulas",
@@ -1384,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17.2",
   "title": "Vertex form.",
-  "body": " Vertex form   Compute .       "
+  "body": " Vertex form   Compute .    We have .   "
 },
 {
   "id": "eg_poly_div",
@@ -1393,7 +1393,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17.3",
   "title": "Polynomial division.",
-  "body": " Polynomial division   Compute .    Use polynomial division with remainder.       "
+  "body": " Polynomial division   Compute .    Use polynomial division with remainder.    Using polynomial division with remainder, we find that , and thus .   "
 },
 {
   "id": "eg_exp_subst",
@@ -1402,7 +1402,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17.4",
   "title": "Exponential substitution.",
-  "body": " Exponential substitution   Compute .       "
+  "body": " Exponential substitution   Compute .    We have .   "
 },
 {
   "id": "eg_exp_subst_2",
@@ -1411,7 +1411,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17.5",
   "title": "Exponential substitution (again).",
-  "body": " Exponential substitution (again)   Compute .       "
+  "body": " Exponential substitution (again)   Compute .    We have .   "
 },
 {
   "id": "eg_trig_ident",
@@ -1420,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17.6",
   "title": "Trig identity.",
-  "body": " Trig identity   Compute .    Make use of some of the following product-to-sum identities.        "
+  "body": " Trig identity   Compute .    Make use of some of the following product-to-sum identities.     We have .   "
 },
 {
   "id": "section-18",
