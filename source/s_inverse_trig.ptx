@@ -231,7 +231,7 @@
                       <men xml:id="eq_arcsin_u">
                         \sin u=\frac{2}{3}
                       </men>, 
-                      where <m>u=2\theta</m>. Since <m>u_0=\arcsin(2/3)</m> is a solution to <xref ref="eq_arsin_u"/>, according to <xref ref="proc_trig_eqns"/> the general solution is 
+                      where <m>u=2\theta</m>. Since <m>u_0=\arcsin(2/3)</m> is a solution to <xref ref="eq_arcsin_u"/>, according to <xref ref="proc_trig_eqns"/> the general solution is 
                       <me>
                         u=\arcsin(2/3)+2\pi n \text{ or } u=(\pi-\arcsin(2/3))+2\pi n
                       </me>.
@@ -239,12 +239,19 @@
                       <me>
                         \theta=\frac{1}{2}\arcsin(2/3)+\pi n \text{ or } \theta=\frac{1}{2}(\pi-\arcsin(2/3))+\pi n
                       </me>.
-                      Which of these infinitely-many solutions lies in the prescribed interval <m>[0,2\pi]</m>? 
-                      
-                       
-                      
-                      Let <m>u=2</m>Since <m></m>
-                      
+                      Which of these infinitely-many solutions lies in the prescribed interval <m>[0,2\pi]</m>? Since <m>\arcsin(2/3)\in [0,\pi/2]</m>, we have  <m>\frac{1}{2}\arcsin(2/3)\in [0,\pi/4]</m> and <m>\frac{1}{2}(\pi-\arcsin(2/3)\in [\pi/4, \pi/2]</m>. It follows that the solutions lying in <m>[0,2\pi]</m> are 
+                      <me>
+                        \theta=\frac{1}{2}\arcsin(2/3), \frac{1}{2}\arcsin(2/3)+\pi, \frac{1}{2}(\pi-\arcsin(2/3)), \frac{1}{2}(\pi-\arcsin(2/3))+\pi
+                      </me>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Since <m>\theta_0=\arctan(-10)-\pi</m> is one solution to the given equation, the general solution is given by 
+                      <me>
+                        \theta=\arctan(-10)-\pi +\pi n= \arctan(-10)+(n-1)\pi 
+                      </me>,
+                      where <m>n</m> is any integer. Which of these lie in the interval <m>[0,2\pi]</m>? Since <m>\arctan(-10)\in (-\pi/2, 0]</m>, we have <m>\arctan(-10)+\pi\in (\pi/2, \pi]</m> and <m>\arctan(-10)+2\pi \in (3\pi/2, 2\pi]</m>. Thus the solutions <m>\theta</m> lying in <m>[0,2\pi]</m> are <m>\theta=\arctan(-10)+\pi</m> and <m>\theta=\arctan(-10)+2\pi</m>. 
                     </p>
                   </li>
                 </ol>
@@ -306,34 +313,84 @@
         </statement>
         <solution>
             <p>
+               The tangent line passes through the point 
+               <me>
+                P=(1/2, \arccos(1/2))=(1/2, \pi/3)
+               </me>
+               and has slope 
+               <me>
+                m=f'(1/2)=-\frac{1}{\sqrt{1-(1/2)^2}}=-\frac{2}{\sqrt{3}}
+               </me>.
+               Using point-slope form, we see that the line has equation 
+               <me>
+                y-\frac{\pi}{3}=\frac{-2}{\sqrt{3}}\left(x-\frac{1}{2}\right)
+               </me>.
                 
             </p>
         </solution>
     </example>
-
+    <example>
+      <title>Limit computation</title>
+      <statement>
+        <p>
+          Compute <m>\displaystyle\lim_{x\rightarrow 1^{-}}\frac{\arccos(x^2)}{\sqrt{1-x}}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>\arccos(1)=0</m>, we have 
+          <md>
+            <mrow> \lim_{x\rightarrow 1^{-}}\frac{\arccos(x^2)}{\sqrt{1-x}}\amp = 
+              \lim_{x\rightarrow 1^{-}}\frac{(\arccos(x^2))'}{(\sqrt{1-x})'} \amp (\text{L'Hop }, 0/0) </mrow>
+              <mrow> \amp = \lim_{x\rightarrow 1^{-}}\frac{-2x/\sqrt{1-x^4}}{-1/2\sqrt{1-x}}</mrow>
+              <mrow> \amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{1-x^4}}</mrow>
+              <mrow> \amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{(1-x^2)(1+x^2)}}</mrow>
+              <mrow> \amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{(1-x)(1+x)(1+x^2)}}</mrow>
+              <mrow> \amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1}{(1+x)(1+x^2)}}</mrow>
+              <mrow> \amp = 4\cdot \frac{1}{2}</mrow>
+              <mrow> \amp = 2</mrow>
+          </md>.
+        </p>
+      </solution>
+    </example>
     <example xml:id="eg_inverse_trig_integral">
-        <title>Integrating with inverse trig functions</title>
+        <title>Inverse trig functions as antiderivatives</title>
         <statement>
             <p>
-                Compute the following integrals. 
-                <ol>
-                    <li>
-                        <p>
-                            <m>\displaystyle\lim_{x\rightarrow 1^{-}}\frac{\arccos(x^2)}{\sqrt{1-x}}</m>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <m>\displaystyle\int \frac{x+1}{\sqrt{1-(x+2)^2}}\, dx</m>
-                        </p>
-                    </li>
-                </ol>
+                Compute <m>\displaystyle\int \frac{x+1}{\sqrt{1-(x+2)^2}}\, dx</m>.
             </p>
         </statement>
         <solution>
             <p>
-                
+               We have 
+               <md>
+                <mrow> \int \frac{x+1}{\sqrt{1-(x+2)^2}}\, dx \amp = \int \frac{u-1}{\sqrt{1-u^2}}\, du \amp (u=x+2, du=dx</mrow>
+                <mrow> \amp =\int \frac{u}{\sqrt{1-u^2}}\, du-\int \frac{1}{\sqrt{1-u^2}}\, du </mrow>
+                <mrow> \amp = -\sqrt{1-u^2}-\arcsin(u)+C</mrow>
+                <mrow> \amp = -\sqrt{1-(x+2)^2}-\arcsin(x+2)+C</mrow>
+               </md>.
             </p>
         </solution>
+    </example>
+    <example xml:id="eg_inv_trig_int_2">
+      <title>Inverse trig functions as antiderivatives</title>
+      
+      
+      <statement>
+        <p>
+          Compute  <m>\displaystyle \int \frac{1}{\sqrt{3-4x^2}}\, dx</m>. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We have 
+          <md>
+            <mrow> \int \frac{1}{\sqrt{3-4x^2}}\, dx \amp = \int \frac{1}{\sqrt{3}\sqrt{1-\frac{4}{3}x^2}}\, dx </mrow>
+            <mrow> \amp = \int \frac{1}{\sqrt{3}\sqrt{1-(\frac{2}{\sqrt{3}}x)^2}}\, dx</mrow>
+            <mrow> \amp = \int \frac{1}{2\sqrt{1-u^2}} \amp (u=\frac{2}{\sqrt{3}}x, du=\frac{2}{\sqrt{3}}dx)</mrow>
+            <mrow> \amp = \frac{1}{2}\arcsin\left( \frac{2}{\sqrt{3}}x\right)+C</mrow>
+          </md>.
+        </p>
+      </solution>
     </example>
 </section>
