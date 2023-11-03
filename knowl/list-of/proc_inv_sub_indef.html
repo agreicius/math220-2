@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.20.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse substitution: indefinite integral.</span>
+</h3>
+<div class="para logical">
+<div class="para">To compute <span class="process-math">\(\displaystyle\int f(x)\, dx\)</span> using inverse substitution, proceed as follows.</div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">Choose a one-to-one, differentiable substitution function <span class="process-math">\(g\)</span> with differentiable inverse and assemble the two equations</div>
+<div class="displaymath process-math">
+\begin{align*}
+x\amp =g(t)\\
+dx\amp =g'(t)\, dt
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f(g(t))g'(t)\, dt=F(t)+C\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f(x)\, dx=F(g^{-1}(x))+C\text{.}
+\end{equation*}
+</div>
+<div class="para">When an explicit formula for <span class="process-math">\(g^{-1}(x)\)</span> is not available, we attempt to compute <span class="process-math">\(F(g^{-1}(x))\)</span> by rewriting <span class="process-math">\(F(t)\)</span> in terms of <span class="process-math">\(x\)</span> using the equation <span class="process-math">\(x=g(t)\text{.}\)</span>
+</div>
+</div></li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#proc_inv_sub_indef">in-context</a></span>
+</body>
+</html>

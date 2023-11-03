@@ -1603,6 +1603,105 @@ var ptx_lunr_docs = [
   "body": " Tangent power   Compute .       "
 },
 {
+  "id": "s_trig_subst",
+  "level": "1",
+  "url": "s_trig_subst.html",
+  "type": "Section",
+  "number": "1.20",
+  "title": "Trigonometric substitution",
+  "body": " Trigonometric substitution  Trigonometric substitution is an example of a more general integral technique that we call inverse substitution . In turn, inverse substitution is really just an application of the substitution where our substitution function is invertible .   Inverse substitution: indefinite integral   To compute using inverse substitution, proceed as follows.   Choose a one-to-one, differentiable substitution function with differentiable inverse and assemble the two equations     Compute .    Conclude that . When an explicit formula for is not available, we attempt to compute by rewriting in terms of using the equation .        Trigonometric substitution   The table below indicates potentially helpful inverse substitutions for functions of various types. .     Reference triangles   When finishing an integral computation using an trigonometric substitution, the following types of reference triangles are useful for converting your expression back in terms of .  For the sake of space, we only provide examples of reference triangles where the angle lies in . In practice, you should provide a reference triangle diagram that reflects the interval is restricted to, and take care with the sign of the various trigonometric values.    Consider the substitution , where is positive. A reference diagram like the following helps us see that .   Reference triangle for   Reference triange for sine substitution       Consider the substitution , where is positive. A reference diagram like the following allows us to deduce that .   Reference triangle for   Reference triangle for tangent substitution       Consider the substitution , where is positive. A reference diagram like the following allows us to deduce that    Reference triangle for   Reference triangle for secant substitution          Inverse substitution: definite integral   To compute using inverse substitution, proceed as follows.   Choose a one-to-one, differentiable substitution function with differentiable inverse and write down the two inverse substitution equations     Conclude that .        Sine substitution    Find an antiderivative of .     Using we try the inverse substitution with restriction . We compute . Here we have used once again that . Recall that this can be derived using the following reference triangle.  Reference triangle for        Area of circle   Derive the area formula for a circle of radius .         Tangent substitution   Compute .         Secant substitution   Let be a fixed positive number. Compute .         Secant substitution: definite   Compute .         Secant substitution: indefinite   Find an antiderivative of the function on the domain . The only inverse trigonometric functions allowed to appear in your formula for are and .    Treat the cases and separately and use the absolute value function to combine your two results into a single formula.        "
+},
+{
+  "id": "proc_inv_sub_indef",
+  "level": "2",
+  "url": "s_trig_subst.html#proc_inv_sub_indef",
+  "type": "Procedure",
+  "number": "1.20.1",
+  "title": "Inverse substitution: indefinite integral.",
+  "body": " Inverse substitution: indefinite integral   To compute using inverse substitution, proceed as follows.   Choose a one-to-one, differentiable substitution function with differentiable inverse and assemble the two equations     Compute .    Conclude that . When an explicit formula for is not available, we attempt to compute by rewriting in terms of using the equation .      "
+},
+{
+  "id": "proc_trig_sub",
+  "level": "2",
+  "url": "s_trig_subst.html#proc_trig_sub",
+  "type": "Procedure",
+  "number": "1.20.2",
+  "title": "Trigonometric substitution.",
+  "body": " Trigonometric substitution   The table below indicates potentially helpful inverse substitutions for functions of various types. .   "
+},
+{
+  "id": "proc_ref_triangles",
+  "level": "2",
+  "url": "s_trig_subst.html#proc_ref_triangles",
+  "type": "Procedure",
+  "number": "1.20.3",
+  "title": "Reference triangles.",
+  "body": " Reference triangles   When finishing an integral computation using an trigonometric substitution, the following types of reference triangles are useful for converting your expression back in terms of .  For the sake of space, we only provide examples of reference triangles where the angle lies in . In practice, you should provide a reference triangle diagram that reflects the interval is restricted to, and take care with the sign of the various trigonometric values.    Consider the substitution , where is positive. A reference diagram like the following helps us see that .   Reference triangle for   Reference triange for sine substitution       Consider the substitution , where is positive. A reference diagram like the following allows us to deduce that .   Reference triangle for   Reference triangle for tangent substitution       Consider the substitution , where is positive. A reference diagram like the following allows us to deduce that    Reference triangle for   Reference triangle for secant substitution        "
+},
+{
+  "id": "proc_inv_sub_def",
+  "level": "2",
+  "url": "s_trig_subst.html#proc_inv_sub_def",
+  "type": "Procedure",
+  "number": "1.20.7",
+  "title": "Inverse substitution: definite integral.",
+  "body": " Inverse substitution: definite integral   To compute using inverse substitution, proceed as follows.   Choose a one-to-one, differentiable substitution function with differentiable inverse and write down the two inverse substitution equations     Conclude that .      "
+},
+{
+  "id": "eg_sin_sub",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_sin_sub",
+  "type": "Example",
+  "number": "1.20.8",
+  "title": "Sine substitution.",
+  "body": " Sine substitution    Find an antiderivative of .     Using we try the inverse substitution with restriction . We compute . Here we have used once again that . Recall that this can be derived using the following reference triangle.  Reference triangle for      "
+},
+{
+  "id": "eg_area_circle",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_area_circle",
+  "type": "Example",
+  "number": "1.20.9",
+  "title": "Area of circle.",
+  "body": " Area of circle   Derive the area formula for a circle of radius .       "
+},
+{
+  "id": "eg_tan_sub",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_tan_sub",
+  "type": "Example",
+  "number": "1.20.10",
+  "title": "Tangent substitution.",
+  "body": " Tangent substitution   Compute .       "
+},
+{
+  "id": "eg_sec_sub_easy",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_sec_sub_easy",
+  "type": "Example",
+  "number": "1.20.11",
+  "title": "Secant substitution.",
+  "body": " Secant substitution   Let be a fixed positive number. Compute .       "
+},
+{
+  "id": "eg_sec_sub",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_sec_sub",
+  "type": "Example",
+  "number": "1.20.12",
+  "title": "Secant substitution: definite.",
+  "body": " Secant substitution: definite   Compute .       "
+},
+{
+  "id": "eg_sec_sub_again",
+  "level": "2",
+  "url": "s_trig_subst.html#eg_sec_sub_again",
+  "type": "Example",
+  "number": "1.20.13",
+  "title": "Secant substitution: indefinite.",
+  "body": " Secant substitution: indefinite   Find an antiderivative of the function on the domain . The only inverse trigonometric functions allowed to appear in your formula for are and .    Treat the cases and separately and use the absolute value function to combine your two results into a single formula.       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

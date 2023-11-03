@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.20.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sine substitution.</span>
+</h3>
+<div class="para"><div class="para">Find an antiderivative of <span class="process-math">\(f(x)=\sqrt{1-x^2}\text{.}\)</span>
+</div></div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a> we try the inverse substitution <span class="process-math">\(x=\sin \theta, dx=\cos \theta\, d\theta\)</span> with restriction <span class="process-math">\(-\pi/2\leq \theta\leq \pi/2\text{.}\)</span> We compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html">
+\begin{align*}
+\int \sqrt{1-x^2}\, dx \amp = \int \sqrt{1-\sin^2\theta}\,  \cos\theta\, d\theta\\
+\amp = \int \sqrt{\cos^2\theta} \, \cos\theta\, d\ theta\\
+\amp = \int \abs{\cos \theta}\cos \theta\, d\theta\\
+\amp = \int \cos^2\theta\, d\theta \amp (\theta\in [-\pi/2,\pi/2]\implies \cos \theta\geq 0)\\
+\amp = \frac{1}{2}\theta+\frac{1}{4}\sin(2\theta) +C\\
+\amp = \frac{1}{2}\theta+\frac{1}{2}\sin\theta\cos\theta +C\\
+\amp = \frac{1}{2}\arcsin(x)+\frac{1}{2}\sin(\arcsin(x))\cos(\arcsin x)+C\\
+\amp = \frac{1}{2}\arcsin x+ \frac{1}{2}x\sqrt{1-x^2}+C\text{.}
+\end{align*}
+</div>
+<div class="para">Here we have used once again that <span class="process-math">\(\cos(\arcsin x)=\sqrt{1-x^2}\text{.}\)</span> Recall that this can be derived using the following reference triangle. <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;">
+<img src="generated/sageplot/im_ref_tri_1.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="im_ref_tri_1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe873;</span></summary><div id="im_ref_tri_1-description">Reference triangle for <span class="process-math">\(x=\sin\theta\)</span>
+</div></details>
+</div>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_sin_sub">in-context</a></span>
+</body>
+</html>
