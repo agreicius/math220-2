@@ -43,40 +43,66 @@
         </p>
       </statement>
 </algorithm>
+
+
+<algorithm xml:id="proc_trig_sub">
+  <title>Trigonometric substitution</title>
+  <statement>
+    <p>
+      The table below indicates potentially helpful inverse substitutions for functions <m>f</m> of various types. 
+      <md>
+        <mrow>f(x) \text{ contains }  \sqrt{a^2-x^2}\amp \implies    \begin{array}{rcl} x\amp =\amp a\sin\theta \\ dx\amp = \amp a\cos\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [-\pi/2, \pi/2]</mrow>
+        <mrow> \amp </mrow>
+        <mrow>f(x) \text{ contains } \hspace{10pt}  x^2+a^2 \amp \implies    \begin{array}{rcl} x\amp =\amp a\tan\theta \\ dx\amp = \amp a\sec^2\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in (-\pi/2, \pi/2)</mrow>
+        <mrow> \amp </mrow>
+        <mrow>f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp =\amp a\sec\theta \\ dx\amp = \amp a\sec \theta\tan\theta \, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [0,\pi/2)\cup (\pi/2, \pi]</mrow>
+      </md>.
+    </p>
+  </statement>
+</algorithm>
+
 <algorithm xml:id="proc_ref_triangles">
   <title>Reference triangles</title>
   <statement>
     <p>
       When finishing an integral computation <m>\int f(x)\, dx</m> using an trigonometric substitution, the following types of <term>reference triangles</term> are useful for converting your expression back in terms of <m>x</m>. 
+    </p>
+    <p>
+      For the sake of space, we only provide examples of reference triangles where the angle <m>\theta</m> lies in <m>[0,\pi/2]</m>. In practice, you should provide a reference triangle diagram that reflects the interval <m>\theta</m> is restricted to, and take care with the sign of the various trigonometric values.  
+    </p>
       <ol>
         <li>
           <p>
-            Consider the substitution <m>x=a\sin \theta</m>, where <m>a</m> is positive and <m>\theta\in [-\pi/2, \pi/2]</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
+            Consider the substitution <m>x=a\sin \theta</m>, where <m>a</m> is positive. A reference diagram like the following helps us see that 
+            <md>
+              <mrow>\cos\theta \amp = \frac{\sqrt{a^2-x^2}}{a} \amp \tan\theta\amp = \frac{x}{a}</mrow>
+            </md>.  
           </p>
-          
+          <figure xml:id="fig_sin_ref_tri">
+            <caption>Reference triangle for <m>x=a\sin\theta</m></caption>
+            <image xml:id="im_sin_ref_tri" width="50%">
+              <description>Reference triange for sine substitution</description>
+              <sageplot>
+                T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
+                t1=text(r'$x=a\sin\theta$', (.58,1/4), fontsize=16, color="black")
+                t2=text(r'$\sqrt{a^2-x^2}$', (.3,1/32), fontsize=16, color="black")
+                t3=text("$a$", (1/4,.3),fontsize=16,color="black")
+                t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+                T+t1+t2+t3+t4
+              </sageplot>
+            </image>
+          </figure>
         </li>
         <li>
           <p>
-            Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive and <m>\theta\in (-\pi/2, \pi/2)</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
+            Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive. A reference diagram like the following allows us to deduce that 
+            <md>
+              <mrow>\cos\theta \amp = \frac{a}{\sqrt{x^2+a^2}} \amp \sin\theta\amp =\frac{x}{\sqrt{x^2+a^2}}</mrow>
+            </md>.
           </p>
-          <sidebyside>
-            <figure xml:id="fig_sin_ref_tri">
-              <caption>Reference triangle for <m>x=a\sin\theta</m></caption>
-              <image xml:id="im_sin_ref_tri">
-                <description>Reference triange for sine substitution</description>
-                <sageplot>
-                  T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
-                  t1=text(r'$x=a\sin\theta$', (.58,1/4), fontsize=16, color="black")
-                  t2=text(r'$\sqrt{a^2-x^2}=a\cos\theta$', (.3,1/32), fontsize=16, color="black")
-                  t3=text("$a$", (1/4,.3),fontsize=16,color="black")
-                  t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
-                  T+t1+t2+t3+t4
-                </sageplot>
-              </image>
-            </figure>
             <figure xml:id="fig_tan_ref_tri">
               <caption>Reference triangle for <m>x=a\tan\theta</m></caption>
-              <image xml:id="im_tan_ref_tri">
+              <image xml:id="im_tan_ref_tri" width="50%">
                 <description>Reference triangle for tangent substitution</description>
                 <sageplot>
                   T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
@@ -88,30 +114,34 @@
                 </sageplot>
               </image>
             </figure>
-          </sidebyside>
+        </li>
+        <li>
+          <p>
+            Consider the substitution <m>x=a\sec \theta</m>, where <m>a</m> is positive. A reference diagram like the following allows us to deduce that 
+            <md>
+              <mrow> \sin \theta\amp =\frac{\sqrt{a^2-x^2}}{\abs{x}} \amp \tan \theta\amp =\begin{cases} 
+                \frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in [0,\pi/2) \\
+                -\frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in (\pi/2, \pi].
+                \end{cases}
+              </mrow>
+            </md>
+          </p>
           <figure xml:id="fig_sec_ref_tri">
             <caption>Reference triangle for <m>x=a\sec\theta</m></caption>
-            <image xml:id="im_sec_ref_tri">
+            <image xml:id="im_sec_ref_tri" width="50%">
               <description>Reference triangle for secant substitution</description>
               <sageplot>
                 T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)],axes=False, ticks=[[],[]],aspect_ratio=1.1)
-                t1=text(r'$\sqrt{x^2-a^2}=a\sin\theta$', (.65,1/4), fontsize=16, color="black")
+                t1=text(r'$\sqrt{x^2-a^2}$', (.575,1/4), fontsize=16, color="black")
                 t2=text(r'$a$', (.3,1/32), fontsize=16, color="black")
                 t3=text(r"$x=a\sec\theta$", (.2,.3),fontsize=16,color="black")
                 t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
                 T+t1+t2+t3+t4
               </sageplot>
             </image>
-          </figure>
-        </li>
-        <li>
-          <p>
-            Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive and <m>\theta\in (-\pi/2, \pi/2)</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
-          </p>
-          
+          </figure>  
         </li>
       </ol>
-    </p>
   </statement>
 </algorithm>
 
@@ -142,22 +172,6 @@
           </ol>
         </p>
       </statement>
-</algorithm>
-
-<algorithm xml:id="proc_trig_sub">
-  <title>Trigonometric substitution</title>
-  <statement>
-    <p>
-      The table below indicates potentially helpful inverse substitutions for functions <m>f</m> of various types. 
-      <md>
-        <mrow>f(x) \text{ contains }  \sqrt{a^2-x^2}\amp \implies    \begin{array}{rcl} x\amp =\amp a\sin\theta \\ dx\amp = \amp a\cos\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [-\pi/2, \pi/2]</mrow>
-        <mrow> \amp </mrow>
-        <mrow>f(x) \text{ contains } \hspace{10pt}  x^2+a^2 \amp \implies    \begin{array}{rcl} x\amp =\amp a\tan\theta \\ dx\amp = \amp a\sec^2\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in (-\pi/2, \pi/2)</mrow>
-        <mrow> \amp </mrow>
-        <mrow>f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp =\amp a\sec\theta \\ dx\amp = \amp a\sec \theta\tan\theta \, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [0,\pi/2)\cup (\pi/2, \pi]</mrow>
-      </md>.
-    </p>
-  </statement>
 </algorithm>
 <example xml:id="eg_sin_sub">
   <title>Sine substitution</title>
