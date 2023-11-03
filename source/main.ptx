@@ -44,6 +44,7 @@
       <xi:include  href="s_integraltechnique.ptx"/>
       <xi:include  href="s_int_by_parts.ptx"/>
       <xi:include  href="s_trig_int.ptx"/>
+      <xi:include  href="s_trig_sub.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">

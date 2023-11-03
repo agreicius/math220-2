@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_trig_subst" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Trigonometric substitution</title>
+<p>
+    Trigonometric substitution is an example of a more general integral technique that we call <em>inverse substitution</em>. In turn, inverse substitution is really just an application of the substitution where our substitution function is <em>invertible</em>. 
+</p>
+    
+<algorithm xml:id="proc_inv_sub_indef">
+    <title> Inverse substitution: indefinite integral</title>
+      <statement>
+        <p>
+          To compute <m>\displaystyle\int f(x)\, dx</m> using inverse substitution,
+          proceed as follows.
+          <ol>
+            <li>
+              <p>
+                Choose a one-to-one, differentiable substitution function <m>g</m> with differentiable inverse and assemble the two equations
+                <md>
+                  <mrow>x\amp =g(t)</mrow>
+                  <mrow>dx\amp =g'(t)\, dt</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute
+                <me>
+                  \int f(g(t))g'(t)\, dt=F(t)+C
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Conclude that
+                <me>
+                  \int f(x)\, dx=F(g^{-1}(x))+C
+                </me>.
+                When an explicit formula for <m>g^{-1}(x)</m> is not available, we attempt to compute <m>F(g^{-1}(x))</m> by rewriting <m>F(t)</m> in terms of <m>x</m> using the equation <m>x=g(t)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+</algorithm>
+<algorithm xml:id="proc_ref_triangles">
+  <title>Reference triangles</title>
+  <statement>
+    <p>
+      When finishing an integral computation <m>\int f(x)\, dx</m> using an trigonometric substitution, the following types of <term>reference triangles</term> are useful for converting your expression back in terms of <m>x</m>. 
+      <ol>
+        <li>
+          <p>
+            Consider the substitution <m>x=a\sin \theta</m>, where <m>a</m> is positive and <m>\theta\in [-\pi/2, \pi/2]</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
+          </p>
+          
+        </li>
+        <li>
+          <p>
+            Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive and <m>\theta\in (-\pi/2, \pi/2)</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
+          </p>
+          <sidebyside>
+            <figure xml:id="fig_sin_ref_tri">
+              <caption>Reference triangle for <m>x=a\sin\theta</m></caption>
+              <image xml:id="im_sin_ref_tri">
+                <description>Reference triange for sine substitution</description>
+                <sageplot>
+                  T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
+                  t1=text(r'$x=a\sin\theta$', (.58,1/4), fontsize=16, color="black")
+                  t2=text(r'$\sqrt{a^2-x^2}=a\cos\theta$', (.3,1/32), fontsize=16, color="black")
+                  t3=text("$a$", (1/4,.3),fontsize=16,color="black")
+                  t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+                  T+t1+t2+t3+t4
+                </sageplot>
+              </image>
+            </figure>
+            <figure xml:id="fig_tan_ref_tri">
+              <caption>Reference triangle for <m>x=a\tan\theta</m></caption>
+              <image xml:id="im_tan_ref_tri">
+                <description>Reference triangle for tangent substitution</description>
+                <sageplot>
+                  T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
+                  t1=text(r'$x=a\tan\theta$', (.58,1/4), fontsize=16, color="black")
+                  t2=text(r'$a$', (.3,1/32), fontsize=16, color="black")
+                  t3=text(r"$\sqrt{a^2+x^2}$", (3/16,.3),fontsize=16,color="black")
+                  t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+                  T+t1+t2+t3+t4
+                </sageplot>
+              </image>
+            </figure>
+          </sidebyside>
+          <figure xml:id="fig_sec_ref_tri">
+            <caption>Reference triangle for <m>x=a\sec\theta</m></caption>
+            <image xml:id="im_sec_ref_tri">
+              <description>Reference triangle for secant substitution</description>
+              <sageplot>
+                T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)],axes=False, ticks=[[],[]],aspect_ratio=1.1)
+                t1=text(r'$\sqrt{x^2-a^2}=a\sin\theta$', (.65,1/4), fontsize=16, color="black")
+                t2=text(r'$a$', (.3,1/32), fontsize=16, color="black")
+                t3=text(r"$x=a\sec\theta$", (.2,.3),fontsize=16,color="black")
+                t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+                T+t1+t2+t3+t4
+              </sageplot>
+            </image>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive and <m>\theta\in (-\pi/2, \pi/2)</m>. A reference diagram like the following allows us to deduce that <m>\cos \theta=\frac{\sqrt{a^2-x^2}}{a}</m> and <m>\tan \theta=\frac{x}{a}</m>. 
+          </p>
+          
+        </li>
+      </ol>
+    </p>
+  </statement>
+</algorithm>
+
+<algorithm xml:id="proc_inv_sub_def">
+    <title>Inverse substitution: definite integral</title>
+      <statement>
+        <p>
+          To compute <m>\displaystyle\int_a^b f(x)\, dx</m> using inverse substitution,
+          proceed as follows. 
+          <ol>
+            <li>
+              <p>
+                Choose a one-to-one, differentiable substitution function <m>g</m> with differentiable inverse and write down the two inverse substitution equations
+                <md>
+                  <mrow>x\amp =g(t)</mrow>
+                  <mrow>dx\amp =g'(t)\, dt</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Conclude that 
+                <me>
+                  \displaystyle\int_{x=a}^{x=b} f(x)\, dx=\int_{t=g^{-1}(a)}^{t=g^{-1}(b)}f(g(t))g'(t)\, dt
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+</algorithm>
+
+<algorithm xml:id="proc_trig_sub">
+  <title>Trigonometric substitution</title>
+  <statement>
+    <p>
+      The table below indicates potentially helpful inverse substitutions for functions <m>f</m> of various types. 
+      <md>
+        <mrow>f(x) \text{ contains }  \sqrt{a^2-x^2}\amp \implies    \begin{array}{rcl} x\amp =\amp a\sin\theta \\ dx\amp = \amp a\cos\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [-\pi/2, \pi/2]</mrow>
+        <mrow> \amp </mrow>
+        <mrow>f(x) \text{ contains } \hspace{10pt}  x^2+a^2 \amp \implies    \begin{array}{rcl} x\amp =\amp a\tan\theta \\ dx\amp = \amp a\sec^2\theta\, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in (-\pi/2, \pi/2)</mrow>
+        <mrow> \amp </mrow>
+        <mrow>f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp =\amp a\sec\theta \\ dx\amp = \amp a\sec \theta\tan\theta \, d\theta \end{array} \hspace{5pt} \text{ where } \theta\in [0,\pi/2)\cup (\pi/2, \pi]</mrow>
+      </md>.
+    </p>
+  </statement>
+</algorithm>
+<example xml:id="eg_sin_sub">
+  <title>Sine substitution</title>
+  <statement>
+    <p>
+      <p>
+        Find an antiderivative of <m>f(x)=\sqrt{1-x^2}</m>.
+      </p>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using <xref ref="proc_trig_sub"/> we try the inverse substitution <m>x=\sin \theta, dx=\cos \theta\, d\theta</m> with restriction <m>-\pi/2\leq \theta\leq \pi/2</m>. We compute 
+      <md>
+        <mrow>\int \sqrt{1-x^2}\, dx \amp = \int \sqrt{1-\sin^2\theta}\,  \cos\theta\, d\theta</mrow>
+        <mrow> \amp = \int \sqrt{\cos^2\theta} \, \cos\theta\, d\ theta</mrow>
+        <mrow> \amp = \int \abs{\cos \theta}\cos \theta\, d\theta</mrow>
+        <mrow> \amp = \int \cos^2\theta\, d\theta \amp (\theta\in [-\pi/2,\pi/2]\implies \cos \theta\geq 0)</mrow>
+        <mrow> \amp = \frac{1}{2}\theta+\frac{1}{4}\sin(2\theta) +C</mrow>
+        <mrow> \amp = \frac{1}{2}\theta+\frac{1}{2}\sin\theta\cos\theta +C</mrow>
+        <mrow> \amp = \frac{1}{2}\arcsin(x)+\frac{1}{2}\sin(\arcsin(x))\cos(\arcsin x)+C</mrow>
+        <mrow> \amp = \frac{1}{2}\arcsin x+ \frac{1}{2}x\sqrt{1-x^2}+C</mrow>
+      </md>.
+      Here we have used once again that <m>\cos(\arcsin x)=\sqrt{1-x^2}</m>. Recall that this can be derived using the following reference triangle. 
+      <image xml:id="im_ref_tri_1" width="75%">
+        <description>Reference triangle for <m>x=\sin\theta</m></description>
+        <sageplot>
+  T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
+  t1=text(r'$x=\sin\theta$', (.58,1/4), fontsize=16, color="black")
+  t2=text(r'$\sqrt{1-x^2}=\cos\theta$', (.3,1/32), fontsize=16, color="black")
+  t3=text("$1$", (1/4,.3),fontsize=16,color="black")
+  t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+  T+t1+t2+t3+t4
+        </sageplot>
+      </image>
+    </p>
+    
+  </solution>
+</example>
+<example xml:id="eg_area_circle">
+  <title>Area of circle</title>
+  <statement>
+    <p>
+      Derive the area formula for a circle of radius <m>r</m>. 
+    </p>
+  </statement>
+  <solution>
+    <p>
+      
+    </p>
+  </solution>
+</example>
+<example xml:id="eg_tan_sub">
+  <title>Tangent substitution</title>
+  <statement>
+    <p>
+      Compute <m>\displaystyle\int \frac{1}{x^2\sqrt{x^2+4}}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      
+    </p>
+  </solution>
+</example>
+<example xml:id="eg_sec_sub_easy">
+  <title>Secant substitution</title>
+  <statement>
+    <p>
+      Let <m>a</m> be a fixed positive number. Compute <m>\displaystyle \int \frac{1}{\sqrt{x^2-a^2}}\, dx</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      
+    </p>
+  </solution>
+</example>
+<example xml:id="eg_sec_sub">
+  <title>Secant substitution: definite</title>
+  <statement>
+    <p>
+      Compute <m>\displaystyle\int_{-\sqrt{2}}^{-2/\sqrt{3}}\frac{\sqrt{x^2-1}}{x}\, dx</m>.
+      </p>
+  </statement>
+  <solution>
+    <p>
+      
+    </p>
+  </solution>
+</example>
+
+<example xml:id="eg_sec_sub_again">
+  <title>Secant substitution: indefinite</title>
+  <statement>
+    <p> Find an antiderivative <m>F</m> of the function  <m>f(x)=\frac{\sqrt{x^2-1}}{x}\, dx</m> on the domain <m>(-\infty,-1]\cup [1,\infty)</m>. The only inverse trigonometric functions allowed to appear in your formula for <m>F</m> are <m>\arcsin x</m> and <m>\arctan x</m>. 
+    </p>
+  </statement>
+  <hint>
+    <p>
+      Treat the cases <m>x\geq 1</m> and <m>x\leq -1</m> separately and use the absolute value function to combine your two results into a single formula. 
+    </p>
+  </hint>
+  <solution>
+    <p>
+      
+    </p>
+  </solution>
+</example>
+</section>
