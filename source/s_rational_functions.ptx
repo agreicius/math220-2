@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_rational_functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Rational functions</title>
+<definition xml:id="d_rational_function">
+    <title>Rational function</title>
+    <statement>
+        <p>
+            A <term>rational function</term> is a function that can be expressed as a quotient of two polynomials. 
+        </p>
+    </statement>
+</definition>
+
+<theorem xml:id="th_poly_facts">
+    <title>Polynomial facts</title>
+    <statement>
+        <ol>
+          <li>
+            <title>Degree</title>
+            <p>
+              Suppose <m>f(x)=\anpoly</m> with <m>a_n\ne 0</m>.
+              We call <m>n</m> the <term>degree</term>
+              of <m>f</m>, denoted <m>\deg f</m>.
+            </p>
+          </li>
+          <li>
+            <title>Roots of polynomials</title>
+            <p>
+              A polynomial of degree <m>n</m> has at most <m>n</m> distinct roots.
+            </p>
+          </li>
+          <li>
+            <title>Equating coefficients</title>
+            <p>
+              Given polynomials <m>f(x)=\anpoly</m> and <m>g(x)=\bmpoly</m> where <m>a_n\ne 0</m> and <m>b_m\ne 0</m>, we have
+              <me>
+                f(x)=g(x) \iff n=m \text{ and }  a_i=b_i \text{ for all \(i\). }
+              </me>
+            </p>
+          </li>
+          <li>
+            <title>Irreducible</title>
+            <p>
+              A nonzero polynomial is <term>irreducible</term>
+              if it cannot be factored into two polynomials of smaller degree.
+              If <m>f(x)</m> is an irreducible polynomial with real coefficients,
+              then <m>\deg f=1</m> or <m>\deg f=2</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+</theorem>
+
+<theorem xml:id="th_partial_frac">
+    <title>Partial fraction decomposition</title>
+    <statement>
+        <p>
+          Let <m>p(x)/q(x)</m> be a rational function
+          where <m>\deg p &lt;  \deg q</m>.
+          <ul>
+            <li>
+              <p>
+                If <m>q</m> factors into non-repeated linear factors as
+                <me>
+                  q(x)=D(x-a_1)(x-a_2)\cdots (x-a_r)
+                </me>,
+                then there is a unique choice of constants <m>A_1, A_2,\dots, A_r</m> such that
+                <men xml:id="eq_part_decomp_1">
+                  \frac{p(x)}{q(x)}=\frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\cdots +\frac{A_r}{x-a_r}
+                </men>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>q(x)</m> factors into non-repeated irreducible linear and quadratic factors as
+                <me>
+                  q(x)=D(x-a_1)(x-a_2)\cdots (x-a_r)(x^2+b_1x+c_1)(x^2+b_2x+c_2)\cdots (x^2+b_sx+c_s)
+                </me>,
+                there there is a unique choice of constants <m>A_1,A_2,\dots, A_r, B_1,B_2,\dots, B_s, C_1, C_2,\dots, C_s</m> such that
+                <men xml:id="eq_part_decomp_2">
+                  \frac{p(x)}{q(x)}=\frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\cdots +\frac{A_r}{x-a_r}+\frac{B_1x+C_1}{x^2+b_1x+c_1}+\frac{B_2x+C_2}{x^2+b_2x+c_2}+\cdots +\frac{B_sx+C_s}{x^2+b_sx+c_s}
+                </men>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+</theorem>
+
+<algorithm xml:id="proc_partial_frac">
+    <title>Partial fraction decomposition</title>
+      <statement>
+        <p>
+          Let <m>f(x)</m> be a rational function. To compute the partial fraction decomposition of <m>f</m>, proceed as follows. 
+        </p>
+        <ol>
+        <li>
+            <title>Polynomial division</title>
+            <p>
+                Using polynomial division if necessary, write <m>f(x)=g(x)+p(x)/q(x)</m>, where <m>g</m>, <m>p</m> and <m>q</m> are polynomials, and <m>\deg p &lt;  \deg q</m>. 
+            </p>
+        </li>
+            <title>Factor</title>
+          <li>
+            <p>
+              Factor <m>q(x)</m> into powers of distinct irreducible polynomials.</p>
+              <p>
+              <em>Factoring trick</em>.
+              If <m>q(x)</m> has integer coefficients and a leading coefficient equal to 1, then any integer roots of <m>q(x)</m> will be factors of the constant term.
+            </p>
+          </li>
+          <li>
+            <title>Polynomial equation with undetermined constants</title>
+            <p>
+              Set up a partial fraction decomposition equation for <m>p(x)/q(x)</m> of form <xref ref="eq_part_decomp_1"/> or <xref ref="eq_part_decomp_2"/>.
+              Clear the denominators of both sides of the equation,
+              resulting in an identity between two polynomials.
+              The polynomial on the right will be expressed in terms of the unknowns
+              (<m>A_i</m>, <m>B_i</m>, etc.).
+            </p>
+        </li>
+            <li>
+                <title>Solve for undetermined constants</title>
+                <p>
+                    To solve for the undetermined constants (<m>A_i</m>, <m>B_i</m>,
+                    etc.) set up and solve a linear system of equations using one of the following techniques.
+                  </p>
+                  <ol>
+                      <li>
+                          <p>
+                            <em>Evaluate equality at choices of <m>x</m></em>.
+                            Evaluate the polynomial equation at various explicit choices of <m>x</m>. 
+                            When <m>q</m> factors as <m>q(x)=D(x-a_1)(x-a_2)\cdots (x-a_m)</m> where the roots <m>a_k</m> are distinct, then evaluating the polynomial equality at each of the choices <m>x=a_k</m> will allow you to solve directly for each undetermined constant in turn. 
+                          </p>
+                        </li>
+                    <li>
+                      <p>
+                        <em>Equate coefficients</em>.
+                        Express the polynomial on right in
+                        <q>standard form</q>
+                        by collecting like terms.
+                        For the left and right polynomials to be equal,
+                        their corresponding coefficients must all be equal.
+                        This yields a system of equations in the unknowns (<m>A_i</m>,
+                        <m>B_i</m>, etc.) that you must now solve.
+                      </p>
+                    </li>
+              
+            </ol>
+          </li>
+        </ol>
+      </statement>
+</algorithm>
+<remark>
+    <p>
+        There is a more general statement of partial fraction decomposition for the case where the irreducible factors of <m>q</m> include repeated linear and/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.
+    </p> 
+</remark>
+<example xml:id="eg_rat_func_1">
+    <title>Rational function</title>
+    <statement>
+        <p>
+            Compute <m>\displaystyle\int \frac{x+2}{x^2-1}\, dx</m>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="eg_rat_func_4">
+    <title>Long division first</title>
+    <statement>
+        <p>
+            Compute <m>\displaystyle\int \frac{x^2}{x^2+2x-1}\, dx</m>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+
+
+<example xml:id="eg_rat_func_3">
+    <title>Three distinct roots</title>
+    <statement>
+        <p>
+            Compute <m>\displaystyle\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx</m>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="eg_rat_func_2">
+    <title>Two irreducible quadratics</title>
+    <statement>
+        <p>
+            Compute <m>\displaystyle\int\frac{1}{x^4+3x^2+2}</m>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="eg_rat_func_5">
+    <title>With substitution</title>
+    <statement>
+        <p>
+            Compute <m>\displaystyle \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+</section>
