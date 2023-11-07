@@ -46,6 +46,8 @@
       <xi:include  href="s_trig_int.ptx"/>
       <xi:include  href="s_trig_sub.ptx"/>
       <xi:include  href="s_rational_functions.ptx"/>
+      <xi:include  href="s_num_int_A.ptx"/>
+      <xi:include  href="s_num_int_B.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_num_int_B" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Numerical integration: error estimates</title>
+    <theorem xml:id="th_num_int">
+        <title>Error estimates</title>
+      <statement>
+        <p>
+          Let <m>f</m> be an integrable function on <m>[a,b]</m>,
+          let <m>n</m> be a positive integer, and let
+          <me>
+            a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b
+          </me>.
+          be partition of <m>[a,b]</m> into <m>n</m> subintervals of equal length <m>\Delta x=\frac{b-a}{n}</m>.
+          <ol>
+            <li>
+                <title>Right/left Riemann sums</title>
+              <p>
+                Let <m>R_n</m> be either the right or left Riemann sum for this partition.
+                Suppose <m>\vert f'(x)\vert \leq M</m> for all <m>x</m> in <m>[a,b]</m>.
+                Then
+                <me>
+                  \left\vert\int_a^b f(x)\, dx - R_n\right\vert\leq \frac{M(b-a)^2}{2n}
+                </me>.
+              </p>
+            </li>
+            <li>
+                <title>Midpoint Riemann sum</title>
+                <p>
+                    Let <m>M_n</m> be the midpoint Riemann sum for this partition.
+                    Suppose <m>\vert f''(x)\vert \leq M</m> for all <m>x</m> in <m>[a,b]</m>.
+                    Then
+                    <me>
+                      \left\vert\int_a^b f(x)\, dx - M_n\right\vert\leq \frac{M(b-a)^3}{24n^2}
+                    </me>.   
+                </p>
+            </li>
+            <li>
+                <title>Trapezoidal estimate</title>
+              <p>
+                Let <m>T_n</m> be the <m>n</m>-th trapezoidal estimate of <m>\int_a^b f(x)\, dx</m>.
+                Suppose <m>\vert f''(x)\vert\leq N</m> for all <m>x</m> in <m>[a,b]</m>.
+                Then
+                <me>
+                  \left\vert\int_a^b f(x)\, dx - T_n\right\vert\leq\frac{N(b-a)^3}{12n^2}
+                </me>.
+              </p>
+            </li>
+            <li>
+                <title>Simpson's rule</title> 
+              <p>
+                Suppose <m>n</m> is even,
+                and let <m>S_n</m> be the <m>n</m>-th Simpson's rule estimate of <m>\int_a^bf(x)\, dx</m>.
+                Suppose <m>\vert f^{(4)}(x)\vert\leq K</m> for all <m>x</m> in <m>[a,b]</m>.
+                Then
+                <me>
+                  \left\vert\int_a^b f(x)\, dx - S_n\right\vert\leq\frac{K(b-a)^5}{180n^4}
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    
+    
+
+</section>

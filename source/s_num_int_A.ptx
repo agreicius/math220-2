@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_num_int_A" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Numerical integration: techniques</title>
+    <definition xml:id="d_trap_rule">
+        <title>Trapezoidal rule</title>
+      <statement>
+        <p>
+          Let <m>f</m> be an integrable function on <m>[a,b]</m>,
+          let <m>n</m> be a positive integer, and let
+          <me>
+            a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b
+          </me>
+          be partition of <m>[a,b]</m> into <m>n</m> subintervals of equal length <m>\Delta x=\frac{b-a}{n}</m>.
+        </p>
+        <p>
+          The <em><m>n</m>-th trapezoidal estimate</em>
+          of <m>\displaystyle\int f(x)\, dx</m>,
+          denoted <m>T_n</m>, is defined as
+          <me>
+            T_n=\frac{1}{2}\Delta x(f(x_0)+2f(x_1)+2f(x_2)+\cdots +2f(x_{n-1})+f(x_n))
+          </me>.
+        </p>
+        <p>
+          The trapezoidal estimate is the result of approximating the graph of <m>f</m> with the polygon passing through the points <m>P_0=(x_0, f(x_0)), P_1=(x_1,f(x_1)), \dots, P_n=(x_n, f(x_n))</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="d_Simpsons_rule">
+        <title>Simpson's rule</title>
+      <statement>
+        <p>
+          Let <m>f</m> be an integrable function on <m>[a,b]</m>,
+          let <m>n=2r</m> be an even positive integer, and let
+          <me>
+            a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b
+          </me>
+          be partition of <m>[a,b]</m> into <m>n</m> subintervals of equal length <m>\Delta x=\frac{b-a}{n}</m>.
+        </p>
+        <p>
+          The <em><m>n</m>-th Simpson's rule estimate</em>
+          of <m>\displaystyle\int f(x)\, dx</m>,
+          denoted <m>S_n</m>, is defined as
+          <me>
+            S_n=\frac{1}{3}\Delta x(f(x_0)+4f(x_1)+2f(x_2)+\cdots +2f(x_{n-2})+4f(x_{n-1})+f(x_n))
+          </me>.
+        </p>
+        <p>
+          The Simpson's rule estimate is the result of approximating the graph of <m>f</m> over each of the <m>r</m> subintervals <m>[x_{2(k-1)},x_{2k}]</m> with the unique
+          <q>parabolic arc</q><fn>
+          If the three points happen to be colinear, then the
+          <q>parabolic arc</q>
+          will actually be a line.
+          </fn> passing through the points 
+          <me>
+            P_{2(k-1)}=(x_{2(k-1)}, f(x_{2(k-1)})), P_{2k-1}=(x_{2k-1}, f(x_{2k-1})), P_{2k}=(x_{2k},f(x_{2k}))
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    
+    <example>
+        <title>Estimating <m>\ln 4</m></title>
+        <statement>
+            <p>
+                Let <m>f(x)=\frac{1}{x}</m>.
+                Recall that we have by definition <m>\ln 4=\int_1^4f(x)\, dx</m>.
+                Compute (a) the <m>n=6</m> trapezoidal estimate of <m>I</m>,
+                and (b) the <m>n=6</m> Simpson's rule estimate of <m>I</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <title>Estimating <m>\pi</m></title>
+        <statement>
+            <p>
+                Let <m>f(x)=\frac{4}{x^2+1}</m>,
+                and let <m>I=\int_0^1f(x)\, dx</m>.
+                <ol>
+                    <li>
+                        <p>
+                            Show that <m>I=\pi</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Estimate <m>\pi</m> using the <m>n=6</m> trapezoidal estimate of <m>I</m>.
+                        </p>
+                    </li>
+                
+                        <li>
+                            <p>
+                                    Estimate <m>\pi</m> using the <m>n=6</m> Simpson's rule estimate of <m>I</m>.
+                            </p>
+                        </li>
+                    </ol>
+                 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+</section>
