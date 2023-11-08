@@ -100,8 +100,9 @@
                 Using polynomial division if necessary, write <m>f(x)=g(x)+p(x)/q(x)</m>, where <m>g</m>, <m>p</m> and <m>q</m> are polynomials, and <m>\deg p &lt;  \deg q</m>. 
             </p>
         </li>
-            <title>Factor</title>
+            
           <li>
+            <title>Factor</title>
             <p>
               Factor <m>q(x)</m> into powers of distinct irreducible polynomials.</p>
               <p>
