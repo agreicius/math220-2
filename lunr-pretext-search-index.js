@@ -1702,6 +1702,177 @@ var ptx_lunr_docs = [
   "body": " Secant substitution: indefinite   Find an antiderivative of the function on the domain . The only inverse trigonometric functions allowed to appear in your formula for are and .    Treat the cases and separately and use the absolute value function to combine your two results into a single formula.       "
 },
 {
+  "id": "s_rational_functions",
+  "level": "1",
+  "url": "s_rational_functions.html",
+  "type": "Section",
+  "number": "1.21",
+  "title": "Rational functions",
+  "body": " Rational functions   Rational function   A rational function is a function that can be expressed as a quotient of two polynomials.     Polynomial facts     Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .       Partial fraction decomposition   Let be a rational function where .   If factors into non-repeated linear factors as , then there is a unique choice of constants such that .    If factors into non-repeated irreducible linear and quadratic factors as , there there is a unique choice of constants such that .        Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.    Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .   Factor   Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.     Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.         There is a more general statement of partial fraction decomposition for the case where the irreducible factors of include repeated linear and\/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.    Rational function   Compute          Long division first   Compute          Three distinct roots   Compute          Two irreducible quadratics   Compute          With substitution   Compute         "
+},
+{
+  "id": "d_rational_function",
+  "level": "2",
+  "url": "s_rational_functions.html#d_rational_function",
+  "type": "Definition",
+  "number": "1.21.1",
+  "title": "Rational function.",
+  "body": " Rational function   A rational function is a function that can be expressed as a quotient of two polynomials.   "
+},
+{
+  "id": "th_poly_facts",
+  "level": "2",
+  "url": "s_rational_functions.html#th_poly_facts",
+  "type": "Theorem",
+  "number": "1.21.2",
+  "title": "Polynomial facts.",
+  "body": " Polynomial facts     Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .     "
+},
+{
+  "id": "th_partial_frac",
+  "level": "2",
+  "url": "s_rational_functions.html#th_partial_frac",
+  "type": "Theorem",
+  "number": "1.21.3",
+  "title": "Partial fraction decomposition.",
+  "body": " Partial fraction decomposition   Let be a rational function where .   If factors into non-repeated linear factors as , then there is a unique choice of constants such that .    If factors into non-repeated irreducible linear and quadratic factors as , there there is a unique choice of constants such that .      "
+},
+{
+  "id": "proc_partial_frac",
+  "level": "2",
+  "url": "s_rational_functions.html#proc_partial_frac",
+  "type": "Procedure",
+  "number": "1.21.4",
+  "title": "Partial fraction decomposition.",
+  "body": " Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.    Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .   Factor   Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.     Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.       "
+},
+{
+  "id": "remark-12",
+  "level": "2",
+  "url": "s_rational_functions.html#remark-12",
+  "type": "Remark",
+  "number": "1.21.5",
+  "title": "",
+  "body": " There is a more general statement of partial fraction decomposition for the case where the irreducible factors of include repeated linear and\/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.  "
+},
+{
+  "id": "eg_rat_func_1",
+  "level": "2",
+  "url": "s_rational_functions.html#eg_rat_func_1",
+  "type": "Example",
+  "number": "1.21.6",
+  "title": "Rational function.",
+  "body": " Rational function   Compute        "
+},
+{
+  "id": "eg_rat_func_4",
+  "level": "2",
+  "url": "s_rational_functions.html#eg_rat_func_4",
+  "type": "Example",
+  "number": "1.21.7",
+  "title": "Long division first.",
+  "body": " Long division first   Compute        "
+},
+{
+  "id": "eg_rat_func_3",
+  "level": "2",
+  "url": "s_rational_functions.html#eg_rat_func_3",
+  "type": "Example",
+  "number": "1.21.8",
+  "title": "Three distinct roots.",
+  "body": " Three distinct roots   Compute        "
+},
+{
+  "id": "eg_rat_func_2",
+  "level": "2",
+  "url": "s_rational_functions.html#eg_rat_func_2",
+  "type": "Example",
+  "number": "1.21.9",
+  "title": "Two irreducible quadratics.",
+  "body": " Two irreducible quadratics   Compute        "
+},
+{
+  "id": "eg_rat_func_5",
+  "level": "2",
+  "url": "s_rational_functions.html#eg_rat_func_5",
+  "type": "Example",
+  "number": "1.21.10",
+  "title": "With substitution.",
+  "body": " With substitution   Compute        "
+},
+{
+  "id": "s_num_int_A",
+  "level": "1",
+  "url": "s_num_int_A.html",
+  "type": "Section",
+  "number": "1.22",
+  "title": "Numerical integration: techniques",
+  "body": " Numerical integration: techniques   Trapezoidal rule   Let be an integrable function on , let be a positive integer, and let be partition of into subintervals of equal length .  The -th trapezoidal estimate of , denoted , is defined as .  The trapezoidal estimate is the result of approximating the graph of with the polygon passing through the points .     Simpson's rule   Let be an integrable function on , let be an even positive integer, and let be partition of into subintervals of equal length .  The -th Simpson's rule estimate of , denoted , is defined as .  The Simpson's rule estimate is the result of approximating the graph of over each of the subintervals with the unique parabolic arc If the three points happen to be colinear, then the parabolic arc will actually be a line. passing through the points .     Trapezoidal and Simpson's rule  Here is a GeoGebra interactive that illustrates the trapezoidal and Simpson's rule techniques for estimating integrals.   GeoGebra: trapezoidal and Simpson's rule      Estimating   Let . Recall that we have by definition . Compute (a) the trapezoidal estimate of , and (b) the Simpson's rule estimate of .         Estimating   Let , and let .   Show that .    Estimate using the trapezoidal estimate of .    Estimate using the Simpson's rule estimate of .           "
+},
+{
+  "id": "d_trap_rule",
+  "level": "2",
+  "url": "s_num_int_A.html#d_trap_rule",
+  "type": "Definition",
+  "number": "1.22.1",
+  "title": "Trapezoidal rule.",
+  "body": " Trapezoidal rule   Let be an integrable function on , let be a positive integer, and let be partition of into subintervals of equal length .  The -th trapezoidal estimate of , denoted , is defined as .  The trapezoidal estimate is the result of approximating the graph of with the polygon passing through the points .   "
+},
+{
+  "id": "d_Simpsons_rule",
+  "level": "2",
+  "url": "s_num_int_A.html#d_Simpsons_rule",
+  "type": "Definition",
+  "number": "1.22.2",
+  "title": "Simpson’s rule.",
+  "body": " Simpson's rule   Let be an integrable function on , let be an even positive integer, and let be partition of into subintervals of equal length .  The -th Simpson's rule estimate of , denoted , is defined as .  The Simpson's rule estimate is the result of approximating the graph of over each of the subintervals with the unique parabolic arc If the three points happen to be colinear, then the parabolic arc will actually be a line. passing through the points .   "
+},
+{
+  "id": "proj_trap_Simp",
+  "level": "2",
+  "url": "s_num_int_A.html#proj_trap_Simp",
+  "type": "Interactive example",
+  "number": "1.22.1",
+  "title": "Trapezoidal and Simpson’s rule.",
+  "body": " Trapezoidal and Simpson's rule  Here is a GeoGebra interactive that illustrates the trapezoidal and Simpson's rule techniques for estimating integrals.   GeoGebra: trapezoidal and Simpson's rule    "
+},
+{
+  "id": "example-79",
+  "level": "2",
+  "url": "s_num_int_A.html#example-79",
+  "type": "Example",
+  "number": "1.22.4",
+  "title": "Estimating <span class=\"process-math\">\\(\\ln 4\\)<\/span>.",
+  "body": " Estimating   Let . Recall that we have by definition . Compute (a) the trapezoidal estimate of , and (b) the Simpson's rule estimate of .       "
+},
+{
+  "id": "example-80",
+  "level": "2",
+  "url": "s_num_int_A.html#example-80",
+  "type": "Example",
+  "number": "1.22.5",
+  "title": "Estimating <span class=\"process-math\">\\(\\pi\\)<\/span>.",
+  "body": " Estimating   Let , and let .   Show that .    Estimate using the trapezoidal estimate of .    Estimate using the Simpson's rule estimate of .          "
+},
+{
+  "id": "s_num_int_B",
+  "level": "1",
+  "url": "s_num_int_B.html",
+  "type": "Section",
+  "number": "1.23",
+  "title": "Numerical integration: error estimates",
+  "body": " Numerical integration: error estimates   Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. Suppose for all in . Then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. Suppose for all in . Then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . Suppose for all in . Then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . Suppose for all in . Then .       "
+},
+{
+  "id": "th_num_int",
+  "level": "2",
+  "url": "s_num_int_B.html#th_num_int",
+  "type": "Theorem",
+  "number": "1.23.1",
+  "title": "Error estimates.",
+  "body": " Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. Suppose for all in . Then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. Suppose for all in . Then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . Suppose for all in . Then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . Suppose for all in . Then .      "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

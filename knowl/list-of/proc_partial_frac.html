@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.21.4</span><span class="period">.</span><span class="space"> </span><span class="title">Partial fraction decomposition.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(f(x)\)</span> be a rational function. To compute the partial fraction decomposition of <span class="process-math">\(f\text{,}\)</span> proceed as follows.</div> <ol class="decimal">
+<li>
+<span class="heading"><span class="title">Polynomial division.</span></span><div class="para">Using polynomial division if necessary, write <span class="process-math">\(f(x)=g(x)+p(x)/q(x)\text{,}\)</span> where <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are polynomials, and <span class="process-math">\(\deg p &lt;  \deg q\text{.}\)</span>
+</div>
+</li>
+<li>
+<div class="para">Factor <span class="process-math">\(q(x)\)</span> into powers of distinct irreducible polynomials.</div>
+<div class="para">
+<em class="emphasis">Factoring trick</em>. If <span class="process-math">\(q(x)\)</span> has integer coefficients and a leading coefficient equal to 1, then any integer roots of <span class="process-math">\(q(x)\)</span> will be factors of the constant term.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Polynomial equation with undetermined constants.</span></span><div class="para">Set up a partial fraction decomposition equation for <span class="process-math">\(p(x)/q(x)\)</span> of form <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_1.html" title="Equation 1.21.1">(1.21.1)</a> or <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_2.html" title="Equation 1.21.2">(1.21.2)</a>. Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.).</div>
+</li>
+<li>
+<span class="heading"><span class="title">Solve for undetermined constants.</span></span><div class="para">To solve for the undetermined constants (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.) set up and solve a linear system of equations using one of the following techniques.</div>
+<ol class="lower-alpha">
+<li><div class="para">
+<em class="emphasis">Evaluate equality at choices of <span class="process-math">\(x\)</span></em>. Evaluate the polynomial equation at various explicit choices of <span class="process-math">\(x\text{.}\)</span> When <span class="process-math">\(q\)</span> factors as <span class="process-math">\(q(x)=D(x-a_1)(x-a_2)\cdots (x-a_m)\)</span> where the roots <span class="process-math">\(a_k\)</span> are distinct, then evaluating the polynomial equality at each of the choices <span class="process-math">\(x=a_k\)</span> will allow you to solve directly for each undetermined constant in turn.</div></li>
+<li><div class="para">
+<em class="emphasis">Equate coefficients</em>. Express the polynomial on right in “standard form” by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.) that you must now solve.</div></li>
+</ol>
+</li>
+</ol></article><span class="incontext"><a class="internal" href="s_rational_functions.html#proc_partial_frac">in-context</a></span>
+</body>
+</html>
