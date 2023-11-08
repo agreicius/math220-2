@@ -60,6 +60,16 @@
       </statement>
     </definition>
     
+    <project xml:id="proj_trap_Simp">
+        <title>Trapezoidal and Simpson's rule</title>
+        <p>
+            Here is a GeoGebra interactive that illustrates the trapezoidal and Simpson's rule techniques for estimating integrals. 
+            <figure width="100%" xml:id="fig_trap_Simp">
+                <interactive geogebra="vfmheunc" />
+                <caption><url href="https://www.geogebra.org/classic/vfmheunc">GeoGebra: trapezoidal and Simpson's rule</url></caption>
+            </figure>
+        </p>
+    </project>
     <example>
         <title>Estimating <m>\ln 4</m></title>
         <statement>
