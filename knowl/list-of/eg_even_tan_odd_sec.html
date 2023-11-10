@@ -16,6 +16,27 @@
 </h3>
 <div class="para">Compute  <span class="process-math">\(\displaystyle \int \sec^3 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_even_tan_odd_sec">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Not much we can do here besides integration by parts:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int \sec^3 x\, dx \amp = \sec x\tan x-\int \sec x\tan^2 x\, dx \amp (u=\sec x, v'=\sec^2 x)\\
+\amp = \sec x\tan x-int \sec^3 x-\sec x\, dx \amp (\tan^2 x=\sec^2 x-1) \\
+\amp = \sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx\text{.}
+\end{align*}
+</div>
+<div class="para">We’ve shown that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sec^3 x\, dx=\sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx\text{.}
+\end{equation*}
+</div>
+<div class="para">Doing some algebra and solving for <span class="process-math">\(\int \sec^3 x\, dx\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sec^3 x\, dx=\frac{1}{2}\sec x\tan x+\frac{1}{2}\ln\abs{\sec x+\tan x}+C. \text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_even_tan_odd_sec">in-context</a></span>
 </body>
 </html>

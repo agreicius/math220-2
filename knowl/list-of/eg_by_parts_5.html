@@ -16,6 +16,32 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle\int \frac{x^3}{x^2+1}\, dx\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_5">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Using by parts with <span class="process-math">\(u=x^2\)</span> and <span class="process-math">\(v'=\frac{x}{x^2+1}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_by_parts_4.html">
+\begin{align*}
+\int \frac{x^3}{x^2+1}\, dx\amp= \frac{1}{2}x^2\ln \abs{x^2+1}-\int x\ln\abs{x^2+1}\, dx \\
+\amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}\int \ln \abs{u}\, du \amp (u=x^2+1, du=2xdx)\\
+\amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}(u\ln\abs{u}-u)+C \amp (\knowl{./knowl/xref/eg_by_parts_4.html}{\text{Example 1.18.6}})\\
+\amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}(x^2+1)\ln\abs{x^2+1}+\frac{1}{2}(x^2+1)+C \\
+\amp = \frac{1}{2}(x^2+1)-\ln\abs{x^2+1}+C\text{.}
+\end{align*}
+</div>
+<div class="para">Alternatively, using the substitution <span class="process-math">\(u=x^2+1\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_by_parts_4.html">
+\begin{align*}
+\int \frac{1}{2}\frac{x^3}{x^2+1}\, dx \amp = \frac{1}{2}\int \frac{u-1}{u}\, du \amp (u=x^2+1, du=2xdx) \\
+\amp = \frac{1}{2}\int 1-\frac{1}{u}\, du \\
+\amp = \frac{1}{2}(x^2+1)-\ln\abs{x^2+1}+C\text{.}
+\end{align*}
+</div>
+<div class="para">As a third alternative, we could use <em class="emphasis">polynomial division</em> to write <span class="process-math">\(\frac{x^3}{x^2+1}=x-\frac{x}{x^2+1}\text{,}\)</span> and then conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_by_parts_4.html">
+\begin{equation*}
+\int \frac{x^3}{x^2+1}\, dx=\int x-\frac{x}{x^2+1}\, dx=\frac{1}{2}x^2-\ln\abs{x^2+1}+C\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that the answer here differs from the previous two by the constant <span class="process-math">\(\frac{1}{2}\text{,}\)</span> which of course is not a problem.</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_5">in-context</a></span>
 </body>
 </html>

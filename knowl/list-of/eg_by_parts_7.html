@@ -16,6 +16,33 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\int e^x\cos x\, dx\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_7">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Here is an example where it looks like we are in danger of entering an infinite regress, but where a minus sign comes to our rescue. We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int e^x\cos x\, dx\amp = e^x\sin x-\int e^x\sin x \amp (u=e^x, v'=\cos x) \\
+\amp = e^x\sin x-(-e^x\cos x+\int e^x\cos x\, dx) \amp (u=e^x,v'=\sin x)\\
+\amp = e^x\sin x+e^x\cos x-\int e^x\cos x\, dx\text{.}
+\end{align*}
+</div>
+<div class="para">We’ve shown that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int e^x\cos x\, dx=e^x\sin x+e^x\cos x-\int e^x\cos x\, dx\text{.}
+\end{equation*}
+</div>
+<div class="para">Using algebra, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2\int e^x\cos x=e^x\sin x+e^x\cos x+C\text{,}
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int e^x\cos x\, dx=\frac{1}{2}(e^x\sin x+e^x\cos x)+D\text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_7">in-context</a></span>
 </body>
 </html>

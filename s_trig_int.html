@@ -257,13 +257,13 @@ window.MathJax = {
 </h2>
 <div class="para logical" id="p-550">
 <div class="para">We now develop an integration technique for two <em class="emphasis">very particular</em> types of integrals:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_sincos.html ./knowl/xref/proc_int_tansec.html" id="md-106">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_sincos.html ./knowl/xref/proc_int_tansec.html" id="md-113">
 \begin{align*}
 \int \sin^m x\cos^n x\, dx \amp \amp \int \tan^m x\sec^n x\, dx \text{.}
 \end{align*}
 </div>
 <div class="para">Why these particular pairings of products of functions? In a nutshell, because one of the following four choices of substitution will often come in handy:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_sincos.html ./knowl/xref/proc_int_tansec.html" id="md-107">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_sincos.html ./knowl/xref/proc_int_tansec.html" id="md-114">
 \begin{align*}
 u\amp =\sin x \amp u\amp =\tan x \\
 du\amp =\cos x\, dx \amp du\amp =\sec^2 x\\
@@ -283,14 +283,14 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 <div class="para">The following identities hold for all real numbers <span class="process-math">\(\theta\)</span> and <span class="process-math">\(\phi\)</span> for which the given expression is defined.</div>
 <ol class="decimal">
 <li id="li-274">
-<span class="heading"><span class="title">Pythagorean identities.</span></span><div class="para logical" id="p-552"><div class="displaymath process-math" id="md-108">
+<span class="heading"><span class="title">Pythagorean identities.</span></span><div class="para logical" id="p-552"><div class="displaymath process-math" id="md-115">
 \begin{align*}
 \sin^2\theta+\cos^2\theta \amp = 1 \amp \tan^2\theta+1\amp = \sec^2\theta 
 \end{align*}
 </div></div>
 </li>
 <li id="li-275">
-<span class="heading"><span class="title">Sum-to-product and double-angle formulas.</span></span><div class="para logical" id="p-553"><div class="displaymath process-math" id="md-109">
+<span class="heading"><span class="title">Sum-to-product and double-angle formulas.</span></span><div class="para logical" id="p-553"><div class="displaymath process-math" id="md-116">
 \begin{align*}
 \sin(\theta+\phi) \amp =\sin\theta\cos\phi+\cos\theta\sin\phi 
 \amp \sin(\theta-\phi) \amp =\sin\theta\cos\phi-\cos\theta\sin\phi \\
@@ -302,7 +302,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div>
 </li>
 <li id="li-276">
-<span class="heading"><span class="title">Product-to-sum and square formulas.</span></span><div class="para logical" id="p-554"><div class="displaymath process-math" id="md-110">
+<span class="heading"><span class="title">Product-to-sum and square formulas.</span></span><div class="para logical" id="p-554"><div class="displaymath process-math" id="md-117">
 \begin{align*}
 \sin\theta\sin\phi \amp = \frac{1}{2}(\cos(\theta-\phi)-\cos(\theta+\phi)) \\
 \cos\theta\cos\phi \amp =\frac{1}{2}(\cos(\theta-\phi)+\cos(\theta+\phi)) \\
@@ -402,32 +402,111 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </h3>
 <div class="para" id="p-564">Compute <span class="process-math">\(\displaystyle \int \sin^3x \cos^2 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-60" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-565"></div></div></details></div></article><article class="example example-like" id="eg_even_powers"><h3 class="heading">
+<div class="solutions"><details id="solution-60" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-565">
+<div class="para">Peel off a factor of <span class="process-math">\(\sin x\)</span> and use the substitution <span class="process-math">\(u=\cos x\text{,}\)</span> <span class="process-math">\(du=-\sin x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-118">
+\begin{align*}
+\int \sin^3x \cos^2 x\, dx   \amp = \int \sin^2x \cos^2 x \sin x\, dx \\
+\amp = \int (1-\cos^2x) \cos^2 \sin x\, dx\\
+\amp  = -\int (1-u^2)u^2\, du \amp (u=\cos x, du=-\sin x dx)\\
+\amp = -\frac{1}{3}u^3+\frac{1}{5}u^5+C\\
+\amp = -\frac{1}{3}\cos ^3 x+\frac{1}{5}\cos^5 x+C
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_even_powers"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.5</span><span class="period">.</span><span class="space"> </span><span class="title">Even powers.</span>
 </h3>
 <div class="para" id="p-566">Compute <span class="process-math">\(\displaystyle \int \sin^2 x\cos^4 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-61" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-567"></div></div></details></div></article><article class="example example-like" id="eg_even_sec_power"><h3 class="heading">
+<div class="solutions"><details id="solution-61" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-567">
+<div class="para">Both powers are even. We use the square identity to reduce powers across the board:</div>
+<div class="displaymath process-math" id="md-119">
+\begin{align*}
+\int \sin^2 x\cos^4 x\, dx \amp = \int \frac{1}{2}(1-\cos 2x)\left(\frac{1}{2}(1+\cos 2x)\right)^2\, dx \\
+\amp = \frac{1}{8}\int (1-\cos 2x)(1+\cos 2x)^2\, dx\\
+\amp = \frac{1}{8}\int 1+\cos 2x-\cos^2 2x-\cos^3 2x\, dx\\
+\amp = \frac{1}{8}\int 1-\cos^2 2x+\sin^2 x\cos x\, dx \amp (\cos^3 x=(1-\sin^2 x)\cos x)\\
+\amp =\frac{1}{8}\int \frac{1}{2}-\frac{1}{4}\cos 4x+\underset{u^2}{\underbrace{\sin^2 2x}}\, \underset{\frac{du}{2}}{\underbrace{\cos 2x\, dx}} \amp (\cos 2x=\frac{1}{2}(1+\cos 4x))\\
+\amp = \frac{1}{16}x-\frac{1}{64}\sin 4x+\frac{1}{48}\sin^3 2x+C \amp (u=\sin 2x, du=2\cos 2x dx)\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_even_sec_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.6</span><span class="period">.</span><span class="space"> </span><span class="title">Even secant power.</span>
 </h3>
 <div class="para" id="p-568">Compute <span class="process-math">\(\displaystyle \int \sec^4 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-62" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-569"></div></div></details></div></article><article class="example example-like" id="eg_odd_tan_power"><h3 class="heading">
+<div class="solutions"><details id="solution-62" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-569">
+<div class="para">Peel off a factor of <span class="process-math">\(\sec^2 x\)</span> and use the substitution <span class="process-math">\(u=\tan x\text{,}\)</span> <span class="process-math">\(du=\sec^2 x dx\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-120">
+\begin{align*}
+\int \sec^4 x\, dx\amp = \int (\tan^2 x+1)\, \underset{u}{\underbrace{\sec^2 x\, dx}}\\
+\amp = \frac{1}{3}\tan^3 x+\tan x+C \amp (u=\tan x, du=\sec^2 x\, dx)\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_odd_tan_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.7</span><span class="period">.</span><span class="space"> </span><span class="title">Odd tangent power.</span>
 </h3>
 <div class="para" id="p-570">Compute <span class="process-math">\(\displaystyle \int \tan^5 x\sec^7 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-63" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-571"></div></div></details></div></article><article class="example example-like" id="eg_even_tan_odd_sec"><h3 class="heading">
+<div class="solutions"><details id="solution-63" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-571">
+<div class="para">Peel off a factor of <span class="process-math">\(\tan x\sec x\)</span> and use the substitution <span class="process-math">\(u=\sec x\text{,}\)</span> <span class="process-math">\(du=\sec x\tan x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-121">
+\begin{align*}
+\int \tan^5 x\sec^7 x\, dx \amp = \int (\sec^2-1)^2\sec^6 x \, \underset{du}{\underbrace{\sec x\tan x\, dx}}\\
+\amp = \int u^{10}-2u^{8}+u^6\, du \amp (u=\sec x, du=\sec x\tan x dx)\\
+\amp = \frac{1}{11}\sec^{11}x-\frac{2}{9}\sec^9 x+\frac{1}{7}\sec x+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_even_tan_odd_sec"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.8</span><span class="period">.</span><span class="space"> </span><span class="title">Even tangent power, odd secant power.</span>
 </h3>
 <div class="para" id="p-572">Compute  <span class="process-math">\(\displaystyle \int \sec^3 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-64" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-573"></div></div></details></div></article><article class="example example-like" id="eg_tan_power"><h3 class="heading">
+<div class="solutions"><details id="solution-64" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-573">
+<div class="para">Not much we can do here besides integration by parts:</div>
+<div class="displaymath process-math" id="md-122">
+\begin{align*}
+\int \sec^3 x\, dx \amp = \sec x\tan x-\int \sec x\tan^2 x\, dx \amp (u=\sec x, v'=\sec^2 x)\\
+\amp = \sec x\tan x-int \sec^3 x-\sec x\, dx \amp (\tan^2 x=\sec^2 x-1) \\
+\amp = \sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx\text{.}
+\end{align*}
+</div>
+<div class="para">We’ve shown that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sec^3 x\, dx=\sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx\text{.}
+\end{equation*}
+</div>
+<div class="para">Doing some algebra and solving for <span class="process-math">\(\int \sec^3 x\, dx\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sec^3 x\, dx=\frac{1}{2}\sec x\tan x+\frac{1}{2}\ln\abs{\sec x+\tan x}+C. \text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_tan_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.9</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent power.</span>
 </h3>
 <div class="para" id="p-574">Compute  <span class="process-math">\(\displaystyle \int \tan^5 x \, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-65" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-575"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-65" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-575">
+<div class="para">Following the suggestion of <a href="" class="xref" data-knowl="./knowl/xref/proc_int_tansec.html" title="Procedure 1.19.3: Integrating \tan^m x\sec^n x">Procedure 1.19.3</a> we</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_tansec.html">
+\begin{equation*}
+\tan^5 x=(\tan^2 x)^2\tan x=(\sec^4 x-2\sec^2 x+1)\tan x\text{,}
+\end{equation*}
+</div>
+<div class="para">from which we conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_tansec.html" id="md-123">
+\begin{align*}
+\int \tan^5 x\, dx \amp = \int \sec^4 x\tan x-2\sec^2 x\tan x+\tan x\, dx \\
+\amp = \int \underset{u^3}{\underbrace{\sec^3 x}}\, \underset{du}{\underbrace{\sec x\tan x}}-2\underset{u}{\underbrace{\sec x}} \, \underset{du}{\underbrace{\sec x\tan x}}+\tan x\, dx \\
+\amp =\frac{1}{4}\sec^4 x-\sec^2 x-\ln\abs{\cos x}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-18.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_trig_subst.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

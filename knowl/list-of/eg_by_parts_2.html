@@ -15,6 +15,12 @@
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18.5</span><span class="period">.</span><span class="space"> </span><span class="title">Iterated by parts.</span>
 </h3>
 <div class="para"><span class="process-math">\(\displaystyle \int x^2 e^x\, dx\)</span></div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_2">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\int x^2 e^x\, dx \amp = x^2e^{x}-2\int xe^{x}\, dx \amp (u=x^2, v'=e^x) \\
+\amp = x^2e^x-2(xe^x-\int e^{x}) \amp (u=x, v'=e^x)\\
+\amp = x^2e^x-2xe^x+2e^x+C\text{.}
+\end{align*}
+</div></div></div></details></div></article><span class="incontext"><a class="internal" href="section-18.html#eg_by_parts_2">in-context</a></span>
 </body>
 </html>

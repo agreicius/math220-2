@@ -1429,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.18",
   "title": "Integration by parts",
-  "body": " Integration by parts   The integration by parts technique is yet another instance of our . In this case we take the familiar product rule of differentiation , reexpress it algebraically as , and then integrate both sides to conclude . We have just given a proof of what is called the integration by parts rule.    Integration by parts   Let and be continuously differentiable functions on an interval containing the interval .   Indefinite integral form  We have .    Definite integral form  We have .        The art of by parts   To use the integration by parts technique on an integral of the form proceed as follows:   Who is , and who ?  Declare one of and to be and the other to be . The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial\/radical, (E)xponent, (T)rig) often leads to a useful choice of .    Assemble ingredients  Suppose without loss of generality that we have chosen and . Then compute the derivative of and compute an antiderivative  of :  Integration by parts diagram       Apply by parts rule  Using the ingredients assembled in Step 2, we have .        Classic by parts   Compute          Integration workflow   For many integral computations it will be clear whether to use a formula, substitution, or integration by parts. When it is not clear how to proceed, the following workflow might be helpful.   Algebra and formulas  If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).    Substitution  Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).    By parts  Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is , and who \". If not promising, move to (3).    Creative algebra  Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).       The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique.   Iterated by parts             Surprising by parts   Compute          Rational function   Compute          Inverse trig   Compute          By parts and algebra   Compute         "
+  "body": " Integration by parts   The integration by parts technique is yet another instance of our . In this case we take the familiar product rule of differentiation , reexpress it algebraically as , and then integrate both sides to conclude . We have just given a proof of what is called the integration by parts rule.    Integration by parts   Let and be continuously differentiable functions on an interval containing the interval .   Indefinite integral form  We have .    Definite integral form  We have .        The art of by parts   To use the integration by parts technique on an integral of the form proceed as follows:   Who is , and who ?  Declare one of and to be and the other to be . The mnemonic device LIPET ((L)og, (I)nverse trig, (P)olynomial\/radical, (E)xponent, (T)rig) often leads to a useful choice of .    Assemble ingredients  Suppose without loss of generality that we have chosen and . Then compute the derivative of and compute an antiderivative  of :  Integration by parts diagram       Apply by parts rule  Using the ingredients assembled in Step 2, we have .        Classic by parts   Compute      .     Integration workflow   For many integral computations it will be clear whether to use a formula, substitution, or integration by parts. When it is not clear how to proceed, the following workflow might be helpful.   Algebra and formulas  If possible, use an integration formula, perhaps after some simple algebraic preparation. Otherwise, move to (1).    Substitution  Evaluate whether a substitution could transform the integral into one where (0) applies. If not promising, move to (2).    By parts  Evaluate whether the integral is amenable to a by parts approach. You may want to mentally run through a couple of choices of ``who is , and who \". If not promising, move to (3).    Creative algebra  Consider more creative algebraic techniques, including trigonometric identities. If applicable, return to (0).       The following integrals can all be computed using by parts. However, for some of these byou might also explore whether substitution could serve as a useful technique.   Iterated by parts         .     Surprising by parts   Compute     We have . LIPET suggests trying , : .     Rational function   Compute     Using by parts with and , we have . Alternatively, using the substitution , we have . As a third alternative, we could use polynomial division to write , and then conclude . Note that the answer here differs from the previous two by the constant , which of course is not a problem.     Inverse trig   Compute     If using by parts, LIPET suggests the choice , : .     By parts and algebra   Compute     Here is an example where it looks like we are in danger of entering an infinite regress, but where a minus sign comes to our rescue. We have . We've shown that . Using algebra, it follows that , or .    "
 },
 {
   "id": "th_int_by_parts",
@@ -1456,7 +1456,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.3",
   "title": "Classic by parts.",
-  "body": " Classic by parts   Compute        "
+  "body": " Classic by parts   Compute      .   "
 },
 {
   "id": "proc_int_workflow",
@@ -1474,7 +1474,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.5",
   "title": "Iterated by parts.",
-  "body": " Iterated by parts           "
+  "body": " Iterated by parts         .   "
 },
 {
   "id": "eg_by_parts_4",
@@ -1483,7 +1483,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.6",
   "title": "Surprising by parts.",
-  "body": " Surprising by parts   Compute        "
+  "body": " Surprising by parts   Compute     We have . LIPET suggests trying , : .   "
 },
 {
   "id": "eg_by_parts_5",
@@ -1492,7 +1492,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.7",
   "title": "Rational function.",
-  "body": " Rational function   Compute        "
+  "body": " Rational function   Compute     Using by parts with and , we have . Alternatively, using the substitution , we have . As a third alternative, we could use polynomial division to write , and then conclude . Note that the answer here differs from the previous two by the constant , which of course is not a problem.   "
 },
 {
   "id": "eg_by_parts_6",
@@ -1501,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.8",
   "title": "Inverse trig.",
-  "body": " Inverse trig   Compute        "
+  "body": " Inverse trig   Compute     If using by parts, LIPET suggests the choice , : .   "
 },
 {
   "id": "eg_by_parts_7",
@@ -1510,7 +1510,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.18.9",
   "title": "By parts and algebra.",
-  "body": " By parts and algebra   Compute        "
+  "body": " By parts and algebra   Compute     Here is an example where it looks like we are in danger of entering an infinite regress, but where a minus sign comes to our rescue. We have . We've shown that . Using algebra, it follows that , or .   "
 },
 {
   "id": "s_trig_int",
@@ -1519,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.19",
   "title": "Trigonometric integrals",
-  "body": " Trigonometric integrals  We now develop an integration technique for two very particular types of integrals: . Why these particular pairings of products of functions? In a nutshell, because one of the following four choices of substitution will often come in handy: . and articulate in greater detail when and where such substitutions will be useful. The basic principle is that a given substitution as above will help, when after peeling off part of the integrand to account for the , the remaining part of the integrand can be expressed completely in terms of .   Trigonometric identities   The following identities hold for all real numbers and for which the given expression is defined.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.        Odd sine power   Compute .         Even powers   Compute .         Even secant power   Compute .         Odd tangent power   Compute .         Even tangent power, odd secant power   Compute .         Tangent power   Compute .        "
+  "body": " Trigonometric integrals  We now develop an integration technique for two very particular types of integrals: . Why these particular pairings of products of functions? In a nutshell, because one of the following four choices of substitution will often come in handy: . and articulate in greater detail when and where such substitutions will be useful. The basic principle is that a given substitution as above will help, when after peeling off part of the integrand to account for the , the remaining part of the integrand can be expressed completely in terms of .   Trigonometric identities   The following identities hold for all real numbers and for which the given expression is defined.   Pythagorean identities       Sum-to-product and double-angle formulas   .    Product-to-sum and square formulas   .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd sine power  If is odd, write and use the substitution .    Odd cosine power  If is odd, write and use the substitution .    Even powers  If and are both even use and to reduce to a lower power of .        Integrating   Let and be nonnegative integers. When computing use the following strategies.   Odd tangent power  If is odd and is positive, write and use the substitution .    Even secant power  If is even and positive, write and use the substitution .    Even tangent power, odd secant power  If is even and is odd, express everything in terms of and possibly use integration by parts.    Tangent power  If , use the identity and strategies from the previous cases.        Odd sine power   Compute .    Peel off a factor of and use the substitution , :      Even powers   Compute .    Both powers are even. We use the square identity to reduce powers across the board: .     Even secant power   Compute .    Peel off a factor of and use the substitution , : .     Odd tangent power   Compute .    Peel off a factor of and use the substitution , : .     Even tangent power, odd secant power   Compute .    Not much we can do here besides integration by parts: . We've shown that . Doing some algebra and solving for , we conclude that .     Tangent power   Compute .    Following the suggestion of we , from which we conclude .    "
 },
 {
   "id": "th_trig_identities",
@@ -1555,7 +1555,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.4",
   "title": "Odd sine power.",
-  "body": " Odd sine power   Compute .       "
+  "body": " Odd sine power   Compute .    Peel off a factor of and use the substitution , :    "
 },
 {
   "id": "eg_even_powers",
@@ -1564,7 +1564,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.5",
   "title": "Even powers.",
-  "body": " Even powers   Compute .       "
+  "body": " Even powers   Compute .    Both powers are even. We use the square identity to reduce powers across the board: .   "
 },
 {
   "id": "eg_even_sec_power",
@@ -1573,7 +1573,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.6",
   "title": "Even secant power.",
-  "body": " Even secant power   Compute .       "
+  "body": " Even secant power   Compute .    Peel off a factor of and use the substitution , : .   "
 },
 {
   "id": "eg_odd_tan_power",
@@ -1582,7 +1582,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.7",
   "title": "Odd tangent power.",
-  "body": " Odd tangent power   Compute .       "
+  "body": " Odd tangent power   Compute .    Peel off a factor of and use the substitution , : .   "
 },
 {
   "id": "eg_even_tan_odd_sec",
@@ -1591,7 +1591,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.8",
   "title": "Even tangent power, odd secant power.",
-  "body": " Even tangent power, odd secant power   Compute .       "
+  "body": " Even tangent power, odd secant power   Compute .    Not much we can do here besides integration by parts: . We've shown that . Doing some algebra and solving for , we conclude that .   "
 },
 {
   "id": "eg_tan_power",
@@ -1600,7 +1600,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.9",
   "title": "Tangent power.",
-  "body": " Tangent power   Compute .       "
+  "body": " Tangent power   Compute .    Following the suggestion of we , from which we conclude .   "
 },
 {
   "id": "s_trig_subst",
@@ -1861,7 +1861,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.23",
   "title": "Numerical integration: error estimates",
-  "body": " Numerical integration: error estimates   Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. Suppose for all in . Then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. Suppose for all in . Then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . Suppose for all in . Then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . Suppose for all in . Then .       "
+  "body": " Numerical integration: error estimates   Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. If is continuous and for all in , then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. If is continuous and for all in , then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . If is continuous and for all in , then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . If is continuous and for all in , then .        Estimating : error bounds   Let . Recall that .  Compute bounds for the errors in (a) the trapezoidal estimate of and (b) the Simpson's rule estimate of .         Estimating : error bounds   Let . We have .   Recall that . Compute bounds for the errors in estimating using (a) the trapezoidal rule, and (b) the Simpson's rule.    Find (a) an such that the -th trapezoidal estimate of is within of the actual value, and (b) an such that the -th Simpson's rule estimate of is within of the actual value.           "
 },
 {
   "id": "th_num_int",
@@ -1870,7 +1870,25 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.23.1",
   "title": "Error estimates.",
-  "body": " Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. Suppose for all in . Then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. Suppose for all in . Then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . Suppose for all in . Then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . Suppose for all in . Then .      "
+  "body": " Error estimates   Let be an integrable function on , let be a positive integer, and let . be partition of into subintervals of equal length .   Right\/left Riemann sums  Let be either the right or left Riemann sum for this partition. If is continuous and for all in , then .    Midpoint Riemann sum  Let be the midpoint Riemann sum for this partition. If is continuous and for all in , then .    Trapezoidal estimate  Let be the -th trapezoidal estimate of . If is continuous and for all in , then .    Simpson's rule  Suppose is even, and let be the -th Simpson's rule estimate of . If is continuous and for all in , then .      "
+},
+{
+  "id": "eg_log_error",
+  "level": "2",
+  "url": "s_num_int_B.html#eg_log_error",
+  "type": "Example",
+  "number": "1.23.2",
+  "title": "Estimating <span class=\"process-math\">\\(\\ln 4\\text{:}\\)<\/span> error bounds.",
+  "body": " Estimating : error bounds   Let . Recall that .  Compute bounds for the errors in (a) the trapezoidal estimate of and (b) the Simpson's rule estimate of .       "
+},
+{
+  "id": "eg_pi_error",
+  "level": "2",
+  "url": "s_num_int_B.html#eg_pi_error",
+  "type": "Example",
+  "number": "1.23.3",
+  "title": "Estimating <span class=\"process-math\">\\(\\pi\\text{:}\\)<\/span> error bounds.",
+  "body": " Estimating : error bounds   Let . We have .   Recall that . Compute bounds for the errors in estimating using (a) the trapezoidal rule, and (b) the Simpson's rule.    Find (a) an such that the -th trapezoidal estimate of is within of the actual value, and (b) an such that the -th Simpson's rule estimate of is within of the actual value.          "
 },
 {
   "id": "appendix-notation",

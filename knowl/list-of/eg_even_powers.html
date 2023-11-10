@@ -16,6 +16,18 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle \int \sin^2 x\cos^4 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_even_powers">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Both powers are even. We use the square identity to reduce powers across the board:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int \sin^2 x\cos^4 x\, dx \amp = \int \frac{1}{2}(1-\cos 2x)\left(\frac{1}{2}(1+\cos 2x)\right)^2\, dx \\
+\amp = \frac{1}{8}\int (1-\cos 2x)(1+\cos 2x)^2\, dx\\
+\amp = \frac{1}{8}\int 1+\cos 2x-\cos^2 2x-\cos^3 2x\, dx\\
+\amp = \frac{1}{8}\int 1-\cos^2 2x+\sin^2 x\cos x\, dx \amp (\cos^3 x=(1-\sin^2 x)\cos x)\\
+\amp =\frac{1}{8}\int \frac{1}{2}-\frac{1}{4}\cos 4x+\underset{u^2}{\underbrace{\sin^2 2x}}\, \underset{\frac{du}{2}}{\underbrace{\cos 2x\, dx}} \amp (\cos 2x=\frac{1}{2}(1+\cos 4x))\\
+\amp = \frac{1}{16}x-\frac{1}{64}\sin 4x+\frac{1}{48}\sin^3 2x+C \amp (u=\sin 2x, du=2\cos 2x dx)\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_even_powers">in-context</a></span>
 </body>
 </html>

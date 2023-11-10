@@ -16,6 +16,21 @@
 </h3>
 <div class="para">Compute  <span class="process-math">\(\displaystyle \int \tan^5 x \, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_tan_power">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Following the suggestion of <a href="" class="xref" data-knowl="./knowl/xref/proc_int_tansec.html" title="Procedure 1.19.3: Integrating \tan^m x\sec^n x">Procedure 1.19.3</a> we</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_tansec.html">
+\begin{equation*}
+\tan^5 x=(\tan^2 x)^2\tan x=(\sec^4 x-2\sec^2 x+1)\tan x\text{,}
+\end{equation*}
+</div>
+<div class="para">from which we conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_tansec.html">
+\begin{align*}
+\int \tan^5 x\, dx \amp = \int \sec^4 x\tan x-2\sec^2 x\tan x+\tan x\, dx \\
+\amp = \int \underset{u^3}{\underbrace{\sec^3 x}}\, \underset{du}{\underbrace{\sec x\tan x}}-2\underset{u}{\underbrace{\sec x}} \, \underset{du}{\underbrace{\sec x\tan x}}+\tan x\, dx \\
+\amp =\frac{1}{4}\sec^4 x-\sec^2 x-\ln\abs{\cos x}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_int.html#eg_tan_power">in-context</a></span>
 </body>
 </html>

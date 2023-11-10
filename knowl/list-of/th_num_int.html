@@ -26,7 +26,7 @@ a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b\text{.}
 <ol class="decimal">
 <li>
 <span class="heading"><span class="title">Right/left Riemann sums.</span></span><div class="para logical">
-<div class="para">Let <span class="process-math">\(R_n\)</span> be either the right or left Riemann sum for this partition. Suppose <span class="process-math">\(\vert f'(x)\vert \leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{.}\)</span> Then</div>
+<div class="para">Let <span class="process-math">\(R_n\)</span> be either the right or left Riemann sum for this partition. If <span class="process-math">\(f'\)</span> is continuous and <span class="process-math">\(\vert f'(x)\vert \leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left\vert\int_a^b f(x)\, dx - R_n\right\vert\leq \frac{M(b-a)^2}{2n}\text{.}
@@ -36,7 +36,7 @@ a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b\text{.}
 </li>
 <li>
 <span class="heading"><span class="title">Midpoint Riemann sum.</span></span><div class="para logical">
-<div class="para">Let <span class="process-math">\(M_n\)</span> be the midpoint Riemann sum for this partition. Suppose <span class="process-math">\(\vert f''(x)\vert \leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{.}\)</span> Then</div>
+<div class="para">Let <span class="process-math">\(M_n\)</span> be the midpoint Riemann sum for this partition. If <span class="process-math">\(f''\)</span> is continuous and <span class="process-math">\(\vert f''(x)\vert \leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left\vert\int_a^b f(x)\, dx - M_n\right\vert\leq \frac{M(b-a)^3}{24n^2}\text{.}
@@ -46,20 +46,20 @@ a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b\text{.}
 </li>
 <li>
 <span class="heading"><span class="title">Trapezoidal estimate.</span></span><div class="para logical">
-<div class="para">Let <span class="process-math">\(T_n\)</span> be the <span class="process-math">\(n\)</span>-th trapezoidal estimate of <span class="process-math">\(\int_a^b f(x)\, dx\text{.}\)</span> Suppose <span class="process-math">\(\vert f''(x)\vert\leq N\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{.}\)</span> Then</div>
+<div class="para">Let <span class="process-math">\(T_n\)</span> be the <span class="process-math">\(n\)</span>-th trapezoidal estimate of <span class="process-math">\(\int_a^b f(x)\, dx\text{.}\)</span> If <span class="process-math">\(f''\)</span> is continuous and <span class="process-math">\(\vert f''(x)\vert\leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\left\vert\int_a^b f(x)\, dx - T_n\right\vert\leq\frac{N(b-a)^3}{12n^2}\text{.}
+\left\vert\int_a^b f(x)\, dx - T_n\right\vert\leq\frac{M(b-a)^3}{12n^2}\text{.}
 \end{equation*}
 </div>
 </div>
 </li>
 <li>
 <span class="heading"><span class="title">Simpson’s rule.</span></span><div class="para logical">
-<div class="para">Suppose <span class="process-math">\(n\)</span> is even, and let <span class="process-math">\(S_n\)</span> be the <span class="process-math">\(n\)</span>-th Simpson’s rule estimate of <span class="process-math">\(\int_a^bf(x)\, dx\text{.}\)</span> Suppose <span class="process-math">\(\vert f^{(4)}(x)\vert\leq K\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{.}\)</span> Then</div>
+<div class="para">Suppose <span class="process-math">\(n\)</span> is even, and let <span class="process-math">\(S_n\)</span> be the <span class="process-math">\(n\)</span>-th Simpson’s rule estimate of <span class="process-math">\(\int_a^bf(x)\, dx\text{.}\)</span> If <span class="process-math">\(f^{(4)}\)</span> is continuous and <span class="process-math">\(\vert f^{(4)}(x)\vert\leq M\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\left\vert\int_a^b f(x)\, dx - S_n\right\vert\leq\frac{K(b-a)^5}{180n^4}\text{.}
+\left\vert\int_a^b f(x)\, dx - S_n\right\vert\leq\frac{M(b-a)^5}{180n^4}\text{.}
 \end{equation*}
 </div>
 </div>
