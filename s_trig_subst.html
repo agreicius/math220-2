@@ -236,7 +236,7 @@ window.MathJax = {
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_trig_subst.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Trigonometric substitution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_rational_functions.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Rational functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_A.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Numerical integration: techniques</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_B.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Numerical integration: error estimates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_B.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Numerical integration: error bounds</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -309,8 +309,8 @@ f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp
 </h3>
 <div class="para" id="p-582">When finishing an integral computation <span class="process-math">\(\int f(x)\, dx\)</span> using an trigonometric substitution, the following types of <dfn class="terminology">reference triangles</dfn> are useful for converting your expression back in terms of <span class="process-math">\(x\text{.}\)</span>
 </div> <div class="para" id="p-583">For the sake of space, we only provide examples of reference triangles where the angle <span class="process-math">\(\theta\)</span> lies in <span class="process-math">\([0,\pi/2]\text{.}\)</span> In practice, you should provide a reference triangle diagram that reflects the interval <span class="process-math">\(\theta\)</span> is restricted to, and take care with the sign of the various trigonometric values.</div> <ol class="decimal">
-<li id="li-287">
-<div class="para logical" id="p-584">
+<li id="ref_tri_sin">
+<span class="heading"><span class="title">Sine substitution.</span></span><div class="para logical" id="p-584">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\sin \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following helps us see that</div>
 <div class="displaymath process-math" id="md-126">
 \begin{align*}
@@ -321,8 +321,8 @@ f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp
 <figure class="figure figure-like" id="fig_sin_ref_tri"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_sin_ref_tri.svg" role="img" class="contained" alt="Reference triange for sine substitution"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20.4<span class="period">.</span></span><span class="space"> </span>Reference triangle for <span class="process-math">\(x=a\sin\theta\)</span></figcaption></figure>
 </li>
-<li id="li-288">
-<div class="para logical" id="p-585">
+<li id="ref_tri_tan">
+<span class="heading"><span class="title">Tangent substitution.</span></span><div class="para logical" id="p-585">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\tan \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following allows us to deduce that</div>
 <div class="displaymath process-math" id="md-127">
 \begin{align*}
@@ -333,16 +333,16 @@ f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp
 <figure class="figure figure-like" id="fig_tan_ref_tri"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_tan_ref_tri.svg" role="img" class="contained" alt="Reference triangle for tangent substitution"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20.5<span class="period">.</span></span><span class="space"> </span>Reference triangle for <span class="process-math">\(x=a\tan\theta\)</span></figcaption></figure>
 </li>
-<li id="li-289">
-<div class="para logical" id="p-586">
+<li id="ref_tri_sec">
+<span class="heading"><span class="title">Secant substitution.</span></span><div class="para logical" id="p-586">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\sec \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following allows us to deduce that</div>
-<div class="displaymath process-math" id="md-128">
-\begin{align*}
+<div class="displaymath process-math" id="mdn-19">
+\begin{align}
 \sin \theta\amp =\frac{\sqrt{a^2-x^2}}{\abs{x}} \amp \tan \theta\amp =\begin{cases} 
 \frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in [0,\pi/2) \\
 -\frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in (\pi/2, \pi].
-\end{cases}
-\end{align*}
+\end{cases}\tag{1.20.1}
+\end{align}
 </div>
 </div>
 <figure class="figure figure-like" id="fig_sec_ref_tri"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_sec_ref_tri.svg" role="img" class="contained" alt="Reference triangle for secant substitution"></div>
@@ -356,7 +356,7 @@ f(x) \text{ contains }  \sqrt{x^2-a^2} \amp \implies    \begin{array}{rcl} x\amp
 <ol class="decimal">
 <li id="li-290"><div class="para logical" id="p-588">
 <div class="para">Choose a one-to-one, differentiable substitution function <span class="process-math">\(g\)</span> with differentiable inverse and write down the two inverse substitution equations</div>
-<div class="displaymath process-math" id="md-129">
+<div class="displaymath process-math" id="md-128">
 \begin{align*}
 x\amp =g(t)\\
 dx\amp =g'(t)\, dt
@@ -379,7 +379,7 @@ dx\amp =g'(t)\, dt
 </div></div>
 <div class="solutions"><details id="solution-66" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-592">
 <div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a> we try the inverse substitution <span class="process-math">\(x=\sin \theta, dx=\cos \theta\, d\theta\)</span> with restriction <span class="process-math">\(-\pi/2\leq \theta\leq \pi/2\text{.}\)</span> We compute</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html" id="md-130">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html" id="md-129">
 \begin{align*}
 \int \sqrt{1-x^2}\, dx \amp = \int \sqrt{1-\sin^2\theta}\,  \cos\theta\, d\theta\\
 \amp = \int \sqrt{\cos^2\theta} \, \cos\theta\, d\ theta\\
@@ -403,7 +403,7 @@ dx\amp =g'(t)\, dt
 </div>
 <div class="solutions"><details id="solution-67" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-594">
 <div class="para">Let <span class="process-math">\(\mathcal{C}\)</span> be a circle of radius <span class="process-math">\(r\text{.}\)</span> Choosing the origin to be the center of <span class="process-math">\(\mathcal{C}\text{,}\)</span> we may assume that <span class="process-math">\(\mathcal{C}\)</span> has equation <span class="process-math">\(x^2+y^2=r^2\text{.}\)</span> The interior of the circle is the region <span class="process-math">\(\mathcal{R}\)</span> lying between the graphs of the two function <span class="process-math">\(y=f(x)=+\sqrt{r^2-x^2}\)</span> and <span class="process-math">\(y=g(x)=-\sqrt{r_2-x^2}\)</span> from <span class="process-math">\(x=-r\)</span> to <span class="process-math">\(x=r\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/d_area_between_curves_x.html" title="Definition 1.8.3: Area between curves: functions of x">Definition 1.8.3</a> we compute</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_area_between_curves_x.html" id="md-131">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_area_between_curves_x.html" id="md-130">
 \begin{align*}
 \operatorname{area}\mathcal{R} \amp = \int_{-r}^r\sqrt{r^2-x^2}-(-\sqrt{r^2-x^2}) \, dx \\
 \amp = 2\int_{-r}^{r}\sqrt{r^2-x^2}\, dx\\
@@ -424,7 +424,7 @@ dx\amp =g'(t)\, dt
 <div class="solutions"><details id="solution-68" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-596">
 <div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a>, we try the inverse substitution <span class="process-math">\(x=2\tan\theta\text{,}\)</span> <span class="process-math">\(dx=2\sec^2\theta dx\text{,}\)</span> <span class="process-math">\(\theta\in (-\pi/2, \pi/2)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html" id="md-132">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html" id="md-131">
 \begin{align*}
 \int \frac{1}{x^2\sqrt{x^2+4}}\, dx \amp = \int \frac{1}{4\tan^2 \theta\sqrt{4\tan^2\theta+4}}\cdot 2\sec^2\theta\, d\theta \\
 \amp = \frac{1}{4}\int \frac{1}{\tan^2\theta\sqrt{\sec^2\theta}}\cdot \sec^2\theta\, d\theta\\
@@ -446,14 +446,14 @@ dx\amp =g'(t)\, dt
 <div class="solutions"><details id="solution-69" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-598">
 <div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a> we try the inverse substitution <span class="process-math">\(x=a\sec\theta\text{,}\)</span> <span class="process-math">\(dx=a\sec\theta\tan\theta\text{,}\)</span> <span class="process-math">\(\theta\in [0,\pi/2)\cup (\pi/2, \pi]\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html ./knowl/xref/fig_sec_ref_tri.html" id="md-133">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html ./knowl/xref/ref_tri_sec.html ./knowl/xref/ref_tri_sec.html" id="md-132">
 \begin{align*}
 \int \frac{1}{\sqrt{x^2-a^2}}\, dx \amp = \int \frac{1}{\sqrt{a^2\sec^2 x-a^2}}\cdot a\sec\theta\tan\theta\, dx \\
 \amp =\int \frac{1}{\sqrt{\tan^2 \theta}}\sec\theta\tan\theta\, d\theta\\
 \amp = \begin{cases}
 \int \frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if } \theta\in [0,\pi/2) \\
 -\int\frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
-\end{cases}\\
+\end{cases} \amp (\knowl{./knowl/xref/ref_tri_sec.html}{\text{Secant substitution}})\\
 \amp = 
 \begin{cases}
 \int \sec\theta\, d\theta \amp  \text{if } \theta\in [0,\pi/2) \\
@@ -466,9 +466,16 @@ dx\amp =g'(t)\, dt
 \amp =\begin{cases}
 \ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
 -\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}+C \amp \text{if }\theta\in (\pi/2,\pi]
-\end{cases} \amp (\knowl{./knowl/xref/fig_sec_ref_tri.html}{\text{Figure 1.20.6}})\\
-\amp =\ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}} \amp (\ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}=-\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}!)\\
-\amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C\\
+\end{cases} \amp (\knowl{./knowl/xref/ref_tri_sec.html}{\text{Secant substitution}})\\
+\amp =\begin{cases}
+\ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+-\ln\abs{\frac{x-\sqrt{x^2-a^2}}{a}}+C+C \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases} \\
+\amp =\begin{cases}
+\ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C \amp  \text{if } \theta\in [0,\pi/2) \\
+\ln\abs{\frac{1}{x-\sqrt{x^2-a^2}}}-\ln a+C \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases} \amp (\text{algebra}) \\
+\amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C \amp \left(\frac{1}{x-\sqrt{x^2-a^2}}=x+\sqrt{x^2-a^2}\right)\\
 \amp = \ln\abs{x+\sqrt{x^2-a^2}}+D\text{.}
 \end{align*}
 </div>
@@ -479,7 +486,7 @@ dx\amp =g'(t)\, dt
 </div>
 <div class="solutions"><details id="solution-70" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-600">
 <div class="para">We use the inverse substitution <span class="process-math">\(x=\sec\theta, dx=\sec\theta\tan\theta\text{.}\)</span> Solve <span class="process-math">\(-1/\sqrt{2}=\sec\theta\)</span> and <span class="process-math">\(-2/\sqrt{3}=\sec\theta\)</span> for <span class="process-math">\(\theta\in [0,\pi/2)\cup (\pi/2,\pi]\text{,}\)</span> we see that the new limits of integration are <span class="process-math">\(\theta=3\pi/4\)</span> and <span class="process-math">\(\theta=5\pi/6\text{.}\)</span> Thus we have</div>
-<div class="displaymath process-math" id="md-134">
+<div class="displaymath process-math" id="md-133">
 \begin{align*}
 \int_{-\sqrt{2}}^{-2/\sqrt{3}}\frac{\sqrt{ \theta^2-1}}{ \theta}\, d \theta \amp = \int_{3\pi/4}^{5\pi/6}\frac{\sqrt{\sec^2 \theta-1}}{\sec  \theta}\cdot \sec  \theta\tan \theta\,  d\theta \\
 \amp =\int_{3\pi/4}^{5\pi/6}\frac{\abs{\tan \theta}}{\sec \theta}\cdot \sec \theta\tan \theta\,  d\theta  \\

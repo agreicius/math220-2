@@ -17,7 +17,7 @@
 <div class="para">When finishing an integral computation <span class="process-math">\(\int f(x)\, dx\)</span> using an trigonometric substitution, the following types of <dfn class="terminology">reference triangles</dfn> are useful for converting your expression back in terms of <span class="process-math">\(x\text{.}\)</span>
 </div> <div class="para">For the sake of space, we only provide examples of reference triangles where the angle <span class="process-math">\(\theta\)</span> lies in <span class="process-math">\([0,\pi/2]\text{.}\)</span> In practice, you should provide a reference triangle diagram that reflects the interval <span class="process-math">\(\theta\)</span> is restricted to, and take care with the sign of the various trigonometric values.</div> <ol class="decimal">
 <li>
-<div class="para logical">
+<span class="heading"><span class="title">Sine substitution.</span></span><div class="para logical">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\sin \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following helps us see that</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -29,7 +29,7 @@
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20.4<span class="period">.</span></span><span class="space"> </span>Reference triangle for <span class="process-math">\(x=a\sin\theta\)</span></figcaption></figure>
 </li>
 <li>
-<div class="para logical">
+<span class="heading"><span class="title">Tangent substitution.</span></span><div class="para logical">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\tan \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following allows us to deduce that</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -41,15 +41,15 @@
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20.5<span class="period">.</span></span><span class="space"> </span>Reference triangle for <span class="process-math">\(x=a\tan\theta\)</span></figcaption></figure>
 </li>
 <li>
-<div class="para logical">
+<span class="heading"><span class="title">Secant substitution.</span></span><div class="para logical">
 <div class="para">Consider the substitution <span class="process-math">\(x=a\sec \theta\text{,}\)</span> where <span class="process-math">\(a\)</span> is positive. A reference diagram like the following allows us to deduce that</div>
 <div class="displaymath process-math">
-\begin{align*}
+\begin{align}
 \sin \theta\amp =\frac{\sqrt{a^2-x^2}}{\abs{x}} \amp \tan \theta\amp =\begin{cases} 
 \frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in [0,\pi/2) \\
 -\frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in (\pi/2, \pi].
-\end{cases}
-\end{align*}
+\end{cases}\tag{1.20.1}
+\end{align}
 </div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_sec_ref_tri.svg" role="img" class="contained" alt="Reference triangle for secant substitution"></div>

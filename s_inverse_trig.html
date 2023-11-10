@@ -236,7 +236,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_subst.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Trigonometric substitution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_rational_functions.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Rational functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_A.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Numerical integration: techniques</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_B.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Numerical integration: error estimates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_num_int_B.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Numerical integration: error bounds</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -453,7 +453,7 @@ u=\arcsin(2/3)+2\pi n \text{ or } u=(\pi-\arcsin(2/3))+2\pi n\text{.}
 \begin{align*}
 \frac{d}{dx} \arcsin x \amp = \frac{1}{f'(\arcsin x)}\\
 \amp = \frac{1}{\cos(\arcsin x)}\\
-\amp = \frac{1}{\sqrt{1-x^2}\text{.}
+\amp = \frac{1}{\sqrt{1-x^2}}\text{.}
 \end{align*}
 </div>
 <div class="para">The last step here is perhaps the most interesting, and follows from the fact that <span class="process-math">\(\cos(\arcsin x)=\sqrt{1-x^2}\)</span> for any <span class="process-math">\(x\in [-1,1]\text{.}\)</span> Why is this true? Set <span class="process-math">\(\arcsin x=\theta\text{,}\)</span> an angle lying in <span class="process-math">\([-\pi/2,\pi/2]\text{.}\)</span> Using the fact that <span class="process-math">\(\sin \theta=x\text{,}\)</span> we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length <span class="process-math">\(\abs{x}\text{,}\)</span> the horizontal leg has length <span class="process-math">\(\sqrt{1-\abs{x}^2}=\sqrt{1-x^2}\text{.}\)</span> Since this length is equal to the <span class="process-math">\(x\)</span>-coordinate of the point <span class="process-math">\(P\)</span> below, we have <span class="process-math">\(\cos \theta=\sqrt{1-x^2}\)</span> and thus <span class="process-math">\(\cos(\arcsin x)=\sqrt{1-x^2}\text{,}\)</span> as claimed. <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/arcsin_der.png" class="contained" alt="Unit circle picture for arcsin derivative proof"></div>
