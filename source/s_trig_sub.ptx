@@ -220,7 +220,19 @@
   </statement>
   <solution>
     <p>
-      
+      Let <m>\mathcal{C}</m> be a circle of radius <m>r</m>. Choosing the origin to be the center of <m>\mathcal{C}</m>, we may assume that <m>\mathcal{C}</m> has equation <m>x^2+y^2=r^2</m>. The interior of the circle is the region <m>\mathcal{R}</m> lying between the graphs of the two function <m>y=f(x)=+\sqrt{r^2-x^2}</m> and <m>y=g(x)=-\sqrt{r_2-x^2}</m> from <m>x=-r</m> to <m>x=r</m>. Using <xref ref="d_area_between_curves_x"/> we compute
+      <md>
+        <mrow>\operatorname{area}\mathcal{R} \amp = \int_{-r}^r\sqrt{r^2-x^2}-(-\sqrt{r^2-x^2}) \, dx </mrow>
+        <mrow> \amp = 2\int_{-r}^{r}\sqrt{r^2-x^2}\, dx</mrow>
+        <mrow> \amp = 2\int_{-\pi/2}^{\pi/2}\sqrt{r^2-r^2\sin^2\theta }\, r\cos \theta\, d\theta \amp (x=r\sin\theta, dx=r\cos\theta dx)</mrow>
+        <mrow> \amp 2r^2\int_{-\pi/2}^{\pi/2}\sqrt{\cos^2\theta}\cos\theta\, d\theta</mrow>
+        <mrow> \amp 2r^2\int_{-\pi/2}^{\pi/2}\abs{\cos\theta}\cos\theta\, d\theta</mrow>
+        <mrow> \amp = 2r^2\int_{-\pi/2}^{\pi/2}\cos^2\theta\, d\theta \amp (\theta\in [-\pi/2,\pi/2]\implies \cos\theta &gt; 0)
+        </mrow>
+        <mrow> \amp = 2r^2(\frac{1}{2}\theta+\frac{1}{2}\sin 2\theta)\Bigr\vert_{-\pi/2}^{\pi/2} \amp (\cos^2\theta=\frac{1}{2}(1+\cos 2\theta))</mrow>
+        <mrow> \amp = 2r^2(\pi/4-(-\pi/4))</mrow>
+        <mrow> \amp = \pi r^2</mrow>
+      </md>.
     </p>
   </solution>
 </example>
@@ -228,12 +240,36 @@
   <title>Tangent substitution</title>
   <statement>
     <p>
-      Compute <m>\displaystyle\int \frac{1}{x^2\sqrt{x^2+4}}</m>.
+      Compute <m>\displaystyle\int \frac{1}{x^2\sqrt{x^2+4}}\, dx</m>.
     </p>
   </statement>
   <solution>
     <p>
-      
+      Following <xref ref="proc_trig_sub"/>, we try the inverse substitution <m>x=2\tan\theta</m>, <m>dx=2\sec^2\theta dx</m>, <m>\theta\in (-\pi/2, \pi/2)</m>: 
+      <md>
+        <mrow> \int \frac{1}{x^2\sqrt{x^2+4}}\, dx \amp = \int \frac{1}{4\tan^2 \theta\sqrt{4\tan^2\theta+4}}\cdot 2\sec^2\theta\, d\theta </mrow>
+        <mrow> \amp = \frac{1}{4}\int \frac{1}{\tan^2\theta\sqrt{\sec^2\theta}}\cdot \sec^2\theta\, d\theta</mrow>
+        <mrow> \amp = \frac{1}{4}\int \frac{1}{\tan^2\theta\abs{\sec\theta}}\cdot \sec^2\theta\, d\theta</mrow>
+        <mrow> \amp =\frac{1}{4}\int \frac{1}{\tan^2\theta \sec\theta}\cdot \sec^2\theta\, d\theta \amp (\theta\in (-\pi/2, \pi/2)\implies \sec\theta &gt; 0)</mrow>
+        <mrow> \amp =\frac{1}{4}\int \frac{\sec\theta}{\tan^2\theta}\, d\theta</mrow>
+        <mrow> \amp = \frac{1}{4}\int \frac{\cos \theta}{\sin^2\theta}\, d\theta</mrow>
+        <mrow> \amp = -\frac{1}{4\sin\theta}+C</mrow>
+        <mrow> \amp = -\frac{\sqrt{x^2+4}}{4x}+C</mrow>
+      </md>.
+      Here we deduce that <m>\sin\theta=\frac{x}{\sqrt{x^2+4}}</m> from the reference triangle for <m>x=2\tan\theta</m>.
+      <image xml:id="im_tan_ref_tri_eg" width="50%">
+        <description>Reference triangle for tangent substitution</description>
+        <sageplot>
+          T=line([(0,0),(1/2,1/2),(1/2,0),(0,0)], axes=False, ticks=[[],[]],aspect_ratio=1.1)
+          t1=text(r'$x=2\tan\theta$', (.58,1/4), fontsize=16, color="black")
+          t2=text(r'$2$', (.3,1/32), fontsize=16, color="black")
+          t3=text(r"$\sqrt{x^2+4}$", (3/16,.3),fontsize=16,color="black")
+          t4=text(r"$\theta$", (2/32, .02),fontsize=16, color="black")
+          T+t1+t2+t3+t4
+        </sageplot>
+      </image>
+
+
     </p>
   </solution>
 </example>
@@ -246,7 +282,35 @@
   </statement>
   <solution>
     <p>
-      
+      Following <xref ref="proc_trig_sub"/> we try the inverse substitution <m>x=a\sec\theta</m>, <m>dx=a\sec\theta\tan\theta</m>, <m>\theta\in [0,\pi/2)\cup (\pi/2, \pi]</m>: 
+      <md>
+        <mrow> \int \frac{1}{\sqrt{x^2-a^2}}\, dx \amp = \int \frac{1}{\sqrt{a^2\sec^2 x-a^2}}\cdot a\sec\theta\tan\theta\, dx </mrow>
+        <mrow> \amp =\int \frac{1}{\sqrt{\tan^2 \theta}}\sec\theta\tan\theta\, d\theta</mrow>
+        <mrow> \amp = \begin{cases}
+          \int \frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if } \theta\in [0,\pi/2) \\
+          -\int\frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
+        \end{cases}
+        </mrow>
+        <mrow> \amp = 
+          \begin{cases}
+          \int \sec\theta\, d\theta \amp  \text{if } \theta\in [0,\pi/2) \\
+          -\int\sec\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
+          \end{cases}
+        </mrow>
+        <mrow> \amp = \begin{cases}
+          \ln\abs{\sec\theta+\tan\theta}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+          -\ln\abs{\sec\theta+\tan\theta}+C \amp \text{if }\theta\in (\pi/2,\pi]
+        \end{cases}
+         </mrow>
+         <mrow> \amp =\begin{cases}
+          \ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+          -\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}+C \amp \text{if }\theta\in (\pi/2,\pi]
+        \end{cases} \amp (<xref ref="fig_sec_ref_tri"/>)</mrow>
+        <mrow> \amp =\ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}} \amp (\ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}=-\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}!)</mrow>
+        <mrow> \amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C</mrow>
+        <mrow> \amp = \ln\abs{x+\sqrt{x^2-a^2}}+D</mrow>
+      </md>. 
+
     </p>
   </solution>
 </example>
@@ -259,7 +323,15 @@
   </statement>
   <solution>
     <p>
-      
+      We use the inverse substitution <m>x=\sec\theta, dx=\sec\theta\tan\theta</m>. Solve <m>-1/\sqrt{2}=\sec\theta</m> and <m>-2/\sqrt{3}=\sec\theta</m> for <m>\theta\in [0,\pi/2)\cup (\pi/2,\pi]</m>, we see that the new limits of integration are <m>\theta=3\pi/4</m> and <m>\theta=5\pi/6</m>. Thus we have 
+      <md>
+        <mrow> \int_{-\sqrt{2}}^{-2/\sqrt{3}}\frac{\sqrt{ \theta^2-1}}{ \theta}\, d \theta \amp = \int_{3\pi/4}^{5\pi/6}\frac{\sqrt{\sec^2 \theta-1}}{\sec  \theta}\cdot \sec  \theta\tan \theta\,  d\theta </mrow>
+        <mrow> \amp =\int_{3\pi/4}^{5\pi/6}\frac{\abs{\tan \theta}}{\sec \theta}\cdot \sec \theta\tan \theta\,  d\theta  </mrow>
+        <mrow> \amp = \int_{3\pi/4}^{5\pi/6}-\tan^2 \theta\,  d\theta  \amp (\theta\in (\pi/2, \pi]\implies \tan\theta&lt; 0)</mrow>
+        <mrow> \amp = \int_{3\pi/4}^{5\pi/6}1-\sec^2 \theta\, d\theta</mrow>
+        <mrow> \amp = \theta-\tan\theta\Bigr\vert_{3\pi/4}^{5\pi/6}</mrow>
+        <mrow> \amp = \frac{\pi}{12}+\frac{1}{\sqrt{3}}-1</mrow>
+      </md>.
     </p>
   </solution>
 </example>
@@ -270,14 +342,14 @@
     <p> Find an antiderivative <m>F</m> of the function  <m>f(x)=\frac{\sqrt{x^2-1}}{x}\, dx</m> on the domain <m>(-\infty,-1]\cup [1,\infty)</m>. The only inverse trigonometric functions allowed to appear in your formula for <m>F</m> are <m>\arcsin x</m> and <m>\arctan x</m>. 
     </p>
   </statement>
-  <hint>
+  <!-- <hint>
     <p>
       Treat the cases <m>x\geq 1</m> and <m>x\leq -1</m> separately and use the absolute value function to combine your two results into a single formula. 
     </p>
-  </hint>
+  </hint> -->
   <solution>
     <p>
-      
+      To be assigned on written homework. 
     </p>
   </solution>
 </example>
