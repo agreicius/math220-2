@@ -257,7 +257,7 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="d_trap_rule"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.22.1</span><span class="period">.</span><span class="space"> </span><span class="title">Trapezoidal rule.</span>
-</h3> <div class="para logical" id="p-631">
+</h3> <div class="para logical" id="p-630">
 <div class="para">Let <span class="process-math">\(f\)</span> be an integrable function on <span class="process-math">\([a,b]\text{,}\)</span> let <span class="process-math">\(n\)</span> be a positive integer, and let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -266,17 +266,17 @@ a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b
 </div>
 <div class="para">be partition of <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length <span class="process-math">\(\Delta x=\frac{b-a}{n}\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-632">
+</div> <div class="para logical" id="p-631">
 <div class="para">The <em class="emphasis"><span class="process-math">\(n\)</span>-th trapezoidal estimate</em> of <span class="process-math">\(\displaystyle\int f(x)\, dx\text{,}\)</span> denoted <span class="process-math">\(T_n\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
 T_n=\frac{1}{2}\Delta x(f(x_0)+2f(x_1)+2f(x_2)+\cdots +2f(x_{n-1})+f(x_n))\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-633">The trapezoidal estimate is the result of approximating the graph of <span class="process-math">\(f\)</span> with the polygon passing through the points <span class="process-math">\(P_0=(x_0, f(x_0)), P_1=(x_1,f(x_1)), \dots, P_n=(x_n, f(x_n))\text{.}\)</span>
+</div> <div class="para" id="p-632">The trapezoidal estimate is the result of approximating the graph of <span class="process-math">\(f\)</span> with the polygon passing through the points <span class="process-math">\(P_0=(x_0, f(x_0)), P_1=(x_1,f(x_1)), \dots, P_n=(x_n, f(x_n))\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_Simpsons_rule"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.22.2</span><span class="period">.</span><span class="space"> </span><span class="title">Simpson’s rule.</span>
-</h3> <div class="para logical" id="p-634">
+</h3> <div class="para logical" id="p-633">
 <div class="para">Let <span class="process-math">\(f\)</span> be an integrable function on <span class="process-math">\([a,b]\text{,}\)</span> let <span class="process-math">\(n=2r\)</span> be an even positive integer, and let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -285,14 +285,14 @@ a=x_0\lt  x_1\lt  x_2\lt \cdots \lt  x_n=b
 </div>
 <div class="para">be partition of <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length <span class="process-math">\(\Delta x=\frac{b-a}{n}\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-635">
+</div> <div class="para logical" id="p-634">
 <div class="para">The <em class="emphasis"><span class="process-math">\(n\)</span>-th Simpson’s rule estimate</em> of <span class="process-math">\(\displaystyle\int f(x)\, dx\text{,}\)</span> denoted <span class="process-math">\(S_n\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
 S_n=\frac{1}{3}\Delta x(f(x_0)+4f(x_1)+2f(x_2)+\cdots +2f(x_{n-2})+4f(x_{n-1})+f(x_n))\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-636">
+</div> <div class="para logical" id="p-635">
 <div class="para">The Simpson’s rule estimate is the result of approximating the graph of <span class="process-math">\(f\)</span> over each of the <span class="process-math">\(r\)</span> subintervals <span class="process-math">\([x_{2(k-1)},x_{2k}]\)</span> with the unique “parabolic arc”<a class="xref" id="fn-6" href="" data-knowl="./knowl/fn/fn-6.html" title="Footnote 1.22.1"><sup> 1 </sup></a> passing through the points</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -301,28 +301,28 @@ P_{2(k-1)}=(x_{2(k-1)}, f(x_{2(k-1)})), P_{2k-1}=(x_{2k-1}, f(x_{2k-1})), P_{2k}
 </div>
 </div></article><details id="proj_trap_Simp" class="project project-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Interactive example</span><span class="space"> </span><span class="codenumber">1.22.1</span><span class="period">.</span><span class="space"> </span><span class="title">Trapezoidal and Simpson’s rule.</span>
-</h3></summary><article class="project project-like"> <div class="para" id="p-637">Here is a GeoGebra interactive that illustrates the trapezoidal and Simpson’s rule techniques for estimating integrals. <figure class="figure figure-like" id="fig_trap_Simp"><iframe src="https://www.geogebra.org/material/iframe/id/vfmheunc/width/800/height/800/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" id="interactive-3" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.22.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.geogebra.org/classic/vfmheunc" target="_blank">GeoGebra: trapezoidal and Simpson’s rule</a><a class="xref" id="fn-7" href="" data-knowl="./knowl/fn/fn-7.html" title="Footnote 1.22.2"><sup> 2 </sup></a></figcaption></figure>
+</h3></summary><article class="project project-like"> <div class="para" id="p-636">Here is a GeoGebra interactive that illustrates the trapezoidal and Simpson’s rule techniques for estimating integrals. <figure class="figure figure-like" id="fig_trap_Simp"><iframe src="https://www.geogebra.org/material/iframe/id/vfmheunc/width/800/height/800/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" id="interactive-3" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.22.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.geogebra.org/classic/vfmheunc" target="_blank">GeoGebra: trapezoidal and Simpson’s rule</a><a class="xref" id="fn-7" href="" data-knowl="./knowl/fn/fn-7.html" title="Footnote 1.22.2"><sup> 2 </sup></a></figcaption></figure>
 </div></article></details><article class="example example-like" id="example-79"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.22.4</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating <span class="process-math">\(\ln 4\)</span>.</span>
 </h3>
-<div class="para" id="p-638">Let <span class="process-math">\(f(x)=\frac{1}{x}\text{.}\)</span> Recall that we have by definition <span class="process-math">\(\ln 4=\int_1^4f(x)\, dx\text{.}\)</span> Compute (a) the <span class="process-math">\(n=6\)</span> trapezoidal estimate of <span class="process-math">\(I\text{,}\)</span> and (b) the <span class="process-math">\(n=6\)</span> Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
+<div class="para" id="p-637">Let <span class="process-math">\(f(x)=\frac{1}{x}\text{.}\)</span> Recall that we have by definition <span class="process-math">\(\ln 4=\int_1^4f(x)\, dx\text{.}\)</span> Compute (a) the <span class="process-math">\(n=6\)</span> trapezoidal estimate of <span class="process-math">\(I\text{,}\)</span> and (b) the <span class="process-math">\(n=6\)</span> Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-77" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-639"></div></div></details></div></article><article class="example example-like" id="example-80"><h3 class="heading">
+<div class="solutions"><details id="solution-77" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-638"></div></div></details></div></article><article class="example example-like" id="example-80"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.22.5</span><span class="period">.</span><span class="space"> </span><span class="title">Estimating <span class="process-math">\(\pi\)</span>.</span>
 </h3>
-<div class="para logical" id="p-640">
+<div class="para logical" id="p-639">
 <div class="para">Let <span class="process-math">\(f(x)=\frac{4}{x^2+1}\text{,}\)</span> and let <span class="process-math">\(I=\int_0^1f(x)\, dx\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-304"><div class="para" id="p-641">Show that <span class="process-math">\(I=\pi\text{.}\)</span>
+<li id="li-304"><div class="para" id="p-640">Show that <span class="process-math">\(I=\pi\text{.}\)</span>
 </div></li>
-<li id="li-305"><div class="para" id="p-642">Estimate <span class="process-math">\(\pi\)</span> using the <span class="process-math">\(n=6\)</span> trapezoidal estimate of <span class="process-math">\(I\text{.}\)</span>
+<li id="li-305"><div class="para" id="p-641">Estimate <span class="process-math">\(\pi\)</span> using the <span class="process-math">\(n=6\)</span> trapezoidal estimate of <span class="process-math">\(I\text{.}\)</span>
 </div></li>
-<li id="li-306"><div class="para" id="p-643">Estimate <span class="process-math">\(\pi\)</span> using the <span class="process-math">\(n=6\)</span> Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
+<li id="li-306"><div class="para" id="p-642">Estimate <span class="process-math">\(\pi\)</span> using the <span class="process-math">\(n=6\)</span> Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-78" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-644"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-78" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-643"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_rational_functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_num_int_B.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

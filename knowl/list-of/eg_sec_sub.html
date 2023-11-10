@@ -16,6 +16,18 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle\int_{-\sqrt{2}}^{-2/\sqrt{3}}\frac{\sqrt{x^2-1}}{x}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_sec_sub">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">We use the inverse substitution <span class="process-math">\(x=\sec\theta, dx=\sec\theta\tan\theta\text{.}\)</span> Solve <span class="process-math">\(-1/\sqrt{2}=\sec\theta\)</span> and <span class="process-math">\(-2/\sqrt{3}=\sec\theta\)</span> for <span class="process-math">\(\theta\in [0,\pi/2)\cup (\pi/2,\pi]\text{,}\)</span> we see that the new limits of integration are <span class="process-math">\(\theta=3\pi/4\)</span> and <span class="process-math">\(\theta=5\pi/6\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{-\sqrt{2}}^{-2/\sqrt{3}}\frac{\sqrt{ \theta^2-1}}{ \theta}\, d \theta \amp = \int_{3\pi/4}^{5\pi/6}\frac{\sqrt{\sec^2 \theta-1}}{\sec  \theta}\cdot \sec  \theta\tan \theta\,  d\theta \\
+\amp =\int_{3\pi/4}^{5\pi/6}\frac{\abs{\tan \theta}}{\sec \theta}\cdot \sec \theta\tan \theta\,  d\theta  \\
+\amp = \int_{3\pi/4}^{5\pi/6}-\tan^2 \theta\,  d\theta  \amp (\theta\in (\pi/2, \pi]\implies \tan\theta&lt; 0)\\
+\amp = \int_{3\pi/4}^{5\pi/6}1-\sec^2 \theta\, d\theta\\
+\amp = \theta-\tan\theta\Bigr\vert_{3\pi/4}^{5\pi/6}\\
+\amp = \frac{\pi}{12}+\frac{1}{\sqrt{3}}-1\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_sec_sub">in-context</a></span>
 </body>
 </html>

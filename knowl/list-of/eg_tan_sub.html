@@ -14,8 +14,25 @@
 <article class="example example-like"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.20.10</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent substitution.</span>
 </h3>
-<div class="para">Compute <span class="process-math">\(\displaystyle\int \frac{1}{x^2\sqrt{x^2+4}}\text{.}\)</span>
+<div class="para">Compute <span class="process-math">\(\displaystyle\int \frac{1}{x^2\sqrt{x^2+4}}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_tan_sub">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a>, we try the inverse substitution <span class="process-math">\(x=2\tan\theta\text{,}\)</span> <span class="process-math">\(dx=2\sec^2\theta dx\text{,}\)</span> <span class="process-math">\(\theta\in (-\pi/2, \pi/2)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html">
+\begin{align*}
+\int \frac{1}{x^2\sqrt{x^2+4}}\, dx \amp = \int \frac{1}{4\tan^2 \theta\sqrt{4\tan^2\theta+4}}\cdot 2\sec^2\theta\, d\theta \\
+\amp = \frac{1}{4}\int \frac{1}{\tan^2\theta\sqrt{\sec^2\theta}}\cdot \sec^2\theta\, d\theta\\
+\amp = \frac{1}{4}\int \frac{1}{\tan^2\theta\abs{\sec\theta}}\cdot \sec^2\theta\, d\theta\\
+\amp =\frac{1}{4}\int \frac{1}{\tan^2\theta \sec\theta}\cdot \sec^2\theta\, d\theta \amp (\theta\in (-\pi/2, \pi/2)\implies \sec\theta &gt; 0)\\
+\amp =\frac{1}{4}\int \frac{\sec\theta}{\tan^2\theta}\, d\theta\\
+\amp = \frac{1}{4}\int \frac{\cos \theta}{\sin^2\theta}\, d\theta\\
+\amp = -\frac{1}{4\sin\theta}+C\\
+\amp = -\frac{\sqrt{x^2+4}}{4x}+C\text{.}
+\end{align*}
+</div>
+<div class="para">Here we deduce that <span class="process-math">\(\sin\theta=\frac{x}{\sqrt{x^2+4}}\)</span> from the reference triangle for <span class="process-math">\(x=2\tan\theta\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_tan_ref_tri_eg.svg" role="img" class="contained" alt="Reference triangle for tangent substitution"></div>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_tan_sub">in-context</a></span>
 </body>
 </html>

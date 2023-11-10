@@ -16,6 +16,35 @@
 </h3>
 <div class="para">Let <span class="process-math">\(a\)</span> be a fixed positive number. Compute <span class="process-math">\(\displaystyle \int \frac{1}{\sqrt{x^2-a^2}}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_sec_sub_easy">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_trig_sub.html" title="Procedure 1.20.2: Trigonometric substitution">Procedure 1.20.2</a> we try the inverse substitution <span class="process-math">\(x=a\sec\theta\text{,}\)</span> <span class="process-math">\(dx=a\sec\theta\tan\theta\text{,}\)</span> <span class="process-math">\(\theta\in [0,\pi/2)\cup (\pi/2, \pi]\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_trig_sub.html ./knowl/xref/fig_sec_ref_tri.html">
+\begin{align*}
+\int \frac{1}{\sqrt{x^2-a^2}}\, dx \amp = \int \frac{1}{\sqrt{a^2\sec^2 x-a^2}}\cdot a\sec\theta\tan\theta\, dx \\
+\amp =\int \frac{1}{\sqrt{\tan^2 \theta}}\sec\theta\tan\theta\, d\theta\\
+\amp = \begin{cases}
+\int \frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if } \theta\in [0,\pi/2) \\
+-\int\frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases}\\
+\amp = 
+\begin{cases}
+\int \sec\theta\, d\theta \amp  \text{if } \theta\in [0,\pi/2) \\
+-\int\sec\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases}\\
+\amp = \begin{cases}
+\ln\abs{\sec\theta+\tan\theta}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+-\ln\abs{\sec\theta+\tan\theta}+C \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases}\\
+\amp =\begin{cases}
+\ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+-\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}+C \amp \text{if }\theta\in (\pi/2,\pi]
+\end{cases} \amp (\knowl{./knowl/xref/fig_sec_ref_tri.html}{\text{Figure 1.20.6}})\\
+\amp =\ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}} \amp (\ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}=-\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}!)\\
+\amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C\\
+\amp = \ln\abs{x+\sqrt{x^2-a^2}}+D\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_trig_subst.html#eg_sec_sub_easy">in-context</a></span>
 </body>
 </html>
