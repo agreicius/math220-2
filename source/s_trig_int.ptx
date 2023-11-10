@@ -165,7 +165,14 @@
         </statement>
         <solution>
             <p>
-                
+                Peel off a factor of <m>\sin x</m> and use the substitution <m>u=\cos x</m>, <m>du=-\sin x</m>: 
+                <md>
+                  <mrow> \int \sin^3x \cos^2 x\, dx   \amp = \int \sin^2x \cos^2 x \sin x\, dx </mrow>
+                  <mrow> \amp = \int (1-\cos^2x) \cos^2 \sin x\, dx</mrow>
+                  <mrow> \amp  = -\int (1-u^2)u^2\, du \amp (u=\cos x, du=-\sin x dx)</mrow>
+                  <mrow> \amp = -\frac{1}{3}u^3+\frac{1}{5}u^5+C</mrow>
+                  <mrow> \amp = -\frac{1}{3}\cos ^3 x+\frac{1}{5}\cos^5 x+C</mrow>
+                </md>
             </p>
         </solution>
     </example>
@@ -178,7 +185,16 @@
         </statement>
         <solution>
             <p>
-                
+               Both powers are even. We use the square identity to reduce powers across the board: 
+               <md>
+                <mrow> \int \sin^2 x\cos^4 x\, dx \amp = \int \frac{1}{2}(1-\cos 2x)\left(\frac{1}{2}(1+\cos 2x)\right)^2\, dx </mrow>
+                <mrow> \amp = \frac{1}{8}\int (1-\cos 2x)(1+\cos 2x)^2\, dx</mrow>
+                <mrow> \amp = \frac{1}{8}\int 1+\cos 2x-\cos^2 2x-\cos^3 2x\, dx
+                </mrow>
+                <mrow> \amp = \frac{1}{8}\int 1-\cos^2 2x+\sin^2 x\cos x\, dx \amp (\cos^3 x=(1-\sin^2 x)\cos x)</mrow>
+                <mrow> \amp =\frac{1}{8}\int \frac{1}{2}-\frac{1}{4}\cos 4x+\underset{u^2}{\underbrace{\sin^2 2x}}\, \underset{\frac{du}{2}}{\underbrace{\cos 2x\, dx}} \amp (\cos 2x=\frac{1}{2}(1+\cos 4x))</mrow>
+                <mrow> \amp = \frac{1}{16}x-\frac{1}{64}\sin 4x+\frac{1}{48}\sin^3 2x+C \amp (u=\sin 2x, du=2\cos 2x dx)</mrow>
+               </md>.
             </p>
         </solution>
     </example>
@@ -191,7 +207,11 @@
         </statement>
         <solution>
             <p>
-                
+                Peel off a factor of <m>\sec^2 x</m> and use the substitution <m>u=\tan x</m>, <m>du=\sec^2 x dx</m>:
+                <md>
+                  <mrow> \int \sec^4 x\, dx\amp = \int (\tan^2 x+1)\, \underset{u}{\underbrace{\sec^2 x\, dx}}</mrow>
+                  <mrow> \amp = \frac{1}{3}\tan^3 x+\tan x+C \amp (u=\tan x, du=\sec^2 x\, dx)</mrow>
+                </md>.
             </p>
         </solution>
     </example>
@@ -205,7 +225,12 @@
         </statement>
         <solution>
             <p>
-                
+                Peel off a factor of <m>\tan x\sec x</m> and use the substitution <m>u=\sec x</m>, <m>du=\sec x\tan x</m>:
+                <md>
+                  <mrow> \int \tan^5 x\sec^7 x\, dx \amp = \int (\sec^2-1)^2\sec^6 x \, \underset{du}{\underbrace{\sec x\tan x\, dx}}</mrow>
+                  <mrow> \amp = \int u^{10}-2u^{8}+u^6\, du \amp (u=\sec x, du=\sec x\tan x dx)</mrow>
+                  <mrow> \amp = \frac{1}{11}\sec^{11}x-\frac{2}{9}\sec^9 x+\frac{1}{7}\sec x+C</mrow>
+                </md>.
             </p>
         </solution>
     </example>
@@ -219,7 +244,21 @@
         </statement>
         <solution>
             <p>
-                
+                Not much we can do here besides integration by parts: 
+                <md>
+                  <mrow>\int \sec^3 x\, dx \amp = \sec x\tan x-\int \sec x\tan^2 x\, dx \amp (u=\sec x, v'=\sec^2 x)</mrow>
+                  <mrow> \amp = \sec x\tan x-int \sec^3 x-\sec x\, dx \amp (\tan^2 x=\sec^2 x-1) </mrow>
+                  <mrow> \amp = \sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx</mrow>
+                </md>.
+                We've shown that 
+                <me>
+                  \int \sec^3 x\, dx=\sec x\tan x+\ln\abs{\sec x+\tan x}-\int \sec^3 x\, dx
+                </me>.
+                Doing some algebra and solving for <m>\int \sec^3 x\, dx</m>, we conclude that 
+
+                <me>
+                  \int \sec^3 x\, dx=\frac{1}{2}\sec x\tan x+\frac{1}{2}\ln\abs{\sec x+\tan x}+C. 
+                </me>.
             </p>
         </solution>
     </example>
@@ -232,6 +271,16 @@
         </statement>
         <solution>
             <p>
+                Following the suggestion of <xref ref="proc_int_tansec"/> we 
+                <me>
+                  \tan^5 x=(\tan^2 x)^2\tan x=(\sec^4 x-2\sec^2 x+1)\tan x
+                </me>,
+                from which we conclude 
+                <md>
+                  <mrow>\int \tan^5 x\, dx \amp = \int \sec^4 x\tan x-2\sec^2 x\tan x+\tan x\, dx </mrow>
+                  <mrow> \amp = \int \underset{u^3}{\underbrace{\sec^3 x}}\, \underset{du}{\underbrace{\sec x\tan x}}-2\underset{u}{\underbrace{\sec x}} \, \underset{du}{\underbrace{\sec x\tan x}}+\tan x\, dx </mrow>
+                  <mrow> \amp =\frac{1}{4}\sec^4 x-\sec^2 x-\ln\abs{\cos x}+C</mrow>
+                </md>.
                 
             </p>
         </solution>

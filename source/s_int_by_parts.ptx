@@ -98,7 +98,11 @@
         </statement>
         <solution>
             <p>
-                
+                <md>
+                  <mrow> \int_0^1 xe^{-x}\, dx\amp = -xe^{-x}\Bigr\vert_0^1+\int_0^1 e^{-x}\, dx \amp (u=x, v'=e^{-x}) </mrow>
+                  <mrow> \amp = -\frac{1}{e}-e^{-x}\Bigr\vert_0^1</mrow>
+                  <mrow> \amp = 1-\frac{2}{e}</mrow>
+                </md>. 
             </p>
         </solution>
     </example>
@@ -158,7 +162,11 @@
         </statement>
         <solution>
             <p>
-                
+                <md>
+                  <mrow> \int x^2 e^x\, dx \amp = x^2e^{x}-2\int xe^{x}\, dx \amp (u=x^2, v'=e^x) </mrow>
+                  <mrow> \amp = x^2e^x-2(xe^x-\int e^{x}) \amp (u=x, v'=e^x)</mrow>
+                  <mrow> \amp = x^2e^x-2xe^x+2e^x+C</mrow>
+                </md>. 
             </p>
         </solution>
      </example>
@@ -172,7 +180,14 @@
         </statement>
         <solution>
             <p>
-                
+                We have <m>\ln x=\ln \abs{x}\cdot 1</m>. LIPET suggests trying <m>u=\ln \abs{x}</m>, <m>v'=1</m>: 
+                <md>
+                  <mrow>\int \ln \vert x\vert\, dx \amp = x\ln\abs{x}-\int \cancel{x}\cdot \frac{1}{\cancel{x}}\, dx 
+                    \amp (u=\ln \abs{x}, v'=1)
+                  </mrow>
+                  <mrow> \amp = x\ln\abs{x}-\int 1\, dx</mrow>
+                  <mrow> \amp = x\ln\abs{x}-x+C</mrow>
+                </md>.
             </p>
         </solution>
     </example>  
@@ -185,7 +200,28 @@
         </statement>
         <solution>
             <p>
-                
+             Using by parts with <m>u=x^2</m> and <m>v'=\frac{x}{x^2+1}</m>, we have 
+             <md>
+              <mrow> \int \frac{x^3}{x^2+1}\, dx\amp= \frac{1}{2}x^2\ln \abs{x^2+1}-\int x\ln\abs{x^2+1}\, dx </mrow>
+              <mrow> \amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}\int \ln \abs{u}\, du \amp (u=x^2+1, du=2xdx)</mrow>
+              <mrow> \amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}(u\ln\abs{u}-u)+C \amp (<xref ref="eg_by_parts_4"/>)</mrow>
+              <mrow> \amp = \frac{1}{2}x^2\ln\abs{x^2+1}-\frac{1}{2}(x^2+1)\ln\abs{x^2+1}+\frac{1}{2}(x^2+1)+C </mrow>
+              <mrow> \amp = \frac{1}{2}(x^2+1)-\ln\abs{x^2+1}+C</mrow>
+             </md>. 
+             Alternatively, using the substitution <m>u=x^2+1</m>, we have 
+             <md>
+              <mrow> \int \frac{1}{2}\frac{x^3}{x^2+1}\, dx \amp = \frac{1}{2}\int \frac{u-1}{u}\, du \amp (u=x^2+1, du=2xdx) </mrow>
+              <mrow> \amp = \frac{1}{2}\int 1-\frac{1}{u}\, du </mrow>
+              <mrow> \amp = \frac{1}{2}(x^2+1)-\ln\abs{x^2+1}+C</mrow>
+             </md>.
+             As a third alternative, we could use <em>polynomial division</em> to write <m>\frac{x^3}{x^2+1}=x-\frac{x}{x^2+1}</m>, and then conclude
+             <me>
+              \int \frac{x^3}{x^2+1}\, dx=\int x-\frac{x}{x^2+1}\, dx=\frac{1}{2}x^2-\ln\abs{x^2+1}+C
+             </me>.
+             Note that the answer here differs from the previous two by the constant <m>\frac{1}{2}</m>, which of course is not a problem. 
+
+             
+             
             </p>
         </solution>
     </example>  
@@ -198,7 +234,11 @@
         </statement>
         <solution>
             <p>
-               
+               If using by parts, LIPET suggests the choice <m>u=\artcan x</m>, <m>v'=1</m>: 
+               <md>
+                <mrow> \int \arctan x\, dx \amp = x\arctan x-\int \frac{x}{x^2+1}\, dx </mrow>
+                <mrow> \amp = x\arctan x-\frac{1}{2}\ln\abs{x^2+1}+C</mrow>
+               </md>.
               </p>
         </solution>
     </example>
@@ -211,7 +251,24 @@
         </statement>
         <solution>
             <p>
-                
+                Here is an example where it looks like we are in danger of entering an infinite regress, but where a minus sign comes to our rescue. We have 
+                <md>
+                  <mrow> \int e^x\cos x\, dx\amp = e^x\sin x-\int e^x\sin x \amp (u=e^x, v'=\cos x) </mrow>
+                  <mrow> \amp = e^x\sin x-(-e^x\cos x+\int e^x\cos x\, dx) \amp (u=e^x,v'=\sin x)</mrow>
+                  <mrow> \amp = e^x\sin x+e^x\cos x-\int e^x\cos x\, dx</mrow>
+                </md>.
+                We've shown that 
+                <me>
+                  \int e^x\cos x\, dx=e^x\sin x+e^x\cos x-\int e^x\cos x\, dx
+                </me>.
+                Using algebra, it follows that 
+                <me>
+                  2\int e^x\cos x=e^x\sin x+e^x\cos x+C
+                </me>,
+                or
+                <me>
+                  \int e^x\cos x\, dx=\frac{1}{2}(e^x\sin x+e^x\cos x)+D
+                </me>.
             </p>
         </solution>
     </example>
