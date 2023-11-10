@@ -14,6 +14,7 @@
 <theorem xml:id="th_poly_facts">
     <title>Polynomial facts</title>
     <statement>
+      <p>
         <ol>
           <li>
             <title>Degree</title>
@@ -48,6 +49,7 @@
             </p>
           </li>
         </ol>
+      </p>
       </statement>
 </theorem>
 
@@ -93,63 +95,66 @@
         <p>
           Let <m>f(x)</m> be a rational function. To compute the partial fraction decomposition of <m>f</m>, proceed as follows. 
         </p>
-        <ol>
-        <li>
-            <title>Polynomial division</title>
-            <p>
-                Using polynomial division if necessary, write <m>f(x)=g(x)+p(x)/q(x)</m>, where <m>g</m>, <m>p</m> and <m>q</m> are polynomials, and <m>\deg p &lt;  \deg q</m>. 
-            </p>
-        </li>
-            
-          <li>
-            <title>Factor</title>
-            <p>
-              Factor <m>q(x)</m> into powers of distinct irreducible polynomials.</p>
-              <p>
-              <em>Factoring trick</em>.
-              If <m>q(x)</m> has integer coefficients and a leading coefficient equal to 1, then any integer roots of <m>q(x)</m> will be factors of the constant term.
-            </p>
-          </li>
-          <li>
-            <title>Polynomial equation with undetermined constants</title>
-            <p>
-              Set up a partial fraction decomposition equation for <m>p(x)/q(x)</m> of form <xref ref="eq_part_decomp_1"/> or <xref ref="eq_part_decomp_2"/>.
-              Clear the denominators of both sides of the equation,
-              resulting in an identity between two polynomials.
-              The polynomial on the right will be expressed in terms of the unknowns
-              (<m>A_i</m>, <m>B_i</m>, etc.).
-            </p>
-        </li>
+        <p>
+          <ol>
             <li>
-                <title>Solve for undetermined constants</title>
+                <title>Polynomial division</title>
                 <p>
-                    To solve for the undetermined constants (<m>A_i</m>, <m>B_i</m>,
-                    etc.) set up and solve a linear system of equations using one of the following techniques.
-                  </p>
-                  <ol>
-                      <li>
+                    Using polynomial division if necessary, write <m>f(x)=g(x)+p(x)/q(x)</m>, where <m>g</m>, <m>p</m> and <m>q</m> are polynomials, and <m>\deg p &lt;  \deg q</m>. 
+                </p>
+            </li>
+                
+              <li>
+                <title>Factor</title>
+                <p>
+                  Factor <m>q(x)</m> into powers of distinct irreducible polynomials.</p>
+                  <p>
+                  <em>Factoring trick</em>.
+                  If <m>q(x)</m> has integer coefficients and a leading coefficient equal to 1, then any integer roots of <m>q(x)</m> will be factors of the constant term.
+                </p>
+              </li>
+              <li>
+                <title>Polynomial equation with undetermined constants</title>
+                <p>
+                  Set up a partial fraction decomposition equation for <m>p(x)/q(x)</m> of form <xref ref="eq_part_decomp_1"/> or <xref ref="eq_part_decomp_2"/>.
+                  Clear the denominators of both sides of the equation,
+                  resulting in an identity between two polynomials.
+                  The polynomial on the right will be expressed in terms of the unknowns
+                  (<m>A_i</m>, <m>B_i</m>, etc.).
+                </p>
+            </li>
+                <li>
+                    <title>Solve for undetermined constants</title>
+                    <p>
+                        To solve for the undetermined constants (<m>A_i</m>, <m>B_i</m>,
+                        etc.) set up and solve a linear system of equations using one of the following techniques.
+                        <ol>
+                          <li>
+                              <p>
+                                <em>Evaluate equality at choices of <m>x</m></em>.
+                                Evaluate the polynomial equation at various explicit choices of <m>x</m>. 
+                                When <m>q</m> factors as <m>q(x)=D(x-a_1)(x-a_2)\cdots (x-a_m)</m> where the roots <m>a_k</m> are distinct, then evaluating the polynomial equality at each of the choices <m>x=a_k</m> will allow you to solve directly for each undetermined constant in turn. 
+                              </p>
+                            </li>
+                        <li>
                           <p>
-                            <em>Evaluate equality at choices of <m>x</m></em>.
-                            Evaluate the polynomial equation at various explicit choices of <m>x</m>. 
-                            When <m>q</m> factors as <m>q(x)=D(x-a_1)(x-a_2)\cdots (x-a_m)</m> where the roots <m>a_k</m> are distinct, then evaluating the polynomial equality at each of the choices <m>x=a_k</m> will allow you to solve directly for each undetermined constant in turn. 
+                            <em>Equate coefficients</em>.
+                            Express the polynomial on right in
+                            <q>standard form</q>
+                            by collecting like terms.
+                            For the left and right polynomials to be equal,
+                            their corresponding coefficients must all be equal.
+                            This yields a system of equations in the unknowns (<m>A_i</m>,
+                            <m>B_i</m>, etc.) that you must now solve.
                           </p>
                         </li>
-                    <li>
-                      <p>
-                        <em>Equate coefficients</em>.
-                        Express the polynomial on right in
-                        <q>standard form</q>
-                        by collecting like terms.
-                        For the left and right polynomials to be equal,
-                        their corresponding coefficients must all be equal.
-                        This yields a system of equations in the unknowns (<m>A_i</m>,
-                        <m>B_i</m>, etc.) that you must now solve.
-                      </p>
-                    </li>
-              
+                  
+                </ol>
+              </p>
+              </li>
             </ol>
-          </li>
-        </ol>
+                      </p>
+        
       </statement>
 </algorithm>
 <remark>
