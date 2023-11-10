@@ -71,7 +71,10 @@
       For the sake of space, we only provide examples of reference triangles where the angle <m>\theta</m> lies in <m>[0,\pi/2]</m>. In practice, you should provide a reference triangle diagram that reflects the interval <m>\theta</m> is restricted to, and take care with the sign of the various trigonometric values.  
     </p>
       <ol>
-        <li>
+        <li xml:id="ref_tri_sin">
+          <title>Sine substitution</title>
+          
+  
           <p>
             Consider the substitution <m>x=a\sin \theta</m>, where <m>a</m> is positive. A reference diagram like the following helps us see that 
             <md>
@@ -93,7 +96,10 @@
             </image>
           </figure>
         </li>
-        <li>
+        <li xml:id="ref_tri_tan">
+          <title>Tangent substitution</title>
+          
+          
           <p>
             Consider the substitution <m>x=a\tan \theta</m>, where <m>a</m> is positive. A reference diagram like the following allows us to deduce that 
             <md>
@@ -115,16 +121,17 @@
               </image>
             </figure>
         </li>
-        <li>
+        <li xml:id="ref_tri_sec">
+          <title>Secant substitution</title>
           <p>
             Consider the substitution <m>x=a\sec \theta</m>, where <m>a</m> is positive. A reference diagram like the following allows us to deduce that 
-            <md>
+            <mdn>
               <mrow> \sin \theta\amp =\frac{\sqrt{a^2-x^2}}{\abs{x}} \amp \tan \theta\amp =\begin{cases} 
                 \frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in [0,\pi/2) \\
                 -\frac{\sqrt{x^2-a^2}}{a} \amp \text{if } \theta\in (\pi/2, \pi].
                 \end{cases}
               </mrow>
-            </md>
+            </mdn>
           </p>
           <figure xml:id="fig_sec_ref_tri">
             <caption>Reference triangle for <m>x=a\sec\theta</m></caption>
@@ -289,7 +296,7 @@
         <mrow> \amp = \begin{cases}
           \int \frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if } \theta\in [0,\pi/2) \\
           -\int\frac{1}{\tan\theta}\sec\theta\tan\theta\, d\theta \amp \text{if }\theta\in (\pi/2,\pi]
-        \end{cases}
+        \end{cases} \amp (<xref ref="ref_tri_sec" text="title"/>)
         </mrow>
         <mrow> \amp = 
           \begin{cases}
@@ -305,9 +312,16 @@
          <mrow> \amp =\begin{cases}
           \ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
           -\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}+C \amp \text{if }\theta\in (\pi/2,\pi]
-        \end{cases} \amp (<xref ref="fig_sec_ref_tri"/>)</mrow>
-        <mrow> \amp =\ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}} \amp (\ln\abs{\frac{x}{a}+\frac{\sqrt{x^2-a^2}}{a}}=-\ln\abs{\frac{x}{a}-\frac{\sqrt{x^2-a^2}}{a}}!)</mrow>
-        <mrow> \amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C</mrow>
+        \end{cases} \amp (<xref ref="ref_tri_sec" text="title"/>)</mrow>
+        <mrow> \amp =\begin{cases}
+          \ln\abs{\frac{x+\sqrt{x^2-a^2}}{a}}+C \amp  \text{if } \theta\in [0,\pi/2) \\
+          -\ln\abs{\frac{x-\sqrt{x^2-a^2}}{a}}+C+C \amp \text{if }\theta\in (\pi/2,\pi]
+        \end{cases} </mrow>
+        <mrow> \amp =\begin{cases}
+          \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C \amp  \text{if } \theta\in [0,\pi/2) \\
+          \ln\abs{\frac{1}{x-\sqrt{x^2-a^2}}}-\ln a+C \amp \text{if }\theta\in (\pi/2,\pi]
+        \end{cases} \amp (\text{algebra}) </mrow>
+        <mrow> \amp = \ln\abs{x+\sqrt{x^2-a^2}}-\ln a+C \amp \left(\frac{1}{x-\sqrt{x^2-a^2}}=x+\sqrt{x^2-a^2}\right)</mrow>
         <mrow> \amp = \ln\abs{x+\sqrt{x^2-a^2}}+D</mrow>
       </md>. 
 

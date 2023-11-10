@@ -281,7 +281,7 @@
             <md>
               <mrow>\frac{d}{dx} \arcsin x \amp = \frac{1}{f'(\arcsin x)}</mrow>
               <mrow> \amp = \frac{1}{\cos(\arcsin x)}</mrow>
-              <mrow> \amp = \frac{1}{\sqrt{1-x^2}</mrow>
+              <mrow> \amp = \frac{1}{\sqrt{1-x^2}}</mrow>
             </md>.
             The last step here is perhaps the most interesting, and follows from the fact that <m>\cos(\arcsin x)=\sqrt{1-x^2}</m> for any <m>x\in [-1,1]</m>. Why is this true? Set <m>\arcsin x=\theta</m>, an angle lying in <m>[-\pi/2,\pi/2]</m>. Using the fact that <m>\sin \theta=x</m>, we can draw a unit circle picture like the one below. Since the vertical leg of the right triangle there has length <m>\abs{x}</m>, the horizontal leg has length <m>\sqrt{1-\abs{x}^2}=\sqrt{1-x^2}</m>. Since this length is equal to the <m>x</m>-coordinate of the point <m>P</m> below, we have <m>\cos \theta=\sqrt{1-x^2}</m> and thus <m>\cos(\arcsin x)=\sqrt{1-x^2}</m>, as claimed.   
             <image source="images/arcsin_der.png" width="75%">

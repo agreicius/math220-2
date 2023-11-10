@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_num_int_B" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Numerical integration: error estimates</title>
+    <title>Numerical integration: error bounds</title>
     <theorem xml:id="th_num_int">
-        <title>Error estimates</title>
+        <title>Error bounds</title>
       <statement>
         <p>
           Let <m>f</m> be an integrable function on <m>[a,b]</m>,
