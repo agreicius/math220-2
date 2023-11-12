@@ -16,6 +16,38 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle\int\frac{1}{x^4+3x^2+2}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_2">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">First note that the denominator <span class="process-math">\(q(x)=x^4+3x^2+2=(x^2)^2+3x^2+2=(x^2+1)(x^2+2)\text{,}\)</span> where <span class="process-math">\(x^2+1\)</span> and <span class="process-math">\(x^2+2\)</span> are both irreducible. Now perform partial fractions:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html">
+\begin{align*}
+\frac{1}{x^4+3x^2+2} \amp = \frac{Ax+B}{x^2+1}+\frac{Cx+D}{x^2+2}\\
+1 \amp = (Ax+B)(x^2+2)+(Cx+D)(x^2+1)=(A+C)x^3+(B+D)x^2+(A+2C)x+B+2D\text{.}
+\end{align*}
+</div>
+<div class="para">Note that in this case we cannot evaluate the identity above at the roots of <span class="process-math">\(x^2+1\)</span> and <span class="process-math">\(x^2+2\)</span> since they have none (in the reals)! Instead we use (3) from <a href="" class="xref" data-knowl="./knowl/xref/th_poly_facts.html" title="Theorem 1.21.2: Polynomial facts">Theorem 1.21.2</a> and produce a linear system by equating the coefficients of two polynomials <span class="process-math">\((A+B)x^3+(B+D)x^2+(A+2C)x+(B+2D)\)</span> and <span class="process-math">\(0x^3+0x^2+0x+1\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html">
+\begin{align}
+A+C \amp = 0\tag{1.21.3}\\
+B+D \amp = 0\tag{1.21.4}\\
+2A+C \amp = 0\tag{1.21.5}\\
+2B+D \amp = 1\text{.}\tag{1.21.6}
+\end{align}
+</div>
+<div class="para">Equations <a href="" class="xref" data-knowl="./knowl/xref/eq_1.html" title="Equation 1.21.3">(1.21.3)</a> and <a href="" class="xref" data-knowl="./knowl/xref/eq_3.html" title="Equation 1.21.5">(1.21.5)</a> together imply <span class="process-math">\(A=C=0\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/xref/eq_2.html" title="Equation 1.21.4">(1.21.4)</a> implies <span class="process-math">\(B=-D\text{;}\)</span> equation <a href="" class="xref" data-knowl="./knowl/xref/eq_4.html" title="Equation 1.21.6">(1.21.6)</a> then implies <span class="process-math">\(D=-1\)</span> and <span class="process-math">\(B=1\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html">
+\begin{equation*}
+\frac{1}{x^4+3x^2+2}=\frac{1}{x^2+1}-\frac{1}{x^2+2}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html">
+\begin{align*}
+\int \frac{1}{x^4+3x^2+2}\, dx \amp = \int \frac{1}{x^2+1}-\frac{1}{x^2+2}\, dx \\
+= \int \frac{1}{x^2+1}-\frac{1}{2(x/\sqrt{2})^2+1)}\, dx \\
+\amp = \arctan(x)-\frac{\sqrt{2}}{2}\arctan(x/\sqrt{2})+C
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_2">in-context</a></span>
 </body>
 </html>

@@ -16,6 +16,18 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_5">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Resist the temptation to apply partial fraction decomposition directly to the integrand! Since the integrand is <em class="emphasis">not</em> a rational function, <a href="" class="xref" data-knowl="./knowl/xref/th_partial_frac.html" title="Theorem 1.21.3: Partial fraction decomposition">Theorem 1.21.3</a> does not apply. Instead we first do an obvious substitution:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_partial_frac.html">
+\begin{align*}
+\int \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta \amp 
+= -\int \frac{1}{u^2 +u-2}\, du  \amp (u=\cos\theta, du=-\sin\theta d\theta) \\
+\amp = -\int \frac{1}{3}\frac{1}{u-1}-\frac{1}{3}\frac{1}{u+2}\, du \amp (\text{part. frac. decomp.})\\
+\amp =\frac{1}{3}(\ln\abs{\cos\theta+2}-\ln\abs{\cos\theta-1})+C\\
+\amp = \ln\sqrt[3]{\abs{\frac{\cos\theta+2}{\cos\theta-1}}}+C \amp (\text{log. props.})
+\end{align*}
+</div>
+<div class="para">.</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_5">in-context</a></span>
 </body>
 </html>

@@ -16,6 +16,35 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_3">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">First we factor <span class="process-math">\(q(x)=x^3+2x^2-x-2\text{.}\)</span> An integer root of <span class="process-math">\(q(x)\)</span> must divide <span class="process-math">\(2\text{,}\)</span> thus we investigate <span class="process-math">\(\pm 1, \pm 2\)</span> as potential roots. Since <span class="process-math">\(q(1)=1+1-1-2=0\text{,}\)</span> we see that <span class="process-math">\(x=1\)</span> is a root of <span class="process-math">\(q(x)\)</span> and thus <span class="process-math">\((x-1)\)</span> is a factor of <span class="process-math">\(q(x)\text{.}\)</span> Performing polynomial division with remainder, we see that <span class="process-math">\(q(x)=(x-1)(x^2+3x+2)\text{.}\)</span> Factoring the quadratic term further, we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x)=(x-1)(x+1)(x+2)\text{.}
+\end{equation*}
+</div>
+<div class="para">Now perform partial fractions:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{x^2+1}{x^3+2x^2-x-2} \amp =\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x+2}\\
+x^2+1 \amp = A(x+1)(x+2)+B(x-1)(x+2)+C(x-1)(x+1)\text{.}
+\end{align*}
+</div>
+<div class="para">Evaluating this identity at <span class="process-math">\(x=1, -1,-2\text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{align*}
+2 \amp = 6A \\
+2 \amp = -2B\\
+5 \amp = 3C
+\end{align*}
+</div>
+<div class="para">and thus <span class="process-math">\(A=\frac{1}{3}, B=-1, C=\frac{5}{3}\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx \amp = \frac{1}{3}\frac{1}{x-1}-\frac{1}{x+1}+\frac{5}{3}\frac{1}{x+2}\, dx \\
+\amp = \frac{1}{3}\ln\abs{x-1}-\ln\abs{x+1}+\frac{5}{3}\ln\abs{x+2}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_3">in-context</a></span>
 </body>
 </html>

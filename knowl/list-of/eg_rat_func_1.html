@@ -16,6 +16,27 @@
 </h3>
 <div class="para">Compute <span class="process-math">\(\displaystyle\int \frac{x+2}{x^2-1}\, dx\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_1">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{x+2}{x^2-1}=\frac{A}{x-1}+\frac{B}{x+1}\amp \implies x+2=A(x+1)+B(x-1) \text{.}
+\end{align*}
+</div>
+<div class="para">Evaluating the right-hand side at <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=-1\)</span> yields</div>
+<div class="displaymath process-math">
+\begin{align*}
+3 \amp = 2A\\
+1 \amp = -2B\text{,}
+\end{align*}
+</div>
+<div class="para">and thus <span class="process-math">\(A=3/2\text{,}\)</span> <span class="process-math">\(B=-1/2\text{.}\)</span> We conclude</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int \frac{x+2}{x^2-1}\, dx \amp= \int \frac{3}{2}\frac{1}{x+1}-\frac{1}{2}\frac{1}{x-1}\, dx \\
+\amp = \frac{3}{2}\ln\abs{x+1}-\frac{1}{2}\ln\abs{x-1}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_rational_functions.html#eg_rat_func_1">in-context</a></span>
 </body>
 </html>

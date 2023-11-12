@@ -1708,7 +1708,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.21",
   "title": "Rational functions",
-  "body": " Rational functions   Rational function   A rational function is a function that can be expressed as a quotient of two polynomials.     Polynomial facts     Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .       Partial fraction decomposition   Let be a rational function where .   If factors into non-repeated linear factors as , then there is a unique choice of constants such that .    If factors into non-repeated irreducible linear and quadratic factors as , there there is a unique choice of constants such that .        Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.    Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .   Factor   Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.     Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.         There is a more general statement of partial fraction decomposition for the case where the irreducible factors of include repeated linear and\/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.    Rational function   Compute          Long division first   Compute          Three distinct roots   Compute          Two irreducible quadratics   Compute          With substitution   Compute         "
+  "body": " Rational functions   Rational function   A rational function is a function that can be expressed as a quotient of two polynomials.     Polynomial facts      Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .        Partial fraction decomposition   Let be a rational function where .   If factors into non-repeated linear factors as , then there is a unique choice of constants such that .    If factors into non-repeated irreducible linear and quadratic factors as , there there is a unique choice of constants such that .        Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.     Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .    Factor  Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.    Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.           There is a more general statement of partial fraction decomposition for the case where the irreducible factors of include repeated linear and\/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.    Rational function   Compute     We have . Evaluating the right-hand side at and yields , and thus , . We conclude .     Long division first   Compute     First perform polynomial division with remainder to write . Next, we factor , where . Now perform partial fraction decomposition . Evaluating the last identity at and , we conclude , or equivalently, . We conclude that and , and thus      Three distinct roots   Compute     First we factor . An integer root of must divide , thus we investigate as potential roots. Since , we see that is a root of and thus is a factor of . Performing polynomial division with remainder, we see that . Factoring the quadratic term further, we see that . Now perform partial fractions: . Evaluating this identity at , we see that and thus . Thus .     Two irreducible quadratics   Compute     First note that the denominator , where and are both irreducible. Now perform partial fractions: . Note that in this case we cannot evaluate the identity above at the roots of and since they have none (in the reals)! Instead we use (3) from and produce a linear system by equating the coefficients of two polynomials and : . Equations and together imply . Equation implies ; equation then implies and . We conclude that and thus      With substitution   Compute     Resist the temptation to apply partial fraction decomposition directly to the integrand! Since the integrand is not a rational function, does not apply. Instead we first do an obvious substitution: .    "
 },
 {
   "id": "d_rational_function",
@@ -1726,7 +1726,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.21.2",
   "title": "Polynomial facts.",
-  "body": " Polynomial facts     Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .     "
+  "body": " Polynomial facts      Degree  Suppose with . We call the degree of , denoted .    Roots of polynomials  A polynomial of degree has at most distinct roots.    Equating coefficients  Given polynomials and where and , we have     Irreducible  A nonzero polynomial is irreducible if it cannot be factored into two polynomials of smaller degree. If is an irreducible polynomial with real coefficients, then or .      "
 },
 {
   "id": "th_partial_frac",
@@ -1744,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Procedure",
   "number": "1.21.4",
   "title": "Partial fraction decomposition.",
-  "body": " Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.    Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .   Factor   Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.     Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.       "
+  "body": " Partial fraction decomposition   Let be a rational function. To compute the partial fraction decomposition of , proceed as follows.     Polynomial division  Using polynomial division if necessary, write , where , and are polynomials, and .    Factor  Factor into powers of distinct irreducible polynomials.   Factoring trick . If has integer coefficients and a leading coefficient equal to 1, then any integer roots of will be factors of the constant term.    Polynomial equation with undetermined constants  Set up a partial fraction decomposition equation for of form or . Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns ( , , etc.).    Solve for undetermined constants  To solve for the undetermined constants ( , , etc.) set up and solve a linear system of equations using one of the following techniques.    Evaluate equality at choices of . Evaluate the polynomial equation at various explicit choices of . When factors as where the roots are distinct, then evaluating the polynomial equality at each of the choices will allow you to solve directly for each undetermined constant in turn.     Equate coefficients . Express the polynomial on right in standard form by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns ( , , etc.) that you must now solve.         "
 },
 {
   "id": "remark-12",
@@ -1762,7 +1762,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.21.6",
   "title": "Rational function.",
-  "body": " Rational function   Compute        "
+  "body": " Rational function   Compute     We have . Evaluating the right-hand side at and yields , and thus , . We conclude .   "
 },
 {
   "id": "eg_rat_func_4",
@@ -1771,7 +1771,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.21.7",
   "title": "Long division first.",
-  "body": " Long division first   Compute        "
+  "body": " Long division first   Compute     First perform polynomial division with remainder to write . Next, we factor , where . Now perform partial fraction decomposition . Evaluating the last identity at and , we conclude , or equivalently, . We conclude that and , and thus    "
 },
 {
   "id": "eg_rat_func_3",
@@ -1780,7 +1780,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.21.8",
   "title": "Three distinct roots.",
-  "body": " Three distinct roots   Compute        "
+  "body": " Three distinct roots   Compute     First we factor . An integer root of must divide , thus we investigate as potential roots. Since , we see that is a root of and thus is a factor of . Performing polynomial division with remainder, we see that . Factoring the quadratic term further, we see that . Now perform partial fractions: . Evaluating this identity at , we see that and thus . Thus .   "
 },
 {
   "id": "eg_rat_func_2",
@@ -1789,7 +1789,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.21.9",
   "title": "Two irreducible quadratics.",
-  "body": " Two irreducible quadratics   Compute        "
+  "body": " Two irreducible quadratics   Compute     First note that the denominator , where and are both irreducible. Now perform partial fractions: . Note that in this case we cannot evaluate the identity above at the roots of and since they have none (in the reals)! Instead we use (3) from and produce a linear system by equating the coefficients of two polynomials and : . Equations and together imply . Equation implies ; equation then implies and . We conclude that and thus    "
 },
 {
   "id": "eg_rat_func_5",
@@ -1798,7 +1798,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.21.10",
   "title": "With substitution.",
-  "body": " With substitution   Compute        "
+  "body": " With substitution   Compute     Resist the temptation to apply partial fraction decomposition directly to the integrand! Since the integrand is not a rational function, does not apply. Instead we first do an obvious substitution: .   "
 },
 {
   "id": "s_num_int_A",

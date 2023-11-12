@@ -260,16 +260,16 @@ window.MathJax = {
 </h3> <div class="para" id="p-603">A <dfn class="terminology">rational function</dfn> is a function that can be expressed as a quotient of two polynomials.</div></article><article class="theorem theorem-like" id="th_poly_facts"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.21.2</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial facts.</span>
 </h3>
-<ol class="decimal">
+<div class="para logical" id="p-604"><ol class="decimal">
 <li id="li-292">
-<span class="heading"><span class="title">Degree.</span></span><div class="para" id="p-604">Suppose <span class="process-math">\(f(x)=\anpoly\)</span> with <span class="process-math">\(a_n\ne 0\text{.}\)</span> We call <span class="process-math">\(n\)</span> the <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{.}\)</span>
+<span class="heading"><span class="title">Degree.</span></span><div class="para" id="p-605">Suppose <span class="process-math">\(f(x)=\anpoly\)</span> with <span class="process-math">\(a_n\ne 0\text{.}\)</span> We call <span class="process-math">\(n\)</span> the <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{.}\)</span>
 </div>
 </li>
 <li id="li-293">
-<span class="heading"><span class="title">Roots of polynomials.</span></span><div class="para" id="p-605">A polynomial of degree <span class="process-math">\(n\)</span> has at most <span class="process-math">\(n\)</span> distinct roots.</div>
+<span class="heading"><span class="title">Roots of polynomials.</span></span><div class="para" id="p-606">A polynomial of degree <span class="process-math">\(n\)</span> has at most <span class="process-math">\(n\)</span> distinct roots.</div>
 </li>
 <li id="li-294">
-<span class="heading"><span class="title">Equating coefficients.</span></span><div class="para logical" id="p-606">
+<span class="heading"><span class="title">Equating coefficients.</span></span><div class="para logical" id="p-607">
 <div class="para">Given polynomials <span class="process-math">\(f(x)=\anpoly\)</span> and <span class="process-math">\(g(x)=\bmpoly\)</span> where <span class="process-math">\(a_n\ne 0\)</span> and <span class="process-math">\(b_m\ne 0\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -279,17 +279,17 @@ f(x)=g(x) \iff n=m \text{ and }  a_i=b_i \text{ for all \(i\). }
 </div>
 </li>
 <li id="li-295">
-<span class="heading"><span class="title">Irreducible.</span></span><div class="para" id="p-607">A nonzero polynomial is <dfn class="terminology">irreducible</dfn> if it cannot be factored into two polynomials of smaller degree. If <span class="process-math">\(f(x)\)</span> is an irreducible polynomial with real coefficients, then <span class="process-math">\(\deg f=1\)</span> or <span class="process-math">\(\deg f=2\text{.}\)</span>
+<span class="heading"><span class="title">Irreducible.</span></span><div class="para" id="p-608">A nonzero polynomial is <dfn class="terminology">irreducible</dfn> if it cannot be factored into two polynomials of smaller degree. If <span class="process-math">\(f(x)\)</span> is an irreducible polynomial with real coefficients, then <span class="process-math">\(\deg f=1\)</span> or <span class="process-math">\(\deg f=2\text{.}\)</span>
 </div>
 </li>
-</ol></article><article class="theorem theorem-like" id="th_partial_frac"><h3 class="heading">
+</ol></div></article><article class="theorem theorem-like" id="th_partial_frac"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.21.3</span><span class="period">.</span><span class="space"> </span><span class="title">Partial fraction decomposition.</span>
 </h3>
-<div class="para logical" id="p-608">
+<div class="para logical" id="p-609">
 <div class="para">Let <span class="process-math">\(p(x)/q(x)\)</span> be a rational function where <span class="process-math">\(\deg p &lt;  \deg q\text{.}\)</span>
 </div>
 <ul class="disc">
-<li id="li-296"><div class="para logical" id="p-609">
+<li id="li-296"><div class="para logical" id="p-610">
 <div class="para">If <span class="process-math">\(q\)</span> factors into non-repeated linear factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -303,7 +303,7 @@ q(x)=D(x-a_1)(x-a_2)\cdots (x-a_r)\text{,}
 \end{equation}
 </div>
 </div></li>
-<li id="li-297"><div class="para logical" id="p-610">
+<li id="li-297"><div class="para logical" id="p-611">
 <div class="para">If <span class="process-math">\(q(x)\)</span> factors into non-repeated irreducible linear and quadratic factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -321,57 +321,194 @@ q(x)=D(x-a_1)(x-a_2)\cdots (x-a_r)(x^2+b_1x+c_1)(x^2+b_2x+c_2)\cdots (x^2+b_sx+c
 </div></article><article class="algorithm theorem-like" id="proc_partial_frac"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.21.4</span><span class="period">.</span><span class="space"> </span><span class="title">Partial fraction decomposition.</span>
 </h3>
-<div class="para" id="p-611">Let <span class="process-math">\(f(x)\)</span> be a rational function. To compute the partial fraction decomposition of <span class="process-math">\(f\text{,}\)</span> proceed as follows.</div> <ol class="decimal">
+<div class="para" id="p-612">Let <span class="process-math">\(f(x)\)</span> be a rational function. To compute the partial fraction decomposition of <span class="process-math">\(f\text{,}\)</span> proceed as follows.</div> <div class="para logical" id="p-613"><ol class="decimal">
 <li id="li-298">
-<span class="heading"><span class="title">Polynomial division.</span></span><div class="para" id="p-612">Using polynomial division if necessary, write <span class="process-math">\(f(x)=g(x)+p(x)/q(x)\text{,}\)</span> where <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are polynomials, and <span class="process-math">\(\deg p &lt;  \deg q\text{.}\)</span>
+<span class="heading"><span class="title">Polynomial division.</span></span><div class="para" id="p-614">Using polynomial division if necessary, write <span class="process-math">\(f(x)=g(x)+p(x)/q(x)\text{,}\)</span> where <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are polynomials, and <span class="process-math">\(\deg p &lt;  \deg q\text{.}\)</span>
 </div>
 </li>
 <li id="li-299">
-<div class="para" id="p-613">Factor <span class="process-math">\(q(x)\)</span> into powers of distinct irreducible polynomials.</div>
-<div class="para" id="p-614">
+<span class="heading"><span class="title">Factor.</span></span><div class="para" id="p-615">Factor <span class="process-math">\(q(x)\)</span> into powers of distinct irreducible polynomials.</div>
+<div class="para" id="p-616">
 <em class="emphasis">Factoring trick</em>. If <span class="process-math">\(q(x)\)</span> has integer coefficients and a leading coefficient equal to 1, then any integer roots of <span class="process-math">\(q(x)\)</span> will be factors of the constant term.</div>
 </li>
 <li id="li-300">
-<span class="heading"><span class="title">Polynomial equation with undetermined constants.</span></span><div class="para" id="p-615">Set up a partial fraction decomposition equation for <span class="process-math">\(p(x)/q(x)\)</span> of form <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_1.html" title="Equation 1.21.1">(1.21.1)</a> or <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_2.html" title="Equation 1.21.2">(1.21.2)</a>. Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.).</div>
+<span class="heading"><span class="title">Polynomial equation with undetermined constants.</span></span><div class="para" id="p-617">Set up a partial fraction decomposition equation for <span class="process-math">\(p(x)/q(x)\)</span> of form <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_1.html" title="Equation 1.21.1">(1.21.1)</a> or <a href="" class="xref" data-knowl="./knowl/xref/eq_part_decomp_2.html" title="Equation 1.21.2">(1.21.2)</a>. Clear the denominators of both sides of the equation, resulting in an identity between two polynomials. The polynomial on the right will be expressed in terms of the unknowns (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.).</div>
 </li>
 <li id="li-301">
-<span class="heading"><span class="title">Solve for undetermined constants.</span></span><div class="para" id="p-616">To solve for the undetermined constants (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.) set up and solve a linear system of equations using one of the following techniques.</div>
+<span class="heading"><span class="title">Solve for undetermined constants.</span></span><div class="para logical" id="p-618">
+<div class="para">To solve for the undetermined constants (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.) set up and solve a linear system of equations using one of the following techniques.</div>
 <ol class="lower-alpha">
-<li id="li-302"><div class="para" id="p-617">
+<li id="li-302"><div class="para" id="p-619">
 <em class="emphasis">Evaluate equality at choices of <span class="process-math">\(x\)</span></em>. Evaluate the polynomial equation at various explicit choices of <span class="process-math">\(x\text{.}\)</span> When <span class="process-math">\(q\)</span> factors as <span class="process-math">\(q(x)=D(x-a_1)(x-a_2)\cdots (x-a_m)\)</span> where the roots <span class="process-math">\(a_k\)</span> are distinct, then evaluating the polynomial equality at each of the choices <span class="process-math">\(x=a_k\)</span> will allow you to solve directly for each undetermined constant in turn.</div></li>
-<li id="li-303"><div class="para" id="p-618">
+<li id="li-303"><div class="para" id="p-620">
 <em class="emphasis">Equate coefficients</em>. Express the polynomial on right in “standard form” by collecting like terms. For the left and right polynomials to be equal, their corresponding coefficients must all be equal. This yields a system of equations in the unknowns (<span class="process-math">\(A_i\text{,}\)</span> <span class="process-math">\(B_i\text{,}\)</span> etc.) that you must now solve.</div></li>
 </ol>
+</div>
 </li>
-</ol></article><article class="remark remark-like" id="remark-12"><h3 class="heading">
+</ol></div></article><article class="remark remark-like" id="remark-12"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.21.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-619">There is a more general statement of partial fraction decomposition for the case where the irreducible factors of <span class="process-math">\(q\)</span> include repeated linear and/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.</div></article><article class="example example-like" id="eg_rat_func_1"><h3 class="heading">
+<div class="para" id="p-621">There is a more general statement of partial fraction decomposition for the case where the irreducible factors of <span class="process-math">\(q\)</span> include repeated linear and/or quadratic terms, but we will not cover it. Consult the textbook if you are curious.</div></article><article class="example example-like" id="eg_rat_func_1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21.6</span><span class="period">.</span><span class="space"> </span><span class="title">Rational function.</span>
 </h3>
-<div class="para" id="p-620">Compute <span class="process-math">\(\displaystyle\int \frac{x+2}{x^2-1}\, dx\)</span>
+<div class="para" id="p-622">Compute <span class="process-math">\(\displaystyle\int \frac{x+2}{x^2-1}\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-72" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-621"></div></div></details></div></article><article class="example example-like" id="eg_rat_func_4"><h3 class="heading">
+<div class="solutions"><details id="solution-72" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-623">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="md-134">
+\begin{align*}
+\frac{x+2}{x^2-1}=\frac{A}{x-1}+\frac{B}{x+1}\amp \implies x+2=A(x+1)+B(x-1) \text{.}
+\end{align*}
+</div>
+<div class="para">Evaluating the right-hand side at <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=-1\)</span> yields</div>
+<div class="displaymath process-math" id="md-135">
+\begin{align*}
+3 \amp = 2A\\
+1 \amp = -2B\text{,}
+\end{align*}
+</div>
+<div class="para">and thus <span class="process-math">\(A=3/2\text{,}\)</span> <span class="process-math">\(B=-1/2\text{.}\)</span> We conclude</div>
+<div class="displaymath process-math" id="md-136">
+\begin{align*}
+\int \frac{x+2}{x^2-1}\, dx \amp= \int \frac{3}{2}\frac{1}{x+1}-\frac{1}{2}\frac{1}{x-1}\, dx \\
+\amp = \frac{3}{2}\ln\abs{x+1}-\frac{1}{2}\ln\abs{x-1}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_rat_func_4"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21.7</span><span class="period">.</span><span class="space"> </span><span class="title">Long division first.</span>
 </h3>
-<div class="para" id="p-622">Compute <span class="process-math">\(\displaystyle\int \frac{x^2}{x^2+2x-1}\, dx\)</span>
+<div class="para" id="p-624">Compute <span class="process-math">\(\displaystyle\int \frac{x^2}{x^2+2x-1}\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-73" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-623"></div></div></details></div></article><article class="example example-like" id="eg_rat_func_3"><h3 class="heading">
+<div class="solutions"><details id="solution-73" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-625">
+<div class="para">First perform polynomial division with remainder to write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^2}{x^2+2x-1}=1-\frac{2x-1}{x^2+2x-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Next, we factor <span class="process-math">\(x^2+2x-1=(x-\alpha)(x-\beta)\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="md-137">
+\begin{align*}
+\alpha \amp = -1+\sqrt{2} \amp \beta\amp =-1-\sqrt{2}\text{.}
+\end{align*}
+</div>
+<div class="para">Now perform partial fraction decomposition</div>
+<div class="displaymath process-math" id="md-138">
+\begin{align*}
+\frac{2x-1}{(x-\alpha)(x-\beta)} \amp = \frac{A}{x-\alpha}+\frac{B}{x-\beta}\\
+2x-1 \amp = A(x-\beta)+B(x-\alpha)\text{.}
+\end{align*}
+</div>
+<div class="para">Evaluating the last identity at <span class="process-math">\(x=\alpha\)</span> and <span class="process-math">\(x=\beta\text{,}\)</span> we conclude</div>
+<div class="displaymath process-math" id="md-139">
+\begin{align*}
+2\alpha-1 \amp = A(\alpha-\beta)\\
+2\beta-1 \amp = B(\beta-\alpha)\text{,}
+\end{align*}
+</div>
+<div class="para">or equivalently,</div>
+<div class="displaymath process-math" id="md-140">
+\begin{align*}
+-3+2\sqrt{2} \amp = 2\sqrt{2}A\\
+-3-2\sqrt{2} \amp= -2\sqrt{2}B\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(A=\frac{1}{2\sqrt{2}}(-3+2\sqrt{2})=\frac{4-3\sqrt{2}}{4}\)</span> and <span class="process-math">\(B=\frac{1}{2\sqrt{2}}(-3-2\sqrt{2})=\frac{4+3\sqrt{2}}{4}\text{,}\)</span> and thus</div>
+<div class="displaymath process-math" id="md-141">
+\begin{align*}
+\int \frac{x^2}{x^2+2x-1}\, dx \amp  = \int 1-\frac{4-3\sqrt{2}}{4}\frac{1}{x-\alpha}-\frac{4+3\sqrt{2}}{4}\frac{1}{x-\beta}\, dx\\
+\amp = x-\frac{4-3\sqrt{2}}{4}\ln\abs{x-(-1+\sqrt{2})}-\frac{4+3\sqrt{2}}{4}\ln\abs{x-(-1-\sqrt{2})}+C
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_rat_func_3"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21.8</span><span class="period">.</span><span class="space"> </span><span class="title">Three distinct roots.</span>
 </h3>
-<div class="para" id="p-624">Compute <span class="process-math">\(\displaystyle\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx\)</span>
+<div class="para" id="p-626">Compute <span class="process-math">\(\displaystyle\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx\)</span>
 </div>
-<div class="solutions"><details id="solution-74" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-625"></div></div></details></div></article><article class="example example-like" id="eg_rat_func_2"><h3 class="heading">
+<div class="solutions"><details id="solution-74" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-627">
+<div class="para">First we factor <span class="process-math">\(q(x)=x^3+2x^2-x-2\text{.}\)</span> An integer root of <span class="process-math">\(q(x)\)</span> must divide <span class="process-math">\(2\text{,}\)</span> thus we investigate <span class="process-math">\(\pm 1, \pm 2\)</span> as potential roots. Since <span class="process-math">\(q(1)=1+1-1-2=0\text{,}\)</span> we see that <span class="process-math">\(x=1\)</span> is a root of <span class="process-math">\(q(x)\)</span> and thus <span class="process-math">\((x-1)\)</span> is a factor of <span class="process-math">\(q(x)\text{.}\)</span> Performing polynomial division with remainder, we see that <span class="process-math">\(q(x)=(x-1)(x^2+3x+2)\text{.}\)</span> Factoring the quadratic term further, we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x)=(x-1)(x+1)(x+2)\text{.}
+\end{equation*}
+</div>
+<div class="para">Now perform partial fractions:</div>
+<div class="displaymath process-math" id="md-142">
+\begin{align*}
+\frac{x^2+1}{x^3+2x^2-x-2} \amp =\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x+2}\\
+x^2+1 \amp = A(x+1)(x+2)+B(x-1)(x+2)+C(x-1)(x+1)\text{.}
+\end{align*}
+</div>
+<div class="para">Evaluating this identity at <span class="process-math">\(x=1, -1,-2\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" id="md-143">
+\begin{align*}
+2 \amp = 6A \\
+2 \amp = -2B\\
+5 \amp = 3C
+\end{align*}
+</div>
+<div class="para">and thus <span class="process-math">\(A=\frac{1}{3}, B=-1, C=\frac{5}{3}\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" id="md-144">
+\begin{align*}
+\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx \amp = \frac{1}{3}\frac{1}{x-1}-\frac{1}{x+1}+\frac{5}{3}\frac{1}{x+2}\, dx \\
+\amp = \frac{1}{3}\ln\abs{x-1}-\ln\abs{x+1}+\frac{5}{3}\ln\abs{x+2}+C\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_rat_func_2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21.9</span><span class="period">.</span><span class="space"> </span><span class="title">Two irreducible quadratics.</span>
 </h3>
-<div class="para" id="p-626">Compute <span class="process-math">\(\displaystyle\int\frac{1}{x^4+3x^2+2}\)</span>
+<div class="para" id="p-628">Compute <span class="process-math">\(\displaystyle\int\frac{1}{x^4+3x^2+2}\)</span>
 </div>
-<div class="solutions"><details id="solution-75" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-627"></div></div></details></div></article><article class="example example-like" id="eg_rat_func_5"><h3 class="heading">
+<div class="solutions"><details id="solution-75" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-629">
+<div class="para">First note that the denominator <span class="process-math">\(q(x)=x^4+3x^2+2=(x^2)^2+3x^2+2=(x^2+1)(x^2+2)\text{,}\)</span> where <span class="process-math">\(x^2+1\)</span> and <span class="process-math">\(x^2+2\)</span> are both irreducible. Now perform partial fractions:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html" id="md-145">
+\begin{align*}
+\frac{1}{x^4+3x^2+2} \amp = \frac{Ax+B}{x^2+1}+\frac{Cx+D}{x^2+2}\\
+1 \amp = (Ax+B)(x^2+2)+(Cx+D)(x^2+1)=(A+C)x^3+(B+D)x^2+(A+2C)x+B+2D\text{.}
+\end{align*}
+</div>
+<div class="para">Note that in this case we cannot evaluate the identity above at the roots of <span class="process-math">\(x^2+1\)</span> and <span class="process-math">\(x^2+2\)</span> since they have none (in the reals)! Instead we use (3) from <a href="" class="xref" data-knowl="./knowl/xref/th_poly_facts.html" title="Theorem 1.21.2: Polynomial facts">Theorem 1.21.2</a> and produce a linear system by equating the coefficients of two polynomials <span class="process-math">\((A+B)x^3+(B+D)x^2+(A+2C)x+(B+2D)\)</span> and <span class="process-math">\(0x^3+0x^2+0x+1\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html" id="mdn-20">
+\begin{align}
+A+C \amp = 0\tag{1.21.3}\\
+B+D \amp = 0\tag{1.21.4}\\
+2A+C \amp = 0\tag{1.21.5}\\
+2B+D \amp = 1\text{.}\tag{1.21.6}
+\end{align}
+</div>
+<div class="para">Equations <a href="" class="xref" data-knowl="./knowl/xref/eq_1.html" title="Equation 1.21.3">(1.21.3)</a> and <a href="" class="xref" data-knowl="./knowl/xref/eq_3.html" title="Equation 1.21.5">(1.21.5)</a> together imply <span class="process-math">\(A=C=0\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/xref/eq_2.html" title="Equation 1.21.4">(1.21.4)</a> implies <span class="process-math">\(B=-D\text{;}\)</span> equation <a href="" class="xref" data-knowl="./knowl/xref/eq_4.html" title="Equation 1.21.6">(1.21.6)</a> then implies <span class="process-math">\(D=-1\)</span> and <span class="process-math">\(B=1\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html">
+\begin{equation*}
+\frac{1}{x^4+3x^2+2}=\frac{1}{x^2+1}-\frac{1}{x^2+2}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_poly_facts.html ./knowl/xref/eq_1.html ./knowl/xref/eq_3.html ./knowl/xref/eq_2.html ./knowl/xref/eq_4.html" id="md-146">
+\begin{align*}
+\int \frac{1}{x^4+3x^2+2}\, dx \amp = \int \frac{1}{x^2+1}-\frac{1}{x^2+2}\, dx \\
+= \int \frac{1}{x^2+1}-\frac{1}{2(x/\sqrt{2})^2+1)}\, dx \\
+\amp = \arctan(x)-\frac{\sqrt{2}}{2}\arctan(x/\sqrt{2})+C
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_rat_func_5"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21.10</span><span class="period">.</span><span class="space"> </span><span class="title">With substitution.</span>
 </h3>
-<div class="para" id="p-628">Compute <span class="process-math">\(\displaystyle \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta\)</span>
+<div class="para" id="p-630">Compute <span class="process-math">\(\displaystyle \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta\)</span>
 </div>
-<div class="solutions"><details id="solution-76" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-629"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-76" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-631">
+<div class="para">Resist the temptation to apply partial fraction decomposition directly to the integrand! Since the integrand is <em class="emphasis">not</em> a rational function, <a href="" class="xref" data-knowl="./knowl/xref/th_partial_frac.html" title="Theorem 1.21.3: Partial fraction decomposition">Theorem 1.21.3</a> does not apply. Instead we first do an obvious substitution:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_partial_frac.html" id="md-147">
+\begin{align*}
+\int \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta \amp 
+= -\int \frac{1}{u^2 +u-2}\, du  \amp (u=\cos\theta, du=-\sin\theta d\theta) \\
+\amp = -\int \frac{1}{3}\frac{1}{u-1}-\frac{1}{3}\frac{1}{u+2}\, du \amp (\text{part. frac. decomp.})\\
+\amp =\frac{1}{3}(\ln\abs{\cos\theta+2}-\ln\abs{\cos\theta-1})+C\\
+\amp = \ln\sqrt[3]{\abs{\frac{\cos\theta+2}{\cos\theta-1}}}+C \amp (\text{log. props.})
+\end{align*}
+</div>
+<div class="para">.</div>
+</div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_trig_subst.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_num_int_A.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
