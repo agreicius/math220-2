@@ -171,7 +171,20 @@
     </statement>
     <solution>
         <p>
-            
+            We have 
+            <md>
+              <mrow> \frac{x+2}{x^2-1}=\frac{A}{x-1}+\frac{B}{x+1}\amp \implies x+2=A(x+1)+B(x-1) </mrow>
+            </md>.
+            Evaluating the right-hand side at <m>x=1</m> and <m>x=-1</m> yields 
+            <md>
+              <mrow>3 \amp = 2A</mrow>
+              <mrow>1 \amp = -2B</mrow>
+            </md>, 
+            and thus <m>A=3/2</m>, <m>B=-1/2</m>. We conclude 
+            <md>
+              <mrow> \int \frac{x+2}{x^2-1}\, dx \amp= \int \frac{3}{2}\frac{1}{x+1}-\frac{1}{2}\frac{1}{x-1}\, dx </mrow>
+              <mrow> \amp = \frac{3}{2}\ln\abs{x+1}-\frac{1}{2}\ln\abs{x-1}+C</mrow>
+            </md>.
         </p>
     </solution>
 </example>
@@ -185,6 +198,34 @@
     </statement>
     <solution>
         <p>
+            First perform polynomial division with remainder to write 
+            <me>
+              \frac{x^2}{x^2+2x-1}=1-\frac{2x-1}{x^2+2x-1}
+            </me>.
+            Next, we factor <m>x^2+2x-1=(x-\alpha)(x-\beta)</m>, where 
+            <md>
+              <mrow>\alpha \amp = -1+\sqrt{2} \amp \beta\amp =-1-\sqrt{2}</mrow>
+            </md>.
+            Now perform partial fraction decomposition
+            <md>
+              <mrow>\frac{2x-1}{(x-\alpha)(x-\beta)} \amp = \frac{A}{x-\alpha}+\frac{B}{x-\beta}</mrow>
+              <mrow>2x-1 \amp = A(x-\beta)+B(x-\alpha)</mrow>
+            </md>.
+            Evaluating the last identity at <m>x=\alpha</m> and <m>x=\beta</m>, we conclude 
+            <md>
+              <mrow>2\alpha-1 \amp = A(\alpha-\beta)</mrow>
+              <mrow>2\beta-1 \amp = B(\beta-\alpha)</mrow>
+            </md>,
+            or equivalently, 
+            <md>
+              <mrow>-3+2\sqrt{2} \amp = 2\sqrt{2}A</mrow>
+              <mrow>-3-2\sqrt{2} \amp= -2\sqrt{2}B</mrow>
+            </md>. 
+            We conclude that <m>A=\frac{1}{2\sqrt{2}}(-3+2\sqrt{2})=\frac{4-3\sqrt{2}}{4}</m> and <m>B=\frac{1}{2\sqrt{2}}(-3-2\sqrt{2})=\frac{4+3\sqrt{2}}{4}</m>, and thus 
+            <md>
+              <mrow> \int \frac{x^2}{x^2+2x-1}\, dx \amp  = \int 1-\frac{4-3\sqrt{2}}{4}\frac{1}{x-\alpha}-\frac{4+3\sqrt{2}}{4}\frac{1}{x-\beta}\, dx</mrow>
+              <mrow> \amp = x-\frac{4-3\sqrt{2}}{4}\ln\abs{x-(-1+\sqrt{2})}-\frac{4+3\sqrt{2}}{4}\ln\abs{x-(-1-\sqrt{2})}+C</mrow>
+            </md>
             
         </p>
     </solution>
@@ -202,7 +243,26 @@
     </statement>
     <solution>
         <p>
-            
+           First we factor <m>q(x)=x^3+2x^2-x-2</m>. An integer root of <m>q(x)</m> must divide <m>2</m>, thus we investigate <m>\pm 1, \pm 2</m> as potential roots. Since <m>q(1)=1+1-1-2=0</m>, we see that <m>x=1</m> is a root of <m>q(x)</m> and thus <m>(x-1)</m> is a factor of <m>q(x)</m>. Performing polynomial division with remainder, we see that <m>q(x)=(x-1)(x^2+3x+2)</m>. Factoring the quadratic term further, we see that 
+           <me>
+            q(x)=(x-1)(x+1)(x+2)
+           </me>.
+           Now perform partial fractions: 
+           <md>
+            <mrow> \frac{x^2+1}{x^3+2x^2-x-2} \amp =\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x+2}</mrow>
+            <mrow>x^2+1 \amp = A(x+1)(x+2)+B(x-1)(x+2)+C(x-1)(x+1)</mrow>
+           </md>.
+           Evaluating this identity at <m>x=1, -1,-2</m>, we see that 
+           <md>
+            <mrow>2 \amp = 6A </mrow>
+            <mrow>2 \amp = -2B</mrow>
+            <mrow>5 \amp = 3C</mrow>
+           </md>
+           and thus <m>A=\frac{1}{3}, B=-1, C=\frac{5}{3}</m>. Thus 
+           <md>
+            <mrow>\int\frac{x^2+1}{x^3+2x^2-x-2}\, dx \amp = \frac{1}{3}\frac{1}{x-1}-\frac{1}{x+1}+\frac{5}{3}\frac{1}{x+2}\, dx </mrow>
+            <mrow> \amp = \frac{1}{3}\ln\abs{x-1}-\ln\abs{x+1}+\frac{5}{3}\ln\abs{x+2}+C</mrow>
+           </md>. 
         </p>
     </solution>
 </example>
@@ -216,7 +276,28 @@
     </statement>
     <solution>
         <p>
-            
+          First note that the denominator <m>q(x)=x^4+3x^2+2=(x^2)^2+3x^2+2=(x^2+1)(x^2+2)</m>, where <m>x^2+1</m> and <m>x^2+2</m> are both irreducible. Now perform partial fractions: 
+          <md>
+            <mrow>\frac{1}{x^4+3x^2+2} \amp = \frac{Ax+B}{x^2+1}+\frac{Cx+D}{x^2+2}</mrow>
+            <mrow>1 \amp = (Ax+B)(x^2+2)+(Cx+D)(x^2+1)=(A+C)x^3+(B+D)x^2+(A+2C)x+B+2D</mrow>
+          </md>. 
+          Note that in this case we cannot evaluate the identity above at the roots of <m>x^2+1</m> and <m>x^2+2</m> since they have none (in the reals)! Instead we use (3) from <xref ref="th_poly_facts"/> and produce a linear system by equating the coefficients of two polynomials <m>(A+B)x^3+(B+D)x^2+(A+2C)x+(B+2D)</m> and <m>0x^3+0x^2+0x+1</m>:
+          <mdn>
+            <mrow xml:id="eq_1">A+C \amp = 0</mrow>
+            <mrow xml:id="eq_2">B+D \amp = 0</mrow>
+            <mrow xml:id="eq_3">2A+C \amp = 0</mrow>
+            <mrow xml:id="eq_4">2B+D \amp = 1</mrow>
+          </mdn>.
+          Equations <xref ref="eq_1"/> and <xref ref="eq_3"/> together imply <m>A=C=0</m>. Equation <xref ref="eq_2"/> implies <m>B=-D</m>; equation <xref ref="eq_4"/> then implies <m>D=-1</m> and <m>B=1</m>. We conclude that 
+          <me>
+            \frac{1}{x^4+3x^2+2}=\frac{1}{x^2+1}-\frac{1}{x^2+2}
+          </me>
+          and thus 
+          <md>
+            <mrow>\int \frac{1}{x^4+3x^2+2}\, dx \amp = \int \frac{1}{x^2+1}-\frac{1}{x^2+2}\, dx </mrow>
+            <mrow> = \int \frac{1}{x^2+1}-\frac{1}{2(x/\sqrt{2})^2+1)}\, dx </mrow>
+            <mrow> \amp = \arctan(x)-\frac{\sqrt{2}}{2}\arctan(x/\sqrt{2})+C</mrow>
+          </md>
         </p>
     </solution>
 </example>
@@ -230,7 +311,14 @@
     </statement>
     <solution>
         <p>
-            
+            Resist the temptation to apply partial fraction decomposition directly to the integrand! Since the integrand is <em>not</em> a rational function, <xref ref="th_partial_frac"/> does not apply. Instead we first do an obvious substitution:
+            <md>
+              <mrow> \int \frac{\sin \theta}{\cos^2\theta +\cos \theta-2}\, d\theta \amp 
+                = -\int \frac{1}{u^2 +u-2}\, du  \amp (u=\cos\theta, du=-\sin\theta d\theta) </mrow>
+                <mrow> \amp = -\int \frac{1}{3}\frac{1}{u-1}-\frac{1}{3}\frac{1}{u+2}\, du \amp (\text{part. frac. decomp.})</mrow>
+                <mrow> \amp =\frac{1}{3}(\ln\abs{\cos\theta+2}-\ln\abs{\cos\theta-1})+C</mrow>
+                <mrow> \amp = \ln\sqrt[3]{\abs{\frac{\cos\theta+2}{\cos\theta-1}}}+C \amp (\text{log. props.})</mrow>
+            </md> .
         </p>
     </solution>
 </example>
