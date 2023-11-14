@@ -140,7 +140,7 @@
                 <li>
                   <p>
                     <md>
-                      <mrow> \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\amp= \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\cdot \frac{2x-\sqrt{4x^2+13x}}{2x+\sqrt{4x^2-13x}} \amp (\text{alg. tech.: conjugate})</mrow>
+                      <mrow> \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\amp= \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\cdot \frac{2x+\sqrt{4x^2+13x}}{2x+\sqrt{4x^2-13x}} \amp (\text{alg. tech.: conjugate})</mrow>
                       <mrow> \amp = \lim_{x\to \infty}\frac{4x^2-(4x^2-13x)}{2x+\sqrt{4x^2-13x}}   </mrow>
                       <mrow> \amp = \lim_{x\to \infty}\frac{13x}{2x+\sqrt{4x^2-13x}}</mrow>
                       <mrow> \amp = \lim_{x\to \infty}\frac{\cancel{x}}{\cancel{x}}\frac{13}{2+\sqrt{4-13/x}}

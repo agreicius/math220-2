@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_improper_A" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Improper integrals</title>
+
+    <definition xml:id="d_improper_type_I">
+        <title>Improper integral of type I: infinite intervals</title>
+      <statement>
+        <p>
+          Below we define definite integrals over infinite intervals.
+          These are called <term>improper integrals of type I</term>,
+          or <term>integrals over infinite intervals</term>.
+        </p>
+        <ul>
+        <li>
+            <title>Interval <m>[a,\infty)</m></title>
+            <p>
+                Let <m>f</m> be continuous on the interval <m>[a,\infty)</m>.
+                The <term>integral of <m>f</m> over <m>[a,\infty)</m></term>, denoted 
+                <m> \int_a^\infty f(x)\, dx</m>, is said to <term>converge</term> if 
+                the limit 
+                <men xml:id="eq_improper_right_infty">
+                    \lim_{R\to\infty}\int_a^R f(x)\, dx
+                </men>
+                exists, in which case we define
+                <men>
+                  \int_a^\infty f(x)\, dx=\lim_{R\to\infty}\int_a^R f(x)\, dx
+                </men>.
+                If the limit <xref ref="eq_improper_right_infty"/> does not exist, we say the improper integral <term>diverges</term>. 
+              </p>
+        </li>
+        <li>
+            <title>Interval <m>(-\infty,a]</m></title>
+            <p>
+                Let <m>f</m> be continuous on the interval <m>(-\infty,a]</m>.
+                The <term>integral of <m>f</m> over <m>(-\infty,a]</m></term>, denoted 
+                <m>\int_{-\infty}^a f(x)\, dx</m>, is said to <term>converge</term> if 
+                the limit 
+                <men xml:id="eq_improper_left_infty">
+                    \lim_{R\to\infty}\int_{-R}^a f(x)\, dx
+                </men>
+                exists, in which case we define
+                <men>
+                  \int_{-\infty}^a f(x)\, dx=\lim_{R\to\infty}\int_{-R}^a f(x)\, dx
+                </men>.
+                If the limit <xref ref="eq_improper_left_infty"/> does not exist, we say the improper integral <term>diverges</term>. 
+              </p>
+        </li>
+          <li>
+            <title>Real line</title>
+            <p>
+              Let <m>f</m> be continuous on the real line <m>\R=(-\infty,\infty)</m>.
+              The <term>integral of <m>f</m> over <m>(-\infty,\infty)</m></term>, denoted <m> \int_{-\infty}^{\infty}f(x)\, dx</m>, is said to <term>converge</term>
+              if both of the half-infinite integrals
+              <m>\int_{-\infty}^a f(x)\, dx</m> and <m>\int_a^{\infty}f(x)\, dx</m> converge for some real number <m>a</m>. In this case we define
+              <men xml:id="eq_improper_real_line">
+                \int_{-\infty}^\infty f(x)\, dx=\int_{-\infty}^a f(x)\, dx+\int_a^{\infty}f(x)\, dx
+              </men>.
+              If either
+              (or both)
+              of the half-infinite integrals diverge,
+              we say that the integral of <m>f</m> over <m>(-\infty, \infty)</m> <term>diverges</term>.
+            </p>
+          </li>
+        </ul>
+      </statement>
+    </definition>
+    <algorithm xml:id="proc_improper_type_I">
+        <title>Improper integral: type I</title>
+        <statement>
+            <p>
+                To evaluate an improper integral of the form <m>\int_a^\infty f(x)\, dx</m> or <m>\int_{-\infty}^af(x)\, dx</m>, proceed as follows. 
+                <ol>
+                    <li>
+                        <p>
+                            Compute the relevant definite integral <m>I_R</m>, that is <m>I_R=\int_a^Rf(x)\, dx</m> or <m>I_R=\int_{-R}^af(x)\, dx</m>,  as an expression in terms of <m>R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Investigate the relevant limit 
+                            <md>
+                                <mrow>\lim_{R\to\infty}I_R\amp =\int_a^R f(x)\, dx \amp   </mrow>
+                                <mrow>\lim_{R\to\infty}I_R\amp =\lim_{R\to\infty}\int_{-R}^af(x)\, dx \amp </mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: <ie/>, 
+                            <md>
+                                <mrow>\int_a^\infty f(x)\, dx\amp =\lim_{R\to\infty}\int_a^R f(x)\, dx  </mrow>
+                                <mrow>\int_{-\infty}^a f(x)\, dx\amp =\lim_{R\to\infty}\int_{-R}^af(x)\, dx \amp </mrow>
+                            </md>.
+                        </p>
+                    </li>
+                </ol>
+            To evaluate a definite integral of the form <m>\int_{-\infty}^{\infty}f(x)\, dx</m>, pick any real number <m>a</m>, and apply the proceeding to both <m>\int_a^\infty f(x)\, dx</m> and <m>\int_{-\infty}^af(x)\, dx</m>. The improper integral over <m>(-\infty, \infty)</m> exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum. 
+            </p>
+        </statement>
+    </algorithm>
+<example xml:id="eg_improper_type_I_1">
+    <title>Type I: half-infinite</title>
+    <statement>
+        <p>
+            Evaluate <m>\displaystyle\int_{-2}^{\infty}e^{-x}\, dx</m>.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="eg_improper_type_I_2">
+    <title>Type I: <m>p</m>-test</title>
+    <statement>
+        <p>
+            Evaluate <m>\displaystyle\int_{2}^\infty \frac{1}{x^p}\, dx</m> for <m>p&gt;  0</m>.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<theorem xml:id="th_improper_p_test">
+    <title>Improper integrals: <m>p</m>-test</title>
+    <statement>
+        <p>
+            Let <m>a</m> and <m>p</m> be any positive numbers. We have 
+            <men xml:id="eq_improper_p_text">
+                \int_a^\infty \frac{1}{x^p}\, dx=\begin{cases}
+                \frac{1}{(p-1)a^{p-1}} \amp \text{if } p&gt; 1 \\
+                \infty \amp \text{if } p\leq 1.
+                \end{cases}   
+            </men>.
+        </p>
+    </statement>
+</theorem>
+
+<example xml:id="eg_improper_type_I_3">
+    <title>Type I: half-infinite</title>
+    <statement>
+        <p>
+            Evaluate <m>\displaystyle\int_{-\infty}^{\infty}\frac{1}{x^2+1}\, dx</m>.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+    <definition xml:id="d_improper_type_II">
+        <title>Improper integrals of type II: discontinuities</title>
+        <statement>
+          <p>
+            Assume <m>f</m> is continuous on the interval <m>I=[a,b]</m>,
+            except possibly at one point.
+            <ul>
+              <li>
+                <p>
+                  Assume <m>f</m> is not continuous at <m>x=a</m>.
+                  The <term>integral of <m>f</m> over <m>[a,b]</m></term>, denoted <m>\int_a^b f(x)\, dx</m>, is said to <term>converge</term> if the limit 
+                  <men xml:id="eq_improper_left">
+                    \lim_{t\to a^+}\int_t^b f(x)\, dx
+                  </men>,
+                  exists, in which case we define 
+                  <men xml:id="eq_improper_left_def">
+                    \int_a^b f(x)\, dx=\lim_{t\to a^+}\int_t^b f(x)\, dx
+                  </men>. 
+                  If the limit <xref ref="eq_improper_left"/> does not exist, we say the improper integral <term>diverges</term>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Assume <m>f</m> is not continuous at <m>x=b</m>.
+                  The <term>integral of <m>f</m> over <m>[a,b]</m></term>, denoted <m>\int_a^b f(x)\, dx</m>, is said to <term>converge</term> if the limit 
+                  <men xml:id="eq_improper_right">
+                    \lim_{t\to b^-}\int_a^t f(x)\, dx
+                  </men>,
+                  exists, in which case we define 
+                  <men xml:id="eq_improper_right_def">
+                    \int_a^b f(x)\, dx=\lim_{t\to b^-}\int_a^t f(x)\, dx
+                  </men>. 
+                  If the limit <xref ref="eq_improper_left"/> does not exist, we say the improper integral <term>diverges</term>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Assume <m>f</m> is not continuous at <m>c\in (a,b)</m>.
+                  The <term>integral of <m>f</m> over <m>[a,b]</m></term>, denoted <m>\int_a^bf(x)\, dx</m>, is said to <term>converge</term> if both improper integrals <m>\int_a^cf(x)\, dx</m> and <m>\int_c^b f(x)\, dx</m> converge, in which case we define 
+                  <men xml:id="eq_improper_type_II">
+                    \int_a^bf(x)\, dx=\int_a^c f(x)\, dx+ \int_c^b f(x)\, dx,
+                  </men>.
+                 Otherwise, we say that the integral over the entire interval <term>diverges</term>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+    </definition>
+    <algorithm xml:id="proc_improper_type_II">
+        <title>Improper integral: type II</title>
+        <statement>
+            <p>
+                To evaluate an improper integral of the form <m>\int_a^b f(x)\, dx</m>, where <m>f</m> fails to be continuous at at most one of the endpoints of <m>[a,b]</m>, proceed as follows. 
+                <ol>
+                    <li>
+                        <p>
+                            Compute the relevant definite integral, that is <m>\int_t^b f(x)\, dx</m> or <m>\int_a^t f(x)\, dx</m>, as an expression in terms of <m>t</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Investigate the relevant limit 
+                            <md>
+                                <mrow>\lim_{t\to a^+}\int_t^b f(x)\, dx \amp   </mrow>
+                                <mrow>\lim_{t\to b^-}\int_{a}^tf(x)\, dx \amp </mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: <ie/>, 
+                            <md>
+                                <mrow>\int_a^b f(x)\, dx\amp =\lim_{t\to a^+}\int_t^b f(x)\, dx  </mrow>
+                                <mrow>\int_{a}^b f(x)\, dx\amp =\lim_{t\to b^-}\int_{a}^tf(x)\, dx \amp </mrow>
+                            </md>.
+                        </p>
+                    </li>
+                </ol>
+            To evaluate a definite integral of the form <m>\int_{a}^{b}f(x)\, dx</m>, where <m>f</m> is continuous everywhere except at <m>x=c\in (a,b)</m>, apply the proceeding to both <m>\int_a^c f(x)\, dx</m> and <m>\int_{c}^bf(x)\, dx</m>. The improper integral over the <m>[a,b]</m> exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum. 
+            </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_improper_type_II_1">
+        <title>Improper: type II</title>
+        <statement>
+            <p>
+                Evaluate <m>\displaystyle\int_{0}^2\frac{1}{x-1}\, dx</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_improper_type_II_2">
+        <title>Improper: type II</title>
+        <statement>
+            <p>
+                Evaluate <m>\displaystyle\int_0^{1}\ln x\, dx</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_improper_type_II_3">
+        <title>Improper: type II</title>
+        <statement>
+            <p>
+                Evaluate <m>\displaystyle\int_1^{4}\frac{x}{\sqrt[3]{x^2-4}}\, dx</m>.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    
+    <definition xml:id="d_improper_area">
+        <title>Area interpretation of improper integrals</title>
+        <statement>
+          <p>
+            Let <m>f</m> be defined on an interval <m>I</m> for which the corresponding integral is improper,
+            and let <m>\mathcal{R}</m> be the
+            (potentially unbounded)
+            region between the graph of <m>f</m> and the <m>x</m>-axis over the interval <m>I</m>.
+            <ul>
+              <li>
+                <p>
+                  We define the <em>area</em>
+                  (or <em>total area</em>)
+                  of <m>\mathcal{R}</m> to be the integral of <m>\lvert f\rvert</m> over <m>I</m>,
+                  assuming this integral converges.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We define the <em>signed area</em>
+                  of <m>\mathcal{R}</m> to be the integral of <m>f</m> over <m>I</m>,
+                  assuming this interval converges.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+    </definition>
+
+</section>
