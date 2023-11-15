@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_improper_B" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Improper integrals: convergence tests</title>
+
+    <theorem xml:id="th_direct_comp">
+        <title>Direct comparison test</title>
+        <statement>
+          <p>
+            Let <m>f</m> and <m>g</m> be nonnegative
+            functions on an interval <m>I</m>,
+            and suppose <m>f(x)\leq g(x)</m> for all <m>x</m> in <m>I</m>.
+            If the integral of <m>g</m> over <m>I</m> converges,
+            then the integral of <m>f</m> over <m>I</m> converges.
+            Using logical notation:
+            <men xml:id="eq_direct_comp">
+             \begin{array}{c} \text{ integral of \(g\) over } \\ \text{\(I\) converges} \end{array}  \implies \begin{array}{c} \text{ integral of \(f\) over} \\ \text{\(I\) converges} \end{array}
+            </men>.
+          </p>
+          <p>
+            Equivalently, using the contrapositive of <xref ref="eq_direct_comp"/>, we have 
+            <men xml:id="eq_direct_comp_contra">
+                \begin{array}{c} \text{ integral of \(f\) over} \\ \text{\(I\) diverges} \end{array} \implies \begin{array}{c} \text{ integral of \(g\) over} \\ \text{\(I\) diverges} \end{array}
+            </men>.
+          </p>
+        </statement>
+    </theorem>
+    
+    <theorem xml:id="th_limit_comp">
+        <title>Limit comparison test</title>
+      <statement>
+        <p>
+          Let <m>f</m> and <m>g</m> be continuous and positive
+          on the interval <m>I</m>.
+          <ul>
+            <li>
+              <p>
+                If <m>I=[a,\infty)</m> and
+                <m>\displaystyle\lim_{x\to\infty}\frac{f(x)}{g(x)}=L</m> with <m>0\lt  L \lt \infty</m>, then
+                <me>
+                  \int_a^\infty f(x)\, dx \text{ converges } \iff \int_a^\infty g(x)\, dx \text{ converges }
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>I=(-\infty,a]</m> and
+                <m>\displaystyle\lim_{x\to-\infty}\frac{f(x)}{g(x)}=L</m> with <m>0\lt  L \lt \infty</m>, then
+                <me>
+                  \int_{-\infty}^a f(x)\, dx \text{ converges } \iff \int_{-\infty}^a g(x)\, dx \text{ converges }
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>I=(a,b]</m> and <m>\displaystyle\lim_{x\to a^+}\frac{f(x)}{g(x)}=L</m> with <m>0\lt  L \lt \infty</m>, then
+                <me>
+                  \int_{a}^b f(x)\, dx \text{ converges } \iff \int_a^b g(x)\, dx \text{ converges }
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>I=[a,b)</m> and <m>\displaystyle\lim_{x\to b^-}\frac{f(x)}{g(x)}=L</m> with <m>0\lt  L \lt \infty</m>, then
+                <me>
+                  \int_{a}^b f(x)\, dx \text{ converges } \iff \int_a^b g(x)\, dx \text{ converges }
+                </me>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+    
+    <example xml:id="eg_direct_comp_1">
+        <title>Comparison test</title>
+        <statement>
+            <p>
+                Decide whether <m>\displaystyle\int_2^\infty \frac{1}{x^5+\sqrt{x+3}}\, dx</m> converges.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_direct_comp_2">
+        <title>Comparison test</title>
+        <statement>
+            <p>
+                Decide whether <m>\displaystyle\int_1^\infty \frac{2+\sin x}{x}\, dx</m> converges.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_limit_comp_1">
+        <title>Comparison test</title>
+        <statement>
+            <p>
+                Decide whether <m>\displaystyle\int_0^\infty\frac{1}{\sqrt{x}+3x^5}\, dx</m> converges.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example xml:id="eg_limit_comp_2">
+        <title>Comparison test</title>
+        <statement>
+            <p>
+                Let <m>f(x)=ax^2+bx+c</m> be any fixed irreducible quadratic polynomial with <m>a>0</m>.
+                Decide whether <m>\displaystyle\int_{-\infty}^\infty \frac{1}{f(x)}\, dx</m> exists.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    
+
+</section>
