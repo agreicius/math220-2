@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.26.3</span><span class="period">.</span><span class="space"> </span><span class="title">Solving first-order linear equations.</span>
+</h3>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(p, q\)</span> are continuous on the interval <span class="process-math">\(I\text{.}\)</span> To solve the differential equation with standard form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_diff_eq.html ./knowl/xref/eq_solve_aux_eq.html ./knowl/xref/eq_solve_diff_eq.html">
+\begin{equation}
+f'(x)+p(x)f(x)=q(x), \ x\in I\text{,}\tag{1.26.2}
+\end{equation}
+</div>
+<div class="para">proceed as follows.</div>
+<ol class="decimal">
+<li><div class="para">Compute <span class="process-math">\(\int p(x)\, dx=P(x)+C\text{.}\)</span>
+</div></li>
+<li><div class="para">Set <span class="process-math">\(v(x)=e^{P(x)}\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">The function <span class="process-math">\(f\)</span> is a solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_diff_eq.html" title="Equation 1.26.2">(1.26.2)</a> if and only if it is a solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_diff_eq.html">
+\begin{equation}
+(v(x)f(x))'=v(x)q(x)\text{.}\tag{1.26.3}
+\end{equation}
+</div>
+</div></li>
+<li>
+<div class="para logical">
+<div class="para">Compute <span class="process-math">\(\int v(x)q(x)\, dx=G(x)+C\text{.}\)</span> Since <span class="process-math">\(G(x)+C\)</span> is the general solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_aux_eq.html" title="Equation 1.26.3">(1.26.3)</a>, the general solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_diff_eq.html" title="Equation 1.26.2">(1.26.2)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_aux_eq.html ./knowl/xref/eq_solve_diff_eq.html">
+\begin{equation*}
+f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C\)</span> is any constant.</div>
+</div>
+<div class="para">As a somewhat liberal usage of indefinite integral notation, we sometimes write <span class="process-math">\(f(x)=\frac{1}{v(x)}\int v(x)q(x)\, dx
+\text{.}\)</span>
+</div>
+</li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="s_linear_diff_eq.html#proc_lin_diff_eq">in-context</a></span>
+</body>
+</html>

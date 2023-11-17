@@ -1897,7 +1897,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.24",
   "title": "Improper integrals",
-  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .       Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .         Type I: -test   Evaluate for .         Improper integrals: -test   Let and be any positive numbers. We have .     Type I: half-infinite   Evaluate .         Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .         Improper: type II   Evaluate .         Improper: type II   Evaluate .         Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
+  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .       Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .         Type I: -test   Evaluate for .         Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .        Type I: half-infinite   Evaluate .         Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .         Improper: type II   Evaluate .         Improper: type II   Evaluate .         Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
 },
 {
   "id": "d_improper_type_I",
@@ -1942,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.24.5",
   "title": "Improper integrals: <span class=\"process-math\">\\(p\\)<\/span>-test.",
-  "body": " Improper integrals: -test   Let and be any positive numbers. We have .   "
+  "body": " Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .      "
 },
 {
   "id": "eg_improper_type_I_3",
@@ -2006,6 +2006,150 @@ var ptx_lunr_docs = [
   "number": "1.24.12",
   "title": "Area interpretation of improper integrals.",
   "body": " Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.      "
+},
+{
+  "id": "s_improper_B",
+  "level": "1",
+  "url": "s_improper_B.html",
+  "type": "Section",
+  "number": "1.25",
+  "title": "Improper integrals: convergence tests",
+  "body": " Improper integrals: convergence tests   Direct comparison test   Let and be nonnegative functions on an interval , and suppose for all in . If the integral of over converges, then the integral of over converges. Using logical notation: .  Equivalently, using the contrapositive of , we have .     Comparison test   Decide whether converges.         Comparison test   Decide whether converges.         Limit comparison test   Let and be continuous and positive on the interval .   If and with , then .    If and with , then .    If and with , then .    If and with , then .        Limit comparison test: type I   Assume is positive and continuous on . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , larger positive powers of dominate smaller positive powers of , exponential functions dominate power functions, and positive powers of dominate logarithmic functions.    Conclude that converges if and only if converges.        Limit comparison test: type II   Assume is positive and continuous on the interval . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , smaller positive powers of dominate larger positive powers of .    Conclude that converges if and only if converges.        Comparison test   Decide whether converges.         Comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.        "
+},
+{
+  "id": "th_direct_comp",
+  "level": "2",
+  "url": "s_improper_B.html#th_direct_comp",
+  "type": "Theorem",
+  "number": "1.25.1",
+  "title": "Direct comparison test.",
+  "body": " Direct comparison test   Let and be nonnegative functions on an interval , and suppose for all in . If the integral of over converges, then the integral of over converges. Using logical notation: .  Equivalently, using the contrapositive of , we have .   "
+},
+{
+  "id": "eg_direct_comp_1",
+  "level": "2",
+  "url": "s_improper_B.html#eg_direct_comp_1",
+  "type": "Example",
+  "number": "1.25.2",
+  "title": "Comparison test.",
+  "body": " Comparison test   Decide whether converges.       "
+},
+{
+  "id": "eg_direct_comp_2",
+  "level": "2",
+  "url": "s_improper_B.html#eg_direct_comp_2",
+  "type": "Example",
+  "number": "1.25.3",
+  "title": "Comparison test.",
+  "body": " Comparison test   Decide whether converges.       "
+},
+{
+  "id": "th_limit_comp",
+  "level": "2",
+  "url": "s_improper_B.html#th_limit_comp",
+  "type": "Theorem",
+  "number": "1.25.4",
+  "title": "Limit comparison test.",
+  "body": " Limit comparison test   Let and be continuous and positive on the interval .   If and with , then .    If and with , then .    If and with , then .    If and with , then .      "
+},
+{
+  "id": "proc_limit_comp_I",
+  "level": "2",
+  "url": "s_improper_B.html#proc_limit_comp_I",
+  "type": "Procedure",
+  "number": "1.25.5",
+  "title": "Limit comparison test: type I.",
+  "body": " Limit comparison test: type I   Assume is positive and continuous on . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , larger positive powers of dominate smaller positive powers of , exponential functions dominate power functions, and positive powers of dominate logarithmic functions.    Conclude that converges if and only if converges.      "
+},
+{
+  "id": "proc_limit_comp_II",
+  "level": "2",
+  "url": "s_improper_B.html#proc_limit_comp_II",
+  "type": "Procedure",
+  "number": "1.25.6",
+  "title": "Limit comparison test: type II.",
+  "body": " Limit comparison test: type II   Assume is positive and continuous on the interval . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , smaller positive powers of dominate larger positive powers of .    Conclude that converges if and only if converges.      "
+},
+{
+  "id": "eg_limit_comp_1",
+  "level": "2",
+  "url": "s_improper_B.html#eg_limit_comp_1",
+  "type": "Example",
+  "number": "1.25.7",
+  "title": "Comparison test.",
+  "body": " Comparison test   Decide whether converges.       "
+},
+{
+  "id": "eg_limit_comp_2",
+  "level": "2",
+  "url": "s_improper_B.html#eg_limit_comp_2",
+  "type": "Example",
+  "number": "1.25.8",
+  "title": "Comparison test.",
+  "body": " Comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.       "
+},
+{
+  "id": "s_linear_diff_eq",
+  "level": "1",
+  "url": "s_linear_diff_eq.html",
+  "type": "Section",
+  "number": "1.26",
+  "title": "First-order linear differential equations",
+  "body": " First-order linear differential equations   First-order linear equation   A first-order linear differential equation for the function is a differential equation that can be written in the form for some functions and . Equation is called the standard form of the equation.     Integrating factor   Consider a first-order linear equation with standard form .  An integrating factor for this equation is any function of the form , where is an antiderivative of .  As a somewhat liberal usage of indefinite integral notation, we sometimes write .     Solving first-order linear equations   Suppose are continuous on the interval . To solve the differential equation with standard form , proceed as follows.   Compute .    Set .    The function is a solution of if and only if it is a solution of .    Compute . Since is the general solution of , the general solution of is , where is any constant.  As a somewhat liberal usage of indefinite integral notation, we sometimes write .        Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed constant.         Non-separable example   Find the general solution to the differential equation .         Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .           "
+},
+{
+  "id": "d_lin_diff_eq",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#d_lin_diff_eq",
+  "type": "Definition",
+  "number": "1.26.1",
+  "title": "First-order linear equation.",
+  "body": " First-order linear equation   A first-order linear differential equation for the function is a differential equation that can be written in the form for some functions and . Equation is called the standard form of the equation.   "
+},
+{
+  "id": "d_int_factor",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#d_int_factor",
+  "type": "Definition",
+  "number": "1.26.2",
+  "title": "Integrating factor.",
+  "body": " Integrating factor   Consider a first-order linear equation with standard form .  An integrating factor for this equation is any function of the form , where is an antiderivative of .  As a somewhat liberal usage of indefinite integral notation, we sometimes write .   "
+},
+{
+  "id": "proc_lin_diff_eq",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#proc_lin_diff_eq",
+  "type": "Procedure",
+  "number": "1.26.3",
+  "title": "Solving first-order linear equations.",
+  "body": " Solving first-order linear equations   Suppose are continuous on the interval . To solve the differential equation with standard form , proceed as follows.   Compute .    Set .    The function is a solution of if and only if it is a solution of .    Compute . Since is the general solution of , the general solution of is , where is any constant.  As a somewhat liberal usage of indefinite integral notation, we sometimes write .      "
+},
+{
+  "id": "eg_exp_growth_revisited",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#eg_exp_growth_revisited",
+  "type": "Example",
+  "number": "1.26.4",
+  "title": "Exponential change revisited.",
+  "body": " Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed constant.       "
+},
+{
+  "id": "eg_lin_diff_eq",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#eg_lin_diff_eq",
+  "type": "Example",
+  "number": "1.26.5",
+  "title": "Non-separable example.",
+  "body": " Non-separable example   Find the general solution to the differential equation .       "
+},
+{
+  "id": "eg_non_separable",
+  "level": "2",
+  "url": "s_linear_diff_eq.html#eg_non_separable",
+  "type": "Example",
+  "number": "1.26.6",
+  "title": "Initial value.",
+  "body": " Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .          "
 },
 {
   "id": "appendix-notation",
