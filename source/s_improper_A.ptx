@@ -10,7 +10,7 @@
           Below we define definite integrals over infinite intervals.
           These are called <term>improper integrals of type I</term>,
           or <term>integrals over infinite intervals</term>.
-        </p>
+        
         <ul>
         <li>
             <title>Interval <m>[a,\infty)</m></title>
@@ -63,6 +63,7 @@
             </p>
           </li>
         </ul>
+      </p>
       </statement>
     </definition>
     <algorithm xml:id="proc_improper_type_I">
