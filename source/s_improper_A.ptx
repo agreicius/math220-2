@@ -130,13 +130,33 @@
     <title>Improper integrals: <m>p</m>-test</title>
     <statement>
         <p>
-            Let <m>a</m> and <m>p</m> be any positive numbers. We have 
-            <men xml:id="eq_improper_p_text">
+            Let <m>a</m> and <m>p</m> be any positive numbers.
+            <ul>
+              <li>
+                <title>Type I</title>
+                <p>
+                  We have 
+            <men xml:id="eq_p_test_I">
                 \int_a^\infty \frac{1}{x^p}\, dx=\begin{cases}
                 \frac{1}{(p-1)a^{p-1}} \amp \text{if } p&gt; 1 \\
                 \infty \amp \text{if } p\leq 1.
                 \end{cases}   
             </men>.
+                </p>
+              </li>
+              <li>
+                <title>Type II</title>
+                <p>
+                  We have 
+            <men xml:id="eq_p_test_II">
+                \int_0^a \frac{1}{x^p}\, dx=\begin{cases}
+                \frac{1}{(-p+1)a^{p-1}} \amp \text{if } p&lt; 1 \\
+                \infty \amp \text{if } p\geq 1.
+                \end{cases}   
+            </men>.
+                </p>
+              </li>
+            </ul> 
         </p>
     </statement>
 </theorem>

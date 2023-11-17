@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_linear_diff_eq" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>First-order linear differential equations</title>
+    <definition xml:id="d_lin_diff_eq">
+        
+        <title>First-order linear equation</title>
+      <statement>
+        <p>
+          A <term>first-order linear differential equation</term>
+          for the function <m>f</m> is a differential equation that can be written in the form
+          <men xml:id="eq_lin_diff_eq">
+            f'(x)+p(x)f(x)=q(x)
+          </men>
+          for some functions <m>p</m> and <m>q</m>. 
+          Equation <xref ref="eq_lin_diff_eq"/> is called the
+          <term>standard form</term> of the equation.
+        </p>
+      </statement>
+    </definition>
+    
+    <definition xml:id="d_int_factor">
+        <title>Integrating factor</title>
+      <statement>
+        <p>
+          Consider a first-order linear equation with standard form
+          <me>
+            f'(x)+p(x)f(x)=q(x)
+          </me>.
+        </p>
+        <p>
+          An <term>integrating factor</term> for this equation is any function of the form
+          <me>
+            v(x)=e^{P(x)}
+          </me>,
+          where <m>P(x)</m> is an antiderivative of <m>p(x)</m>.
+        </p>
+        <p>
+            As a somewhat liberal usage of indefinite integral notation, we sometimes write 
+          <m>
+            v(x)=e^{\int p(x)\, dx}
+          </m>.
+        </p>
+      </statement>
+    </definition>
+
+    <algorithm xml:id="proc_lin_diff_eq">
+        <title>Solving first-order linear equations</title>
+      <statement>
+        <p>
+          Suppose <m>p, q</m> are continuous on the interval <m>I</m>.
+          To solve the differential equation with standard form
+          <men xml:id="eq_solve_diff_eq">
+            f'(x)+p(x)f(x)=q(x), \ x\in I
+          </men>,
+          proceed as follows.
+          <ol>
+            <li>
+              <p>
+                Compute <m>\int p(x)\, dx=P(x)+C</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Set <m>v(x)=e^{P(x)}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is a solution of <xref ref="eq_solve_diff_eq"/> if and only if it is a solution of
+                <men xml:id="eq_solve_aux_eq">
+                  (v(x)f(x))'=v(x)q(x)
+                </men>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>\int v(x)q(x)\, dx=G(x)+C</m>.
+                Since <m>G(x)+C</m> is the general solution of <xref ref="eq_solve_aux_eq"/>, the general solution of <xref ref="eq_solve_diff_eq"/> is
+                <me>
+                  f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}
+                </me>,
+                where <m>C</m> is any constant.
+              </p>
+              <p>
+                As a somewhat liberal usage of indefinite integral notation, we sometimes write 
+                <m>
+                  f(x)=\frac{1}{v(x)}\int v(x)q(x)\, dx
+                </m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+<example xml:id="eg_exp_growth_revisited">
+    <title>Exponential change revisited</title>
+
+    <statement>
+        <p>
+            Use the integrating factor method to find the general solution to <m>y'=k y</m>,
+            where <m>k</m> is any fixed constant.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="eg_lin_diff_eq">
+    <title>Non-separable example</title>
+    
+    
+    <statement>
+        <p>
+            Find the general solution to the differential equation
+            <me>
+              (x^2+1)f'(x)-x=x^3-xf(x), \  x\in (-\infty, \infty)
+            </me>.
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="eg_non_separable">
+    <title>Initial value</title>
+    <statement>
+        <p>
+            Consider the differential equation
+            <me>
+              (x-2)f'=e^{-x}-3f, \ x\in (-\infty, 2)
+            </me>.
+            <ol>
+              <li>
+                <p>
+                  Find the general solution to the differential equation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the solution satisfying <m>f(1)=-1</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+
+</section>

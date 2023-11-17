@@ -50,6 +50,7 @@
       <xi:include  href="s_num_int_B.ptx"/>
       <xi:include  href="s_improper_A.ptx"/>
       <xi:include  href="s_improper_B.ptx"/>
+      <xi:include  href="s_linear_diff_eq.ptx"/>
     </chapter>
     <backmatter>
         <appendix xml:id="appendix-notation">

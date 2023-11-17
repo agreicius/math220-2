@@ -25,6 +25,32 @@
           </p>
         </statement>
     </theorem>
+    <example xml:id="eg_direct_comp_1">
+      <title>Comparison test</title>
+      <statement>
+          <p>
+              Decide whether <m>\displaystyle\int_2^\infty \frac{1}{x^5+\sqrt{x+3}}\, dx</m> converges.
+            </p>
+      </statement>
+      <solution>
+          <p>
+              
+          </p>
+      </solution>
+  </example>
+  <example xml:id="eg_direct_comp_2">
+      <title>Comparison test</title>
+      <statement>
+          <p>
+              Decide whether <m>\displaystyle\int_1^\infty \frac{2+\sin x}{x}\, dx</m> converges.
+            </p>
+      </statement>
+      <solution>
+          <p>
+              
+          </p>
+      </solution>
+  </example>
     
     <theorem xml:id="th_limit_comp">
         <title>Limit comparison test</title>
@@ -72,32 +98,63 @@
       </statement>
     </theorem>
     
-    <example xml:id="eg_direct_comp_1">
-        <title>Comparison test</title>
-        <statement>
+    <algorithm xml:id="proc_limit_comp_I">
+      <title>Limit comparison test: type I</title>
+      <statement>
+        <p>
+          Assume <m>f</m> is positive and continuous on <m>[a,\infty)</m>. To decide whether <m>\int_a^\infty f(x)\, dx</m> converges using the limit comparison test, proceed as follows. 
+        <ol>
+          <li>
             <p>
-                Decide whether <m>\displaystyle\int_2^\infty \frac{1}{x^5+\sqrt{x+3}}\, dx</m> converges.
-              </p>
-        </statement>
-        <solution>
-            <p>
-                
+              Find a simpler continuous function <m>g</m> that is <term>limit-comparable</term> to <m>f</m>: <ie/>,  a function <m>g</m> satisfying 
+              <me>
+                \lim_{x\to \infty}\frac{f(x)}{g(x)}=c &gt; 0
+              </me>.  
             </p>
-        </solution>
-    </example>
-    <example xml:id="eg_direct_comp_2">
-        <title>Comparison test</title>
-        <statement>
+          </li>
+          <li>
             <p>
-                Decide whether <m>\displaystyle\int_1^\infty \frac{2+\sin x}{x}\, dx</m> converges.
-              </p>
-        </statement>
-        <solution>
-            <p>
-                
+              Useful intuition to help find the function <m>g</m>: as <m>x\to \infty</m>, larger positive powers of <m>x</m> dominate smaller positive powers of <m>x</m>, exponential functions dominate power functions, and positive powers of <m>x</m> dominate logarithmic functions. 
             </p>
-        </solution>
-    </example>
+          </li>
+          <li>
+            <p>
+              Conclude that <m>\int_a^\infty f(x)\, dx</m> converges if and only if  <m>\int_a^\infty g(x)\, dx</m> converges.  
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+    </algorithm>
+    <algorithm xml:id="proc_limit_comp_II">
+      <title>Limit comparison test: type II</title>
+      <statement>
+        <p>
+          Assume <m>f</m> is positive and continuous on the interval <m>(0,a]</m>. To decide whether <m>\int_0^a f(x)\, dx</m> converges using the limit comparison test, proceed as follows. 
+        <ol>
+          <li>
+            <p>
+              Find a simpler continuous function <m>g</m> that is <term>limit-comparable</term> to <m>f</m>: <ie/>, a function <m>g</m> satisfying
+              <me>
+                \lim_{x\to 0^+}\frac{f(x)}{g(x)}=c &gt; 0
+              </me>.  
+            </p>
+          </li>
+          <li>
+            <p>
+              Useful intuition to help find the function <m>g</m>: as <m>x\to 0^+</m>, smaller positive powers of <m>x</m> dominate larger positive powers of <m>x</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Conclude that <m>\int_a^\infty f(x)\, dx</m> converges if and only if  <m>\int_a^\infty g(x)\, dx</m> converges.  
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+    </algorithm>
+    
     <example xml:id="eg_limit_comp_1">
         <title>Comparison test</title>
         <statement>
