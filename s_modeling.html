@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Fundamental theorem (cont.)</title>
+<title>Modeling with differential equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_FTC.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_substitution.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_linear_diff_eq.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -219,7 +219,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_riemann_sums.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Riemann sums</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_definite_integral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Definite integral</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_FTC.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Fundamental theorem of calculus</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_FTC_cont.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Fundamental theorem (cont.)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_FTC_cont.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Fundamental theorem (cont.)</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_substitution.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Substitution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subst_cont.html" class="internal"><span class="codenumber">1.8</span> <span class="title">More substitution; area between curves</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_volume.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Volume via cross sections</span></a></div></li>
@@ -240,7 +240,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_improper_A.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Improper integrals</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_improper_B.html" class="internal"><span class="codenumber">1.25</span> <span class="title">Improper integrals: convergence tests</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linear_diff_eq.html" class="internal"><span class="codenumber">1.26</span> <span class="title">First-order linear differential equations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_modeling.html" class="internal"><span class="codenumber">1.27</span> <span class="title">Modeling with differential equations</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_modeling.html" class="internal"><span class="codenumber">1.27</span> <span class="title">Modeling with differential equations</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -256,161 +256,70 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_FTC_cont"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.6</span><span class="space"> </span><span class="title">Fundamental theorem (cont.)</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_modeling"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.27</span><span class="space"> </span><span class="title">Modeling with differential equations</span>
 </h2>
-<div class="para logical" id="p-187">
-<div class="para">In this section we focus on <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>. One peculiarity of this theorem is the function <span class="process-math">\(F(x)\)</span> defined as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="eq_integral_function">
+<article class="algorithm theorem-like" id="proc_modeling_diff_eq"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.27.1</span><span class="period">.</span><span class="space"> </span><span class="title">Modeling with first-order differential equations.</span>
+</h3>
+<div class="para logical" id="p-740">
+<div class="para">Many applications present information about a quantity in a form that can be modeled by a first-order differential equation. Here is an outline of the steps to take in these settings.</div>
+<ul class="disc">
+<li id="li-351"><div class="para" id="p-741">Explicitly identify the quantity <span class="process-math">\(Q\)</span> under consideration as a function of some other quantity <span class="process-math">\(x\text{,}\)</span> and give a name to this function: <span class="process-math">\(Q=f(x)\text{.}\)</span>
+</div></li>
+<li id="li-352"><div class="para logical" id="p-742">
+<div class="para">Translate the given information about <span class="process-math">\(Q\)</span> into a first-order differential equation:</div>
+<div class="displaymath process-math" id="eq_modeling">
 \begin{equation}
-F(x)=\int_a^x f(t)\, dt\text{.}\tag{1.6.1}
+f'(x)=F(x, f(x)) \text{.}\tag{1.27.1}
 \end{equation}
 </div>
-<div class="para">This is called an <em class="emphasis">integral function</em>, as the values <span class="process-math">\(F(x)\)</span> are defined by the integral expression <span class="process-math">\(\int_a^x f(t)\, dt\text{.}\)</span>
-</div>
-</div>
-<article class="definition definition-like" id="d_integral_function"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Integral function.</span>
-</h3> <div class="para" id="p-188">Let <span class="process-math">\(f\)</span> be integrable on the interval <span class="process-math">\([a,b]\text{.}\)</span> The function <span class="process-math">\(F\)</span> defined on <span class="process-math">\(I\)</span> as <span class="process-math">\(F(x)=\int_a^xf(t)\, dt\)</span> is called an <dfn class="terminology">integral function</dfn>.</div></article><div class="para" id="p-189">Examining the formula <a href="" class="xref" data-knowl="./knowl/xref/eq_integral_function.html" title="Equation 1.6.1">(1.6.1)</a>, we note that the input of <span class="process-math">\(F\)</span> is an the upper limit of integration of the integral. As we vary <span class="process-math">\(x\text{,}\)</span> the only thing that changes about the integral is the interval over which we are integrating; and this causes the values <span class="process-math">\(F(x)\)</span> to vary with <span class="process-math">\(x\text{.}\)</span> Using the signed area interpretation of the integral allows us to visualize the integral function <a href="" class="xref" data-knowl="./knowl/xref/eq_integral_function.html" title="Equation 1.6.1">(1.6.1)</a> . In keeping with the notation in <a href="" class="xref" data-knowl="./knowl/xref/eq_integral_function.html" title="Equation 1.6.1">(1.6.1)</a>, we will label the horizontal axis as the <span class="process-math">\(t\)</span>-axis. For any <span class="process-math">\(x\geq a\text{,}\)</span> define <span class="process-math">\(\mathcal{R}_x\)</span> to be the region in the plane that lies between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(t\)</span>-axis, and between the vertical lines <span class="process-math">\(t=a\)</span> and <span class="process-math">\(t=x\text{;}\)</span> as we increase <span class="process-math">\(x\text{,}\)</span> imagine sliding the vertical line <span class="process-math">\(t=x\)</span> to the right, creating a growing region <span class="process-math">\(\mathcal{R}_x\text{;}\)</span> the integral function <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\)</span> computes the <em class="emphasis">signed area</em> of this growing region!</div>
-<details id="proj_integral_function" class="project project-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Interactive example</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Integral function.</span>
-</h3></summary><article class="project project-like"> <div class="para" id="p-190"><figure class="figure figure-like" id="fig_integral_function"><iframe src="https://www.geogebra.org/material/iframe/id/hd8s893y/width/800/height/800/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" id="interactive-2" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.6.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.geogebra.org/m/hd8s893y" target="_blank">GeoGebra: understanding integral functions</a><a class="xref" id="fn-5" href="" data-knowl="./knowl/fn/fn-5.html" title="Footnote 1.6.1"><sup> 1 </sup></a></figcaption></figure></div></article></details><article class="example example-like" id="example-22"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integral functions.</span>
-</h3>
-<div class="para" id="p-191">Let <span class="process-math">\(F(x)=\displaystyle\int_1^x \frac{1}{t^2}\, dt\text{.}\)</span> Make a table of values of <span class="process-math">\(F(x)\)</span> for <span class="process-math">\(x=1, 2, 3, 4, 5\text{.}\)</span> Explain graphically what <span class="process-math">\(F(b)\)</span> is for any <span class="process-math">\(b\geq 1\text{.}\)</span>
-</div>
-<div class="solutions"><details id="solution-20" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para" id="p-192">For any <span class="process-math">\(b\geq 1\)</span> the value <span class="process-math">\(F(b)=\int_1^b f(t)\, dt\)</span> is equal to the signed area of the region between the graph of <span class="process-math">\(f\)</span> and the horizontal axis from <span class="process-math">\(x=1\)</span> to <span class="process-math">\(x=b\text{.}\)</span> In this case, since <span class="process-math">\(f(x)=1/x^2\text{,}\)</span> the signed area is equal to the area.</div> <div class="para logical" id="p-193">
-<div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_II.html" title="Item 2: FTC II">FTC II</a>, and the antiderivative <span class="process-math">\(-1/t\)</span> of <span class="process-math">\(f(t)=1/t^2\text{,}\)</span> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html">
-\begin{equation*}
-F(b)=\int_1^b \frac{1}{t^2}\, dt=-\frac{1}{b}-(-1)=\frac{b-1}{b}\text{.}
-\end{equation*}
-</div>
-<div class="para">We thus have the following table of values</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html">
-\begin{equation*}
-\begin{array}{c|c|c|c|c|c}
-x\amp 1\amp 2\amp 3\amp 4\amp 5 \\
-\hline
-F(x) \amp 0\amp 1/2 \amp 2/3\amp 3/4 \amp 4/5
-\end{array}\text{.}
-\end{equation*}
-</div>
-<div class="para">Note that <span class="process-math">\(F(b)\to\infty\)</span> as <span class="process-math">\(b\to\infty\text{.}\)</span> This suggests that the region</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_II.html">
-\begin{equation*}
-\mathcal{R}=\{(x,y)\colon x\geq 1, 0\leq y\leq f(x)\}
-\end{equation*}
-</div>
-<div class="para">of all points lying between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis and to the right of the line <span class="process-math">\(x=1\)</span> has area 1. We’ll return to this when we discuss <em class="emphasis">improper integrals</em>.</div>
-</div>
-</div></details></div></article><div class="para logical" id="p-194">
-<div class="para">Now that we have a better grip on integral functions <span class="process-math">\(F\)</span> of the form <a href="" class="xref" data-knowl="./knowl/xref/eq_integral_function.html" title="Equation 1.6.1">(1.6.1)</a>), let’s look at what <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> says about them: namely, that they are differentiable, and satisfy</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_integral_function.html ./knowl/xref/th_FTC_I.html">
-\begin{equation*}
-F'(x)=f(x)
-\end{equation*}
-</div>
-<div class="para">for all <span class="process-math">\(x\in [a,b]\text{.}\)</span> The corollary below follows immediately, answering a question we posed when discussing antiderivatives.</div>
-</div>
-<article class="corollary theorem-like" id="cor_FTC_I"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions have antiderivatives.</span>
-</h3>
-<div class="para" id="p-195">If <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(I=[a,b]\text{,}\)</span> then <span class="process-math">\(f\)</span> has an antiderivative on <span class="process-math">\(I\text{.}\)</span>
-</div></article><details id="proof-5" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-196">Let <span class="process-math">\(F\)</span> be the integral function defined as <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
-</div></article></details><div class="para" id="p-197">Let’s incorporate the result of <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> into the geometric interpretation of <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\)</span> discussed above. Since <span class="process-math">\(F(x)\)</span> computes the signed area of the variable region <span class="process-math">\(\mathcal{R}_x\text{,}\)</span> its derivative <span class="process-math">\(F'(x)\)</span> computes the rate of change of this signed area with respect to <span class="process-math">\(x\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>, we have <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> Thus the rate of change of the signed area of <span class="process-math">\(\mathcal{R}_x\)</span> at a give point <span class="process-math">\(x\)</span> is just <span class="process-math">\(f(x)\text{,}\)</span> the height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
-</div>
-<article class="theorem theorem-like" id="th_FTC_I_geometric"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">FTC I: geometric.</span>
-</h3>
-<div class="para" id="p-198">Let <span class="process-math">\(f\)</span> be continuous on the interval <span class="process-math">\(I=[a,b]\)</span> and define <span class="process-math">\(F(x)=\int_a^x f(t)\, dt\text{.}\)</span> In what follows we label the horizontal axis in the plane as the <span class="process-math">\(t\)</span>-axis.</div> <ol class="decimal">
-<li id="li-93"><div class="para logical" id="p-199">
-<div class="para">For all <span class="process-math">\(x\in I\text{,}\)</span> let <span class="process-math">\(\mathcal{R}_x\)</span> be the region lying between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(t\)</span>-axis, and between the vertical lines <span class="process-math">\(t=a\)</span> and <span class="process-math">\(t=x\text{.}\)</span> We have</div>
-<div class="displaymath process-math" id="eq_FTC_I_sgn_area">
-\begin{equation}
-F(x)=\operatorname{sgn\, area} \mathcal{R}_x\tag{1.6.2}
-\end{equation}
-</div>
-<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
-</div>
+<div class="para">This is often the trickiest step!</div>
+<ul class="circle">
+<li id="li-353"><div class="para" id="p-743">Look for phrases that indicate rate of change of <span class="process-math">\(Q\)</span> and translate these into equalities involving <span class="process-math">\(f'\text{.}\)</span>
 </div></li>
-<li id="li-94"><div class="para" id="p-200">At any <span class="process-math">\(x\in I\)</span> the rate of change of <span class="process-math">\(\operatorname{sgn \, area} \mathcal{R}_x\)</span> is given by <span class="process-math">\(F'(x)=f(x)\text{.}\)</span> In other words, the rate of change of the signed area is equal to the (directed) height of the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>
+<li id="li-354"><div class="para" id="p-744">When there is a combination of components to the rate of change, a diagram may be useful.</div></li>
+<li id="li-355"><div class="para" id="p-745">Translate phrases like “<span class="process-math">\(Q_1\)</span> is proportional to <span class="process-math">\(Q_2\)</span>” as <span class="process-math">\(Q_1=k\cdot Q_2\text{,}\)</span> where <span class="process-math">\(k\)</span> is the (possibly undetermined) constant of proportionality.</div></li>
+</ul>
 </div></li>
-</ol></article><div class="para" id="p-201">We can make more interesting integral functions by choosing the upper and/or lower limit of integration to be a function of <span class="process-math">\(x\text{.}\)</span> When all the functions are “nice enough”, we can combine <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> with the chain rule and integral properties to compute the integral function’s derivative.</div>
-<article class="example example-like" id="eg_FTC_I_chain"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.6</span><span class="period">.</span><span class="space"> </span><span class="title">FTC I+chain rule.</span>
+<li id="li-356"><div class="para logical" id="p-746">
+<div class="para">Ask yourself whether the differential equation <a href="" class="xref" data-knowl="./knowl/xref/eq_modeling.html" title="Equation 1.27.1">(1.27.1)</a> is linear or separable. If so, use the appropriate technique to solve it in as general a form as you can.</div>
+<ul class="circle">
+<li id="li-357"><div class="para" id="p-747">If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique.</div></li>
+<li id="li-358"><div class="para" id="p-748">If the differential equation is linear, make sure to bring it into standard form before using the integrating factor method.</div></li>
+</ul>
+</div></li>
+<li id="li-359"><div class="para" id="p-749">Once you have solved <a href="" class="xref" data-knowl="./knowl/xref/eq_modeling.html" title="Equation 1.27.1">(1.27.1)</a> you will have a formula for <span class="process-math">\(Q=f(x)\)</span> that includes some undetermined constants. If possible, use any additional information given about <span class="process-math">\(Q\)</span> to determine these undetermined constants.</div></li>
+</ul>
+</div></article><article class="example example-like" id="example-96"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.2</span><span class="period">.</span><span class="space"> </span><span class="title">Mixing problem.</span>
 </h3>
-<div class="para logical" id="p-202">
-<div class="para">For each <span class="process-math">\(F(x)\)</span> defined below, use <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a> along with integral properties and/or the chain rule to compute <span class="process-math">\(\displaystyle F'(x)=\frac{d}{dx}F(x)\text{.}\)</span>
-</div>
+<div class="para" id="p-750">A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved. The mixture is kept uniform by stirring. Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute. At the same time the mixture from the tank leaves at a rate of 6 liters per minute. How much salt is in the tank after 30 minutes.</div>
+<div class="solutions"><details id="solution-94" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-751"></div></div></details></div></article><article class="example example-like" id="example-97"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.3</span><span class="period">.</span><span class="space"> </span><span class="title">Trout population.</span>
+</h3>
+<div class="para logical" id="p-752">
+<div class="para">Left to their own devices, the population of trout in the Straits of Dudley increases at a rate of <span class="process-math">\(25\%\)</span> of the present population. A recent oil spill, however, has resulted in an ongoing depletion of the population: specifically, <span class="process-math">\(t\)</span> months after the spill the trout are dying off at a rate of <span class="process-math">\(2700t\, e^{-t/2}\)</span> fish per month.</div>
 <ol class="decimal">
-<li id="li-95"><div class="para" id="p-203"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{x}^5 \sqrt{t+1}\, dt\)</span></div></li>
-<li id="li-96"><div class="para" id="p-204"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{-2}^{\sin x}\cos(u^2) \, du\)</span></div></li>
-<li id="li-97"><div class="para" id="p-205"><span class="process-math">\(\displaystyle \displaystyle F(x)=\int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds\)</span></div></li>
+<li id="li-360"><div class="para" id="p-753">Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time <span class="process-math">\(t\)</span> (in months) since the oil spill. You may assume the oil spill has not affected the trout population’s breeding habits.</div></li>
+<li id="li-361"><div class="para" id="p-754">Derive a formula for the population of trout <span class="process-math">\(t\)</span> months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-21" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-206">
-<div class="para">The idea for all of these examples is to express the given “complicated” integral function in terms of “simpler” integral function <span class="process-math">\(G(x)\)</span> to which we can directly apply <a href="" class="xref" data-knowl="./knowl/xref/th_FTC_I.html" title="Item 1: FTC I">FTC I</a>.</div>
+<div class="solutions"><details id="solution-95" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-755"></div></div></details></div></article><article class="example example-like" id="example-98"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.4</span><span class="period">.</span><span class="space"> </span><span class="title">Spreading rumor.</span>
+</h3>
+<div class="para logical" id="p-756">
+<div class="para">A false rumor is being spread within a certain university community. Let <span class="process-math">\(q=f(t)\)</span> be the percentage (from 0 to 100) of the community that has heard the rumor <span class="process-math">\(t\)</span> days after the rumor is introduced. Assume that percentage of the population that has heard the rumor grows at a rate proportional to the product of the current percentage of those in the know with the current percentage of those not in the know.</div>
 <ol class="decimal">
-<li id="li-98"><div class="para logical" id="p-207">
-<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_5^x \sqrt{t+1}\, dt\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-33">
-\begin{align*}
-F(x) \amp=\int_{x}^5 \sqrt{t+1}\, dt \\
-\amp = -\int_5^x\sqrt{t+1}\, dt\\
-\amp = -G(x)
-\end{align*}
-</div>
-<div class="para">and hence</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-34">
-\begin{align*}
-F'(x) \amp= -G'(x)   \\
-\amp= -\sqrt{x+1} \amp (\knowl{./knowl/xref/th_FTC_I.html}{\text{FTC I}}: G'(x)=\sqrt{x+1})\text{.}
-\end{align*}
-</div>
+<li id="li-362"><div class="para" id="p-757">Write down a differential equation for <span class="process-math">\(q=f(t)\text{.}\)</span> Use <span class="process-math">\(k\)</span> as your constant of proportionality.</div></li>
+<li id="li-363"><div class="para" id="p-758">Derive a formula for <span class="process-math">\(q=f(t)\)</span> assuming that at time <span class="process-math">\(t=0\)</span> five percent of the population has heard the rumor. Your answer will be expressed in terms of <span class="process-math">\(t\)</span> and <span class="process-math">\(k\text{.}\)</span>
 </div></li>
-<li id="li-99"><div class="para logical" id="p-208">
-<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_{-2}^x \cos(u^2)\, du\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-35">
-\begin{align*}
-F(x) \amp = \int_{-2}^{\sin x} \cos(u^2)\, du\\
-\amp = G(\sin x)
-\end{align*}
-</div>
-<div class="para">and thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-36">
-\begin{align*}
-F'(x) \amp =\frac{d}{dx} G(\sin x)\\
-\amp = G'(\sin x)\cdot (\sin x)' \amp \text{(chain rule)}\\
-\amp = \cos(\sin^2 x)\cdot \cos x \amp (\knowl{./knowl/xref/th_FTC_I.html}{\text{FTC I}}: G'(x)=\cos(x^2))
-\end{align*}
-</div>
-</div></li>
-<li id="li-100"><div class="para logical" id="p-209">
-<div class="para">Letting <span class="process-math">\(\displaystyle G(x)=\int_0^x \sin(s^2)\, ds\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-37">
-\begin{align*}
-F(x) \amp = \int_{4x}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
-\amp = \int_{4x}^{0}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
-\amp =-\int_{0}^{4x}\sin(s^2)\, ds+\int_{0}^{\sqrt{x^2+1}}\sin(s^2)\, ds\\
-\amp =-G(4x)+G(\sqrt{x^2+1})\text{.}
-\end{align*}
-</div>
-<div class="para">It follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_FTC_I.html" id="md-38">
-\begin{align*}
-F'(x) \amp = -\frac{d}{dx}G(4x)+\frac{d}{dx}G(\sqrt{x^2+1})\\
-\amp = -G'(4x)\cdot 4+G'(\sqrt{x^2+1})(\sqrt{x^2+1})' \amp \text{(chain rule)}\\
-\amp = -4G'(4x)+\frac{x\cdot G'(\sqrt{x^2+1})}{\sqrt{x^2+1}}\\
-\amp =-4\sin(16x^2)+\frac{x\sin(x^2+1)}{\sqrt{x^2+1}} \amp (\knowl{./knowl/xref/th_FTC_I.html}{\text{FTC I}}: G'(x)=\sin(x^2))
-\end{align*}
-</div>
-</div></li>
+<li id="li-364"><div class="para" id="p-759">Investigate the long-term behavior of the rumor’s spread. Is there a time when the entire population has heard the rumor?</div></li>
 </ol>
-</div></div></details></div></article></section></div>
+</div>
+<div class="solutions"><details id="solution-96" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-760"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_FTC.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_substitution.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_linear_diff_eq.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

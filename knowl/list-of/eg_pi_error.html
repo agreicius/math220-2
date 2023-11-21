@@ -27,6 +27,65 @@ f^{(4)}(x)\amp =\frac{96(5x^4-10x^2+1)}{(x^2+1)^5}\text{.}
 <li><div class="para">Find (a) an <span class="process-math">\(n\)</span> such that the <span class="process-math">\(n\)</span>-th trapezoidal estimate of <span class="process-math">\(\pi\)</span> is within <span class="process-math">\(10^{-9}\)</span> of the actual value, and (b) an <span class="process-math">\(n\)</span> such that the <span class="process-math">\(n\)</span>-th Simpson’s rule estimate of <span class="process-math">\(\pi\)</span> is within <span class="process-math">\(10^{-9}\)</span> of the actual value.</div></li>
 </ol>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_num_int_B.html#eg_pi_error">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">Throughout, let <span class="process-math">\(I=\int_0^1 f(x)\, dx\text{,}\)</span> let <span class="process-math">\(T_n\)</span> be the <span class="process-math">\(n\)</span>-th trapezoidal estimate of <span class="process-math">\(I\text{,}\)</span> and let <span class="process-math">\(S_n\)</span> be the <span class="process-math">\(n\)</span>-th Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
+</div> <ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">For the error bound for <span class="process-math">\(T_{10}\)</span> we first compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_trap_bound.html ./knowl/xref/proj_trap_Simp.html">
+\begin{align*}
+\abs{f''(x)}\amp =\frac{8\abs{3x^2-1}}{(x^2+1)^3} \\
+\amp \leq \frac{8\abs{3x^2-1}}{1} \amp (x\in [0,1]\implies x^2+1\geq 1) \\
+\amp \leq 8\cdot 2 \amp (x\in [0,1]\implies -1\leq 3x^2-1\leq 2)\\
+\amp = 16\text{.}
+\end{align*}
+</div>
+<div class="para">Note: the inequality <span class="process-math">\(\abs{3x^2-1}\leq 2\)</span> was derived simply by graphing the quadratic function <span class="process-math">\(y=3x^2-1\)</span> on <span class="process-math">\([0,1]\text{.}\)</span> Taking <span class="process-math">\(M=16\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/eq_trap_bound.html" title="Equation 1.23.3">(1.23.3)</a>, we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_trap_bound.html ./knowl/xref/proj_trap_Simp.html">
+\begin{align*}
+\abs{T_{10}-I} \amp \leq \frac{16\cdot (1-0)^3}{12\cdot 10^2}\\
+\amp = \frac{16}{1200}\\
+\amp = \frac{1}{75}\\
+\amp \leq .0267\text{.}
+\end{align*}
+</div>
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/proj_trap_Simp.html" title="Interactive example 1.22.1: Trapezoidal and Simpson’s rule">Interactive example 1.22.1</a> we see that the actual error satisfies <span class="process-math">\(\abs{T_{10}-I}\leq 0.001\text{.}\)</span>
+</div>
+</div>
+<div class="para logical">
+<div class="para">For the error bound for <span class="process-math">\(S_{10}\)</span> we first compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Simp_bound.html ./knowl/xref/proj_trap_Simp.html">
+\begin{align*}
+\abs{f^{(4)}(x)}\amp =\frac{96\abs{5x^4-10x^2+1}}{(x^2+1)^5} \\
+\amp \leq \frac{96\abs{5x^4-10x^2+1}}{1} \amp (x\in [0,1]\implies (x^2+1)^5\geq 1) \\
+\amp \leq 96(\abs{5x^4}+\abs{10x^2}+\abs{1}) \amp (\text{tri. ineq. }: 
+\abs{a+b}\leq \abs{a}+\abs{b})\\
+\amp = 1536\text{.}
+\end{align*}
+</div>
+<div class="para">Taking <span class="process-math">\(M=1536\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/eq_Simp_bound.html" title="Equation 1.23.4">(1.23.4)</a>, we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Simp_bound.html ./knowl/xref/proj_trap_Simp.html">
+\begin{align*}
+\abs{T_{10}-I} \amp \leq \frac{1536\cdot (1-0)^5}{180\cdot 10^4}\\
+\amp = \frac{1536}{180\cdot 10^4}\\
+\amp \leq 0.00085 \text{.}
+\end{align*}
+</div>
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/proj_trap_Simp.html" title="Interactive example 1.22.1: Trapezoidal and Simpson’s rule">Interactive example 1.22.1</a> we see that the actual error satisfies <span class="process-math">\(\abs{S_{10}-I}\leq 3\times 10^{-8}\text{.}\)</span>
+</div>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">Using our bounds on <span class="process-math">\(\abs{f''}\)</span> and <span class="process-math">\(\abs{f^{(4)}}\)</span> from above, we have using <a href="" class="xref" data-knowl="./knowl/xref/th_error_bound.html" title="Theorem 1.23.1: Error bounds">Theorem 1.23.1</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_error_bound.html">
+\begin{align*}
+\abs{T_n-I} \amp \leq \frac{16}{12\cdot n^2} \amp \abs{S_n-I}\amp \leq \frac{1536}{180\cdot n^4}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_num_int_B.html#eg_pi_error">in-context</a></span>
 </body>
 </html>

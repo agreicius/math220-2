@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_improper_B.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_improper_B.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_integral_calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_modeling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -240,6 +240,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_improper_A.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Improper integrals</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_improper_B.html" class="internal"><span class="codenumber">1.25</span> <span class="title">Improper integrals: convergence tests</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_linear_diff_eq.html" class="internal"><span class="codenumber">1.26</span> <span class="title">First-order linear differential equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_modeling.html" class="internal"><span class="codenumber">1.27</span> <span class="title">Modeling with differential equations</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -260,7 +261,7 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="d_lin_diff_eq"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.26.1</span><span class="period">.</span><span class="space"> </span><span class="title">First-order linear equation.</span>
-</h3> <div class="para logical" id="p-715">
+</h3> <div class="para logical" id="p-722">
 <div class="para">A <dfn class="terminology">first-order linear differential equation</dfn> for the function <span class="process-math">\(f\)</span> is a differential equation that can be written in the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_lin_diff_eq.html" id="eq_lin_diff_eq">
 \begin{equation}
@@ -270,14 +271,14 @@ f'(x)+p(x)f(x)=q(x)\tag{1.26.1}
 <div class="para">for some functions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/xref/eq_lin_diff_eq.html" title="Equation 1.26.1">(1.26.1)</a> is called the <dfn class="terminology">standard form</dfn> of the equation.</div>
 </div></article><article class="definition definition-like" id="d_int_factor"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.26.2</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating factor.</span>
-</h3> <div class="para logical" id="p-716">
+</h3> <div class="para logical" id="p-723">
 <div class="para">Consider a first-order linear equation with standard form</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f'(x)+p(x)f(x)=q(x)\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-717">
+</div> <div class="para logical" id="p-724">
 <div class="para">An <dfn class="terminology">integrating factor</dfn> for this equation is any function of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -286,12 +287,12 @@ v(x)=e^{P(x)}\text{,}
 </div>
 <div class="para">where <span class="process-math">\(P(x)\)</span> is an antiderivative of <span class="process-math">\(p(x)\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-718">As a somewhat liberal usage of indefinite integral notation, we sometimes write <span class="process-math">\(v(x)=e^{\int p(x)\, dx}
+</div> <div class="para" id="p-725">As a somewhat liberal usage of indefinite integral notation, we sometimes write <span class="process-math">\(v(x)=e^{\int p(x)\, dx}
 \text{.}\)</span>
 </div></article><article class="algorithm theorem-like" id="proc_lin_diff_eq"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.26.3</span><span class="period">.</span><span class="space"> </span><span class="title">Solving first-order linear equations.</span>
 </h3>
-<div class="para logical" id="p-719">
+<div class="para logical" id="p-726">
 <div class="para">Suppose <span class="process-math">\(p, q\)</span> are continuous on the interval <span class="process-math">\(I\text{.}\)</span> To solve the differential equation with standard form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_diff_eq.html ./knowl/xref/eq_solve_aux_eq.html ./knowl/xref/eq_solve_diff_eq.html" id="eq_solve_diff_eq">
 \begin{equation}
@@ -300,11 +301,11 @@ f'(x)+p(x)f(x)=q(x), \ x\in I\text{,}\tag{1.26.2}
 </div>
 <div class="para">proceed as follows.</div>
 <ol class="decimal">
-<li id="li-339"><div class="para" id="p-720">Compute <span class="process-math">\(\int p(x)\, dx=P(x)+C\text{.}\)</span>
+<li id="li-345"><div class="para" id="p-727">Compute <span class="process-math">\(\int p(x)\, dx=P(x)+C\text{.}\)</span>
 </div></li>
-<li id="li-340"><div class="para" id="p-721">Set <span class="process-math">\(v(x)=e^{P(x)}\text{.}\)</span>
+<li id="li-346"><div class="para" id="p-728">Set <span class="process-math">\(v(x)=e^{P(x)}\text{.}\)</span>
 </div></li>
-<li id="li-341"><div class="para logical" id="p-722">
+<li id="li-347"><div class="para logical" id="p-729">
 <div class="para">The function <span class="process-math">\(f\)</span> is a solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_diff_eq.html" title="Equation 1.26.2">(1.26.2)</a> if and only if it is a solution of</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_diff_eq.html" id="eq_solve_aux_eq">
 \begin{equation}
@@ -312,8 +313,8 @@ f'(x)+p(x)f(x)=q(x), \ x\in I\text{,}\tag{1.26.2}
 \end{equation}
 </div>
 </div></li>
-<li id="li-342">
-<div class="para logical" id="p-723">
+<li id="li-348">
+<div class="para logical" id="p-730">
 <div class="para">Compute <span class="process-math">\(\int v(x)q(x)\, dx=G(x)+C\text{.}\)</span> Since <span class="process-math">\(G(x)+C\)</span> is the general solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_aux_eq.html" title="Equation 1.26.3">(1.26.3)</a>, the general solution of <a href="" class="xref" data-knowl="./knowl/xref/eq_solve_diff_eq.html" title="Equation 1.26.2">(1.26.2)</a> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_solve_aux_eq.html ./knowl/xref/eq_solve_diff_eq.html">
 \begin{equation*}
@@ -322,7 +323,7 @@ f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}\text{,}
 </div>
 <div class="para">where <span class="process-math">\(C\)</span> is any constant.</div>
 </div>
-<div class="para" id="p-724">As a somewhat liberal usage of indefinite integral notation, we sometimes write <span class="process-math">\(f(x)=\frac{1}{v(x)}\int v(x)q(x)\, dx
+<div class="para" id="p-731">As a somewhat liberal usage of indefinite integral notation, we sometimes write <span class="process-math">\(f(x)=\frac{1}{v(x)}\int v(x)q(x)\, dx
 \text{.}\)</span>
 </div>
 </li>
@@ -330,11 +331,11 @@ f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}\text{,}
 </div></article><article class="example example-like" id="eg_exp_growth_revisited"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.26.4</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential change revisited.</span>
 </h3>
-<div class="para" id="p-725">Use the integrating factor method to find the general solution to <span class="process-math">\(y'=k y\text{,}\)</span> where <span class="process-math">\(k\)</span> is any fixed constant.</div>
-<div class="solutions"><details id="solution-91" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-726"></div></div></details></div></article><article class="example example-like" id="eg_lin_diff_eq"><h3 class="heading">
+<div class="para" id="p-732">Use the integrating factor method to find the general solution to <span class="process-math">\(y'=k y\text{,}\)</span> where <span class="process-math">\(k\)</span> is any fixed constant.</div>
+<div class="solutions"><details id="solution-91" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-733"></div></div></details></div></article><article class="example example-like" id="eg_lin_diff_eq"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.26.5</span><span class="period">.</span><span class="space"> </span><span class="title">Non-separable example.</span>
 </h3>
-<div class="para logical" id="p-727">
+<div class="para logical" id="p-734">
 <div class="para">Find the general solution to the differential equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -342,10 +343,10 @@ f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}\text{,}
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="solution-92" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-728"></div></div></details></div></article><article class="example example-like" id="eg_non_separable"><h3 class="heading">
+<div class="solutions"><details id="solution-92" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-735"></div></div></details></div></article><article class="example example-like" id="eg_non_separable"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.26.6</span><span class="period">.</span><span class="space"> </span><span class="title">Initial value.</span>
 </h3>
-<div class="para logical" id="p-729">
+<div class="para logical" id="p-736">
 <div class="para">Consider the differential equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -353,14 +354,14 @@ f(x)=\frac{1}{v(x)}(G(x)+C)=\frac{G(x)}{v(x)}+\frac{C}{v(x)}\text{,}
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-343"><div class="para" id="p-730">Find the general solution to the differential equation.</div></li>
-<li id="li-344"><div class="para" id="p-731">Find the solution satisfying <span class="process-math">\(f(1)=-1\text{.}\)</span>
+<li id="li-349"><div class="para" id="p-737">Find the general solution to the differential equation.</div></li>
+<li id="li-350"><div class="para" id="p-738">Find the solution satisfying <span class="process-math">\(f(1)=-1\text{.}\)</span>
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-93" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-732"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-93" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-739"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_improper_B.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_improper_B.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_modeling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

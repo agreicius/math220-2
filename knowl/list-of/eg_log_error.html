@@ -17,6 +17,46 @@
 <div class="para">Let <span class="process-math">\(f(x)=\frac{1}{x}\text{.}\)</span> Recall that <span class="process-math">\(\ln 4=\int_1^4 f(x)\, dx\text{.}\)</span>
 </div> <div class="para">Compute bounds for the errors in (a) the <span class="process-math">\(n=10\)</span> trapezoidal estimate of <span class="process-math">\(\ln 4\)</span> and (b) the <span class="process-math">\(n=10\)</span> Simpson’s rule estimate of <span class="process-math">\(\ln 4\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_num_int_B.html#eg_log_error">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Throughout, let <span class="process-math">\(I=\int_1^4\frac{1}{x}\, dx\text{,}\)</span> let <span class="process-math">\(T_n\)</span> be the <span class="process-math">\(n\)</span>-th trapezoidal estimate of <span class="process-math">\(I\text{,}\)</span> and let <span class="process-math">\(S_n\)</span> be the <span class="process-math">\(n\)</span>-th Simpson’s rule estimate of <span class="process-math">\(I\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li><div class="para logical">
+<div class="para">To bound the error estimate <span class="process-math">\(\abs{T_{10}-I}\)</span> we first must find an upper bound of <span class="process-math">\(\abs{f''(x)}=\abs{\frac{2}{x^3}}\)</span> on <span class="process-math">\([1,4]\text{.}\)</span> Since <span class="process-math">\(\abs{\frac{2}{x^3}}=\frac{2}{x^3}\)</span> is decreasing and positive on <span class="process-math">\([1,4]\text{,}\)</span> it attains its largest value at <span class="process-math">\(x=1\text{,}\)</span> the left endpoint of the interval. We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_trap_bound.html ./knowl/xref/proj_trap_Simp.html ./knowl/xref/th_error_bound.html">
+\begin{equation*}
+\abs{f''(x)}\leq 2 \text{ for all } x\in [1,4]
+\end{equation*}
+</div>
+<div class="para">and thus we may take <span class="process-math">\(M=2\)</span> in the error bound formula <a href="" class="xref" data-knowl="./knowl/xref/eq_trap_bound.html" title="Equation 1.23.3">(1.23.3)</a>. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_trap_bound.html ./knowl/xref/proj_trap_Simp.html ./knowl/xref/th_error_bound.html">
+\begin{align*}
+\abs{T_{10}-I} \amp \leq \frac{2(4-1)^3}{12\cdot 10^2}\\
+\amp = \frac{2\cdot 3^3}{1200}\\
+\amp = \frac{9}{200}=0.045\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(T_{10}\)</span> is <em class="emphasis">at most</em> <span class="process-math">\(0.045\)</span> off of the true value of <span class="process-math">\(I\text{.}\)</span> Using the computational cell in <a href="" class="xref" data-knowl="./knowl/xref/proj_trap_Simp.html" title="Interactive example 1.22.1: Trapezoidal and Simpson’s rule">Interactive example 1.22.1</a> you can see that in fact we have <span class="process-math">\(\abs{T_{10}-I}\approx .0069\text{.}\)</span> We are of course not bothered by the fact that the true error is significantly less than the <em class="emphasis">error bound</em> provided by <a href="" class="xref" data-knowl="./knowl/xref/th_error_bound.html" title="Theorem 1.23.1: Error bounds">Theorem 1.23.1</a>. The theorem says simply the error can be <em class="emphasis">no worse</em> than <span class="process-math">\(0.045\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">To bound the error <span class="process-math">\(\abs{S_{10}-I}\)</span> we must first find a bound of <span class="process-math">\(\abs{f^{(4)}(x)=\frac{24}{x^5}}\)</span> on <span class="process-math">\([1,4]\text{.}\)</span> The logic is similar to the above: on <span class="process-math">\([1,4]\)</span> we have <span class="process-math">\(\abs{f^{(4)}(x)}=\frac{24}{x^5}\text{,}\)</span> which is a positive decreasing function. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Simp_bound.html ./knowl/xref/proj_trap_Simp.html ./knowl/xref/th_error_bound.html">
+\begin{equation*}
+\abs{f^{(4)}(x)}\leq \abs{f^{(4)}(1)}=24 \text{ for all } x\in [1,4]
+\end{equation*}
+</div>
+<div class="para">and we may take <span class="process-math">\(M=24\)</span> in the error bound <a href="" class="xref" data-knowl="./knowl/xref/eq_Simp_bound.html" title="Equation 1.23.4">(1.23.4)</a>. We  now have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Simp_bound.html ./knowl/xref/proj_trap_Simp.html ./knowl/xref/th_error_bound.html">
+\begin{align*}
+\abs{S_{10}-I} \amp \leq \frac{24(4-1)^5}{180\cdot 10^4}\\
+\amp = \frac{162}{50,000}\\
+\amp \leq .00324\text{.}
+\end{align*}
+</div>
+<div class="para">Again, using <a href="" class="xref" data-knowl="./knowl/xref/proj_trap_Simp.html" title="Interactive example 1.22.1: Trapezoidal and Simpson’s rule">Interactive example 1.22.1</a>, we can see that the actual error in our estimate is <span class="process-math">\(\abs{S_{10}-I}\leq 0.0003\text{:}\)</span> significantly smaller than the error bound provided by <a href="" class="xref" data-knowl="./knowl/xref/th_error_bound.html" title="Theorem 1.23.1: Error bounds">Theorem 1.23.1</a>.</div>
+</div></li>
+</ol>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_num_int_B.html#eg_log_error">in-context</a></span>
 </body>
 </html>
