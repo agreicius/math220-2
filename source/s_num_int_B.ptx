@@ -2,7 +2,7 @@
 
 <section xml:id="s_num_int_B" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Numerical integration: error bounds</title>
-    <theorem xml:id="th_num_int">
+    <theorem xml:id="th_error_bound">
         <title>Error bounds</title>
       <statement>
         <p>
@@ -18,9 +18,9 @@
               <p>
                 Let <m>R_n</m> be either the right or left Riemann sum for this partition.
                 If <m>f'</m> is continuous and <m>\vert f'(x)\vert \leq M</m> for all <m>x</m> in <m>[a,b]</m>, then 
-                <me>
-                  \left\vert\int_a^b f(x)\, dx - R_n\right\vert\leq \frac{M(b-a)^2}{2n}
-                </me>.
+                <men>
+                  \left\vert R_n - \int_a^b f(x)\, dx\right\vert\leq \frac{M(b-a)^2}{2n}
+                </men>.
               </p>
             </li>
             <li>
@@ -28,9 +28,9 @@
                 <p>
                     Let <m>M_n</m> be the midpoint Riemann sum for this partition.
                     If <m>f''</m> is continuous and <m>\vert f''(x)\vert \leq M</m> for all <m>x</m> in <m>[a,b]</m>, then 
-                    <me>
-                      \left\vert\int_a^b f(x)\, dx - M_n\right\vert\leq \frac{M(b-a)^3}{24n^2}
-                    </me>.   
+                    <men>
+                      \left\vert M_n-\int_a^b f(x)\, dx \right\vert\leq \frac{M(b-a)^3}{24n^2}
+                    </men>.   
                 </p>
             </li>
             <li>
@@ -38,9 +38,9 @@
               <p>
                 Let <m>T_n</m> be the <m>n</m>-th trapezoidal estimate of <m>\int_a^b f(x)\, dx</m>.
                 If <m>f''</m> is continuous and <m>\vert f''(x)\vert\leq M</m> for all <m>x</m> in <m>[a,b]</m>, then 
-                <me>
-                  \left\vert\int_a^b f(x)\, dx - T_n\right\vert\leq\frac{M(b-a)^3}{12n^2}
-                </me>.
+                <men xml:id="eq_trap_bound">
+                  \left\vert T_n-\int_a^b f(x)\, dx \right\vert\leq\frac{M(b-a)^3}{12n^2}
+                </men>.
               </p>
             </li>
             <li>
@@ -49,9 +49,9 @@
                 Suppose <m>n</m> is even,
                 and let <m>S_n</m> be the <m>n</m>-th Simpson's rule estimate of <m>\int_a^bf(x)\, dx</m>.
                 If <m>f^{(4)}</m> is continuous and <m>\vert f^{(4)}(x)\vert\leq M</m> for all <m>x</m> in <m>[a,b]</m>, then 
-                <me>
-                  \left\vert\int_a^b f(x)\, dx - S_n\right\vert\leq\frac{M(b-a)^5}{180n^4}
-                </me>.
+                <men xml:id="eq_Simp_bound">
+                  \left\vert S_n-\int_a^b f(x)\, dx \right\vert\leq\frac{M(b-a)^5}{180n^4}
+                </men>.
               </p>
             </li>
           </ol>
@@ -70,7 +70,39 @@
       </statement>
       <solution>
         <p>
-          
+          Throughout, let <m>I=\int_1^4\frac{1}{x}\, dx</m>, let <m>T_n</m> be the <m>n</m>-th trapezoidal estimate of <m>I</m>, and let <m>S_n</m> be the <m>n</m>-th Simpson's rule estimate of <m>I</m>. 
+          <ol marker="(a)">
+            <li>
+              <p>
+                To bound the error estimate <m>\abs{T_{10}-I}</m> we first must find an upper bound of <m>\abs{f''(x)}=\abs{\frac{2}{x^3}}</m> on <m>[1,4]</m>. Since <m>\abs{\frac{2}{x^3}}=\frac{2}{x^3}</m> is decreasing and positive on <m>[1,4]</m>, it attains its largest value at <m>x=1</m>, the left endpoint of the interval. We conclude that 
+                <me>
+                  \abs{f''(x)}\leq 2 \text{ for all } x\in [1,4]
+                </me>
+                and thus we may take <m>M=2</m> in the error bound formula <xref ref="eq_trap_bound"/>. Thus 
+                <md>
+                  <mrow>\abs{T_{10}-I} \amp \leq \frac{2(4-1)^3}{12\cdot 10^2}</mrow>
+                  <mrow> \amp = \frac{2\cdot 3^3}{1200}</mrow>
+                  <mrow> \amp = \frac{9}{200}=0.045</mrow>
+                </md>.
+                We conclude that <m>T_{10}</m> is <em>at most</em> <m>0.045</m> off of the true value of <m>I</m>. Using the computational cell in <xref ref="proj_trap_Simp"/> you can see that in fact we have <m>\abs{T_{10}-I}\approx .0069</m>. We are of course not bothered by the fact that the true error is significantly less than the <em>error bound</em> provided by <xref ref="th_error_bound"/>. The theorem says simply the error can be <em>no worse</em> than <m>0.045</m>. 
+              </p>
+            </li>
+            <li>
+              <p>
+                To bound the error <m>\abs{S_{10}-I}</m> we must first find a bound of <m>\abs{f^{(4)}(x)=\frac{24}{x^5}}</m> on <m>[1,4]</m>. The logic is similar to the above: on <m>[1,4]</m> we have <m>\abs{f^{(4)}(x)}=\frac{24}{x^5}</m>, which is a positive decreasing function. Thus 
+                <me>
+                  \abs{f^{(4)}(x)}\leq \abs{f^{(4)}(1)}=24 \text{ for all } x\in [1,4]
+                </me>
+                and we may take <m>M=24</m> in the error bound <xref ref="eq_Simp_bound"/>. We  now have 
+                <md>
+                  <mrow>\abs{S_{10}-I} \amp \leq \frac{24(4-1)^5}{180\cdot 10^4}</mrow>
+                  <mrow> \amp = \frac{162}{50,000}</mrow>
+                  <mrow> \amp \leq .00324</mrow>
+                </md>.
+                Again, using <xref ref="proj_trap_Simp"/>, we can see that the actual error in our estimate is <m>\abs{S_{10}-I}\leq 0.0003</m>: significantly smaller than the error bound provided by <xref ref="th_error_bound"/>. 
+              </p>
+            </li>
+          </ol>
         </p>
       </solution>
     </example>
@@ -103,8 +135,55 @@
       </statement>
       <solution>
         <p>
-          
+          Throughout, let <m>I=\int_0^1 f(x)\, dx</m>, let <m>T_n</m> be the <m>n</m>-th trapezoidal estimate of <m>I</m>, and let <m>S_n</m> be the <m>n</m>-th Simpson's rule estimate of <m>I</m>. 
         </p>
+        <ol>
+          <li>
+            <p>
+              For the error bound for <m>T_{10}</m> we first compute 
+              <md>
+                <mrow> \abs{f''(x)}\amp =\frac{8\abs{3x^2-1}}{(x^2+1)^3} </mrow>
+                <mrow> \amp \leq \frac{8\abs{3x^2-1}}{1} \amp (x\in [0,1]\implies x^2+1\geq 1) </mrow>
+                <mrow> \amp \leq 8\cdot 2 \amp (x\in [0,1]\implies -1\leq 3x^2-1\leq 2)</mrow>
+                <mrow> \amp = 16</mrow>
+              </md>.
+              Note: the inequality <m>\abs{3x^2-1}\leq 2</m> was derived simply by graphing the quadratic function <m>y=3x^2-1</m> on <m>[0,1]</m>. Taking <m>M=16</m> in <xref ref="eq_trap_bound"/>, we compute 
+              <md>
+                <mrow>\abs{T_{10}-I} \amp \leq \frac{16\cdot (1-0)^3}{12\cdot 10^2}</mrow>
+                <mrow> \amp = \frac{16}{1200}</mrow>
+                <mrow> \amp = \frac{1}{75}</mrow>
+                <mrow> \amp \leq .0267</mrow>
+              </md>.
+              Using <xref ref="proj_trap_Simp"/> we see that the actual error satisfies <m>\abs{T_{10}-I}\leq 0.001</m>. 
+            </p>
+          
+            <p>
+              For the error bound for <m>S_{10}</m> we first compute 
+              <md>
+                <mrow> \abs{f^{(4)}(x)}\amp =\frac{96\abs{5x^4-10x^2+1}}{(x^2+1)^5} </mrow>
+                <mrow> \amp \leq \frac{96\abs{5x^4-10x^2+1}}{1} \amp (x\in [0,1]\implies (x^2+1)^5\geq 1) </mrow>
+                <mrow> \amp \leq 96(\abs{5x^4}+\abs{10x^2}+\abs{1}) \amp (\text{tri. ineq. }: 
+                  \abs{a+b}\leq \abs{a}+\abs{b})</mrow>
+                <mrow> \amp = 1536</mrow>
+              </md>.
+              Taking <m>M=1536</m> in <xref ref="eq_Simp_bound"/>, we compute 
+              <md>
+                <mrow>\abs{T_{10}-I} \amp \leq \frac{1536\cdot (1-0)^5}{180\cdot 10^4}</mrow>
+                <mrow> \amp = \frac{1536}{180\cdot 10^4}</mrow>
+                <mrow> \amp \leq 0.00085 </mrow>
+              </md>.
+              Using <xref ref="proj_trap_Simp"/> we see that the actual error satisfies <m>\abs{S_{10}-I}\leq 3\times 10^{-8}</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Using our bounds on <m>\abs{f''}</m> and <m>\abs{f^{(4)}}</m> from above, we have using <xref ref="th_error_bound"/> 
+              <md>
+                <mrow>\abs{T_n-I} \amp \leq \frac{16}{12\cdot n^2} \amp \abs{S_n-I}\amp \leq \frac{1536}{180\cdot n^4}</mrow>
+              </md>.
+            </p>
+          </li>
+        </ol>
       </solution>
     </example>
     

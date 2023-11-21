@@ -70,7 +70,7 @@
             </figure>
         </p>
     </project>
-    <example>
+    <example xml:id="eg_est_ln">
         <title>Estimating <m>\ln 4</m></title>
         <statement>
             <p>
@@ -82,12 +82,40 @@
         </statement>
         <solution>
             <p>
-                
+               In both cases, to estimate <m>\ln 4=\int_1^4 \frac{1}{x}\, dx</m> we partition the interval <m>[1,4]</m> into six subintervals of length <m>\Delta x=(4-1)/6=1/2</m> as follows: 
+               <me>
+                x_0=1&lt; 3/2 &lt; 2 &lt; 5/2 &lt; 3 &lt; 7/2 &lt; 6=x_6
+               </me>.
+               <ol marker="(a)">
+                <li>
+                  <p>
+                    The <m>n=6</m> trapezoidal estimate is 
+                    <md>
+                      <mrow>T_6 \amp = \frac{1}{2}\Delta x(f(x_0)+2f(x_1)+\cdots +2f(x_5)+f(x_6))</mrow>
+                      <mrow> \amp = \frac{1}{4}(1+2(2/3)+2(1/2)+2(2/5)+2(1/3)+2(2/7)+1/4)</mrow>
+                      <mrow> \amp = \frac{2361}{1680}</mrow>
+                      <mrow> \amp \approx 1.405</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The <m>n=6</m> Simpson's rule estimate is 
+                    <md>
+                      <mrow>S_6 \amp = \frac{1}{3}\Delta x(f(x_0)+4f(x_1)+2f(x_2)+4f(x_3)+2f(x_4)+4f(x_5)+f(x_6)) </mrow>
+                      <mrow> \amp = \frac{1}{6}(1+4(2/3)+2(1/2)+4(2/5)+2(1/3)+4(2/7)+1/4)</mrow>
+                      <mrow> \amp = \frac{3497}{2520}</mrow>
+                      <mrow> \amp \approx 1.388</mrow>
+                    </md>
+                  </p>
+                </li>
+               </ol>
+              The exact value of <m>\int_1^4\frac{1}{x}\, dx</m> is <m>\ln 4\approx 1.3862946\dots</m>. 
             </p>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="eg_est_pi">
         <title>Estimating <m>\pi</m></title>
         <statement>
             <p>
@@ -116,6 +144,28 @@
         </statement>
         <solution>
             <p>
+                First observe that we have 
+                <me>
+                  \int_0^1f(x)\, dx=\int_0^1\frac{4}{x^2+1}\, dx=4(\arctan 1-\arctan 0)=4(\pi/4-0)=\pi 
+                </me>.
+               For both estimates we partition the interval <m>[0,1]</m> into six subintervals of length <m>\Delta x=1/6</m> as follows: 
+               <me>
+                0&lt; 1/6 &lt; 1/3 &lt; 1/2 &lt; 2/3 &lt; 5/6 &lt; 1
+               </me>.
+               The <m>n=6</m> trapezoidal estimate <m>T_6</m> is then 
+               <md>
+                <mrow>T_6 \amp = \frac{1}{2}\Delta x(f(0)+2f(1/6)+2f(1/3)+2f(1/2)+2f(2/3)+2f(5/6)+f(1))</mrow>
+                <mrow> \amp = \frac{1}{12}(4+288/37+\cdots + 288/61+2)</mrow>
+                <mrow> \amp = \frac{2,761,249}{880,230}</mrow>
+                <mrow> \amp \approx 3.1369</mrow>
+               </md>.
+               Similarly, the <m>n=6</m> Simpson's rule <m>S_6</m> estimate is  
+               <md>
+                <mrow>S_6 \amp = \frac{1}{3}\cdot \frac{1}{6}(f(0)+4f(1/6)+2f(1/3)+4f(1/2)+2f(2/3)+4f(5/6)+f(1))</mrow>
+                <mrow> \amp = \frac{829, 597}{264,069}</mrow>
+                <mrow> \amp \approx 3.1416</mrow>
+               </md>.
+               Compare these to the actual value of <m>\pi\approx 3.141592653\dots</m>. 
                 
             </p>
         </solution>

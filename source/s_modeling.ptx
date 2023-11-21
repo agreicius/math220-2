@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_modeling" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Modeling with differential equations</title>
+
+    <algorithm xml:id="proc_modeling_diff_eq">
+        <title>Modeling with first-order differential equations</title>
+      <statement>
+        <p>
+          Many applications present information about a quantity in a form that can be modeled by a first-order differential equation.
+          Here is an outline of the steps to take in these settings.
+          <ul>
+            <li>
+              <p>
+                Explicitly identify the quantity <m>Q</m> under consideration as a function of some other quantity <m>x</m>,
+                and give a name to this function: <m>Q=f(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Translate the given information about <m>Q</m> into a
+                first-order differential equation:
+                <men xml:id="eq_modeling">
+                  f'(x)=F(x, f(x)) 
+                </men>.
+                This is often the trickiest step!
+                <ul>
+                    <li>
+                        <p>
+                            Look for phrases that indicate rate of change of <m>Q</m> and translate these into equalities involving <m>f'</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            When there is a combination of components to the rate of change,
+                a diagram may be useful.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Translate phrases like
+                <q><m>Q_1</m> is proportional to <m>Q_2</m></q>
+                as
+                <m>Q_1=k\cdot Q_2</m>, where <m>k</m> is the
+                (possibly undetermined)
+                constant of proportionality.
+                        </p>
+                    </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Ask yourself whether the differential equation <xref ref="eq_modeling"/> is
+                linear or separable. If so, use the appropriate technique to solve it in as general a form as you can.
+                <ul>
+                    <li>
+                        <p>
+                            If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If the differential equation is linear,
+                            make sure to bring it into standard form before using the integrating factor method.  
+                        </p>
+                    </li>
+                </ul>
+               
+              </p>
+            </li>
+            <li>
+              <p>
+                Once you have solved <xref ref="eq_modeling"/> you will have a formula for <m>Q=f(x)</m> that includes some undetermined constants.
+                If possible, use any additional information given about <m>Q</m> to determine these undetermined constants.     
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </algorithm>
+    <example>
+        <title>Mixing problem</title>
+        
+        
+        <statement>
+            <p>
+                A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved.
+                The mixture is kept uniform by stirring.
+                Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute.
+                At the same time the mixture from the tank leaves at a rate of 6 liters per minute.
+                How much salt is in the tank after 30 minutes.
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example>
+        <title>Trout population</title>
+        <statement>
+            <p>
+                Left to their own devices, the population of trout in the Straits of Dudley increases at a rate of <m>25\%</m> of the present population. A recent oil spill, however, has resulted in an ongoing depletion of the population: specifically, <m>t</m> months after the spill the trout are dying off at a rate of <m>2700t\, e^{-t/2}</m> fish per month. 
+                <ol>
+                    <li>
+                        <p>
+                            Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time <m>t</m> (in months) since the oil spill. You may assume the oil spill has not affected the trout population's breeding habits. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Derive a formula for the population of trout <m>t</m> months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.  
+                        </p>
+                    </li>
+                </ol>   
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <example>
+        <title>Spreading rumor</title>
+        
+        
+        <statement>
+            <p>
+                A false rumor is being spread within a certain university community. Let <m>q=f(t)</m> be the percentage (from 0 to 100) of the community that has heard the rumor <m>t</m> days after the rumor is introduced. Assume that percentage of the population that has heard the rumor grows at a rate proportional to the product of the current percentage of those in the know with the current percentage of those not in the know.   
+            <ol>
+                <li>
+                    <p>
+                        Write down a differential equation for <m>q=f(t)</m>. Use <m>k</m> as your constant of proportionality. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Derive a formula for <m>q=f(t)</m> assuming that at time <m>t=0</m> five percent of the population has heard the rumor. Your answer will be expressed in terms of <m>t</m> and <m>k</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                     Investigate the long-term behavior of the rumor's spread. Is there a time when the entire population has heard the rumor?    
+                    </p>
+                </li>
+            </ol>
+        </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+    <!-- <example>
+        <title>Freefall model</title>
+        <statement>
+            <p>
+                Dudley is dropped out of a plane and falls vertically toward the earth.
+                Dudley's acceleration is the sum of two components:
+                <ul>
+                  <li>
+                    <p>
+                      a downward acceleration due to gravity equal to <m>g\approx 9.8\text{ kg } \cdot \text{m} /\text{s} ^2</m>;
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      an acceleration in the opposite direction to Dudley's current velocity,
+                      and proportional to <em>the square</em> of this velocity.
+                    </p>
+                  </li>
+                </ul>
+                <ol>
+                  <li>
+                    <p>
+                      Write a differential equation describing Dudley's velocity,
+                      and find the general solution to this equation.
+                      Your expression will contain two undetermined constants.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Find an explicit formula for Dudley's velocity,
+                      assuming that his initial vertical velocity is 0 m/s, and he approaches a terminal velocity of 55 m/s.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example> -->
+</section>
