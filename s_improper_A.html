@@ -418,7 +418,7 @@ I_R \amp = \int_2^R \frac{1}{x^p}\, dx\\
 \end{cases}\text{.}
 \end{equation*}
 </div>
-</div></div></details></div></article><div class="para" id="p-683">Simply by changing the lower limit of integration in <a href="" class="xref" data-knowl="./knowl/xref/eg_improper_type_I_ptest.html" title="Example 1.24.4: Type I: p-test">Example 1.24.4</a> from <span class="process-math">\(2\)</span> to <span class="process-math">\(a\text{,}\)</span> we have essentially derived the type I statement of <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.11: Improper integrals: p-test">the <span class="process-math">\(p\)</span>-test theorem</a>.</div>
+</div></div></details></div></article><div class="para" id="p-683">Simply by changing the lower limit of integration in <a href="" class="xref" data-knowl="./knowl/xref/eg_improper_type_I_ptest.html" title="Example 1.24.4: Type I: p-test">Example 1.24.4</a> from <span class="process-math">\(2\)</span> to <span class="process-math">\(a\text{,}\)</span> we have essentially derived the type I statement of <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test">the <span class="process-math">\(p\)</span>-test theorem</a>.</div>
 <article class="example example-like" id="eg_improper_type_I_3"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.5</span><span class="period">.</span><span class="space"> </span><span class="title">Type I: real line integral.</span>
 </h3>
@@ -500,15 +500,24 @@ I_R \amp = \int_2^R \frac{1}{x^p}\, dx\\
 <div class="para">Otherwise, we say that the integral over the entire interval <dfn class="terminology">diverges</dfn>.</div>
 </div></li>
 </ul>
+</div></article><article class="definition definition-like" id="d_improper_area"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.24.7</span><span class="period">.</span><span class="space"> </span><span class="title">Area interpretation of improper integrals.</span>
+</h3> <div class="para logical" id="p-691">
+<div class="para">Let <span class="process-math">\(f\)</span> be defined on an interval <span class="process-math">\(I\)</span> for which the corresponding integral is improper, and let <span class="process-math">\(\mathcal{R}\)</span> be the (potentially unbounded) region between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis over the interval <span class="process-math">\(I\text{.}\)</span>
+</div>
+<ul class="disc">
+<li id="li-331"><div class="para" id="p-692">We define the <em class="emphasis">area</em> (or <em class="emphasis">total area</em>) of <span class="process-math">\(\mathcal{R}\)</span> to be the integral of <span class="process-math">\(\lvert f\rvert\)</span> over <span class="process-math">\(I\text{,}\)</span> assuming this integral converges.</div></li>
+<li id="li-332"><div class="para" id="p-693">We define the <em class="emphasis">signed area</em> of <span class="process-math">\(\mathcal{R}\)</span> to be the integral of <span class="process-math">\(f\)</span> over <span class="process-math">\(I\text{,}\)</span> assuming this interval converges.</div></li>
+</ul>
 </div></article><article class="algorithm theorem-like" id="proc_improper_type_II"><h3 class="heading">
-<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.24.7</span><span class="period">.</span><span class="space"> </span><span class="title">Improper integral: type II.</span>
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.24.8</span><span class="period">.</span><span class="space"> </span><span class="title">Improper integral: type II.</span>
 </h3>
-<div class="para logical" id="p-691">
+<div class="para logical" id="p-694">
 <div class="para">To evaluate an improper integral of the form <span class="process-math">\(\int_a^b f(x)\, dx\text{,}\)</span> where <span class="process-math">\(f\)</span> fails to be continuous at at most one of the endpoints of <span class="process-math">\([a,b]\text{,}\)</span> proceed as follows.</div>
 <ol class="decimal">
-<li id="li-331"><div class="para" id="p-692">Compute the relevant definite integral, that is <span class="process-math">\(\int_t^b f(x)\, dx\)</span> or <span class="process-math">\(\int_a^t f(x)\, dx\text{,}\)</span> as an expression in terms of <span class="process-math">\(t\text{.}\)</span>
+<li id="li-333"><div class="para" id="p-695">Compute the relevant definite integral, that is <span class="process-math">\(\int_t^b f(x)\, dx\)</span> or <span class="process-math">\(\int_a^t f(x)\, dx\text{,}\)</span> as an expression in terms of <span class="process-math">\(t\text{.}\)</span>
 </div></li>
-<li id="li-332"><div class="para logical" id="p-693">
+<li id="li-334"><div class="para logical" id="p-696">
 <div class="para">Investigate the relevant limit</div>
 <div class="displaymath process-math" id="md-168">
 \begin{align*}
@@ -517,7 +526,7 @@ I_R \amp = \int_2^R \frac{1}{x^p}\, dx\\
 \end{align*}
 </div>
 </div></li>
-<li id="li-333"><div class="para logical" id="p-694">
+<li id="li-335"><div class="para logical" id="p-697">
 <div class="para">If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: i.e.,</div>
 <div class="displaymath process-math" id="md-169">
 \begin{align*}
@@ -529,13 +538,13 @@ I_R \amp = \int_2^R \frac{1}{x^p}\, dx\\
 </ol>
 <div class="para">To evaluate a definite integral of the form <span class="process-math">\(\int_{a}^{b}f(x)\, dx\text{,}\)</span> where <span class="process-math">\(f\)</span> is continuous everywhere except at <span class="process-math">\(x=c\in (a,b)\text{,}\)</span> apply the proceeding to both <span class="process-math">\(\int_a^c f(x)\, dx\)</span> and <span class="process-math">\(\int_{c}^bf(x)\, dx\text{.}\)</span> The improper integral over the <span class="process-math">\([a,b]\)</span> exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.</div>
 </div></article><article class="example example-like" id="eg_improper_type_II_1"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.8</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.9</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
 </h3>
-<div class="para" id="p-695">Evaluate <span class="process-math">\(\displaystyle\int_{0}^2\frac{1}{x-1}\, dx\text{.}\)</span>
+<div class="para" id="p-698">Evaluate <span class="process-math">\(\displaystyle\int_{0}^2\frac{1}{x-1}\, dx\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-85" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para" id="p-696">Let <span class="process-math">\(f(x)=\frac{1}{x-1}\text{.}\)</span> Observe that the integral is improper because <span class="process-math">\(f\)</span> is not defined at <span class="process-math">\(x=1\text{;}\)</span> this is clearly the sole impropriety. Using definition <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_II.html" title="Definition 1.24.6: Improper integrals of type II: discontinuities">Definition 1.24.6</a> we look at the improper integrals <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> and <span class="process-math">\(\int_1^2 f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\ln\abs{x-1}\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
-</div> <div class="para logical" id="p-697">
+<div class="para" id="p-699">Let <span class="process-math">\(f(x)=\frac{1}{x-1}\text{.}\)</span> Observe that the integral is improper because <span class="process-math">\(f\)</span> is not defined at <span class="process-math">\(x=1\text{;}\)</span> this is clearly the sole impropriety. Using definition <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_II.html" title="Definition 1.24.6: Improper integrals of type II: discontinuities">Definition 1.24.6</a> we look at the improper integrals <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> and <span class="process-math">\(\int_1^2 f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\ln\abs{x-1}\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
+</div> <div class="para logical" id="p-700">
 <div class="para">We have</div>
 <div class="displaymath process-math" id="md-170">
 \begin{align*}
@@ -548,15 +557,15 @@ I_R \amp = \int_2^R \frac{1}{x^p}\, dx\\
 <div class="para">Since <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> diverges, we conclude that <span class="process-math">\(\int_0^2 f(x)\, dx\)</span> diverges, by definition.</div>
 </div>
 </div></details></div></article><article class="example example-like" id="eg_improper_type_II_2"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.9</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.10</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
 </h3>
-<div class="para" id="p-698">Evaluate <span class="process-math">\(\displaystyle\int_0^{1}\ln x\, dx\text{.}\)</span>
+<div class="para" id="p-701">Evaluate <span class="process-math">\(\displaystyle\int_0^{1}\ln x\, dx\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-86" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para logical" id="p-699">
-<div class="para">The integral is improper as <span class="process-math">\(\ln x\)</span> is not defined at <span class="process-math">\(x=0\text{.}\)</span> We follow <a href="" class="xref" data-knowl="./knowl/xref/proc_improper_type_II.html" title="Procedure 1.24.7: Improper integral: type II">Procedure 1.24.7</a>.</div>
+<div class="para logical" id="p-702">
+<div class="para">The integral is improper as <span class="process-math">\(\ln x\)</span> is not defined at <span class="process-math">\(x=0\text{.}\)</span> We follow <a href="" class="xref" data-knowl="./knowl/xref/proc_improper_type_II.html" title="Procedure 1.24.8: Improper integral: type II">Procedure 1.24.8</a>.</div>
 <ol class="decimal">
-<li id="li-334"><div class="para logical" id="p-700">
+<li id="li-336"><div class="para logical" id="p-703">
 <div class="para">Compute</div>
 <div class="displaymath process-math" id="md-171">
 \begin{align*}
@@ -567,7 +576,7 @@ I_t \amp = \int_t^1\ln x\, dx\\
 \end{align*}
 </div>
 </div></li>
-<li id="li-335"><div class="para logical" id="p-701">
+<li id="li-337"><div class="para logical" id="p-704">
 <div class="para">Compute</div>
 <div class="displaymath process-math" id="md-172">
 \begin{align*}
@@ -579,7 +588,7 @@ I_t \amp = \int_t^1\ln x\, dx\\
 \end{align*}
 </div>
 </div></li>
-<li id="li-336"><div class="para logical" id="p-702">
+<li id="li-338"><div class="para logical" id="p-705">
 <div class="para">We conclude that the improper integral converges and has value</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -591,13 +600,13 @@ I_t \amp = \int_t^1\ln x\, dx\\
 </ol>
 </div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_ln_region.svg" role="img" class="contained" alt="Graph of natural log"></div>
 </div></details></div></article><article class="example example-like" id="eg_improper_type_II_3"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.10</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.11</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
 </h3>
-<div class="para" id="p-703">Evaluate <span class="process-math">\(\displaystyle\int_1^{4}\frac{x}{\sqrt[3]{x^2-4}}\, dx\text{.}\)</span>
+<div class="para" id="p-706">Evaluate <span class="process-math">\(\displaystyle\int_1^{4}\frac{x}{\sqrt[3]{x^2-4}}\, dx\text{.}\)</span>
 </div>
 <div class="solutions"><details id="solution-87" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para" id="p-704">Let <span class="process-math">\(f(x)=\frac{x}{\sqrt[3]{x^2-4}}\text{.}\)</span> The integral is improper as the integrand is not defined at <span class="process-math">\(x=2\text{.}\)</span> This is the only impropriety. Following <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_II.html" title="Definition 1.24.6: Improper integrals of type II: discontinuities">Definition 1.24.6</a>, we treat the improper integrals <span class="process-math">\(\int_1^2 f(x)\, dx\)</span> and <span class="process-math">\(\int_2^4f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\frac{3}{4}(x^2-4)^{2/3}\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
-</div> <div class="para logical" id="p-705">
+<div class="para" id="p-707">Let <span class="process-math">\(f(x)=\frac{x}{\sqrt[3]{x^2-4}}\text{.}\)</span> The integral is improper as the integrand is not defined at <span class="process-math">\(x=2\text{.}\)</span> This is the only impropriety. Following <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_II.html" title="Definition 1.24.6: Improper integrals of type II: discontinuities">Definition 1.24.6</a>, we treat the improper integrals <span class="process-math">\(\int_1^2 f(x)\, dx\)</span> and <span class="process-math">\(\int_2^4f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\frac{3}{4}(x^2-4)^{2/3}\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
+</div> <div class="para logical" id="p-708">
 <div class="para">First compute</div>
 <div class="displaymath process-math" id="md-173">
 \begin{align*}
@@ -629,14 +638,15 @@ I_t \amp = \int_t^1\ln x\, dx\\
 \end{equation*}
 </div>
 </div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_cube_root.svg" role="img" class="contained" alt="Graph of example integrand"></div>
-</div></details></div></article><article class="theorem theorem-like" id="th_improper_p_test"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.24.11</span><span class="period">.</span><span class="space"> </span><span class="title">Improper integrals: <span class="process-math">\(p\)</span>-test.</span>
+</div></details></div></article><div class="para" id="p-709">Improper integrals (of both types) of power functions of the form <span class="process-math">\(1/x^p\)</span> arise frequently enough to warrant their own theorem: the <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test"><span class="process-math">\(p\)</span>-test theorem</a>. As mentioned above the type I statement of the <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test">Theorem 1.24.12</a> was effectively proved in one of our earlier examples. The derivation of the type II statement is very similar.</div>
+<article class="theorem theorem-like" id="th_improper_p_test"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.24.12</span><span class="period">.</span><span class="space"> </span><span class="title">Improper integrals: <span class="process-math">\(p\)</span>-test.</span>
 </h3>
-<div class="para logical" id="p-706">
+<div class="para logical" id="p-710">
 <div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(p\)</span> be any positive numbers.</div>
 <ul class="disc">
-<li id="li-337">
-<span class="heading"><span class="title">Type I.</span></span><div class="para logical" id="p-707">
+<li id="li-339">
+<span class="heading"><span class="title">Type I.</span></span><div class="para logical" id="p-711">
 <div class="para">We have</div>
 <div class="displaymath process-math" id="eq_p_test_I">
 \begin{equation}
@@ -648,8 +658,8 @@ I_t \amp = \int_t^1\ln x\, dx\\
 </div>
 </div>
 </li>
-<li id="li-338">
-<span class="heading"><span class="title">Type II.</span></span><div class="para logical" id="p-708">
+<li id="li-340">
+<span class="heading"><span class="title">Type II.</span></span><div class="para logical" id="p-712">
 <div class="para">We have</div>
 <div class="displaymath process-math" id="eq_p_test_II">
 \begin{equation}
@@ -661,15 +671,6 @@ I_t \amp = \int_t^1\ln x\, dx\\
 </div>
 </div>
 </li>
-</ul>
-</div></article><article class="definition definition-like" id="d_improper_area"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.24.12</span><span class="period">.</span><span class="space"> </span><span class="title">Area interpretation of improper integrals.</span>
-</h3> <div class="para logical" id="p-709">
-<div class="para">Let <span class="process-math">\(f\)</span> be defined on an interval <span class="process-math">\(I\)</span> for which the corresponding integral is improper, and let <span class="process-math">\(\mathcal{R}\)</span> be the (potentially unbounded) region between the graph of <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis over the interval <span class="process-math">\(I\text{.}\)</span>
-</div>
-<ul class="disc">
-<li id="li-339"><div class="para" id="p-710">We define the <em class="emphasis">area</em> (or <em class="emphasis">total area</em>) of <span class="process-math">\(\mathcal{R}\)</span> to be the integral of <span class="process-math">\(\lvert f\rvert\)</span> over <span class="process-math">\(I\text{,}\)</span> assuming this integral converges.</div></li>
-<li id="li-340"><div class="para" id="p-711">We define the <em class="emphasis">signed area</em> of <span class="process-math">\(\mathcal{R}\)</span> to be the integral of <span class="process-math">\(f\)</span> over <span class="process-math">\(I\text{,}\)</span> assuming this interval converges.</div></li>
 </ul>
 </div></article></section></div>
 <div class="ptx-content-footer">
