@@ -347,8 +347,50 @@
         </statement>
         <solution>
             <p>
-                
+               The integral is improper as <m>\ln x</m> is not defined at <m>x=0</m>. We follow <xref ref="proc_improper_type_II"/>.
+               <ol>
+                <li>
+                  <p>
+                    Compute 
+                    <md>
+                      <mrow>I_t \amp = \int_t^1\ln x\, dx</mrow>
+                      <mrow> \amp = (x\ln x-x)\Bigr\vert_t^1</mrow>
+                      <mrow> \amp = \ln 1-1-(t\ln t-t)</mrow>
+                      <mrow> \amp = t-1-t\ln t</mrow>
+                    </md>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Compute 
+                    <md>
+                      <mrow>\lim_{t\to 0^+}I_t \amp = \lim_{t\to 0^+}t-1-t\ln t</mrow>
+                      <mrow> \amp = -1-\lim_{t\to 0^+}\frac{\ln t}{1/t}</mrow>
+                      <mrow> \amp = -1- \lim_{t\to 0^+}\frac{1/t}{-1/t^2}</mrow>
+                      <mrow> \amp = -1+\lim_{t\to 0^+}t</mrow>
+                      <mrow> \amp = -1</mrow>
+                    </md>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    We conclude that the improper integral converges and has value 
+                    <me>
+                      \int_0^1\ln x\, dx=-1
+                    </me>.
+                  Geometrically, this tells us that the signed area of the region between the graph of <m>y=\ln x</m> and the <m>x</m>-axis, and between the lines <m>x=0</m> and <m>x=1</m> is <m>-1</m>. Since this region lies entirely below the <m>x</m>-axis, we see that its area is equal to 1.
+                  </p>
+                </li>
+               </ol> 
             </p>
+            <image xml:id="im_ln_region">
+              <description>Graph of natural log</description>
+              <sageplot>
+                P=plot(log(x),x,0,1, fill=True, fillcolor="lightblue")
+                t=text("$\\ln x$", [.4,-1.5], color="black", fontsize="16")
+                P+t
+              </sageplot>
+            </image>
         </solution>
     </example>
     <example xml:id="eg_improper_type_II_3">
@@ -360,8 +402,42 @@
         </statement>
         <solution>
             <p>
-                
+               Let <m>f(x)=\frac{x}{\sqrt[3]{x^2-4}}</m>. The integral is improper as the integrand is not defined at <m>x=2</m>. This is the only impropriety. Following <xref ref="d_improper_type_II"/>, we treat the improper integrals <m>\int_1^2 f(x)\, dx</m> and <m>\int_2^4f(x)\, dx</m> separately. Observe that <m>F(x)=\frac{3}{4}(x^2-4)^{2/3}</m> is an antiderivative of <m>f(x)</m>.  
             </p>
+            <p>
+              First compute 
+              <md>
+                <mrow>\int_1^2f(x)\, dx \amp = \lim_{t\to 2^-}\int_1^t f(x)\, dx </mrow>
+                <mrow> \amp = \lim_{t\to 2^-}F(x)\Bigr\vert_1^t</mrow>
+                <mrow> \amp = \lim_{t\to 2^-}\frac{3}{4}((t^2-4)^{2/3}-(-3)^{2/3})</mrow>
+                <mrow> \amp = -\frac{3^{5/3}}{4}=3^{5/3}4^{-1}</mrow>
+              </md>.
+              Next, we compute 
+              <md>
+                <mrow>\int_2^4f(x)\, dx \amp = \lim_{t\to 2^+}\int_t^4 f(x)\, dx </mrow>
+                <mrow> \amp = \lim_{t\to 2^+}F(x)\Bigr\vert_t^4</mrow>
+                <mrow> \amp = \lim_{t\to 2^+}\frac{3}{4}(12^{2/3}-(t^2-4)^{2/3})</mrow>
+                <mrow> \amp = \frac{3^{5/3}}{4^{1/3}}=3^{5/3}4^{-1/3}</mrow>
+              </md>.
+              Since both integrals converge, we conclude that <m>\int_1^4f(x)\, dx</m> converges and has value 
+              <me>
+                \int_1^4f(x)\, dx=\int_1^2f(x)\, dx+\int_2^4 f(x)\, dx=-3^{5/3}4^{-1}+3^{5/3}4^{-1/3}
+              </me>.
+              Geometrically, this result can be interpreted as the signed area of the region between the graph of <m>f(x)</m> and the <m>x</m>-axis, and between the lines <m>x=1</m> and <m>x=4</m>. Our analysis tells us that the areas of the two regions on either side of the vertical asymptote <m>x=2</m> are both finite. The diagram below then indicates that the signed area should be positive. Our integral computation is consistent with this since 
+              <me>
+                -3^{5/3}4^{-1}+3^{5/3}4^{-1/3}=3^{5/3}4^{-1}(-1+4^{2/3})&gt; 0
+              </me>.              
+            </p>
+            <image xml:id="im_cube_root">
+              <description>Graph of example integrand</description>
+              <sageplot>
+                f(x)=sign(x)*abs(x)^(1/3)
+                g(x)=x/f(x^2-4)
+                t=text("$f(x)=\\frac{x}{\\sqrt[3]{x^2-4}}$", [3, 7],color="black", fontsize=16)
+                P=plot(g(x),x,1,4, ymin=-10, ymax=10, fill=True, fillcolor="lightblue")
+                P+t
+              </sageplot>
+            </image>
         </solution>
     </example>
     <theorem xml:id="th_improper_p_test">
