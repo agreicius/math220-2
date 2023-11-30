@@ -12,10 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.9</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.8</span><span class="period">.</span><span class="space"> </span><span class="title">Improper: type II.</span>
 </h3>
 <div class="para">Evaluate <span class="process-math">\(\displaystyle\int_{0}^2\frac{1}{x-1}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_improper_A.html#eg_improper_type_II_1">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(f(x)=\frac{1}{x-1}\text{.}\)</span> Observe that the integral is improper because <span class="process-math">\(f\)</span> is not defined at <span class="process-math">\(x=1\text{;}\)</span> this is clearly the sole impropriety. Using definition <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_II.html" title="Definition 1.24.6: Improper integrals of type II: discontinuities">Definition 1.24.6</a> we look at the improper integrals <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> and <span class="process-math">\(\int_1^2 f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\ln\abs{x-1}\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_0^1 f(x)\, dx \amp = \lim_{t\to 1^{-}}\int_0^t f(x)\, dx\\
+\amp =\lim_{t\to 1^{-}}\ln\abs{t-1}-\ln \abs{-1}\\
+\amp = -\infty-\ln 1 \amp (t\to 1^{-}\implies \abs{t-1}\to 0) \\
+\amp = -\infty
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> diverges, we conclude that <span class="process-math">\(\int_0^2 f(x)\, dx\)</span> diverges, by definition.</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_improper_A.html#eg_improper_type_II_1">in-context</a></span>
 </body>
 </html>

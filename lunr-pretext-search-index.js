@@ -1897,7 +1897,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.24",
   "title": "Improper integrals",
-  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .   Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .        Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .         Type I: -test   Evaluate for .         Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .        Type I: half-infinite   Evaluate .         Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .         Improper: type II   Evaluate .         Improper: type II   Evaluate .         Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
+  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .   Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .        Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .    We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value .        Type I: -test   Evaluate for .    First consider . It follows that . We conclude that .    Simply by changing the lower limit of integration in from to , we have essentially derived the type I statement of the -test theorem .   Type I: real line integral   Evaluate .    Let . Using we evaluate and separately. Observe that is an antiderivative of .  We have . Similarly, we have . Since both half-infinite improper integrals converge, we conclude that the given improper integral converges and has value .     Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .    Let . Observe that the integral is improper because is not defined at ; this is clearly the sole impropriety. Using definition we look at the improper integrals and separately. Observe that is an antiderivative of .  We have Since diverges, we conclude that diverges, by definition.     Improper: type II   Evaluate .         Improper: type II   Evaluate .         Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .        Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
 },
 {
   "id": "d_improper_type_I",
@@ -1924,41 +1924,32 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.24.3",
   "title": "Type I: half-infinite.",
-  "body": " Type I: half-infinite   Evaluate .       "
+  "body": " Type I: half-infinite   Evaluate .    We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value .      "
 },
 {
-  "id": "eg_improper_type_I_2",
+  "id": "eg_improper_type_I_ptest",
   "level": "2",
-  "url": "s_improper_A.html#eg_improper_type_I_2",
+  "url": "s_improper_A.html#eg_improper_type_I_ptest",
   "type": "Example",
   "number": "1.24.4",
   "title": "Type I: <span class=\"process-math\">\\(p\\)<\/span>-test.",
-  "body": " Type I: -test   Evaluate for .       "
-},
-{
-  "id": "th_improper_p_test",
-  "level": "2",
-  "url": "s_improper_A.html#th_improper_p_test",
-  "type": "Theorem",
-  "number": "1.24.5",
-  "title": "Improper integrals: <span class=\"process-math\">\\(p\\)<\/span>-test.",
-  "body": " Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .      "
+  "body": " Type I: -test   Evaluate for .    First consider . It follows that . We conclude that .   "
 },
 {
   "id": "eg_improper_type_I_3",
   "level": "2",
   "url": "s_improper_A.html#eg_improper_type_I_3",
   "type": "Example",
-  "number": "1.24.6",
-  "title": "Type I: half-infinite.",
-  "body": " Type I: half-infinite   Evaluate .       "
+  "number": "1.24.5",
+  "title": "Type I: real line integral.",
+  "body": " Type I: real line integral   Evaluate .    Let . Using we evaluate and separately. Observe that is an antiderivative of .  We have . Similarly, we have . Since both half-infinite improper integrals converge, we conclude that the given improper integral converges and has value .   "
 },
 {
   "id": "d_improper_type_II",
   "level": "2",
   "url": "s_improper_A.html#d_improper_type_II",
   "type": "Definition",
-  "number": "1.24.7",
+  "number": "1.24.6",
   "title": "Improper integrals of type II: discontinuities.",
   "body": " Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .      "
 },
@@ -1967,7 +1958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_improper_A.html#proc_improper_type_II",
   "type": "Procedure",
-  "number": "1.24.8",
+  "number": "1.24.7",
   "title": "Improper integral: type II.",
   "body": " Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.   "
 },
@@ -1976,16 +1967,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_improper_A.html#eg_improper_type_II_1",
   "type": "Example",
-  "number": "1.24.9",
+  "number": "1.24.8",
   "title": "Improper: type II.",
-  "body": " Improper: type II   Evaluate .       "
+  "body": " Improper: type II   Evaluate .    Let . Observe that the integral is improper because is not defined at ; this is clearly the sole impropriety. Using definition we look at the improper integrals and separately. Observe that is an antiderivative of .  We have Since diverges, we conclude that diverges, by definition.   "
 },
 {
   "id": "eg_improper_type_II_2",
   "level": "2",
   "url": "s_improper_A.html#eg_improper_type_II_2",
   "type": "Example",
-  "number": "1.24.10",
+  "number": "1.24.9",
   "title": "Improper: type II.",
   "body": " Improper: type II   Evaluate .       "
 },
@@ -1994,9 +1985,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_improper_A.html#eg_improper_type_II_3",
   "type": "Example",
-  "number": "1.24.11",
+  "number": "1.24.10",
   "title": "Improper: type II.",
   "body": " Improper: type II   Evaluate .       "
+},
+{
+  "id": "th_improper_p_test",
+  "level": "2",
+  "url": "s_improper_A.html#th_improper_p_test",
+  "type": "Theorem",
+  "number": "1.24.11",
+  "title": "Improper integrals: <span class=\"process-math\">\\(p\\)<\/span>-test.",
+  "body": " Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .      "
 },
 {
   "id": "d_improper_area",

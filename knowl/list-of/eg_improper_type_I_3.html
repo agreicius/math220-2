@@ -12,10 +12,41 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.6</span><span class="period">.</span><span class="space"> </span><span class="title">Type I: half-infinite.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24.5</span><span class="period">.</span><span class="space"> </span><span class="title">Type I: real line integral.</span>
 </h3>
 <div class="para">Evaluate <span class="process-math">\(\displaystyle\int_{-\infty}^{\infty}\frac{1}{x^2+1}\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_improper_A.html#eg_improper_type_I_3">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(f(x)=\frac{1}{x^2+1}\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/d_improper_type_I.html" title="Definition 1.24.1: Improper integral of type I: infinite intervals">Definition 1.24.1</a> we evaluate <span class="process-math">\(\int_{-\infty}^0 f(x)\, dx \)</span> and <span class="process-math">\(\int_0^{\infty} f(x)\, dx\)</span> separately. Observe that <span class="process-math">\(F(x)=\arctan x\)</span> is an antiderivative of <span class="process-math">\(f(x)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{-\infty}^0f(x)\, dx \amp = \lim_{R\to \infty}\int_{-R}^0 f(x)\, dx\\
+\amp = \lim_{R\to\infty} \arctan x\Bigr\vert_{-R}^0\\
+\amp = \lim_{R\to \infty}\arctan(0)-\arctan(-R)\\
+\amp = 0-\lim_{R\to\infty}\arctan(-R) \amp (\arctan 0=0)\\
+\amp = -\left(-\frac{\pi}{2}\right) \amp (\lim_{x\to -\infty}\arctan x=-\frac{\pi}{2})\\
+\amp =\frac{\pi}{2} \text{.}
+\end{align*}
+</div>
+<div class="para">Similarly, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{0}^{\infty}f(x)\, dx \amp = \lim_{R\to \infty}\int_{0}^R f(x)\, dx\\
+\amp = \lim_{R\to\infty} \arctan x\Bigr\vert_{0}^R\\
+\amp = \lim_{R\to \infty}\arctan(R)-\arctan(0)\\
+\amp = 0-\lim_{R\to\infty}\arctan(R) \amp (\arctan 0=0)\\
+\amp = \frac{\pi}{2} \amp (\lim_{x\to \infty}\arctan x=\frac{\pi}{2})\text{.}
+\end{align*}
+</div>
+<div class="para">Since both “half-infinite” improper integrals converge, we conclude that the given improper integral converges and has value</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{-\infty}^{\infty}f(x)\, dx=\int_{-\infty}^0f(x)\, dx+\int_0^\infty f(x)\, dx =\frac{\pi}{2}+\frac{\pi}{2}=\pi\text{.}
+\end{equation*}
+</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_improper_A.html#eg_improper_type_I_3">in-context</a></span>
 </body>
 </html>
