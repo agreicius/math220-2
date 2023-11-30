@@ -109,12 +109,43 @@
     </statement>
     <solution>
         <p>
-            
+            We follow <xref ref="proc_improper_type_I"/>.
+            <ol>
+              <li>
+                <p>
+                  Compute 
+                  <md>
+                    <mrow>I_R \amp = \int_{-2}^R e^{-x}\, dx</mrow>
+                    <mrow> \amp = -e^{-x}\Bigr\vert_{-2}^R</mrow>
+                    <mrow> \amp = e^2-e^{-R}</mrow>
+                  </md>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Compute 
+                  <md>
+                    <mrow>\lim_{R\to\infty} I_R \amp = \lim_{R\to\infty}e^2-e^{-R}</mrow>
+                    <mrow> \amp = e^2- 0</mrow>
+                    <mrow> \amp = e^2</mrow>
+                  </md>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We conclude that the improper integral converges and has value 
+                  <me>
+                    \int_{-2}^\infty e^{-x}\, dx= e^2
+                  </me>.
+                  
+                </p>
+              </li>
+            </ol>
         </p>
     </solution>
 </example>
 
-<example xml:id="eg_improper_type_I_2">
+<example xml:id="eg_improper_type_I_ptest">
     <title>Type I: <m>p</m>-test</title>
     <statement>
         <p>
@@ -123,47 +154,48 @@
     </statement>
     <solution>
         <p>
-            
+            First consider 
+            <md>
+              <mrow>I_R \amp = \int_2^R \frac{1}{x^p}\, dx</mrow>
+              <mrow> \amp = \begin{cases}
+              \ln \abs{x} \Bigr\vert_2^R \amp \text{if } p=1 \\
+              \frac{1}{-p+1}x^{-p+1}\Bigr\vert_2^R \amp \text{if }p\ne 1
+              \end{cases}
+              </mrow>
+              <mrow> \amp = \begin{cases}
+                \ln R-\ln 2 \Bigr\vert_2^R \amp \text{if } p=1 \\
+                \frac{1}{-p+1}R^{-p+1}-\frac{1}{-p+1}2^{-p+1} \amp \text{if }p\ne 1
+                \end{cases}</mrow>
+            </md>.
+            It follows that 
+            <md>
+              <mrow>\lim_{R\to\infty}I_R \amp = \begin{cases}
+                \lim_{R\to \infty} (\ln R-\ln 2)  \amp \text{if } p=1 \\
+                \lim_{R\to \infty}\left( \frac{1}{-p+1}R^{-p+1}-\frac{1}{-p+1}2^{-p+1} \right) \amp \text{if }p\ne 1
+                \end{cases}</mrow>
+                <mrow> \amp = \begin{cases}
+                  \infty \amp \text{if } p=1 \\
+                  \infty \amp \text{if } p&lt; 1 \\ 
+                  \frac{1}{(p-1)2^{p-1}} \amp p&gt; 1
+                  \end{cases}</mrow>
+            </md>.
+            We conclude that 
+            <me>
+              \int_2^\infty \frac{1}{x^p}\, dx =\begin{cases}
+              \infty \amp \text{if } p\leq 1 \\ 
+              \frac{1}{(p-1)2^{p-1}} \amp \text{if } p&gt; 0
+              \end{cases}
+            </me>.
         </p>
     </solution>
 </example>
-<theorem xml:id="th_improper_p_test">
-    <title>Improper integrals: <m>p</m>-test</title>
-    <statement>
-        <p>
-            Let <m>a</m> and <m>p</m> be any positive numbers.
-            <ul>
-              <li>
-                <title>Type I</title>
-                <p>
-                  We have 
-            <men xml:id="eq_p_test_I">
-                \int_a^\infty \frac{1}{x^p}\, dx=\begin{cases}
-                \frac{1}{(p-1)a^{p-1}} \amp \text{if } p&gt; 1 \\
-                \infty \amp \text{if } p\leq 1.
-                \end{cases}   
-            </men>.
-                </p>
-              </li>
-              <li>
-                <title>Type II</title>
-                <p>
-                  We have 
-            <men xml:id="eq_p_test_II">
-                \int_0^a \frac{1}{x^p}\, dx=\begin{cases}
-                \frac{1}{(-p+1)a^{p-1}} \amp \text{if } p&lt; 1 \\
-                \infty \amp \text{if } p\geq 1.
-                \end{cases}   
-            </men>.
-                </p>
-              </li>
-            </ul> 
-        </p>
-    </statement>
-</theorem>
+<p>
+  Simply by changing the lower limit of integration in <xref ref="eg_improper_type_I_ptest"/> from <m>2</m> to <m>a</m>, we have essentially derived the type I statement of <xref ref="th_improper_p_test" text="custom">the <m>p</m>-test theorem</xref>. 
+</p>
+
 
 <example xml:id="eg_improper_type_I_3">
-    <title>Type I: half-infinite</title>
+    <title>Type I: real line integral</title>
     <statement>
         <p>
             Evaluate <m>\displaystyle\int_{-\infty}^{\infty}\frac{1}{x^2+1}\, dx</m>.
@@ -171,7 +203,30 @@
     </statement>
     <solution>
         <p>
-            
+            Let <m>f(x)=\frac{1}{x^2+1}</m>. Using <xref ref="d_improper_type_I"/> we evaluate <m>\int_{-\infty}^0 f(x)\, dx </m> and <m>\int_0^{\infty} f(x)\, dx</m> separately. Observe that <m>F(x)=\arctan x</m> is an antiderivative of <m>f(x)</m>. 
+        </p>
+        <p>
+          We have 
+          <md>
+            <mrow>\int_{-\infty}^0f(x)\, dx \amp = \lim_{R\to \infty}\int_{-R}^0 f(x)\, dx</mrow>
+            <mrow> \amp = \lim_{R\to\infty} \arctan x\Bigr\vert_{-R}^0</mrow>
+            <mrow> \amp = \lim_{R\to \infty}\arctan(0)-\arctan(-R)</mrow>
+            <mrow> \amp = 0-\lim_{R\to\infty}\arctan(-R) \amp (\arctan 0=0)</mrow>
+            <mrow> \amp = -\left(-\frac{\pi}{2}\right) \amp (\lim_{x\to -\infty}\arctan x=-\frac{\pi}{2})</mrow>
+            <mrow> \amp =\frac{\pi}{2} </mrow>
+          </md>.
+          Similarly, we have 
+          <md>
+            <mrow>\int_{0}^{\infty}f(x)\, dx \amp = \lim_{R\to \infty}\int_{0}^R f(x)\, dx</mrow>
+            <mrow> \amp = \lim_{R\to\infty} \arctan x\Bigr\vert_{0}^R</mrow>
+            <mrow> \amp = \lim_{R\to \infty}\arctan(R)-\arctan(0)</mrow>
+            <mrow> \amp = 0-\lim_{R\to\infty}\arctan(R) \amp (\arctan 0=0)</mrow>
+            <mrow> \amp = \frac{\pi}{2} \amp (\lim_{x\to \infty}\arctan x=\frac{\pi}{2})</mrow>
+            </md>.
+        Since both <q>half-infinite</q> improper integrals converge, we conclude that the given improper integral converges and has value 
+        <me>
+          \int_{-\infty}^{\infty}f(x)\, dx=\int_{-\infty}^0f(x)\, dx+\int_0^\infty f(x)\, dx =\frac{\pi}{2}+\frac{\pi}{2}=\pi
+        </me>.
         </p>
     </solution>
 </example>
@@ -268,8 +323,19 @@
         </statement>
         <solution>
             <p>
-                
+                Let <m>f(x)=\frac{1}{x-1}</m>. Observe that the integral is improper because <m>f</m> is not defined at <m>x=1</m>; this is clearly the sole impropriety. Using definition <xref ref="d_improper_type_II"/> we look at the improper integrals <m>\int_0^1 f(x)\, dx</m> and <m>\int_1^2 f(x)\, dx</m> separately. Observe that <m>F(x)=\ln\abs{x-1}</m> is an antiderivative of <m>f(x)</m>. 
             </p>
+            <p>
+                  We have 
+                  <md>
+                    <mrow>\int_0^1 f(x)\, dx \amp = \lim_{t\to 1^{-}}\int_0^t f(x)\, dx</mrow>
+                    <mrow> \amp =\lim_{t\to 1^{-}}\ln\abs{t-1}-\ln \abs{-1}</mrow>
+                    <mrow> \amp = -\infty-\ln 1 \amp (t\to 1^{-}\implies \abs{t-1}\to 0) </mrow>
+                    <mrow> \amp = -\infty</mrow>. 
+                  </md>
+              Since <m>\int_0^1 f(x)\, dx</m> diverges, we conclude that <m>\int_0^2 f(x)\, dx</m> diverges, by definition. 
+            </p>
+          
         </solution>
     </example>
     <example xml:id="eg_improper_type_II_2">
@@ -298,7 +364,40 @@
             </p>
         </solution>
     </example>
-    
+    <theorem xml:id="th_improper_p_test">
+      <title>Improper integrals: <m>p</m>-test</title>
+      <statement>
+          <p>
+              Let <m>a</m> and <m>p</m> be any positive numbers.
+              <ul>
+                <li>
+                  <title>Type I</title>
+                  <p>
+                    We have 
+              <men xml:id="eq_p_test_I">
+                  \int_a^\infty \frac{1}{x^p}\, dx=\begin{cases}
+                  \frac{1}{(p-1)a^{p-1}} \amp \text{if } p&gt; 1 \\
+                  \infty \amp \text{if } p\leq 1.
+                  \end{cases}   
+              </men>.
+                  </p>
+                </li>
+                <li>
+                  <title>Type II</title>
+                  <p>
+                    We have 
+              <men xml:id="eq_p_test_II">
+                  \int_0^a \frac{1}{x^p}\, dx=\begin{cases}
+                  \frac{1}{(-p+1)a^{p-1}} \amp \text{if } p&lt; 1 \\
+                  \infty \amp \text{if } p\geq 1.
+                  \end{cases}   
+              </men>.
+                  </p>
+                </li>
+              </ul> 
+          </p>
+      </statement>
+  </theorem>
     <definition xml:id="d_improper_area">
         <title>Area interpretation of improper integrals</title>
         <statement>

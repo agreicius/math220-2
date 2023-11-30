@@ -25,7 +25,25 @@
         </p>
       </statement>
     </definition>
-    
+    <example>
+      <title>Exponential growth/decay</title>
+      <statement>
+        <p>
+          Fix a nonzero constant <m>k</m>. Find a general formula for all functions <m>f</m> with domain <m>\R=(-\infty,\infty)</m> satisfying 
+          <me>
+            f'(x)=k\, f(x)
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+         The following technique for solving for <m>f</m> is called <em>separation of variables</em>, as <xref ref="proc_sep_vars"/> makes clear. 
+        </p>
+        <p>
+          First let's assume that <m>f(x)\ne 0</m> for all <m>x\in \R</m>. In this case we have 
+        </p>
+      </solution>
+    </example>
     
     <definition xml:id="d_diffeq">
         <title>First-order differential equation</title>
