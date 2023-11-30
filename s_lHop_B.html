@@ -259,22 +259,22 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_lHop_B"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.15</span><span class="space"> </span><span class="title">More on indeterminate forms</span>
 </h2>
-<div class="para" id="p-444">There are other types of indeterminate form limit expression to which l’Hôpital’s rule cannot be directly applied. However, after some algebraic manipulation we can often get the expression into a more tractable form.</div>
+<div class="para" id="p-447">There are other types of indeterminate form limit expression to which l’Hôpital’s rule cannot be directly applied. However, after some algebraic manipulation we can often get the expression into a more tractable form.</div>
 <article class="definition definition-like" id="d_indeterminate_further"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.15.1</span><span class="period">.</span><span class="space"> </span><span class="title">More indeterminate forms.</span>
-</h3> <div class="para" id="p-445">Assume <span class="process-math">\(a\)</span> is either a finite number or <span class="process-math">\(\pm\infty\text{.}\)</span>
-</div> <div class="para" id="p-446">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)-g(x)\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(\infty-\infty\)</span></dfn>.</div> <div class="para" id="p-447">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=0\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=\pm\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)g(x)\)</span> is an <dfn class="terminology">indeterminate</dfn> form of type <span class="process-math">\(0\cdot\infty\text{.}\)</span>
-</div> <div class="para" id="p-448">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(0^0\)</span></dfn>.</div> <div class="para" id="p-449">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\infty\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=0\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(\infty^0\)</span></dfn>.</div> <div class="para" id="p-450">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=1\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(1^\infty\)</span></dfn>.</div></article><article class="algorithm theorem-like" id="proc_expanded_lHop"><h3 class="heading">
+</h3> <div class="para" id="p-448">Assume <span class="process-math">\(a\)</span> is either a finite number or <span class="process-math">\(\pm\infty\text{.}\)</span>
+</div> <div class="para" id="p-449">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)-g(x)\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(\infty-\infty\)</span></dfn>.</div> <div class="para" id="p-450">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=0\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=\pm\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)g(x)\)</span> is an <dfn class="terminology">indeterminate</dfn> form of type <span class="process-math">\(0\cdot\infty\text{.}\)</span>
+</div> <div class="para" id="p-451">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(0^0\)</span></dfn>.</div> <div class="para" id="p-452">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=\infty\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=0\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(\infty^0\)</span></dfn>.</div> <div class="para" id="p-453">If <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)=1\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)=\infty\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> is an <dfn class="terminology">indeterminate form of type <span class="process-math">\(1^\infty\)</span></dfn>.</div></article><article class="algorithm theorem-like" id="proc_expanded_lHop"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.15.2</span><span class="period">.</span><span class="space"> </span><span class="title">Indeterminate forms.</span>
 </h3>
-<div class="para logical" id="p-451">
+<div class="para logical" id="p-454">
 <div class="para">Below you find a variety of potentially useful techniques for dealing with limit expressions of indeterminate form.</div>
 <ol class="decimal">
 <li id="li-230">
-<span class="heading"><span class="title">Types <span class="process-math">\(0/0, \infty/\infty\)</span>.</span></span><div class="para" id="p-452">If <span class="process-math">\(\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}\)</span> is of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\text{,}\)</span> we can apply l’Hôpital’s rule.</div>
+<span class="heading"><span class="title">Types <span class="process-math">\(0/0, \infty/\infty\)</span>.</span></span><div class="para" id="p-455">If <span class="process-math">\(\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}\)</span> is of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\text{,}\)</span> we can apply l’Hôpital’s rule.</div>
 </li>
 <li id="li-231">
-<span class="heading"><span class="title">Type <span class="process-math">\(\infty-\infty\)</span>.</span></span><div class="para logical" id="p-453">
+<span class="heading"><span class="title">Type <span class="process-math">\(\infty-\infty\)</span>.</span></span><div class="para logical" id="p-456">
 <div class="para">If <span class="process-math">\(\lim_{x\to a}f(x)-g(x)\)</span> is of type <span class="process-math">\(\infty- \infty\text{,}\)</span> we can attempt to rewrite the expression as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -285,7 +285,7 @@ window.MathJax = {
 </div>
 </li>
 <li id="li-232">
-<span class="heading"><span class="title">Type <span class="process-math">\(0\cdot \infty\)</span>.</span></span><div class="para logical" id="p-454">
+<span class="heading"><span class="title">Type <span class="process-math">\(0\cdot \infty\)</span>.</span></span><div class="para logical" id="p-457">
 <div class="para">If <span class="process-math">\(\lim_{x\to a}f(x)g(x)\)</span> is of type <span class="process-math">\(0\cdot \infty\text{,}\)</span> we can write</div>
 <div class="displaymath process-math" id="md-85">
 \begin{align*}
@@ -298,7 +298,7 @@ window.MathJax = {
 </div>
 </li>
 <li id="li-233">
-<span class="heading"><span class="title">Exponential expressions.</span></span><div class="para logical" id="p-455">
+<span class="heading"><span class="title">Exponential expressions.</span></span><div class="para logical" id="p-458">
 <div class="para">For any limit expression of the form <span class="process-math">\(\displaystyle\lim_{x\to a}f(x)^{g(x)}\)</span> we can write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -317,18 +317,18 @@ window.MathJax = {
 </div></article><article class="example example-like" id="eg_indeterminate_further"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.15.3</span><span class="period">.</span><span class="space"> </span><span class="title">More indeterminate forms.</span>
 </h3>
-<div class="para logical" id="p-456">
+<div class="para logical" id="p-459">
 <div class="para">Compute the following limits.</div>
 <ol class="decimal">
-<li id="li-234"><div class="para" id="p-457"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x}\)</span></div></li>
-<li id="li-235"><div class="para" id="p-458"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to \infty}2x-\sqrt{4x^2-13x}\)</span></div></li>
-<li id="li-236"><div class="para" id="p-459"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to -\infty}x^22^{x}\)</span></div></li>
-<li id="li-237"><div class="para" id="p-460"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0^+}(1+x)^{1/x}\)</span></div></li>
-<li id="li-238"><div class="para" id="p-461"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to \infty}(1+x^2)^{2/x}\)</span></div></li>
+<li id="li-234"><div class="para" id="p-460"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x}\)</span></div></li>
+<li id="li-235"><div class="para" id="p-461"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to \infty}2x-\sqrt{4x^2-13x}\)</span></div></li>
+<li id="li-236"><div class="para" id="p-462"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to -\infty}x^22^{x}\)</span></div></li>
+<li id="li-237"><div class="para" id="p-463"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to 0^+}(1+x)^{1/x}\)</span></div></li>
+<li id="li-238"><div class="para" id="p-464"><span class="process-math">\(\displaystyle \displaystyle\lim_{x\to \infty}(1+x^2)^{2/x}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-42" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-462"><ol class="decimal">
-<li id="li-239"><div class="para logical" id="p-463">
+<div class="solutions"><details id="solution-43" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-465"><ol class="decimal">
+<li id="li-239"><div class="para logical" id="p-466">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_lHop.html" id="md-86">
 \begin{align*}
 \lim_{x\to 0^+}\frac{1}{\sin x}-\frac{1}{x} \amp = \lim_{x\to 0^+}\frac{x-\sin x}{x\sin x} \amp (\text{alg. tech.: common denom.})\\
@@ -337,7 +337,7 @@ window.MathJax = {
 </div>
 <div class="para">The last equality was shown in <a href="" class="xref" data-knowl="./knowl/xref/eg_lHop.html" title="Example 1.14.6: L’Hôpital’s rule">Example 1.14.6</a> with the help of l’Hôpital’s rule.</div>
 </div></li>
-<li id="li-240"><div class="para logical" id="p-464">
+<li id="li-240"><div class="para logical" id="p-467">
 <div class="displaymath process-math" id="md-87">
 \begin{align*}
 \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\amp= \lim_{x\to \infty}2x-\sqrt{4x^2-13x}\cdot \frac{2x+\sqrt{4x^2+13x}}{2x+\sqrt{4x^2-13x}} \amp (\text{alg. tech.: conjugate})\\
@@ -350,7 +350,7 @@ window.MathJax = {
 </div>
 <div class="para">Note: the step where <span class="process-math">\(x\)</span> is factored out of the numerator and denominator was motivated by the intuition that as <span class="process-math">\(x\to \infty\text{,}\)</span> the <span class="process-math">\(x^2\)</span> term in the radical dominates the <span class="process-math">\(x\)</span> term.</div>
 </div></li>
-<li id="li-241"><div class="para logical" id="p-465"><div class="displaymath process-math" id="md-88">
+<li id="li-241"><div class="para logical" id="p-468"><div class="displaymath process-math" id="md-88">
 \begin{align*}
 \lim_{x\to -\infty}x^22^{x} \amp = \lim_{x\to -\infty}\frac{x^2}{2^{-x}}\\
 \amp = \lim_{x\to -\infty}\frac{2x}{-\ln 2 \cdot 2^{-x}} \amp (\text{l'Hop }, \infty/\infty)\\
@@ -359,7 +359,7 @@ window.MathJax = {
 \amp = 0\text{.}
 \end{align*}
 </div></div></li>
-<li id="li-242"><div class="para logical" id="p-466"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html" id="md-89">
+<li id="li-242"><div class="para logical" id="p-469"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html" id="md-89">
 \begin{align*}
 \lim_{x\to 0^+}(1+x)^{1/x} \amp = \lim_{x\to 0^+}e^{\frac{1}{x}\ln (1+x)} \amp (\text{def. of } a^b)\\
 \amp = e^{\lim_{x\to 0^+}\frac{\ln (1+x)}{x}} \amp \knowl{./knowl/xref/eq_exp_limit.html}{\text{(1.15.1)}} \\
@@ -368,7 +368,7 @@ window.MathJax = {
 \amp = e\text{.}
 \end{align*}
 </div></div></li>
-<li id="li-243"><div class="para logical" id="p-467"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html" id="md-90">
+<li id="li-243"><div class="para logical" id="p-470"><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_limit.html" id="md-90">
 \begin{align*}
 \lim_{x\to \infty}(1+x^2)^{2/x} \amp = \lim_{x\to \infty}e^{\frac{2}{x}\ln(1+x^2)} \amp (\text{def. of } a^b)\\
 \amp = e^{\lim_{x\to \infty}\frac{2\ln(1+x^2)}{x}} \amp \knowl{./knowl/xref/eq_exp_limit.html}{\text{(1.15.1)}}\\

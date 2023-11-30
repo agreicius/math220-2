@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.13",
   "title": "Separable differential equations",
-  "body": " Separable differential equations   Exponential growth and decay   Suppose the function satisfies the differential equation , where is a fixed constant.  If then is said to undergo exponential growth .  If then is said to undergo exponential decay .     First-order differential equation   A first-order differential equation for the function is an equation that can be written in the form where denotes an arbitrary expression involving and .  A solution to a differential equation is any function that satisfies equation ; as such it is useful to think of the function in this context as an unknown that we are trying to solve for. The general solution to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.     Separable first-order differential equation   A separable differential equation for the function is a differential equation that can be written in the form , or equivalently, letting , .     Separation of variables (algebraic form)   To solve a separable differential equation of the form for the function , proceed as follows.   Separation  Write the equation as and take take the indefinite integral of both sides. .    Integration  Attempt to find an antiderivative of and an antiderivative for .    Algebra  The resulting general equation is said to be an implicit solution of the differential equation . An explicit solution is obtained from by solving for in terms of and , if possible.        Separation of variables   Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.              , .          Let . Following we compute . We conclude that is the general solution, where . How arbitrary is ? Since was arbitrary, the expression can assume any value except 0. Setting in our formula yields the function , which by inspection also satisfies the differential equation. We conclude that the general solution is where is any real number.    Following we compute where is any real number.    Let . Following we compute . Lastly, using the initial condition, we see that Thus .        Newton's law of cooling   Suppose a hot object cools in a room kept at constant temperature of (in celcius). Newton's law of cooling states that the rate at which the object cools (with respect to time) is proportional to the difference between its current temperature and the room temperature .   Write a differential equation that describes Newton's law of cooling in this setting.    Find the general solution to this differential equation.    Find a the particular solution to the situation where C, the object's initial temperature is C, and after minutes the object's temperature is C.          Let temperature be given by the function . The rate of change of with respect to is then . Newton's law says this rate of change is proportional to the difference of the current temperature of the object and the room temperature. Mathematically, we write this proportionality relation as , where is some fixed constant, called the constant of proportionality .    Equation can be solved using in much the same manner as , yielding a general solution of the form , where is any real number.    Assuming , we have . We use the two additional pieces of information to determine the undetermined constants and . We have . We conclude that , where . Below you find a graph of along with its horizontal asymptote corresponding to the steady room temperature .   Graph of solution to Newton's law         "
+  "body": " Separable differential equations   Exponential growth and decay   Suppose the function satisfies the differential equation , where is a fixed constant.  If then is said to undergo exponential growth .  If then is said to undergo exponential decay .     Exponential growth\/decay   Fix a nonzero constant . Find a general formula for all functions with domain satisfying .    The following technique for solving for is called separation of variables , as makes clear.  First let's assume that for all . In this case we have     First-order differential equation   A first-order differential equation for the function is an equation that can be written in the form where denotes an arbitrary expression involving and .  A solution to a differential equation is any function that satisfies equation ; as such it is useful to think of the function in this context as an unknown that we are trying to solve for. The general solution to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.     Separable first-order differential equation   A separable differential equation for the function is a differential equation that can be written in the form , or equivalently, letting , .     Separation of variables (algebraic form)   To solve a separable differential equation of the form for the function , proceed as follows.   Separation  Write the equation as and take take the indefinite integral of both sides. .    Integration  Attempt to find an antiderivative of and an antiderivative for .    Algebra  The resulting general equation is said to be an implicit solution of the differential equation . An explicit solution is obtained from by solving for in terms of and , if possible.        Separation of variables   Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.              , .          Let . Following we compute . We conclude that is the general solution, where . How arbitrary is ? Since was arbitrary, the expression can assume any value except 0. Setting in our formula yields the function , which by inspection also satisfies the differential equation. We conclude that the general solution is where is any real number.    Following we compute where is any real number.    Let . Following we compute . Lastly, using the initial condition, we see that Thus .        Newton's law of cooling   Suppose a hot object cools in a room kept at constant temperature of (in celcius). Newton's law of cooling states that the rate at which the object cools (with respect to time) is proportional to the difference between its current temperature and the room temperature .   Write a differential equation that describes Newton's law of cooling in this setting.    Find the general solution to this differential equation.    Find a the particular solution to the situation where C, the object's initial temperature is C, and after minutes the object's temperature is C.          Let temperature be given by the function . The rate of change of with respect to is then . Newton's law says this rate of change is proportional to the difference of the current temperature of the object and the room temperature. Mathematically, we write this proportionality relation as , where is some fixed constant, called the constant of proportionality .    Equation can be solved using in much the same manner as , yielding a general solution of the form , where is any real number.    Assuming , we have . We use the two additional pieces of information to determine the undetermined constants and . We have . We conclude that , where . Below you find a graph of along with its horizontal asymptote corresponding to the steady room temperature .   Graph of solution to Newton's law         "
 },
 {
   "id": "d_exp_grow_decay",
@@ -1090,11 +1090,20 @@ var ptx_lunr_docs = [
   "body": " Exponential growth and decay   Suppose the function satisfies the differential equation , where is a fixed constant.  If then is said to undergo exponential growth .  If then is said to undergo exponential decay .   "
 },
 {
+  "id": "example-39",
+  "level": "2",
+  "url": "separable_diffeq.html#example-39",
+  "type": "Example",
+  "number": "1.13.2",
+  "title": "Exponential growth\/decay.",
+  "body": " Exponential growth\/decay   Fix a nonzero constant . Find a general formula for all functions with domain satisfying .    The following technique for solving for is called separation of variables , as makes clear.  First let's assume that for all . In this case we have   "
+},
+{
   "id": "d_diffeq",
   "level": "2",
   "url": "separable_diffeq.html#d_diffeq",
   "type": "Definition",
-  "number": "1.13.2",
+  "number": "1.13.3",
   "title": "First-order differential equation.",
   "body": " First-order differential equation   A first-order differential equation for the function is an equation that can be written in the form where denotes an arbitrary expression involving and .  A solution to a differential equation is any function that satisfies equation ; as such it is useful to think of the function in this context as an unknown that we are trying to solve for. The general solution to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.   "
 },
@@ -1103,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "separable_diffeq.html#d_sep_diffeq",
   "type": "Definition",
-  "number": "1.13.3",
+  "number": "1.13.4",
   "title": "Separable first-order differential equation.",
   "body": " Separable first-order differential equation   A separable differential equation for the function is a differential equation that can be written in the form , or equivalently, letting , .   "
 },
@@ -1112,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "separable_diffeq.html#proc_sep_vars",
   "type": "Procedure",
-  "number": "1.13.4",
+  "number": "1.13.5",
   "title": "Separation of variables (algebraic form).",
   "body": " Separation of variables (algebraic form)   To solve a separable differential equation of the form for the function , proceed as follows.   Separation  Write the equation as and take take the indefinite integral of both sides. .    Integration  Attempt to find an antiderivative of and an antiderivative for .    Algebra  The resulting general equation is said to be an implicit solution of the differential equation . An explicit solution is obtained from by solving for in terms of and , if possible.      "
 },
@@ -1121,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "separable_diffeq.html#eg_sep_vars",
   "type": "Example",
-  "number": "1.13.5",
+  "number": "1.13.6",
   "title": "Separation of variables.",
   "body": " Separation of variables   Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.              , .          Let . Following we compute . We conclude that is the general solution, where . How arbitrary is ? Since was arbitrary, the expression can assume any value except 0. Setting in our formula yields the function , which by inspection also satisfies the differential equation. We conclude that the general solution is where is any real number.    Following we compute where is any real number.    Let . Following we compute . Lastly, using the initial condition, we see that Thus .      "
 },
@@ -1130,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "separable_diffeq.html#eg_Newton_cooling",
   "type": "Example",
-  "number": "1.13.6",
+  "number": "1.13.7",
   "title": "Newton’s law of cooling.",
   "body": " Newton's law of cooling   Suppose a hot object cools in a room kept at constant temperature of (in celcius). Newton's law of cooling states that the rate at which the object cools (with respect to time) is proportional to the difference between its current temperature and the room temperature .   Write a differential equation that describes Newton's law of cooling in this setting.    Find the general solution to this differential equation.    Find a the particular solution to the situation where C, the object's initial temperature is C, and after minutes the object's temperature is C.          Let temperature be given by the function . The rate of change of with respect to is then . Newton's law says this rate of change is proportional to the difference of the current temperature of the object and the room temperature. Mathematically, we write this proportionality relation as , where is some fixed constant, called the constant of proportionality .    Equation can be solved using in much the same manner as , yielding a general solution of the form , where is any real number.    Assuming , we have . We use the two additional pieces of information to determine the undetermined constants and . We have . We conclude that , where . Below you find a graph of along with its horizontal asymptote corresponding to the steady room temperature .   Graph of solution to Newton's law        "
 },
@@ -1207,9 +1216,9 @@ var ptx_lunr_docs = [
   "body": " Students tend to fall madly in love with l'Hôpital's rule upon first encountering it. Here are some comments to temper your passion.   Make sure the relevant conditions apply: , (a) and must be differentiable on an open interval containing , and (b) we must have an indeterminate form of type or .    Even if l'Hôpital's rule applies, it may not be useful! In the following examples, applying l'Hôpital's rule either gets us nowhere, or is too cumbersome. .     "
 },
 {
-  "id": "example-43",
+  "id": "example-44",
   "level": "2",
-  "url": "s_lHop_A.html#example-43",
+  "url": "s_lHop_A.html#example-44",
   "type": "Example",
   "number": "1.14.8",
   "title": "Indeterminate form limit.",
@@ -1333,9 +1342,9 @@ var ptx_lunr_docs = [
   "body": " Derivatives of inverse trig functions   Find the equation of the tangent line to at .    The tangent line passes through the point and has slope . Using point-slope form, we see that the line has equation .   "
 },
 {
-  "id": "example-48",
+  "id": "example-49",
   "level": "2",
-  "url": "s_inverse_trig.html#example-48",
+  "url": "s_inverse_trig.html#example-49",
   "type": "Example",
   "number": "1.16.9",
   "title": "Limit computation.",
@@ -1897,7 +1906,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.24",
   "title": "Improper integrals",
-  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .   Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .        Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .    We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value .        Type I: -test   Evaluate for .    First consider . It follows that . We conclude that .    Simply by changing the lower limit of integration in from to , we have essentially derived the type I statement of the -test theorem .   Type I: real line integral   Evaluate .    Let . Using we evaluate and separately. Observe that is an antiderivative of .  We have . Similarly, we have . Since both half-infinite improper integrals converge, we conclude that the given improper integral converges and has value .     Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .    Let . Observe that the integral is improper because is not defined at ; this is clearly the sole impropriety. Using definition we look at the improper integrals and separately. Observe that is an antiderivative of .  We have Since diverges, we conclude that diverges, by definition.     Improper: type II   Evaluate .         Improper: type II   Evaluate .         Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .        Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
+  "body": " Improper integrals   Improper integral of type I: infinite intervals   Below we define definite integrals over infinite intervals. These are called improper integrals of type I , or integrals over infinite intervals .   Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Interval  Let be continuous on the interval . The integral of over , denoted , is said to converge if the limit exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Real line  Let be continuous on the real line . The integral of over , denoted , is said to converge if both of the half-infinite integrals and converge for some real number . In this case we define . If either (or both) of the half-infinite integrals diverge, we say that the integral of over  diverges .        Improper integral: type I   To evaluate an improper integral of the form or , proceed as follows.   Compute the relevant definite integral , that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , pick any real number , and apply the proceeding to both and . The improper integral over exists if and only if both of these half-infinite integrals exist, in which case it is equal to their sum.     Type I: half-infinite   Evaluate .    We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value .        Type I: -test   Evaluate for .    First consider . It follows that . We conclude that .    Simply by changing the lower limit of integration in from to , we have essentially derived the type I statement of the -test theorem .   Type I: real line integral   Evaluate .    Let . Using we evaluate and separately. Observe that is an antiderivative of .  We have . Similarly, we have . Since both half-infinite improper integrals converge, we conclude that the given improper integral converges and has value .     Improper integrals of type II: discontinuities   Assume is continuous on the interval , except possibly at one point.   Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if the limit , exists, in which case we define . If the limit does not exist, we say the improper integral diverges .    Assume is not continuous at . The integral of over , denoted , is said to converge if both improper integrals and converge, in which case we define . Otherwise, we say that the integral over the entire interval diverges .        Improper integral: type II   To evaluate an improper integral of the form , where fails to be continuous at at most one of the endpoints of , proceed as follows.   Compute the relevant definite integral, that is or , as an expression in terms of .    Investigate the relevant limit .    If the relevant limit does not exist, conclude that the improper integral diverges. Otherwise, conclude that the improper integral is equal to the relevant limit: , .   To evaluate a definite integral of the form , where is continuous everywhere except at , apply the proceeding to both and . The improper integral over the exists if and only if both of these smaller interval integrals exist, in which case it is equal to their sum.     Improper: type II   Evaluate .    Let . Observe that the integral is improper because is not defined at ; this is clearly the sole impropriety. Using definition we look at the improper integrals and separately. Observe that is an antiderivative of .  We have Since diverges, we conclude that diverges, by definition.     Improper: type II   Evaluate .    The integral is improper as is not defined at . We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value . Geometrically, this tells us that the signed area of the region between the graph of and the -axis, and between the lines and is . Since this region lies entirely below the -axis, we see that its area is equal to 1.      Graph of natural log       Improper: type II   Evaluate .    Let . The integral is improper as the integrand is not defined at . This is the only impropriety. Following , we treat the improper integrals and separately. Observe that is an antiderivative of .  First compute . Next, we compute . Since both integrals converge, we conclude that converges and has value . Geometrically, this result can be interpreted as the signed area of the region between the graph of and the -axis, and between the lines and . Our analysis tells us that the areas of the two regions on either side of the vertical asymptote are both finite. The diagram below then indicates that the signed area should be positive. Our integral computation is consistent with this since .   Graph of example integrand       Improper integrals: -test   Let and be any positive numbers.   Type I  We have .    Type II  We have .        Area interpretation of improper integrals   Let be defined on an interval for which the corresponding integral is improper, and let be the (potentially unbounded) region between the graph of and the -axis over the interval .   We define the area (or total area ) of to be the integral of over , assuming this integral converges.    We define the signed area of to be the integral of over , assuming this interval converges.       "
 },
 {
   "id": "d_improper_type_I",
@@ -1978,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.24.9",
   "title": "Improper: type II.",
-  "body": " Improper: type II   Evaluate .       "
+  "body": " Improper: type II   Evaluate .    The integral is improper as is not defined at . We follow .   Compute .    Compute .    We conclude that the improper integral converges and has value . Geometrically, this tells us that the signed area of the region between the graph of and the -axis, and between the lines and is . Since this region lies entirely below the -axis, we see that its area is equal to 1.      Graph of natural log     "
 },
 {
   "id": "eg_improper_type_II_3",
@@ -1987,7 +1996,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.24.10",
   "title": "Improper: type II.",
-  "body": " Improper: type II   Evaluate .       "
+  "body": " Improper: type II   Evaluate .    Let . The integral is improper as the integrand is not defined at . This is the only impropriety. Following , we treat the improper integrals and separately. Observe that is an antiderivative of .  First compute . Next, we compute . Since both integrals converge, we conclude that converges and has value . Geometrically, this result can be interpreted as the signed area of the region between the graph of and the -axis, and between the lines and . Our analysis tells us that the areas of the two regions on either side of the vertical asymptote are both finite. The diagram below then indicates that the signed area should be positive. Our integral computation is consistent with this since .   Graph of example integrand     "
 },
 {
   "id": "th_improper_p_test",
@@ -2170,27 +2179,27 @@ var ptx_lunr_docs = [
   "body": " Modeling with first-order differential equations   Many applications present information about a quantity in a form that can be modeled by a first-order differential equation. Here is an outline of the steps to take in these settings.   Explicitly identify the quantity under consideration as a function of some other quantity , and give a name to this function: .    Translate the given information about into a first-order differential equation: . This is often the trickiest step!   Look for phrases that indicate rate of change of and translate these into equalities involving .    When there is a combination of components to the rate of change, a diagram may be useful.    Translate phrases like is proportional to as , where is the (possibly undetermined) constant of proportionality.       Ask yourself whether the differential equation is linear or separable. If so, use the appropriate technique to solve it in as general a form as you can.   If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique.    If the differential equation is linear, make sure to bring it into standard form before using the integrating factor method.       Once you have solved you will have a formula for that includes some undetermined constants. If possible, use any additional information given about to determine these undetermined constants.      "
 },
 {
-  "id": "example-96",
+  "id": "example-97",
   "level": "2",
-  "url": "s_modeling.html#example-96",
+  "url": "s_modeling.html#example-97",
   "type": "Example",
   "number": "1.27.2",
   "title": "Mixing problem.",
   "body": " Mixing problem   A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved. The mixture is kept uniform by stirring. Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute. At the same time the mixture from the tank leaves at a rate of 6 liters per minute. How much salt is in the tank after 30 minutes.       "
 },
 {
-  "id": "example-97",
+  "id": "example-98",
   "level": "2",
-  "url": "s_modeling.html#example-97",
+  "url": "s_modeling.html#example-98",
   "type": "Example",
   "number": "1.27.3",
   "title": "Trout population.",
   "body": " Trout population   Left to their own devices, the population of trout in the Straits of Dudley increases at a rate of of the present population. A recent oil spill, however, has resulted in an ongoing depletion of the population: specifically, months after the spill the trout are dying off at a rate of fish per month.   Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time (in months) since the oil spill. You may assume the oil spill has not affected the trout population's breeding habits.    Derive a formula for the population of trout months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.          "
 },
 {
-  "id": "example-98",
+  "id": "example-99",
   "level": "2",
-  "url": "s_modeling.html#example-98",
+  "url": "s_modeling.html#example-99",
   "type": "Example",
   "number": "1.27.4",
   "title": "Spreading rumor.",

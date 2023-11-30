@@ -259,7 +259,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_trig_int"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.19</span><span class="space"> </span><span class="title">Trigonometric integrals</span>
 </h2>
-<div class="para logical" id="p-550">
+<div class="para logical" id="p-553">
 <div class="para">We now develop an integration technique for two <em class="emphasis">very particular</em> types of integrals:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_sincos.html ./knowl/xref/proc_int_tansec.html" id="md-113">
 \begin{align*}
@@ -283,18 +283,18 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 <article class="theorem theorem-like" id="th_trig_identities"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.19.1</span><span class="period">.</span><span class="space"> </span><span class="title">Trigonometric identities.</span>
 </h3>
-<div class="para logical" id="p-551">
+<div class="para logical" id="p-554">
 <div class="para">The following identities hold for all real numbers <span class="process-math">\(\theta\)</span> and <span class="process-math">\(\phi\)</span> for which the given expression is defined.</div>
 <ol class="decimal">
 <li id="li-274">
-<span class="heading"><span class="title">Pythagorean identities.</span></span><div class="para logical" id="p-552"><div class="displaymath process-math" id="md-115">
+<span class="heading"><span class="title">Pythagorean identities.</span></span><div class="para logical" id="p-555"><div class="displaymath process-math" id="md-115">
 \begin{align*}
 \sin^2\theta+\cos^2\theta \amp = 1 \amp \tan^2\theta+1\amp = \sec^2\theta 
 \end{align*}
 </div></div>
 </li>
 <li id="li-275">
-<span class="heading"><span class="title">Sum-to-product and double-angle formulas.</span></span><div class="para logical" id="p-553"><div class="displaymath process-math" id="md-116">
+<span class="heading"><span class="title">Sum-to-product and double-angle formulas.</span></span><div class="para logical" id="p-556"><div class="displaymath process-math" id="md-116">
 \begin{align*}
 \sin(\theta+\phi) \amp =\sin\theta\cos\phi+\cos\theta\sin\phi 
 \amp \sin(\theta-\phi) \amp =\sin\theta\cos\phi-\cos\theta\sin\phi \\
@@ -306,7 +306,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div>
 </li>
 <li id="li-276">
-<span class="heading"><span class="title">Product-to-sum and square formulas.</span></span><div class="para logical" id="p-554"><div class="displaymath process-math" id="md-117">
+<span class="heading"><span class="title">Product-to-sum and square formulas.</span></span><div class="para logical" id="p-557"><div class="displaymath process-math" id="md-117">
 \begin{align*}
 \sin\theta\sin\phi \amp = \frac{1}{2}(\cos(\theta-\phi)-\cos(\theta+\phi)) \\
 \cos\theta\cos\phi \amp =\frac{1}{2}(\cos(\theta-\phi)+\cos(\theta+\phi)) \\
@@ -320,7 +320,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></article><article class="algorithm theorem-like" id="proc_int_sincos"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.19.2</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating <span class="process-math">\(\sin^m x\cos^n x\)</span>.</span>
 </h3>
-<div class="para logical" id="p-555">
+<div class="para logical" id="p-558">
 <div class="para">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be nonnegative integers. When computing</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -330,7 +330,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 <div class="para">use the following strategies.</div>
 <ol class="decimal">
 <li id="li-277">
-<span class="heading"><span class="title">Odd sine power.</span></span><div class="para logical" id="p-556">
+<span class="heading"><span class="title">Odd sine power.</span></span><div class="para logical" id="p-559">
 <div class="para">If <span class="process-math">\(m=2k+1\)</span> is odd, write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -342,7 +342,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div>
 </li>
 <li id="li-278">
-<span class="heading"><span class="title">Odd cosine power.</span></span><div class="para logical" id="p-557">
+<span class="heading"><span class="title">Odd cosine power.</span></span><div class="para logical" id="p-560">
 <div class="para">If <span class="process-math">\(n=2k+1\)</span> is odd, write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -354,14 +354,14 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div>
 </li>
 <li id="li-279">
-<span class="heading"><span class="title">Even powers.</span></span><div class="para" id="p-558">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both even use <span class="process-math">\(\displaystyle\sin^2 x=\frac{1-\cos 2x}{2}\)</span> and <span class="process-math">\(\displaystyle\cos^2 x=\frac{1+\cos 2x}{2}\)</span> to reduce to a lower power of <span class="process-math">\(\cos 2x\text{.}\)</span>
+<span class="heading"><span class="title">Even powers.</span></span><div class="para" id="p-561">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both even use <span class="process-math">\(\displaystyle\sin^2 x=\frac{1-\cos 2x}{2}\)</span> and <span class="process-math">\(\displaystyle\cos^2 x=\frac{1+\cos 2x}{2}\)</span> to reduce to a lower power of <span class="process-math">\(\cos 2x\text{.}\)</span>
 </div>
 </li>
 </ol>
 </div></article><article class="algorithm theorem-like" id="proc_int_tansec"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.19.3</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating <span class="process-math">\(\tan^m x\sec^n x\)</span>.</span>
 </h3>
-<div class="para logical" id="p-559">
+<div class="para logical" id="p-562">
 <div class="para">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be nonnegative integers. When computing</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -371,7 +371,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 <div class="para">use the following strategies.</div>
 <ol class="decimal">
 <li id="li-280">
-<span class="heading"><span class="title">Odd tangent power.</span></span><div class="para logical" id="p-560">
+<span class="heading"><span class="title">Odd tangent power.</span></span><div class="para logical" id="p-563">
 <div class="para">If <span class="process-math">\(m=2k+1\)</span> is odd and <span class="process-math">\(n\)</span> is positive, write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -383,7 +383,7 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div>
 </li>
 <li id="li-281">
-<span class="heading"><span class="title">Even secant power.</span></span><div class="para logical" id="p-561">
+<span class="heading"><span class="title">Even secant power.</span></span><div class="para logical" id="p-564">
 <div class="para">If <span class="process-math">\(n=2k\)</span> is even and positive, write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -395,18 +395,18 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div>
 </li>
 <li id="li-282">
-<span class="heading"><span class="title">Even tangent power, odd secant power.</span></span><div class="para" id="p-562">If <span class="process-math">\(m\)</span> is even and <span class="process-math">\(n\)</span> is odd, express everything in terms of <span class="process-math">\(\sec x\)</span> and possibly use integration by parts.</div>
+<span class="heading"><span class="title">Even tangent power, odd secant power.</span></span><div class="para" id="p-565">If <span class="process-math">\(m\)</span> is even and <span class="process-math">\(n\)</span> is odd, express everything in terms of <span class="process-math">\(\sec x\)</span> and possibly use integration by parts.</div>
 </li>
 <li id="li-283">
-<span class="heading"><span class="title">Tangent power.</span></span><div class="para" id="p-563">If <span class="process-math">\(n=0\text{,}\)</span> use the identity <span class="process-math">\(\tan^2 x=\sec^2 x-1\)</span> and strategies from the previous cases.</div>
+<span class="heading"><span class="title">Tangent power.</span></span><div class="para" id="p-566">If <span class="process-math">\(n=0\text{,}\)</span> use the identity <span class="process-math">\(\tan^2 x=\sec^2 x-1\)</span> and strategies from the previous cases.</div>
 </li>
 </ol>
 </div></article><article class="example example-like" id="eg_odd_sin_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.4</span><span class="period">.</span><span class="space"> </span><span class="title">Odd sine power.</span>
 </h3>
-<div class="para" id="p-564">Compute <span class="process-math">\(\displaystyle \int \sin^3x \cos^2 x\, dx\text{.}\)</span>
+<div class="para" id="p-567">Compute <span class="process-math">\(\displaystyle \int \sin^3x \cos^2 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-60" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-565">
+<div class="solutions"><details id="solution-61" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-568">
 <div class="para">Peel off a factor of <span class="process-math">\(\sin x\)</span> and use the substitution <span class="process-math">\(u=\cos x\text{,}\)</span> <span class="process-math">\(du=-\sin x\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="md-118">
@@ -421,9 +421,9 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div></details></div></article><article class="example example-like" id="eg_even_powers"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.5</span><span class="period">.</span><span class="space"> </span><span class="title">Even powers.</span>
 </h3>
-<div class="para" id="p-566">Compute <span class="process-math">\(\displaystyle \int \sin^2 x\cos^4 x\, dx\text{.}\)</span>
+<div class="para" id="p-569">Compute <span class="process-math">\(\displaystyle \int \sin^2 x\cos^4 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-61" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-567">
+<div class="solutions"><details id="solution-62" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-570">
 <div class="para">Both powers are even. We use the square identity to reduce powers across the board:</div>
 <div class="displaymath process-math" id="md-119">
 \begin{align*}
@@ -438,9 +438,9 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div></details></div></article><article class="example example-like" id="eg_even_sec_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.6</span><span class="period">.</span><span class="space"> </span><span class="title">Even secant power.</span>
 </h3>
-<div class="para" id="p-568">Compute <span class="process-math">\(\displaystyle \int \sec^4 x\, dx\text{.}\)</span>
+<div class="para" id="p-571">Compute <span class="process-math">\(\displaystyle \int \sec^4 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-62" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-569">
+<div class="solutions"><details id="solution-63" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-572">
 <div class="para">Peel off a factor of <span class="process-math">\(\sec^2 x\)</span> and use the substitution <span class="process-math">\(u=\tan x\text{,}\)</span> <span class="process-math">\(du=\sec^2 x dx\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="md-120">
@@ -452,9 +452,9 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div></details></div></article><article class="example example-like" id="eg_odd_tan_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.7</span><span class="period">.</span><span class="space"> </span><span class="title">Odd tangent power.</span>
 </h3>
-<div class="para" id="p-570">Compute <span class="process-math">\(\displaystyle \int \tan^5 x\sec^7 x\, dx\text{.}\)</span>
+<div class="para" id="p-573">Compute <span class="process-math">\(\displaystyle \int \tan^5 x\sec^7 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-63" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-571">
+<div class="solutions"><details id="solution-64" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-574">
 <div class="para">Peel off a factor of <span class="process-math">\(\tan x\sec x\)</span> and use the substitution <span class="process-math">\(u=\sec x\text{,}\)</span> <span class="process-math">\(du=\sec x\tan x\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="md-121">
@@ -467,9 +467,9 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div></details></div></article><article class="example example-like" id="eg_even_tan_odd_sec"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.8</span><span class="period">.</span><span class="space"> </span><span class="title">Even tangent power, odd secant power.</span>
 </h3>
-<div class="para" id="p-572">Compute  <span class="process-math">\(\displaystyle \int \sec^3 x\, dx\text{.}\)</span>
+<div class="para" id="p-575">Compute  <span class="process-math">\(\displaystyle \int \sec^3 x\, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-64" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-573">
+<div class="solutions"><details id="solution-65" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-576">
 <div class="para">Not much we can do here besides integration by parts:</div>
 <div class="displaymath process-math" id="md-122">
 \begin{align*}
@@ -493,9 +493,9 @@ du\amp =-\sin x\, dx \amp du\amp =\sec x\tan x\text{.}
 </div></div></details></div></article><article class="example example-like" id="eg_tan_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19.9</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent power.</span>
 </h3>
-<div class="para" id="p-574">Compute  <span class="process-math">\(\displaystyle \int \tan^5 x \, dx\text{.}\)</span>
+<div class="para" id="p-577">Compute  <span class="process-math">\(\displaystyle \int \tan^5 x \, dx\text{.}\)</span>
 </div>
-<div class="solutions"><details id="solution-65" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-575">
+<div class="solutions"><details id="solution-66" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-578">
 <div class="para">Following the suggestion of <a href="" class="xref" data-knowl="./knowl/xref/proc_int_tansec.html" title="Procedure 1.19.3: Integrating \tan^m x\sec^n x">Procedure 1.19.3</a> we</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_int_tansec.html">
 \begin{equation*}

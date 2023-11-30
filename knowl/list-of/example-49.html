@@ -12,10 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.16.9</span><span class="period">.</span><span class="space"> </span><span class="title">Limit computation.</span>
 </h3>
-<div class="para">Compute <span class="process-math">\(\displaystyle \int \frac{1}{x^2-6x+18}\)</span>
+<div class="para">Compute <span class="process-math">\(\displaystyle\lim_{x\rightarrow 1^{-}}\frac{\arccos(x^2)}{\sqrt{1-x}}\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="section-17.html#example-49">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Since <span class="process-math">\(\arccos(1)=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{x\rightarrow 1^{-}}\frac{\arccos(x^2)}{\sqrt{1-x}}\amp = 
+\lim_{x\rightarrow 1^{-}}\frac{(\arccos(x^2))'}{(\sqrt{1-x})'} \amp (\text{L'Hop }, 0/0) \\
+\amp = \lim_{x\rightarrow 1^{-}}\frac{-2x/\sqrt{1-x^4}}{-1/2\sqrt{1-x}}\\
+\amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{1-x^4}}\\
+\amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{(1-x^2)(1+x^2)}}\\
+\amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1-x}{(1-x)(1+x)(1+x^2)}}\\
+\amp =\lim_{x\rightarrow 1^{-}}4x\sqrt{\frac{1}{(1+x)(1+x^2)}}\\
+\amp = 4\cdot \frac{1}{2}\\
+\amp = 2\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_inverse_trig.html#example-49">in-context</a></span>
 </body>
 </html>

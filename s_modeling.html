@@ -262,12 +262,12 @@ window.MathJax = {
 <article class="algorithm theorem-like" id="proc_modeling_diff_eq"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.27.1</span><span class="period">.</span><span class="space"> </span><span class="title">Modeling with first-order differential equations.</span>
 </h3>
-<div class="para logical" id="p-746">
+<div class="para logical" id="p-753">
 <div class="para">Many applications present information about a quantity in a form that can be modeled by a first-order differential equation. Here is an outline of the steps to take in these settings.</div>
 <ul class="disc">
-<li id="li-354"><div class="para" id="p-747">Explicitly identify the quantity <span class="process-math">\(Q\)</span> under consideration as a function of some other quantity <span class="process-math">\(x\text{,}\)</span> and give a name to this function: <span class="process-math">\(Q=f(x)\text{.}\)</span>
+<li id="li-357"><div class="para" id="p-754">Explicitly identify the quantity <span class="process-math">\(Q\)</span> under consideration as a function of some other quantity <span class="process-math">\(x\text{,}\)</span> and give a name to this function: <span class="process-math">\(Q=f(x)\text{.}\)</span>
 </div></li>
-<li id="li-355"><div class="para logical" id="p-748">
+<li id="li-358"><div class="para logical" id="p-755">
 <div class="para">Translate the given information about <span class="process-math">\(Q\)</span> into a first-order differential equation:</div>
 <div class="displaymath process-math" id="eq_modeling">
 \begin{equation}
@@ -276,48 +276,48 @@ f'(x)=F(x, f(x)) \text{.}\tag{1.27.1}
 </div>
 <div class="para">This is often the trickiest step!</div>
 <ul class="circle">
-<li id="li-356"><div class="para" id="p-749">Look for phrases that indicate rate of change of <span class="process-math">\(Q\)</span> and translate these into equalities involving <span class="process-math">\(f'\text{.}\)</span>
+<li id="li-359"><div class="para" id="p-756">Look for phrases that indicate rate of change of <span class="process-math">\(Q\)</span> and translate these into equalities involving <span class="process-math">\(f'\text{.}\)</span>
 </div></li>
-<li id="li-357"><div class="para" id="p-750">When there is a combination of components to the rate of change, a diagram may be useful.</div></li>
-<li id="li-358"><div class="para" id="p-751">Translate phrases like “<span class="process-math">\(Q_1\)</span> is proportional to <span class="process-math">\(Q_2\)</span>” as <span class="process-math">\(Q_1=k\cdot Q_2\text{,}\)</span> where <span class="process-math">\(k\)</span> is the (possibly undetermined) constant of proportionality.</div></li>
+<li id="li-360"><div class="para" id="p-757">When there is a combination of components to the rate of change, a diagram may be useful.</div></li>
+<li id="li-361"><div class="para" id="p-758">Translate phrases like “<span class="process-math">\(Q_1\)</span> is proportional to <span class="process-math">\(Q_2\)</span>” as <span class="process-math">\(Q_1=k\cdot Q_2\text{,}\)</span> where <span class="process-math">\(k\)</span> is the (possibly undetermined) constant of proportionality.</div></li>
 </ul>
 </div></li>
-<li id="li-359"><div class="para logical" id="p-752">
+<li id="li-362"><div class="para logical" id="p-759">
 <div class="para">Ask yourself whether the differential equation <a href="" class="xref" data-knowl="./knowl/xref/eq_modeling.html" title="Equation 1.27.1">(1.27.1)</a> is linear or separable. If so, use the appropriate technique to solve it in as general a form as you can.</div>
 <ul class="circle">
-<li id="li-360"><div class="para" id="p-753">If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique.</div></li>
-<li id="li-361"><div class="para" id="p-754">If the differential equation is linear, make sure to bring it into standard form before using the integrating factor method.</div></li>
+<li id="li-363"><div class="para" id="p-760">If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique.</div></li>
+<li id="li-364"><div class="para" id="p-761">If the differential equation is linear, make sure to bring it into standard form before using the integrating factor method.</div></li>
 </ul>
 </div></li>
-<li id="li-362"><div class="para" id="p-755">Once you have solved <a href="" class="xref" data-knowl="./knowl/xref/eq_modeling.html" title="Equation 1.27.1">(1.27.1)</a> you will have a formula for <span class="process-math">\(Q=f(x)\)</span> that includes some undetermined constants. If possible, use any additional information given about <span class="process-math">\(Q\)</span> to determine these undetermined constants.</div></li>
+<li id="li-365"><div class="para" id="p-762">Once you have solved <a href="" class="xref" data-knowl="./knowl/xref/eq_modeling.html" title="Equation 1.27.1">(1.27.1)</a> you will have a formula for <span class="process-math">\(Q=f(x)\)</span> that includes some undetermined constants. If possible, use any additional information given about <span class="process-math">\(Q\)</span> to determine these undetermined constants.</div></li>
 </ul>
-</div></article><article class="example example-like" id="example-96"><h3 class="heading">
+</div></article><article class="example example-like" id="example-97"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.2</span><span class="period">.</span><span class="space"> </span><span class="title">Mixing problem.</span>
 </h3>
-<div class="para" id="p-756">A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved. The mixture is kept uniform by stirring. Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute. At the same time the mixture from the tank leaves at a rate of 6 liters per minute. How much salt is in the tank after 30 minutes.</div>
-<div class="solutions"><details id="solution-94" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-757"></div></div></details></div></article><article class="example example-like" id="example-97"><h3 class="heading">
+<div class="para" id="p-763">A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved. The mixture is kept uniform by stirring. Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute. At the same time the mixture from the tank leaves at a rate of 6 liters per minute. How much salt is in the tank after 30 minutes.</div>
+<div class="solutions"><details id="solution-95" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-764"></div></div></details></div></article><article class="example example-like" id="example-98"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.3</span><span class="period">.</span><span class="space"> </span><span class="title">Trout population.</span>
 </h3>
-<div class="para logical" id="p-758">
+<div class="para logical" id="p-765">
 <div class="para">Left to their own devices, the population of trout in the Straits of Dudley increases at a rate of <span class="process-math">\(25\%\)</span> of the present population. A recent oil spill, however, has resulted in an ongoing depletion of the population: specifically, <span class="process-math">\(t\)</span> months after the spill the trout are dying off at a rate of <span class="process-math">\(2700t\, e^{-t/2}\)</span> fish per month.</div>
 <ol class="decimal">
-<li id="li-363"><div class="para" id="p-759">Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time <span class="process-math">\(t\)</span> (in months) since the oil spill. You may assume the oil spill has not affected the trout population’s breeding habits.</div></li>
-<li id="li-364"><div class="para" id="p-760">Derive a formula for the population of trout <span class="process-math">\(t\)</span> months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.</div></li>
+<li id="li-366"><div class="para" id="p-766">Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time <span class="process-math">\(t\)</span> (in months) since the oil spill. You may assume the oil spill has not affected the trout population’s breeding habits.</div></li>
+<li id="li-367"><div class="para" id="p-767">Derive a formula for the population of trout <span class="process-math">\(t\)</span> months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-95" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-761"></div></div></details></div></article><article class="example example-like" id="example-98"><h3 class="heading">
+<div class="solutions"><details id="solution-96" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-768"></div></div></details></div></article><article class="example example-like" id="example-99"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27.4</span><span class="period">.</span><span class="space"> </span><span class="title">Spreading rumor.</span>
 </h3>
-<div class="para logical" id="p-762">
+<div class="para logical" id="p-769">
 <div class="para">A false rumor is being spread within a certain university community. Let <span class="process-math">\(q=f(t)\)</span> be the percentage (from 0 to 100) of the community that has heard the rumor <span class="process-math">\(t\)</span> days after the rumor is introduced. Assume that percentage of the population that has heard the rumor grows at a rate proportional to the product of the current percentage of those in the know with the current percentage of those not in the know.</div>
 <ol class="decimal">
-<li id="li-365"><div class="para" id="p-763">Write down a differential equation for <span class="process-math">\(q=f(t)\text{.}\)</span> Use <span class="process-math">\(k\)</span> as your constant of proportionality.</div></li>
-<li id="li-366"><div class="para" id="p-764">Derive a formula for <span class="process-math">\(q=f(t)\)</span> assuming that at time <span class="process-math">\(t=0\)</span> five percent of the population has heard the rumor. Your answer will be expressed in terms of <span class="process-math">\(t\)</span> and <span class="process-math">\(k\text{.}\)</span>
+<li id="li-368"><div class="para" id="p-770">Write down a differential equation for <span class="process-math">\(q=f(t)\text{.}\)</span> Use <span class="process-math">\(k\)</span> as your constant of proportionality.</div></li>
+<li id="li-369"><div class="para" id="p-771">Derive a formula for <span class="process-math">\(q=f(t)\)</span> assuming that at time <span class="process-math">\(t=0\)</span> five percent of the population has heard the rumor. Your answer will be expressed in terms of <span class="process-math">\(t\)</span> and <span class="process-math">\(k\text{.}\)</span>
 </div></li>
-<li id="li-367"><div class="para" id="p-765">Investigate the long-term behavior of the rumor’s spread. Is there a time when the entire population has heard the rumor?</div></li>
+<li id="li-370"><div class="para" id="p-772">Investigate the long-term behavior of the rumor’s spread. Is there a time when the entire population has heard the rumor?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-96" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-766"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="solution-97" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-773"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_linear_diff_eq.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

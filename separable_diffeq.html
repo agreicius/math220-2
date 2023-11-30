@@ -269,9 +269,22 @@ f'(x)=k\, f(x)\text{,}\tag{1.13.1}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(k\)</span> is a fixed constant.</div>
-</div> <div class="para" id="p-384">If <span class="process-math">\(k&gt; 0\)</span> then <span class="process-math">\(f(x)\)</span> is said to undergo <dfn class="terminology">exponential growth</dfn>.</div> <div class="para" id="p-385">If <span class="process-math">\(k&lt; 0\)</span> then <span class="process-math">\(f(x)\)</span> is said to undergo <dfn class="terminology">exponential decay</dfn>.</div></article><article class="definition definition-like" id="d_diffeq"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.2</span><span class="period">.</span><span class="space"> </span><span class="title">First-order differential equation.</span>
-</h3> <div class="para logical" id="p-386">
+</div> <div class="para" id="p-384">If <span class="process-math">\(k&gt; 0\)</span> then <span class="process-math">\(f(x)\)</span> is said to undergo <dfn class="terminology">exponential growth</dfn>.</div> <div class="para" id="p-385">If <span class="process-math">\(k&lt; 0\)</span> then <span class="process-math">\(f(x)\)</span> is said to undergo <dfn class="terminology">exponential decay</dfn>.</div></article><article class="example example-like" id="example-39"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential growth/decay.</span>
+</h3>
+<div class="para logical" id="p-386">
+<div class="para">Fix a nonzero constant <span class="process-math">\(k\text{.}\)</span> Find a general formula for all functions <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\R=(-\infty,\infty)\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=k\, f(x)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="solution-37" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-387">The following technique for solving for <span class="process-math">\(f\)</span> is called <em class="emphasis">separation of variables</em>, as <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.5: Separation of variables (algebraic form)">Procedure 1.13.5</a> makes clear.</div> <div class="para" id="p-388">First let’s assume that <span class="process-math">\(f(x)\ne 0\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span> In this case we have</div>
+</div></details></div></article><article class="definition definition-like" id="d_diffeq"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.3</span><span class="period">.</span><span class="space"> </span><span class="title">First-order differential equation.</span>
+</h3> <div class="para logical" id="p-389">
 <div class="para">A <dfn class="terminology">first-order differential equation</dfn> for the function <span class="process-math">\(f\)</span> is an equation that can be written in the form</div>
 <div class="displaymath process-math" id="eq_diffeq">
 \begin{equation}
@@ -280,9 +293,9 @@ f'(x)=F(x,f(x)) \tag{1.13.2}
 </div>
 <div class="para">where <span class="process-math">\(F(x,f(x))\)</span> denotes an arbitrary expression involving <span class="process-math">\(x\)</span> and <span class="process-math">\(f(x)\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-387">A <dfn class="terminology">solution</dfn> to a differential equation is any function <span class="process-math">\(f\)</span> that satisfies equation <a href="" class="xref" data-knowl="./knowl/xref/eq_diffeq.html" title="Equation 1.13.2">(1.13.2)</a>; as such it is useful to think of the function <span class="process-math">\(f\)</span> in this context as an unknown that we are trying to solve for. The <dfn class="terminology">general solution</dfn> to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.</div></article><article class="definition definition-like" id="d_sep_diffeq"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.3</span><span class="period">.</span><span class="space"> </span><span class="title">Separable first-order differential equation.</span>
-</h3> <div class="para logical" id="p-388">
+</div> <div class="para" id="p-390">A <dfn class="terminology">solution</dfn> to a differential equation is any function <span class="process-math">\(f\)</span> that satisfies equation <a href="" class="xref" data-knowl="./knowl/xref/eq_diffeq.html" title="Equation 1.13.2">(1.13.2)</a>; as such it is useful to think of the function <span class="process-math">\(f\)</span> in this context as an unknown that we are trying to solve for. The <dfn class="terminology">general solution</dfn> to a differential equation is a formula, possibly containing undetermined constants, describing all solutions to the differential equation.</div></article><article class="definition definition-like" id="d_sep_diffeq"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Separable first-order differential equation.</span>
+</h3> <div class="para logical" id="p-391">
 <div class="para">A <dfn class="terminology">separable differential equation</dfn> for the function <span class="process-math">\(f\)</span> is a differential equation that can be written in the form</div>
 <div class="displaymath process-math" id="eq_sep_diffeq_prime">
 \begin{equation}
@@ -297,9 +310,9 @@ f'(x)=g(x)h(f(x))\text{,}\tag{1.13.3}
 \end{equation}
 </div>
 </div></article><article class="algorithm theorem-like" id="proc_sep_vars"><h3 class="heading">
-<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Separation of variables (algebraic form).</span>
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">1.13.5</span><span class="period">.</span><span class="space"> </span><span class="title">Separation of variables (algebraic form).</span>
 </h3>
-<div class="para logical" id="p-389">
+<div class="para logical" id="p-392">
 <div class="para">To solve a separable differential equation of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sep_vars.html ./knowl/xref/eq_sep_vars_implicit.html" id="eq_sep_vars">
 \begin{equation}
@@ -309,7 +322,7 @@ f'(x)=g(x)h(f(x))\text{,}\tag{1.13.3}
 <div class="para">for the function <span class="process-math">\(y=f(x)\text{,}\)</span> proceed as follows.</div>
 <ol class="decimal">
 <li id="li-195">
-<span class="heading"><span class="title">Separation.</span></span><div class="para logical" id="p-390">
+<span class="heading"><span class="title">Separation.</span></span><div class="para logical" id="p-393">
 <div class="para">Write the equation as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -325,11 +338,11 @@ f'(x)=g(x)h(f(x))\text{,}\tag{1.13.3}
 </div>
 </li>
 <li id="li-196">
-<span class="heading"><span class="title">Integration.</span></span><div class="para" id="p-391">Attempt to find an antiderivative <span class="process-math">\(F(y)\)</span> of <span class="process-math">\(1/h(y)\)</span> and an antiderivative <span class="process-math">\(G(x)\)</span> for <span class="process-math">\(g(x)\text{.}\)</span>
+<span class="heading"><span class="title">Integration.</span></span><div class="para" id="p-394">Attempt to find an antiderivative <span class="process-math">\(F(y)\)</span> of <span class="process-math">\(1/h(y)\)</span> and an antiderivative <span class="process-math">\(G(x)\)</span> for <span class="process-math">\(g(x)\text{.}\)</span>
 </div>
 </li>
 <li id="li-197">
-<span class="heading"><span class="title">Algebra.</span></span><div class="para logical" id="p-392">
+<span class="heading"><span class="title">Algebra.</span></span><div class="para logical" id="p-395">
 <div class="para">The resulting general equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sep_vars.html ./knowl/xref/eq_sep_vars_implicit.html" id="eq_sep_vars_implicit">
 \begin{equation}
@@ -341,21 +354,21 @@ F(y)=G(x)+C\tag{1.13.6}
 </li>
 </ol>
 </div></article><article class="example example-like" id="eg_sep_vars"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13.5</span><span class="period">.</span><span class="space"> </span><span class="title">Separation of variables.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13.6</span><span class="period">.</span><span class="space"> </span><span class="title">Separation of variables.</span>
 </h3>
-<div class="para logical" id="p-393">
+<div class="para logical" id="p-396">
 <div class="para">Solve the following differential equations using separation of variables. If an initial condition is given, provide the corresponding particular solution. Otherwise, give the general solution.</div>
 <ol class="decimal">
-<li id="li-198"><div class="para" id="p-394"><span class="process-math">\(\displaystyle \displaystyle f'(x)=xf(x)+x\)</span></div></li>
-<li id="li-199"><div class="para" id="p-395"><span class="process-math">\(\displaystyle \displaystyle\frac{dy}{dx}=\frac{x^3}{y^2}\)</span></div></li>
-<li id="li-200"><div class="para" id="p-396">
+<li id="li-198"><div class="para" id="p-397"><span class="process-math">\(\displaystyle \displaystyle f'(x)=xf(x)+x\)</span></div></li>
+<li id="li-199"><div class="para" id="p-398"><span class="process-math">\(\displaystyle \displaystyle\frac{dy}{dx}=\frac{x^3}{y^2}\)</span></div></li>
+<li id="li-200"><div class="para" id="p-399">
 <span class="process-math">\(\cot x \cdot f'(x)+f(x)=2\text{,}\)</span> <span class="process-math">\(f(0)=0\text{.}\)</span>
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-37" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-397"><ol class="decimal">
-<li id="li-201"><div class="para logical" id="p-398">
-<div class="para">Let <span class="process-math">\(y=f(x)\text{.}\)</span> Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.4: Separation of variables (algebraic form)">Procedure 1.13.4</a> we compute</div>
+<div class="solutions"><details id="solution-38" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-400"><ol class="decimal">
+<li id="li-201"><div class="para logical" id="p-401">
+<div class="para">Let <span class="process-math">\(y=f(x)\text{.}\)</span> Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.5: Separation of variables (algebraic form)">Procedure 1.13.5</a> we compute</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sep_vars.html" id="md-71">
 \begin{align*}
 \frac{dy}{dx} \amp = x(y+1)\\
@@ -375,8 +388,8 @@ f(x)=De^{x^2/2}-1
 </div>
 <div class="para">is the general solution, where <span class="process-math">\(D=(\pm e^C)\text{.}\)</span> How arbitrary is <span class="process-math">\(D\text{?}\)</span> Since <span class="process-math">\(C\)</span> was arbitrary, the expression <span class="process-math">\(\pm e^C\)</span> can assume any value except 0. Setting <span class="process-math">\(D=0\)</span> in our formula yields the function <span class="process-math">\(f(x)=-1\text{,}\)</span> which by inspection also satisfies the differential equation. We conclude that the general solution is <span class="process-math">\(f(x)=De^{x^2/2}-1\)</span> where <span class="process-math">\(D\)</span> is any real number.</div>
 </div></li>
-<li id="li-202"><div class="para logical" id="p-399">
-<div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.4: Separation of variables (algebraic form)">Procedure 1.13.4</a> we compute</div>
+<li id="li-202"><div class="para logical" id="p-402">
+<div class="para">Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.5: Separation of variables (algebraic form)">Procedure 1.13.5</a> we compute</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sep_vars.html" id="md-72">
 \begin{align*}
 \int y^2\, dy\amp = \int x^3\, dx \\
@@ -387,8 +400,8 @@ y \amp = \sqrt[3]{\frac{3}{4}x^4+D}
 </div>
 <div class="para">where <span class="process-math">\(D\)</span> is any real number.</div>
 </div></li>
-<li id="li-203"><div class="para logical" id="p-400">
-<div class="para">Let <span class="process-math">\(y=f(x)\text{.}\)</span> Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.4: Separation of variables (algebraic form)">Procedure 1.13.4</a> we compute</div>
+<li id="li-203"><div class="para logical" id="p-403">
+<div class="para">Let <span class="process-math">\(y=f(x)\text{.}\)</span> Following <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.5: Separation of variables (algebraic form)">Procedure 1.13.5</a> we compute</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sep_vars.html" id="md-73">
 \begin{align*}
 \cot x\cdot \frac{dy}{dx}\amp =2-y  \\
@@ -411,21 +424,21 @@ f(0)=0 \amp \implies 2-D=0\\
 </div>
 </div></li>
 </ol></div></div></details></div></article><article class="example example-like" id="eg_Newton_cooling"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13.6</span><span class="period">.</span><span class="space"> </span><span class="title">Newton’s law of cooling.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13.7</span><span class="period">.</span><span class="space"> </span><span class="title">Newton’s law of cooling.</span>
 </h3>
-<div class="para logical" id="p-401">
+<div class="para logical" id="p-404">
 <div class="para">Suppose a hot object cools in a room kept at constant temperature of <span class="process-math">\(T_0\)</span> (in celcius). Newton’s law of cooling states that the rate at which the object cools (with respect to time) is proportional to the <em class="emphasis">difference</em> between its current temperature and the room temperature <span class="process-math">\(T_0\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-204"><div class="para" id="p-402">Write a differential equation that describes Newton’s law of cooling in this setting.</div></li>
-<li id="li-205"><div class="para" id="p-403">Find the general solution to this differential equation.</div></li>
-<li id="li-206"><div class="para" id="p-404">Find a the particular solution to the situation where <span class="process-math">\(T_0=15
+<li id="li-204"><div class="para" id="p-405">Write a differential equation that describes Newton’s law of cooling in this setting.</div></li>
+<li id="li-205"><div class="para" id="p-406">Find the general solution to this differential equation.</div></li>
+<li id="li-206"><div class="para" id="p-407">Find a the particular solution to the situation where <span class="process-math">\(T_0=15
 ^\circ\)</span>C, the object’s initial temperature is <span class="process-math">\(100
 ^\circ\)</span>C, and after <span class="process-math">\(5\)</span> minutes the object’s temperature is <span class="process-math">\(80\)</span><span class="process-math">\(^\circ\)</span>C.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="solution-38" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-405"><ol class="decimal">
-<li id="li-207"><div class="para logical" id="p-406">
+<div class="solutions"><details id="solution-39" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-408"><ol class="decimal">
+<li id="li-207"><div class="para logical" id="p-409">
 <div class="para">Let temperature <span class="process-math">\(T\)</span> be given by the function <span class="process-math">\(T=f(t)\text{.}\)</span> The rate of change of <span class="process-math">\(T\)</span> with respect to <span class="process-math">\(t\)</span> is then <span class="process-math">\(f'(t)\text{.}\)</span> Newton’s law says this rate of change is proportional to the difference <span class="process-math">\(f(t)-T_0\)</span> of the current temperature of the object and the room temperature.  Mathematically, we write this  proportionality relation as</div>
 <div class="displaymath process-math" id="eq_Newtons_law">
 \begin{equation}
@@ -434,8 +447,8 @@ f'(t)=k(f(t)-T_0)\text{,}\tag{1.13.7}
 </div>
 <div class="para">where <span class="process-math">\(k\)</span> is some fixed constant, called the <em class="emphasis">constant of proportionality</em>.</div>
 </div></li>
-<li id="li-208"><div class="para logical" id="p-407">
-<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/xref/eq_Newtons_law.html" title="Equation 1.13.7">(1.13.7)</a> can be solved using <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.4: Separation of variables (algebraic form)">Procedure 1.13.4</a> in much the same manner as <a href="" class="xref" data-knowl="./knowl/xref/eg_sep_vars.html" title="Example 1.13.5: Separation of variables">Example 1.13.5</a>, yielding a general solution of the form</div>
+<li id="li-208"><div class="para logical" id="p-410">
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/xref/eq_Newtons_law.html" title="Equation 1.13.7">(1.13.7)</a> can be solved using <a href="" class="xref" data-knowl="./knowl/xref/proc_sep_vars.html" title="Procedure 1.13.5: Separation of variables (algebraic form)">Procedure 1.13.5</a> in much the same manner as <a href="" class="xref" data-knowl="./knowl/xref/eg_sep_vars.html" title="Example 1.13.6: Separation of variables">Example 1.13.6</a>, yielding a general solution of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Newtons_law.html ./knowl/xref/proc_sep_vars.html ./knowl/xref/eg_sep_vars.html">
 \begin{equation*}
 f(t)=De^{kt}+T_0\text{,}
@@ -444,7 +457,7 @@ f(t)=De^{kt}+T_0\text{,}
 <div class="para">where <span class="process-math">\(D\)</span> is any real number.</div>
 </div></li>
 <li id="li-209">
-<div class="para logical" id="p-408">
+<div class="para logical" id="p-411">
 <div class="para">Assuming <span class="process-math">\(T_0=15\text{,}\)</span> we have <span class="process-math">\(f(t)=De^{kt}+15\text{.}\)</span> We use the two additional pieces of information to determine the undetermined constants <span class="process-math">\(D\)</span> and <span class="process-math">\(k\text{.}\)</span> We have</div>
 <div class="displaymath process-math" id="md-75">
 \begin{align*}
