@@ -280,6 +280,34 @@
           </p>
         </statement>
     </definition>
+    <definition xml:id="d_improper_area">
+      <title>Area interpretation of improper integrals</title>
+      <statement>
+        <p>
+          Let <m>f</m> be defined on an interval <m>I</m> for which the corresponding integral is improper,
+          and let <m>\mathcal{R}</m> be the
+          (potentially unbounded)
+          region between the graph of <m>f</m> and the <m>x</m>-axis over the interval <m>I</m>.
+          <ul>
+            <li>
+              <p>
+                We define the <em>area</em>
+                (or <em>total area</em>)
+                of <m>\mathcal{R}</m> to be the integral of <m>\lvert f\rvert</m> over <m>I</m>,
+                assuming this integral converges.
+              </p>
+            </li>
+            <li>
+              <p>
+                We define the <em>signed area</em>
+                of <m>\mathcal{R}</m> to be the integral of <m>f</m> over <m>I</m>,
+                assuming this interval converges.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+  </definition>
     <algorithm xml:id="proc_improper_type_II">
         <title>Improper integral: type II</title>
         <statement>
@@ -440,6 +468,9 @@
             </image>
         </solution>
     </example>
+    <p>
+      Improper integrals (of both types) of power functions of the form <m>1/x^p</m> arise frequently enough to warrant their own theorem: the <xref ref="th_improper_p_test" text="custom"><m>p</m>-test theorem</xref>. As mentioned above the type I statement of the <xref ref="th_improper_p_test"/> was effectively proved in one of our earlier examples. The derivation of the type II statement is very similar. 
+    </p>
     <theorem xml:id="th_improper_p_test">
       <title>Improper integrals: <m>p</m>-test</title>
       <statement>
@@ -474,33 +505,6 @@
           </p>
       </statement>
   </theorem>
-    <definition xml:id="d_improper_area">
-        <title>Area interpretation of improper integrals</title>
-        <statement>
-          <p>
-            Let <m>f</m> be defined on an interval <m>I</m> for which the corresponding integral is improper,
-            and let <m>\mathcal{R}</m> be the
-            (potentially unbounded)
-            region between the graph of <m>f</m> and the <m>x</m>-axis over the interval <m>I</m>.
-            <ul>
-              <li>
-                <p>
-                  We define the <em>area</em>
-                  (or <em>total area</em>)
-                  of <m>\mathcal{R}</m> to be the integral of <m>\lvert f\rvert</m> over <m>I</m>,
-                  assuming this integral converges.
-                </p>
-              </li>
-              <li>
-                <p>
-                  We define the <em>signed area</em>
-                  of <m>\mathcal{R}</m> to be the integral of <m>f</m> over <m>I</m>,
-                  assuming this interval converges.
-                </p>
-              </li>
-            </ul>
-          </p>
-        </statement>
-    </definition>
+    
 
 </section>
