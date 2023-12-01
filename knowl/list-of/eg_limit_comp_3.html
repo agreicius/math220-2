@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.9</span><span class="period">.</span><span class="space"> </span><span class="title">Limit comparison test.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(f(x)=ax^2+bx+c\)</span> be any fixed irreducible quadratic polynomial with <span class="process-math">\(a&gt;0\text{.}\)</span> Decide whether <span class="process-math">\(\displaystyle\int_{-\infty}^\infty \frac{1}{f(x)}\, dx\)</span> exists.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">First observe that since <span class="process-math">\(f(x)\)</span> is irreducible, we have <span class="process-math">\(f(x)\ne 0\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span> Thus the given integral is improper only on account of the infinite interval. Furthermore, since <span class="process-math">\(a&gt; 0\text{,}\)</span> it follows that <span class="process-math">\(f(x)\)</span> is positive eventually; since <span class="process-math">\(f(x)\)</span> is never equal to zero, it must <em class="emphasis">always</em> be positive; this means we are in a situation where we can apply the limit comparison test.   As usual, we consider the two improper integrals <span class="process-math">\(\int_{-\infty}^0 \frac{1}{f(x)}\, dx\)</span> and <span class="process-math">\(\int_0^\infty \frac{1}{f(x)}\, dx\)</span> separately. In both cases our intuition tells us that the <span class="process-math">\(ax^2\)</span> term will dominate as <span class="process-math">\(x\to \pm \infty\text{,}\)</span> and thus that the <span class="process-math">\(\frac{1}{f(x)}\)</span> is limit-comparable to <span class="process-math">\(\frac{1}{x^2}\)</span> as <span class="process-math">\(x\to -\infty\)</span> and as <span class="process-math">\(x\to \infty\text{.}\)</span> We confirm both these suspicions simultaneously below:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to -\infty} \frac{1/f(x)}{1/x^2} \amp = \lim_{x\to -\infty}\frac{x^2}{ax^2+bx+c} \amp
+\lim_{x\to \infty} \frac{1/f(x)}{1/x^2} \amp = \lim_{x\to \infty}\frac{x^2}{ax^2+bx+c} \\
+\amp =  \lim_{x\to -\infty}\frac{1}{a+b/x+c/x^2} \amp \amp =  \lim_{x\to \infty}\frac{1}{a+b/x+c/x^2}\\
+\amp =\frac{1}{a} \amp  \amp =\frac{1}{a}\text{.}
+\end{align*}
+</div>
+<div class="para">Now consider first the improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^\infty \frac{1}{f(x)}\, dx=\int_0^1\frac{1}{f(x)}\, dx +\int_1^\infty \frac{1}{f(x)}\, dx\text{.}
+\end{equation*}
+</div>
+<div class="para">The first integral <span class="process-math">\(\int_0^1 1/f(x)\, dx\)</span> is not improper at all (<span class="process-math">\(1/f\)</span> is continuous on <span class="process-math">\([0,1]\)</span>) and so converges. Since <span class="process-math">\(\int_1^\infty 1/x^2\, dx\)</span> converges and <span class="process-math">\(1/f\)</span> is limit-comparable to <span class="process-math">\(1/x^2\)</span> as <span class="process-math">\(x\to \infty\text{,}\)</span> we see by the direct limit comparison test that the second integral <span class="process-math">\(\int_1^\infty 1/f(x)\, dx\)</span> converges. We conclude that <span class="process-math">\(\int_0^\infty 1/f(x)\, dx\)</span> converges.</div>
+</div> <div class="para">A very similar analysis shows that <span class="process-math">\(\int_{-\infty}^{0}1/f(x)\, dx\)</span> also converges. Note, however, that technically we cannot use the type-I <span class="process-math">\(p\)</span>-test, since it is only stated for integrals over intervals of the form  <span class="process-math">\([a,\infty)\text{.}\)</span> Instead we must show directly that <span class="process-math">\(\int_{-\infty}^1 \frac{1}{x^2}\, dx\)</span> converges, which is not hard to do.</div> <div class="para">In all, we see that both <span class="process-math">\(\int_{-\infty}^0 \frac{1}{f(x)}\, dx\)</span> and <span class="process-math">\(\int_0^\infty \frac{1}{f(x)}\, dx\)</span> converge, and hence <span class="process-math">\(\int_{-\infty}^{\infty}\frac{1}{f(x)}\, dx\)</span> converges.</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_improper_B.html#eg_limit_comp_3">in-context</a></span>
+</body>
+</html>

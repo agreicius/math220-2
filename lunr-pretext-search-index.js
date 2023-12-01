@@ -2023,7 +2023,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.25",
   "title": "Improper integrals: convergence tests",
-  "body": " Improper integrals: convergence tests   Direct comparison test   Let and be nonnegative functions on an interval , and suppose for all in . If the integral of over converges, then the integral of over converges. Using logical notation: .  Equivalently, using the contrapositive of , we have .     Comparison test   Decide whether converges.         Comparison test   Decide whether converges.         Limit comparison test   Let and be continuous and positive on the interval .   If and with , then .    If and with , then .    If and with , then .    If and with , then .        Limit comparison test: type I   Assume is positive and continuous on . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , larger positive powers of dominate smaller positive powers of , exponential functions dominate power functions, and positive powers of dominate logarithmic functions.    Conclude that converges if and only if converges.        Limit comparison test: type II   Assume is positive and continuous on the interval . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , smaller positive powers of dominate larger positive powers of .    Conclude that converges if and only if converges.        Comparison test   Decide whether converges.         Comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.        "
+  "body": " Improper integrals: convergence tests   Direct comparison test   Let and be nonnegative functions on an interval , and suppose for all in . If the integral of over converges, then the integral of over converges. Using logical notation: .  Equivalently, using the contrapositive of , we have .     Direct comparison test   Decide whether converges.    Observe that . Since converges by the -test , implies that converges.     Direct comparison test   Decide whether converges.    Observe that we have . Since diverges by the -test , implies that diverges.     Limit comparison test   Let and be continuous and positive on the interval .   If and with , then .    If and with , then .    If and with , then .    If and with , then .        Limit comparison test: type I   Assume is positive and continuous on . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , larger positive powers of dominate smaller positive powers of , exponential functions dominate power functions, and positive powers of dominate logarithmic functions.    Conclude that converges if and only if converges.        Limit comparison test: type II   Assume is positive and continuous on the interval . To decide whether converges using the limit comparison test, proceed as follows.   Find a simpler continuous function that is limit-comparable to : , a function satisfying .    Useful intuition to help find the function : as , smaller positive powers of dominate larger positive powers of .    Conclude that converges if and only if converges.        Limit comparison test   Decide whether converges.    Note that the integral is doubly improper: the integrand is not defined at , and the interval is infinite. Accordingly we look at the improper integrals and separately. As it turns out, the converge question for both improper integrals can be decided using the direct comparison test, but we will use the limit comparison test just by way of illustration.  For the improper integral , our intution is that as the term dominates the term. As such, we expect to be limit-comparable to . Since converges by the -test, it will then follow that converges. It remains only to confirm that and are limit-comparable: .  For the integral , our intuition is that as the term dominates the term. Thus we suspect that should be limit-comparable to (the constant 3 here is not important). Let's confirm: . This shows and are limit-comparable. Since converges by the -test, the limit comparison test implies converges.     Limit comparison test   Decide whether .    This example is designed to force us to use the limit comparison test: because of the minus sign in the denominator, we cannot make use of any useful inequality that would allow us to use the direct comparison test. Note that for we have , and thus the integrand is continuous on . Our intuition is that the term dominates as , and thus that is limit-comparable to as . Let's confirm this: . This proves that and are limit-comparable as . Since converges by the type-II -test, we conclude that converges.     Limit comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.    First observe that since is irreducible, we have for all . Thus the given integral is improper only on account of the infinite interval. Furthermore, since , it follows that is positive eventually; since is never equal to zero, it must always be positive; this means we are in a situation where we can apply the limit comparison test. As usual, we consider the two improper integrals and separately. In both cases our intuition tells us that the term will dominate as , and thus that the is limit-comparable to as and as . We confirm both these suspicions simultaneously below: . Now consider first the improper integral . The first integral is not improper at all ( is continuous on ) and so converges. Since converges and is limit-comparable to as , we see by the direct limit comparison test that the second integral converges. We conclude that converges.  A very similar analysis shows that also converges. Note, however, that technically we cannot use the type-I -test, since it is only stated for integrals over intervals of the form . Instead we must show directly that converges, which is not hard to do.  In all, we see that both and converge, and hence converges.    "
 },
 {
   "id": "th_direct_comp",
@@ -2040,8 +2040,8 @@ var ptx_lunr_docs = [
   "url": "s_improper_B.html#eg_direct_comp_1",
   "type": "Example",
   "number": "1.25.2",
-  "title": "Comparison test.",
-  "body": " Comparison test   Decide whether converges.       "
+  "title": "Direct comparison test.",
+  "body": " Direct comparison test   Decide whether converges.    Observe that . Since converges by the -test , implies that converges.   "
 },
 {
   "id": "eg_direct_comp_2",
@@ -2049,8 +2049,8 @@ var ptx_lunr_docs = [
   "url": "s_improper_B.html#eg_direct_comp_2",
   "type": "Example",
   "number": "1.25.3",
-  "title": "Comparison test.",
-  "body": " Comparison test   Decide whether converges.       "
+  "title": "Direct comparison test.",
+  "body": " Direct comparison test   Decide whether converges.    Observe that we have . Since diverges by the -test , implies that diverges.   "
 },
 {
   "id": "th_limit_comp",
@@ -2085,8 +2085,8 @@ var ptx_lunr_docs = [
   "url": "s_improper_B.html#eg_limit_comp_1",
   "type": "Example",
   "number": "1.25.7",
-  "title": "Comparison test.",
-  "body": " Comparison test   Decide whether converges.       "
+  "title": "Limit comparison test.",
+  "body": " Limit comparison test   Decide whether converges.    Note that the integral is doubly improper: the integrand is not defined at , and the interval is infinite. Accordingly we look at the improper integrals and separately. As it turns out, the converge question for both improper integrals can be decided using the direct comparison test, but we will use the limit comparison test just by way of illustration.  For the improper integral , our intution is that as the term dominates the term. As such, we expect to be limit-comparable to . Since converges by the -test, it will then follow that converges. It remains only to confirm that and are limit-comparable: .  For the integral , our intuition is that as the term dominates the term. Thus we suspect that should be limit-comparable to (the constant 3 here is not important). Let's confirm: . This shows and are limit-comparable. Since converges by the -test, the limit comparison test implies converges.   "
 },
 {
   "id": "eg_limit_comp_2",
@@ -2094,8 +2094,17 @@ var ptx_lunr_docs = [
   "url": "s_improper_B.html#eg_limit_comp_2",
   "type": "Example",
   "number": "1.25.8",
-  "title": "Comparison test.",
-  "body": " Comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.       "
+  "title": "Limit comparison test.",
+  "body": " Limit comparison test   Decide whether .    This example is designed to force us to use the limit comparison test: because of the minus sign in the denominator, we cannot make use of any useful inequality that would allow us to use the direct comparison test. Note that for we have , and thus the integrand is continuous on . Our intuition is that the term dominates as , and thus that is limit-comparable to as . Let's confirm this: . This proves that and are limit-comparable as . Since converges by the type-II -test, we conclude that converges.   "
+},
+{
+  "id": "eg_limit_comp_3",
+  "level": "2",
+  "url": "s_improper_B.html#eg_limit_comp_3",
+  "type": "Example",
+  "number": "1.25.9",
+  "title": "Limit comparison test.",
+  "body": " Limit comparison test   Let be any fixed irreducible quadratic polynomial with . Decide whether exists.    First observe that since is irreducible, we have for all . Thus the given integral is improper only on account of the infinite interval. Furthermore, since , it follows that is positive eventually; since is never equal to zero, it must always be positive; this means we are in a situation where we can apply the limit comparison test. As usual, we consider the two improper integrals and separately. In both cases our intuition tells us that the term will dominate as , and thus that the is limit-comparable to as and as . We confirm both these suspicions simultaneously below: . Now consider first the improper integral . The first integral is not improper at all ( is continuous on ) and so converges. Since converges and is limit-comparable to as , we see by the direct limit comparison test that the second integral converges. We conclude that converges.  A very similar analysis shows that also converges. Note, however, that technically we cannot use the type-I -test, since it is only stated for integrals over intervals of the form . Instead we must show directly that converges, which is not hard to do.  In all, we see that both and converge, and hence converges.   "
 },
 {
   "id": "s_linear_diff_eq",
@@ -2179,27 +2188,27 @@ var ptx_lunr_docs = [
   "body": " Modeling with first-order differential equations   Many applications present information about a quantity in a form that can be modeled by a first-order differential equation. Here is an outline of the steps to take in these settings.   Explicitly identify the quantity under consideration as a function of some other quantity , and give a name to this function: .    Translate the given information about into a first-order differential equation: . This is often the trickiest step!   Look for phrases that indicate rate of change of and translate these into equalities involving .    When there is a combination of components to the rate of change, a diagram may be useful.    Translate phrases like is proportional to as , where is the (possibly undetermined) constant of proportionality.       Ask yourself whether the differential equation is linear or separable. If so, use the appropriate technique to solve it in as general a form as you can.   If the equation is both separable and linear, you can use either method. It is often quicker to use the separation of variables technique.    If the differential equation is linear, make sure to bring it into standard form before using the integrating factor method.       Once you have solved you will have a formula for that includes some undetermined constants. If possible, use any additional information given about to determine these undetermined constants.      "
 },
 {
-  "id": "example-97",
+  "id": "example-98",
   "level": "2",
-  "url": "s_modeling.html#example-97",
+  "url": "s_modeling.html#example-98",
   "type": "Example",
   "number": "1.27.2",
   "title": "Mixing problem.",
   "body": " Mixing problem   A large tank in a pickle factory initially contains 50 liters of brine in which 20 kg of salt is dissolved. The mixture is kept uniform by stirring. Brine containing 0.2 kg of dissolved salt per liter enters the tank at a rate of 10 liters per minute. At the same time the mixture from the tank leaves at a rate of 6 liters per minute. How much salt is in the tank after 30 minutes.       "
 },
 {
-  "id": "example-98",
+  "id": "example-99",
   "level": "2",
-  "url": "s_modeling.html#example-98",
+  "url": "s_modeling.html#example-99",
   "type": "Example",
   "number": "1.27.3",
   "title": "Trout population.",
   "body": " Trout population   Left to their own devices, the population of trout in the Straits of Dudley increases at a rate of of the present population. A recent oil spill, however, has resulted in an ongoing depletion of the population: specifically, months after the spill the trout are dying off at a rate of fish per month.   Derive a differential equation describing trout population in the Strait of Dudley, considered as a function of the time (in months) since the oil spill. You may assume the oil spill has not affected the trout population's breeding habits.    Derive a formula for the population of trout months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.          "
 },
 {
-  "id": "example-99",
+  "id": "example-100",
   "level": "2",
-  "url": "s_modeling.html#example-99",
+  "url": "s_modeling.html#example-100",
   "type": "Example",
   "number": "1.27.4",
   "title": "Spreading rumor.",

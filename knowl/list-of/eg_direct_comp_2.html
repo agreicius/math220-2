@@ -12,9 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.3</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.3</span><span class="period">.</span><span class="space"> </span><span class="title">Direct comparison test.</span>
 </h3>
 <div class="para">Decide whether <span class="process-math">\(\displaystyle\int_1^\infty \frac{2+\sin x}{x}\, dx\)</span> converges.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_improper_B.html#eg_direct_comp_2">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Observe that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_improper_p_test.html ./knowl/xref/th_direct_comp.html">
+\begin{equation*}
+g(x)=\frac{1}{x}\leq f(x)=\frac{2+\sin x}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\int_1^\infty g(x)\, dx\)</span> diverges by the <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test"><span class="process-math">\(p\)</span>-test</a>, <a href="" class="xref" data-knowl="./knowl/xref/th_direct_comp.html" title="Theorem 1.25.1: Direct comparison test">Theorem 1.25.1</a> implies that <span class="process-math">\(\int_1^\infty f(x)\, dx\)</span> diverges.</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_improper_B.html#eg_direct_comp_2">in-context</a></span>
 </body>
 </html>

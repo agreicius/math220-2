@@ -277,14 +277,30 @@ window.MathJax = {
 \end{equation}
 </div>
 </div></article><article class="example example-like" id="eg_direct_comp_1"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.2</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.2</span><span class="period">.</span><span class="space"> </span><span class="title">Direct comparison test.</span>
 </h3>
 <div class="para" id="p-715">Decide whether <span class="process-math">\(\displaystyle\int_2^\infty \frac{1}{x^5+\sqrt{x+3}}\, dx\)</span> converges.</div>
-<div class="solutions"><details id="solution-88" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-716"></div></div></details></div></article><article class="example example-like" id="eg_direct_comp_2"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.3</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
+<div class="solutions"><details id="solution-88" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-716">
+<div class="para">Observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_improper_p_test.html ./knowl/xref/th_direct_comp.html">
+\begin{equation*}
+f(x)=\frac{1}{x^5+\sqrt{x+3}}\leq g(x)=\frac{1}{x^5}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\int_2^\infty g(x)\, dx\)</span> converges by the <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test"><span class="process-math">\(p\)</span>-test</a>, <a href="" class="xref" data-knowl="./knowl/xref/th_direct_comp.html" title="Theorem 1.25.1: Direct comparison test">Theorem 1.25.1</a> implies that <span class="process-math">\(\int_2^\infty f(x)\, dx\)</span> converges.</div>
+</div></div></details></div></article><article class="example example-like" id="eg_direct_comp_2"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.3</span><span class="period">.</span><span class="space"> </span><span class="title">Direct comparison test.</span>
 </h3>
 <div class="para" id="p-717">Decide whether <span class="process-math">\(\displaystyle\int_1^\infty \frac{2+\sin x}{x}\, dx\)</span> converges.</div>
-<div class="solutions"><details id="solution-89" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-718"></div></div></details></div></article><article class="theorem theorem-like" id="th_limit_comp"><h3 class="heading">
+<div class="solutions"><details id="solution-89" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-718">
+<div class="para">Observe that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_improper_p_test.html ./knowl/xref/th_direct_comp.html">
+\begin{equation*}
+g(x)=\frac{1}{x}\leq f(x)=\frac{2+\sin x}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\int_1^\infty g(x)\, dx\)</span> diverges by the <a href="" class="xref" data-knowl="./knowl/xref/th_improper_p_test.html" title="Theorem 1.24.12: Improper integrals: p-test"><span class="process-math">\(p\)</span>-test</a>, <a href="" class="xref" data-knowl="./knowl/xref/th_direct_comp.html" title="Theorem 1.25.1: Direct comparison test">Theorem 1.25.1</a> implies that <span class="process-math">\(\int_1^\infty f(x)\, dx\)</span> diverges.</div>
+</div></div></details></div></article><article class="theorem theorem-like" id="th_limit_comp"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.25.4</span><span class="period">.</span><span class="space"> </span><span class="title">Limit comparison test.</span>
 </h3>
 <div class="para logical" id="p-719">
@@ -360,14 +376,73 @@ window.MathJax = {
 <li id="li-350"><div class="para" id="p-731">Conclude that <span class="process-math">\(\int_a^\infty f(x)\, dx\)</span> converges if and only if  <span class="process-math">\(\int_a^\infty g(x)\, dx\)</span> converges.</div></li>
 </ol>
 </div></article><article class="example example-like" id="eg_limit_comp_1"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.7</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.7</span><span class="period">.</span><span class="space"> </span><span class="title">Limit comparison test.</span>
 </h3>
 <div class="para" id="p-732">Decide whether <span class="process-math">\(\displaystyle\int_0^\infty\frac{1}{\sqrt{x}+3x^5}\, dx\)</span> converges.</div>
-<div class="solutions"><details id="solution-90" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-733"></div></div></details></div></article><article class="example example-like" id="eg_limit_comp_2"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.8</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
+<div class="solutions"><details id="solution-90" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-733">Note that the integral is doubly improper: the integrand <span class="process-math">\(f(x)\)</span> is not defined at <span class="process-math">\(x=0\text{,}\)</span> and the interval is infinite. Accordingly we look at the improper integrals <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> and <span class="process-math">\(\int_1^\infty f(x)\, dx\)</span> separately. As it turns out, the converge question for both improper integrals can be decided using the direct comparison test, but we will use the limit comparison test just by way of illustration.</div> <div class="para logical" id="p-734">
+<div class="para">For the improper integral <span class="process-math">\(\int_0^1 f(x)\, dx\text{,}\)</span> our intution is that as <span class="process-math">\(x\to 0^+\)</span> the <span class="process-math">\(\sqrt{x}\)</span> term dominates the <span class="process-math">\(3x^5\)</span> term. As such, we expect <span class="process-math">\(f(x)\)</span> to be limit-comparable to <span class="process-math">\(g(x)=\frac{1}{\sqrt{x}}\text{.}\)</span> Since <span class="process-math">\(\int_0^1 g(x)\, dx\)</span> converges by the <span class="process-math">\(p\)</span>-test, it will then follow that <span class="process-math">\(\int_0^1 f(x)\, dx\)</span> converges. It remains only to confirm that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are limit-comparable:</div>
+<div class="displaymath process-math" id="md-175">
+\begin{align*}
+\lim_{x\to 0^+}\frac{f(x)}{g(x)} \amp = \lim_{x\to 0^+}\frac{\sqrt{x}}{\sqrt{x}+3x^5}\\
+\amp = \lim_{x\to 0^+}\frac{\sqrt{x}}{\sqrt{x}(1+3x^{9/2})}\\
+\amp = \lim_{x\to 0^+}\frac{1}{1+3x^{9/2}}\\
+\amp = 1\text{.}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-735">
+<div class="para">For the integral <span class="process-math">\(\int_1^\infty f(x)\, dx\text{,}\)</span> our intuition is that as <span class="process-math">\(x\to \infty\)</span> the <span class="process-math">\(3x^5\)</span> term dominates the <span class="process-math">\(\sqrt{x}\)</span> term. Thus we suspect that <span class="process-math">\(f\)</span> should be limit-comparable to <span class="process-math">\(g(x)=\frac{1}{x^5}\)</span> (the constant 3 here is not important). Let’s confirm:</div>
+<div class="displaymath process-math" id="md-176">
+\begin{align*}
+\lim_{x\to \infty}\frac{f(x)}{g(x)} \amp = \lim_{x\to \infty} \frac{x^5}{\sqrt{x}+3x^5}\\
+\amp = \lim_{x\to \infty}\frac{x^5}{x^5(1/x^{9/2}+3)}\\
+\amp = \lim_{x\to \infty}\frac{1}{3+1/x^{9/2}}\\
+\amp = \frac{1}{3+0}\\
+\amp = \frac{1}{3}\text{.}
+\end{align*}
+</div>
+<div class="para">This shows <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are limit-comparable. Since <span class="process-math">\(\int_1^\infty g(x)\, dx\)</span> converges by the <span class="process-math">\(p\)</span>-test, the limit comparison test implies <span class="process-math">\(\int_1^\infty f(x)\, dx\)</span> converges.</div>
+</div>
+</div></details></div></article><article class="example example-like" id="eg_limit_comp_2"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.8</span><span class="period">.</span><span class="space"> </span><span class="title">Limit comparison test.</span>
 </h3>
-<div class="para" id="p-734">Let <span class="process-math">\(f(x)=ax^2+bx+c\)</span> be any fixed irreducible quadratic polynomial with <span class="process-math">\(a&gt;0\text{.}\)</span> Decide whether <span class="process-math">\(\displaystyle\int_{-\infty}^\infty \frac{1}{f(x)}\, dx\)</span> exists.</div>
-<div class="solutions"><details id="solution-91" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-735"></div></div></details></div></article></section></div>
+<div class="para" id="p-736">Decide whether <span class="process-math">\(\displaystyle \int_0^{1/2}\frac{1}{\sqrt{x}-x}\, dx\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-91" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-737">
+<div class="para">This example is designed to force us to use the limit comparison test: because of the minus sign in the denominator, we cannot make use of any useful inequality that would allow us to use the direct comparison test. Note that for <span class="process-math">\(x\in (0,1/2]\)</span> we have <span class="process-math">\(\sqrt{x}&gt; x\text{,}\)</span> and thus the integrand is continuous on <span class="process-math">\((0,1/2]\text{.}\)</span> Our intuition is that the <span class="process-math">\(\sqrt{x}\)</span> term dominates as <span class="process-math">\(x\to 0^+\text{,}\)</span> and thus that <span class="process-math">\(f(x)=\frac{1}{\sqrt{x}-x}\)</span> is limit-comparable to <span class="process-math">\(g(x)=\frac{1}{\sqrt{x}}\)</span> as <span class="process-math">\(x\to 0^+\text{.}\)</span> Let’s confirm this:</div>
+<div class="displaymath process-math" id="md-177">
+\begin{align*}
+\lim_{x\to 0^+}\frac{f(x)}{g(x)} \amp = \lim_{x\to 0^+} \frac{\sqrt{x}}{\sqrt{x}-x} \\
+\amp = \lim_{x\to 0^+}\frac{1}{1-\sqrt{x}}\\
+\amp =\frac{1}{1-0}\\
+\amp = 1\text{.}
+\end{align*}
+</div>
+<div class="para">This proves that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are limit-comparable as <span class="process-math">\(x\to 0^+\text{.}\)</span> Since <span class="process-math">\(\int_0^{1/2} \frac{1}{\sqrt{x}}\, dx\)</span> converges by the type-II <span class="process-math">\(p\)</span>-test, we conclude that <span class="process-math">\(\int_0^{1/2}f(x)\, dx\)</span> converges.</div>
+</div></div></details></div></article><article class="example example-like" id="eg_limit_comp_3"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25.9</span><span class="period">.</span><span class="space"> </span><span class="title">Limit comparison test.</span>
+</h3>
+<div class="para" id="p-738">Let <span class="process-math">\(f(x)=ax^2+bx+c\)</span> be any fixed irreducible quadratic polynomial with <span class="process-math">\(a&gt;0\text{.}\)</span> Decide whether <span class="process-math">\(\displaystyle\int_{-\infty}^\infty \frac{1}{f(x)}\, dx\)</span> exists.</div>
+<div class="solutions"><details id="solution-92" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="p-739">
+<div class="para">First observe that since <span class="process-math">\(f(x)\)</span> is irreducible, we have <span class="process-math">\(f(x)\ne 0\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span> Thus the given integral is improper only on account of the infinite interval. Furthermore, since <span class="process-math">\(a&gt; 0\text{,}\)</span> it follows that <span class="process-math">\(f(x)\)</span> is positive eventually; since <span class="process-math">\(f(x)\)</span> is never equal to zero, it must <em class="emphasis">always</em> be positive; this means we are in a situation where we can apply the limit comparison test.   As usual, we consider the two improper integrals <span class="process-math">\(\int_{-\infty}^0 \frac{1}{f(x)}\, dx\)</span> and <span class="process-math">\(\int_0^\infty \frac{1}{f(x)}\, dx\)</span> separately. In both cases our intuition tells us that the <span class="process-math">\(ax^2\)</span> term will dominate as <span class="process-math">\(x\to \pm \infty\text{,}\)</span> and thus that the <span class="process-math">\(\frac{1}{f(x)}\)</span> is limit-comparable to <span class="process-math">\(\frac{1}{x^2}\)</span> as <span class="process-math">\(x\to -\infty\)</span> and as <span class="process-math">\(x\to \infty\text{.}\)</span> We confirm both these suspicions simultaneously below:</div>
+<div class="displaymath process-math" id="md-178">
+\begin{align*}
+\lim_{x\to -\infty} \frac{1/f(x)}{1/x^2} \amp = \lim_{x\to -\infty}\frac{x^2}{ax^2+bx+c} \amp
+\lim_{x\to \infty} \frac{1/f(x)}{1/x^2} \amp = \lim_{x\to \infty}\frac{x^2}{ax^2+bx+c} \\
+\amp =  \lim_{x\to -\infty}\frac{1}{a+b/x+c/x^2} \amp \amp =  \lim_{x\to \infty}\frac{1}{a+b/x+c/x^2}\\
+\amp =\frac{1}{a} \amp  \amp =\frac{1}{a}\text{.}
+\end{align*}
+</div>
+<div class="para">Now consider first the improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^\infty \frac{1}{f(x)}\, dx=\int_0^1\frac{1}{f(x)}\, dx +\int_1^\infty \frac{1}{f(x)}\, dx\text{.}
+\end{equation*}
+</div>
+<div class="para">The first integral <span class="process-math">\(\int_0^1 1/f(x)\, dx\)</span> is not improper at all (<span class="process-math">\(1/f\)</span> is continuous on <span class="process-math">\([0,1]\)</span>) and so converges. Since <span class="process-math">\(\int_1^\infty 1/x^2\, dx\)</span> converges and <span class="process-math">\(1/f\)</span> is limit-comparable to <span class="process-math">\(1/x^2\)</span> as <span class="process-math">\(x\to \infty\text{,}\)</span> we see by the direct limit comparison test that the second integral <span class="process-math">\(\int_1^\infty 1/f(x)\, dx\)</span> converges. We conclude that <span class="process-math">\(\int_0^\infty 1/f(x)\, dx\)</span> converges.</div>
+</div> <div class="para" id="p-740">A very similar analysis shows that <span class="process-math">\(\int_{-\infty}^{0}1/f(x)\, dx\)</span> also converges. Note, however, that technically we cannot use the type-I <span class="process-math">\(p\)</span>-test, since it is only stated for integrals over intervals of the form  <span class="process-math">\([a,\infty)\text{.}\)</span> Instead we must show directly that <span class="process-math">\(\int_{-\infty}^1 \frac{1}{x^2}\, dx\)</span> converges, which is not hard to do.</div> <div class="para" id="p-741">In all, we see that both <span class="process-math">\(\int_{-\infty}^0 \frac{1}{f(x)}\, dx\)</span> and <span class="process-math">\(\int_0^\infty \frac{1}{f(x)}\, dx\)</span> converge, and hence <span class="process-math">\(\int_{-\infty}^{\infty}\frac{1}{f(x)}\, dx\)</span> converges.</div>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_improper_A.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_linear_diff_eq.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
