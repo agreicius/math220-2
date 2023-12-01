@@ -2113,7 +2113,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.26",
   "title": "First-order linear differential equations",
-  "body": " First-order linear differential equations   First-order linear equation   A first-order linear differential equation for the function is a differential equation that can be written in the form for some functions and . Equation is called the standard form of the equation.     Integrating factor   Consider a first-order linear equation with standard form .  An integrating factor for this equation is any function of the form , where is an antiderivative of .  As a somewhat liberal usage of indefinite integral notation, we sometimes write .     Solving first-order linear equations   Suppose are continuous on the interval . To solve the differential equation with standard form , proceed as follows.   Compute .    Set .    The function is a solution of if and only if it is a solution of .    Compute . Since is the general solution of , the general solution of is , where is any constant.  As a somewhat liberal usage of indefinite integral notation, we sometimes write .        Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed constant.         Non-separable example   Find the general solution to the differential equation .         Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .           "
+  "body": " First-order linear differential equations   First-order linear equation   A first-order linear differential equation for the function is a differential equation that can be written in the form for some functions and . Equation is called the standard form of the equation.     Integrating factor   Consider a first-order linear equation with standard form .  An integrating factor for this equation is any function of the form , where is an antiderivative of .  As a somewhat liberal usage of indefinite integral notation, we sometimes write .     Solving first-order linear equations   Suppose are continuous on the interval . To solve the differential equation with standard form , proceed as follows.   Compute .    Set .    The function is a solution of if and only if it is a solution of .    Compute . Since is the general solution of , the general solution of is , where is any constant.  As a somewhat liberal usage of indefinite integral notation, we sometimes write .        Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed nonzero constant.    Observe that this differential equation is both linear and separable, but we are asked here to use the linear differential equation technique for solving The standard form of the differential equation is . Clearly, is an antiderivative of , so we set . Next we compute . Finally, we conclude that the general solution is . This should come as no surprise: we have re-derived the general solution to the exponential change differential equation .     Non-separable example   Find the general solution to the differential equation .    Following we first bring the differential equation into standard form: . We then compute , and thus set . Next, we compute . Finally, we conclude that the general solution is given by . Note in particular that setting , we see that the polynomial is a solution to the differential equation.     Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .       First we bring the differential equation into standard form: . Since is an antiderivative of , we set the integrating factor to be , where the minus sign arises due to the fact that we assume , and hence . Next we compute (using integration by parts twice) . We conclude that the general solution is given by . Finally, the condition implies that , and thus .    "
 },
 {
   "id": "d_lin_diff_eq",
@@ -2149,7 +2149,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.26.4",
   "title": "Exponential change revisited.",
-  "body": " Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed constant.       "
+  "body": " Exponential change revisited   Use the integrating factor method to find the general solution to , where is any fixed nonzero constant.    Observe that this differential equation is both linear and separable, but we are asked here to use the linear differential equation technique for solving The standard form of the differential equation is . Clearly, is an antiderivative of , so we set . Next we compute . Finally, we conclude that the general solution is . This should come as no surprise: we have re-derived the general solution to the exponential change differential equation .   "
 },
 {
   "id": "eg_lin_diff_eq",
@@ -2158,7 +2158,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.26.5",
   "title": "Non-separable example.",
-  "body": " Non-separable example   Find the general solution to the differential equation .       "
+  "body": " Non-separable example   Find the general solution to the differential equation .    Following we first bring the differential equation into standard form: . We then compute , and thus set . Next, we compute . Finally, we conclude that the general solution is given by . Note in particular that setting , we see that the polynomial is a solution to the differential equation.   "
 },
 {
   "id": "eg_non_separable",
@@ -2167,7 +2167,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.26.6",
   "title": "Initial value.",
-  "body": " Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .          "
+  "body": " Initial value   Consider the differential equation .   Find the general solution to the differential equation.    Find the solution satisfying .       First we bring the differential equation into standard form: . Since is an antiderivative of , we set the integrating factor to be , where the minus sign arises due to the fact that we assume , and hence . Next we compute (using integration by parts twice) . We conclude that the general solution is given by . Finally, the condition implies that , and thus .   "
 },
 {
   "id": "s_modeling",

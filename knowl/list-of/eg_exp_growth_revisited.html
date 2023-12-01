@@ -14,7 +14,34 @@
 <article class="example example-like"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.26.4</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential change revisited.</span>
 </h3>
-<div class="para">Use the integrating factor method to find the general solution to <span class="process-math">\(y'=k y\text{,}\)</span> where <span class="process-math">\(k\)</span> is any fixed constant.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_linear_diff_eq.html#eg_exp_growth_revisited">in-context</a></span>
+<div class="para">Use the integrating factor method to find the general solution to <span class="process-math">\(y'=k y\text{,}\)</span> where <span class="process-math">\(k\)</span> is any fixed nonzero constant.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Observe that this differential equation is both linear and separable, but we are asked here to use the linear differential equation technique for solving The standard form of the differential equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'\underset{p(x)}{\underbrace{-k}}y=\underset{q(x)}{\underbrace{0}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Clearly, <span class="process-math">\(P(x)=-kt\)</span> is an antiderivative of <span class="process-math">\(p(x)=-k\text{,}\)</span> so we set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v(x)=e^{-kt}\text{.}
+\end{equation*}
+</div>
+<div class="para">Next we compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int v(x)q(x)\, dx=\int 0\, dx= C\text{.}
+\end{equation*}
+</div>
+<div class="para">Finally, we conclude that the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\frac{C}{v(x)}=\frac{C}{e^{-kx}}=Ce^{kx}\text{.}
+\end{equation*}
+</div>
+<div class="para">This should come as no surprise: we have re-derived the general solution to the exponential change differential equation <span class="process-math">\(y'=ky\text{.}\)</span>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_linear_diff_eq.html#eg_exp_growth_revisited">in-context</a></span>
 </body>
 </html>
