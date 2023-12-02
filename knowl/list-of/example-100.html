@@ -23,6 +23,51 @@
 <li><div class="para">Investigate the long-term behavior of the rumor’s spread. Is there a time when the entire population has heard the rumor?</div></li>
 </ol>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_modeling.html#example-100">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+f'(t)=(\text{rate of change of } q) \amp= k \underset{\text{per. in know}}{\underbrace{f(t)}} \underset{\text{per. not in know}}{\underbrace{(100-f(t))}} \text{.}
+\end{align*}
+</div>
+<div class="para">The differential equation <span class="process-math">\(\frac{dq}{dt}=k\, q (100-q)\)</span> is separable (and not linear). We solve using the separation of variables technique:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{dq}{q(100-q)} \amp = k\, dt\\
+\int \frac{dq}{q(100-q)} \amp = \int k\, dt\\
+\frac{1}{100}\int \frac{1}{q}-\frac{1}{100-q}\, dq \amp =\int kt\, dt \amp (\text{part. frac. decomp.})\\
+\frac{1}{100}(\ln q-\ln(100-q)\amp = kt+C \amp (q\geq 0, 100-q\geq 0)\\
+\ln\left( \frac{q}{100-q}\right) \amp=100kt+100C=rt+100C \amp (r=100k) \\
+\frac{q}{100-q} \amp = e^{rt}e^{100C}=De^{rt} \amp (D=e^{100C})\\
+q \amp = 100De^{rt}-De^{rt}q\\
+q(1+De^{rt}) \amp = 100De^{rt}\\
+q \amp = \frac{100De^{rt}}{1+De^{rt}}=\frac{100D}{D+e^{-rt}}\text{.}
+\end{align*}
+</div>
+<div class="para">Since initially <span class="process-math">\(5\%\)</span> of the population knows the rumor,  we have <span class="process-math">\(f(0)=5\text{,}\)</span> and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{100D}{D+1}=5\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies <span class="process-math">\(D=\frac{5}{95}=\frac{1}{19}\text{,}\)</span> and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q=f(t)=\frac{100}{19}\frac{e^{rt}}{\frac{1}{19}+e^{-rt}}=\frac{100}{1+19e^{-rt}}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(r=100k &gt; 0\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">This is called a <em class="emphasis">logistic growth</em> function. Since <span class="process-math">\(e^{-rt}\)</span> is decreasing, we see that <span class="process-math">\(q=f(t)\)</span> is increasing. Furthermore, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{t\to\infty}f(t)=\lim_{t\to\infty}\frac{100}{1+19e^{-rt}}=\frac{100}{1+0}=100\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus as time passes the percentage of the population that have heard the rumor increases and approaches 100 percent asymptotically.</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_rumor.svg" role="img" class="contained" alt="Percentage that has heard the rumor"></div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_modeling.html#example-100">in-context</a></span>
 </body>
 </html>

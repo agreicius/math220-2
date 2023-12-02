@@ -21,6 +21,42 @@
 <li><div class="para">Derive a formula for the population of trout <span class="process-math">\(t\)</span> months after the oil spill, assuming that at the moment of the spill there were six thousand fish in the Strait of Dudley.</div></li>
 </ol>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_modeling.html#example-99">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">First, we explicitly identify the function in question: let <span class="process-math">\(P=f(t)\)</span> be the population of trout <span class="process-math">\(t\)</span> months after the spill. Now translate the given information into a differential equation for <span class="process-math">\(f\text{:}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_lin_diff_eq.html">
+\begin{align*}
+f'(t)=(\text{rate of change of } P) \amp = (\text{rate of breeding})- (\text{rate of depletion}) \\
+\amp = 0.25\underset{\text{current pop.}}{\underbrace{f(t)}}-2700t\, e^{-t/2}\text{.}
+\end{align*}
+</div>
+<div class="para">The differential equation <span class="process-math">\(f'(t)=\frac{1}{4}f(t)-2700t\, e^{-t/2}\)</span> is linear. Following <a href="" class="xref" data-knowl="./knowl/xref/proc_lin_diff_eq.html" title="Procedure 1.26.3: Solving first-order linear equations">Procedure 1.26.3</a>, we first bring it into standard form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_lin_diff_eq.html">
+\begin{equation*}
+f'(t)\underset{p(t)}{\underbrace{-\frac{1}{4}}}f(t)=\underset{q(t)}{\underbrace{-2700t\, e^{-t/2}}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Skipping some details, we find that the integrating factor is <span class="process-math">\(v(t)=e^{-t/4}\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_lin_diff_eq.html">
+\begin{equation*}
+\int v(t)q(t)\, dt= \underset{G(t)}{\underbrace{1200 e^{-3t/4}(3t+4)}}+C\text{.}
+\end{equation*}
+</div>
+<div class="para">The integral computation was done using integration by parts (followed by some algebra). We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_lin_diff_eq.html">
+\begin{equation*}
+P=f(t)=\frac{G(t)}{v(t)}+\frac{C}{v(t)}=1200e^{-t/2}(3t+4)+Ce^{t/4}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since the population is 6000 at the time of the spill, we have <span class="process-math">\(f(0)=6000\text{,}\)</span> which implies <span class="process-math">\(6000=4800+C\text{,}\)</span> or <span class="process-math">\(C=1200\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_lin_diff_eq.html">
+\begin{equation*}
+P=f(t)=1200e^{-t/2}(3t+4)+1200e^{t/4}\text{.}
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(t\to\infty\)</span> the first term <span class="process-math">\(1200e^{-t/2}(3t+4)\)</span> tends toward 0, making <span class="process-math">\(f(t)\)</span> behave like asymptotically like <span class="process-math">\(1200e^{t/4}\text{.}\)</span> So the long-term consequence of the oil spill is that the population, which would have grown as <span class="process-math">\(6000e^{t/4}\)</span> in the absence of the oil spill, grows instead like <span class="process-math">\(1200e^{t/4}\text{.}\)</span>
+</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_troup.svg" role="img" class="contained" alt="Trout populatio"></div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_modeling.html#example-99">in-context</a></span>
 </body>
 </html>
