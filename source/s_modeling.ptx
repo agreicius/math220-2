@@ -94,7 +94,46 @@
         </statement>
         <solution>
             <p>
-                
+                First we make explicit the function we wish to determine: let <m>A=A(t)</m> be the amount  of salt (in mg) in the tank after <m>t</m> minutes. 
+            </p>
+            <p>
+              Next we translate the given information into a differential equation for <m>A=A(t)</m>. To do so, we will have to translate statements about the concentration of salt into statements about the amount of salt. To this end, we let <m>V=V(t)</m> be the volume of the tank after <m>t</m> minutes. Since fluid enters the tank at a rate of <m>10</m> liters per minute and exits the tank at a rate of <m>6</m> liters per minute, we see that the rate of change of <m>V(t)</m> is <m>4</m> liters per second: <ie/>, <m>V'(t)=4</m>. It follows that <m>V(t)=4t+C</m>. Since the initial volume is 50 liters, we have <m>C=50</m>. Thus <m>V(t)=4t+50</m>. 
+            </p>
+            <p>
+              We can now write down a differential equation for <m>A(t)</m>:  
+              <md>
+                <mrow> A'(t)=(\text{rate of change of } A) \amp = (\text{rate of inflow of salt})-(\text{rate of outflow of salt}) </mrow>
+                <mrow> \amp = \underset{\text{inflow rate}}{\underbrace{10}}\cdot \underset{\text{brine concent.}}{\underbrace{0.2}} - \underset{\text{outflow rate}}{\underbrace{6}}\cdot \underset{\text{tank concent.}}{\underbrace{\frac{A(t)}{V(t)}}} </mrow>
+                <mrow> \amp = 2-\frac{6}{4t+50}A(t)</mrow>
+              </md>.
+              Next we identify that the differential equation <m>A'(t)=2-\frac{6}{4t+50}A(t)</m> is linear. Following <xref ref="proc_lin_diff_eq"/> we first bring the differential equation into standard form: 
+              <me>
+                A'(t)+\underset{p(t)}{\underbrace{\frac{6}{4t+50}}}A(t)=\underset{q(t)}{\underbrace{2}}
+              </me>.
+              Since <m>\frac{3}{2}\ln(4t+50)</m> is an antiderivative of <m>p(x)</m>, we set 
+              <me>
+                v(t)=e^{\frac{3}{2}\ln(4t+50)}=(4t+50)^{3/2}
+              </me>. 
+              Now compute 
+              <me>
+                \int v(t)q(t)\, dt=\int 3(4t+50)^{3/2}\, dt=\underset{G(t)}{\underbrace{\frac{1}{5}(4t+50)^{5/2}}}+C
+              </me>,
+              and conclude 
+              <me>
+                A(t)=\frac{G(t)}{v(t)}+\frac{C}{v(t)}=\frac{1}{5}(4t+50)+\frac{C}{(4t+50)^{3/2}}
+              </me>.
+              Lastly, since initially there is 20 mg of salt in the tank, we have <m>A(0)=20</m>, which implies 
+              <me>
+                20=10+C/50^{3/2}
+              </me>,
+              or <m>C=10\cdot 50^{3/2}</m>. Thus we have 
+              <me>
+                A(t)=\frac{1}{5}(4t+50)+\frac{10\cdot 50^{3/2}}{(4t+50)^{3/2}}
+              </me>,
+              from which it follows that the amount of salt after 30 minutes is 
+              <me>
+                A(30)=\frac{1}{5}(170)+\frac{10\cdot 50^{3/2}}{170^{3/2}}
+              </me>.
             </p>
         </solution>
     </example>
@@ -119,8 +158,40 @@
         </statement>
         <solution>
             <p>
-                
+              First, we explicitly identify the function in question: let <m>P=f(t)</m> be the population of trout <m>t</m> months after the spill. Now translate the given information into a differential equation for <m>f</m>: we have 
+              <md>
+                <mrow>f'(t)=(\text{rate of change of } P) \amp = (\text{rate of breeding})- (\text{rate of depletion}) </mrow>
+                <mrow> \amp = 0.25\underset{\text{current pop.}}{\underbrace{f(t)}}-2700t\, e^{-t/2}</mrow>
+              </md>.
+              The differential equation <m>f'(t)=\frac{1}{4}f(t)-2700t\, e^{-t/2}</m> is linear. Following <xref ref="proc_lin_diff_eq"/>, we first bring it into standard form
+              <me>
+                f'(t)\underset{p(t)}{\underbrace{-\frac{1}{4}}}f(t)=\underset{q(t)}{\underbrace{-2700t\, e^{-t/2}}}
+              </me>.
+              Skipping some details, we find that the integrating factor is <m>v(t)=e^{-t/4}</m> and 
+              <me>
+                \int v(t)q(t)\, dt= \underset{G(t)}{\underbrace{1200 e^{-3t/4}(3t+4)}}+C
+              </me>.
+              The integral computation was done using integration by parts (followed by some algebra). We conclude that 
+              <me>
+                P=f(t)=\frac{G(t)}{v(t)}+\frac{C}{v(t)}=1200e^{-t/2}(3t+4)+Ce^{t/4}
+              </me>.
+              Since the population is 6000 at the time of the spill, we have <m>f(0)=6000</m>, which implies <m>6000=4800+C</m>, or <m>C=1200</m>. We conclude that 
+              <me>
+                P=f(t)=1200e^{-t/2}(3t+4)+1200e^{t/4}
+              </me>.
+              As <m>t\to\infty</m> the first term <m>1200e^{-t/2}(3t+4)</m> tends toward 0, making <m>f(t)</m> behave like asymptotically like <m>1200e^{t/4}</m>. So the long-term consequence of the oil spill is that the population, which would have grown as <m>6000e^{t/4}</m> in the absence of the oil spill, grows instead like <m>1200e^{t/4}</m>.
             </p>
+            <image xml:id="im_troup">
+              <description>Trout populatio</description>
+              <sageplot>
+                P=plot(1200*e^(-x/2)*(3*x+4)+1200*e^(x/4),x,0,8,color="red")
+                Q=plot(1200*e^(x/4),x,0,8, color="blue")
+                t1=text("$f(t)$", [2,7000], color="black", fontsize=15)
+                t2=text("$g(t)=1200e^{t/4}$", [4,2000], color="black", fontsize=15)
+                P+Q+t1+t2
+              </sageplot>
+              
+            </image>
         </solution>
     </example>
     <example>
@@ -151,8 +222,47 @@
         </statement>
         <solution>
             <p>
-                
-            </p>
+                We have 
+                <md>
+                  <mrow>f'(t)=(\text{rate of change of } q) \amp= k \underset{\text{per. in know}}{\underbrace{f(t)}} \underset{\text{per. not in know}}{\underbrace{(100-f(t))}} </mrow>
+                </md>.
+                The differential equation <m>\frac{dq}{dt}=k\, q (100-q)</m> is separable (and not linear). We solve using the separation of variables technique: 
+                <md>
+                  <mrow>\frac{dq}{q(100-q)} \amp = k\, dt</mrow>
+                  <mrow>\int \frac{dq}{q(100-q)} \amp = \int k\, dt</mrow>
+                  <mrow>\frac{1}{100}\int \frac{1}{q}-\frac{1}{100-q}\, dq \amp =\int kt\, dt \amp (\text{part. frac. decomp.})</mrow>
+                  <mrow> \frac{1}{100}(\ln q-\ln(100-q)\amp = kt+C \amp (q\geq 0, 100-q\geq 0)</mrow>
+                  <mrow>\ln\left( \frac{q}{100-q}\right) \amp=100kt+100C=rt+100C \amp (r=100k) </mrow>
+                  <mrow>\frac{q}{100-q} \amp = e^{rt}e^{100C}=De^{rt} \amp (D=e^{100C})</mrow>
+                  <mrow>q \amp = 100De^{rt}-De^{rt}q</mrow>
+                  <mrow>q(1+De^{rt}) \amp = 100De^{rt}</mrow>
+                  <mrow>q \amp = \frac{100De^{rt}}{1+De^{rt}}=\frac{100D}{D+e^{-rt}}
+                  </mrow>
+                </md>.
+                Since initially <m>5\%</m> of the population knows the rumor,  we have <m>f(0)=5</m>, and thus 
+                <me>
+                  \frac{100D}{D+1}=5
+                </me>.
+                This implies <m>D=\frac{5}{95}=\frac{1}{19}</m>, and thus 
+                <me>
+                  q=f(t)=\frac{100}{19}\frac{e^{rt}}{\frac{1}{19}+e^{-rt}}=\frac{100}{1+19e^{-rt}}
+                </me>,
+                where <m>r=100k &gt; 0</m>. 
+              </p>
+               <p> This is called a <em>logistic growth</em> function. Since <m>e^{-rt}</m> is decreasing, we see that <m>q=f(t)</m> is increasing. Furthermore, we have 
+                <me>
+                  \lim_{t\to\infty}f(t)=\lim_{t\to\infty}\frac{100}{1+19e^{-rt}}=\frac{100}{1+0}=100
+                </me>.
+                Thus as time passes the percentage of the population that have heard the rumor increases and approaches 100 percent asymptotically. 
+              </p>
+              <image xml:id="im_rumor">
+                <description>Percentage that has heard the rumor</description>
+                <sageplot>
+                  P=plot(100/(1+19*e^(-x)),x,0,10)
+                  t1=text("$f(t)=\\frac{100}{1+19e^{-rt}}$", [3,80], color="black", fontsize=15)
+                  P+t1
+                </sageplot>
+              </image>
         </solution>
     </example>
     <!-- <example>
