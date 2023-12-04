@@ -84,7 +84,7 @@
             <p>
                In both cases, to estimate <m>\ln 4=\int_1^4 \frac{1}{x}\, dx</m> we partition the interval <m>[1,4]</m> into six subintervals of length <m>\Delta x=(4-1)/6=1/2</m> as follows: 
                <me>
-                x_0=1&lt; 3/2 &lt; 2 &lt; 5/2 &lt; 3 &lt; 7/2 &lt; 6=x_6
+                x_0=1&lt; 3/2 &lt; 2 &lt; 5/2 &lt; 3 &lt; 7/2 &lt; 4=x_6
                </me>.
                <ol marker="(a)">
                 <li>
