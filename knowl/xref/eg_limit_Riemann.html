@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer and define <span class="process-math">\(R_n\)</span> to be the right Riemann sum of <span class="process-math">\(f(x)=1-x^3\)</span> corresponding to the partition of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> equal subintervals.</div>
+<ol class="lower-alpha">
+<li><div class="para">Derive a closed formula for <span class="process-math">\(R_n\text{.}\)</span> Your answer will be expressed in terms of <span class="process-math">\(n\text{.}\)</span>
+</div></li>
+<li><div class="para">Compute <span class="process-math">\(\lim_{n\to \infty}R_n\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">Now do the same thing with <span class="process-math">\(L_n\text{,}\)</span> the left Riemann sum of <span class="process-math">\(f(x)\)</span> corresponding to the partion of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> equal subintervals.</div>
+<div class="para">
+<em class="emphasis">Hint</em>. For the closed formula of <span class="process-math">\(L_n\)</span> use the index shift identity <a href="" class="xref" data-knowl="./knowl/xref/eq_index_shift.html" title="Equation 1.3.2">(1.3.2)</a>.</div>
+</li>
+</ol>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">Fix a positive integer <span class="process-math">\(n\text{.}\)</span> We build the right Riemann sum <span class="process-math">\(R_n\)</span> corresponding to a partition of <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length. We have <span class="process-math">\(\Delta x_k=\Delta x=1/n\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and thus <span class="process-math">\(x_k=0+k\Delta x=k/n\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/eq_right_Riemann.html" title="Equation 1.3.6">(1.3.6)</a> we then have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_right_Riemann.html ./knowl/xref/th_summ_rules.html ./knowl/xref/th_summ_formulas.html">
+\begin{align*}
+R_n \amp = \sum_{k=1}^nf(x_k)\Delta x\\
+\amp = \sum_{k=1}^nf(k/n)\cdot (1/n)\\
+\amp = \sum_{k=1}^n(1-(k/n)^3)\cdot (1/n)\\
+\amp = \sum_{k=1}^n\frac{1}{n}-\frac{k^3}{n^4} \amp (\text{algebra})\\
+\amp = \sum_{k=1}^n\frac{1}{n}-\frac{1}{n^4}\sum_{k=1}^nk^3 \amp (\knowl{./knowl/xref/th_summ_rules.html}{\text{Theorem 1.3.5}})\\
+\amp =\frac{1}{n}\cdot n - \frac{1}{n^4}\cdot\left(\frac{n(n+1)}{2}\right)^2 \amp (\knowl{./knowl/xref/th_summ_formulas.html}{\text{Theorem 1.3.4}})\\
+\amp= 1-\frac{n^2(n+1)^2}{4n^4} \text{.}
+\end{align*}
+</div>
+<div class="para">Note that since we have <em class="emphasis">fixed</em> the integer <span class="process-math">\(n\)</span> at the beginning of our argument, it is treated throughout as a <em class="emphasis">constant</em>. You can see this in action in the last few lines above.</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proj_est_area.html">
+\begin{align*}
+\lim_{n \to \infty} R_n \amp = \lim_{n \to \infty} 1-\frac{n^2(n+1)^2}{4n^4} \\
+\amp =
+\lim_{n\to \infty}1-\frac{1}{4}\lim_{n\to \infty}\frac{n^2(n+1)^2}{n^4} \amp \text{(sum and scalar mult. rule)} \\
+\amp = 1-\frac{1}{4}\cdot 1 \amp (\text{lim. rule for poly. quot.})\\
+\amp = \frac{3}{4}\text{.}
+\end{align*}
+</div>
+<div class="para">Hey, <span class="process-math">\(3/4=0.75\)</span> is the numeric value we saw our area estimates approaching when working the GeoGebra interactive in <a href="" class="xref" data-knowl="./knowl/xref/proj_est_area.html" title="Interactive example 1.2.1: Estimating area">Interactive example 1.2.1</a>!</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">We include a computation of <span class="process-math">\(L_n\)</span> to illustrate the use of the index shift rule of summation. Most of the ingredients are the same as with the computation for <span class="process-math">\(R_n\)</span> except now we use <a href="" class="xref" data-knowl="./knowl/xref/eq_left_Riemann.html" title="Equation 1.3.5">(1.3.5)</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_left_Riemann.html">
+\begin{align*}
+L_n \amp = \sum_{k=1}^nf(x_{k-1})\Delta x\\
+\amp = \sum_{k=1}^n(1-((k-1)/n)^3)\cdot (1/n) \\
+\amp = \sum_{\boxed{k=0}}^{\boxed{k=n-1}}(1-(\boxed{k}/n)^3)\cdot (1/n)
+\amp (\text{index shift!})\\
+\amp = \sum_{k=0}^{n-1}\frac{1}{n}-\frac{1}{n^4}\sum_{k=0}^{n-1}k^3\\
+\amp = \frac{1}{n}\cdot n -\frac{1}{n^4}\sum_{k=1}^{n-1}k^3 \\
+\amp = 1- \frac{1}{n^4}\left(\frac{(n-1)n}{2}\right)^2\\
+\amp = 1- \frac{(n-1)^2n^2}{4n^4}\text{.}
+\end{align*}
+</div>
+<div class="para">A similar argument as above shows <span class="process-math">\(\lim\limits_{n\to \infty}L_n=3/4\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></div></details></div></article><span class="incontext"><a class="internal" href="s_riemann_sums.html#eg_limit_Riemann">in-context</a></span>
+</body>
+</html>

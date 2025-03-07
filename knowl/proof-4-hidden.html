@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"> <div class="para">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> it is integrable, and thus we can compute its integral as a limit of Riemann sums corresponding to any sequence of pointed partitions <span class="process-math">\(P_n\)</span> satisfying <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> The strategy of the proof that follows is to pick these pointed partitions in a <em class="emphasis">very particular way</em> that ensures the value of of the integral we seek.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be an antiderivative of <span class="process-math">\(f\)</span> on <span class="process-math">\(I=[a,b]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(I\text{,}\)</span> we see that <span class="process-math">\(F\)</span> is differentiable on <span class="process-math">\(I\)</span> and its derivative <span class="process-math">\(F'=f\)</span> is continuous. The <em class="emphasis">mean value theorem</em> thus applies to <span class="process-math">\(F\text{:}\)</span> given any interval <span class="process-math">\([c,d]\)</span> on which <span class="process-math">\(F'\)</span> is defined and continuous, there is an element <span class="process-math">\(x^*\in[c,d]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+F'(x^*)=\frac{F(d)-F(c)}{d-c}\text{.}
+\end{equation*}
+</div>
+<div class="para">We use this fact to produce a sequence of pointed partitions  <span class="process-math">\(P_n\)</span> of a very particular sort. Namely for each <span class="process-math">\(n\text{,}\)</span> we divide <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> equal subintervals of length <span class="process-math">\(\Delta x=(b-a)/n\text{,}\)</span> and for each subinterval <span class="process-math">\(I_k=[x_{k_1},x_k]\)</span> we choose our sample input <span class="process-math">\(c_k\)</span> to be a point where we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+F'(c_k)=\frac{F(x_k)-F(x_{k-1})}{x_k-x_{k-1}}=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}
+\end{equation*}
+</div>
+<div class="para">As discussed above, such a <span class="process-math">\(c_k\)</span> is guaranteed to exist by the mean value theorem. Since <span class="process-math">\(F'=f\)</span> by assumption, these sample points satisfy</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation}
+f(c_k)=\frac{F(x_k)-F(x_{k-1})}{\Delta x}\text{.}\tag{1.5.4}
+\end{equation}
+</div>
+<div class="para">Note that we have <span class="process-math">\(\lVert P_n\rVert=\Delta x=(b-a)/n\text{,}\)</span> and thus <span class="process-math">\(\lVert P_n\rVert\to\infty\text{.}\)</span> It follows that if <span class="process-math">\(S_n\)</span> is the Riemann sum corresponding to the pointed partition <span class="process-math">\(P_n\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+\int_a^b f(x)\, dx=\lim_{n\to\infty}S_n\text{.}
+\end{equation*}
+</div>
+<div class="para">We now compute <span class="process-math">\(S_n\)</span> for any fixed <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{align*}
+S_n \amp =\sum_{k=1}^nf(c_k)\Delta x\\
+\amp = \sum_{k=1}\left( \frac{F(x_k)-F(x_{k-1})}{\Delta x}\right)\Delta x \amp \knowl{./knowl/eq_FTC_II_proof.html}{\text{(1.5.4)}}\\
+\amp =\sum_{k=1}^n F(x_k)-F(x_{k-1}) \\
+\amp =(\cancel{F(x_1)}-F(x_0))+(\cancel{F(x_2)}-\cancel{F(x_1)}+\cdots (F(x_n)-\cancel{F(x_{n-1}})\\
+\amp =F(x_n)-F(x_0)\\
+\amp =F(b)-F(a)\text{.}
+\end{align*}
+</div>
+<div class="para">We’ve shown that <span class="process-math">\(S_n=F(b)-F(a)\)</span> for all <span class="process-math">\(n\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_FTC_II_proof.html">
+\begin{equation*}
+\int_a^b f(x)\, dx=\lim_{n\to\infty}S_n=\lim_{n\to\infty}F(b)-F(a)=F(b)-F(a)\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article></body>
+</html>

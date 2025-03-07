@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Initial value problem.</span>
+</h3>
+<div class="para logical">
+<div class="para">Consider the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_initial_value.html ./knowl/xref/eq_initial_value.html">
+\begin{equation}
+f''(x)=-\frac{2}{3}\cos 2x+x\text{.}\tag{1.1.2}
+\end{equation}
+</div>
+<ol class="decimal">
+<li><div class="para">Find the general formula for a function <span class="process-math">\(f\)</span> satisfying <a href="" class="xref" data-knowl="./knowl/xref/eq_initial_value.html" title="Equation 1.1.2">(1.1.2)</a>.</div></li>
+<li><div class="para logical">
+<div class="para">Find the unique function <span class="process-math">\(f\)</span> satisfying <a href="" class="xref" data-knowl="./knowl/xref/eq_initial_value.html" title="Equation 1.1.2">(1.1.2)</a> and the <em class="emphasis">initial conditions</em>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_initial_value.html">
+\begin{equation*}
+f(0)=0, f'(0)=-1\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">First, since <span class="process-math">\(f'(x)\)</span> is an antiderivative of <span class="process-math">\(f''(x)=-\frac{2}{3}\cos 2x+x\text{,}\)</span> using <a href="" class="xref" data-knowl="./knowl/xref/proc_antiderivative_inspection.html" title="Procedure 1.1.5: Computing antiderivatives by inspection">Procedure 1.1.5</a> and <a href="" class="xref" data-knowl="./knowl/xref/th_gen_antiderivative.html" title="Theorem 1.1.7: General antiderivative formula">Theorem 1.1.7</a>, we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_antiderivative_inspection.html ./knowl/xref/th_gen_antiderivative.html ./knowl/xref/eq_double_prime.html">
+\begin{equation}
+f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C\tag{1.1.3}
+\end{equation}
+</div>
+<div class="para">for some <span class="process-math">\(C\in \R\text{.}\)</span> Next, since <span class="process-math">\(f(x)\)</span> is an antiderivative of <span class="process-math">\(f'(x)=-\frac{1}{3}\sin 2x+\frac{1}{2}x^2+C\text{,}\)</span> reasoning as above we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_antiderivative_inspection.html ./knowl/xref/th_gen_antiderivative.html ./knowl/xref/eq_double_prime.html">
+\begin{equation}
+f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3+Cx+D\tag{1.1.4}
+\end{equation}
+</div>
+<div class="para">for some <span class="process-math">\(C,D\in \R\text{.}\)</span> The general formula for <span class="process-math">\(f''\)</span> is thus given by <a href="" class="xref" data-knowl="./knowl/xref/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a>.</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">The given <em class="emphasis">initial conditions</em> <span class="process-math">\(f(0)=0\)</span> and <span class="process-math">\(f'(0)=-1\)</span> allows us to solve for the <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a> as follows. First, using <a href="" class="xref" data-knowl="./knowl/xref/eq_prime.html" title="Equation 1.1.3">(1.1.3)</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_double_prime.html ./knowl/xref/eq_prime.html ./knowl/xref/eq_double_prime.html">
+\begin{equation*}
+-1=f'(0)=0+0+C\text{,}
+\end{equation*}
+</div>
+<div class="para">which implies <span class="process-math">\(C=-1\text{.}\)</span> Using this new fact and <span class="process-math">\(f(0)=0\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/eq_double_prime.html" title="Equation 1.1.4">(1.1.4)</a> now implies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_double_prime.html ./knowl/xref/eq_prime.html ./knowl/xref/eq_double_prime.html">
+\begin{equation*}
+0=f(0)=\frac{1}{6}+0+0+D\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(D=-1/6\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_double_prime.html ./knowl/xref/eq_prime.html ./knowl/xref/eq_double_prime.html">
+\begin{equation*}
+f(x)=\frac{1}{6}\cos 2x+\frac{1}{6}x^3-x-\frac{1}{6}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><span class="incontext"><a class="internal" href="s_antiderivatives.html#example-5">in-context</a></span>
+</body>
+</html>

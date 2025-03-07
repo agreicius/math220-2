@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.10.8</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative formula for inverses.</span>
+</h3>
+<div class="para logical">
+<div class="para">Assume <span class="process-math">\(f\)</span> is one-to-one and differentiable on the interval <span class="process-math">\(I\text{,}\)</span> and that <span class="process-math">\(f'(x)\ne 0\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> Let <span class="process-math">\(J\)</span> be the range of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">The inverse function <span class="process-math">\(f^{-1}\)</span> is differentiable on <span class="process-math">\(J\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation}
+(f^{-1})'(b)=\frac{1}{f'(f^{-1}(b))}\tag{1.10.4}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(b\in J\text{.}\)</span>
+</div>
+</div></li>
+</ol>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">We will not prove (1), which is the more difficult part of this theorem. Assuming <span class="process-math">\((1)\)</span> is true, we prove (2) using the chain rule as follows. By (2) of <a href="" class="xref" data-knowl="./knowl/xref/th_inverse_function.html" title="Theorem 1.10.7: Inverse function compendium">Theorem 1.10.7</a>, we have <span class="process-math">\(f^{-1}(f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> Taking derivatives of both sides of this equation, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_inverse_function.html">
+\begin{align*}
+\frac{d}{dx} (f^{-1}(f(x)))=\frac{d}{dx} x\amp \implies (f^{-1})'(f(x))f'(x)=1 \amp \text{(chain rule)}\\
+\amp \implies f^{-1}(f(x))=\frac{1}{f'(x)} \amp (f'(x)\ne 0)\text{.}
+\end{align*}
+</div>
+<div class="para">Equivalently, since for any <span class="process-math">\(b\in J\)</span> we have <span class="process-math">\(f^{-1}(b)=a\)</span> for some unique <span class="process-math">\(a\in I\)</span> satisfying <span class="process-math">\(f(a)=b\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_inverse_function.html">
+\begin{align*}
+(f^{-1})'(b) \amp = (f^{-1})'(f(a)) \\
+\amp = \frac{1}{f'(a)} \amp \text{(by above)}\\
+\amp = \frac{1}{f'(f^{-1}(b))} \amp (a=f^{-1}(b))\text{.}
+\end{align*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_inverse.html#th_IFT">in-context</a></span>
+</body>
+</html>
